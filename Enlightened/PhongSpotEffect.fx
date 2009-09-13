@@ -15,16 +15,16 @@ uniform float4 g_vecLightSpecular = float4(0.2f, 0.2f, 0.2f, 1.0f);
 uniform float3 g_vecLightDirection = float3(0.5f, 0.3f, 0.6f);
 
 uniform extern float3 g_vecLightPos;
-uniform float3 g_vecSpotLightDirection = float3(0.0f,0.3f,0.6f);
+uniform float3 g_vecSpotLightDirection = float3(-0.5f,0.3f,0.6f);
 
 uniform extern float3 g_vecLightPos2;
-uniform float3 g_vecSpotLightDirection2 = float3(0.0f,0.3f,0.5f);
+uniform float3 g_vecSpotLightDirection2 = float3(2.0f,0.8f,0.5f);
 
 // camera compoenents
 uniform extern float3 g_vecCameraPos;
 
 uniform float  g_fSpecPower = 8.0f;
-uniform float  g_fSpotPower = 0.5f;
+uniform float  g_fSpotPower = 0.8f;
 
 struct VSInput
 {

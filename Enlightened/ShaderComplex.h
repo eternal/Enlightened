@@ -10,6 +10,7 @@ public:
 		if (m_pEffect)
 			m_pEffect->SetTechnique("PhongTech");
 	    m_pEffect->SetValue("g_vecLightPos", D3DXVECTOR3(2.0,2.0,0.0), sizeof(D3DXVECTOR3));
+	    m_pEffect->SetValue("g_vecLightPos2", D3DXVECTOR3(4.0,1.0,0.0), sizeof(D3DXVECTOR3));
 	}
 	~ShaderComplex(){}
 
