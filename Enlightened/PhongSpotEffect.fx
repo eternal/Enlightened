@@ -17,11 +17,15 @@ uniform float3 g_vecLightDirection = float3(0.5f, 0.3f, 0.6f);
 uniform extern float3 g_vecLightPos;
 uniform float3 g_vecSpotLightDirection = float3(0.0f,0.3f,0.6f);
 
+uniform extern float3 g_vecLightPos2;
+uniform float3 g_vecSpotLightDirection2 = float3(0.0f,0.3f,0.5f);
+
 // camera compoenents
 uniform extern float3 g_vecCameraPos;
 
 uniform float  g_fSpecPower = 8.0f;
 uniform float  g_fSpotPower = 0.5f;
+
 struct VSInput
 {
 	float3 pos: POSITION0;
@@ -55,12 +59,17 @@ float4 PS_Phong(VSPhongOutput a_Output) : COLOR
 	float3 toEye = normalize(g_vecCameraPos - a_Output.posW);
 	///temp spotlight shit
     float3 lightVec = normalize(g_vecLightPos - a_Output.posW);
-    float spot = pow(max(dot(-lightVec, g_vecSpotLightDirection), 0.00000001f), g_fSpotPower);
+    float3 lightVec2 = normalize(g_vecLightPos2 - a_Output.posW);
     
-
+    float spotOne = max(dot(-lightVec, g_vecSpotLightDirection), 0.00000001f);
+    float spotTwo = max(dot(-lightVec2, g_vecSpotLightDirection2), 0.00000001f)
+    
+    float spotlightAggregate = spotOne + spotTwo;
+    
+    float spot = pow(spotlightAggregate, g_fSpotPower);
+    
 	float3 r = reflect(-g_vecLightDirection, a_Output.norm);
-    float3 ta = max(dot(r, toEye), 0.0000000001f);
-	float t = pow(ta, g_fSpecPower);
+	float t = pow(max(dot(r, toEye), 0.0000000001f), g_fSpecPower);
 
 	float s = max(dot(g_vecLightDirection, a_Output.norm), 0.001f);
 
