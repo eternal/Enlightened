@@ -10,8 +10,8 @@ uniform float4 g_vecMaterialSpecular = float4(0.2f, 0.2f, 0.2f, 1.0f);
 
 // light components
 uniform float4 g_vecLightDiffuse = float4(1.0f, 1.0f, 1.0f, 1.0f);
-uniform float4 g_vecLightAmbient = float4(0.3f, 0.4f, 0.3f, 1.0f);
-uniform float4 g_vecLightSpecular = float4(0.2f, 0.2f, 0.2f, 1.0f);
+uniform float4 g_vecLightAmbient = float4(0.3f, 0.4f, 0.6f, 1.0f);
+uniform float4 g_vecLightSpecular = float4(0.2f, 0.2f, 0.6f, 1.0f);
 uniform float3 g_vecLightDirection = float3(0.5f, 0.3f, 0.6f);
 
 uniform extern float3 g_vecLightPos;
@@ -76,8 +76,12 @@ float4 PS_Phong(VSPhongOutput a_Output) : COLOR
 	float3 specular = t * (g_vecLightSpecular * g_vecMaterialSpecular).rgb;
 	float3 diffuse = s * (g_vecLightDiffuse * g_vecMaterialDiffuse).rgb;
 	float3 ambient = g_vecLightAmbient * g_vecMaterialAmbient;
-
-	return float4(spot * (diffuse + ambient + specular), g_vecMaterialDiffuse.a);
+    float3 totalLight = diffuse + ambient + specular;
+    ////night mode: to be paramentalised and cleaned
+    //totalLight[0] = totalLight[0] / 10;
+    //totalLight[1] = totalLight[1] / 6;
+    //totalLight[2] = totalLight[2] / 2;
+	return float4(spot * (totalLight), g_vecMaterialDiffuse.a);
 }
 
 
