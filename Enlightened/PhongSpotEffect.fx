@@ -62,7 +62,7 @@ float4 PS_Phong(VSPhongOutput a_Output) : COLOR
     float3 lightVec2 = normalize(g_vecLightPos2 - a_Output.posW);
     
     float spotOne = max(dot(-lightVec, g_vecSpotLightDirection), 0.00000001f);
-    float spotTwo = max(dot(-lightVec2, g_vecSpotLightDirection2), 0.00000001f)
+    float spotTwo = max(dot(-lightVec2, g_vecSpotLightDirection2), 0.00000001f);
     
     float spotlightAggregate = spotOne + spotTwo;
     
