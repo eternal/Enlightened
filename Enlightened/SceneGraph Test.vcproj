@@ -180,15 +180,11 @@
 			UniqueIdentifier="{4FC737F1-C7A5-4376-A066-2A32D752A2FF}"
 			>
 			<File
-				RelativePath=".\Main.cpp"
+				RelativePath=".\main.cpp"
 				>
 			</File>
 			<File
-				RelativePath=".\PhongSpotEffect.fx"
-				>
-			</File>
-			<File
-				RelativePath=".\SimpleEffect.fx"
+				RelativePath=".\shader.fx.c"
 				>
 			</File>
 			<File
