@@ -9,7 +9,9 @@
 #include "SGLibResource.h"
 #include "MasterShader.h"
 #include <sstream>
-
+#include <map>
+#include <vector>
+#include <string>
 using namespace SGLib;
 
 MasterShader*	g_masterShader = NULL;
@@ -157,9 +159,12 @@ void InitalizeGraph()
 {
 	LPDIRECT3DDEVICE9 device = DXUTGetD3DDevice();
 	g_renderer = new SGRenderer();
+    
+    std::vector<std::string>* meshNames = new std::vector<std::string>();
+    meshNames->push_back("dwarf");
 
 	// Shaders
-    g_masterShader = new MasterShader(device, L"shader.fx.c");
+    g_masterShader = new MasterShader(device, L"shader.fx.c", meshNames);
 
 	// Camera
 	D3DXVECTOR3 cameraPosition = D3DXVECTOR3(0.0f, 0.0f, 0.0f);
@@ -190,7 +195,9 @@ void InitalizeGraph()
 	D3DXMatrixMultiply(&worldMatrix, &worldMatrix, &translationMatrix);
 
 	g_dwarfTransform = new Transform(device, worldMatrix);
-	g_dwarfGeometry = new Geometry(device, L"scannerarm.X");
+	g_dwarfGeometry = new Geometry(device, L"dwarf.X");
+	g_dwarfGeometry->SetDescription((LPCTSTR)"dwarf");
+	
 
 	g_masterShader->SetChild(g_dwarfTransform);
 	g_dwarfTransform->SetChild(g_dwarfGeometry);
