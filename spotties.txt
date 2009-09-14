@@ -1,0 +1,25 @@
+
+float4 PS_SpotLighting(VS_OUTPUT_SPOT IN) : COLOR
+{
+    float atten = saturate(1.0f - dot(IN.lightDir, IN.lightDir));
+    
+	float3 l = normalize(IN.lightDir);
+    float2 cosAngles = cos(float2(light.spotOuterCone, light.spotInnerCone) * 0.5f);
+    float spotDot = dot(-l, normalize(IN.spotDir));
+    float spotEffect = smoothstep(cosAngles[0], cosAngles[1], spotDot);
+    
+    atten *= spotEffect;
+                                
+    float3 n = normalize(IN.normal);
+	float3 v = normalize(IN.viewDir);
+	float3 h = normalize(l + v);
+    
+    float nDotL = saturate(dot(n, l));
+    float nDotH = saturate(dot(n, h));
+    float power = (nDotL == 0.0f) ? 0.0f : pow(nDotH, material.shininess);
+    
+    float4 color = (material.ambient * (globalAmbient + (atten * light.ambient))) +
+                   (IN.diffuse * nDotL * atten) + (IN.specular * power * atten);
+    
+	return color * tex2D(colorMap, IN.texCoord);
+}

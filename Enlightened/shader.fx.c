@@ -1,43 +1,55 @@
 #define LIGHT_COUNT 2
 #define MATERIAL_COUNT 1
 
-// textures
+// sunlight /  night time
+uniform extern float4 g_sunlight;
+uniform extern float g_time;
+
+// Textures
 uniform extern texture g_normalTexture;
-sampler DiffuseSampler : register(s0) = sampler_state
-{
 
-};
-
-sampler NormalSampler = sampler_state
+// Samplers
+sampler diffuseSampler : register(s0) = sampler_state
 {
-	Texture = <g_normalTexture>;
 	MinFilter = LINEAR;
 	MagFilter = LINEAR;
 	MipFilter = LINEAR;
-	AddressU  = WRAP;
-    AddressV  = WRAP;
+};
+
+sampler normalSampler = sampler_state
+{
+	Texture = <g_normalTexture>;
+	//MinFilter = LINEAR;
+	//MagFilter = LINEAR;
+	//MipFilter = LINEAR;
+	//AddressU  = WRAP;
+    //AddressV  = WRAP;
+    //MaxAnisotropy = 16;
 };
 
 
 // matrices
+uniform extern float4x4 g_worldMatrix;
 uniform extern float4x4 g_worldViewProjectionMatrix;
 uniform extern float4x4 g_worldInverseTransposeMatrix;
-uniform extern float4x4 g_worldMatrix;
 
 struct Material
 {
 	float4 diffuse;
-	float3 ambient;
-	float3 specular;
+	float4 emissive;
+	float4 ambient;
+	float4 specular;
 	float specularAttenuation;
 };
 
 struct Light
 {
-	float3 color;
+	float4 color;
 	float3 direction;
 	float3 position;
-	float attenuation;
+	float radius;
+	float innerCone;
+	float outerCone;
 };
 
 struct Camera
@@ -54,81 +66,96 @@ uniform extern Camera g_camera;
 
 struct VSInput
 {
-	float4 position : POSITION;
-	float3 normal : NORMAL;
+	float3 position : POSITION;
 	float2 textureCoordinates : TEXCOORD0;
-	float3 binormal : BINORMAL;
+	float3 normal : NORMAL;
 	float3 tangent : TANGENT;
+	float3 binormal : BINORMAL;
 };
 
 struct VSOutput
 {
 	float4 position : POSITION;
-	float3 normal : NORMAL;
 	float2 textureCoordinates : TEXCOORD0;
-	
-	float3 view : TEXCOORD1;
+	float3 worldPosition : TEXCOORD1;
 
-	float3 worldPosition : TEXCOORD2;
-	
-	float3x3 tangentToWorld : TEXCOORD3;
+	float3 normal : TEXCOORD2;
+	float3 binormal : TEXCOORD3;
+	float3 tangent : TEXCOORD4;
+
+	//float3x3 tangentToWorld : TEXCOORD5;
+	//float3 view : TEXCOORD6;
 };
 
 VSOutput VS_Lumos(VSInput a_input)
 {
 	VSOutput output;
 
-	output.position = mul(a_input.position, g_worldViewProjectionMatrix);
+	output.position      = mul(float4(a_input.position, 1.0f), g_worldViewProjectionMatrix);
+	output.worldPosition = mul(float4(a_input.position, 1.0f), g_worldMatrix).xyz;
+	output.textureCoordinates = a_input.textureCoordinates;	
 
-	output.textureCoordinates = a_input.textureCoordinates;
+	output.normal = a_input.normal;
+	output.tangent = a_input.tangent;
+	output.binormal = a_input.binormal;
 
-	output.worldPosition = mul(a_input.position, g_worldMatrix);
-
-	output.normal = mul(g_worldInverseTransposeMatrix, a_input.normal);
-    
-	output.view = mul(g_camera.position, mul(a_input.position, g_worldMatrix));
-
-    output.tangentToWorld[0] = mul(a_input.tangent, g_worldMatrix);
-    output.tangentToWorld[1] = mul(a_input.binormal, g_worldMatrix);
-    output.tangentToWorld[2] = mul(a_input.normal, g_worldMatrix);
 	return output;
 }
 
-float4 PS_Lumos(VSOutput a_output) : COLOR
+float4 PS_Lumos(VSOutput a_input) : COLOR
 {
 	Material material = g_materials[0];
 
-	float3 normal = normalize(a_output.normal);
-	float3 view = normalize(a_output.view);
+	float3 normal   = normalize(a_input.normal);
+	float3 tangent  = normalize(a_input.tangent);
+	float3 binormal = normalize(a_input.binormal);
 
-	float4 diffuseColor = tex2D(DiffuseSampler, a_output.textureCoordinates);
-    float3 normalColor = tex2D(NormalSampler, a_output.textureCoordinates);
-    normalColor = mul(normalColor,a_output.tangentToWorld);
-    normalColor = normalize(normalColor);
-    
-	float3 lightInfluenceSummation = float3(0.0f, 0.0f, 0.0f);
+	float3x3 tangentSpaceMatrix = float3x3(
+		tangent.x, binormal.x, normal.x,
+		tangent.y, binormal.y, normal.y,
+		tangent.z, binormal.z, normal.z
+	);
+
+	float3 view = normalize(mul(g_camera.position - a_input.worldPosition, tangentSpaceMatrix));
+
+	float3 light   = float3(0.0f, 0.0f, 0.0f);
+    float3 halfway = float3(0.0f, 0.0f, 0.0f);
+
+    float attenuation = 0.0f;
+    float normalDotLight = 0.0f;
+    float normalDotHalfway = 0.0f;
+    float specularAttenuation = 0.0f;
+
+	float4 color = float4(0.0f, 0.0f, 0.0f, 0.0f);
+
+	normal = normalize(tex2D(normalSampler, a_input.textureCoordinates).rgb * 2.0f - 1.0f);
+
 	for(uint index = 0; index < LIGHT_COUNT; ++index)
 	{
-		Light light = g_lights[index];
-		float3 lightVector = normalize(-(light.position - a_output.worldPosition));
-		float3 halfway = normalize(lightVector + view);
+		Light lightModel = g_lights[index];
 
-		float3 diffuse = saturate(dot(normalColor, lightVector)) * material.diffuse.rgb;
-		float3 specular = pow(saturate(dot(normalColor, halfway)), material.specularAttenuation) * material.specular;
-		float3 ambient = material.ambient;
-
-		float3 color = (saturate(ambient + diffuse) + specular) * light.color;
-		lightInfluenceSummation += color;
+        light = mul((lightModel.position - a_input.worldPosition) / lightModel.radius, tangentSpaceMatrix);
+        attenuation = saturate(1.0f - dot(light, light));
+        
+        light = normalize(light);
+        halfway = normalize(light + view);
+        
+        normalDotLight = saturate(dot(normal, light));
+        normalDotHalfway = saturate(dot(normal, halfway));
+        specularAttenuation = (normalDotLight == 0.0f) ? 0.0f : pow(normalDotHalfway, material.specularAttenuation);
+        
+        color +=
+			((material.ambient * (attenuation * lightModel.color)) + g_sunlight)          // ambient
+			+ (material.diffuse * lightModel.color * normalDotLight * attenuation)        // diffuse
+            + (material.specular * lightModel.color * specularAttenuation * attenuation); // specular
 	}
 
-	float alpha = material.diffuse.a * diffuseColor.a;
-	//return float4(normalColor, 1.0f);
-	return float4(lightInfluenceSummation * diffuseColor, alpha);
+	return color * g_time * tex2D(diffuseSampler, a_input.textureCoordinates);
 }
 
 technique Master
 {
-	pass Master
+	pass
 	{
 		vertexShader = compile vs_3_0 VS_Lumos();
 		pixelShader = compile ps_3_0 PS_Lumos();

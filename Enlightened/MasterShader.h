@@ -2,6 +2,9 @@
 #include <map>
 #include <string>
 #include <vector>
+#include <math.h>
+
+#define PI 3.1415926535897932384626433832795028841971693993751058209749445923078164062862089986280348253421170679f
 
 using SGLib::Shader;
 
@@ -9,15 +12,18 @@ class MasterShader : public Shader
 {
 protected:
     std::map<std::string, LPDIRECT3DTEXTURE9>* m_normalTextures;
+	float m_time;
+
 public:
 	MasterShader(LPDIRECT3DDEVICE9 a_device, LPCTSTR a_fileName, std::vector<std::string>* a_meshNames) : Shader(a_device, a_fileName)
 	{
+		m_time = 0.0f;
+
 		if (m_pEffect) {
 			m_pEffect->SetTechnique("Master");
 		}
 	    HRESULT hr;
 	    m_normalTextures = new std::map<std::string, LPDIRECT3DTEXTURE9>();
-	    
 	    
 	    for( std::vector<std::string>::iterator iter=a_meshNames->begin(); iter != a_meshNames->end(); ++iter ) {
             //theres a much cleaner way to append in a oneliner i'm sure but running out of time
@@ -33,19 +39,35 @@ public:
         }
 	    
 		m_pEffect->SetFloat("g_materials[0].specularAttenuation", 1.0f);
-		m_pEffect->SetValue("g_materials[0].specular", D3DXVECTOR3(1.0f, 1.0f, 1.0f), sizeof(D3DXVECTOR3));
-		m_pEffect->SetValue("g_materials[0].diffuse",   D3DXVECTOR3(1.0f, 1.0f, 1.0f), sizeof(D3DXVECTOR3));
-		m_pEffect->SetValue("g_materials[0].ambient",   D3DXVECTOR3(0.0f, 0.0f, 0.0f), sizeof(D3DXVECTOR3));
+		m_pEffect->SetValue("g_materials[0].specular", D3DXVECTOR4(0.0f, 0.0f, 0.0f, 1.0f), sizeof(D3DXVECTOR4));
+		m_pEffect->SetValue("g_materials[0].diffuse",   D3DXVECTOR4(1.0f, 1.0f, 1.0f, 1.0f), sizeof(D3DXVECTOR4));
+		m_pEffect->SetValue("g_materials[0].ambient",   D3DXVECTOR4(0.1f, 0.1f, 0.1f, 1.0f), sizeof(D3DXVECTOR4));
 
-		m_pEffect->SetValue("g_lights[0].color", D3DXVECTOR3(1.0f, 1.0f, 1.0f), sizeof(D3DXVECTOR3));
+		m_pEffect->SetValue("g_lights[0].color", D3DXVECTOR4(1.0f, 1.0f, 1.0f, 1.0f), sizeof(D3DXVECTOR4));
 		m_pEffect->SetValue("g_lights[0].direction", D3DXVECTOR3(0.0f, -1.0f, 0.0f), sizeof(D3DXVECTOR3));
-		m_pEffect->SetValue("g_lights[0].position", D3DXVECTOR3(0.0f, -10.0f, 0.0f), sizeof(D3DXVECTOR3));
-		m_pEffect->SetFloat("g_materials[0].attenuation", 1.0f);
+		m_pEffect->SetValue("g_lights[0].position", D3DXVECTOR3(0.0f, 100.0f, 50.0f), sizeof(D3DXVECTOR3));
+		m_pEffect->SetFloat("g_lights[0].radius", 100.0f);
 
-		m_pEffect->SetValue("g_lights[1].color", D3DXVECTOR3(1.0f, 1.0f, 1.0f), sizeof(D3DXVECTOR3));
+		m_pEffect->SetValue("g_lights[1].color", D3DXVECTOR4(1.0f, 1.0f, 1.0f, 1.0f), sizeof(D3DXVECTOR4));
 		m_pEffect->SetValue("g_lights[1].direction", D3DXVECTOR3(0.0f, -1.0f, 0.0f), sizeof(D3DXVECTOR3));
-		m_pEffect->SetValue("g_lights[1].position", D3DXVECTOR3(0.0f, 10.0f, 0.0f), sizeof(D3DXVECTOR3));
-		m_pEffect->SetFloat("g_materials[0].attenuation", 1.0f);
+		m_pEffect->SetValue("g_lights[1].position", D3DXVECTOR3(0.0f, 100.0f, -50.0f), sizeof(D3DXVECTOR3));
+		m_pEffect->SetFloat("g_lights[1].radius", 100.0f);
+	}
+
+	void Update(float a_timeDelta)
+	{
+		m_time += a_timeDelta;
+
+		if (m_time > 2*PI)
+		{
+			m_time -= 2*PI;
+		}
+
+		float bias = (sin(m_time) * 1.0f / 3.0f) + 0.5f;
+		bias = max(min(bias, 0.75f), 0.25f);
+
+		m_pEffect->SetValue("g_sunlight", D3DXVECTOR4(0.75f * bias, 0.75f * bias, 0.0f, 1.0f), sizeof(D3DXVECTOR4));
+		m_pEffect->SetFloat("g_time", bias);
 	}
 
 	~MasterShader() {}

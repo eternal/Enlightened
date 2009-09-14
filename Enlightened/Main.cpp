@@ -186,11 +186,12 @@ void InitalizeGraph()
     g_masterShader = new MasterShader(device, L"shader.fx.c", meshNames);
 
 	// Camera
-	D3DXVECTOR3 cameraPosition = D3DXVECTOR3(0.0f, 10.0f, 10.0f);
+	D3DXVECTOR3 cameraPosition = D3DXVECTOR3(0.0f, 10.0f, -20.0f);
 	D3DXVECTOR3	cameraUp       = D3DXVECTOR3(0.0f, 1.0f, 0.0f);
 	D3DXVECTOR3	cameraLook     = D3DXVECTOR3(0.0f, 0.0f, 0.0f);
 	g_camera = new Feisty::Camera();
 	g_camera->SetNode(new Camera(device, cameraPosition, cameraUp, cameraLook));
+	g_camera->GetNode()->SetSimpleMovement(true);
 	g_camera->Initialize();
     //g_masterShader->SetCameraPosition(g_camera->GetNode()->GetPos());
 

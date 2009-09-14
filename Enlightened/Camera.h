@@ -27,7 +27,6 @@ public:
 	void Update(void)
 	{
 		SGLib::Camera* camera = GetNode();
-
 	}
 
 	virtual ~Camera(void)
