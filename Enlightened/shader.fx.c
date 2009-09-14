@@ -1,95 +1,125 @@
+#define LIGHT_COUNT 2
+#define MATERIAL_COUNT 1
+
+fdsfgsdg
+
+//// textures
+//uniform extern texture g_texture;
+//
+//sampler TextureSampler = sampler_state
+//{
+//	Texture = <g_texture>;
+//	//MinFilter = LINEAR;
+//	//MagFilter = LINEAR;
+//	//MipFilter = LINEAR;
+//	//AddressU = WRAP;
+//	//AddressV = WRAP;
+//};
+
 // matrices
-uniform extern float4x4 g_matWorldViewProjection;
-uniform extern float4x4 g_matWorldInverseTranspose;
-uniform extern float4x4 g_matWorld;
+uniform extern float4x4 g_worldViewProjectionMatrix;
+uniform extern float4x4 g_worldInverseTransposeMatrix;
+uniform extern float4x4 g_worldMatrix;
+
+// samplers
+
+struct Material
+{
+	float3 diffuse;
+	float3 ambient;
+	float3 specular;
+	float specualarAttenuation;
+};
+
+struct Light
+{
+	float3 color;
+	float3 direction;
+	float3 position;
+	float attenuation;
+};
+
+struct Camera
+{
+	float3 position;
+};
 
 // material components
-uniform float4 g_vecMaterialDiffuse = float4(1.0f, 0.5f, 0.0f, 1.0f);
-uniform float4 g_vecMaterialAmbient = float4(0.9f, 0.2f, 0.0f, 1.0f);
-uniform float4 g_vecMaterialSpecular = float4(0.2f, 0.2f, 0.2f, 1.0f);
-
-// light components
-uniform float4 g_vecLightDiffuse = float4(1.0f, 1.0f, 1.0f, 1.0f);
-uniform float4 g_vecLightAmbient = float4(0.3f, 0.4f, 0.6f, 1.0f);
-uniform float4 g_vecLightSpecular = float4(0.2f, 0.2f, 0.6f, 1.0f);
-uniform float3 g_vecLightDirection = float3(0.5f, 0.3f, 0.6f);
-
-uniform extern float3 g_vecLightPos;
-uniform float3 g_vecSpotLightDirection = float3(-0.5f,0.3f,0.6f);
-
-uniform extern float3 g_vecLightPos2;
-uniform float3 g_vecSpotLightDirection2 = float3(2.0f,0.8f,0.5f);
+uniform extern Material[MATERIAL_COUNT] g_materials;
+uniform extern Light[LIGHT_COUNT] g_lights;
 
 // camera compoenents
-uniform extern float3 g_vecCameraPos;
-
-uniform float  g_fSpecPower = 8.0f;
-uniform float  g_fSpotPower = 0.8f;
+uniform extern Camera g_camera;
 
 struct VSInput
 {
-	float3 pos: POSITION0;
-	float3 norm: NORMAL0;
+	float4 position: POSITION;
+	float3 normal : NORMAL;
+	float2 textureCoordinates : TEXCOORD0;
 };
 
-struct VSPhongOutput
+struct VSOutput
 {
-	float4 pos: POSITION0;
-	float3 norm: TEXCOORD0;
-	float3 posW: TEXCOORD1;
+	float4 position : POSITION;
+	float3 normal : NORMAL;
+	float2 textureCoordinates : TEXCOORD0;
+	
+	float3 view : TEXCOORD1;
+
+	//float3 worldPosition : TEXCOORD1;
 };
-VSPhongOutput VS_Phong(VSInput a_Input)
+
+VSOutput VS_Lumos(VSInput a_input)
 {
-	VSPhongOutput Output;
+	VSOutput output;
 
-	Output.pos = mul(float4(a_Input.pos, 1.0f), g_matWorldViewProjection);
+	output.position = mul(a_input.position, g_worldViewProjectionMatrix);
 
-	Output.posW = mul(float4(a_Input.pos, 1.0f), g_matWorld).xyz;
+	output.textureCoordinates = a_input.textureCoordinates;
 
-	float3 normal = mul(float4(a_Input.norm, 0.0f), g_matWorldInverseTranspose).xyz;
-	Output.norm = normalize(normal);
+	//output.worldPosition = mul(float4(a_input.position, 1.0f), g_worldMatrix).xyz;
 
-	return Output;
+	output.normal = mul(g_worldInverseTransposeMatrix, a_input.normal);
+
+	output.view = mul(g_camera.position, mul(a_input.position, g_worldMatrix));
+
+	return output;
 }
 
-float4 PS_Phong(VSPhongOutput a_Output) : COLOR
+float4 PS_Lumos(VSOutput a_output) : COLOR
 {
-	a_Output.norm = normalize(a_Output.norm);
+	Material material = g_materials[0];
 
-	float3 toEye = normalize(g_vecCameraPos - a_Output.posW);
-	///temp spotlight shit
-    float3 lightVec = normalize(g_vecLightPos - a_Output.posW);
-    float3 lightVec2 = normalize(g_vecLightPos2 - a_Output.posW);
-    
-    float spotOne = max(dot(-lightVec, g_vecSpotLightDirection), 0.00000001f);
-    float spotTwo = max(dot(-lightVec2, g_vecSpotLightDirection2), 0.00000001f);
-    
-    float spotlightAggregate = spotOne + spotTwo;
-    
-    float spot = pow(spotlightAggregate, g_fSpotPower);
-    
-	float3 r = reflect(-g_vecLightDirection, a_Output.norm);
-	float t = pow(max(dot(r, toEye), 0.0000000001f), g_fSpecPower);
+	float3 normal = normalize(a_output.normal);
+	float3 view = normalize(a_output.view);
 
-	float s = max(dot(g_vecLightDirection, a_Output.norm), 0.001f);
+	//float3 textureColor = tex2D(TextureSampler, a_input.textureCoordinates);
 
-	float3 specular = t * (g_vecLightSpecular * g_vecMaterialSpecular).rgb;
-	float3 diffuse = s * (g_vecLightDiffuse * g_vecMaterialDiffuse).rgb;
-	float3 ambient = g_vecLightAmbient * g_vecMaterialAmbient;
-    float3 totalLight = diffuse + ambient + specular;
-    ////night mode: to be paramentalised and cleaned
-    //totalLight[0] = totalLight[0] / 10;
-    //totalLight[1] = totalLight[1] / 6;
-    //totalLight[2] = totalLight[2] / 2;
-	return float4(spot * (totalLight), g_vecMaterialDiffuse.a);
-}
-
-
-technique PhongTech
-{
-	pass P0
+	float lightInfluenceSummation = 0.0f;
+	for(uint index = 0; index < LIGHT_COUNT; ++i)
 	{
-		vertexShader = compile vs_2_0 VS_Phong();
-		pixelShader = compile ps_2_0 PS_Phong();
+		Light light = g_lights[index];
+		float3 lightVector = normalize(-(light.position - a_output.worldPosition));
+		float3 halfway = normalize(lightVector + view);
+
+		float3 diffuse = saturate(dot(normal, lightVector)) * material.diffuse.rgb;
+		float3 specular = pow(saturate(dot(normal, halfway)), material.specualarAttenuation) * material.specualar;
+		float3 ambient = material.ambient;
+
+		float3 color = (saturate(ambient + diffuse) /** textureColor*/ + specular) * light.color;
+		lightInfluenceSummation += color;
+	}
+
+	float alpha = material.diffuse.a /** textureColor.a*/;
+	
+	return float4(lightInfluenceSummation, alpha);
+}
+
+technique Master
+{
+	pass Master
+	{
+		vertexShader = compile vs_2_0 VS_Lumos();
+		pixelShader = compile ps_2_0 PS_Lumos();
 	}
 }

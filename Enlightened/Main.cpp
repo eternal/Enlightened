@@ -7,19 +7,12 @@
 //--------------------------------------------------------------------------------------
 #include "dxstdafx.h"
 #include "SGLibResource.h"
-#include "ShaderSimple.h"
-#include "ShaderComplex.h"
-#include "ShaderTextureMulti.h"
+#include "MasterShader.h"
 #include <sstream>
 
 using namespace SGLib;
 
-ShaderSimple*	g_pnodeShaderSimple = NULL;
-ShaderComplex*	g_pnodeShaderComplex = NULL;
-ShaderComplex*  g_pnodeShaderComplex2 = NULL;
-ShaderTextureMulti* g_pnodeShaderTextureMulti = NULL;
-
-Shader*			ref1 = NULL;
+MasterShader*	g_masterShader = NULL;
 
 SGRenderer*		g_pRenderer = NULL;
 
@@ -129,8 +122,7 @@ HRESULT CALLBACK OnResetDevice( IDirect3DDevice9* pd3dDevice,
 //--------------------------------------------------------------------------------------
 void CALLBACK OnFrameMove( IDirect3DDevice9* pd3dDevice, double dTime, float fElapsedTime, void* pUserContext )
 {
-	g_pnodeShaderComplex->SetCamPos(g_pnodeCamera->GetPos());
-	g_pnodeShaderComplex2->SetCamPos(g_pnodeCamera->GetPos());
+	g_masterShader->SetCameraPosition(g_pnodeCamera->GetPos());
 	g_pRenderer->Update(g_pnodeCamera, fElapsedTime);
 }
 
@@ -210,15 +202,12 @@ void InitalizeGraph()
 
 	//Here are the shader nodes to be created later to be inserted.
 
-	g_pnodeShaderSimple = new ShaderSimple(pD3DDevice, L"SimpleEffect.fx");
-	g_pnodeShaderComplex = new ShaderComplex(pD3DDevice, L"PhongSpotEffect.fx");
-	g_pnodeShaderComplex2 = new ShaderComplex(pD3DDevice, L"PhongSpotEffect.fx");
-	D3DXCreateTextureFromFile(pD3DDevice, L"scannerarm_diff.dds", &g_pTexture);
-    g_pnodeShaderTextureMulti = new ShaderTextureMulti(pD3DDevice, L"TextureEffect.fx", g_pTexture);
+	//D3DXCreateTextureFromFile(pD3DDevice, L"scannerarm_diff.dds", &g_pTexture);
+    g_masterShader = new MasterShader(pD3DDevice, L"TextureEffect.fx");
 
 	g_pnodeCamera = new Camera(pD3DDevice, g_vecCamPos, g_vecCamUp, g_vecCamLook);
 	g_pnodeCamera->SetSimpleMovement(true);
-    g_pnodeShaderComplex->SetCamPos(g_pnodeCamera->GetPos());
+    g_masterShader->SetCameraPosition(g_pnodeCamera->GetPos());
     
 	D3DXMATRIX oMatrixProj;
 	D3DXMatrixPerspectiveFovLH(&oMatrixProj, D3DX_PI * 0.25f, 1.5f, 1.0f, 1000.0f);
@@ -251,7 +240,7 @@ void InitalizeGraph()
 
 	// Shader is now a child of the projection matrix, and any subchildren will be using this shader
 
-	g_pnodeProj->SetChild(g_pnodeShaderComplex2);
+	g_pnodeProj->SetChild(g_masterShader);
 
 	D3DXMatrixRotationY(&matRotY, -D3DX_PI/2);
 	D3DXMatrixRotationZ(&matRotZ, D3DX_PI);
@@ -287,7 +276,7 @@ void InitalizeGraph()
 	g_pnodeNeck->SetDescription(L"Neck");
 	g_pnodeHead->SetDescription(L"Head");
 
-	g_pnodeShaderComplex2->SetChild(g_pnodeTransPerson);
+	g_masterShader->SetChild(g_pnodeTransPerson);
 	
 	g_pnodeTransPerson->SetSibling(g_pnodeTransPlane);
 	g_pnodeTransPlane->SetChild(g_pnodePlane);
@@ -298,7 +287,7 @@ void InitalizeGraph()
 
 	// Now the house has a shader added to it to perform lighting.
 
-	g_pnodeTransHouse->InsertChild(g_pnodeShaderTextureMulti);
+	g_pnodeTransHouse->InsertChild(g_masterShader);
 	
 	g_pnodeTransPerson->SetChild(g_pnodePerson);
 	g_pnodePerson->SetChild(g_pnodeLowerBack);
@@ -315,74 +304,6 @@ void InitalizeGraph()
 	g_pnodeRUpperArm->SetSibling(g_pnodeLUpperArm);
 	g_pnodeRUpperArm->SetChild(g_pnodeRLowerArm);
 	g_pnodeLUpperArm->SetChild(g_pnodeLLowerArm);
-    
-    
-	std::vector<TimeStep> vecRotRUA, vecTwistRUA, vecRotLUA, vecTwistLUA;
-	
-	vecRotLUA.push_back(TimeStep(0.0f, D3DX_PI/20));
-	vecRotLUA.push_back(TimeStep(0.5f, D3DX_PI/6));
-	vecRotLUA.push_back(TimeStep(1.0f, D3DX_PI/20));
-	vecRotLUA.push_back(TimeStep(1.5f, -D3DX_PI/25));
-	vecRotLUA.push_back(TimeStep(2.0f, D3DX_PI/20));
-	
-	vecRotRUA.push_back(TimeStep(0.0f, D3DX_PI/20));
-	vecRotRUA.push_back(TimeStep(0.5f, -D3DX_PI/25));
-	vecRotRUA.push_back(TimeStep(1.0f, D3DX_PI/20));
-	vecRotRUA.push_back(TimeStep(1.5f, D3DX_PI/6));
-	vecRotRUA.push_back(TimeStep(2.0f, D3DX_PI/20));
-
-	vecTwistRUA.push_back(TimeStep(0.0f, -D3DX_PI/15));
-	vecTwistLUA.push_back(TimeStep(0.0f, D3DX_PI/15));
-
-	std::vector<TimeStep> vecRotRUL, vecRotLUL, vecRotRLL, vecRotLLL, vecRotUB, vecTwist;
-	vecTwist.push_back(TimeStep(0.0f, 0.0f));
-
-	vecRotRUL.push_back(TimeStep(0.0f, D3DX_PI/15));
-	vecRotRUL.push_back(TimeStep(0.5f, D3DX_PI/6));
-	vecRotRUL.push_back(TimeStep(1.0f, D3DX_PI/15));
-	vecRotRUL.push_back(TimeStep(1.5f, -D3DX_PI/10));
-	vecRotRUL.push_back(TimeStep(2.0f, D3DX_PI/15));
-
-	vecRotLUL.push_back(TimeStep(0.0f, D3DX_PI/15));
-	vecRotLUL.push_back(TimeStep(0.5f, -D3DX_PI/10));
-	vecRotLUL.push_back(TimeStep(1.0f, D3DX_PI/15));
-	vecRotLUL.push_back(TimeStep(1.5f, D3DX_PI/6));
-	vecRotLUL.push_back(TimeStep(2.0f, D3DX_PI/15));
-
-	vecRotRLL.push_back(TimeStep(0.0f, -D3DX_PI/13));
-	vecRotRLL.push_back(TimeStep(0.5f, -D3DX_PI/50));
-	vecRotRLL.push_back(TimeStep(1.0f, -D3DX_PI/13));
-	vecRotRLL.push_back(TimeStep(1.5f, -D3DX_PI/6));
-	vecRotRLL.push_back(TimeStep(2.0f, -D3DX_PI/13));
-
-	vecRotLLL.push_back(TimeStep(0.0f, -D3DX_PI/13));
-	vecRotLLL.push_back(TimeStep(0.5f, -D3DX_PI/6));
-	vecRotLLL.push_back(TimeStep(1.0f, -D3DX_PI/13));
-	vecRotLLL.push_back(TimeStep(1.5f, -D3DX_PI/50));
-	vecRotLLL.push_back(TimeStep(2.0f, -D3DX_PI/13));
-
-	vecRotUB.push_back(TimeStep(0.0f, -D3DX_PI/24));
-	vecRotUB.push_back(TimeStep(0.5f, -D3DX_PI/20));
-	vecRotUB.push_back(TimeStep(1.0f, -D3DX_PI/24));
-	vecRotUB.push_back(TimeStep(1.5f, -D3DX_PI/20));
-	vecRotUB.push_back(TimeStep(2.0f, -D3DX_PI/24));
-
-	AnimContainer RUAWalkAnim(vecRotRUA, vecTwistRUA);
-	AnimContainer LUAWalkAnim(vecRotLUA, vecTwistLUA);
-	AnimContainer RULWalkAnim(vecRotRUL, vecTwist);
-	AnimContainer LULWalkAnim(vecRotLUL, vecTwist);
-	AnimContainer RLLWalkAnim(vecRotRLL, vecTwist);
-	AnimContainer LLLWalkAnim(vecRotLLL, vecTwist);
-	AnimContainer UBWalkAnim(vecRotUB, vecTwist);
-
-	g_pnodeRUpperArm->AddAnimation(L"Walk", RUAWalkAnim);
-	g_pnodeLUpperArm->AddAnimation(L"Walk", LUAWalkAnim);
-	g_pnodeRUpperLeg->AddAnimation(L"Walk", RULWalkAnim);
-	g_pnodeLUpperLeg->AddAnimation(L"Walk", LULWalkAnim);
-	g_pnodeRLowerLeg->AddAnimation(L"Walk", RLLWalkAnim);
-	g_pnodeLLowerLeg->AddAnimation(L"Walk", LLLWalkAnim);
-	g_pnodeUpperBack->AddAnimation(L"Walk", UBWalkAnim);
-
 }
 
 void CleanUp()
@@ -404,12 +325,7 @@ void CleanUp()
 	SAFE_DELETE(g_pnodeHouse);
 	SAFE_DELETE(g_pnodeHouse2);
 
-	SAFE_DELETE(g_pnodeShaderSimple);
-	SAFE_DELETE(g_pnodeShaderComplex);
-	SAFE_DELETE(g_pnodeShaderComplex2);
-	SAFE_DELETE(g_pnodeShaderTextureMulti);
-
-	SAFE_DELETE(ref1);
+	SAFE_DELETE(g_masterShader);
 
 	SAFE_DELETE(g_pnodeTransPerson);
 

@@ -186,6 +186,14 @@
 			<File
 				RelativePath=".\shader.fx.c"
 				>
+				<FileConfiguration
+					Name="Debug|Win32"
+					ExcludedFromBuild="true"
+					>
+					<Tool
+						Name="VCCLCompilerTool"
+					/>
+				</FileConfiguration>
 			</File>
 			<File
 				RelativePath=".\TextureEffect.fx"
@@ -198,15 +206,7 @@
 			UniqueIdentifier="{93995380-89BD-4b04-88EB-625FBE52EBFB}"
 			>
 			<File
-				RelativePath=".\ShaderComplex.h"
-				>
-			</File>
-			<File
-				RelativePath=".\ShaderSimple.h"
-				>
-			</File>
-			<File
-				RelativePath=".\ShaderTextureMulti.h"
+				RelativePath=".\MasterShader.h"
 				>
 			</File>
 		</Filter>
