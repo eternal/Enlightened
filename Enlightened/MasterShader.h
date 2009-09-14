@@ -14,8 +14,8 @@ public:
 		}
 		// TODO fix this
 	    //m_pEffect->SetValue("g_vecLightPos", D3DXVECTOR3(2.0,2.0,0.0), sizeof(D3DXVECTOR3));
-		m_pEffect->SetFloat("g_materials[0].specualarAttenuation", 1.0f);
-		m_pEffect->SetValue("g_materials[0].specualar", D3DXVECTOR3(1.0f, 1.0f, 1.0f), sizeof(D3DXVECTOR3));
+		m_pEffect->SetFloat("g_materials[0].specularAttenuation", 1.0f);
+		m_pEffect->SetValue("g_materials[0].specular", D3DXVECTOR3(1.0f, 1.0f, 1.0f), sizeof(D3DXVECTOR3));
 		m_pEffect->SetValue("g_materials[0].diffuse",   D3DXVECTOR3(1.0f, 1.0f, 1.0f), sizeof(D3DXVECTOR3));
 		m_pEffect->SetValue("g_materials[0].ambient",   D3DXVECTOR3(0.0f, 0.0f, 0.0f), sizeof(D3DXVECTOR3));
 

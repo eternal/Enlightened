@@ -1,8 +1,6 @@
 #define LIGHT_COUNT 2
 #define MATERIAL_COUNT 1
 
-fdsfgsdg
-
 //// textures
 //uniform extern texture g_texture;
 //
@@ -25,10 +23,10 @@ uniform extern float4x4 g_worldMatrix;
 
 struct Material
 {
-	float3 diffuse;
+	float4 diffuse;
 	float3 ambient;
 	float3 specular;
-	float specualarAttenuation;
+	float specularAttenuation;
 };
 
 struct Light
@@ -45,8 +43,8 @@ struct Camera
 };
 
 // material components
-uniform extern Material[MATERIAL_COUNT] g_materials;
-uniform extern Light[LIGHT_COUNT] g_lights;
+uniform extern Material g_materials[MATERIAL_COUNT];
+uniform extern Light g_lights[LIGHT_COUNT];
 
 // camera compoenents
 uniform extern Camera g_camera;
@@ -66,7 +64,7 @@ struct VSOutput
 	
 	float3 view : TEXCOORD1;
 
-	//float3 worldPosition : TEXCOORD1;
+	float3 worldPosition : TEXCOORD2;
 };
 
 VSOutput VS_Lumos(VSInput a_input)
@@ -77,7 +75,7 @@ VSOutput VS_Lumos(VSInput a_input)
 
 	output.textureCoordinates = a_input.textureCoordinates;
 
-	//output.worldPosition = mul(float4(a_input.position, 1.0f), g_worldMatrix).xyz;
+	output.worldPosition = mul(a_input.position, g_worldMatrix);
 
 	output.normal = mul(g_worldInverseTransposeMatrix, a_input.normal);
 
@@ -95,15 +93,15 @@ float4 PS_Lumos(VSOutput a_output) : COLOR
 
 	//float3 textureColor = tex2D(TextureSampler, a_input.textureCoordinates);
 
-	float lightInfluenceSummation = 0.0f;
-	for(uint index = 0; index < LIGHT_COUNT; ++i)
+	float3 lightInfluenceSummation = float3(0.0f, 0.0f, 0.0f);
+	for(uint index = 0; index < LIGHT_COUNT; ++index)
 	{
 		Light light = g_lights[index];
 		float3 lightVector = normalize(-(light.position - a_output.worldPosition));
 		float3 halfway = normalize(lightVector + view);
 
 		float3 diffuse = saturate(dot(normal, lightVector)) * material.diffuse.rgb;
-		float3 specular = pow(saturate(dot(normal, halfway)), material.specualarAttenuation) * material.specualar;
+		float3 specular = pow(saturate(dot(normal, halfway)), material.specularAttenuation) * material.specular;
 		float3 ambient = material.ambient;
 
 		float3 color = (saturate(ambient + diffuse) /** textureColor*/ + specular) * light.color;
@@ -119,7 +117,7 @@ technique Master
 {
 	pass Master
 	{
-		vertexShader = compile vs_2_0 VS_Lumos();
-		pixelShader = compile ps_2_0 PS_Lumos();
+		vertexShader = compile vs_3_0 VS_Lumos();
+		pixelShader = compile ps_3_0 PS_Lumos();
 	}
 }

@@ -195,10 +195,6 @@
 					/>
 				</FileConfiguration>
 			</File>
-			<File
-				RelativePath=".\TextureEffect.fx"
-				>
-			</File>
 		</Filter>
 		<Filter
 			Name="Header Files"

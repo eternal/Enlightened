@@ -203,7 +203,7 @@ void InitalizeGraph()
 	//Here are the shader nodes to be created later to be inserted.
 
 	//D3DXCreateTextureFromFile(pD3DDevice, L"scannerarm_diff.dds", &g_pTexture);
-    g_masterShader = new MasterShader(pD3DDevice, L"TextureEffect.fx");
+    g_masterShader = new MasterShader(pD3DDevice, L"shader.fx.c");
 
 	g_pnodeCamera = new Camera(pD3DDevice, g_vecCamPos, g_vecCamUp, g_vecCamLook);
 	g_pnodeCamera->SetSimpleMovement(true);
