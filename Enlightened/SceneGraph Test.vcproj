@@ -191,6 +191,10 @@
 				RelativePath=".\SimpleEffect.fx"
 				>
 			</File>
+			<File
+				RelativePath=".\TextureEffect.fx"
+				>
+			</File>
 		</Filter>
 		<Filter
 			Name="Header Files"
@@ -203,6 +207,10 @@
 			</File>
 			<File
 				RelativePath=".\ShaderSimple.h"
+				>
+			</File>
+			<File
+				RelativePath=".\ShaderTextureMulti.h"
 				>
 			</File>
 		</Filter>

@@ -9,6 +9,7 @@
 #include "SGLibResource.h"
 #include "ShaderSimple.h"
 #include "ShaderComplex.h"
+#include "ShaderTextureMulti.h"
 #include <sstream>
 
 using namespace SGLib;
@@ -16,6 +17,8 @@ using namespace SGLib;
 ShaderSimple*	g_pnodeShaderSimple = NULL;
 ShaderComplex*	g_pnodeShaderComplex = NULL;
 ShaderComplex*  g_pnodeShaderComplex2 = NULL;
+ShaderTextureMulti* g_pnodeShaderTextureMulti = NULL;
+
 Shader*			ref1 = NULL;
 
 SGRenderer*		g_pRenderer = NULL;
@@ -32,6 +35,8 @@ Transform*		g_pnodeTransHouse2 = NULL;
 Geometry*		g_pnodePlane = NULL;
 Geometry*		g_pnodeHouse = NULL;
 Geometry*		g_pnodeHouse2 = NULL;
+
+LPDIRECT3DTEXTURE9				g_pTexture = NULL;	
 
 Articulated*	g_pnodeArt = NULL;
 
@@ -208,6 +213,8 @@ void InitalizeGraph()
 	g_pnodeShaderSimple = new ShaderSimple(pD3DDevice, L"SimpleEffect.fx");
 	g_pnodeShaderComplex = new ShaderComplex(pD3DDevice, L"PhongSpotEffect.fx");
 	g_pnodeShaderComplex2 = new ShaderComplex(pD3DDevice, L"PhongSpotEffect.fx");
+	D3DXCreateTextureFromFile(pD3DDevice, L"scannerarm_diff.dds", &g_pTexture);
+    g_pnodeShaderTextureMulti = new ShaderTextureMulti(pD3DDevice, L"TextureEffect.fx", g_pTexture);
 
 	g_pnodeCamera = new Camera(pD3DDevice, g_vecCamPos, g_vecCamUp, g_vecCamLook);
 	g_pnodeCamera->SetSimpleMovement(true);
@@ -238,8 +245,8 @@ void InitalizeGraph()
 	D3DXMatrixScaling(&matScale, 0.2f, 0.2f, 0.2f);
 	g_pnodeTransHouse2 = new Transform(pD3DDevice, matTrans);
 	
-	g_pnodeHouse = new Geometry(pD3DDevice, L"house.x");
-
+	g_pnodeHouse = new Geometry(pD3DDevice, L"scannerarm.x");    
+    
 	g_pnodeCamera->SetChild(g_pnodeProj);
 
 	// Shader is now a child of the projection matrix, and any subchildren will be using this shader
@@ -291,7 +298,7 @@ void InitalizeGraph()
 
 	// Now the house has a shader added to it to perform lighting.
 
-	g_pnodeTransHouse->InsertChild(g_pnodeShaderComplex);
+	g_pnodeTransHouse->InsertChild(g_pnodeShaderTextureMulti);
 	
 	g_pnodeTransPerson->SetChild(g_pnodePerson);
 	g_pnodePerson->SetChild(g_pnodeLowerBack);
@@ -400,6 +407,7 @@ void CleanUp()
 	SAFE_DELETE(g_pnodeShaderSimple);
 	SAFE_DELETE(g_pnodeShaderComplex);
 	SAFE_DELETE(g_pnodeShaderComplex2);
+	SAFE_DELETE(g_pnodeShaderTextureMulti);
 
 	SAFE_DELETE(ref1);
 
