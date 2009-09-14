@@ -4,7 +4,7 @@
 // textures
 //uniform extern texture g_texture;
 
-sampler TextureSampler : register(s0) = sampler_state
+sampler TextureSampler : s0 = sampler_state
 {
 	//Texture = <g_texture>;
 	//MinFilter = LINEAR;
@@ -51,7 +51,7 @@ uniform extern Camera g_camera;
 
 struct VSInput
 {
-	float4 position: POSITION;
+	float4 position : POSITION;
 	float3 normal : NORMAL;
 	float2 textureCoordinates : TEXCOORD0;
 };
@@ -104,14 +104,12 @@ float4 PS_Lumos(VSOutput a_output) : COLOR
 		float3 specular = pow(saturate(dot(normal, halfway)), material.specularAttenuation) * material.specular;
 		float3 ambient = material.ambient;
 
-		float3 color = (saturate(ambient + diffuse) * textureColor + specular) * light.color;
+		float3 color = (saturate(ambient + diffuse) + specular) * light.color;
 		lightInfluenceSummation += color;
 	}
 
 	float alpha = material.diffuse.a * textureColor.a;
-	
-	return textureColor;
-	return float4(lightInfluenceSummation, alpha);
+	return float4(lightInfluenceSummation * textureColor, alpha);
 }
 
 technique Master
