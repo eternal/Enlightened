@@ -8,6 +8,8 @@
 #include "dxstdafx.h"
 #include "SGLibResource.h"
 #include "MasterShader.h"
+#include "Mouse.h"
+#include "Camera.h"
 #include <sstream>
 
 using namespace SGLib;
@@ -16,7 +18,8 @@ MasterShader*	g_masterShader = NULL;
 
 SGRenderer*		g_renderer = NULL;
 
-Camera*			g_camera = NULL;
+Feisty::Camera* g_camera = NULL;
+Feisty::Mouse*  g_mouse = NULL;
 Projection*		g_projection = NULL;
 State*			g_state = NULL;
 
@@ -60,7 +63,10 @@ HRESULT CALLBACK OnCreateDevice( IDirect3DDevice9* pd3dDevice, const D3DSURFACE_
 {
 	if (g_camera)
 	{
-		g_camera->OnCreateDevice(pd3dDevice);
+		if (g_camera->GetNode())
+		{
+			g_camera->GetNode()->OnCreateDevice(pd3dDevice);
+		}
 	}
 
     return S_OK;
@@ -74,8 +80,12 @@ HRESULT CALLBACK OnResetDevice( IDirect3DDevice9* pd3dDevice,
                                 const D3DSURFACE_DESC* pBackBufferSurfaceDesc, void* pUserContext )
 {
 	if (g_camera)
-		g_camera->OnResetDevice(DXUTGetD3DDevice());
-
+	{
+		if (g_camera->GetNode())
+		{
+			g_camera->GetNode()->OnResetDevice(DXUTGetD3DDevice());
+		}
+	}
     return S_OK;
 }
 
@@ -85,8 +95,8 @@ HRESULT CALLBACK OnResetDevice( IDirect3DDevice9* pd3dDevice,
 //--------------------------------------------------------------------------------------
 void CALLBACK OnFrameMove( IDirect3DDevice9* pd3dDevice, double a_time, float a_elapsedTime, void* pUserContext )
 {
-	g_masterShader->SetCameraPosition(g_camera->GetPos());
-	g_renderer->Update(g_camera, a_elapsedTime);
+	g_masterShader->SetCameraPosition(g_camera->GetNode()->GetPos());
+	g_renderer->Update(g_camera->GetNode(), a_elapsedTime);
 }
 
 
@@ -95,7 +105,16 @@ void CALLBACK OnFrameMove( IDirect3DDevice9* pd3dDevice, double a_time, float a_
 //--------------------------------------------------------------------------------------
 void CALLBACK OnFrameRender( IDirect3DDevice9* pd3dDevice, double dTime, float fElapsedTime, void* pUserContext )
 {
-	g_renderer->Render(g_camera);
+	g_renderer->Render(g_camera->GetNode());
+}
+
+
+//--------------------------------------------------------------------------------------
+// Handle mouse events
+//--------------------------------------------------------------------------------------
+void CALLBACK OnMouse(   bool a_leftButton, bool a_rightButton, bool a_middleButtonDown, bool a_sideButton1Down, bool a_sideButton2Down, int a_mouseWheelDelta, int a_xPosition, int a_yPosition, void* a_userContext )
+{
+	g_mouse->Track(a_rightButton, a_xPosition, a_yPosition);
 }
 
 
@@ -139,8 +158,8 @@ LRESULT CALLBACK MsgProc( HWND hWnd, UINT uMsg, WPARAM wParam, LPARAM lParam,
 //--------------------------------------------------------------------------------------
 void CALLBACK OnLostDevice( void* pUserContext )
 {
-	if (g_camera)
-		g_camera->OnLostDevice();
+	if (g_camera->GetNode())
+		g_camera->GetNode()->OnLostDevice();
 }
 
 
@@ -149,8 +168,8 @@ void CALLBACK OnLostDevice( void* pUserContext )
 //--------------------------------------------------------------------------------------
 void CALLBACK OnDestroyDevice( void* pUserContext )
 {
-	if (g_camera)
-		g_camera->OnDestroyDevice();
+	if (g_camera->GetNode())
+		g_camera->GetNode()->OnDestroyDevice();
 }
 
 void InitalizeGraph()
@@ -162,12 +181,17 @@ void InitalizeGraph()
     g_masterShader = new MasterShader(device, L"shader.fx.c");
 
 	// Camera
-	D3DXVECTOR3 cameraPosition = D3DXVECTOR3(0.0f, 0.0f, 0.0f);
+	D3DXVECTOR3 cameraPosition = D3DXVECTOR3(0.0f, 10.0f, 10.0f);
 	D3DXVECTOR3	cameraUp       = D3DXVECTOR3(0.0f, 1.0f, 0.0f);
-	D3DXVECTOR3	cameraLook     = D3DXVECTOR3(0.0f, 0.0f, 10.0f);
-	g_camera = new Camera(device, cameraPosition, cameraUp, cameraLook);
-	g_camera->SetSimpleMovement(true);
-    g_masterShader->SetCameraPosition(g_camera->GetPos());
+	D3DXVECTOR3	cameraLook     = D3DXVECTOR3(0.0f, 0.0f, 0.0f);
+	g_camera = new Feisty::Camera();
+	g_camera->SetNode(new Camera(device, cameraPosition, cameraUp, cameraLook));
+	g_camera->Initialize();
+    //g_masterShader->SetCameraPosition(g_camera->GetNode()->GetPos());
+
+	// Mouse
+	g_mouse = new Feisty::Mouse();
+	g_mouse->SetCamera(g_camera);
     
 	// Projection
 	D3DXMATRIX oMatrixProj;
@@ -175,7 +199,7 @@ void InitalizeGraph()
 	g_projection = new Projection(device, oMatrixProj);
 
 	// Start building scene graph
-	g_camera->SetChild(g_projection);
+	g_camera->GetNode()->SetChild(g_projection);
 	g_projection->SetChild(g_masterShader);
 
 	// init matrices
@@ -200,7 +224,7 @@ void CleanUp()
 {
 	SAFE_DELETE(g_renderer);
 
-	SAFE_DELETE(g_camera);
+	//SAFE_DELETE(g_camera->GetNode());
 	SAFE_DELETE(g_projection);
 	SAFE_DELETE(g_state);
 
@@ -225,6 +249,7 @@ INT WINAPI WinMain( HINSTANCE, HINSTANCE, LPSTR, int )
     DXUTSetCallbackMsgProc( MsgProc );
     DXUTSetCallbackFrameRender( OnFrameRender );
     DXUTSetCallbackFrameMove( OnFrameMove );
+	DXUTSetCallbackMouse( OnMouse, true );
 
     // Initialize DXUT and create the desired Win32 window and Direct3D device for the application
     DXUTInit( true, true, true ); // Parse the command line, handle the default hotkeys, and show msgboxes

@@ -202,7 +202,15 @@
 			UniqueIdentifier="{93995380-89BD-4b04-88EB-625FBE52EBFB}"
 			>
 			<File
+				RelativePath=".\Camera.h"
+				>
+			</File>
+			<File
 				RelativePath=".\MasterShader.h"
+				>
+			</File>
+			<File
+				RelativePath=".\Mouse.h"
 				>
 			</File>
 		</Filter>
