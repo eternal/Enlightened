@@ -1,18 +1,18 @@
 #define LIGHT_COUNT 2
 #define MATERIAL_COUNT 1
 
-//// textures
+// textures
 //uniform extern texture g_texture;
-//
-//sampler TextureSampler = sampler_state
-//{
-//	Texture = <g_texture>;
-//	//MinFilter = LINEAR;
-//	//MagFilter = LINEAR;
-//	//MipFilter = LINEAR;
-//	//AddressU = WRAP;
-//	//AddressV = WRAP;
-//};
+
+sampler TextureSampler : register(s0) = sampler_state
+{
+	//Texture = <g_texture>;
+	//MinFilter = LINEAR;
+	//MagFilter = LINEAR;
+	//MipFilter = LINEAR;
+	//AddressU = WRAP;
+	//AddressV = WRAP;
+};
 
 // matrices
 uniform extern float4x4 g_worldViewProjectionMatrix;
@@ -91,7 +91,7 @@ float4 PS_Lumos(VSOutput a_output) : COLOR
 	float3 normal = normalize(a_output.normal);
 	float3 view = normalize(a_output.view);
 
-	//float3 textureColor = tex2D(TextureSampler, a_input.textureCoordinates);
+	float4 textureColor = tex2D(TextureSampler, a_output.textureCoordinates);
 
 	float3 lightInfluenceSummation = float3(0.0f, 0.0f, 0.0f);
 	for(uint index = 0; index < LIGHT_COUNT; ++index)
@@ -104,12 +104,13 @@ float4 PS_Lumos(VSOutput a_output) : COLOR
 		float3 specular = pow(saturate(dot(normal, halfway)), material.specularAttenuation) * material.specular;
 		float3 ambient = material.ambient;
 
-		float3 color = (saturate(ambient + diffuse) /** textureColor*/ + specular) * light.color;
+		float3 color = (saturate(ambient + diffuse) * textureColor + specular) * light.color;
 		lightInfluenceSummation += color;
 	}
 
-	float alpha = material.diffuse.a /** textureColor.a*/;
+	float alpha = material.diffuse.a * textureColor.a;
 	
+	return textureColor;
 	return float4(lightInfluenceSummation, alpha);
 }
 

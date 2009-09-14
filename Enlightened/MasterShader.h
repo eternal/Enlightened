@@ -12,8 +12,7 @@ public:
 		if (m_pEffect) {
 			m_pEffect->SetTechnique("Master");
 		}
-		// TODO fix this
-	    //m_pEffect->SetValue("g_vecLightPos", D3DXVECTOR3(2.0,2.0,0.0), sizeof(D3DXVECTOR3));
+	    
 		m_pEffect->SetFloat("g_materials[0].specularAttenuation", 1.0f);
 		m_pEffect->SetValue("g_materials[0].specular", D3DXVECTOR3(1.0f, 1.0f, 1.0f), sizeof(D3DXVECTOR3));
 		m_pEffect->SetValue("g_materials[0].diffuse",   D3DXVECTOR3(1.0f, 1.0f, 1.0f), sizeof(D3DXVECTOR3));
@@ -21,7 +20,7 @@ public:
 
 		m_pEffect->SetValue("g_lights[0].color", D3DXVECTOR3(1.0f, 0.0f, 0.0f), sizeof(D3DXVECTOR3));
 		m_pEffect->SetValue("g_lights[0].direction", D3DXVECTOR3(0.0f, -1.0f, 0.0f), sizeof(D3DXVECTOR3));
-		m_pEffect->SetValue("g_lights[0].position", D3DXVECTOR3(0.0f, 10.0f, 0.0f), sizeof(D3DXVECTOR3));
+		m_pEffect->SetValue("g_lights[0].position", D3DXVECTOR3(0.0f, -10.0f, 0.0f), sizeof(D3DXVECTOR3));
 		m_pEffect->SetFloat("g_materials[0].attenuation", 1.0f);
 
 		m_pEffect->SetValue("g_lights[1].color", D3DXVECTOR3(0.0f, 0.0f, 1.0f), sizeof(D3DXVECTOR3));
@@ -36,13 +35,6 @@ public:
 	{
 		if (m_pEffect) {
 			m_pEffect->SetValue("g_camera.position", a_cameraPosition, sizeof(D3DXVECTOR3));
-		}
-	}
-
-	void SetTexture(LPDIRECT3DTEXTURE9 g_texture)
-	{
-		if (m_pEffect) {
-			m_pEffect->SetTexture("g_texture", g_texture);
 		}
 	}
 
