@@ -44,14 +44,20 @@ public:
 		m_pEffect->SetValue("g_materials[0].ambient",   D3DXVECTOR4(0.1f, 0.1f, 0.1f, 1.0f), sizeof(D3DXVECTOR4));
 
 		m_pEffect->SetValue("g_lights[0].color", D3DXVECTOR4(1.0f, 1.0f, 1.0f, 1.0f), sizeof(D3DXVECTOR4));
-		m_pEffect->SetValue("g_lights[0].direction", D3DXVECTOR3(0.0f, -1.0f, 0.0f), sizeof(D3DXVECTOR3));
-		m_pEffect->SetValue("g_lights[0].position", D3DXVECTOR3(0.0f, 100.0f, 50.0f), sizeof(D3DXVECTOR3));
+		m_pEffect->SetValue("g_lights[0].target", D3DXVECTOR3(0.0f, -1.0f, 0.0f), sizeof(D3DXVECTOR3));
+		m_pEffect->SetBool("g_lights[0].isTargetCamera", true);
+		m_pEffect->SetValue("g_lights[0].position", D3DXVECTOR3(0.0f, 100.0f, -50.0f), sizeof(D3DXVECTOR3));
 		m_pEffect->SetFloat("g_lights[0].radius", 100.0f);
+		m_pEffect->SetFloat("g_lights[0].outerCone", 50.0f);
+		m_pEffect->SetFloat("g_lights[0].innerCone", 10.0f);
 
 		m_pEffect->SetValue("g_lights[1].color", D3DXVECTOR4(1.0f, 1.0f, 1.0f, 1.0f), sizeof(D3DXVECTOR4));
-		m_pEffect->SetValue("g_lights[1].direction", D3DXVECTOR3(0.0f, -1.0f, 0.0f), sizeof(D3DXVECTOR3));
-		m_pEffect->SetValue("g_lights[1].position", D3DXVECTOR3(0.0f, 100.0f, -50.0f), sizeof(D3DXVECTOR3));
+		m_pEffect->SetValue("g_lights[0].target", D3DXVECTOR3(0.0f, -1.0f, 0.0f), sizeof(D3DXVECTOR3));
+		m_pEffect->SetBool("g_lights[0].isTargetCamera", true);
+		m_pEffect->SetValue("g_lights[1].position", D3DXVECTOR3(0.0f, 0.0f, -50.0f), sizeof(D3DXVECTOR3));
 		m_pEffect->SetFloat("g_lights[1].radius", 100.0f);
+		m_pEffect->SetFloat("g_lights[1].outerCone", 50.0f);
+		m_pEffect->SetFloat("g_lights[1].innerCone", 10.0f);
 	}
 
 	void Update(float a_timeDelta)

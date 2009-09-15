@@ -44,9 +44,11 @@ struct Material
 
 struct Light
 {
+	bool isTargetCamera;
 	float4 color;
-	float3 direction;
+	float3 target;
 	float3 position;
+	float3 direction;
 	float radius;
 	float innerCone;
 	float outerCone;
@@ -139,18 +141,28 @@ float4 PS_Lumos(VSOutput a_input) : COLOR
         
         light = normalize(light);
         halfway = normalize(light + view);
+                
+        if (lightModel.isTargetCamera) {
+            lightModel.direction = lightModel.target - lightModel.position;        
+        }
+
+        float2 cosSpotlightCones = cos(float2(lightModel.outerCone, lightModel.innerCone) * 0.5f);
+        float spotlightDot = dot(-light, normalize(lightModel.direction));
+        float spotlightEffect = smoothstep(cosSpotlightCones[0], cosSpotlightCones[1], spotlightDot);
+
+        attenuation *= spotlightEffect;
         
         normalDotLight = saturate(dot(normal, light));
         normalDotHalfway = saturate(dot(normal, halfway));
         specularAttenuation = (normalDotLight == 0.0f) ? 0.0f : pow(normalDotHalfway, material.specularAttenuation);
         
         color +=
-			((material.ambient * (attenuation * lightModel.color)) + g_sunlight)          // ambient
+			((material.ambient * (attenuation * lightModel.color)) /*+ g_sunlight*/)          // ambient
 			+ (material.diffuse * lightModel.color * normalDotLight * attenuation)        // diffuse
             + (material.specular * lightModel.color * specularAttenuation * attenuation); // specular
 	}
 
-	return color * g_time * tex2D(diffuseSampler, a_input.textureCoordinates);
+	return color * /*g_time * */tex2D(diffuseSampler, a_input.textureCoordinates);
 }
 
 technique Master
