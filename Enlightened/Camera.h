@@ -12,6 +12,8 @@ class Camera : public SGLib::Camera
 protected:
 	SGLib::Projection* m_projectionNode;
 
+	SGLib::Transform* m_targetNode;
+
 	float m_fieldOfView;
 	float m_near;
 	float m_far;
@@ -33,6 +35,12 @@ protected:
 	float m_elapsedTime;
 	bool m_seeking;
 
+	bool m_walking;
+
+	bool m_initialized;
+
+	SGLib::Articulated* m_animationNode;
+
 public:
 	Camera(LPDIRECT3DDEVICE9 a_device) : SGLib::Camera(a_device), SGLib::Node(a_device)
 	{
@@ -46,19 +54,22 @@ public:
 		m_elapsedSeekTime = 0.0f;
 		m_seeking = false;
 
-		m_offset = D3DXVECTOR3(0.0f, 100.0f, -100.0f);
+		m_walking = false;
+		m_initialized = false;
+
+		m_offset = D3DXVECTOR3(-100.0f, 50.0f, 0.0f);
 		m_seekOrigin = D3DXVECTOR3(0.0f, 0.0f, 0.0f);
 		m_seekTarget = D3DXVECTOR3(0.0f, 0.0f, 0.0f);
 		m_targetPosition = D3DXVECTOR3(0.0f, 0.0f, 0.0f);
 		m_up = D3DXVECTOR3(0.0f, 1.0f, 0.0f);
-		m_position = m_offset;
+		m_position = D3DXVECTOR3(0.0f, 1500.0f, -1500.0f);
 
 		//SetSimpleMovement(true);
 
 		m_fieldOfView = D3DX_PI * 0.25f;
 		m_aspectRatio = 1.5f;
 		m_near = 1.0f;
-		m_far = 1000.0f;
+		m_far = 2000.0f;
 
 		// projection
 		D3DXMATRIX projectionMatrix;
@@ -94,11 +105,56 @@ public:
 			Refresh();
 		}
 
-		//m_elapsedTime += a_timeDelta;
-		//if (m_elapsedTime >= 1.0f && m_seeking == false)
-		//{
-		//	StartSeeking(D3DXVECTOR3(0.0f, 75.0f, -50.0f));
-		//}
+		if (m_walking)
+		{
+			if (m_animationNode->GetCurrAnimation() != L"Walk")
+			{
+				m_animationNode->SetAnimationAll(L"Walk", TRUE);
+			}
+			else
+			{
+				m_animationNode->ContinueAnimationAll();
+			}
+
+			D3DXVECTOR3 targetToCamera = m_position - m_targetPosition;
+			float cameraDistance = D3DXVec3Length(&targetToCamera);
+
+			D3DXVECTOR3 targetToCameraUnitVector;
+			D3DXVec3Normalize(&targetToCameraUnitVector, &targetToCamera);
+
+			D3DXMATRIX walkMatrix;
+			D3DXMatrixTranslation(&walkMatrix, -targetToCameraUnitVector.x, 0.0f, -targetToCameraUnitVector.z);
+			m_targetNode->MultMatrix(walkMatrix);
+			
+			D3DXMATRIX targetTransformationMatrix = m_targetNode->GetMatrix();
+			D3DXVECTOR3 scale, translation;
+			D3DXQUATERNION rotation;
+			D3DXMatrixDecompose(&scale, &rotation, &translation, &targetTransformationMatrix);
+
+			m_targetPosition = translation;
+			m_position = m_targetPosition + m_offset;
+
+			Refresh();
+		}
+		else
+		{
+			m_animationNode->StopAnimationAll();
+		}
+
+		m_elapsedTime += a_timeDelta;
+		if (m_elapsedTime >= 2.0f && m_seeking == false && m_initialized == false)
+		{
+			m_initialized = true;
+			D3DXMATRIX targetTransformationMatrix = m_targetNode->GetMatrix();
+			D3DXVECTOR3 scale, translation;
+			D3DXQUATERNION rotation;
+			D3DXMatrixDecompose(&scale, &rotation, &translation, &targetTransformationMatrix);
+
+			m_targetPosition = translation;
+			//m_position = m_targetPosition + m_offset;
+
+			StartSeeking(m_targetPosition + m_offset);
+		}
 	}
 
 	void StartSeeking(D3DXVECTOR3 a_vector)
@@ -112,6 +168,31 @@ public:
 	void StopSeeking()
 	{
 		
+	}
+
+	void Turn(float a_xDelta, float a_yDelta)
+	{
+		D3DXMATRIX targetTransformationMatrix = m_targetNode->GetMatrix();
+		D3DXVECTOR3 scale, translation;
+		D3DXQUATERNION rotation;
+		D3DXMatrixDecompose(&scale, &rotation, &translation, &targetTransformationMatrix);
+
+		D3DXMATRIX theTranslation;
+		D3DXMatrixIdentity(&theTranslation);
+
+		D3DXMATRIX originTranslation;
+		D3DXMatrixTranslation(&originTranslation, -translation.x, -translation.y, -translation.z);
+
+		D3DXMATRIX turnMatrix;
+		D3DXMatrixRotationY(&turnMatrix, a_xDelta);
+
+		D3DXMATRIX characterTranslation;
+		D3DXMatrixTranslation(&characterTranslation, translation.x, translation.y, translation.z);
+
+		D3DXMatrixMultiply(&theTranslation, &originTranslation, &turnMatrix);
+		D3DXMatrixMultiply(&theTranslation, &theTranslation, &characterTranslation);
+
+		m_targetNode->MultMatrix(theTranslation);
 	}
 
 	void Handle(float a_xDelta, float a_yDelta)
@@ -131,7 +212,8 @@ public:
 		D3DXVECTOR3 targetToNewCameraPosition;
 		D3DXVec3Scale(&targetToNewCameraPosition, &targetToNewCameraUnit, cameraDistance);
 
-		m_position = targetToNewCameraPosition;
+		m_offset = targetToNewCameraPosition;
+		m_position = m_targetPosition + m_offset;
 
 		Refresh();
 	}
@@ -178,6 +260,21 @@ public:
 	D3DXVECTOR3 GetPosition()
 	{
 		return m_position;
+	}
+
+	void SetTargetNode(SGLib::Transform* a_targetNode)
+	{
+		m_targetNode = a_targetNode;
+	}
+
+	void SetWalking(bool a_walking)
+	{
+		m_walking = a_walking;
+	}
+
+	void SetAnimationNode(SGLib::Articulated* a_animationNode)
+	{
+		m_animationNode = a_animationNode;
 	}
 };
 }

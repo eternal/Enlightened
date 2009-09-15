@@ -131,9 +131,9 @@ void CALLBACK OnFrameRender( IDirect3DDevice9* pd3dDevice, double dTime, float f
 //--------------------------------------------------------------------------------------
 // Handle mouse events
 //--------------------------------------------------------------------------------------
-void CALLBACK OnMouse(   bool a_leftButton, bool a_rightButton, bool a_middleButtonDown, bool a_sideButton1Down, bool a_sideButton2Down, int a_mouseWheelDelta, int a_xPosition, int a_yPosition, void* a_userContext )
+void CALLBACK OnMouse(bool a_leftButton, bool a_rightButton, bool a_middleButtonDown, bool a_sideButton1Down, bool a_sideButton2Down, int a_mouseWheelDelta, int a_xPosition, int a_yPosition, void* a_userContext )
 {
-	g_mouse->Track(a_rightButton, a_xPosition, a_yPosition);
+	g_mouse->Track(a_leftButton, a_rightButton, a_mouseWheelDelta, a_xPosition, a_yPosition);
 }
 
 
@@ -160,19 +160,6 @@ LRESULT CALLBACK MsgProc( HWND hWnd, UINT uMsg, WPARAM wParam, LPARAM lParam,
 					break;
 
 				case VK_F1:
-					if (!g_animating)
-					{
-						if (g_characterNode->GetCurrAnimation() != L"Walk")
-							g_characterNode->SetAnimationAll(L"Walk", TRUE);
-						else
-							g_characterNode->ContinueAnimationAll();
-						g_animating = TRUE;
-					}
-					else
-					{
-						g_animating = FALSE;
-						g_characterNode->StopAnimationAll();
-					}
 					break;
 
 				case VK_F2:
@@ -281,7 +268,7 @@ void InitalizeGraph()
 	
 	g_monsterTransform = new Transform(device, worldMatrix);
 	g_monsterGeometry = new Geometry(device, L"monster.X");
-	g_monsterGeometry->SetDescription((LPCTSTR)"monster");
+	g_monsterGeometry->SetDescription(L"monster");
 	
 	g_gasStationTransform->SetSibling(g_monsterTransform);
 	g_monsterTransform->SetChild(g_monsterGeometry);
@@ -294,6 +281,7 @@ void InitalizeGraph()
 	D3DXMatrixMultiply(&worldMatrix, &worldMatrix, &translationMatrix);
 	
 	g_characterTransform = new Transform(device, worldMatrix);
+	g_camera->SetTargetNode(g_characterTransform);
 	g_monsterTransform->SetSibling(g_characterTransform);
 
 	// setup each articulated link
@@ -318,6 +306,7 @@ void InitalizeGraph()
 	g_characterRLowerArm =	new Articulated(device, 3.0f, 0.0f,		D3DX_PI/10, 0.0f, D3DX_PI/1.3f,			0.0f, 0.0f, 0.0f,				L"barney_rightlowerarm.x");
 	g_characterLLowerArm =	new Articulated(device, 3.0f, 0.0f,		D3DX_PI/10, 0.0f, D3DX_PI/1.3f,			0.0f, 0.0f, 0.0f,				L"barney_leftlowerarm.x");
 
+	g_camera->SetAnimationNode(g_characterNode);
 	
     g_characterTransform->SetChild(g_characterNode);
 	g_characterNode->SetChild(g_characterLowerBack);
