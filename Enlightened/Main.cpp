@@ -219,8 +219,8 @@ void InitalizeGraph()
 
 // dwarf
 	D3DXMatrixScaling(&scalingMatrix, 1.0f, 1.0f, 1.0f);
-	D3DXMatrixRotationYawPitchRoll(&rotationMatrix, 0.0f, 0.0f, 0.0f);
-	D3DXMatrixTranslation(&translationMatrix, 0.0f, 0.0f, 0.0f);
+	D3DXMatrixRotationYawPitchRoll(&rotationMatrix, -PI/4, 0.0f, 0.0f);
+	D3DXMatrixTranslation(&translationMatrix, -300.0f, 12.0f, 100.0f);
 	D3DXMatrixMultiply(&worldMatrix, &scalingMatrix, &rotationMatrix);
 	D3DXMatrixMultiply(&worldMatrix, &worldMatrix, &translationMatrix);
 
@@ -233,7 +233,7 @@ void InitalizeGraph()
 //tree
 	D3DXMatrixScaling(&scalingMatrix, 50.0f, 50.0f, 50.0f);
 	D3DXMatrixRotationYawPitchRoll(&rotationMatrix, 0.0f, 0.0f, 0.0f);
-	D3DXMatrixTranslation(&translationMatrix, 60.0f, 0.0f, 100.0f);
+	D3DXMatrixTranslation(&translationMatrix, 60.0f, 0.0f, -500.0f);
 	D3DXMatrixMultiply(&worldMatrix, &scalingMatrix, &rotationMatrix);
 	D3DXMatrixMultiply(&worldMatrix, &worldMatrix, &translationMatrix);
 
@@ -260,8 +260,8 @@ void InitalizeGraph()
 
 //monster
 	D3DXMatrixScaling(&scalingMatrix, 5.0f, 5.0f, 5.0f);
-	D3DXMatrixRotationYawPitchRoll(&rotationMatrix, PI/8, 0.0f, 0.0f);
-	D3DXMatrixTranslation(&translationMatrix, 60.0f, 0.0f, 100.0f);
+	D3DXMatrixRotationYawPitchRoll(&rotationMatrix, PI/2.5, 0.0f, 0.0f);
+	D3DXMatrixTranslation(&translationMatrix, 60.0f, 0.0f, 0.0f);
 	D3DXMatrixMultiply(&worldMatrix, &scalingMatrix, &rotationMatrix);
 	D3DXMatrixMultiply(&worldMatrix, &worldMatrix, &translationMatrix);
 	
@@ -316,7 +316,27 @@ INT WINAPI WinMain( HINSTANCE, HINSTANCE, LPSTR, int )
     DXUTInit( true, true, true ); // Parse the command line, handle the default hotkeys, and show msgboxes
 	DXUTSetCursorSettings( true, true ); // Show the cursor and clip it when in full screen
     DXUTCreateWindow( TEXT("Enlightened") );
-    DXUTCreateDevice( D3DADAPTER_DEFAULT, true, 640, 480, IsDeviceAcceptable, ModifyDeviceSettings );
+    //DXUTCreateDevice( D3DADAPTER_DEFAULT, true, 640, 480, IsDeviceAcceptable, ModifyDeviceSettings );
+    DXUTDeviceSettings Settings;
+    D3DPRESENT_PARAMETERS d3dpp; 
+    ZeroMemory( &d3dpp, sizeof(d3dpp) );
+    d3dpp.Windowed = false;
+    d3dpp.SwapEffect = D3DSWAPEFFECT_DISCARD;
+    d3dpp.BackBufferFormat = D3DFMT_UNKNOWN;
+    d3dpp.EnableAutoDepthStencil = TRUE;
+    d3dpp.AutoDepthStencilFormat = D3DFMT_D16;
+	d3dpp.BackBufferWidth = 800;
+	d3dpp.BackBufferHeight = 600;
+	d3dpp.MultiSampleType = D3DMULTISAMPLE_2_SAMPLES;
+	
+    Settings.AdapterFormat = D3DFMT_A8R8G8B8;
+	Settings.AdapterOrdinal = D3DADAPTER_DEFAULT;
+	Settings.BehaviorFlags = D3DCREATE_HARDWARE_VERTEXPROCESSING | D3DCREATE_PUREDEVICE;
+	Settings.DeviceType = D3DDEVTYPE_HAL;
+	Settings.pp = d3dpp;
+	DXUTCreateDeviceFromSettings( &Settings );
+
+    //DXUTCreateDeviceFromSettings( D3DADAPTER_DEFAULT, true, 640, 480, IsDeviceAcceptable, ModifyDeviceSettings );
 
 	InitalizeGraph();
 

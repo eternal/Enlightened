@@ -1,4 +1,4 @@
-#define LIGHT_COUNT 1
+#define LIGHT_COUNT 6
 #define MATERIAL_COUNT 1
 
 // sunlight /  night time
@@ -44,7 +44,7 @@ struct Material
 
 struct Light
 {
-	bool isTargetCamera;
+	bool isTargetLight;
 	float4 color;
 	float3 target;
 	float3 position;
@@ -144,7 +144,7 @@ float4 PS_Lumos(VSOutput a_input) : COLOR
         light = normalize(light);
         halfway = normalize(light + view);
         
-        if (lightModel.isTargetCamera) {
+        if (lightModel.isTargetLight) {
             lightModel.direction = lightModel.target - lightModel.position;        
         }
 
@@ -160,7 +160,7 @@ float4 PS_Lumos(VSOutput a_input) : COLOR
         specularAttenuation = (normalDotLight == 0.0f) ? 0.0f : pow(normalDotHalfway, material.specularAttenuation);
         
         color +=
-			(((material.ambient * (attenuation * lightModel.color)) /*+ g_sunlight*/) /** g_time*/)        // ambient
+			(((material.ambient * (attenuation * lightModel.color))  + g_sunlight) * g_time)        // ambient
 			+ (material.diffuse * lightModel.color * normalDotLight * attenuation)        // diffuse
             + (material.specular * lightModel.color * specularAttenuation * attenuation); // specular
 	}

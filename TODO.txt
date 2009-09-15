@@ -1,6 +1,3 @@
-objects in scene
 camera and movement and animation
-spotlights - with geometry
 fix the shader up a little
-AA
 documentation

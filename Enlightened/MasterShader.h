@@ -42,14 +42,54 @@ public:
 		m_pEffect->SetValue("g_materials[0].specular", D3DXVECTOR4(0.0f, 0.0f, 0.0f, 1.0f), sizeof(D3DXVECTOR4));
 		m_pEffect->SetValue("g_materials[0].diffuse",   D3DXVECTOR4(1.0f, 1.0f, 1.0f, 1.0f), sizeof(D3DXVECTOR4));
 		m_pEffect->SetValue("g_materials[0].ambient",   D3DXVECTOR4(0.1f, 0.1f, 0.1f, 1.0f), sizeof(D3DXVECTOR4));
+        //-25.792118, -6.239999, 112.264069
+		m_pEffect->SetValue("g_lights[0].color", D3DXVECTOR4(1.0f, 1.0f, 0.0f, 1.0f), sizeof(D3DXVECTOR4));
+		m_pEffect->SetValue("g_lights[0].direction", D3DXVECTOR3(0.0f, -1.0f, 0.0f), sizeof(D3DXVECTOR3));
+		m_pEffect->SetBool("g_lights[0].isTargetLight", false);
+		m_pEffect->SetValue("g_lights[0].position", D3DXVECTOR3(-500.0f, 70.25f, -313.0f), sizeof(D3DXVECTOR3));
+		m_pEffect->SetFloat("g_lights[0].radius", 1000.0f);
+		m_pEffect->SetFloat("g_lights[0].outerCone", D3DXToRadian(90.0f));
+		m_pEffect->SetFloat("g_lights[0].innerCone", D3DXToRadian(30.0f));
 
-		m_pEffect->SetValue("g_lights[0].color", D3DXVECTOR4(1.0f, 1.0f, 1.0f, 1.0f), sizeof(D3DXVECTOR4));
-		m_pEffect->SetValue("g_lights[0].direction", D3DXVECTOR3(-1.0f, -1.0f, 0.0f), sizeof(D3DXVECTOR3));
-		m_pEffect->SetBool("g_lights[0].isTargetCamera", false);
-		m_pEffect->SetValue("g_lights[0].position", D3DXVECTOR3(-20.0f, 100.0f, 0.0f), sizeof(D3DXVECTOR3));
-		m_pEffect->SetFloat("g_lights[0].radius", 300.0f);
-		m_pEffect->SetFloat("g_lights[0].outerCone", D3DXToRadian(120.0f));
-		m_pEffect->SetFloat("g_lights[0].innerCone", D3DXToRadian(40.0f));
+        m_pEffect->SetValue("g_lights[1].color", D3DXVECTOR4(1.0f, 1.0f, 0.0f, 1.0f), sizeof(D3DXVECTOR4));
+		m_pEffect->SetValue("g_lights[1].direction", D3DXVECTOR3(0.0f, -1.0f, 0.0f), sizeof(D3DXVECTOR3));
+		m_pEffect->SetBool("g_lights[1].isTargetLight", false);
+		m_pEffect->SetValue("g_lights[1].position", D3DXVECTOR3(-500.0f, 70.25f, 3.0f), sizeof(D3DXVECTOR3));
+		m_pEffect->SetFloat("g_lights[1].radius", 1000.0f);
+		m_pEffect->SetFloat("g_lights[1].outerCone", D3DXToRadian(90.0f));
+		m_pEffect->SetFloat("g_lights[1].innerCone", D3DXToRadian(10.0f));
+		
+		m_pEffect->SetValue("g_lights[2].color", D3DXVECTOR4(1.0f, 1.0f, 0.0f, 1.0f), sizeof(D3DXVECTOR4));
+		m_pEffect->SetValue("g_lights[2].direction", D3DXVECTOR3(0.0f, -1.0f, 0.0f), sizeof(D3DXVECTOR3));
+		m_pEffect->SetBool("g_lights[2].isTargetLight", false);
+		m_pEffect->SetValue("g_lights[2].position", D3DXVECTOR3(-500.0f, 70.25f, -813.0f), sizeof(D3DXVECTOR3));
+		m_pEffect->SetFloat("g_lights[2].radius", 1000.0f);
+		m_pEffect->SetFloat("g_lights[2].outerCone", D3DXToRadian(90.0f));
+		m_pEffect->SetFloat("g_lights[2].innerCone", D3DXToRadian(30.0f));
+		
+		m_pEffect->SetValue("g_lights[3].color", D3DXVECTOR4(1.0f, 1.0f, 0.0f, 1.0f), sizeof(D3DXVECTOR4));
+		m_pEffect->SetValue("g_lights[3].direction", D3DXVECTOR3(0.0f, -1.0f, 0.0f), sizeof(D3DXVECTOR3));
+		m_pEffect->SetBool("g_lights[3].isTargetLight", false);
+		m_pEffect->SetValue("g_lights[3].position", D3DXVECTOR3(1200.0f, 70.25f, -813.0f), sizeof(D3DXVECTOR3));
+		m_pEffect->SetFloat("g_lights[3].radius", 1000.0f);
+		m_pEffect->SetFloat("g_lights[3].outerCone", D3DXToRadian(90.0f));
+		m_pEffect->SetFloat("g_lights[3].innerCone", D3DXToRadian(30.0f));
+
+   		m_pEffect->SetValue("g_lights[4].color", D3DXVECTOR4(1.0f, 1.0f, 0.0f, 1.0f), sizeof(D3DXVECTOR4));
+		m_pEffect->SetValue("g_lights[4].direction", D3DXVECTOR3(0.0f, -1.0f, 0.0f), sizeof(D3DXVECTOR3));
+		m_pEffect->SetBool("g_lights[4].isTargetLight", false);
+		m_pEffect->SetValue("g_lights[4].position", D3DXVECTOR3(1200.0f, 70.25f, -313.0f), sizeof(D3DXVECTOR3));
+		m_pEffect->SetFloat("g_lights[4].radius", 1000.0f);
+		m_pEffect->SetFloat("g_lights[4].outerCone", D3DXToRadian(90.0f));
+		m_pEffect->SetFloat("g_lights[4].innerCone", D3DXToRadian(30.0f));
+
+        m_pEffect->SetValue("g_lights[5].color", D3DXVECTOR4(1.0f, 1.0f, 0.0f, 1.0f), sizeof(D3DXVECTOR4));
+		m_pEffect->SetValue("g_lights[5].direction", D3DXVECTOR3(0.0f, -1.0f, 0.0f), sizeof(D3DXVECTOR3));
+		m_pEffect->SetBool("g_lights[5].isTargetLight", false);
+		m_pEffect->SetValue("g_lights[5].position", D3DXVECTOR3(1200.0f, 70.25f, 3.0f), sizeof(D3DXVECTOR3));
+		m_pEffect->SetFloat("g_lights[5].radius", 1000.0f);
+		m_pEffect->SetFloat("g_lights[5].outerCone", D3DXToRadian(90.0f));
+		m_pEffect->SetFloat("g_lights[5].innerCone", D3DXToRadian(30.0f));
 
 		//m_pEffect->SetValue("g_lights[1].color", D3DXVECTOR4(1.0f, 1.0f, 1.0f, 1.0f), sizeof(D3DXVECTOR4));
 		//m_pEffect->SetValue("g_lights[1].direction", D3DXVECTOR3(0.0f, -1.0f, 0.0f), sizeof(D3DXVECTOR3));
@@ -71,7 +111,7 @@ public:
 
 		float bias = (sin(m_time) * 1.0f / 3.0f) + 0.5f;
 		bias = max(min(bias, 0.75f), 0.25f);
-		m_pEffect->SetValue("g_lights[0].position", D3DXVECTOR3((200.0f* bias)/3, 100.0f, 0.0f), sizeof(D3DXVECTOR3));
+		//m_pEffect->SetValue("g_lights[0].position", D3DXVECTOR3((200.0f* bias)/3, 100.0f, 0.0f), sizeof(D3DXVECTOR3));
 		/*m_pEffect->SetValue("g_lights[1].position", D3DXVECTOR3(200.0f* bias, 0.0f, -50.0f), sizeof(D3DXVECTOR3));*/
 		m_pEffect->SetValue("g_sunlight", D3DXVECTOR4(0.75f * bias, 0.75f * bias, 0.0f, 1.0f), sizeof(D3DXVECTOR4));
 		m_pEffect->SetFloat("g_time", bias);
