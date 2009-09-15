@@ -31,11 +31,30 @@ Transform*		g_dwarfTransform = NULL;
 Transform*		g_treeTransform = NULL;
 Transform*		g_monsterTransform = NULL;
 Transform*      g_gasStationTransform = NULL;
+Transform*		g_characterTransform = NULL;
 
 Geometry*		g_dwarfGeometry = NULL;
 Geometry*		g_treeGeometry = NULL;
 Geometry*		g_monsterGeometry = NULL;
 Geometry*       g_gasStationGeometry = NULL;
+
+Articulated*	g_characterNode = NULL;
+Articulated*	g_characterPelvis = NULL;
+Articulated*	g_characterRUpperLeg = NULL;
+Articulated*	g_characterLUpperLeg = NULL;
+Articulated*	g_characterRLowerLeg = NULL;
+Articulated*	g_characterLLowerLeg = NULL;
+Articulated*	g_characterLowerBack = NULL;
+Articulated*	g_characterUpperBack = NULL;
+Articulated*	g_characterNeck = NULL;
+Articulated*	g_characterHead = NULL;
+Articulated*	g_characterShoulders = NULL;
+Articulated*	g_characterRUpperArm = NULL;
+Articulated*	g_characterLUpperArm = NULL;
+Articulated*	g_characterRLowerArm = NULL;
+Articulated*	g_characterLLowerArm = NULL;
+
+bool            g_animating          = false;
 //--------------------------------------------------------------------------------------
 // Rejects any devices that aren't acceptable by returning false
 //--------------------------------------------------------------------------------------
@@ -146,6 +165,19 @@ LRESULT CALLBACK MsgProc( HWND hWnd, UINT uMsg, WPARAM wParam, LPARAM lParam,
 					break;
 
 				case VK_F1:
+					if (!g_animating)
+					{
+						if (g_characterNode->GetCurrAnimation() != L"Walk")
+							g_characterNode->SetAnimationAll(L"Walk", TRUE);
+						else
+							g_characterNode->ContinueAnimationAll();
+						g_animating = TRUE;
+					}
+					else
+					{
+						g_animating = FALSE;
+						g_characterNode->StopAnimationAll();
+					}
 					break;
 
 				case VK_F2:
@@ -271,6 +303,121 @@ void InitalizeGraph()
 	
 	g_gasStationTransform->SetSibling(g_monsterTransform);
 	g_monsterTransform->SetChild(g_monsterGeometry);
+	
+	// person setup
+	D3DXMatrixScaling(&scalingMatrix, 3.0f, 3.0f, 3.0f);
+	D3DXMatrixRotationYawPitchRoll(&rotationMatrix, 0.0f, 0.0f, PI/2);
+	D3DXMatrixTranslation(&translationMatrix, 15.0f, 25.0f, -80.0f);
+	D3DXMatrixMultiply(&worldMatrix, &scalingMatrix, &rotationMatrix);
+	D3DXMatrixMultiply(&worldMatrix, &worldMatrix, &translationMatrix);
+	
+	g_characterTransform = new Transform(device, worldMatrix);
+	g_monsterTransform->SetSibling(g_characterTransform);
+
+	// setup each articulated link
+	//										    Leng, Disp,     OrigTheta,Min,    Max,					OrigAlpha,Min,  Max,			Filename
+	g_characterNode =		new Articulated(device, 0.0f,  0.0f,    0.0f,     0.0f,   0.0f,					0.0f,     0.0f, 0.0f,			NULL);
+	g_characterPelvis =		new Articulated(device, -0.8f, 0.0f,	D3DX_PI,  D3DX_PI, D3DX_PI,				0.0f,     0.0f, 0.0f,			NULL);
+	
+	g_characterRUpperLeg =	new Articulated(device, 3.3f, -0.8f,	D3DX_PI/15, -D3DX_PI/4, D3DX_PI/3,		0.0f, 0.0f, 0.0f,				L"barney_rightupperleg.x"); 
+	g_characterLUpperLeg =	new Articulated(device, 3.3f, 0.8f,		D3DX_PI/15, -D3DX_PI/4, D3DX_PI/3,		0.0f, 0.0f, 0.0f,				L"barney_leftupperleg.x");
+	g_characterRLowerLeg =	new Articulated(device, 5.0f, -0.3f,	-D3DX_PI/13, -D3DX_PI/2, 0.0f,			0.0f, 0.0f, 0.0f,				L"barney_rightlowerleg.x");
+	g_characterLLowerLeg =	new Articulated(device, 5.0f, 0.3f,		-D3DX_PI/13, -D3DX_PI/2, 0.0f,			0.0f, 0.0f, 0.0f,				L"barney_leftlowerleg.x");
+	
+	g_characterLowerBack =	new Articulated(device, 3.0f, 0.0f,		D3DX_PI/25, -D3DX_PI/10, D3DX_PI/10,	0.0f, -D3DX_PI/8, D3DX_PI/8,	L"barney_lowerbody.x");
+	g_characterUpperBack =	new Articulated(device, 3.0f, 0.0f,		-D3DX_PI/24, -D3DX_PI/2, 0.0f,			0.0f, -D3DX_PI/8, D3DX_PI/8,	L"barney_upperbody.x");
+	
+	g_characterNeck =		new Articulated(device, 0.0f, 0.0f,		0.0f, 0.0f, 0.0f,						0.0f, -D3DX_PI/3, D3DX_PI/3,	NULL);
+	g_characterHead =		new Articulated(device, 1.5f, 0.0f,		0.0f, -D3DX_PI/3, D3DX_PI/3,			0.0f, 0.0f, 0.0f,				L"barney_head.x");
+	g_characterShoulders =	new Articulated(device, 1.0f, 0.0f,		D3DX_PI, D3DX_PI, D3DX_PI,				0.0f, 0.0f, 0.0f,				NULL);
+	
+	g_characterRUpperArm =	new Articulated(device, 3.0f, -2.5f,	D3DX_PI/20, -D3DX_PI/2, D3DX_PI/1.1f,	0.0f, -D3DX_PI/12, D3DX_PI/12,	L"barney_rightupperarm.x");
+	g_characterLUpperArm =	new Articulated(device, 3.0f, 2.5f,		D3DX_PI/20, -D3DX_PI/2, D3DX_PI/1.1f,	0.0f, -D3DX_PI/12, D3DX_PI/12,	L"barney_leftupperarm.x");
+	g_characterRLowerArm =	new Articulated(device, 3.0f, 0.0f,		D3DX_PI/10, 0.0f, D3DX_PI/1.3f,			0.0f, 0.0f, 0.0f,				L"barney_rightlowerarm.x");
+	g_characterLLowerArm =	new Articulated(device, 3.0f, 0.0f,		D3DX_PI/10, 0.0f, D3DX_PI/1.3f,			0.0f, 0.0f, 0.0f,				L"barney_leftlowerarm.x");
+
+	
+    g_characterTransform->SetChild(g_characterNode);
+	g_characterNode->SetChild(g_characterLowerBack);
+	g_characterLowerBack->SetSibling(g_characterPelvis);
+	g_characterPelvis->SetChild(g_characterLUpperLeg);
+	g_characterLUpperLeg->SetSibling(g_characterRUpperLeg);
+	g_characterRUpperLeg->SetChild(g_characterRLowerLeg);
+	g_characterLUpperLeg->SetChild(g_characterLLowerLeg);
+	g_characterLowerBack->SetChild(g_characterUpperBack);
+	g_characterUpperBack->SetChild(g_characterNeck);
+	g_characterNeck->SetChild(g_characterHead);
+	g_characterNeck->SetSibling(g_characterShoulders);
+	g_characterShoulders->SetChild(g_characterRUpperArm);
+	g_characterRUpperArm->SetSibling(g_characterLUpperArm);
+	g_characterRUpperArm->SetChild(g_characterRLowerArm);
+	g_characterLUpperArm->SetChild(g_characterLLowerArm);
+    
+    std::vector<TimeStep> vecRotRUA, vecTwistRUA, vecRotLUA, vecTwistLUA;
+    vecRotLUA.push_back(TimeStep(0.0f, D3DX_PI/20));
+	vecRotLUA.push_back(TimeStep(0.5f, D3DX_PI/6));
+	vecRotLUA.push_back(TimeStep(1.0f, D3DX_PI/20));
+	vecRotLUA.push_back(TimeStep(1.5f, -D3DX_PI/25));
+	vecRotLUA.push_back(TimeStep(2.0f, D3DX_PI/20));
+	
+	vecRotRUA.push_back(TimeStep(0.0f, D3DX_PI/20));
+	vecRotRUA.push_back(TimeStep(0.5f, -D3DX_PI/25));
+	vecRotRUA.push_back(TimeStep(1.0f, D3DX_PI/20));
+	vecRotRUA.push_back(TimeStep(1.5f, D3DX_PI/6));
+	vecRotRUA.push_back(TimeStep(2.0f, D3DX_PI/20));
+
+	vecTwistRUA.push_back(TimeStep(0.0f, -D3DX_PI/15));
+	vecTwistLUA.push_back(TimeStep(0.0f, D3DX_PI/15));
+
+	std::vector<TimeStep> vecRotRUL, vecRotLUL, vecRotRLL, vecRotLLL, vecRotUB, vecTwist;
+	vecTwist.push_back(TimeStep(0.0f, 0.0f));
+
+	vecRotRUL.push_back(TimeStep(0.0f, D3DX_PI/15));
+	vecRotRUL.push_back(TimeStep(0.5f, D3DX_PI/6));
+	vecRotRUL.push_back(TimeStep(1.0f, D3DX_PI/15));
+	vecRotRUL.push_back(TimeStep(1.5f, -D3DX_PI/10));
+	vecRotRUL.push_back(TimeStep(2.0f, D3DX_PI/15));
+
+	vecRotLUL.push_back(TimeStep(0.0f, D3DX_PI/15));
+	vecRotLUL.push_back(TimeStep(0.5f, -D3DX_PI/10));
+	vecRotLUL.push_back(TimeStep(1.0f, D3DX_PI/15));
+	vecRotLUL.push_back(TimeStep(1.5f, D3DX_PI/6));
+	vecRotLUL.push_back(TimeStep(2.0f, D3DX_PI/15));
+
+	vecRotRLL.push_back(TimeStep(0.0f, -D3DX_PI/13));
+	vecRotRLL.push_back(TimeStep(0.5f, -D3DX_PI/50));
+	vecRotRLL.push_back(TimeStep(1.0f, -D3DX_PI/13));
+	vecRotRLL.push_back(TimeStep(1.5f, -D3DX_PI/6));
+	vecRotRLL.push_back(TimeStep(2.0f, -D3DX_PI/13));
+
+	vecRotLLL.push_back(TimeStep(0.0f, -D3DX_PI/13));
+	vecRotLLL.push_back(TimeStep(0.5f, -D3DX_PI/6));
+	vecRotLLL.push_back(TimeStep(1.0f, -D3DX_PI/13));
+	vecRotLLL.push_back(TimeStep(1.5f, -D3DX_PI/50));
+	vecRotLLL.push_back(TimeStep(2.0f, -D3DX_PI/13));
+
+	vecRotUB.push_back(TimeStep(0.0f, -D3DX_PI/24));
+	vecRotUB.push_back(TimeStep(0.5f, -D3DX_PI/20));
+	vecRotUB.push_back(TimeStep(1.0f, -D3DX_PI/24));
+	vecRotUB.push_back(TimeStep(1.5f, -D3DX_PI/20));
+	vecRotUB.push_back(TimeStep(2.0f, -D3DX_PI/24));
+
+	AnimContainer RUAWalkAnim(vecRotRUA, vecTwistRUA);
+	AnimContainer LUAWalkAnim(vecRotLUA, vecTwistLUA);
+	AnimContainer RULWalkAnim(vecRotRUL, vecTwist);
+	AnimContainer LULWalkAnim(vecRotLUL, vecTwist);
+	AnimContainer RLLWalkAnim(vecRotRLL, vecTwist);
+	AnimContainer LLLWalkAnim(vecRotLLL, vecTwist);
+	AnimContainer UBWalkAnim(vecRotUB, vecTwist);
+
+	g_characterRUpperArm->AddAnimation(L"Walk", RUAWalkAnim);
+	g_characterLUpperArm->AddAnimation(L"Walk", LUAWalkAnim);
+	g_characterRUpperLeg->AddAnimation(L"Walk", RULWalkAnim);
+	g_characterLUpperLeg->AddAnimation(L"Walk", LULWalkAnim);
+	g_characterRLowerLeg->AddAnimation(L"Walk", RLLWalkAnim);
+	g_characterLLowerLeg->AddAnimation(L"Walk", LLLWalkAnim);
+	g_characterUpperBack->AddAnimation(L"Walk", UBWalkAnim);
+
 }
 
 void CleanUp()
@@ -320,7 +467,7 @@ INT WINAPI WinMain( HINSTANCE, HINSTANCE, LPSTR, int )
     DXUTDeviceSettings Settings;
     D3DPRESENT_PARAMETERS d3dpp; 
     ZeroMemory( &d3dpp, sizeof(d3dpp) );
-    d3dpp.Windowed = false;
+    d3dpp.Windowed = true;
     d3dpp.SwapEffect = D3DSWAPEFFECT_DISCARD;
     d3dpp.BackBufferFormat = D3DFMT_UNKNOWN;
     d3dpp.EnableAutoDepthStencil = TRUE;
