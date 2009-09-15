@@ -16,6 +16,8 @@
 #include <string>
 using namespace SGLib;
 
+#define PI 3.1415926535897932384626433832795028841971693993751058209749445923078164062862089986280348253421170679f
+
 MasterShader*	g_masterShader = NULL;
 
 SGRenderer*		g_renderer = NULL;
@@ -256,6 +258,19 @@ void InitalizeGraph()
     g_treeTransform->SetSibling(g_gasStationTransform);
     g_gasStationTransform->SetChild(g_gasStationGeometry);
 
+//monster
+	D3DXMatrixScaling(&scalingMatrix, 5.0f, 5.0f, 5.0f);
+	D3DXMatrixRotationYawPitchRoll(&rotationMatrix, PI/8, 0.0f, 0.0f);
+	D3DXMatrixTranslation(&translationMatrix, 60.0f, 0.0f, 100.0f);
+	D3DXMatrixMultiply(&worldMatrix, &scalingMatrix, &rotationMatrix);
+	D3DXMatrixMultiply(&worldMatrix, &worldMatrix, &translationMatrix);
+	
+	g_monsterTransform = new Transform(device, worldMatrix);
+	g_monsterGeometry = new Geometry(device, L"monster.X");
+	g_monsterGeometry->SetDescription((LPCTSTR)"monster");
+	
+	g_gasStationTransform->SetSibling(g_monsterTransform);
+	g_monsterTransform->SetChild(g_monsterGeometry);
 }
 
 void CleanUp()
