@@ -1,3 +1,11 @@
+//====================================================================
+// shader.fx
+// Version 0.9
+// Authors: Doug Cook & Nick Kinsey
+// Master Shader for lighting, shading and texture/normal mapping
+// Date 15/09/09
+//====================================================================
+
 #define LIGHT_COUNT 6
 #define MATERIAL_COUNT 1
 

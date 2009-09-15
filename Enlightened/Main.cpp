@@ -1,10 +1,10 @@
-//--------------------------------------------------------------------------------------
-// File: Main.cpp
-//
-// Empty starting point for new Direct3D applications
-//
-// Copyright (c) Microsoft Corporation. All rights reserved.
-//--------------------------------------------------------------------------------------
+//====================================================================
+// Main.cpp
+// Main implementatioon of scene graph
+// Version 0.9
+// Authors: Microsoft Corporation, Douglas Cook & Nick Kinsey
+// Date 15/09/09
+//====================================================================
 #include "dxstdafx.h"
 #include "SGLibResource.h"
 #include "MasterShader.h"
@@ -14,6 +14,7 @@
 #include <map>
 #include <vector>
 #include <string>
+
 using namespace SGLib;
 
 #define PI 3.1415926535897932384626433832795028841971693993751058209749445923078164062862089986280348253421170679f
@@ -176,6 +177,7 @@ LRESULT CALLBACK MsgProc( HWND hWnd, UINT uMsg, WPARAM wParam, LPARAM lParam,
 					break;
 
 				case VK_F2:
+				    DXUTToggleFullScreen();
 					break;
 			}
 			break;

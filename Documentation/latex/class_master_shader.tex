@@ -1,0 +1,61 @@
+\section{MasterShader Class Reference}
+\label{class_master_shader}\index{MasterShader@{MasterShader}}
+
+
+{\ttfamily \#include $<$MasterShader.h$>$}
+
+Inherits SGLib::Shader.\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\bf MasterShader} (LPDIRECT3DDEVICE9 a\_\-device, LPCTSTR a\_\-fileName, std::vector$<$ std::string $>$ $\ast$a\_\-meshNames)
+\item 
+void {\bf Update} (float a\_\-timeDelta)
+\item 
+{\bf $\sim$MasterShader} ()
+\item 
+void {\bf SetCameraPosition} (D3DXVECTOR3 a\_\-cameraPosition)
+\item 
+void {\bf RenderGeometry} (SGLib::Geometry $\ast$a\_\-geometry)
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std::map$<$ std::string, LPDIRECT3DTEXTURE9 $>$ $\ast$ {\bf m\_\-normalTextures}
+\item 
+float {\bf m\_\-time}
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{MasterShader@{MasterShader}!MasterShader@{MasterShader}}
+\index{MasterShader@{MasterShader}!MasterShader@{MasterShader}}
+\subsubsection[{MasterShader}]{\setlength{\rightskip}{0pt plus 5cm}MasterShader::MasterShader (LPDIRECT3DDEVICE9 {\em a\_\-device}, \/  LPCTSTR {\em a\_\-fileName}, \/  std::vector$<$ std::string $>$ $\ast$ {\em a\_\-meshNames})\hspace{0.3cm}{\ttfamily  [inline]}}\label{class_master_shader_adf8b691e77d47763fbbc44c7724fb880}
+\index{MasterShader@{MasterShader}!$\sim$MasterShader@{$\sim$MasterShader}}
+\index{$\sim$MasterShader@{$\sim$MasterShader}!MasterShader@{MasterShader}}
+\subsubsection[{$\sim$MasterShader}]{\setlength{\rightskip}{0pt plus 5cm}MasterShader::$\sim$MasterShader ()\hspace{0.3cm}{\ttfamily  [inline]}}\label{class_master_shader_af92e2ec718026698de2edcfc4c20948c}
+
+
+\subsection{Member Function Documentation}
+\index{MasterShader@{MasterShader}!RenderGeometry@{RenderGeometry}}
+\index{RenderGeometry@{RenderGeometry}!MasterShader@{MasterShader}}
+\subsubsection[{RenderGeometry}]{\setlength{\rightskip}{0pt plus 5cm}void MasterShader::RenderGeometry (SGLib::Geometry $\ast$ {\em a\_\-geometry})\hspace{0.3cm}{\ttfamily  [inline]}}\label{class_master_shader_a5fc7f7834ff6938c2b55d6af5c97766d}
+\index{MasterShader@{MasterShader}!SetCameraPosition@{SetCameraPosition}}
+\index{SetCameraPosition@{SetCameraPosition}!MasterShader@{MasterShader}}
+\subsubsection[{SetCameraPosition}]{\setlength{\rightskip}{0pt plus 5cm}void MasterShader::SetCameraPosition (D3DXVECTOR3 {\em a\_\-cameraPosition})\hspace{0.3cm}{\ttfamily  [inline]}}\label{class_master_shader_af1125d20e6425a5694700a08ae061d3e}
+\index{MasterShader@{MasterShader}!Update@{Update}}
+\index{Update@{Update}!MasterShader@{MasterShader}}
+\subsubsection[{Update}]{\setlength{\rightskip}{0pt plus 5cm}void MasterShader::Update (float {\em a\_\-timeDelta})\hspace{0.3cm}{\ttfamily  [inline]}}\label{class_master_shader_acf8849db1f0ac43c2d35bf714ef285ed}
+
+
+\subsection{Member Data Documentation}
+\index{MasterShader@{MasterShader}!m\_\-normalTextures@{m\_\-normalTextures}}
+\index{m\_\-normalTextures@{m\_\-normalTextures}!MasterShader@{MasterShader}}
+\subsubsection[{m\_\-normalTextures}]{\setlength{\rightskip}{0pt plus 5cm}std::map$<$std::string, LPDIRECT3DTEXTURE9$>$$\ast$ {\bf MasterShader::m\_\-normalTextures}\hspace{0.3cm}{\ttfamily  [protected]}}\label{class_master_shader_aad808d20c01b79a070560263d64541f5}
+\index{MasterShader@{MasterShader}!m\_\-time@{m\_\-time}}
+\index{m\_\-time@{m\_\-time}!MasterShader@{MasterShader}}
+\subsubsection[{m\_\-time}]{\setlength{\rightskip}{0pt plus 5cm}float {\bf MasterShader::m\_\-time}\hspace{0.3cm}{\ttfamily  [protected]}}\label{class_master_shader_ad7431a0297a89d1505463f4b634fc4ec}
+
+
+The documentation for this class was generated from the following file:\begin{DoxyCompactItemize}
+\item 
+C:/Users/doug/Documents/Visual Studio 2008/Projects/enlightened/Enlightened/{\bf MasterShader.h}\end{DoxyCompactItemize}

@@ -1,3 +1,11 @@
+//====================================================================
+// MasterShader.h
+// This class provides all the paramentalisation and callbacks for the 
+// shader
+// Version 0.92
+// Authors: Douglas Cook & Nicholas Kinesey
+// Date 15/09/09
+//====================================================================
 #pragma once
 
 #include "Shader.h"

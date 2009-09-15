@@ -1,3 +1,11 @@
+//====================================================================
+// Mouse.h
+// Mouse class to provide camera data
+// Version 0.4
+// Author: Nicholas Kinsey
+// Date 15/09/09
+//====================================================================
+
 #pragma once
 #include "Camera.h"
 

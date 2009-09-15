@@ -1,0 +1,131 @@
+\section{C:/Users/doug/Documents/Visual Studio 2008/Projects/enlightened/Enlightened/shader.fx.c File Reference}
+\label{shader_8fx_8c}\index{C:/Users/doug/Documents/Visual Studio 2008/Projects/enlightened/Enlightened/shader.fx.c@{C:/Users/doug/Documents/Visual Studio 2008/Projects/enlightened/Enlightened/shader.fx.c}}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct {\bf Material}
+\item 
+struct {\bf Light}
+\item 
+struct {\bf Camera}
+\item 
+struct {\bf VSInput}
+\item 
+struct {\bf VSOutput}
+\end{DoxyCompactItemize}
+\subsection*{Defines}
+\begin{DoxyCompactItemize}
+\item 
+\#define {\bf LIGHT\_\-COUNT}~6
+\item 
+\#define {\bf MATERIAL\_\-COUNT}~1
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\bf VSOutput} {\bf VS\_\-Lumos} ({\bf VSInput} a\_\-input)
+\item 
+float4 {\bf PS\_\-Lumos} ({\bf VSOutput} a\_\-input)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+uniform float4 {\bf g\_\-sunlight}
+\item 
+uniform float {\bf g\_\-time}
+\item 
+uniform texture {\bf g\_\-normalTexture}
+\item 
+sampler {\bf diffuseSampler}
+\item 
+{\bf MagFilter} = LINEAR
+\item 
+{\bf MipFilter} = LINEAR
+\item 
+sampler {\bf normalSampler}
+\item 
+uniform float4x4 {\bf g\_\-worldMatrix}
+\item 
+uniform float4x4 {\bf g\_\-worldViewProjectionMatrix}
+\item 
+uniform float4x4 {\bf g\_\-worldInverseTransposeMatrix}
+\item 
+uniform {\bf Material} {\bf g\_\-materials} [MATERIAL\_\-COUNT]
+\item 
+uniform {\bf Light} {\bf g\_\-lights} [LIGHT\_\-COUNT]
+\item 
+uniform {\bf Camera} {\bf g\_\-camera}
+\end{DoxyCompactItemize}
+
+
+\subsection{Define Documentation}
+\index{shader.fx.c@{shader.fx.c}!LIGHT\_\-COUNT@{LIGHT\_\-COUNT}}
+\index{LIGHT\_\-COUNT@{LIGHT\_\-COUNT}!shader.fx.c@{shader.fx.c}}
+\subsubsection[{LIGHT\_\-COUNT}]{\setlength{\rightskip}{0pt plus 5cm}\#define LIGHT\_\-COUNT~6}\label{shader_8fx_8c_a04f737f6f1242f7ca636b6d54c35510a}
+\index{shader.fx.c@{shader.fx.c}!MATERIAL\_\-COUNT@{MATERIAL\_\-COUNT}}
+\index{MATERIAL\_\-COUNT@{MATERIAL\_\-COUNT}!shader.fx.c@{shader.fx.c}}
+\subsubsection[{MATERIAL\_\-COUNT}]{\setlength{\rightskip}{0pt plus 5cm}\#define MATERIAL\_\-COUNT~1}\label{shader_8fx_8c_a2f38322a3d382c52920aa119045881d0}
+
+
+\subsection{Function Documentation}
+\index{shader.fx.c@{shader.fx.c}!PS\_\-Lumos@{PS\_\-Lumos}}
+\index{PS\_\-Lumos@{PS\_\-Lumos}!shader.fx.c@{shader.fx.c}}
+\subsubsection[{PS\_\-Lumos}]{\setlength{\rightskip}{0pt plus 5cm}float4 PS\_\-Lumos ({\bf VSOutput} {\em a\_\-input})}\label{shader_8fx_8c_ace84de7b41d9d865154be8d1d9cf8ad3}
+\index{shader.fx.c@{shader.fx.c}!VS\_\-Lumos@{VS\_\-Lumos}}
+\index{VS\_\-Lumos@{VS\_\-Lumos}!shader.fx.c@{shader.fx.c}}
+\subsubsection[{VS\_\-Lumos}]{\setlength{\rightskip}{0pt plus 5cm}{\bf VSOutput} VS\_\-Lumos ({\bf VSInput} {\em a\_\-input})}\label{shader_8fx_8c_a8856f12aba5f452b9570adf53ae3bfd5}
+
+
+\subsection{Variable Documentation}
+\index{shader.fx.c@{shader.fx.c}!diffuseSampler@{diffuseSampler}}
+\index{diffuseSampler@{diffuseSampler}!shader.fx.c@{shader.fx.c}}
+\subsubsection[{diffuseSampler}]{\setlength{\rightskip}{0pt plus 5cm}sampler {\bf diffuseSampler}}\label{shader_8fx_8c_ac5dda09ee60ab65ad51bc9eb7cdebcf5}
+\index{shader.fx.c@{shader.fx.c}!g\_\-camera@{g\_\-camera}}
+\index{g\_\-camera@{g\_\-camera}!shader.fx.c@{shader.fx.c}}
+\subsubsection[{g\_\-camera}]{\setlength{\rightskip}{0pt plus 5cm}uniform {\bf Camera} {\bf g\_\-camera}}\label{shader_8fx_8c_a49732920ad57f44550476507f4ea2832}
+\index{shader.fx.c@{shader.fx.c}!g\_\-lights@{g\_\-lights}}
+\index{g\_\-lights@{g\_\-lights}!shader.fx.c@{shader.fx.c}}
+\subsubsection[{g\_\-lights}]{\setlength{\rightskip}{0pt plus 5cm}uniform {\bf Light} {\bf g\_\-lights}[LIGHT\_\-COUNT]}\label{shader_8fx_8c_a8763d40dcf8b0907f8a1537e24220cc2}
+\index{shader.fx.c@{shader.fx.c}!g\_\-materials@{g\_\-materials}}
+\index{g\_\-materials@{g\_\-materials}!shader.fx.c@{shader.fx.c}}
+\subsubsection[{g\_\-materials}]{\setlength{\rightskip}{0pt plus 5cm}uniform {\bf Material} {\bf g\_\-materials}[MATERIAL\_\-COUNT]}\label{shader_8fx_8c_a8e9156a3026911a58f0e24ca8335eedf}
+\index{shader.fx.c@{shader.fx.c}!g\_\-normalTexture@{g\_\-normalTexture}}
+\index{g\_\-normalTexture@{g\_\-normalTexture}!shader.fx.c@{shader.fx.c}}
+\subsubsection[{g\_\-normalTexture}]{\setlength{\rightskip}{0pt plus 5cm}uniform texture {\bf g\_\-normalTexture}}\label{shader_8fx_8c_ab2b263201cc9d4a9d9f72ac68b52f434}
+\index{shader.fx.c@{shader.fx.c}!g\_\-sunlight@{g\_\-sunlight}}
+\index{g\_\-sunlight@{g\_\-sunlight}!shader.fx.c@{shader.fx.c}}
+\subsubsection[{g\_\-sunlight}]{\setlength{\rightskip}{0pt plus 5cm}uniform float4 {\bf g\_\-sunlight}}\label{shader_8fx_8c_a69196209ca7d97689425f50720f3b8d7}
+\index{shader.fx.c@{shader.fx.c}!g\_\-time@{g\_\-time}}
+\index{g\_\-time@{g\_\-time}!shader.fx.c@{shader.fx.c}}
+\subsubsection[{g\_\-time}]{\setlength{\rightskip}{0pt plus 5cm}uniform float {\bf g\_\-time}}\label{shader_8fx_8c_aba2a646e1ac5d200a4739f1c08828e7b}
+\index{shader.fx.c@{shader.fx.c}!g\_\-worldInverseTransposeMatrix@{g\_\-worldInverseTransposeMatrix}}
+\index{g\_\-worldInverseTransposeMatrix@{g\_\-worldInverseTransposeMatrix}!shader.fx.c@{shader.fx.c}}
+\subsubsection[{g\_\-worldInverseTransposeMatrix}]{\setlength{\rightskip}{0pt plus 5cm}uniform float4x4 {\bf g\_\-worldInverseTransposeMatrix}}\label{shader_8fx_8c_a6475deb4830fef63aac8a31446623079}
+\index{shader.fx.c@{shader.fx.c}!g\_\-worldMatrix@{g\_\-worldMatrix}}
+\index{g\_\-worldMatrix@{g\_\-worldMatrix}!shader.fx.c@{shader.fx.c}}
+\subsubsection[{g\_\-worldMatrix}]{\setlength{\rightskip}{0pt plus 5cm}uniform float4x4 {\bf g\_\-worldMatrix}}\label{shader_8fx_8c_a1bade4db335f467fbe493519852548c8}
+\index{shader.fx.c@{shader.fx.c}!g\_\-worldViewProjectionMatrix@{g\_\-worldViewProjectionMatrix}}
+\index{g\_\-worldViewProjectionMatrix@{g\_\-worldViewProjectionMatrix}!shader.fx.c@{shader.fx.c}}
+\subsubsection[{g\_\-worldViewProjectionMatrix}]{\setlength{\rightskip}{0pt plus 5cm}uniform float4x4 {\bf g\_\-worldViewProjectionMatrix}}\label{shader_8fx_8c_a016ef074eba9134f6e07c1c37d39a529}
+\index{shader.fx.c@{shader.fx.c}!MagFilter@{MagFilter}}
+\index{MagFilter@{MagFilter}!shader.fx.c@{shader.fx.c}}
+\subsubsection[{MagFilter}]{\setlength{\rightskip}{0pt plus 5cm}{\bf MagFilter} = LINEAR}\label{shader_8fx_8c_acdb4135d7c8c6e54280364c796461585}
+\index{shader.fx.c@{shader.fx.c}!MipFilter@{MipFilter}}
+\index{MipFilter@{MipFilter}!shader.fx.c@{shader.fx.c}}
+\subsubsection[{MipFilter}]{\setlength{\rightskip}{0pt plus 5cm}{\bf MipFilter} = LINEAR}\label{shader_8fx_8c_a2d427a0f2ae0e99d2d700cf27d0417aa}
+\index{shader.fx.c@{shader.fx.c}!normalSampler@{normalSampler}}
+\index{normalSampler@{normalSampler}!shader.fx.c@{shader.fx.c}}
+\subsubsection[{normalSampler}]{\setlength{\rightskip}{0pt plus 5cm}sampler {\bf normalSampler}}\label{shader_8fx_8c_af40081d7f76c1660b4fb4f1e82a64a25}
+{\bfseries Initial value:}
+\begin{DoxyCode}
+ sampler_state
+{
+        Texture = <g_normalTexture>;
+        
+        
+        
+        
+    
+    
+}
+\end{DoxyCode}

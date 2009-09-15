@@ -1,3 +1,11 @@
+//====================================================================
+// Camera.h
+// Camera extension to provide additional features not found in the
+// base camera class
+// Date 15/09/09
+// Author: Nicholas Kinsey
+// Version 0.5
+//====================================================================
 #pragma once
 
 #include <math.h>

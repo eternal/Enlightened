@@ -1,0 +1,254 @@
+\section{C:/Users/doug/Documents/Visual Studio 2008/Projects/enlightened/Enlightened/main.cpp File Reference}
+\label{main_8cpp}\index{C:/Users/doug/Documents/Visual Studio 2008/Projects/enlightened/Enlightened/main.cpp@{C:/Users/doug/Documents/Visual Studio 2008/Projects/enlightened/Enlightened/main.cpp}}
+{\ttfamily \#include \char`\"{}dxstdafx.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}SGLibResource.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}MasterShader.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}Mouse.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}Camera.h\char`\"{}}\par
+{\ttfamily \#include $<$sstream$>$}\par
+{\ttfamily \#include $<$map$>$}\par
+{\ttfamily \#include $<$vector$>$}\par
+{\ttfamily \#include $<$string$>$}\par
+\subsection*{Defines}
+\begin{DoxyCompactItemize}
+\item 
+\#define {\bf PI}~3.1415926535897932384626433832795028841971693993751058209749445923078164062862089986280348253421170679f
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool CALLBACK {\bf IsDeviceAcceptable} (D3DCAPS9 $\ast$pCaps, D3DFORMAT AdapterFormat, D3DFORMAT BackBufferFormat, bool bWindowed, void $\ast$pUserContext)
+\item 
+bool CALLBACK {\bf ModifyDeviceSettings} (DXUTDeviceSettings $\ast$pDeviceSettings, const D3DCAPS9 $\ast$pCaps, void $\ast$pUserContext)
+\item 
+HRESULT CALLBACK {\bf OnCreateDevice} (IDirect3DDevice9 $\ast$a\_\-device, const D3DSURFACE\_\-DESC $\ast$pBackBufferSurfaceDesc, void $\ast$pUserContext)
+\item 
+HRESULT CALLBACK {\bf OnResetDevice} (IDirect3DDevice9 $\ast$pd3dDevice, const D3DSURFACE\_\-DESC $\ast$pBackBufferSurfaceDesc, void $\ast$pUserContext)
+\item 
+void CALLBACK {\bf OnFrameMove} (IDirect3DDevice9 $\ast$pd3dDevice, double a\_\-time, float a\_\-elapsedTime, void $\ast$pUserContext)
+\item 
+void CALLBACK {\bf OnFrameRender} (IDirect3DDevice9 $\ast$pd3dDevice, double dTime, float fElapsedTime, void $\ast$pUserContext)
+\item 
+void CALLBACK {\bf OnMouse} (bool a\_\-leftButton, bool a\_\-rightButton, bool a\_\-middleButtonDown, bool a\_\-sideButton1Down, bool a\_\-sideButton2Down, int a\_\-mouseWheelDelta, int a\_\-xPosition, int a\_\-yPosition, void $\ast$a\_\-userContext)
+\item 
+LRESULT CALLBACK {\bf MsgProc} (HWND hWnd, UINT uMsg, WPARAM wParam, LPARAM lParam, bool $\ast$pbNoFurtherProcessing, void $\ast$pUserContext)
+\item 
+void CALLBACK {\bf OnLostDevice} (void $\ast$pUserContext)
+\item 
+void CALLBACK {\bf OnDestroyDevice} (void $\ast$pUserContext)
+\item 
+void {\bf InitalizeGraph} ()
+\item 
+void {\bf CleanUp} ()
+\item 
+INT WINAPI {\bf WinMain} (HINSTANCE, HINSTANCE, LPSTR, int)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+{\bf MasterShader} $\ast$ {\bf g\_\-masterShader} = NULL
+\item 
+SGRenderer $\ast$ {\bf g\_\-renderer} = NULL
+\item 
+{\bf Feisty::Camera} $\ast$ {\bf g\_\-camera} = NULL
+\item 
+{\bf Feisty::Mouse} $\ast$ {\bf g\_\-mouse} = NULL
+\item 
+Projection $\ast$ {\bf g\_\-projection} = NULL
+\item 
+State $\ast$ {\bf g\_\-state} = NULL
+\item 
+Transform $\ast$ {\bf g\_\-dwarfTransform} = NULL
+\item 
+Transform $\ast$ {\bf g\_\-treeTransform} = NULL
+\item 
+Transform $\ast$ {\bf g\_\-monsterTransform} = NULL
+\item 
+Transform $\ast$ {\bf g\_\-gasStationTransform} = NULL
+\item 
+Transform $\ast$ {\bf g\_\-characterTransform} = NULL
+\item 
+Geometry $\ast$ {\bf g\_\-dwarfGeometry} = NULL
+\item 
+Geometry $\ast$ {\bf g\_\-treeGeometry} = NULL
+\item 
+Geometry $\ast$ {\bf g\_\-monsterGeometry} = NULL
+\item 
+Geometry $\ast$ {\bf g\_\-gasStationGeometry} = NULL
+\item 
+Articulated $\ast$ {\bf g\_\-characterNode} = NULL
+\item 
+Articulated $\ast$ {\bf g\_\-characterPelvis} = NULL
+\item 
+Articulated $\ast$ {\bf g\_\-characterRUpperLeg} = NULL
+\item 
+Articulated $\ast$ {\bf g\_\-characterLUpperLeg} = NULL
+\item 
+Articulated $\ast$ {\bf g\_\-characterRLowerLeg} = NULL
+\item 
+Articulated $\ast$ {\bf g\_\-characterLLowerLeg} = NULL
+\item 
+Articulated $\ast$ {\bf g\_\-characterLowerBack} = NULL
+\item 
+Articulated $\ast$ {\bf g\_\-characterUpperBack} = NULL
+\item 
+Articulated $\ast$ {\bf g\_\-characterNeck} = NULL
+\item 
+Articulated $\ast$ {\bf g\_\-characterHead} = NULL
+\item 
+Articulated $\ast$ {\bf g\_\-characterShoulders} = NULL
+\item 
+Articulated $\ast$ {\bf g\_\-characterRUpperArm} = NULL
+\item 
+Articulated $\ast$ {\bf g\_\-characterLUpperArm} = NULL
+\item 
+Articulated $\ast$ {\bf g\_\-characterRLowerArm} = NULL
+\item 
+Articulated $\ast$ {\bf g\_\-characterLLowerArm} = NULL
+\item 
+bool {\bf g\_\-animating} = false
+\end{DoxyCompactItemize}
+
+
+\subsection{Define Documentation}
+\index{main.cpp@{main.cpp}!PI@{PI}}
+\index{PI@{PI}!main.cpp@{main.cpp}}
+\subsubsection[{PI}]{\setlength{\rightskip}{0pt plus 5cm}\#define PI~3.1415926535897932384626433832795028841971693993751058209749445923078164062862089986280348253421170679f}\label{main_8cpp_a598a3330b3c21701223ee0ca14316eca}
+
+
+\subsection{Function Documentation}
+\index{main.cpp@{main.cpp}!CleanUp@{CleanUp}}
+\index{CleanUp@{CleanUp}!main.cpp@{main.cpp}}
+\subsubsection[{CleanUp}]{\setlength{\rightskip}{0pt plus 5cm}void CleanUp ()}\label{main_8cpp_abfc30f91ab75c6f4552003f777672e74}
+\index{main.cpp@{main.cpp}!InitalizeGraph@{InitalizeGraph}}
+\index{InitalizeGraph@{InitalizeGraph}!main.cpp@{main.cpp}}
+\subsubsection[{InitalizeGraph}]{\setlength{\rightskip}{0pt plus 5cm}void InitalizeGraph ()}\label{main_8cpp_afc9f752ae6b418acf602bc0111458399}
+\index{main.cpp@{main.cpp}!IsDeviceAcceptable@{IsDeviceAcceptable}}
+\index{IsDeviceAcceptable@{IsDeviceAcceptable}!main.cpp@{main.cpp}}
+\subsubsection[{IsDeviceAcceptable}]{\setlength{\rightskip}{0pt plus 5cm}bool CALLBACK IsDeviceAcceptable (D3DCAPS9 $\ast$ {\em pCaps}, \/  D3DFORMAT {\em AdapterFormat}, \/  D3DFORMAT {\em BackBufferFormat}, \/  bool {\em bWindowed}, \/  void $\ast$ {\em pUserContext})}\label{main_8cpp_ab94c0180382a23f0fef5bf9e3986f9da}
+\index{main.cpp@{main.cpp}!ModifyDeviceSettings@{ModifyDeviceSettings}}
+\index{ModifyDeviceSettings@{ModifyDeviceSettings}!main.cpp@{main.cpp}}
+\subsubsection[{ModifyDeviceSettings}]{\setlength{\rightskip}{0pt plus 5cm}bool CALLBACK ModifyDeviceSettings (DXUTDeviceSettings $\ast$ {\em pDeviceSettings}, \/  const D3DCAPS9 $\ast$ {\em pCaps}, \/  void $\ast$ {\em pUserContext})}\label{main_8cpp_a001a56eaee98f8077852e3dd8ad60f29}
+\index{main.cpp@{main.cpp}!MsgProc@{MsgProc}}
+\index{MsgProc@{MsgProc}!main.cpp@{main.cpp}}
+\subsubsection[{MsgProc}]{\setlength{\rightskip}{0pt plus 5cm}LRESULT CALLBACK MsgProc (HWND {\em hWnd}, \/  UINT {\em uMsg}, \/  WPARAM {\em wParam}, \/  LPARAM {\em lParam}, \/  bool $\ast$ {\em pbNoFurtherProcessing}, \/  void $\ast$ {\em pUserContext})}\label{main_8cpp_ada41d7c415ad7ca4b598647357eabd63}
+\index{main.cpp@{main.cpp}!OnCreateDevice@{OnCreateDevice}}
+\index{OnCreateDevice@{OnCreateDevice}!main.cpp@{main.cpp}}
+\subsubsection[{OnCreateDevice}]{\setlength{\rightskip}{0pt plus 5cm}HRESULT CALLBACK OnCreateDevice (IDirect3DDevice9 $\ast$ {\em a\_\-device}, \/  const D3DSURFACE\_\-DESC $\ast$ {\em pBackBufferSurfaceDesc}, \/  void $\ast$ {\em pUserContext})}\label{main_8cpp_a47d46e0ebe0a234c2c6a58c8ca392d74}
+\index{main.cpp@{main.cpp}!OnDestroyDevice@{OnDestroyDevice}}
+\index{OnDestroyDevice@{OnDestroyDevice}!main.cpp@{main.cpp}}
+\subsubsection[{OnDestroyDevice}]{\setlength{\rightskip}{0pt plus 5cm}void CALLBACK OnDestroyDevice (void $\ast$ {\em pUserContext})}\label{main_8cpp_a6e3dced16e54efc8daddad409cff0336}
+\index{main.cpp@{main.cpp}!OnFrameMove@{OnFrameMove}}
+\index{OnFrameMove@{OnFrameMove}!main.cpp@{main.cpp}}
+\subsubsection[{OnFrameMove}]{\setlength{\rightskip}{0pt plus 5cm}void CALLBACK OnFrameMove (IDirect3DDevice9 $\ast$ {\em pd3dDevice}, \/  double {\em a\_\-time}, \/  float {\em a\_\-elapsedTime}, \/  void $\ast$ {\em pUserContext})}\label{main_8cpp_acfab206dcd4d453c6eb12c42b61a1e0d}
+\index{main.cpp@{main.cpp}!OnFrameRender@{OnFrameRender}}
+\index{OnFrameRender@{OnFrameRender}!main.cpp@{main.cpp}}
+\subsubsection[{OnFrameRender}]{\setlength{\rightskip}{0pt plus 5cm}void CALLBACK OnFrameRender (IDirect3DDevice9 $\ast$ {\em pd3dDevice}, \/  double {\em dTime}, \/  float {\em fElapsedTime}, \/  void $\ast$ {\em pUserContext})}\label{main_8cpp_a4ea70c24b78c4abd92b442516fa054c3}
+\index{main.cpp@{main.cpp}!OnLostDevice@{OnLostDevice}}
+\index{OnLostDevice@{OnLostDevice}!main.cpp@{main.cpp}}
+\subsubsection[{OnLostDevice}]{\setlength{\rightskip}{0pt plus 5cm}void CALLBACK OnLostDevice (void $\ast$ {\em pUserContext})}\label{main_8cpp_a8619e65167cef016a9b827796d09bd06}
+\index{main.cpp@{main.cpp}!OnMouse@{OnMouse}}
+\index{OnMouse@{OnMouse}!main.cpp@{main.cpp}}
+\subsubsection[{OnMouse}]{\setlength{\rightskip}{0pt plus 5cm}void CALLBACK OnMouse (bool {\em a\_\-leftButton}, \/  bool {\em a\_\-rightButton}, \/  bool {\em a\_\-middleButtonDown}, \/  bool {\em a\_\-sideButton1Down}, \/  bool {\em a\_\-sideButton2Down}, \/  int {\em a\_\-mouseWheelDelta}, \/  int {\em a\_\-xPosition}, \/  int {\em a\_\-yPosition}, \/  void $\ast$ {\em a\_\-userContext})}\label{main_8cpp_a3ce2ae82f91e623da2ea0106afbf19d3}
+\index{main.cpp@{main.cpp}!OnResetDevice@{OnResetDevice}}
+\index{OnResetDevice@{OnResetDevice}!main.cpp@{main.cpp}}
+\subsubsection[{OnResetDevice}]{\setlength{\rightskip}{0pt plus 5cm}HRESULT CALLBACK OnResetDevice (IDirect3DDevice9 $\ast$ {\em pd3dDevice}, \/  const D3DSURFACE\_\-DESC $\ast$ {\em pBackBufferSurfaceDesc}, \/  void $\ast$ {\em pUserContext})}\label{main_8cpp_a2130428fa858e2a86b28166e63f4374e}
+\index{main.cpp@{main.cpp}!WinMain@{WinMain}}
+\index{WinMain@{WinMain}!main.cpp@{main.cpp}}
+\subsubsection[{WinMain}]{\setlength{\rightskip}{0pt plus 5cm}INT WINAPI WinMain (HINSTANCE, \/  HINSTANCE, \/  LPSTR, \/  int)}\label{main_8cpp_a67c12d872037c315a30054edcc303623}
+
+
+\subsection{Variable Documentation}
+\index{main.cpp@{main.cpp}!g\_\-animating@{g\_\-animating}}
+\index{g\_\-animating@{g\_\-animating}!main.cpp@{main.cpp}}
+\subsubsection[{g\_\-animating}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf g\_\-animating} = false}\label{main_8cpp_ad6795175b9faa5bac4bcacd5456ddbe4}
+\index{main.cpp@{main.cpp}!g\_\-camera@{g\_\-camera}}
+\index{g\_\-camera@{g\_\-camera}!main.cpp@{main.cpp}}
+\subsubsection[{g\_\-camera}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Feisty::Camera}$\ast$ {\bf g\_\-camera} = NULL}\label{main_8cpp_ace3aa1fac9bbbaced3fa146958c0379c}
+\index{main.cpp@{main.cpp}!g\_\-characterHead@{g\_\-characterHead}}
+\index{g\_\-characterHead@{g\_\-characterHead}!main.cpp@{main.cpp}}
+\subsubsection[{g\_\-characterHead}]{\setlength{\rightskip}{0pt plus 5cm}Articulated$\ast$ {\bf g\_\-characterHead} = NULL}\label{main_8cpp_a638e515a201184f02d8b8e11a1792a08}
+\index{main.cpp@{main.cpp}!g\_\-characterLLowerArm@{g\_\-characterLLowerArm}}
+\index{g\_\-characterLLowerArm@{g\_\-characterLLowerArm}!main.cpp@{main.cpp}}
+\subsubsection[{g\_\-characterLLowerArm}]{\setlength{\rightskip}{0pt plus 5cm}Articulated$\ast$ {\bf g\_\-characterLLowerArm} = NULL}\label{main_8cpp_afaaa6de660374e440f4b086253de0f0b}
+\index{main.cpp@{main.cpp}!g\_\-characterLLowerLeg@{g\_\-characterLLowerLeg}}
+\index{g\_\-characterLLowerLeg@{g\_\-characterLLowerLeg}!main.cpp@{main.cpp}}
+\subsubsection[{g\_\-characterLLowerLeg}]{\setlength{\rightskip}{0pt plus 5cm}Articulated$\ast$ {\bf g\_\-characterLLowerLeg} = NULL}\label{main_8cpp_a5083fc488e5761896ae166d8ec0e6c9a}
+\index{main.cpp@{main.cpp}!g\_\-characterLowerBack@{g\_\-characterLowerBack}}
+\index{g\_\-characterLowerBack@{g\_\-characterLowerBack}!main.cpp@{main.cpp}}
+\subsubsection[{g\_\-characterLowerBack}]{\setlength{\rightskip}{0pt plus 5cm}Articulated$\ast$ {\bf g\_\-characterLowerBack} = NULL}\label{main_8cpp_a1e5b4613fb05e573e7231a6c3e0acf0e}
+\index{main.cpp@{main.cpp}!g\_\-characterLUpperArm@{g\_\-characterLUpperArm}}
+\index{g\_\-characterLUpperArm@{g\_\-characterLUpperArm}!main.cpp@{main.cpp}}
+\subsubsection[{g\_\-characterLUpperArm}]{\setlength{\rightskip}{0pt plus 5cm}Articulated$\ast$ {\bf g\_\-characterLUpperArm} = NULL}\label{main_8cpp_a69a275d7564504b4ddf80fe486e5e4a8}
+\index{main.cpp@{main.cpp}!g\_\-characterLUpperLeg@{g\_\-characterLUpperLeg}}
+\index{g\_\-characterLUpperLeg@{g\_\-characterLUpperLeg}!main.cpp@{main.cpp}}
+\subsubsection[{g\_\-characterLUpperLeg}]{\setlength{\rightskip}{0pt plus 5cm}Articulated$\ast$ {\bf g\_\-characterLUpperLeg} = NULL}\label{main_8cpp_aadb7bfce0390856b42d0e9f64dcb9a57}
+\index{main.cpp@{main.cpp}!g\_\-characterNeck@{g\_\-characterNeck}}
+\index{g\_\-characterNeck@{g\_\-characterNeck}!main.cpp@{main.cpp}}
+\subsubsection[{g\_\-characterNeck}]{\setlength{\rightskip}{0pt plus 5cm}Articulated$\ast$ {\bf g\_\-characterNeck} = NULL}\label{main_8cpp_aa424d880d9792eb1d5ebb5241533f37f}
+\index{main.cpp@{main.cpp}!g\_\-characterNode@{g\_\-characterNode}}
+\index{g\_\-characterNode@{g\_\-characterNode}!main.cpp@{main.cpp}}
+\subsubsection[{g\_\-characterNode}]{\setlength{\rightskip}{0pt plus 5cm}Articulated$\ast$ {\bf g\_\-characterNode} = NULL}\label{main_8cpp_ad14a3bdc19f2edae2b1a8b3f7fc43280}
+\index{main.cpp@{main.cpp}!g\_\-characterPelvis@{g\_\-characterPelvis}}
+\index{g\_\-characterPelvis@{g\_\-characterPelvis}!main.cpp@{main.cpp}}
+\subsubsection[{g\_\-characterPelvis}]{\setlength{\rightskip}{0pt plus 5cm}Articulated$\ast$ {\bf g\_\-characterPelvis} = NULL}\label{main_8cpp_aae42f7534fd474743216289bcddb27fb}
+\index{main.cpp@{main.cpp}!g\_\-characterRLowerArm@{g\_\-characterRLowerArm}}
+\index{g\_\-characterRLowerArm@{g\_\-characterRLowerArm}!main.cpp@{main.cpp}}
+\subsubsection[{g\_\-characterRLowerArm}]{\setlength{\rightskip}{0pt plus 5cm}Articulated$\ast$ {\bf g\_\-characterRLowerArm} = NULL}\label{main_8cpp_afa383510790c362c60340a9ec54f12dc}
+\index{main.cpp@{main.cpp}!g\_\-characterRLowerLeg@{g\_\-characterRLowerLeg}}
+\index{g\_\-characterRLowerLeg@{g\_\-characterRLowerLeg}!main.cpp@{main.cpp}}
+\subsubsection[{g\_\-characterRLowerLeg}]{\setlength{\rightskip}{0pt plus 5cm}Articulated$\ast$ {\bf g\_\-characterRLowerLeg} = NULL}\label{main_8cpp_a9a2b3afdddef870221bd880ad897f625}
+\index{main.cpp@{main.cpp}!g\_\-characterRUpperArm@{g\_\-characterRUpperArm}}
+\index{g\_\-characterRUpperArm@{g\_\-characterRUpperArm}!main.cpp@{main.cpp}}
+\subsubsection[{g\_\-characterRUpperArm}]{\setlength{\rightskip}{0pt plus 5cm}Articulated$\ast$ {\bf g\_\-characterRUpperArm} = NULL}\label{main_8cpp_a13821aedd2696e5731145edc3910b12c}
+\index{main.cpp@{main.cpp}!g\_\-characterRUpperLeg@{g\_\-characterRUpperLeg}}
+\index{g\_\-characterRUpperLeg@{g\_\-characterRUpperLeg}!main.cpp@{main.cpp}}
+\subsubsection[{g\_\-characterRUpperLeg}]{\setlength{\rightskip}{0pt plus 5cm}Articulated$\ast$ {\bf g\_\-characterRUpperLeg} = NULL}\label{main_8cpp_afd3069c7a57a92e7c2ebecaf00278836}
+\index{main.cpp@{main.cpp}!g\_\-characterShoulders@{g\_\-characterShoulders}}
+\index{g\_\-characterShoulders@{g\_\-characterShoulders}!main.cpp@{main.cpp}}
+\subsubsection[{g\_\-characterShoulders}]{\setlength{\rightskip}{0pt plus 5cm}Articulated$\ast$ {\bf g\_\-characterShoulders} = NULL}\label{main_8cpp_a765758fe2eeada9359aadd8f77024d6a}
+\index{main.cpp@{main.cpp}!g\_\-characterTransform@{g\_\-characterTransform}}
+\index{g\_\-characterTransform@{g\_\-characterTransform}!main.cpp@{main.cpp}}
+\subsubsection[{g\_\-characterTransform}]{\setlength{\rightskip}{0pt plus 5cm}Transform$\ast$ {\bf g\_\-characterTransform} = NULL}\label{main_8cpp_a8ceca17e6710a25af494585322c2fa11}
+\index{main.cpp@{main.cpp}!g\_\-characterUpperBack@{g\_\-characterUpperBack}}
+\index{g\_\-characterUpperBack@{g\_\-characterUpperBack}!main.cpp@{main.cpp}}
+\subsubsection[{g\_\-characterUpperBack}]{\setlength{\rightskip}{0pt plus 5cm}Articulated$\ast$ {\bf g\_\-characterUpperBack} = NULL}\label{main_8cpp_a5af5178491e81991c56095f9b601444f}
+\index{main.cpp@{main.cpp}!g\_\-dwarfGeometry@{g\_\-dwarfGeometry}}
+\index{g\_\-dwarfGeometry@{g\_\-dwarfGeometry}!main.cpp@{main.cpp}}
+\subsubsection[{g\_\-dwarfGeometry}]{\setlength{\rightskip}{0pt plus 5cm}Geometry$\ast$ {\bf g\_\-dwarfGeometry} = NULL}\label{main_8cpp_ab159d2c6b28524f490d25feaf9fca953}
+\index{main.cpp@{main.cpp}!g\_\-dwarfTransform@{g\_\-dwarfTransform}}
+\index{g\_\-dwarfTransform@{g\_\-dwarfTransform}!main.cpp@{main.cpp}}
+\subsubsection[{g\_\-dwarfTransform}]{\setlength{\rightskip}{0pt plus 5cm}Transform$\ast$ {\bf g\_\-dwarfTransform} = NULL}\label{main_8cpp_a6b0628a9f02961163db055e4037feccd}
+\index{main.cpp@{main.cpp}!g\_\-gasStationGeometry@{g\_\-gasStationGeometry}}
+\index{g\_\-gasStationGeometry@{g\_\-gasStationGeometry}!main.cpp@{main.cpp}}
+\subsubsection[{g\_\-gasStationGeometry}]{\setlength{\rightskip}{0pt plus 5cm}Geometry$\ast$ {\bf g\_\-gasStationGeometry} = NULL}\label{main_8cpp_aa242b632e52deae21e1da999e3e8e6d5}
+\index{main.cpp@{main.cpp}!g\_\-gasStationTransform@{g\_\-gasStationTransform}}
+\index{g\_\-gasStationTransform@{g\_\-gasStationTransform}!main.cpp@{main.cpp}}
+\subsubsection[{g\_\-gasStationTransform}]{\setlength{\rightskip}{0pt plus 5cm}Transform$\ast$ {\bf g\_\-gasStationTransform} = NULL}\label{main_8cpp_a5b94057a0a773a7aa8acd311b781d115}
+\index{main.cpp@{main.cpp}!g\_\-masterShader@{g\_\-masterShader}}
+\index{g\_\-masterShader@{g\_\-masterShader}!main.cpp@{main.cpp}}
+\subsubsection[{g\_\-masterShader}]{\setlength{\rightskip}{0pt plus 5cm}{\bf MasterShader}$\ast$ {\bf g\_\-masterShader} = NULL}\label{main_8cpp_a57d194f8024b9d3f7f6b6adcda7f65ca}
+\index{main.cpp@{main.cpp}!g\_\-monsterGeometry@{g\_\-monsterGeometry}}
+\index{g\_\-monsterGeometry@{g\_\-monsterGeometry}!main.cpp@{main.cpp}}
+\subsubsection[{g\_\-monsterGeometry}]{\setlength{\rightskip}{0pt plus 5cm}Geometry$\ast$ {\bf g\_\-monsterGeometry} = NULL}\label{main_8cpp_a2b1a7d9baa6f7e834043d278b7b2ef8c}
+\index{main.cpp@{main.cpp}!g\_\-monsterTransform@{g\_\-monsterTransform}}
+\index{g\_\-monsterTransform@{g\_\-monsterTransform}!main.cpp@{main.cpp}}
+\subsubsection[{g\_\-monsterTransform}]{\setlength{\rightskip}{0pt plus 5cm}Transform$\ast$ {\bf g\_\-monsterTransform} = NULL}\label{main_8cpp_a26007bd4443df507e087baa875a3296c}
+\index{main.cpp@{main.cpp}!g\_\-mouse@{g\_\-mouse}}
+\index{g\_\-mouse@{g\_\-mouse}!main.cpp@{main.cpp}}
+\subsubsection[{g\_\-mouse}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Feisty::Mouse}$\ast$ {\bf g\_\-mouse} = NULL}\label{main_8cpp_ab8fe643c3caa203940d18a5298a69bc4}
+\index{main.cpp@{main.cpp}!g\_\-projection@{g\_\-projection}}
+\index{g\_\-projection@{g\_\-projection}!main.cpp@{main.cpp}}
+\subsubsection[{g\_\-projection}]{\setlength{\rightskip}{0pt plus 5cm}Projection$\ast$ {\bf g\_\-projection} = NULL}\label{main_8cpp_a3d48b89c7587f4bd4138128c10f7b620}
+\index{main.cpp@{main.cpp}!g\_\-renderer@{g\_\-renderer}}
+\index{g\_\-renderer@{g\_\-renderer}!main.cpp@{main.cpp}}
+\subsubsection[{g\_\-renderer}]{\setlength{\rightskip}{0pt plus 5cm}SGRenderer$\ast$ {\bf g\_\-renderer} = NULL}\label{main_8cpp_a80c9e4c9fffd86c86d88ea02191a3599}
+\index{main.cpp@{main.cpp}!g\_\-state@{g\_\-state}}
+\index{g\_\-state@{g\_\-state}!main.cpp@{main.cpp}}
+\subsubsection[{g\_\-state}]{\setlength{\rightskip}{0pt plus 5cm}State$\ast$ {\bf g\_\-state} = NULL}\label{main_8cpp_a7cac590d25452e6fdc8fcc0990d7e6d4}
+\index{main.cpp@{main.cpp}!g\_\-treeGeometry@{g\_\-treeGeometry}}
+\index{g\_\-treeGeometry@{g\_\-treeGeometry}!main.cpp@{main.cpp}}
+\subsubsection[{g\_\-treeGeometry}]{\setlength{\rightskip}{0pt plus 5cm}Geometry$\ast$ {\bf g\_\-treeGeometry} = NULL}\label{main_8cpp_a2c3ae44c854b16d8ae7c8dc3b4e729fb}
+\index{main.cpp@{main.cpp}!g\_\-treeTransform@{g\_\-treeTransform}}
+\index{g\_\-treeTransform@{g\_\-treeTransform}!main.cpp@{main.cpp}}
+\subsubsection[{g\_\-treeTransform}]{\setlength{\rightskip}{0pt plus 5cm}Transform$\ast$ {\bf g\_\-treeTransform} = NULL}\label{main_8cpp_a49c675fdd485d63c6f5895d8cd80facf}
