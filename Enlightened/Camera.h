@@ -1,5 +1,9 @@
 #pragma once
 
+#include <math.h>
+
+#define PI 3.1415926535897932384626433832795028841971693993751058209749445923078164062862089986280348253421170679f
+
 namespace Feisty
 {
 
@@ -15,13 +19,19 @@ protected:
 
 	D3DXVECTOR3 m_rotation;
 	D3DXVECTOR3 m_position;
-	D3DXVECTOR3 m_target;
+	D3DXVECTOR3 m_seekTarget;
+	D3DXVECTOR3 m_seekOrigin;
+	D3DXVECTOR3 m_targetPosition;
 	D3DXVECTOR3 m_up;
+
+	D3DXVECTOR3 m_offset;
 
 	LPDIRECT3DDEVICE9 m_device;
 
-	//D3DXMATRIX m_matrix;
-	//D3DXMATRIX m_matrixStore;
+	float m_seekTime;
+	float m_elapsedSeekTime;
+	float m_elapsedTime;
+	bool m_seeking;
 
 public:
 	Camera(LPDIRECT3DDEVICE9 a_device) : SGLib::Camera(a_device), SGLib::Node(a_device)
@@ -30,11 +40,18 @@ public:
 
 		m_projectionNode = NULL;
 
-		D3DXQuaternionIdentity(&m_rotation);
+		// timing code
+		m_elapsedTime = 0.0f;
+		m_seekTime = 5.0f;
+		m_elapsedSeekTime = 0.0f;
+		m_seeking = false;
 
-		m_target = D3DXVECTOR3(0.0f, 0.0f, 0.0f);
+		m_offset = D3DXVECTOR3(0.0f, 100.0f, -100.0f);
+		m_seekOrigin = D3DXVECTOR3(0.0f, 0.0f, 0.0f);
+		m_seekTarget = D3DXVECTOR3(0.0f, 0.0f, 0.0f);
+		m_targetPosition = D3DXVECTOR3(0.0f, 0.0f, 0.0f);
 		m_up = D3DXVECTOR3(0.0f, 1.0f, 0.0f);
-		m_position = D3DXVECTOR3(0.0f, 100.0f, -20.0f);
+		m_position = m_offset;
 
 		//SetSimpleMovement(true);
 
@@ -43,60 +60,90 @@ public:
 		m_near = 1.0f;
 		m_far = 1000.0f;
 
+		// projection
 		D3DXMATRIX projectionMatrix;
 		D3DXMatrixPerspectiveFovLH(&projectionMatrix, m_fieldOfView, m_aspectRatio, m_near, m_far);
 		m_projectionNode = new SGLib::Projection(a_device, projectionMatrix);
 		SetChild(m_projectionNode);
-
-		D3DXMATRIX lookAtMatrix;
-		D3DXMatrixLookAtLH(&lookAtMatrix, &m_position, &m_target, &m_up);
-
-		D3DXMATRIX inverseLookAt;
-		D3DXMatrixInverse(&inverseLookAt, NULL, &lookAtMatrix);
-
-		D3DXQUATERNION lookAtQuaternion;
-		D3DXQuaternionRotationMatrix(&lookAtQuaternion, &inverseLookAt);
-
-		D3DXQuaternionNormalize(&m_rotation, &lookAtQuaternion);
 
 		Refresh();
 	}
 
 	void Refresh()
 	{
-		D3DXMATRIX rotationMatrix;
-		D3DXMATRIX translationMatrix;
-
-		D3DXMatrixRotationQuaternion(&rotationMatrix, &m_rotation);
-		D3DXMatrixTranslation(&translationMatrix, m_position.x, m_position.y, m_position.z);
-
-		D3DXMATRIX productMatrix;
-		D3DXMatrixMultiply(&productMatrix, &rotationMatrix, &translationMatrix);
-
-		D3DXMatrixInverse(&m_oMatrix, NULL, &productMatrix);
+		D3DXMatrixLookAtLH(&m_oMatrix, &m_position, &m_targetPosition, &m_up);
 	}
 
-	//D3DXMATRIX GetViewMatrix()
+	void Update(float a_timeDelta)
+	{
+		if (m_seeking)
+		{
+			m_elapsedSeekTime += a_timeDelta;
+
+			if (m_elapsedSeekTime >= m_seekTime)
+			{
+				m_elapsedSeekTime = m_seekTime;
+				m_seeking = false;
+			}
+
+			float progress = m_elapsedSeekTime / m_seekTime;
+			// easing: y = (-cos[x] * 0.5) + 0.5
+			float bias = ((-cos(progress * PI) * 0.5f) + 0.5f);
+			D3DXVec3Lerp(&m_position, &m_seekOrigin, &m_seekTarget, bias);
+
+			Refresh();
+		}
+
+		//m_elapsedTime += a_timeDelta;
+		//if (m_elapsedTime >= 1.0f && m_seeking == false)
+		//{
+		//	StartSeeking(D3DXVECTOR3(0.0f, 75.0f, -50.0f));
+		//}
+	}
+
+	void StartSeeking(D3DXVECTOR3 a_vector)
+	{
+		m_seekTarget = a_vector;
+		m_elapsedSeekTime = 0.0f;
+		m_seekOrigin = m_position;
+		m_seeking = true;
+	}
+
+	void StopSeeking()
+	{
+		
+	}
+
+	void Handle(float a_xDelta, float a_yDelta)
+	{
+		D3DXVECTOR3 targetToCamera = m_position - m_targetPosition;
+		float cameraDistance = D3DXVec3Length(&targetToCamera);
+
+		D3DXVECTOR3 targetToCameraUnitVector;
+		D3DXVec3Normalize(&targetToCameraUnitVector, &targetToCamera);
+
+		D3DXMATRIX rotationMatrix;
+		D3DXMatrixRotationYawPitchRoll(&rotationMatrix, a_xDelta, a_yDelta, 0.0f);
+		
+		D3DXVECTOR3 targetToNewCameraUnit;
+		D3DXVec3TransformCoord(&targetToNewCameraUnit, &targetToCameraUnitVector, &rotationMatrix);
+
+		D3DXVECTOR3 targetToNewCameraPosition;
+		D3DXVec3Scale(&targetToNewCameraPosition, &targetToNewCameraUnit, cameraDistance);
+
+		m_position = targetToNewCameraPosition;
+
+		Refresh();
+	}
+
+	//void SetOffset(D3DXVECTOR3 a_offset)
 	//{
-	//	return m_matrix;
+	//	m_offset = a_offset;
 	//}
 
-	//void Render()
+	//void Snap()
 	//{
-	//	HRESULT	hr;
-	//	V(m_device->GetTransform(D3DTS_VIEW, &m_matrixStore))
-	//	V(m_device->SetTransform(D3DTS_VIEW, &m_matrix))
-	//}
-
-	//void PostRender()
-	//{
-	//	HRESULT hr;
-	//	V(m_device->SetTransform(D3DTS_VIEW, &m_matrixStore))	
-	//}
-
-	//void Update(float a_timeDelta)
-	//{
-	//	//UpdateMatrix();
+	//	m_position = m_targetPosition + m_offset;
 	//}
 
 	virtual ~Camera(void)
@@ -131,53 +178,6 @@ public:
 	D3DXVECTOR3 GetPosition()
 	{
 		return m_position;
-	}
-
-	void Rotate(D3DXVECTOR3 a_axis, float a_angle) {
-		D3DXMATRIX rotationMatrix;
-		D3DXMatrixRotationQuaternion(&rotationMatrix, &m_rotation);
-
-		D3DXVECTOR4 axis;
-		D3DXVec3Transform(&axis, &a_axis, &rotationMatrix);
-
-		D3DXVECTOR3 axis3(axis);
-
-		D3DXQUATERNION rotatationQuaternion;
-		D3DXQuaternionRotationAxis(&rotatationQuaternion, &axis3, a_angle);
-
-		D3DXQUATERNION productQuaternion;
-		D3DXQuaternionMultiply(&productQuaternion, &rotatationQuaternion, &m_rotation);
-
-		D3DXQuaternionNormalize(&m_rotation, &productQuaternion);
-
-		Refresh();
-	}
-	
-	void Translate(D3DXVECTOR3 a_translationVector) {
-		//Position += Vector3.Transform(distance, Matrix.CreateFromQuaternion(Rotation));
-		//UpdateMatrices();
-	}
-	
-	void Revolve(D3DXVECTOR3 a_axis, float a_angle) {
-		//Vector3 revolveAxis = Vector3.Transform(axis, Matrix.CreateFromQuaternion(Rotation));
-		//Quaternion rotate = Quaternion.CreateFromAxisAngle(revolveAxis, angle);
-		//Position = Vector3.Transform(Position - Target, Matrix.CreateFromQuaternion(rotate)) + Target;
-		//Rotate(axis, angle);
-	}
-
-	void RotateGlobal(D3DXVECTOR3 a_axis, float a_angle) {
-		D3DXQUATERNION rotatationQuaternion;
-		D3DXQuaternionRotationAxis(&rotatationQuaternion, &a_axis, a_angle);
-
-		D3DXQUATERNION normalizedRotatationQuaternion;
-		D3DXQuaternionNormalize();
-
-		D3DXQUATERNION productQuaternion;
-		D3DXQuaternionMultiply(&productQuaternion, &rotatationQuaternion, &m_rotation);
-
-		D3DXQuaternionNormalize(&m_rotation, &productQuaternion);
-
-		Refresh();
 	}
 };
 }

@@ -45,11 +45,6 @@ public:
 		m_yPosition = NULL;
 	}
 
-	//void StartTracking(int a_xPosition, int a_yPosition)
-	//{
-	//	m_tracking = true;
-	//}
-
 	void Track(bool a_active, int a_xPosition, int a_yPosition)
 	{
 		if (a_active)
@@ -65,11 +60,12 @@ public:
 
 				//D3DXVECTOR3 position = m_camera->GetNode()->GetPos() + D3DXVECTOR3(xDelta, yDelta, 0.0f);
 				//m_camera->GetNode()->SetPos(position);
-				D3DXVECTOR3 up(0.0f, 1.0f, 0.0f);
-				m_camera->RotateGlobal(up, xDelta);
+				//D3DXVECTOR3 up(0.0f, 1.0f, 0.0f);
+				//m_camera->RotateGlobal(up, xDelta);
 
 				//D3DXVECTOR3 across(1.0f, 0.0f, 0.0f);
 				//m_camera->Rotate(across, yDelta);
+				m_camera->Handle(xDelta, yDelta);
 			}
 
 			m_xPosition = a_xPosition;

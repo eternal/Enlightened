@@ -1,4 +1,7 @@
+#pragma once
+
 #include "Shader.h"
+
 #include <map>
 #include <string>
 #include <vector>
