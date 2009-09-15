@@ -28,11 +28,12 @@ State*			g_state = NULL;
 Transform*		g_dwarfTransform = NULL;
 Transform*		g_treeTransform = NULL;
 Transform*		g_monsterTransform = NULL;
+Transform*      g_gasStationTransform = NULL;
 
 Geometry*		g_dwarfGeometry = NULL;
 Geometry*		g_treeGeometry = NULL;
 Geometry*		g_monsterGeometry = NULL;
-
+Geometry*       g_gasStationGeometry = NULL;
 //--------------------------------------------------------------------------------------
 // Rejects any devices that aren't acceptable by returning false
 //--------------------------------------------------------------------------------------
@@ -181,6 +182,8 @@ void InitalizeGraph()
     
     std::vector<std::string>* meshNames = new std::vector<std::string>();
     meshNames->push_back("dwarf");
+    meshNames->push_back("tree");
+    meshNames->push_back("PetrolStation");
 
 	// Shaders
     g_masterShader = new MasterShader(device, L"shader.fx.c", meshNames);
@@ -222,10 +225,37 @@ void InitalizeGraph()
 	g_dwarfTransform = new Transform(device, worldMatrix);
 	g_dwarfGeometry = new Geometry(device, L"dwarf.X");
 	g_dwarfGeometry->SetDescription((LPCTSTR)"dwarf");
-	
 
 	g_masterShader->SetChild(g_dwarfTransform);
 	g_dwarfTransform->SetChild(g_dwarfGeometry);
+//tree
+	D3DXMatrixScaling(&scalingMatrix, 50.0f, 50.0f, 50.0f);
+	D3DXMatrixRotationYawPitchRoll(&rotationMatrix, 0.0f, 0.0f, 0.0f);
+	D3DXMatrixTranslation(&translationMatrix, 60.0f, 0.0f, 100.0f);
+	D3DXMatrixMultiply(&worldMatrix, &scalingMatrix, &rotationMatrix);
+	D3DXMatrixMultiply(&worldMatrix, &worldMatrix, &translationMatrix);
+
+	g_treeTransform = new Transform(device, worldMatrix);
+	g_treeGeometry = new Geometry(device, L"tree.X");
+	g_treeGeometry->SetDescription((LPCTSTR)"tree");	
+
+    g_dwarfTransform->SetSibling(g_treeTransform);
+    g_treeTransform->SetChild(g_treeGeometry);
+    
+//gas station
+	D3DXMatrixScaling(&scalingMatrix, 50.0f, 50.0f, 50.0f);
+	D3DXMatrixRotationYawPitchRoll(&rotationMatrix, 0.0f, 0.0f, 0.0f);
+	D3DXMatrixTranslation(&translationMatrix, 60.0f, 0.0f, 100.0f);
+	D3DXMatrixMultiply(&worldMatrix, &scalingMatrix, &rotationMatrix);
+	D3DXMatrixMultiply(&worldMatrix, &worldMatrix, &translationMatrix);
+	
+	g_gasStationTransform = new Transform(device, worldMatrix);
+	g_gasStationGeometry = new Geometry(device, L"GasStation.X");
+	g_gasStationGeometry->SetDescription((LPCTSTR)"PetrolStation");
+
+    g_treeTransform->SetSibling(g_gasStationTransform);
+    g_gasStationTransform->SetChild(g_gasStationGeometry);
+
 }
 
 void CleanUp()
@@ -237,6 +267,14 @@ void CleanUp()
 	SAFE_DELETE(g_state);
 
 	SAFE_DELETE(g_masterShader);
+	
+	SAFE_DELETE(g_dwarfTransform);
+	SAFE_DELETE(g_monsterTransform);
+	SAFE_DELETE(g_treeTransform);
+	
+	SAFE_DELETE(g_dwarfGeometry);
+	SAFE_DELETE(g_monsterGeometry);
+	SAFE_DELETE(g_treeGeometry);
 }
 
 //--------------------------------------------------------------------------------------

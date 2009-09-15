@@ -157,12 +157,12 @@ float4 PS_Lumos(VSOutput a_input) : COLOR
         specularAttenuation = (normalDotLight == 0.0f) ? 0.0f : pow(normalDotHalfway, material.specularAttenuation);
         
         color +=
-			((material.ambient * (attenuation * lightModel.color)) /*+ g_sunlight*/)          // ambient
+			(((material.ambient * (attenuation * lightModel.color)) + g_sunlight) * g_time)        // ambient
 			+ (material.diffuse * lightModel.color * normalDotLight * attenuation)        // diffuse
             + (material.specular * lightModel.color * specularAttenuation * attenuation); // specular
 	}
 
-	return color * /*g_time * */tex2D(diffuseSampler, a_input.textureCoordinates);
+	return color * tex2D(diffuseSampler, a_input.textureCoordinates);
 }
 
 technique Master
