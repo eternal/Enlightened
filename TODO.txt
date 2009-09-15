@@ -1,6 +1,6 @@
-objects in scene
-camera and movement and animation
-spotlights - with geometry
+objects in scene - [1-2]
+camera and movement and animation [2]
+spotlights - with geometry [1]
 fix the shader up a little
 AA
 documentation

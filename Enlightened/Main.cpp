@@ -61,14 +61,11 @@ bool CALLBACK ModifyDeviceSettings( DXUTDeviceSettings* pDeviceSettings, const D
 //--------------------------------------------------------------------------------------
 // Create any D3DPOOL_MANAGED resources here 
 //--------------------------------------------------------------------------------------
-HRESULT CALLBACK OnCreateDevice( IDirect3DDevice9* pd3dDevice, const D3DSURFACE_DESC* pBackBufferSurfaceDesc, void* pUserContext )
+HRESULT CALLBACK OnCreateDevice( IDirect3DDevice9* a_device, const D3DSURFACE_DESC* pBackBufferSurfaceDesc, void* pUserContext )
 {
 	if (g_camera)
 	{
-		if (g_camera->GetNode())
-		{
-			g_camera->GetNode()->OnCreateDevice(pd3dDevice);
-		}
+		g_camera->OnCreateDevice(a_device);
 	}
 
     return S_OK;
@@ -83,10 +80,7 @@ HRESULT CALLBACK OnResetDevice( IDirect3DDevice9* pd3dDevice,
 {
 	if (g_camera)
 	{
-		if (g_camera->GetNode())
-		{
-			g_camera->GetNode()->OnResetDevice(DXUTGetD3DDevice());
-		}
+		g_camera->OnResetDevice(DXUTGetD3DDevice());
 	}
     return S_OK;
 }
@@ -97,8 +91,9 @@ HRESULT CALLBACK OnResetDevice( IDirect3DDevice9* pd3dDevice,
 //--------------------------------------------------------------------------------------
 void CALLBACK OnFrameMove( IDirect3DDevice9* pd3dDevice, double a_time, float a_elapsedTime, void* pUserContext )
 {
-	g_masterShader->SetCameraPosition(g_camera->GetNode()->GetPos());
-	g_renderer->Update(g_camera->GetNode(), a_elapsedTime);
+	g_camera->Update(a_elapsedTime);
+	g_masterShader->SetCameraPosition(g_camera->GetPosition());
+	g_renderer->Update(g_camera, a_elapsedTime);
 }
 
 
@@ -107,7 +102,7 @@ void CALLBACK OnFrameMove( IDirect3DDevice9* pd3dDevice, double a_time, float a_
 //--------------------------------------------------------------------------------------
 void CALLBACK OnFrameRender( IDirect3DDevice9* pd3dDevice, double dTime, float fElapsedTime, void* pUserContext )
 {
-	g_renderer->Render(g_camera->GetNode());
+	g_renderer->Render(g_camera);
 }
 
 
@@ -160,8 +155,8 @@ LRESULT CALLBACK MsgProc( HWND hWnd, UINT uMsg, WPARAM wParam, LPARAM lParam,
 //--------------------------------------------------------------------------------------
 void CALLBACK OnLostDevice( void* pUserContext )
 {
-	if (g_camera->GetNode())
-		g_camera->GetNode()->OnLostDevice();
+	if (g_camera)
+		g_camera->OnLostDevice();
 }
 
 
@@ -170,8 +165,8 @@ void CALLBACK OnLostDevice( void* pUserContext )
 //--------------------------------------------------------------------------------------
 void CALLBACK OnDestroyDevice( void* pUserContext )
 {
-	if (g_camera->GetNode())
-		g_camera->GetNode()->OnDestroyDevice();
+	if (g_camera)
+		g_camera->OnDestroyDevice();
 }
 
 void InitalizeGraph()
@@ -186,27 +181,13 @@ void InitalizeGraph()
     g_masterShader = new MasterShader(device, L"shader.fx.c", meshNames);
 
 	// Camera
-	D3DXVECTOR3 cameraPosition = D3DXVECTOR3(0.0f, 10.0f, -20.0f);
-	D3DXVECTOR3	cameraUp       = D3DXVECTOR3(0.0f, 1.0f, 0.0f);
-	D3DXVECTOR3	cameraLook     = D3DXVECTOR3(0.0f, 0.0f, 0.0f);
-	g_camera = new Feisty::Camera();
-	g_camera->SetNode(new Camera(device, cameraPosition, cameraUp, cameraLook));
-	g_camera->GetNode()->SetSimpleMovement(true);
-	g_camera->Initialize();
-    //g_masterShader->SetCameraPosition(g_camera->GetNode()->GetPos());
+	
+	g_camera = new Feisty::Camera(device);
+	g_camera->AdoptShader(g_masterShader);
 
 	// Mouse
 	g_mouse = new Feisty::Mouse();
 	g_mouse->SetCamera(g_camera);
-    
-	// Projection
-	D3DXMATRIX oMatrixProj;
-	D3DXMatrixPerspectiveFovLH(&oMatrixProj, D3DX_PI * 0.25f, 1.5f, 1.0f, 1000.0f);
-	g_projection = new Projection(device, oMatrixProj);
-
-	// Start building scene graph
-	g_camera->GetNode()->SetChild(g_projection);
-	g_projection->SetChild(g_masterShader);
 
 	// init matrices
 	D3DXMATRIX scalingMatrix, rotationMatrix, translationMatrix, worldMatrix, identityMatrix;
@@ -220,7 +201,7 @@ void InitalizeGraph()
 	D3DXMatrixMultiply(&worldMatrix, &worldMatrix, &translationMatrix);
 
 	g_dwarfTransform = new Transform(device, worldMatrix);
-	g_dwarfGeometry = new Geometry(device, L"dwarf.X");
+	g_dwarfGeometry = new Geometry(device, L"monster.X");
 	g_dwarfGeometry->SetDescription((LPCTSTR)"dwarf");
 	
 

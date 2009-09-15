@@ -63,8 +63,13 @@ public:
 				float xDelta = (float)((a_xPosition - m_xPosition) * 0.01f);
 				float yDelta = (float)((a_yPosition - m_yPosition) * 0.01f);
 
-				D3DXVECTOR3 position = m_camera->GetNode()->GetPos() + D3DXVECTOR3(xDelta, yDelta, 0.0f);
-				m_camera->GetNode()->SetPos(position);
+				//D3DXVECTOR3 position = m_camera->GetNode()->GetPos() + D3DXVECTOR3(xDelta, yDelta, 0.0f);
+				//m_camera->GetNode()->SetPos(position);
+				D3DXVECTOR3 up(0.0f, 1.0f, 0.0f);
+				m_camera->RotateGlobal(up, xDelta);
+
+				//D3DXVECTOR3 across(1.0f, 0.0f, 0.0f);
+				//m_camera->Rotate(across, yDelta);
 			}
 
 			m_xPosition = a_xPosition;
