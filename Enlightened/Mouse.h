@@ -53,9 +53,9 @@ public:
 		m_yPosition = NULL;
 	}
 
-	void Track(bool a_active, int a_xPosition, int a_yPosition)
+	void Track(bool a_leftButton, bool a_rightButton, int a_mouseWheelData, int a_xPosition, int a_yPosition)
 	{
-		if (a_active)
+		if (a_leftButton || a_rightButton)
 		{
 			if (!m_tracking)
 			{
@@ -66,27 +66,31 @@ public:
 				float xDelta = (float)((a_xPosition - m_xPosition) * 0.01f);
 				float yDelta = (float)((a_yPosition - m_yPosition) * 0.01f);
 
-				//D3DXVECTOR3 position = m_camera->GetNode()->GetPos() + D3DXVECTOR3(xDelta, yDelta, 0.0f);
-				//m_camera->GetNode()->SetPos(position);
-				//D3DXVECTOR3 up(0.0f, 1.0f, 0.0f);
-				//m_camera->RotateGlobal(up, xDelta);
+				if (a_leftButton && a_rightButton)
+				{
+					m_camera->SetWalking(true);
+				}
+				else
+				{
+					m_camera->SetWalking(false);
+				}
 
-				//D3DXVECTOR3 across(1.0f, 0.0f, 0.0f);
-				//m_camera->Rotate(across, yDelta);
-				m_camera->Handle(xDelta, yDelta);
+				if (a_leftButton)
+				{
+					m_camera->Handle(xDelta, yDelta);
+				}
+				if (a_rightButton)
+				{
+					m_camera->Turn(xDelta, yDelta);
+				}
 			}
 
 			m_xPosition = a_xPosition;
 			m_yPosition = a_yPosition;
 		}
-		else if (!a_active)
+		else if (m_tracking)
 		{
-			if (m_tracking)
-			{
-				StopTracking();
-			}
-			else {
-			}
+			StopTracking();
 		}
 	}
 };
