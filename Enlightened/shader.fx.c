@@ -1,4 +1,4 @@
-#define LIGHT_COUNT 2
+#define LIGHT_COUNT 1
 #define MATERIAL_COUNT 1
 
 // sunlight /  night time
@@ -44,9 +44,11 @@ struct Material
 
 struct Light
 {
+	bool isTargetCamera;
 	float4 color;
-	float3 direction;
+	float3 target;
 	float3 position;
+	float3 direction;
 	float radius;
 	float innerCone;
 	float outerCone;
@@ -69,7 +71,7 @@ struct VSInput
 	float3 position : POSITION;
 	float2 textureCoordinates : TEXCOORD0;
 	float3 normal : NORMAL;
-	float3 tangent : TANGENT;
+	float4 tangent : TANGENT;
 	float3 binormal : BINORMAL;
 };
 
@@ -97,7 +99,7 @@ VSOutput VS_Lumos(VSInput a_input)
 
 	output.normal = a_input.normal;
 	output.tangent = a_input.tangent;
-	output.binormal = a_input.binormal;
+	output.binormal = cross(output.normal, output.tangent) * a_input.tangent.w;
 
 	return output;
 }
@@ -115,7 +117,7 @@ float4 PS_Lumos(VSOutput a_input) : COLOR
 		tangent.y, binormal.y, normal.y,
 		tangent.z, binormal.z, normal.z
 	);
-
+    //float3x3 tangentSpaceMatrix = transpose(float3x3(tangent, binormal, normal));
 	float3 view = normalize(mul(g_camera.position - a_input.worldPosition, tangentSpaceMatrix));
 
 	float3 light   = float3(0.0f, 0.0f, 0.0f);
@@ -135,22 +137,35 @@ float4 PS_Lumos(VSOutput a_input) : COLOR
 		Light lightModel = g_lights[index];
 
         light = mul((lightModel.position - a_input.worldPosition) / lightModel.radius, tangentSpaceMatrix);
+        //light = (lightModel.position - a_input.worldPosition) / lightModel.radius;
+        //float3 lightDirection = mul(normalize(lightModel.direction), tangentSpaceMatrix);
         attenuation = saturate(1.0f - dot(light, light));
         
         light = normalize(light);
         halfway = normalize(light + view);
+        
+        if (lightModel.isTargetCamera) {
+            lightModel.direction = lightModel.target - lightModel.position;        
+        }
+
+        float2 cosSpotlightCones = cos(float2(lightModel.outerCone, lightModel.innerCone) * 0.5f);
+        float spotlightDot = dot(-light, normalize(lightModel.direction));
+        //float spotlightDot = dot(-light, lightDirection);
+        float spotlightEffect = smoothstep(cosSpotlightCones[0], cosSpotlightCones[1], spotlightDot);
+
+        attenuation *= spotlightEffect;
         
         normalDotLight = saturate(dot(normal, light));
         normalDotHalfway = saturate(dot(normal, halfway));
         specularAttenuation = (normalDotLight == 0.0f) ? 0.0f : pow(normalDotHalfway, material.specularAttenuation);
         
         color +=
-			((material.ambient * (attenuation * lightModel.color)) + g_sunlight)          // ambient
+			(((material.ambient * (attenuation * lightModel.color)) /*+ g_sunlight*/) /** g_time*/)        // ambient
 			+ (material.diffuse * lightModel.color * normalDotLight * attenuation)        // diffuse
             + (material.specular * lightModel.color * specularAttenuation * attenuation); // specular
 	}
 
-	return color * g_time * tex2D(diffuseSampler, a_input.textureCoordinates);
+	return color * tex2D(diffuseSampler, a_input.textureCoordinates);
 }
 
 technique Master
