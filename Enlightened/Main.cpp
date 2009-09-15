@@ -206,11 +206,12 @@ void InitalizeGraph()
 	D3DXMatrixMultiply(&worldMatrix, &worldMatrix, &translationMatrix);
 
 	g_dwarfTransform = new Transform(device, worldMatrix);
-	g_dwarfGeometry = new Geometry(device, L"monster.X");
+	g_dwarfGeometry = new Geometry(device, L"dwarf.X");
 	g_dwarfGeometry->SetDescription((LPCTSTR)"dwarf");
 
 	g_masterShader->SetChild(g_dwarfTransform);
 	g_dwarfTransform->SetChild(g_dwarfGeometry);
+
 //tree
 	D3DXMatrixScaling(&scalingMatrix, 50.0f, 50.0f, 50.0f);
 	D3DXMatrixRotationYawPitchRoll(&rotationMatrix, 0.0f, 0.0f, 0.0f);
