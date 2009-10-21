@@ -437,7 +437,8 @@ INT WINAPI WinMain( HINSTANCE, HINSTANCE, LPSTR, int )
 	DXUTSetCursorSettings( true, true ); // Show the cursor and clip it when in full screen
     DXUTCreateWindow( TEXT("Enlightened") );
     //DXUTCreateDevice( D3DADAPTER_DEFAULT, true, 640, 480, IsDeviceAcceptable, ModifyDeviceSettings );
-    DXUTDeviceSettings Settings;
+    
+	DXUTDeviceSettings Settings;
     D3DPRESENT_PARAMETERS d3dpp; 
     ZeroMemory( &d3dpp, sizeof(d3dpp) );
     d3dpp.Windowed = true;
@@ -454,8 +455,8 @@ INT WINAPI WinMain( HINSTANCE, HINSTANCE, LPSTR, int )
 	Settings.BehaviorFlags = D3DCREATE_HARDWARE_VERTEXPROCESSING | D3DCREATE_PUREDEVICE;
 	Settings.DeviceType = D3DDEVTYPE_HAL;
 	Settings.pp = d3dpp;
+	DXUTFindValidDeviceSettings(&Settings,&Settings);
 	DXUTCreateDeviceFromSettings( &Settings );
-
     //DXUTCreateDeviceFromSettings( D3DADAPTER_DEFAULT, true, 640, 480, IsDeviceAcceptable, ModifyDeviceSettings );
 
 	InitalizeGraph();
