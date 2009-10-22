@@ -19,11 +19,24 @@
 
 using SGLib::Shader;
 
+struct Light
+{
+    bool isTargetLight;
+    D3DXVECTOR4 color;
+    D3DXVECTOR3 target;
+    D3DXVECTOR3 position;
+    D3DXVECTOR3 direction;
+    float radius;
+    float innerCone;
+    float outerCone;
+};
+
 class MasterShader : public Shader
 {
 protected:
     std::map<std::string, LPDIRECT3DTEXTURE9>* m_normalTextures;
 	float m_time;
+	Light m_lights[6];
 	LPDIRECT3DTEXTURE9 m_textureShadowMap;
     LPDIRECT3DSURFACE9 m_pSurfaceShadowMap;
     LPDIRECT3DSURFACE9 m_pSurfaceShadowDS;
@@ -65,10 +78,14 @@ public:
 		m_pEffect->SetValue("g_materials[0].diffuse",   D3DXVECTOR4(1.0f, 1.0f, 1.0f, 1.0f), sizeof(D3DXVECTOR4));
 		m_pEffect->SetValue("g_materials[0].ambient",   D3DXVECTOR4(0.1f, 0.1f, 0.1f, 1.0f), sizeof(D3DXVECTOR4));
         //-25.792118, -6.239999, 112.264069
-		m_pEffect->SetValue("g_lights[0].color", D3DXVECTOR4(1.0f, 1.0f, 0.0f, 1.0f), sizeof(D3DXVECTOR4));
-		m_pEffect->SetValue("g_lights[0].direction", D3DXVECTOR3(0.0f, -1.0f, 0.0f), sizeof(D3DXVECTOR3));
-		m_pEffect->SetBool("g_lights[0].isTargetLight", false);
-		m_pEffect->SetValue("g_lights[0].position", D3DXVECTOR3(-500.0f, 70.25f, -313.0f), sizeof(D3DXVECTOR3));
+        
+        m_lights[0].color = D3DXVECTOR4(1.0f, 1.0f, 0.0f, 1.0f);
+        m_lights[0].target = D3DXVECTOR3(0.0f, 1.0f, 0.0f);
+        m_lights[0].position = D3DXVECTOR3(-500.0f, 70.25f, -313.0f);
+		m_pEffect->SetValue("g_lights[0].color", m_lights[0].color, sizeof(D3DXVECTOR4));
+		m_pEffect->SetValue("g_lights[0].target", m_lights[0].target, sizeof(D3DXVECTOR3));
+		m_pEffect->SetBool("g_lights[0].isTargetLight", true);
+		m_pEffect->SetValue("g_lights[0].position", m_lights[0].position, sizeof(D3DXVECTOR3));
 		m_pEffect->SetFloat("g_lights[0].radius", 1000.0f);
 		m_pEffect->SetFloat("g_lights[0].outerCone", D3DXToRadian(90.0f));
 		m_pEffect->SetFloat("g_lights[0].innerCone", D3DXToRadian(30.0f));
@@ -176,10 +193,10 @@ public:
         D3DXVECTOR3 lightUp(0.0f, 1.0f, 0.0f);
         D3DXVECTOR3 lightPos(1200.0f, 70.25f, 3.0f);
 
-        D3DXVECTOR3 lightLookAt = lightLook - lightPos;
+        //D3DXVECTOR3 lightLookAt = lightLook - lightPos;
 
         // calculate light's view matrix
-        D3DXMatrixLookAtLH(&lightView, &lightPos, &lightLookAt, &lightUp);
+        D3DXMatrixLookAtLH(&lightView, &(m_lights[0].position), &(m_lights[0].target), &lightUp);
 
         //// calculate light's projection matrix
         D3DXMatrixPerspectiveFovLH(&lightProj, D3DX_PI*0.25f, 1.5f, 1.0f, 2000.0f);

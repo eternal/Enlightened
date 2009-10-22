@@ -202,10 +202,10 @@ void InitalizeGraph()
 	LPDIRECT3DDEVICE9 device = DXUTGetD3DDevice();
 	
     // create texture used to render the shadow map to
-    D3DXCreateTexture(device, 512, 512, 1, D3DUSAGE_RENDERTARGET, D3DFMT_R32F, D3DPOOL_DEFAULT, &g_textureShadowMap);
+    D3DXCreateTexture(device, 1024, 1024, 1, D3DUSAGE_RENDERTARGET, D3DFMT_R32F, D3DPOOL_DEFAULT, &g_textureShadowMap);
 
     // create depth surface used when rendering the shadow map
-    device->CreateDepthStencilSurface(512, 512, D3DFMT_D24X8, D3DMULTISAMPLE_NONE, 0, TRUE, &g_pSurfaceShadowDS, NULL); 
+    device->CreateDepthStencilSurface(1024, 1024, D3DFMT_D24X8, D3DMULTISAMPLE_NONE, 0, TRUE, &g_pSurfaceShadowDS, NULL); 
 	
 	g_renderer = new Renderer(g_textureShadowMap, g_pSurfaceShadowDS);
     

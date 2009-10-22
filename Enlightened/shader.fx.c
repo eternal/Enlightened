@@ -135,14 +135,37 @@ VSOutput VS_Lumos(VSInput a_input)
 
 float4 PS_Lumos(VSOutput a_input) : COLOR0
 {
-    //a_input.projectedTexture.xy /= a_input.projectedTexture.w;            
-    ////a_input.projectedTexture.xy /= 1.0f;
-    //a_input.projectedTexture.x =  0.5f*a_input.projectedTexture.x + 0.5f; 
-    //a_input.projectedTexture.y = -0.5f*a_input.projectedTexture.y + 0.5f;
-    //
+    a_input.projectedTexture.xy /= a_input.projectedTexture.w;            
+    //a_input.projectedTexture.xy /= 1.0f;
+    a_input.projectedTexture.x =  0.5f*a_input.projectedTexture.x + 0.5f; 
+    a_input.projectedTexture.y = -0.5f*a_input.projectedTexture.y + 0.5f;
+    
+    //return tex2D(shadowSampler, a_input.projectedTexture);
+    
+    // Compute pixel depth for shadowing.
+    float depth = a_input.projectedTexture.z / 1800.0f; //denominator set to roughly depth buffer zmax (2000) but clipped manually to enhance shadows
 
-    float4 color2 = tex2D(shadowSampler, a_input.projectedTexture);
-    return color2;
+    // Transform to texel space
+    float2 texelpos = 1024.0f * a_input.projectedTexture.xy;
+
+    // Determine the lerp amounts.           
+    float2 lerps = frac( texelpos );
+
+    // sample shadow map
+    float dx = 1.0f / 1024.0f;
+    float offset = 0.05f; //closer to zero for less banding but less shadowing, balance needs to be found
+    float s0 = (tex2D(shadowSampler, a_input.projectedTexture.xy).r + 0.05f < depth) ? 0.0f : 1.0f;
+    float s1 = (tex2D(shadowSampler, a_input.projectedTexture.xy + float2(dx, 0.0f)).r + 0.05f < depth) ? 0.0f : 1.0f;
+    float s2 = (tex2D(shadowSampler, a_input.projectedTexture.xy + float2(0.0f, dx)).r + 0.05f < depth) ? 0.0f : 1.0f;
+    float s3 = (tex2D(shadowSampler, a_input.projectedTexture.xy + float2(dx, dx)).r   + 0.05f < depth) ? 0.0f : 1.0f;
+
+    float shadowCoeff = 0.0f;
+
+    // if multi-sampling is on or off
+    shadowCoeff = lerp( lerp( s0, s1, lerps.x ), lerp( s2, s3, lerps.x ), lerps.y );
+    //shadowCoeff = s0;
+
+    
 	Material material = g_materials[0];
 
 	float3 normal   = normalize(a_input.normal);
@@ -202,7 +225,7 @@ float4 PS_Lumos(VSOutput a_input) : COLOR0
             + (material.specular * lightModel.color * specularAttenuation * attenuation); // specular
 	}
 
-	return color * tex2D(diffuseSampler, a_input.textureCoordinates);
+	return color * shadowCoeff * tex2D(diffuseSampler, a_input.textureCoordinates);
 }
 
 VSShadowOutput VS_Shadow(VSInput a_input)
