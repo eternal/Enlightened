@@ -184,6 +184,10 @@
 				>
 			</File>
 			<File
+				RelativePath=".\Renderer.cpp"
+				>
+			</File>
+			<File
 				RelativePath=".\shader.fx.c"
 				>
 				<FileConfiguration
@@ -211,6 +215,10 @@
 			</File>
 			<File
 				RelativePath=".\Mouse.h"
+				>
+			</File>
+			<File
+				RelativePath=".\Renderer.h"
 				>
 			</File>
 		</Filter>

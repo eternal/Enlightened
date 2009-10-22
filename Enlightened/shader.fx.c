@@ -15,6 +15,7 @@ uniform extern float g_time;
 
 // Textures
 uniform extern texture g_normalTexture;
+uniform extern texture g_shadowTexture;
 
 // Samplers
 sampler diffuseSampler : register(s0) = sampler_state
@@ -35,11 +36,21 @@ sampler normalSampler = sampler_state
     //MaxAnisotropy = 16;
 };
 
+sampler shadowSampler = sampler_state
+{
+    texture = <g_shadowTexture>;
+    MinFilter = LINEAR;
+    MagFilter = LINEAR;
+    MipFilter = LINEAR;
+    AddressU  = CLAMP; 
+    AddressV  = CLAMP;
+};
 
 // matrices
 uniform extern float4x4 g_worldMatrix;
 uniform extern float4x4 g_worldViewProjectionMatrix;
 uniform extern float4x4 g_worldInverseTransposeMatrix;
+uniform extern float4x4 g_lightWorldViewProjectionMatrix;
 
 struct Material
 {
@@ -92,9 +103,17 @@ struct VSOutput
 	float3 normal : TEXCOORD2;
 	float3 binormal : TEXCOORD3;
 	float3 tangent : TEXCOORD4;
+	
+	float4 projectedTexture : TEXCOORD5;
 
 	//float3x3 tangentToWorld : TEXCOORD5;
 	//float3 view : TEXCOORD6;
+};
+
+struct VSShadowOutput
+{
+    float4 position: POSITION0;
+    float2 depth: TEXCOORD0;
 };
 
 VSOutput VS_Lumos(VSInput a_input)
@@ -109,11 +128,21 @@ VSOutput VS_Lumos(VSInput a_input)
 	output.tangent = a_input.tangent;
 	output.binormal = cross(output.normal, output.tangent) * a_input.tangent.w;
 
+    output.projectedTexture = mul(float4(a_input.position, 1.0f), g_lightWorldViewProjectionMatrix);
+
 	return output;
 }
 
-float4 PS_Lumos(VSOutput a_input) : COLOR
+float4 PS_Lumos(VSOutput a_input) : COLOR0
 {
+    //a_input.projectedTexture.xy /= a_input.projectedTexture.w;            
+    ////a_input.projectedTexture.xy /= 1.0f;
+    //a_input.projectedTexture.x =  0.5f*a_input.projectedTexture.x + 0.5f; 
+    //a_input.projectedTexture.y = -0.5f*a_input.projectedTexture.y + 0.5f;
+    //
+
+    float4 color2 = tex2D(shadowSampler, a_input.projectedTexture);
+    return color2;
 	Material material = g_materials[0];
 
 	float3 normal   = normalize(a_input.normal);
@@ -176,6 +205,24 @@ float4 PS_Lumos(VSOutput a_input) : COLOR
 	return color * tex2D(diffuseSampler, a_input.textureCoordinates);
 }
 
+VSShadowOutput VS_Shadow(VSInput a_input)
+{
+    VSShadowOutput output;
+    
+    output.position = mul(float4(a_input.position, 1.0f), g_lightWorldViewProjectionMatrix);
+    output.depth = output.position.zw;
+    
+    return output;
+}
+
+float4 PS_Shadow(VSShadowOutput a_input) : COLOR
+{
+    // output the depth of the pixel from the light source, normalized into the view space
+    //return a_input.depth.x / a_input.depth.y;
+    return a_input.depth.x / 2000.0f;
+    //return a_Input.depth.x / 60.0f;
+}
+
 technique Master
 {
 	pass
@@ -183,4 +230,13 @@ technique Master
 		vertexShader = compile vs_3_0 VS_Lumos();
 		pixelShader = compile ps_3_0 PS_Lumos();
 	}
+}
+
+technique MasterGenerate
+{
+    pass
+    {
+        vertexShader = compile vs_3_0 VS_Shadow();
+        pixelShader = compile ps_3_0 PS_Shadow();
+    }
 }

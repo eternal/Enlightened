@@ -24,10 +24,19 @@ class MasterShader : public Shader
 protected:
     std::map<std::string, LPDIRECT3DTEXTURE9>* m_normalTextures;
 	float m_time;
+	LPDIRECT3DTEXTURE9 m_textureShadowMap;
+    LPDIRECT3DSURFACE9 m_pSurfaceShadowMap;
+    LPDIRECT3DSURFACE9 m_pSurfaceShadowDS;
+    LPDIRECT3DSURFACE9 m_pSurfaceOld;
+    LPDIRECT3DSURFACE9 m_pSurfaceTexture;
+    LPDIRECT3DSURFACE9 m_pSurfaceOldDS;
 
 public:
-	MasterShader(LPDIRECT3DDEVICE9 a_device, LPCTSTR a_fileName, std::vector<std::string>* a_meshNames) : Shader(a_device, a_fileName)
+	MasterShader(LPDIRECT3DDEVICE9 a_device, LPCTSTR a_fileName, std::vector<std::string>* a_meshNames, LPDIRECT3DTEXTURE9 a_textureShadowMap, LPDIRECT3DSURFACE9 a_pSurfaceShadowDS ) : Shader(a_device, a_fileName)
 	{
+	    this->m_pSurfaceShadowDS = a_pSurfaceShadowDS;
+	    this->m_textureShadowMap = a_textureShadowMap;
+	    
 		m_time = 0.0f;
 
 		if (m_pEffect) {
@@ -48,6 +57,8 @@ public:
             V(D3DXCreateTextureFromFile(a_device, wideFilename.c_str(), &texture));
             m_normalTextures->insert( std::pair<std::string, LPDIRECT3DTEXTURE9>( (*iter), texture));
         }
+        
+        
 	    
 		m_pEffect->SetFloat("g_materials[0].specularAttenuation", 1.0f);
 		m_pEffect->SetValue("g_materials[0].specular", D3DXVECTOR4(0.0f, 0.0f, 0.0f, 1.0f), sizeof(D3DXVECTOR4));
@@ -158,12 +169,48 @@ public:
 		D3DXMatrixInverse(&oMatWorldIT, NULL, &oMatWorld);
 		D3DXMatrixTranspose(&oMatWorldIT, &oMatWorldIT);
 		
+		
+        D3DXMATRIX lightView, lightProj, lightViewProjection, lightWorldViewProjection;
+
+        D3DXVECTOR3 lightLook(0.0f, 0.0f, 0.0f);
+        D3DXVECTOR3 lightUp(0.0f, 1.0f, 0.0f);
+        D3DXVECTOR3 lightPos(1200.0f, 70.25f, 3.0f);
+
+        D3DXVECTOR3 lightLookAt = lightLook - lightPos;
+
+        // calculate light's view matrix
+        D3DXMatrixLookAtLH(&lightView, &lightPos, &lightLookAt, &lightUp);
+
+        //// calculate light's projection matrix
+        D3DXMatrixPerspectiveFovLH(&lightProj, D3DX_PI*0.25f, 1.5f, 1.0f, 2000.0f);
+
+        // calculate light's view-projection matrix
+        D3DXMatrixMultiply(&lightViewProjection, &lightView, &lightProj);
+
+        D3DXMatrixMultiply(&lightWorldViewProjection, &oMatWorld, &lightViewProjection);
+		
  		V(m_pEffect->SetMatrix("g_worldViewProjectionMatrix", &oMatWorldViewProj))
 		V(m_pEffect->SetMatrix("g_worldMatrix", &oMatWorld))
 		V(m_pEffect->SetMatrix("g_worldInverseTransposeMatrix", &oMatWorldIT))
+        V(m_pEffect->SetMatrix("g_lightWorldViewProjectionMatrix", &lightWorldViewProjection))
         
         V(m_pEffect->SetTexture("g_normalTexture",(*m_normalTextures->find("dwarf")).second))
         
+        V(m_pD3DDevice->GetRenderTarget(0, &m_pSurfaceOld))
+        if (SUCCEEDED(m_textureShadowMap->GetSurfaceLevel(0, &m_pSurfaceTexture)))
+        {
+            if (SUCCEEDED(m_pD3DDevice->SetRenderTarget(0, m_pSurfaceTexture)))
+            {
+                if (SUCCEEDED(m_pD3DDevice->GetDepthStencilSurface(&m_pSurfaceOldDS)))
+                {
+                    m_pD3DDevice->SetDepthStencilSurface(m_pSurfaceShadowDS);
+                }
+            }
+        }
+        
+        
+        V(m_pEffect->SetTechnique("MasterGenerate"))
+        V( m_pEffect->CommitChanges() );
 		V(m_pEffect->Begin(&unPasses, NULL))
 
 		for (UINT i = 0; i < unPasses; ++i)
@@ -176,6 +223,25 @@ public:
 		}
 
 		V(m_pEffect->End())
+		
+        V(m_pD3DDevice->SetRenderTarget(0, m_pSurfaceOld))
+        V(m_pD3DDevice->SetDepthStencilSurface(m_pSurfaceOldDS))
+        
+        V(m_pEffect->SetTechnique("Master")) 
+        V(m_pEffect->SetTexture("g_shadowTexture", m_textureShadowMap))
+        
+        V(m_pEffect->Begin(&unPasses, NULL))
+
+        for (UINT i = 0; i < unPasses; ++i)
+        {
+            V(m_pEffect->BeginPass(i))
+
+                a_geometry->Render();
+
+            V(m_pEffect->EndPass())
+        }
+
+        V(m_pEffect->End())
 	}
 
 };

@@ -10,6 +10,7 @@
 #include "MasterShader.h"
 #include "Mouse.h"
 #include "Camera.h"
+#include "Renderer.h"
 #include <sstream>
 #include <map>
 #include <vector>
@@ -21,7 +22,10 @@ using namespace SGLib;
 
 MasterShader*	g_masterShader = NULL;
 
-SGRenderer*		g_renderer = NULL;
+Renderer*		g_renderer = NULL;
+
+LPDIRECT3DTEXTURE9 g_textureShadowMap = NULL;
+LPDIRECT3DSURFACE9 g_pSurfaceShadowDS = NULL;
 
 Feisty::Camera* g_camera = NULL;
 Feisty::Mouse*  g_mouse = NULL;
@@ -196,7 +200,14 @@ void CALLBACK OnDestroyDevice( void* pUserContext )
 void InitalizeGraph()
 {
 	LPDIRECT3DDEVICE9 device = DXUTGetD3DDevice();
-	g_renderer = new SGRenderer();
+	
+    // create texture used to render the shadow map to
+    D3DXCreateTexture(device, 512, 512, 1, D3DUSAGE_RENDERTARGET, D3DFMT_R32F, D3DPOOL_DEFAULT, &g_textureShadowMap);
+
+    // create depth surface used when rendering the shadow map
+    device->CreateDepthStencilSurface(512, 512, D3DFMT_D24X8, D3DMULTISAMPLE_NONE, 0, TRUE, &g_pSurfaceShadowDS, NULL); 
+	
+	g_renderer = new Renderer(g_textureShadowMap, g_pSurfaceShadowDS);
     
     std::vector<std::string>* meshNames = new std::vector<std::string>();
     meshNames->push_back("dwarf");
@@ -204,7 +215,7 @@ void InitalizeGraph()
     meshNames->push_back("PetrolStation");
 
 	// Shaders
-    g_masterShader = new MasterShader(device, L"shader.fx.c", meshNames);
+    g_masterShader = new MasterShader(device, L"shader.fx.c", meshNames, g_textureShadowMap, g_pSurfaceShadowDS);
 
 	// Camera
 	
