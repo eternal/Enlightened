@@ -31,6 +31,13 @@ struct Light
     float outerCone;
 };
 
+// vertex structure
+struct Vertex_PosTex
+{
+    D3DXVECTOR3 pos;
+    D3DXVECTOR2	texture;
+};
+
 class MasterShader : public Shader
 {
 protected:
@@ -40,6 +47,9 @@ protected:
 	std::vector<LPDIRECT3DTEXTURE9>* m_textureShadowMap;
 	std::vector<LPDIRECT3DSURFACE9>* m_shadowMapSurface;
     std::vector<LPDIRECT3DSURFACE9>* m_pSurfaceShadowDS;
+    LPDIRECT3DVERTEXDECLARATION9	 m_pVertexDec;
+    LPDIRECT3DTEXTURE9               m_billboardTexture;
+    LPDIRECT3DVERTEXBUFFER9			 m_pVB;
 
 public:
 	MasterShader(LPDIRECT3DDEVICE9 a_device, LPCTSTR a_fileName, std::vector<std::string>* a_meshNames, std::vector<LPDIRECT3DTEXTURE9>* a_textureShadowMap, std::vector<LPDIRECT3DSURFACE9>* a_pSurfaceShadowDS, std::vector<LPDIRECT3DSURFACE9>* a_shadowMapSurface ) : Shader(a_device, a_fileName)
@@ -48,12 +58,43 @@ public:
 	    this->m_textureShadowMap = a_textureShadowMap;
 	    this->m_shadowMapSurface = a_shadowMapSurface;
 	    
+        // definition of square vertices
+        Vertex_PosTex vertSquare[] = 
+        {
+            {D3DXVECTOR3(-1.0f,-1.0f, 0.0f), D3DXVECTOR2(0.0f, 1.0f)},
+            {D3DXVECTOR3(-1.0f, 1.0f, 0.0f), D3DXVECTOR2(0.0f, 0.0f)},
+            {D3DXVECTOR3( 1.0f,-1.0f, 0.0f), D3DXVECTOR2(1.0f, 1.0f)},
+            {D3DXVECTOR3( 1.0f, 1.0f, 0.0f), D3DXVECTOR2(1.0f, 0.0f)},
+        };
+	    HRESULT hr;
+        // create vertex buffer used to hold triangle vertices
+        V(a_device->CreateVertexBuffer(sizeof(vertSquare), D3DUSAGE_WRITEONLY, 0, D3DPOOL_MANAGED, &m_pVB, 0))
+	    
+        // lock memory, copy data in, unlock memory
+        void* pMem = NULL;
+        V(m_pVB->Lock(0, 0, &pMem, 0))
+            memcpy(pMem, vertSquare, sizeof(vertSquare));
+        V(m_pVB->Unlock())
+	    
+        // define vertex structure
+        D3DVERTEXELEMENT9 VertexArray[] = 
+        {
+            {0, 0, D3DDECLTYPE_FLOAT3, D3DDECLMETHOD_DEFAULT, D3DDECLUSAGE_POSITION, 0},	// position
+            {0, 12, D3DDECLTYPE_FLOAT2, D3DDECLMETHOD_DEFAULT, D3DDECLUSAGE_TEXCOORD, 0},	// texture coords
+            D3DDECL_END()
+        };
+
+        V(a_device->CreateVertexDeclaration(VertexArray, &m_pVertexDec))
+
+        D3DXCreateTextureFromFileEx(a_device, L"billboard_tree.png", 1524, 1748, 0, 0,
+        D3DFMT_UNKNOWN, D3DPOOL_MANAGED, D3DX_DEFAULT,
+        D3DX_DEFAULT, 0x00000000, NULL, NULL, &m_billboardTexture);
+    
 		m_time = 0.0f;
 
 		if (m_pEffect) {
 			m_pEffect->SetTechnique("Master");
 		}
-	    HRESULT hr;
 	    m_normalTextures = new std::map<std::string, LPDIRECT3DTEXTURE9>();
 	    
 	    for( std::vector<std::string>::iterator iter=a_meshNames->begin(); iter != a_meshNames->end(); ++iter ) {
@@ -110,6 +151,7 @@ public:
 		m_pEffect->SetFloat("g_lights[2].innerCone", D3DXToRadian(30.0f));
 		
 		/*
+
         m_lights[3].target = D3DXVECTOR3(900.0f, -1.0f, -813.0f);
         m_lights[3].position = D3DXVECTOR3(1200.0f, 50.25f, -813.0f);
 		m_pEffect->SetValue("g_lights[3].color", D3DXVECTOR4(1.0f, 1.0f, 0.0f, 1.0f), sizeof(D3DXVECTOR4));
@@ -260,15 +302,34 @@ public:
  		V(m_pEffect->SetMatrix("g_worldViewProjectionMatrix", &oMatWorldViewProj))
 		V(m_pEffect->SetMatrix("g_worldMatrix", &oMatWorld))
 		V(m_pEffect->SetMatrix("g_worldInverseTransposeMatrix", &oMatWorldIT))
-        
-        V(m_pEffect->SetTexture("g_normalTexture",(*m_normalTextures->find("dwarf")).second))
+		V(m_pEffect->SetMatrix("g_viewMatrix", &oMatView))
+		V(m_pEffect->SetBool("g_isBillboard", false));
+        if (a_geometry->GetDescription() == (LPCTSTR)"dwarf")
+        {
+            V(m_pEffect->SetTexture("g_normalTexture",(*m_normalTextures->find("dwarf")).second))
+        }
+        //else if (a_geometry->GetDescription() == (LPCTSTR)"tree")
+        //{
+        //    V(m_pEffect->SetTexture("g_normalTexture",(*m_normalTextures->find("tree")).second))
+        //}
+        //else if (a_geometry->GetDescription() == (LPCTSTR)"PetrolStation")
+        //{
+        //    V(m_pEffect->SetTexture("g_normalTexture",(*m_normalTextures->find("PetrolStation")).second))
+        //}
+        //else if (a_geometry->GetDescription() == (LPCTSTR)"monster")
+        //{
+        //    V(m_pEffect->SetTexture("g_normalTexture",(*m_normalTextures->find("monster")).second))
+        //}
+        else if (a_geometry->GetDescription() == (LPCTSTR)"Billboard")
+        {
+            V(m_pEffect->SetBool("g_isBillboard", true));
+        }
+        //V(m_pEffect->SetTexture("g_normalTexture",(*m_normalTextures->find("dwarf")).second))
         
         V(m_pD3DDevice->GetRenderTarget(0, &pSurfaceOld))
         V(m_pD3DDevice->GetDepthStencilSurface(&pSurfaceOldDS))
         
-
         GenerateShadowMap(0,a_geometry,oMatWorld);
-
 
         V(m_pD3DDevice->SetRenderTarget(0, pSurfaceOld))
         V(m_pD3DDevice->SetDepthStencilSurface(pSurfaceOldDS))
@@ -276,13 +337,42 @@ public:
         V(m_pEffect->SetTechnique("Master")) 
         V(m_pEffect->SetTexture("g_shadowTexture", m_textureShadowMap->at(0)))
         
+        if (a_geometry->GetDescription() == (LPCTSTR)"Billboard")
+        {
+            V(m_pD3DDevice->SetVertexDeclaration(m_pVertexDec))
+            V(m_pD3DDevice->SetStreamSource(0, m_pVB, 0, sizeof(Vertex_PosTex)))
+
+        }
+        
         V(m_pEffect->Begin(&unPasses, NULL))
 
         for (UINT i = 0; i < unPasses; ++i)
         {
             V(m_pEffect->BeginPass(i))
 
-                a_geometry->Render();
+                if (a_geometry->GetDescription() != (LPCTSTR)"Billboard")
+                {
+                    a_geometry->Render();
+                }
+                else 
+                {
+                    //for (int i = 0; i < 9; ++i)	// width
+                    //{
+                    //    for (int j = 0; j < 9; ++j)	// depth
+                    //    {
+                    //        
+                    //        D3DXMatrixTranslation(&oMat, i * 7, 0.0f, j * 7);
+
+                    //        // calculate world-view-projection matrix
+                    //        D3DXMatrixMultiply(&matWorldViewProj, &matWorld, &matTrans);
+                    //        D3DXMatrixMultiply(&matWorldViewProj, &matWorldViewProj, &matView);
+                    //        D3DXMatrixMultiply(&matWorldViewProj, &matWorldViewProj, &matProj);
+
+                
+                    V(m_pEffect->SetTexture("g_billboardTexture", m_billboardTexture))                    
+                    V(m_pEffect->CommitChanges())
+                    V(m_pD3DDevice->DrawPrimitive(D3DPT_TRIANGLESTRIP, 0, 2))
+                }
 
             V(m_pEffect->EndPass())
         }

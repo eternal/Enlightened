@@ -13,9 +13,13 @@
 uniform extern float4 g_sunlight;
 uniform extern float g_time;
 
+//billboard switch
+uniform extern bool g_isBillboard;
+
 // Textures
 uniform extern texture g_normalTexture;
 uniform extern texture g_shadowTexture;
+uniform extern texture g_billboardTexture;
 
 // Samplers
 sampler diffuseSampler : register(s0) = sampler_state
@@ -46,8 +50,19 @@ sampler shadowSampler = sampler_state
     AddressV  = CLAMP;
 };
 
+sampler billboardSampler = sampler_state
+{
+    texture = <g_billboardTexture>;
+    MinFilter = LINEAR;
+    MagFilter = LINEAR;
+    MipFilter = LINEAR;
+    AddressU  = WRAP;
+    AddressV  = WRAP;
+};
+
 // matrices
 uniform extern float4x4 g_worldMatrix;
+uniform extern float4x4 g_viewMatrix;
 uniform extern float4x4 g_worldViewProjectionMatrix;
 uniform extern float4x4 g_worldInverseTransposeMatrix;
 uniform extern float4x4 g_lightWorldViewProjectionMatrix[3];
@@ -120,7 +135,32 @@ VSOutput VS_Lumos(VSInput a_input, uniform int index)
 {
 	VSOutput output;
 
-	output.position      = mul(float4(a_input.position, 1.0f), g_worldViewProjectionMatrix);
+    if (g_isBillboard)
+    {
+        //output.position = ;
+        //output.position.x += 0.5f;
+        //DOESNT WORK YET
+        float3 center = mul(float4(a_input.position, 1.0f), g_worldMatrix);
+        float3 eyeVector = center - g_camera.position;
+        
+        float3 upVector = float3(0.0f,1.0f,0.0f);
+        upVector = normalize(upVector);
+        float3 sideVector = cross(eyeVector, upVector);
+        sideVector = normalize(sideVector);
+        
+        float3 finalPosition = center;
+        finalPosition += (a_input.textureCoordinates.x-0.5f)*sideVector;
+        finalPosition += (1.5f-a_input.textureCoordinates.y*1.5f)*upVector;
+        
+        float4 finalposition4 = float4(finalPosition, 1.0f);
+        output.position = mul(finalposition4, g_worldViewProjectionMatrix);
+        //output.position = mul(output.position, g_worldViewProjectionMatrix);
+    }
+    else
+    {
+       output.position      = mul(float4(a_input.position, 1.0f), g_worldViewProjectionMatrix);    
+    }
+	 
 	output.worldPosition = mul(float4(a_input.position, 1.0f), g_worldMatrix).xyz;
 	output.textureCoordinates = a_input.textureCoordinates;	
 
@@ -150,8 +190,10 @@ float4 PS_Lumos(VSOutput a_input, uniform int index) : COLOR0
     
     if ((saturate(projectedTextureCoords.x) == projectedTextureCoords.x) && (saturate(projectedTextureCoords.y) == projectedTextureCoords.y))
     {
+
          float storedDepth = tex2D(shadowSampler, projectedTextureCoords)[index];
-         float offset = 1.0f/10.0f;
+         float offset = 1.0f/100.0f;
+
          if ((realDepth - offset) <= storedDepth)   
          {
              Material material = g_materials[0];
@@ -211,7 +253,12 @@ float4 PS_Lumos(VSOutput a_input, uniform int index) : COLOR0
                  + (material.specular * lightModel.color * specularAttenuation * attenuation); // specular
 
 
-         } 
+        }
+         
+    }
+    if (g_isBillboard)
+    {
+        return /*color * */tex2D(billboardSampler, a_input.textureCoordinates);
     }
     return color * tex2D(diffuseSampler, a_input.textureCoordinates);
     

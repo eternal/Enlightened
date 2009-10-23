@@ -38,11 +38,13 @@ Transform*		g_treeTransform = NULL;
 Transform*		g_monsterTransform = NULL;
 Transform*      g_gasStationTransform = NULL;
 Transform*		g_characterTransform = NULL;
+Transform*		g_billboardTransform = NULL;
 
 Geometry*		g_dwarfGeometry = NULL;
 Geometry*		g_treeGeometry = NULL;
 Geometry*		g_monsterGeometry = NULL;
 Geometry*       g_gasStationGeometry = NULL;
+Geometry*       g_billboardGeometry = NULL;
 
 Articulated*	g_characterNode = NULL;
 Articulated*	g_characterPelvis = NULL;
@@ -228,6 +230,7 @@ void InitalizeGraph()
     meshNames->push_back("dwarf");
     meshNames->push_back("tree");
     meshNames->push_back("PetrolStation");
+    meshNames->push_back("monster");
 
 	// Shaders
     g_masterShader = new MasterShader(device, L"shader.fx.c", meshNames, g_textureShadowMaps, g_pSurfaceShadowDS, g_shadowMapSurface);
@@ -296,10 +299,24 @@ void InitalizeGraph()
 	
 	g_monsterTransform = new Transform(device, worldMatrix);
 	g_monsterGeometry = new Geometry(device, L"monster.X");
-	g_monsterGeometry->SetDescription(L"monster");
+	g_monsterGeometry->SetDescription((LPCTSTR)"monster");
 	
 	g_gasStationTransform->SetSibling(g_monsterTransform);
 	g_monsterTransform->SetChild(g_monsterGeometry);
+	
+    g_billboardTransform = new Transform(device, worldMatrix);
+    g_monsterTransform->SetSibling(g_billboardTransform);
+
+    D3DXMatrixScaling(&scalingMatrix, 3.0f, 3.0f, 3.0f);
+    D3DXMatrixRotationYawPitchRoll(&rotationMatrix, 0.0f, 0.0f, 0.0f);
+    D3DXMatrixTranslation(&translationMatrix, 15.0f, 23.0f, -450.0f);
+    D3DXMatrixMultiply(&worldMatrix, &scalingMatrix, &rotationMatrix);
+    D3DXMatrixMultiply(&worldMatrix, &worldMatrix, &translationMatrix);
+
+    //mesh doesnt matter
+    g_billboardGeometry = new Geometry(device, L"barney_head.x" );
+    g_billboardTransform->SetChild(g_billboardGeometry);
+    g_billboardGeometry->SetDescription((LPCTSTR)"Billboard");
 	
 	// person setup
 	D3DXMatrixScaling(&scalingMatrix, 3.0f, 3.0f, 3.0f);
@@ -310,7 +327,7 @@ void InitalizeGraph()
 	
 	g_characterTransform = new Transform(device, worldMatrix);
 	g_camera->SetTargetNode(g_characterTransform);
-	g_monsterTransform->SetSibling(g_characterTransform);
+	g_billboardTransform->SetSibling(g_characterTransform);
 
 	// setup each articulated link
 	//										    Leng, Disp,     OrigTheta,Min,    Max,					OrigAlpha,Min,  Max,			Filename
