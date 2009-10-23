@@ -135,31 +135,7 @@ VSOutput VS_Lumos(VSInput a_input, uniform int index)
 {
 	VSOutput output;
 
-    if (g_isBillboard)
-    {
-        //output.position = ;
-        //output.position.x += 0.5f;
-        //DOESNT WORK YET
-        float3 center = mul(float4(a_input.position, 1.0f), g_worldMatrix);
-        float3 eyeVector = center - g_camera.position;
-        
-        float3 upVector = float3(0.0f,1.0f,0.0f);
-        upVector = normalize(upVector);
-        float3 sideVector = cross(eyeVector, upVector);
-        sideVector = normalize(sideVector);
-        
-        float3 finalPosition = center;
-        finalPosition += (a_input.textureCoordinates.x-0.5f)*sideVector;
-        finalPosition += (1.5f-a_input.textureCoordinates.y*1.5f)*upVector;
-        
-        float4 finalposition4 = float4(finalPosition, 1.0f);
-        output.position = mul(finalposition4, g_worldViewProjectionMatrix);
-        //output.position = mul(output.position, g_worldViewProjectionMatrix);
-    }
-    else
-    {
-       output.position      = mul(float4(a_input.position, 1.0f), g_worldViewProjectionMatrix);    
-    }
+    output.position = mul(float4(a_input.position, 1.0f), g_worldViewProjectionMatrix);    
 	 
 	output.worldPosition = mul(float4(a_input.position, 1.0f), g_worldMatrix).xyz;
 	output.textureCoordinates = a_input.textureCoordinates;	
@@ -228,7 +204,7 @@ float4 PS_Lumos(VSOutput a_input, uniform int index) : COLOR0
              //light = (lightModel.position - a_input.worldPosition) / lightModel.radius;
              //float3 lightDirection = mul(normalize(lightModel.direction), tangentSpaceMatrix);
              attenuation = saturate(1.0f - dot(light, light));
-
+            
              light = normalize(light);
              halfway = normalize(light + view);
 
@@ -243,8 +219,17 @@ float4 PS_Lumos(VSOutput a_input, uniform int index) : COLOR0
 
              attenuation *= spotlightEffect;
 
-             normalDotLight = saturate(dot(normal, light));
-             normalDotHalfway = saturate(dot(normal, halfway));
+             
+             if (g_isBillboard)
+             {
+                normalDotLight = light;
+                normalDotHalfway = halfway;
+             }
+             else
+             {
+                 normalDotLight = saturate(dot(normal, light));
+                 normalDotHalfway = saturate(dot(normal, halfway));
+             }
              specularAttenuation = (normalDotLight == 0.0f) ? 0.0f : pow(normalDotHalfway, material.specularAttenuation);
 
              color +=
@@ -258,7 +243,7 @@ float4 PS_Lumos(VSOutput a_input, uniform int index) : COLOR0
     }
     if (g_isBillboard)
     {
-        return /*color * */tex2D(billboardSampler, a_input.textureCoordinates);
+        return color * tex2D(billboardSampler, a_input.textureCoordinates);
     }
     return color * tex2D(diffuseSampler, a_input.textureCoordinates);
     
@@ -296,6 +281,28 @@ technique Master
         SRCBLEND = ONE;
         DESTBLEND = ONE;
         ALPHABLENDENABLE = true;
+        vertexShader = compile vs_3_0 VS_Lumos(1);
+        pixelShader = compile ps_3_0 PS_Lumos(1);
+    }
+    pass P2
+    {
+        vertexShader = compile vs_3_0 VS_Lumos(2);
+        pixelShader = compile ps_3_0 PS_Lumos(2);
+    }
+}
+
+technique MasterBillboardAlpha
+{
+    pass P0
+    {
+        AlphaTestEnable				= true;
+        AlphaRef					= 0x000000AA;
+        AlphaFunc					= GreaterEqual;
+        vertexShader = compile vs_3_0 VS_Lumos(0);
+        pixelShader = compile ps_3_0 PS_Lumos(0);
+    }
+    pass P1
+    {
         vertexShader = compile vs_3_0 VS_Lumos(1);
         pixelShader = compile ps_3_0 PS_Lumos(1);
     }

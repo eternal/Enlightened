@@ -27,6 +27,8 @@ Renderer*		g_renderer = NULL;
 std::vector<LPDIRECT3DTEXTURE9>* g_textureShadowMaps;
 std::vector<LPDIRECT3DSURFACE9>* g_pSurfaceShadowDS;
 std::vector<LPDIRECT3DSURFACE9>* g_shadowMapSurface;
+std::vector<D3DXVECTOR3>* g_billboardTranslates;
+std::vector<Transform*>* g_billboardTransforms;
 
 Feisty::Camera* g_camera = NULL;
 Feisty::Mouse*  g_mouse = NULL;
@@ -38,7 +40,6 @@ Transform*		g_treeTransform = NULL;
 Transform*		g_monsterTransform = NULL;
 Transform*      g_gasStationTransform = NULL;
 Transform*		g_characterTransform = NULL;
-Transform*		g_billboardTransform = NULL;
 
 Geometry*		g_dwarfGeometry = NULL;
 Geometry*		g_treeGeometry = NULL;
@@ -124,6 +125,24 @@ void CALLBACK OnFrameMove( IDirect3DDevice9* pd3dDevice, double a_time, float a_
 	g_camera->Update(a_elapsedTime);
 	g_masterShader->SetCameraPosition(g_camera->GetPosition());
 	g_renderer->Update(g_camera, a_elapsedTime);
+	
+	for (UINT i = 0; i < g_billboardTranslates->capacity(); i++)
+	{
+	    D3DXVECTOR3 cameraPos = g_camera->GetPosition();
+        D3DXVECTOR3 billboardPos = g_billboardTranslates->at(i);
+        D3DXVECTOR3 direction = billboardPos - cameraPos;
+        float angle = atan2(direction.x, direction.z);
+	    
+	    D3DXMATRIX _rotate, _scale, _translate, _world;
+	    D3DXMatrixScaling(&_scale, 30.0f, 30.0f, 30.0f);
+	    D3DXMatrixTranslation(&_translate, g_billboardTranslates->at(i).x, g_billboardTranslates->at(i).y, g_billboardTranslates->at(i).z);
+	    D3DXMatrixRotationYawPitchRoll(&_rotate, angle, 0.0f,0.0f);
+	    D3DXMatrixMultiply(&_world, &_scale, &_rotate);
+	    D3DXMatrixMultiply(&_world, &_world, &_translate);
+	    
+	    g_billboardTransform->SetMatrix(_world);
+	    
+	}
 }
 
 
@@ -207,6 +226,18 @@ void InitalizeGraph()
 	g_textureShadowMaps = new std::vector<LPDIRECT3DTEXTURE9>();
 	g_shadowMapSurface = new std::vector<LPDIRECT3DSURFACE9>();
 	g_pSurfaceShadowDS = new std::vector<LPDIRECT3DSURFACE9>();
+	g_billboardTranslates = new std::vector<D3DXVECTOR3>();
+	
+	for (UINT i =0; i < 1; i++)
+	{
+	    D3DXVECTOR3 _translate;
+	    _translate.x = 15.0f;
+	    _translate.y = 60.0f;
+	    _translate.z = -90.0f;
+	    g_billboardTranslates->push_back(_translate);
+	}
+	
+	
  	for (int i = 0; i < 6; i++)
 	{
         // create texture used to render the shadow map to
@@ -304,14 +335,14 @@ void InitalizeGraph()
 	g_gasStationTransform->SetSibling(g_monsterTransform);
 	g_monsterTransform->SetChild(g_monsterGeometry);
 	
+    D3DXMatrixScaling(&scalingMatrix, 30.0f, 30.0f, 30.0f);
+    D3DXMatrixRotationYawPitchRoll(&rotationMatrix, PI/2.0f, 0.0f, 0.0f);
+    D3DXMatrixTranslation(&translationMatrix, 0.0f, 0.0f, 0.0f);
+    D3DXMatrixMultiply(&worldMatrix, &scalingMatrix, &rotationMatrix);
+    //D3DXMatrixMultiply(&worldMatrix, &worldMatrix, &translationMatrix);
+
     g_billboardTransform = new Transform(device, worldMatrix);
     g_monsterTransform->SetSibling(g_billboardTransform);
-
-    D3DXMatrixScaling(&scalingMatrix, 3.0f, 3.0f, 3.0f);
-    D3DXMatrixRotationYawPitchRoll(&rotationMatrix, 0.0f, 0.0f, 0.0f);
-    D3DXMatrixTranslation(&translationMatrix, 15.0f, 23.0f, -450.0f);
-    D3DXMatrixMultiply(&worldMatrix, &scalingMatrix, &rotationMatrix);
-    D3DXMatrixMultiply(&worldMatrix, &worldMatrix, &translationMatrix);
 
     //mesh doesnt matter
     g_billboardGeometry = new Geometry(device, L"barney_head.x" );

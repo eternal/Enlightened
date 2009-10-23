@@ -86,10 +86,11 @@ public:
 
         V(a_device->CreateVertexDeclaration(VertexArray, &m_pVertexDec))
 
-        D3DXCreateTextureFromFileEx(a_device, L"billboard_tree.png", 1524, 1748, 0, 0,
+        D3DXCreateTextureFromFileEx(a_device, L"billboard_tree.jpg", 1227, 1763, 0, 0,
         D3DFMT_UNKNOWN, D3DPOOL_MANAGED, D3DX_DEFAULT,
-        D3DX_DEFAULT, 0x00000000, NULL, NULL, &m_billboardTexture);
-    
+        D3DX_DEFAULT, 0x00FFFFFF, NULL, NULL, &m_billboardTexture);
+        
+        //D3DXCreateTextureFromFile(a_device, L"billboard_tree.tga", &m_billboardTexture);
 		m_time = 0.0f;
 
 		if (m_pEffect) {
@@ -291,10 +292,25 @@ public:
 		V(m_pD3DDevice->GetTransform(D3DTS_WORLD, &oMatWorld))
 		V(m_pD3DDevice->GetTransform(D3DTS_VIEW, &oMatView))
 		V(m_pD3DDevice->GetTransform(D3DTS_PROJECTION, &oMatProj))
+        if (a_geometry->GetDescription() == (LPCTSTR)"Billboard")
+        {
+            //D3DXMATRIX _rotationMatrix, _translationMatrix, _scaleMatrix;
+            //D3DXMatrixRotationYawPitchRoll(&_rotationMatrix, -PI, 0.0f, 0.0f);
+            //D3DXMatrixScaling(&_scaleMatrix, 30.0f, 30.0f, 30.0f);
+            ////D3DXMatrixMultiply(&oMatWorld, &oMatWorld, &_);
+            //
+            //D3DXMatrixMultiply(&oMatWorld, &oMatWorld, &_rotationMatrix);
+            //D3DXMatrixMultiply(&oMatWorld, &oMatWorld, &_translationMatrix);
+            D3DXMatrixMultiply(&oMatWorldViewProj, &oMatWorld, &oMatView);         
+            D3DXMatrixMultiply(&oMatWorldViewProj, &oMatWorldViewProj, &oMatProj);
 
-		D3DXMatrixMultiply(&oMatWorldViewProj, &oMatWorld, &oMatView);
-		D3DXMatrixMultiply(&oMatWorldViewProj, &oMatWorldViewProj, &oMatProj);
+        }
+        else
+        {
+            D3DXMatrixMultiply(&oMatWorldViewProj, &oMatWorld, &oMatView);
+            D3DXMatrixMultiply(&oMatWorldViewProj, &oMatWorldViewProj, &oMatProj);
 
+        }
 		D3DXMatrixInverse(&oMatWorldIT, NULL, &oMatWorld);
 		D3DXMatrixTranspose(&oMatWorldIT, &oMatWorldIT);
 		
@@ -341,7 +357,7 @@ public:
         {
             V(m_pD3DDevice->SetVertexDeclaration(m_pVertexDec))
             V(m_pD3DDevice->SetStreamSource(0, m_pVB, 0, sizeof(Vertex_PosTex)))
-
+            V(m_pEffect->SetTechnique("MasterBillboardAlpha"))
         }
         
         V(m_pEffect->Begin(&unPasses, NULL))
@@ -356,19 +372,6 @@ public:
                 }
                 else 
                 {
-                    //for (int i = 0; i < 9; ++i)	// width
-                    //{
-                    //    for (int j = 0; j < 9; ++j)	// depth
-                    //    {
-                    //        
-                    //        D3DXMatrixTranslation(&oMat, i * 7, 0.0f, j * 7);
-
-                    //        // calculate world-view-projection matrix
-                    //        D3DXMatrixMultiply(&matWorldViewProj, &matWorld, &matTrans);
-                    //        D3DXMatrixMultiply(&matWorldViewProj, &matWorldViewProj, &matView);
-                    //        D3DXMatrixMultiply(&matWorldViewProj, &matWorldViewProj, &matProj);
-
-                
                     V(m_pEffect->SetTexture("g_billboardTexture", m_billboardTexture))                    
                     V(m_pEffect->CommitChanges())
                     V(m_pD3DDevice->DrawPrimitive(D3DPT_TRIANGLESTRIP, 0, 2))
