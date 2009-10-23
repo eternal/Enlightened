@@ -327,29 +327,38 @@ void InitalizeGraph()
 	
 	g_gasStationTransform->SetSibling(g_monsterTransform);
 	g_monsterTransform->SetChild(g_monsterGeometry);
-	
-    D3DXMatrixScaling(&scalingMatrix, 30.0f, 30.0f, 30.0f);
-    D3DXMatrixRotationYawPitchRoll(&rotationMatrix, PI/2.0f, 0.0f, 0.0f);
-    D3DXMatrixTranslation(&translationMatrix, 0.0f, 0.0f, 0.0f);
-    D3DXMatrixMultiply(&worldMatrix, &scalingMatrix, &rotationMatrix);
-    //D3DXMatrixMultiply(&worldMatrix, &worldMatrix, &translationMatrix);
+    for (UINT i = 0; i < 6; i++)
+    {
+        D3DXMatrixScaling(&scalingMatrix, 30.0f, 30.0f, 30.0f);
+        D3DXMatrixRotationYawPitchRoll(&rotationMatrix, PI/2.0f, 0.0f, 0.0f);
+        D3DXMatrixTranslation(&translationMatrix, 0.0f, 0.0f, 0.0f);
+        D3DXMatrixMultiply(&worldMatrix, &scalingMatrix, &rotationMatrix);
+        //D3DXMatrixMultiply(&worldMatrix, &worldMatrix, &translationMatrix);
 
-    Transform* _billboardTransform = new Transform(device, worldMatrix);
-    g_billboardTransforms->push_back(_billboardTransform);
-    g_monsterTransform->SetSibling(_billboardTransform);
+        Transform* _billboardTransform = new Transform(device, worldMatrix);
+        g_billboardTransforms->push_back(_billboardTransform);
+        if (i == 0)
+        {
+            g_monsterTransform->SetSibling(_billboardTransform);
+        }
+        else
+        {
+            g_billboardTransforms->at(i-1)->SetSibling(_billboardTransform);
+        }
 
-    //mesh doesnt matter
-    Geometry* _billboardGeometry = new Geometry(device, L"barney_head.x" );
-    _billboardTransform->SetChild(_billboardGeometry);
-    _billboardGeometry->SetDescription((LPCTSTR)"Billboard");
-    g_billboardGeometry->push_back(_billboardGeometry);
+        //mesh doesnt matter
+        Geometry* _billboardGeometry = new Geometry(device, L"barney_head.x" );
+        _billboardTransform->SetChild(_billboardGeometry);
+        _billboardGeometry->SetDescription((LPCTSTR)"Billboard");
+        g_billboardGeometry->push_back(_billboardGeometry);
+	}
 
     
     for (UINT i =0; i < g_billboardTransforms->capacity(); i++)
     {
         D3DXVECTOR3 _translate;
         _translate.x = 15.0f;
-        _translate.y = 60.0f;
+        _translate.y = 30.0f * i;
         _translate.z = -90.0f;
         g_billboardTranslates->push_back(_translate);
     }
@@ -364,7 +373,7 @@ void InitalizeGraph()
 	
 	g_characterTransform = new Transform(device, worldMatrix);
 	g_camera->SetTargetNode(g_characterTransform);
-	_billboardTransform->SetSibling(g_characterTransform);
+	g_billboardTransforms->at(g_billboardTransforms->capacity()-1)->SetSibling(g_characterTransform);
 
 	// setup each articulated link
 	//										    Leng, Disp,     OrigTheta,Min,    Max,					OrigAlpha,Min,  Max,			Filename
