@@ -41,11 +41,12 @@ Transform*		g_monsterTransform = NULL;
 Transform*      g_gasStationTransform = NULL;
 Transform*		g_characterTransform = NULL;
 
+
 Geometry*		g_dwarfGeometry = NULL;
 Geometry*		g_treeGeometry = NULL;
 Geometry*		g_monsterGeometry = NULL;
 Geometry*       g_gasStationGeometry = NULL;
-Geometry*       g_billboardGeometry = NULL;
+std::vector<Geometry*>* g_billboardGeometry = NULL;
 
 Articulated*	g_characterNode = NULL;
 Articulated*	g_characterPelvis = NULL;
@@ -140,7 +141,7 @@ void CALLBACK OnFrameMove( IDirect3DDevice9* pd3dDevice, double a_time, float a_
 	    D3DXMatrixMultiply(&_world, &_scale, &_rotate);
 	    D3DXMatrixMultiply(&_world, &_world, &_translate);
 	    
-	    g_billboardTransform->SetMatrix(_world);
+	    g_billboardTransforms->at(i)->SetMatrix(_world);
 	    
 	}
 }
@@ -227,17 +228,9 @@ void InitalizeGraph()
 	g_shadowMapSurface = new std::vector<LPDIRECT3DSURFACE9>();
 	g_pSurfaceShadowDS = new std::vector<LPDIRECT3DSURFACE9>();
 	g_billboardTranslates = new std::vector<D3DXVECTOR3>();
-	
-	for (UINT i =0; i < 1; i++)
-	{
-	    D3DXVECTOR3 _translate;
-	    _translate.x = 15.0f;
-	    _translate.y = 60.0f;
-	    _translate.z = -90.0f;
-	    g_billboardTranslates->push_back(_translate);
-	}
-	
-	
+	g_billboardTransforms = new std::vector<Transform*>();
+	g_billboardGeometry = new std::vector<Geometry*>();
+		
  	for (int i = 0; i < 6; i++)
 	{
         // create texture used to render the shadow map to
@@ -341,13 +334,26 @@ void InitalizeGraph()
     D3DXMatrixMultiply(&worldMatrix, &scalingMatrix, &rotationMatrix);
     //D3DXMatrixMultiply(&worldMatrix, &worldMatrix, &translationMatrix);
 
-    g_billboardTransform = new Transform(device, worldMatrix);
-    g_monsterTransform->SetSibling(g_billboardTransform);
+    Transform* _billboardTransform = new Transform(device, worldMatrix);
+    g_billboardTransforms->push_back(_billboardTransform);
+    g_monsterTransform->SetSibling(_billboardTransform);
 
     //mesh doesnt matter
-    g_billboardGeometry = new Geometry(device, L"barney_head.x" );
-    g_billboardTransform->SetChild(g_billboardGeometry);
-    g_billboardGeometry->SetDescription((LPCTSTR)"Billboard");
+    Geometry* _billboardGeometry = new Geometry(device, L"barney_head.x" );
+    _billboardTransform->SetChild(_billboardGeometry);
+    _billboardGeometry->SetDescription((LPCTSTR)"Billboard");
+    g_billboardGeometry->push_back(_billboardGeometry);
+
+    
+    for (UINT i =0; i < g_billboardTransforms->capacity(); i++)
+    {
+        D3DXVECTOR3 _translate;
+        _translate.x = 15.0f;
+        _translate.y = 60.0f;
+        _translate.z = -90.0f;
+        g_billboardTranslates->push_back(_translate);
+    }
+
 	
 	// person setup
 	D3DXMatrixScaling(&scalingMatrix, 3.0f, 3.0f, 3.0f);
@@ -358,7 +364,7 @@ void InitalizeGraph()
 	
 	g_characterTransform = new Transform(device, worldMatrix);
 	g_camera->SetTargetNode(g_characterTransform);
-	g_billboardTransform->SetSibling(g_characterTransform);
+	_billboardTransform->SetSibling(g_characterTransform);
 
 	// setup each articulated link
 	//										    Leng, Disp,     OrigTheta,Min,    Max,					OrigAlpha,Min,  Max,			Filename
