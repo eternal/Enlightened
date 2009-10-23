@@ -24,8 +24,9 @@ MasterShader*	g_masterShader = NULL;
 
 Renderer*		g_renderer = NULL;
 
-LPDIRECT3DTEXTURE9 g_textureShadowMap = NULL;
-LPDIRECT3DSURFACE9 g_pSurfaceShadowDS = NULL;
+std::vector<LPDIRECT3DTEXTURE9>* g_textureShadowMaps;
+std::vector<LPDIRECT3DSURFACE9>* g_pSurfaceShadowDS;
+std::vector<LPDIRECT3DSURFACE9>* g_shadowMapSurface;
 
 Feisty::Camera* g_camera = NULL;
 Feisty::Mouse*  g_mouse = NULL;
@@ -201,13 +202,27 @@ void InitalizeGraph()
 {
 	LPDIRECT3DDEVICE9 device = DXUTGetD3DDevice();
 	
-    // create texture used to render the shadow map to
-    D3DXCreateTexture(device, 1024, 1024, 1, D3DUSAGE_RENDERTARGET, D3DFMT_R32F, D3DPOOL_DEFAULT, &g_textureShadowMap);
+	g_textureShadowMaps = new std::vector<LPDIRECT3DTEXTURE9>();
+	g_shadowMapSurface = new std::vector<LPDIRECT3DSURFACE9>();
+	g_pSurfaceShadowDS = new std::vector<LPDIRECT3DSURFACE9>();
+ 	for (int i = 0; i < 6; i++)
+	{
+        // create texture used to render the shadow map to
+        LPDIRECT3DTEXTURE9 tex = NULL;
+        D3DXCreateTexture(device, 1024, 1024, 1, D3DUSAGE_RENDERTARGET, D3DFMT_R32F, D3DPOOL_DEFAULT, &tex);
+        g_textureShadowMaps->push_back(tex);
+        
+        LPDIRECT3DSURFACE9 shadowMapSurface;
+        g_textureShadowMaps->at(i)->GetSurfaceLevel(0, &shadowMapSurface);
+        g_shadowMapSurface->push_back(shadowMapSurface);
 
-    // create depth surface used when rendering the shadow map
-    device->CreateDepthStencilSurface(1024, 1024, D3DFMT_D24X8, D3DMULTISAMPLE_NONE, 0, TRUE, &g_pSurfaceShadowDS, NULL); 
+        // create depth surface used when rendering the shadow map
+        LPDIRECT3DSURFACE9 surf = NULL;
+        device->CreateDepthStencilSurface(1024, 1024, D3DFMT_D24X8, D3DMULTISAMPLE_NONE, 0, TRUE, &surf, NULL); 
+        g_pSurfaceShadowDS->push_back(surf);
+	}
 	
-	g_renderer = new Renderer(g_textureShadowMap, g_pSurfaceShadowDS);
+	g_renderer = new Renderer(g_textureShadowMaps, g_pSurfaceShadowDS, g_shadowMapSurface);
     
     std::vector<std::string>* meshNames = new std::vector<std::string>();
     meshNames->push_back("dwarf");
@@ -215,7 +230,7 @@ void InitalizeGraph()
     meshNames->push_back("PetrolStation");
 
 	// Shaders
-    g_masterShader = new MasterShader(device, L"shader.fx.c", meshNames, g_textureShadowMap, g_pSurfaceShadowDS);
+    g_masterShader = new MasterShader(device, L"shader.fx.c", meshNames, g_textureShadowMaps, g_pSurfaceShadowDS, g_shadowMapSurface);
 
 	// Camera
 	
@@ -426,7 +441,9 @@ void CleanUp()
 //--------------------------------------------------------------------------------------
 // Initialize everything and go into a render loop
 //--------------------------------------------------------------------------------------
-INT WINAPI WinMain( HINSTANCE, HINSTANCE, LPSTR, int )
+//INT WINAPI WinMain( HINSTANCE, HINSTANCE, LPSTR, int )
+//{
+int main()
 {
     // Enable run-time memory check for debug builds.
 #if defined(DEBUG) | defined(_DEBUG)
