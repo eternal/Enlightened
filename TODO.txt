@@ -1,3 +1,0 @@
-camera and movement and animation
-fix the shader up a little
-documentation

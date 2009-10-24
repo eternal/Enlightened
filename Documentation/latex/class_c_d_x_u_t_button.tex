@@ -1,0 +1,111 @@
+\hypertarget{class_c_d_x_u_t_button}{
+\section{CDXUTButton Class Reference}
+\label{class_c_d_x_u_t_button}\index{CDXUTButton@{CDXUTButton}}
+}
+
+
+{\ttfamily \#include $<$DXUTgui.h$>$}
+
+Inherits \hyperlink{class_c_d_x_u_t_static}{CDXUTStatic}.
+
+Inherited by \hyperlink{class_c_d_x_u_t_check_box}{CDXUTCheckBox}, and \hyperlink{class_c_d_x_u_t_combo_box}{CDXUTComboBox}.Collaboration diagram for CDXUTButton:\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_c_d_x_u_t_button_a05e8d838ea4ce93b2a7c70e78d41a95a}{CDXUTButton} (\hyperlink{class_c_d_x_u_t_dialog}{CDXUTDialog} $\ast$pDialog=NULL)
+\item 
+virtual bool \hyperlink{class_c_d_x_u_t_button_ae8da8eb3729b62ac3651eeca42d72530}{HandleKeyboard} (UINT uMsg, WPARAM wParam, LPARAM lParam)
+\item 
+virtual bool \hyperlink{class_c_d_x_u_t_button_ac0bb3da0b5cc77e4cadfbbed72d3e5b7}{HandleMouse} (UINT uMsg, POINT pt, WPARAM wParam, LPARAM lParam)
+\item 
+virtual void \hyperlink{class_c_d_x_u_t_button_ae63ba50da1c035a9aaa983bafd5eae97}{OnHotkey} ()
+\item 
+virtual BOOL \hyperlink{class_c_d_x_u_t_button_a2209ea24f5ba76d7506b368c80940172}{ContainsPoint} (POINT pt)
+\item 
+virtual bool \hyperlink{class_c_d_x_u_t_button_a81d210561344736cca99976a8c8e6d57}{CanHaveFocus} ()
+\item 
+virtual void \hyperlink{class_c_d_x_u_t_button_a75a837a8eca0777b51d3aac6de6d6144}{Render} (IDirect3DDevice9 $\ast$pd3dDevice, float fElapsedTime)
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+bool \hyperlink{class_c_d_x_u_t_button_ae60b08141abedf4b709e01ac6c8e6940}{m\_\-bPressed}
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_c_d_x_u_t_button_a05e8d838ea4ce93b2a7c70e78d41a95a}{
+\index{CDXUTButton@{CDXUTButton}!CDXUTButton@{CDXUTButton}}
+\index{CDXUTButton@{CDXUTButton}!CDXUTButton@{CDXUTButton}}
+\subsubsection[{CDXUTButton}]{\setlength{\rightskip}{0pt plus 5cm}CDXUTButton::CDXUTButton ({\bf CDXUTDialog} $\ast$ {\em pDialog} = {\ttfamily NULL})}}
+\label{class_c_d_x_u_t_button_a05e8d838ea4ce93b2a7c70e78d41a95a}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_c_d_x_u_t_button_a81d210561344736cca99976a8c8e6d57}{
+\index{CDXUTButton@{CDXUTButton}!CanHaveFocus@{CanHaveFocus}}
+\index{CanHaveFocus@{CanHaveFocus}!CDXUTButton@{CDXUTButton}}
+\subsubsection[{CanHaveFocus}]{\setlength{\rightskip}{0pt plus 5cm}virtual bool CDXUTButton::CanHaveFocus ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}
+\label{class_c_d_x_u_t_button_a81d210561344736cca99976a8c8e6d57}
+
+
+Reimplemented from \hyperlink{class_c_d_x_u_t_control_a5b2c6c474236a79b257c86caded9c0b7}{CDXUTControl}.
+
+Reimplemented in \hyperlink{class_c_d_x_u_t_combo_box_a274c5f85816abf1d040ea1606bd3447c}{CDXUTComboBox}.\hypertarget{class_c_d_x_u_t_button_a2209ea24f5ba76d7506b368c80940172}{
+\index{CDXUTButton@{CDXUTButton}!ContainsPoint@{ContainsPoint}}
+\index{ContainsPoint@{ContainsPoint}!CDXUTButton@{CDXUTButton}}
+\subsubsection[{ContainsPoint}]{\setlength{\rightskip}{0pt plus 5cm}virtual BOOL CDXUTButton::ContainsPoint (POINT {\em pt})\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}
+\label{class_c_d_x_u_t_button_a2209ea24f5ba76d7506b368c80940172}
+
+
+Reimplemented from \hyperlink{class_c_d_x_u_t_static_ae32024764670a1f5b1ad0ba4a8570d63}{CDXUTStatic}.
+
+Reimplemented in \hyperlink{class_c_d_x_u_t_check_box_af0a106a73957da96d23dd53c2b9da8e8}{CDXUTCheckBox}.\hypertarget{class_c_d_x_u_t_button_ae8da8eb3729b62ac3651eeca42d72530}{
+\index{CDXUTButton@{CDXUTButton}!HandleKeyboard@{HandleKeyboard}}
+\index{HandleKeyboard@{HandleKeyboard}!CDXUTButton@{CDXUTButton}}
+\subsubsection[{HandleKeyboard}]{\setlength{\rightskip}{0pt plus 5cm}bool CDXUTButton::HandleKeyboard (UINT {\em uMsg}, \/  WPARAM {\em wParam}, \/  LPARAM {\em lParam})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{class_c_d_x_u_t_button_ae8da8eb3729b62ac3651eeca42d72530}
+
+
+Reimplemented from \hyperlink{class_c_d_x_u_t_control_a94044e608adeac7c329d83cf63587dcf}{CDXUTControl}.
+
+Reimplemented in \hyperlink{class_c_d_x_u_t_check_box_a6e37b9b6be8e2c13df2927c1cf3d63ef}{CDXUTCheckBox}, \hyperlink{class_c_d_x_u_t_radio_button_a221492c2a117d1faaab749c1f3a88a4d}{CDXUTRadioButton}, and \hyperlink{class_c_d_x_u_t_combo_box_abe59d59e89767472038d69260ef73f9d}{CDXUTComboBox}.\hypertarget{class_c_d_x_u_t_button_ac0bb3da0b5cc77e4cadfbbed72d3e5b7}{
+\index{CDXUTButton@{CDXUTButton}!HandleMouse@{HandleMouse}}
+\index{HandleMouse@{HandleMouse}!CDXUTButton@{CDXUTButton}}
+\subsubsection[{HandleMouse}]{\setlength{\rightskip}{0pt plus 5cm}bool CDXUTButton::HandleMouse (UINT {\em uMsg}, \/  POINT {\em pt}, \/  WPARAM {\em wParam}, \/  LPARAM {\em lParam})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{class_c_d_x_u_t_button_ac0bb3da0b5cc77e4cadfbbed72d3e5b7}
+
+
+Reimplemented from \hyperlink{class_c_d_x_u_t_control_a263979b3221cb7a44b4caea72366c335}{CDXUTControl}.
+
+Reimplemented in \hyperlink{class_c_d_x_u_t_check_box_a4638ad4bb74d1a5fae3ba2b8b01072d6}{CDXUTCheckBox}, \hyperlink{class_c_d_x_u_t_radio_button_aab0a615727913f7f6c8e8d35cc2220e6}{CDXUTRadioButton}, and \hyperlink{class_c_d_x_u_t_combo_box_a1cc659081f04fdf657f644d9970a7df8}{CDXUTComboBox}.\hypertarget{class_c_d_x_u_t_button_ae63ba50da1c035a9aaa983bafd5eae97}{
+\index{CDXUTButton@{CDXUTButton}!OnHotkey@{OnHotkey}}
+\index{OnHotkey@{OnHotkey}!CDXUTButton@{CDXUTButton}}
+\subsubsection[{OnHotkey}]{\setlength{\rightskip}{0pt plus 5cm}virtual void CDXUTButton::OnHotkey ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}
+\label{class_c_d_x_u_t_button_ae63ba50da1c035a9aaa983bafd5eae97}
+
+
+Reimplemented from \hyperlink{class_c_d_x_u_t_control_a493169ad5b2877d6353eea95b697208e}{CDXUTControl}.
+
+Reimplemented in \hyperlink{class_c_d_x_u_t_check_box_a5d9a74ce30be05f4867945c80f298a0a}{CDXUTCheckBox}, \hyperlink{class_c_d_x_u_t_radio_button_a2950447936727f33130fa4f6928045ac}{CDXUTRadioButton}, and \hyperlink{class_c_d_x_u_t_combo_box_a09eecfbd4d5173cf55c15c583b1a2209}{CDXUTComboBox}.\hypertarget{class_c_d_x_u_t_button_a75a837a8eca0777b51d3aac6de6d6144}{
+\index{CDXUTButton@{CDXUTButton}!Render@{Render}}
+\index{Render@{Render}!CDXUTButton@{CDXUTButton}}
+\subsubsection[{Render}]{\setlength{\rightskip}{0pt plus 5cm}void CDXUTButton::Render (IDirect3DDevice9 $\ast$ {\em pd3dDevice}, \/  float {\em fElapsedTime})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{class_c_d_x_u_t_button_a75a837a8eca0777b51d3aac6de6d6144}
+
+
+Reimplemented from \hyperlink{class_c_d_x_u_t_static_a7237fbf3accc077c35c2dd79b9bd2e3e}{CDXUTStatic}.
+
+Reimplemented in \hyperlink{class_c_d_x_u_t_check_box_a518c5e4d5250b1c0be83bf456c43f8b8}{CDXUTCheckBox}, and \hyperlink{class_c_d_x_u_t_combo_box_affcd25fdf9baf53e39e7b50e58ee05d4}{CDXUTComboBox}.
+
+\subsection{Member Data Documentation}
+\hypertarget{class_c_d_x_u_t_button_ae60b08141abedf4b709e01ac6c8e6940}{
+\index{CDXUTButton@{CDXUTButton}!m\_\-bPressed@{m\_\-bPressed}}
+\index{m\_\-bPressed@{m\_\-bPressed}!CDXUTButton@{CDXUTButton}}
+\subsubsection[{m\_\-bPressed}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf CDXUTButton::m\_\-bPressed}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{class_c_d_x_u_t_button_ae60b08141abedf4b709e01ac6c8e6940}
+
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+C:/Users/doug/Documents/Visual Studio 2008/Projects/enlightened/Enlightened/DXUT/\hyperlink{_d_x_u_tgui_8h}{DXUTgui.h}\item 
+C:/Users/doug/Documents/Visual Studio 2008/Projects/enlightened/Enlightened/DXUT/\hyperlink{_d_x_u_tgui_8cpp}{DXUTgui.cpp}\end{DoxyCompactItemize}

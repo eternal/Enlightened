@@ -1,0 +1,94 @@
+\hypertarget{class_c_streaming_sound}{
+\section{CStreamingSound Class Reference}
+\label{class_c_streaming_sound}\index{CStreamingSound@{CStreamingSound}}
+}
+
+
+{\ttfamily \#include $<$DXUTsound.h$>$}
+
+Inherits \hyperlink{class_c_sound}{CSound}.Collaboration diagram for CStreamingSound:\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_c_streaming_sound_a7fa3961eff8e78fdb5dd8c6740f472df}{CStreamingSound} (LPDIRECTSOUNDBUFFER pDSBuffer, DWORD dwDSBufferSize, \hyperlink{class_c_wave_file}{CWaveFile} $\ast$pWaveFile, DWORD dwNotifySize)
+\item 
+\hyperlink{class_c_streaming_sound_a47348b6fc069a98edf2a9e86bcf6b348}{$\sim$CStreamingSound} ()
+\item 
+HRESULT \hyperlink{class_c_streaming_sound_a86f319f40957fb309f9e5eda99186a75}{HandleWaveStreamNotification} (BOOL bLoopedPlay)
+\item 
+HRESULT \hyperlink{class_c_streaming_sound_a566d5512e22de66e7cfbab17784335cf}{Reset} ()
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+DWORD \hyperlink{class_c_streaming_sound_a3f94f44e925644eeb62452486cd02426}{m\_\-dwLastPlayPos}
+\item 
+DWORD \hyperlink{class_c_streaming_sound_a35cb3a07748cac48d75cef69ceafa476}{m\_\-dwPlayProgress}
+\item 
+DWORD \hyperlink{class_c_streaming_sound_a073ea54d4aa5ade06dd00f75cb0e07cd}{m\_\-dwNotifySize}
+\item 
+DWORD \hyperlink{class_c_streaming_sound_a89acb4aad3668f834de1839c3a392862}{m\_\-dwNextWriteOffset}
+\item 
+BOOL \hyperlink{class_c_streaming_sound_ab229235758b70b36c2e1aeb3d877678c}{m\_\-bFillNextNotificationWithSilence}
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_c_streaming_sound_a7fa3961eff8e78fdb5dd8c6740f472df}{
+\index{CStreamingSound@{CStreamingSound}!CStreamingSound@{CStreamingSound}}
+\index{CStreamingSound@{CStreamingSound}!CStreamingSound@{CStreamingSound}}
+\subsubsection[{CStreamingSound}]{\setlength{\rightskip}{0pt plus 5cm}CStreamingSound::CStreamingSound (LPDIRECTSOUNDBUFFER {\em pDSBuffer}, \/  DWORD {\em dwDSBufferSize}, \/  {\bf CWaveFile} $\ast$ {\em pWaveFile}, \/  DWORD {\em dwNotifySize})}}
+\label{class_c_streaming_sound_a7fa3961eff8e78fdb5dd8c6740f472df}
+\hypertarget{class_c_streaming_sound_a47348b6fc069a98edf2a9e86bcf6b348}{
+\index{CStreamingSound@{CStreamingSound}!$\sim$CStreamingSound@{$\sim$CStreamingSound}}
+\index{$\sim$CStreamingSound@{$\sim$CStreamingSound}!CStreamingSound@{CStreamingSound}}
+\subsubsection[{$\sim$CStreamingSound}]{\setlength{\rightskip}{0pt plus 5cm}CStreamingSound::$\sim$CStreamingSound ()}}
+\label{class_c_streaming_sound_a47348b6fc069a98edf2a9e86bcf6b348}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_c_streaming_sound_a86f319f40957fb309f9e5eda99186a75}{
+\index{CStreamingSound@{CStreamingSound}!HandleWaveStreamNotification@{HandleWaveStreamNotification}}
+\index{HandleWaveStreamNotification@{HandleWaveStreamNotification}!CStreamingSound@{CStreamingSound}}
+\subsubsection[{HandleWaveStreamNotification}]{\setlength{\rightskip}{0pt plus 5cm}HRESULT CStreamingSound::HandleWaveStreamNotification (BOOL {\em bLoopedPlay})}}
+\label{class_c_streaming_sound_a86f319f40957fb309f9e5eda99186a75}
+\hypertarget{class_c_streaming_sound_a566d5512e22de66e7cfbab17784335cf}{
+\index{CStreamingSound@{CStreamingSound}!Reset@{Reset}}
+\index{Reset@{Reset}!CStreamingSound@{CStreamingSound}}
+\subsubsection[{Reset}]{\setlength{\rightskip}{0pt plus 5cm}HRESULT CStreamingSound::Reset ()}}
+\label{class_c_streaming_sound_a566d5512e22de66e7cfbab17784335cf}
+
+
+Reimplemented from \hyperlink{class_c_sound_aaf2b066d599976ba180082b4fa3880e3}{CSound}.
+
+\subsection{Member Data Documentation}
+\hypertarget{class_c_streaming_sound_ab229235758b70b36c2e1aeb3d877678c}{
+\index{CStreamingSound@{CStreamingSound}!m\_\-bFillNextNotificationWithSilence@{m\_\-bFillNextNotificationWithSilence}}
+\index{m\_\-bFillNextNotificationWithSilence@{m\_\-bFillNextNotificationWithSilence}!CStreamingSound@{CStreamingSound}}
+\subsubsection[{m\_\-bFillNextNotificationWithSilence}]{\setlength{\rightskip}{0pt plus 5cm}BOOL {\bf CStreamingSound::m\_\-bFillNextNotificationWithSilence}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{class_c_streaming_sound_ab229235758b70b36c2e1aeb3d877678c}
+\hypertarget{class_c_streaming_sound_a3f94f44e925644eeb62452486cd02426}{
+\index{CStreamingSound@{CStreamingSound}!m\_\-dwLastPlayPos@{m\_\-dwLastPlayPos}}
+\index{m\_\-dwLastPlayPos@{m\_\-dwLastPlayPos}!CStreamingSound@{CStreamingSound}}
+\subsubsection[{m\_\-dwLastPlayPos}]{\setlength{\rightskip}{0pt plus 5cm}DWORD {\bf CStreamingSound::m\_\-dwLastPlayPos}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{class_c_streaming_sound_a3f94f44e925644eeb62452486cd02426}
+\hypertarget{class_c_streaming_sound_a89acb4aad3668f834de1839c3a392862}{
+\index{CStreamingSound@{CStreamingSound}!m\_\-dwNextWriteOffset@{m\_\-dwNextWriteOffset}}
+\index{m\_\-dwNextWriteOffset@{m\_\-dwNextWriteOffset}!CStreamingSound@{CStreamingSound}}
+\subsubsection[{m\_\-dwNextWriteOffset}]{\setlength{\rightskip}{0pt plus 5cm}DWORD {\bf CStreamingSound::m\_\-dwNextWriteOffset}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{class_c_streaming_sound_a89acb4aad3668f834de1839c3a392862}
+\hypertarget{class_c_streaming_sound_a073ea54d4aa5ade06dd00f75cb0e07cd}{
+\index{CStreamingSound@{CStreamingSound}!m\_\-dwNotifySize@{m\_\-dwNotifySize}}
+\index{m\_\-dwNotifySize@{m\_\-dwNotifySize}!CStreamingSound@{CStreamingSound}}
+\subsubsection[{m\_\-dwNotifySize}]{\setlength{\rightskip}{0pt plus 5cm}DWORD {\bf CStreamingSound::m\_\-dwNotifySize}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{class_c_streaming_sound_a073ea54d4aa5ade06dd00f75cb0e07cd}
+\hypertarget{class_c_streaming_sound_a35cb3a07748cac48d75cef69ceafa476}{
+\index{CStreamingSound@{CStreamingSound}!m\_\-dwPlayProgress@{m\_\-dwPlayProgress}}
+\index{m\_\-dwPlayProgress@{m\_\-dwPlayProgress}!CStreamingSound@{CStreamingSound}}
+\subsubsection[{m\_\-dwPlayProgress}]{\setlength{\rightskip}{0pt plus 5cm}DWORD {\bf CStreamingSound::m\_\-dwPlayProgress}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{class_c_streaming_sound_a35cb3a07748cac48d75cef69ceafa476}
+
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+C:/Users/doug/Documents/Visual Studio 2008/Projects/enlightened/Enlightened/DXUT/\hyperlink{_d_x_u_tsound_8h}{DXUTsound.h}\item 
+C:/Users/doug/Documents/Visual Studio 2008/Projects/enlightened/Enlightened/DXUT/\hyperlink{_d_x_u_tsound_8cpp}{DXUTsound.cpp}\end{DoxyCompactItemize}

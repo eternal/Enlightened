@@ -1,0 +1,326 @@
+\hypertarget{class_c_d_x_u_t_list_box}{
+\section{CDXUTListBox Class Reference}
+\label{class_c_d_x_u_t_list_box}\index{CDXUTListBox@{CDXUTListBox}}
+}
+
+
+{\ttfamily \#include $<$DXUTgui.h$>$}
+
+Inherits \hyperlink{class_c_d_x_u_t_control}{CDXUTControl}.Collaboration diagram for CDXUTListBox:\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{class_c_d_x_u_t_list_box_a92ad351d00e5669e6663418d1e959692}{STYLE} \{ \hyperlink{class_c_d_x_u_t_list_box_a92ad351d00e5669e6663418d1e959692a78abef1cd19ad444bb04c015c42d270d}{MULTISELECTION} =  1
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_c_d_x_u_t_list_box_acd6d6d877a81e65b26e01093951c3c50}{CDXUTListBox} (\hyperlink{class_c_d_x_u_t_dialog}{CDXUTDialog} $\ast$pDialog=NULL)
+\item 
+virtual \hyperlink{class_c_d_x_u_t_list_box_aed019ebbcc78ddb72432959495d29040}{$\sim$CDXUTListBox} ()
+\item 
+virtual HRESULT \hyperlink{class_c_d_x_u_t_list_box_af999f44d44f4b6aa1f434d95317119af}{OnInit} ()
+\item 
+virtual bool \hyperlink{class_c_d_x_u_t_list_box_adbe71e402fd89d6382b60a35b34c0fa9}{CanHaveFocus} ()
+\item 
+virtual bool \hyperlink{class_c_d_x_u_t_list_box_a20b2dc81c2af1206a21b19f46f8300a4}{HandleKeyboard} (UINT uMsg, WPARAM wParam, LPARAM lParam)
+\item 
+virtual bool \hyperlink{class_c_d_x_u_t_list_box_a7d184abbad5688513f0fb25d6a37528f}{HandleMouse} (UINT uMsg, POINT pt, WPARAM wParam, LPARAM lParam)
+\item 
+virtual bool \hyperlink{class_c_d_x_u_t_list_box_a05c8bdcfa42cb829df9b6797684ae938}{MsgProc} (UINT uMsg, WPARAM wParam, LPARAM lParam)
+\item 
+virtual void \hyperlink{class_c_d_x_u_t_list_box_a7c7284c4fd33fc3d074d3477b3e54d60}{Render} (IDirect3DDevice9 $\ast$pd3dDevice, float fElapsedTime)
+\item 
+virtual void \hyperlink{class_c_d_x_u_t_list_box_a295c60c194d1126086d26bad65a17efc}{UpdateRects} ()
+\item 
+DWORD \hyperlink{class_c_d_x_u_t_list_box_a11e88f4e848a524086c1f1f7767ef1f2}{GetStyle} () const 
+\item 
+\hyperlink{_d_x_u_tgui_8cpp_a2d77ed03302b6978834ee3b6f57837fb}{int} \hyperlink{class_c_d_x_u_t_list_box_ac29427369066a473e35fb33795275e15}{GetSize} () const 
+\item 
+void \hyperlink{class_c_d_x_u_t_list_box_aabaa331fd9dfac04ba655a369d1cef0e}{SetStyle} (DWORD dwStyle)
+\item 
+\hyperlink{_d_x_u_tgui_8cpp_a2d77ed03302b6978834ee3b6f57837fb}{int} \hyperlink{class_c_d_x_u_t_list_box_a17fcbaece1316f5de54868bdb468fe6f}{GetScrollBarWidth} () const 
+\item 
+void \hyperlink{class_c_d_x_u_t_list_box_a21b4a1c70d8b5fc213760927b9ae5c1d}{SetScrollBarWidth} (\hyperlink{_d_x_u_tgui_8cpp_a2d77ed03302b6978834ee3b6f57837fb}{int} nWidth)
+\item 
+void \hyperlink{class_c_d_x_u_t_list_box_a9886ec7b003a9c218a6b5684d3cc0530}{SetBorder} (\hyperlink{_d_x_u_tgui_8cpp_a2d77ed03302b6978834ee3b6f57837fb}{int} nBorder, \hyperlink{_d_x_u_tgui_8cpp_a2d77ed03302b6978834ee3b6f57837fb}{int} nMargin)
+\item 
+HRESULT \hyperlink{class_c_d_x_u_t_list_box_aa51de5a656dcaf651fb0d9da497c15f0}{AddItem} (const WCHAR $\ast$wszText, void $\ast$pData)
+\item 
+HRESULT \hyperlink{class_c_d_x_u_t_list_box_a894dfd0e0df7a8ce39268f067f5d5d06}{InsertItem} (\hyperlink{_d_x_u_tgui_8cpp_a2d77ed03302b6978834ee3b6f57837fb}{int} nIndex, const WCHAR $\ast$wszText, void $\ast$pData)
+\item 
+void \hyperlink{class_c_d_x_u_t_list_box_a711aeffe979787d579b446ef8f1f47da}{RemoveItem} (\hyperlink{_d_x_u_tgui_8cpp_a2d77ed03302b6978834ee3b6f57837fb}{int} nIndex)
+\item 
+void \hyperlink{class_c_d_x_u_t_list_box_a2032dd07c99770b04c9d3094d9345055}{RemoveItemByText} (WCHAR $\ast$wszText)
+\item 
+void \hyperlink{class_c_d_x_u_t_list_box_af9dc3a6d3863fc60d90ec8f68b687d9f}{RemoveItemByData} (void $\ast$pData)
+\item 
+void \hyperlink{class_c_d_x_u_t_list_box_ae0391a31359ee6dc8d492da493b1c16d}{RemoveAllItems} ()
+\item 
+\hyperlink{struct_d_x_u_t_list_box_item}{DXUTListBoxItem} $\ast$ \hyperlink{class_c_d_x_u_t_list_box_ae438bf19f4954330d4557c41426df1b6}{GetItem} (\hyperlink{_d_x_u_tgui_8cpp_a2d77ed03302b6978834ee3b6f57837fb}{int} nIndex)
+\item 
+\hyperlink{_d_x_u_tgui_8cpp_a2d77ed03302b6978834ee3b6f57837fb}{int} \hyperlink{class_c_d_x_u_t_list_box_a719db30025631b50017d7f46e70b76b4}{GetSelectedIndex} (\hyperlink{_d_x_u_tgui_8cpp_a2d77ed03302b6978834ee3b6f57837fb}{int} nPreviousSelected=-\/1)
+\item 
+\hyperlink{struct_d_x_u_t_list_box_item}{DXUTListBoxItem} $\ast$ \hyperlink{class_c_d_x_u_t_list_box_a35b53b0bd5de2e1dfd0d09c53338f007}{GetSelectedItem} (\hyperlink{_d_x_u_tgui_8cpp_a2d77ed03302b6978834ee3b6f57837fb}{int} nPreviousSelected=-\/1)
+\item 
+void \hyperlink{class_c_d_x_u_t_list_box_a9951c0e995690bf7821b70c447d49bed}{SelectItem} (\hyperlink{_d_x_u_tgui_8cpp_a2d77ed03302b6978834ee3b6f57837fb}{int} nNewIndex)
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+RECT \hyperlink{class_c_d_x_u_t_list_box_a2dea32bd9a82138ae549084e74b030ef}{m\_\-rcText}
+\item 
+RECT \hyperlink{class_c_d_x_u_t_list_box_a57972e758fd19f1cd23c9e9bc41745c7}{m\_\-rcSelection}
+\item 
+\hyperlink{class_c_d_x_u_t_scroll_bar}{CDXUTScrollBar} \hyperlink{class_c_d_x_u_t_list_box_a927146f380016cfc8b580b6f540648aa}{m\_\-ScrollBar}
+\item 
+\hyperlink{_d_x_u_tgui_8cpp_a2d77ed03302b6978834ee3b6f57837fb}{int} \hyperlink{class_c_d_x_u_t_list_box_a30975b84ea9afb7aa63c4572579b8e42}{m\_\-nSBWidth}
+\item 
+\hyperlink{_d_x_u_tgui_8cpp_a2d77ed03302b6978834ee3b6f57837fb}{int} \hyperlink{class_c_d_x_u_t_list_box_a1e089c11156f403da3af68a1e1766363}{m\_\-nBorder}
+\item 
+\hyperlink{_d_x_u_tgui_8cpp_a2d77ed03302b6978834ee3b6f57837fb}{int} \hyperlink{class_c_d_x_u_t_list_box_ae7d0e16e914553aaac60138bd4728b15}{m\_\-nMargin}
+\item 
+\hyperlink{_d_x_u_tgui_8cpp_a2d77ed03302b6978834ee3b6f57837fb}{int} \hyperlink{class_c_d_x_u_t_list_box_af21c0d22f870efc2575a16941f0c400a}{m\_\-nTextHeight}
+\item 
+DWORD \hyperlink{class_c_d_x_u_t_list_box_a0d9213ef6a8785539a01a54720163813}{m\_\-dwStyle}
+\item 
+\hyperlink{_d_x_u_tgui_8cpp_a2d77ed03302b6978834ee3b6f57837fb}{int} \hyperlink{class_c_d_x_u_t_list_box_aa9e2d7803e0006547b19e2cd10e73975}{m\_\-nSelected}
+\item 
+\hyperlink{_d_x_u_tgui_8cpp_a2d77ed03302b6978834ee3b6f57837fb}{int} \hyperlink{class_c_d_x_u_t_list_box_adfe5728a9319f94e542fd29d1c486956}{m\_\-nSelStart}
+\item 
+bool \hyperlink{class_c_d_x_u_t_list_box_aae46a4317bf8f102b191caa817e0e113}{m\_\-bDrag}
+\item 
+\hyperlink{class_c_growable_array}{CGrowableArray}$<$ \hyperlink{struct_d_x_u_t_list_box_item}{DXUTListBoxItem} $\ast$ $>$ \hyperlink{class_c_d_x_u_t_list_box_ad238fcc6b420d21cdb320779f93436f5}{m\_\-Items}
+\end{DoxyCompactItemize}
+
+
+\subsection{Member Enumeration Documentation}
+\hypertarget{class_c_d_x_u_t_list_box_a92ad351d00e5669e6663418d1e959692}{
+\index{CDXUTListBox@{CDXUTListBox}!STYLE@{STYLE}}
+\index{STYLE@{STYLE}!CDXUTListBox@{CDXUTListBox}}
+\subsubsection[{STYLE}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf CDXUTListBox::STYLE}}}
+\label{class_c_d_x_u_t_list_box_a92ad351d00e5669e6663418d1e959692}
+\begin{Desc}
+\item[Enumerator: ]\par
+\begin{description}
+\index{MULTISELECTION@{MULTISELECTION}!CDXUTListBox@{CDXUTListBox}}\index{CDXUTListBox@{CDXUTListBox}!MULTISELECTION@{MULTISELECTION}}\item[{\em 
+\hypertarget{class_c_d_x_u_t_list_box_a92ad351d00e5669e6663418d1e959692a78abef1cd19ad444bb04c015c42d270d}{
+MULTISELECTION}
+\label{class_c_d_x_u_t_list_box_a92ad351d00e5669e6663418d1e959692a78abef1cd19ad444bb04c015c42d270d}
+}]\end{description}
+\end{Desc}
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_c_d_x_u_t_list_box_acd6d6d877a81e65b26e01093951c3c50}{
+\index{CDXUTListBox@{CDXUTListBox}!CDXUTListBox@{CDXUTListBox}}
+\index{CDXUTListBox@{CDXUTListBox}!CDXUTListBox@{CDXUTListBox}}
+\subsubsection[{CDXUTListBox}]{\setlength{\rightskip}{0pt plus 5cm}CDXUTListBox::CDXUTListBox ({\bf CDXUTDialog} $\ast$ {\em pDialog} = {\ttfamily NULL})}}
+\label{class_c_d_x_u_t_list_box_acd6d6d877a81e65b26e01093951c3c50}
+\hypertarget{class_c_d_x_u_t_list_box_aed019ebbcc78ddb72432959495d29040}{
+\index{CDXUTListBox@{CDXUTListBox}!$\sim$CDXUTListBox@{$\sim$CDXUTListBox}}
+\index{$\sim$CDXUTListBox@{$\sim$CDXUTListBox}!CDXUTListBox@{CDXUTListBox}}
+\subsubsection[{$\sim$CDXUTListBox}]{\setlength{\rightskip}{0pt plus 5cm}CDXUTListBox::$\sim$CDXUTListBox ()\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{class_c_d_x_u_t_list_box_aed019ebbcc78ddb72432959495d29040}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_c_d_x_u_t_list_box_aa51de5a656dcaf651fb0d9da497c15f0}{
+\index{CDXUTListBox@{CDXUTListBox}!AddItem@{AddItem}}
+\index{AddItem@{AddItem}!CDXUTListBox@{CDXUTListBox}}
+\subsubsection[{AddItem}]{\setlength{\rightskip}{0pt plus 5cm}HRESULT CDXUTListBox::AddItem (const WCHAR $\ast$ {\em wszText}, \/  void $\ast$ {\em pData})}}
+\label{class_c_d_x_u_t_list_box_aa51de5a656dcaf651fb0d9da497c15f0}
+\hypertarget{class_c_d_x_u_t_list_box_adbe71e402fd89d6382b60a35b34c0fa9}{
+\index{CDXUTListBox@{CDXUTListBox}!CanHaveFocus@{CanHaveFocus}}
+\index{CanHaveFocus@{CanHaveFocus}!CDXUTListBox@{CDXUTListBox}}
+\subsubsection[{CanHaveFocus}]{\setlength{\rightskip}{0pt plus 5cm}virtual bool CDXUTListBox::CanHaveFocus ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}
+\label{class_c_d_x_u_t_list_box_adbe71e402fd89d6382b60a35b34c0fa9}
+
+
+Reimplemented from \hyperlink{class_c_d_x_u_t_control_a5b2c6c474236a79b257c86caded9c0b7}{CDXUTControl}.\hypertarget{class_c_d_x_u_t_list_box_ae438bf19f4954330d4557c41426df1b6}{
+\index{CDXUTListBox@{CDXUTListBox}!GetItem@{GetItem}}
+\index{GetItem@{GetItem}!CDXUTListBox@{CDXUTListBox}}
+\subsubsection[{GetItem}]{\setlength{\rightskip}{0pt plus 5cm}{\bf DXUTListBoxItem} $\ast$ CDXUTListBox::GetItem ({\bf int} {\em nIndex})}}
+\label{class_c_d_x_u_t_list_box_ae438bf19f4954330d4557c41426df1b6}
+\hypertarget{class_c_d_x_u_t_list_box_a17fcbaece1316f5de54868bdb468fe6f}{
+\index{CDXUTListBox@{CDXUTListBox}!GetScrollBarWidth@{GetScrollBarWidth}}
+\index{GetScrollBarWidth@{GetScrollBarWidth}!CDXUTListBox@{CDXUTListBox}}
+\subsubsection[{GetScrollBarWidth}]{\setlength{\rightskip}{0pt plus 5cm}{\bf int} CDXUTListBox::GetScrollBarWidth () const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_c_d_x_u_t_list_box_a17fcbaece1316f5de54868bdb468fe6f}
+\hypertarget{class_c_d_x_u_t_list_box_a719db30025631b50017d7f46e70b76b4}{
+\index{CDXUTListBox@{CDXUTListBox}!GetSelectedIndex@{GetSelectedIndex}}
+\index{GetSelectedIndex@{GetSelectedIndex}!CDXUTListBox@{CDXUTListBox}}
+\subsubsection[{GetSelectedIndex}]{\setlength{\rightskip}{0pt plus 5cm}{\bf int} CDXUTListBox::GetSelectedIndex ({\bf int} {\em nPreviousSelected} = {\ttfamily -\/1})}}
+\label{class_c_d_x_u_t_list_box_a719db30025631b50017d7f46e70b76b4}
+\hypertarget{class_c_d_x_u_t_list_box_a35b53b0bd5de2e1dfd0d09c53338f007}{
+\index{CDXUTListBox@{CDXUTListBox}!GetSelectedItem@{GetSelectedItem}}
+\index{GetSelectedItem@{GetSelectedItem}!CDXUTListBox@{CDXUTListBox}}
+\subsubsection[{GetSelectedItem}]{\setlength{\rightskip}{0pt plus 5cm}{\bf DXUTListBoxItem}$\ast$ CDXUTListBox::GetSelectedItem ({\bf int} {\em nPreviousSelected} = {\ttfamily -\/1})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_c_d_x_u_t_list_box_a35b53b0bd5de2e1dfd0d09c53338f007}
+\hypertarget{class_c_d_x_u_t_list_box_ac29427369066a473e35fb33795275e15}{
+\index{CDXUTListBox@{CDXUTListBox}!GetSize@{GetSize}}
+\index{GetSize@{GetSize}!CDXUTListBox@{CDXUTListBox}}
+\subsubsection[{GetSize}]{\setlength{\rightskip}{0pt plus 5cm}{\bf int} CDXUTListBox::GetSize () const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_c_d_x_u_t_list_box_ac29427369066a473e35fb33795275e15}
+\hypertarget{class_c_d_x_u_t_list_box_a11e88f4e848a524086c1f1f7767ef1f2}{
+\index{CDXUTListBox@{CDXUTListBox}!GetStyle@{GetStyle}}
+\index{GetStyle@{GetStyle}!CDXUTListBox@{CDXUTListBox}}
+\subsubsection[{GetStyle}]{\setlength{\rightskip}{0pt plus 5cm}DWORD CDXUTListBox::GetStyle () const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_c_d_x_u_t_list_box_a11e88f4e848a524086c1f1f7767ef1f2}
+\hypertarget{class_c_d_x_u_t_list_box_a20b2dc81c2af1206a21b19f46f8300a4}{
+\index{CDXUTListBox@{CDXUTListBox}!HandleKeyboard@{HandleKeyboard}}
+\index{HandleKeyboard@{HandleKeyboard}!CDXUTListBox@{CDXUTListBox}}
+\subsubsection[{HandleKeyboard}]{\setlength{\rightskip}{0pt plus 5cm}bool CDXUTListBox::HandleKeyboard (UINT {\em uMsg}, \/  WPARAM {\em wParam}, \/  LPARAM {\em lParam})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{class_c_d_x_u_t_list_box_a20b2dc81c2af1206a21b19f46f8300a4}
+
+
+Reimplemented from \hyperlink{class_c_d_x_u_t_control_a94044e608adeac7c329d83cf63587dcf}{CDXUTControl}.\hypertarget{class_c_d_x_u_t_list_box_a7d184abbad5688513f0fb25d6a37528f}{
+\index{CDXUTListBox@{CDXUTListBox}!HandleMouse@{HandleMouse}}
+\index{HandleMouse@{HandleMouse}!CDXUTListBox@{CDXUTListBox}}
+\subsubsection[{HandleMouse}]{\setlength{\rightskip}{0pt plus 5cm}bool CDXUTListBox::HandleMouse (UINT {\em uMsg}, \/  POINT {\em pt}, \/  WPARAM {\em wParam}, \/  LPARAM {\em lParam})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{class_c_d_x_u_t_list_box_a7d184abbad5688513f0fb25d6a37528f}
+
+
+Reimplemented from \hyperlink{class_c_d_x_u_t_control_a263979b3221cb7a44b4caea72366c335}{CDXUTControl}.\hypertarget{class_c_d_x_u_t_list_box_a894dfd0e0df7a8ce39268f067f5d5d06}{
+\index{CDXUTListBox@{CDXUTListBox}!InsertItem@{InsertItem}}
+\index{InsertItem@{InsertItem}!CDXUTListBox@{CDXUTListBox}}
+\subsubsection[{InsertItem}]{\setlength{\rightskip}{0pt plus 5cm}HRESULT CDXUTListBox::InsertItem ({\bf int} {\em nIndex}, \/  const WCHAR $\ast$ {\em wszText}, \/  void $\ast$ {\em pData})}}
+\label{class_c_d_x_u_t_list_box_a894dfd0e0df7a8ce39268f067f5d5d06}
+\hypertarget{class_c_d_x_u_t_list_box_a05c8bdcfa42cb829df9b6797684ae938}{
+\index{CDXUTListBox@{CDXUTListBox}!MsgProc@{MsgProc}}
+\index{MsgProc@{MsgProc}!CDXUTListBox@{CDXUTListBox}}
+\subsubsection[{MsgProc}]{\setlength{\rightskip}{0pt plus 5cm}bool CDXUTListBox::MsgProc (UINT {\em uMsg}, \/  WPARAM {\em wParam}, \/  LPARAM {\em lParam})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{class_c_d_x_u_t_list_box_a05c8bdcfa42cb829df9b6797684ae938}
+
+
+Reimplemented from \hyperlink{class_c_d_x_u_t_control_a58d0d118146c8853a7ccd27da9e3fcf3}{CDXUTControl}.\hypertarget{class_c_d_x_u_t_list_box_af999f44d44f4b6aa1f434d95317119af}{
+\index{CDXUTListBox@{CDXUTListBox}!OnInit@{OnInit}}
+\index{OnInit@{OnInit}!CDXUTListBox@{CDXUTListBox}}
+\subsubsection[{OnInit}]{\setlength{\rightskip}{0pt plus 5cm}virtual HRESULT CDXUTListBox::OnInit ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}
+\label{class_c_d_x_u_t_list_box_af999f44d44f4b6aa1f434d95317119af}
+
+
+Reimplemented from \hyperlink{class_c_d_x_u_t_control_a8f1418d201b97e0a9dc83a0e25207eca}{CDXUTControl}.\hypertarget{class_c_d_x_u_t_list_box_ae0391a31359ee6dc8d492da493b1c16d}{
+\index{CDXUTListBox@{CDXUTListBox}!RemoveAllItems@{RemoveAllItems}}
+\index{RemoveAllItems@{RemoveAllItems}!CDXUTListBox@{CDXUTListBox}}
+\subsubsection[{RemoveAllItems}]{\setlength{\rightskip}{0pt plus 5cm}void CDXUTListBox::RemoveAllItems ()}}
+\label{class_c_d_x_u_t_list_box_ae0391a31359ee6dc8d492da493b1c16d}
+\hypertarget{class_c_d_x_u_t_list_box_a711aeffe979787d579b446ef8f1f47da}{
+\index{CDXUTListBox@{CDXUTListBox}!RemoveItem@{RemoveItem}}
+\index{RemoveItem@{RemoveItem}!CDXUTListBox@{CDXUTListBox}}
+\subsubsection[{RemoveItem}]{\setlength{\rightskip}{0pt plus 5cm}void CDXUTListBox::RemoveItem ({\bf int} {\em nIndex})}}
+\label{class_c_d_x_u_t_list_box_a711aeffe979787d579b446ef8f1f47da}
+\hypertarget{class_c_d_x_u_t_list_box_af9dc3a6d3863fc60d90ec8f68b687d9f}{
+\index{CDXUTListBox@{CDXUTListBox}!RemoveItemByData@{RemoveItemByData}}
+\index{RemoveItemByData@{RemoveItemByData}!CDXUTListBox@{CDXUTListBox}}
+\subsubsection[{RemoveItemByData}]{\setlength{\rightskip}{0pt plus 5cm}void CDXUTListBox::RemoveItemByData (void $\ast$ {\em pData})}}
+\label{class_c_d_x_u_t_list_box_af9dc3a6d3863fc60d90ec8f68b687d9f}
+\hypertarget{class_c_d_x_u_t_list_box_a2032dd07c99770b04c9d3094d9345055}{
+\index{CDXUTListBox@{CDXUTListBox}!RemoveItemByText@{RemoveItemByText}}
+\index{RemoveItemByText@{RemoveItemByText}!CDXUTListBox@{CDXUTListBox}}
+\subsubsection[{RemoveItemByText}]{\setlength{\rightskip}{0pt plus 5cm}void CDXUTListBox::RemoveItemByText (WCHAR $\ast$ {\em wszText})}}
+\label{class_c_d_x_u_t_list_box_a2032dd07c99770b04c9d3094d9345055}
+\hypertarget{class_c_d_x_u_t_list_box_a7c7284c4fd33fc3d074d3477b3e54d60}{
+\index{CDXUTListBox@{CDXUTListBox}!Render@{Render}}
+\index{Render@{Render}!CDXUTListBox@{CDXUTListBox}}
+\subsubsection[{Render}]{\setlength{\rightskip}{0pt plus 5cm}void CDXUTListBox::Render (IDirect3DDevice9 $\ast$ {\em pd3dDevice}, \/  float {\em fElapsedTime})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{class_c_d_x_u_t_list_box_a7c7284c4fd33fc3d074d3477b3e54d60}
+
+
+Reimplemented from \hyperlink{class_c_d_x_u_t_control_afd92fa04241f66fdbf207bc5870c9388}{CDXUTControl}.\hypertarget{class_c_d_x_u_t_list_box_a9951c0e995690bf7821b70c447d49bed}{
+\index{CDXUTListBox@{CDXUTListBox}!SelectItem@{SelectItem}}
+\index{SelectItem@{SelectItem}!CDXUTListBox@{CDXUTListBox}}
+\subsubsection[{SelectItem}]{\setlength{\rightskip}{0pt plus 5cm}void CDXUTListBox::SelectItem ({\bf int} {\em nNewIndex})}}
+\label{class_c_d_x_u_t_list_box_a9951c0e995690bf7821b70c447d49bed}
+\hypertarget{class_c_d_x_u_t_list_box_a9886ec7b003a9c218a6b5684d3cc0530}{
+\index{CDXUTListBox@{CDXUTListBox}!SetBorder@{SetBorder}}
+\index{SetBorder@{SetBorder}!CDXUTListBox@{CDXUTListBox}}
+\subsubsection[{SetBorder}]{\setlength{\rightskip}{0pt plus 5cm}void CDXUTListBox::SetBorder ({\bf int} {\em nBorder}, \/  {\bf int} {\em nMargin})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_c_d_x_u_t_list_box_a9886ec7b003a9c218a6b5684d3cc0530}
+\hypertarget{class_c_d_x_u_t_list_box_a21b4a1c70d8b5fc213760927b9ae5c1d}{
+\index{CDXUTListBox@{CDXUTListBox}!SetScrollBarWidth@{SetScrollBarWidth}}
+\index{SetScrollBarWidth@{SetScrollBarWidth}!CDXUTListBox@{CDXUTListBox}}
+\subsubsection[{SetScrollBarWidth}]{\setlength{\rightskip}{0pt plus 5cm}void CDXUTListBox::SetScrollBarWidth ({\bf int} {\em nWidth})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_c_d_x_u_t_list_box_a21b4a1c70d8b5fc213760927b9ae5c1d}
+\hypertarget{class_c_d_x_u_t_list_box_aabaa331fd9dfac04ba655a369d1cef0e}{
+\index{CDXUTListBox@{CDXUTListBox}!SetStyle@{SetStyle}}
+\index{SetStyle@{SetStyle}!CDXUTListBox@{CDXUTListBox}}
+\subsubsection[{SetStyle}]{\setlength{\rightskip}{0pt plus 5cm}void CDXUTListBox::SetStyle (DWORD {\em dwStyle})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_c_d_x_u_t_list_box_aabaa331fd9dfac04ba655a369d1cef0e}
+\hypertarget{class_c_d_x_u_t_list_box_a295c60c194d1126086d26bad65a17efc}{
+\index{CDXUTListBox@{CDXUTListBox}!UpdateRects@{UpdateRects}}
+\index{UpdateRects@{UpdateRects}!CDXUTListBox@{CDXUTListBox}}
+\subsubsection[{UpdateRects}]{\setlength{\rightskip}{0pt plus 5cm}void CDXUTListBox::UpdateRects ()\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{class_c_d_x_u_t_list_box_a295c60c194d1126086d26bad65a17efc}
+
+
+Reimplemented from \hyperlink{class_c_d_x_u_t_control_a5fb3a79178c678abaa0da57566a09002}{CDXUTControl}.
+
+\subsection{Member Data Documentation}
+\hypertarget{class_c_d_x_u_t_list_box_aae46a4317bf8f102b191caa817e0e113}{
+\index{CDXUTListBox@{CDXUTListBox}!m\_\-bDrag@{m\_\-bDrag}}
+\index{m\_\-bDrag@{m\_\-bDrag}!CDXUTListBox@{CDXUTListBox}}
+\subsubsection[{m\_\-bDrag}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf CDXUTListBox::m\_\-bDrag}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{class_c_d_x_u_t_list_box_aae46a4317bf8f102b191caa817e0e113}
+\hypertarget{class_c_d_x_u_t_list_box_a0d9213ef6a8785539a01a54720163813}{
+\index{CDXUTListBox@{CDXUTListBox}!m\_\-dwStyle@{m\_\-dwStyle}}
+\index{m\_\-dwStyle@{m\_\-dwStyle}!CDXUTListBox@{CDXUTListBox}}
+\subsubsection[{m\_\-dwStyle}]{\setlength{\rightskip}{0pt plus 5cm}DWORD {\bf CDXUTListBox::m\_\-dwStyle}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{class_c_d_x_u_t_list_box_a0d9213ef6a8785539a01a54720163813}
+\hypertarget{class_c_d_x_u_t_list_box_ad238fcc6b420d21cdb320779f93436f5}{
+\index{CDXUTListBox@{CDXUTListBox}!m\_\-Items@{m\_\-Items}}
+\index{m\_\-Items@{m\_\-Items}!CDXUTListBox@{CDXUTListBox}}
+\subsubsection[{m\_\-Items}]{\setlength{\rightskip}{0pt plus 5cm}{\bf CGrowableArray}$<$ {\bf DXUTListBoxItem}$\ast$ $>$ {\bf CDXUTListBox::m\_\-Items}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{class_c_d_x_u_t_list_box_ad238fcc6b420d21cdb320779f93436f5}
+\hypertarget{class_c_d_x_u_t_list_box_a1e089c11156f403da3af68a1e1766363}{
+\index{CDXUTListBox@{CDXUTListBox}!m\_\-nBorder@{m\_\-nBorder}}
+\index{m\_\-nBorder@{m\_\-nBorder}!CDXUTListBox@{CDXUTListBox}}
+\subsubsection[{m\_\-nBorder}]{\setlength{\rightskip}{0pt plus 5cm}{\bf int} {\bf CDXUTListBox::m\_\-nBorder}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{class_c_d_x_u_t_list_box_a1e089c11156f403da3af68a1e1766363}
+\hypertarget{class_c_d_x_u_t_list_box_ae7d0e16e914553aaac60138bd4728b15}{
+\index{CDXUTListBox@{CDXUTListBox}!m\_\-nMargin@{m\_\-nMargin}}
+\index{m\_\-nMargin@{m\_\-nMargin}!CDXUTListBox@{CDXUTListBox}}
+\subsubsection[{m\_\-nMargin}]{\setlength{\rightskip}{0pt plus 5cm}{\bf int} {\bf CDXUTListBox::m\_\-nMargin}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{class_c_d_x_u_t_list_box_ae7d0e16e914553aaac60138bd4728b15}
+\hypertarget{class_c_d_x_u_t_list_box_a30975b84ea9afb7aa63c4572579b8e42}{
+\index{CDXUTListBox@{CDXUTListBox}!m\_\-nSBWidth@{m\_\-nSBWidth}}
+\index{m\_\-nSBWidth@{m\_\-nSBWidth}!CDXUTListBox@{CDXUTListBox}}
+\subsubsection[{m\_\-nSBWidth}]{\setlength{\rightskip}{0pt plus 5cm}{\bf int} {\bf CDXUTListBox::m\_\-nSBWidth}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{class_c_d_x_u_t_list_box_a30975b84ea9afb7aa63c4572579b8e42}
+\hypertarget{class_c_d_x_u_t_list_box_aa9e2d7803e0006547b19e2cd10e73975}{
+\index{CDXUTListBox@{CDXUTListBox}!m\_\-nSelected@{m\_\-nSelected}}
+\index{m\_\-nSelected@{m\_\-nSelected}!CDXUTListBox@{CDXUTListBox}}
+\subsubsection[{m\_\-nSelected}]{\setlength{\rightskip}{0pt plus 5cm}{\bf int} {\bf CDXUTListBox::m\_\-nSelected}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{class_c_d_x_u_t_list_box_aa9e2d7803e0006547b19e2cd10e73975}
+\hypertarget{class_c_d_x_u_t_list_box_adfe5728a9319f94e542fd29d1c486956}{
+\index{CDXUTListBox@{CDXUTListBox}!m\_\-nSelStart@{m\_\-nSelStart}}
+\index{m\_\-nSelStart@{m\_\-nSelStart}!CDXUTListBox@{CDXUTListBox}}
+\subsubsection[{m\_\-nSelStart}]{\setlength{\rightskip}{0pt plus 5cm}{\bf int} {\bf CDXUTListBox::m\_\-nSelStart}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{class_c_d_x_u_t_list_box_adfe5728a9319f94e542fd29d1c486956}
+\hypertarget{class_c_d_x_u_t_list_box_af21c0d22f870efc2575a16941f0c400a}{
+\index{CDXUTListBox@{CDXUTListBox}!m\_\-nTextHeight@{m\_\-nTextHeight}}
+\index{m\_\-nTextHeight@{m\_\-nTextHeight}!CDXUTListBox@{CDXUTListBox}}
+\subsubsection[{m\_\-nTextHeight}]{\setlength{\rightskip}{0pt plus 5cm}{\bf int} {\bf CDXUTListBox::m\_\-nTextHeight}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{class_c_d_x_u_t_list_box_af21c0d22f870efc2575a16941f0c400a}
+\hypertarget{class_c_d_x_u_t_list_box_a57972e758fd19f1cd23c9e9bc41745c7}{
+\index{CDXUTListBox@{CDXUTListBox}!m\_\-rcSelection@{m\_\-rcSelection}}
+\index{m\_\-rcSelection@{m\_\-rcSelection}!CDXUTListBox@{CDXUTListBox}}
+\subsubsection[{m\_\-rcSelection}]{\setlength{\rightskip}{0pt plus 5cm}RECT {\bf CDXUTListBox::m\_\-rcSelection}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{class_c_d_x_u_t_list_box_a57972e758fd19f1cd23c9e9bc41745c7}
+\hypertarget{class_c_d_x_u_t_list_box_a2dea32bd9a82138ae549084e74b030ef}{
+\index{CDXUTListBox@{CDXUTListBox}!m\_\-rcText@{m\_\-rcText}}
+\index{m\_\-rcText@{m\_\-rcText}!CDXUTListBox@{CDXUTListBox}}
+\subsubsection[{m\_\-rcText}]{\setlength{\rightskip}{0pt plus 5cm}RECT {\bf CDXUTListBox::m\_\-rcText}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{class_c_d_x_u_t_list_box_a2dea32bd9a82138ae549084e74b030ef}
+\hypertarget{class_c_d_x_u_t_list_box_a927146f380016cfc8b580b6f540648aa}{
+\index{CDXUTListBox@{CDXUTListBox}!m\_\-ScrollBar@{m\_\-ScrollBar}}
+\index{m\_\-ScrollBar@{m\_\-ScrollBar}!CDXUTListBox@{CDXUTListBox}}
+\subsubsection[{m\_\-ScrollBar}]{\setlength{\rightskip}{0pt plus 5cm}{\bf CDXUTScrollBar} {\bf CDXUTListBox::m\_\-ScrollBar}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{class_c_d_x_u_t_list_box_a927146f380016cfc8b580b6f540648aa}
+
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+C:/Users/doug/Documents/Visual Studio 2008/Projects/enlightened/Enlightened/DXUT/\hyperlink{_d_x_u_tgui_8h}{DXUTgui.h}\item 
+C:/Users/doug/Documents/Visual Studio 2008/Projects/enlightened/Enlightened/DXUT/\hyperlink{_d_x_u_tgui_8cpp}{DXUTgui.cpp}\end{DoxyCompactItemize}

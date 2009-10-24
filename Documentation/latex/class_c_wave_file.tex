@@ -1,0 +1,198 @@
+\hypertarget{class_c_wave_file}{
+\section{CWaveFile Class Reference}
+\label{class_c_wave_file}\index{CWaveFile@{CWaveFile}}
+}
+
+
+{\ttfamily \#include $<$DXUTsound.h$>$}\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_c_wave_file_a4b7eb059e75249788ca628533fea295f}{CWaveFile} ()
+\item 
+\hyperlink{class_c_wave_file_aea59e99b66ec0c314cfcc239df26ca05}{$\sim$CWaveFile} ()
+\item 
+HRESULT \hyperlink{class_c_wave_file_a14ce677a0c459fd4f1798ff8c2d66005}{Open} (\hyperlink{_d_x_u_tgui_8cpp_a6ad64a19933213d15128e5fcd09bc1a6}{LPWSTR} strFileName, WAVEFORMATEX $\ast$pwfx, DWORD dwFlags)
+\item 
+HRESULT \hyperlink{class_c_wave_file_abf4405c91380ebd3377f1368b45d7cbb}{OpenFromMemory} (BYTE $\ast$pbData, ULONG ulDataSize, WAVEFORMATEX $\ast$pwfx, DWORD dwFlags)
+\item 
+HRESULT \hyperlink{class_c_wave_file_a8ff8d99701abd0e8b15972619e6ac951}{Close} ()
+\item 
+HRESULT \hyperlink{class_c_wave_file_a1eb28886c3d56d2ff278de51803cfe64}{Read} (BYTE $\ast$pBuffer, DWORD dwSizeToRead, DWORD $\ast$pdwSizeRead)
+\item 
+HRESULT \hyperlink{class_c_wave_file_a7c82ff281e7c3378b5a8f08c3561e537}{Write} (UINT nSizeToWrite, BYTE $\ast$pbData, UINT $\ast$pnSizeWrote)
+\item 
+DWORD \hyperlink{class_c_wave_file_a230c359dba9e652c0468b42345176984}{GetSize} ()
+\item 
+HRESULT \hyperlink{class_c_wave_file_ae6791a066f89f5e147cc0f5d9f2dbdbc}{ResetFile} ()
+\item 
+WAVEFORMATEX $\ast$ \hyperlink{class_c_wave_file_adb0ec4bcfd6d91248dfe778275928559}{GetFormat} ()
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+WAVEFORMATEX $\ast$ \hyperlink{class_c_wave_file_af6ddc54fd08fab871fb6dea739bde255}{m\_\-pwfx}
+\item 
+HMMIO \hyperlink{class_c_wave_file_aec1872e4a8671bf4ba1df0a5d730cfc9}{m\_\-hmmio}
+\item 
+MMCKINFO \hyperlink{class_c_wave_file_aab9779a9fa7ba2d7da6a0212b1f2c33a}{m\_\-ck}
+\item 
+MMCKINFO \hyperlink{class_c_wave_file_aa18dcef80431faa12e36900136117e79}{m\_\-ckRiff}
+\item 
+DWORD \hyperlink{class_c_wave_file_a1d9d2e7e77831165fcacebba1546fe32}{m\_\-dwSize}
+\item 
+MMIOINFO \hyperlink{class_c_wave_file_ae248583fb5f147af50447efdac04f308}{m\_\-mmioinfoOut}
+\item 
+DWORD \hyperlink{class_c_wave_file_a0d7fac94c4d49660080f9f77ad2606d2}{m\_\-dwFlags}
+\item 
+BOOL \hyperlink{class_c_wave_file_a0cffb36318ba8d1fa7998fbaad3369ea}{m\_\-bIsReadingFromMemory}
+\item 
+BYTE $\ast$ \hyperlink{class_c_wave_file_af904f348df995e199a3f2c829732382e}{m\_\-pbData}
+\item 
+BYTE $\ast$ \hyperlink{class_c_wave_file_a2a6915b6dc9f1a6769f7599c838aab92}{m\_\-pbDataCur}
+\item 
+ULONG \hyperlink{class_c_wave_file_ab6a9adffa66b801758e14431b9fa988d}{m\_\-ulDataSize}
+\item 
+CHAR $\ast$ \hyperlink{class_c_wave_file_afe9cccf84bd794e6f55c3e5e06f558a8}{m\_\-pResourceBuffer}
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+HRESULT \hyperlink{class_c_wave_file_af5607e7ba6d1502735dc5bfa0da8d2b9}{ReadMMIO} ()
+\item 
+HRESULT \hyperlink{class_c_wave_file_aa3524cf0271959bb3f190a58b5669002}{WriteMMIO} (WAVEFORMATEX $\ast$pwfxDest)
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_c_wave_file_a4b7eb059e75249788ca628533fea295f}{
+\index{CWaveFile@{CWaveFile}!CWaveFile@{CWaveFile}}
+\index{CWaveFile@{CWaveFile}!CWaveFile@{CWaveFile}}
+\subsubsection[{CWaveFile}]{\setlength{\rightskip}{0pt plus 5cm}CWaveFile::CWaveFile ()}}
+\label{class_c_wave_file_a4b7eb059e75249788ca628533fea295f}
+\hypertarget{class_c_wave_file_aea59e99b66ec0c314cfcc239df26ca05}{
+\index{CWaveFile@{CWaveFile}!$\sim$CWaveFile@{$\sim$CWaveFile}}
+\index{$\sim$CWaveFile@{$\sim$CWaveFile}!CWaveFile@{CWaveFile}}
+\subsubsection[{$\sim$CWaveFile}]{\setlength{\rightskip}{0pt plus 5cm}CWaveFile::$\sim$CWaveFile ()}}
+\label{class_c_wave_file_aea59e99b66ec0c314cfcc239df26ca05}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_c_wave_file_a8ff8d99701abd0e8b15972619e6ac951}{
+\index{CWaveFile@{CWaveFile}!Close@{Close}}
+\index{Close@{Close}!CWaveFile@{CWaveFile}}
+\subsubsection[{Close}]{\setlength{\rightskip}{0pt plus 5cm}HRESULT CWaveFile::Close ()}}
+\label{class_c_wave_file_a8ff8d99701abd0e8b15972619e6ac951}
+\hypertarget{class_c_wave_file_adb0ec4bcfd6d91248dfe778275928559}{
+\index{CWaveFile@{CWaveFile}!GetFormat@{GetFormat}}
+\index{GetFormat@{GetFormat}!CWaveFile@{CWaveFile}}
+\subsubsection[{GetFormat}]{\setlength{\rightskip}{0pt plus 5cm}WAVEFORMATEX$\ast$ CWaveFile::GetFormat ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_c_wave_file_adb0ec4bcfd6d91248dfe778275928559}
+\hypertarget{class_c_wave_file_a230c359dba9e652c0468b42345176984}{
+\index{CWaveFile@{CWaveFile}!GetSize@{GetSize}}
+\index{GetSize@{GetSize}!CWaveFile@{CWaveFile}}
+\subsubsection[{GetSize}]{\setlength{\rightskip}{0pt plus 5cm}DWORD CWaveFile::GetSize ()}}
+\label{class_c_wave_file_a230c359dba9e652c0468b42345176984}
+\hypertarget{class_c_wave_file_a14ce677a0c459fd4f1798ff8c2d66005}{
+\index{CWaveFile@{CWaveFile}!Open@{Open}}
+\index{Open@{Open}!CWaveFile@{CWaveFile}}
+\subsubsection[{Open}]{\setlength{\rightskip}{0pt plus 5cm}HRESULT CWaveFile::Open ({\bf LPWSTR} {\em strFileName}, \/  WAVEFORMATEX $\ast$ {\em pwfx}, \/  DWORD {\em dwFlags})}}
+\label{class_c_wave_file_a14ce677a0c459fd4f1798ff8c2d66005}
+\hypertarget{class_c_wave_file_abf4405c91380ebd3377f1368b45d7cbb}{
+\index{CWaveFile@{CWaveFile}!OpenFromMemory@{OpenFromMemory}}
+\index{OpenFromMemory@{OpenFromMemory}!CWaveFile@{CWaveFile}}
+\subsubsection[{OpenFromMemory}]{\setlength{\rightskip}{0pt plus 5cm}HRESULT CWaveFile::OpenFromMemory (BYTE $\ast$ {\em pbData}, \/  ULONG {\em ulDataSize}, \/  WAVEFORMATEX $\ast$ {\em pwfx}, \/  DWORD {\em dwFlags})}}
+\label{class_c_wave_file_abf4405c91380ebd3377f1368b45d7cbb}
+\hypertarget{class_c_wave_file_a1eb28886c3d56d2ff278de51803cfe64}{
+\index{CWaveFile@{CWaveFile}!Read@{Read}}
+\index{Read@{Read}!CWaveFile@{CWaveFile}}
+\subsubsection[{Read}]{\setlength{\rightskip}{0pt plus 5cm}HRESULT CWaveFile::Read (BYTE $\ast$ {\em pBuffer}, \/  DWORD {\em dwSizeToRead}, \/  DWORD $\ast$ {\em pdwSizeRead})}}
+\label{class_c_wave_file_a1eb28886c3d56d2ff278de51803cfe64}
+\hypertarget{class_c_wave_file_af5607e7ba6d1502735dc5bfa0da8d2b9}{
+\index{CWaveFile@{CWaveFile}!ReadMMIO@{ReadMMIO}}
+\index{ReadMMIO@{ReadMMIO}!CWaveFile@{CWaveFile}}
+\subsubsection[{ReadMMIO}]{\setlength{\rightskip}{0pt plus 5cm}HRESULT CWaveFile::ReadMMIO ()\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{class_c_wave_file_af5607e7ba6d1502735dc5bfa0da8d2b9}
+\hypertarget{class_c_wave_file_ae6791a066f89f5e147cc0f5d9f2dbdbc}{
+\index{CWaveFile@{CWaveFile}!ResetFile@{ResetFile}}
+\index{ResetFile@{ResetFile}!CWaveFile@{CWaveFile}}
+\subsubsection[{ResetFile}]{\setlength{\rightskip}{0pt plus 5cm}HRESULT CWaveFile::ResetFile ()}}
+\label{class_c_wave_file_ae6791a066f89f5e147cc0f5d9f2dbdbc}
+\hypertarget{class_c_wave_file_a7c82ff281e7c3378b5a8f08c3561e537}{
+\index{CWaveFile@{CWaveFile}!Write@{Write}}
+\index{Write@{Write}!CWaveFile@{CWaveFile}}
+\subsubsection[{Write}]{\setlength{\rightskip}{0pt plus 5cm}HRESULT CWaveFile::Write (UINT {\em nSizeToWrite}, \/  BYTE $\ast$ {\em pbData}, \/  UINT $\ast$ {\em pnSizeWrote})}}
+\label{class_c_wave_file_a7c82ff281e7c3378b5a8f08c3561e537}
+\hypertarget{class_c_wave_file_aa3524cf0271959bb3f190a58b5669002}{
+\index{CWaveFile@{CWaveFile}!WriteMMIO@{WriteMMIO}}
+\index{WriteMMIO@{WriteMMIO}!CWaveFile@{CWaveFile}}
+\subsubsection[{WriteMMIO}]{\setlength{\rightskip}{0pt plus 5cm}HRESULT CWaveFile::WriteMMIO (WAVEFORMATEX $\ast$ {\em pwfxDest})\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{class_c_wave_file_aa3524cf0271959bb3f190a58b5669002}
+
+
+\subsection{Member Data Documentation}
+\hypertarget{class_c_wave_file_a0cffb36318ba8d1fa7998fbaad3369ea}{
+\index{CWaveFile@{CWaveFile}!m\_\-bIsReadingFromMemory@{m\_\-bIsReadingFromMemory}}
+\index{m\_\-bIsReadingFromMemory@{m\_\-bIsReadingFromMemory}!CWaveFile@{CWaveFile}}
+\subsubsection[{m\_\-bIsReadingFromMemory}]{\setlength{\rightskip}{0pt plus 5cm}BOOL {\bf CWaveFile::m\_\-bIsReadingFromMemory}}}
+\label{class_c_wave_file_a0cffb36318ba8d1fa7998fbaad3369ea}
+\hypertarget{class_c_wave_file_aab9779a9fa7ba2d7da6a0212b1f2c33a}{
+\index{CWaveFile@{CWaveFile}!m\_\-ck@{m\_\-ck}}
+\index{m\_\-ck@{m\_\-ck}!CWaveFile@{CWaveFile}}
+\subsubsection[{m\_\-ck}]{\setlength{\rightskip}{0pt plus 5cm}MMCKINFO {\bf CWaveFile::m\_\-ck}}}
+\label{class_c_wave_file_aab9779a9fa7ba2d7da6a0212b1f2c33a}
+\hypertarget{class_c_wave_file_aa18dcef80431faa12e36900136117e79}{
+\index{CWaveFile@{CWaveFile}!m\_\-ckRiff@{m\_\-ckRiff}}
+\index{m\_\-ckRiff@{m\_\-ckRiff}!CWaveFile@{CWaveFile}}
+\subsubsection[{m\_\-ckRiff}]{\setlength{\rightskip}{0pt plus 5cm}MMCKINFO {\bf CWaveFile::m\_\-ckRiff}}}
+\label{class_c_wave_file_aa18dcef80431faa12e36900136117e79}
+\hypertarget{class_c_wave_file_a0d7fac94c4d49660080f9f77ad2606d2}{
+\index{CWaveFile@{CWaveFile}!m\_\-dwFlags@{m\_\-dwFlags}}
+\index{m\_\-dwFlags@{m\_\-dwFlags}!CWaveFile@{CWaveFile}}
+\subsubsection[{m\_\-dwFlags}]{\setlength{\rightskip}{0pt plus 5cm}DWORD {\bf CWaveFile::m\_\-dwFlags}}}
+\label{class_c_wave_file_a0d7fac94c4d49660080f9f77ad2606d2}
+\hypertarget{class_c_wave_file_a1d9d2e7e77831165fcacebba1546fe32}{
+\index{CWaveFile@{CWaveFile}!m\_\-dwSize@{m\_\-dwSize}}
+\index{m\_\-dwSize@{m\_\-dwSize}!CWaveFile@{CWaveFile}}
+\subsubsection[{m\_\-dwSize}]{\setlength{\rightskip}{0pt plus 5cm}DWORD {\bf CWaveFile::m\_\-dwSize}}}
+\label{class_c_wave_file_a1d9d2e7e77831165fcacebba1546fe32}
+\hypertarget{class_c_wave_file_aec1872e4a8671bf4ba1df0a5d730cfc9}{
+\index{CWaveFile@{CWaveFile}!m\_\-hmmio@{m\_\-hmmio}}
+\index{m\_\-hmmio@{m\_\-hmmio}!CWaveFile@{CWaveFile}}
+\subsubsection[{m\_\-hmmio}]{\setlength{\rightskip}{0pt plus 5cm}HMMIO {\bf CWaveFile::m\_\-hmmio}}}
+\label{class_c_wave_file_aec1872e4a8671bf4ba1df0a5d730cfc9}
+\hypertarget{class_c_wave_file_ae248583fb5f147af50447efdac04f308}{
+\index{CWaveFile@{CWaveFile}!m\_\-mmioinfoOut@{m\_\-mmioinfoOut}}
+\index{m\_\-mmioinfoOut@{m\_\-mmioinfoOut}!CWaveFile@{CWaveFile}}
+\subsubsection[{m\_\-mmioinfoOut}]{\setlength{\rightskip}{0pt plus 5cm}MMIOINFO {\bf CWaveFile::m\_\-mmioinfoOut}}}
+\label{class_c_wave_file_ae248583fb5f147af50447efdac04f308}
+\hypertarget{class_c_wave_file_af904f348df995e199a3f2c829732382e}{
+\index{CWaveFile@{CWaveFile}!m\_\-pbData@{m\_\-pbData}}
+\index{m\_\-pbData@{m\_\-pbData}!CWaveFile@{CWaveFile}}
+\subsubsection[{m\_\-pbData}]{\setlength{\rightskip}{0pt plus 5cm}BYTE$\ast$ {\bf CWaveFile::m\_\-pbData}}}
+\label{class_c_wave_file_af904f348df995e199a3f2c829732382e}
+\hypertarget{class_c_wave_file_a2a6915b6dc9f1a6769f7599c838aab92}{
+\index{CWaveFile@{CWaveFile}!m\_\-pbDataCur@{m\_\-pbDataCur}}
+\index{m\_\-pbDataCur@{m\_\-pbDataCur}!CWaveFile@{CWaveFile}}
+\subsubsection[{m\_\-pbDataCur}]{\setlength{\rightskip}{0pt plus 5cm}BYTE$\ast$ {\bf CWaveFile::m\_\-pbDataCur}}}
+\label{class_c_wave_file_a2a6915b6dc9f1a6769f7599c838aab92}
+\hypertarget{class_c_wave_file_afe9cccf84bd794e6f55c3e5e06f558a8}{
+\index{CWaveFile@{CWaveFile}!m\_\-pResourceBuffer@{m\_\-pResourceBuffer}}
+\index{m\_\-pResourceBuffer@{m\_\-pResourceBuffer}!CWaveFile@{CWaveFile}}
+\subsubsection[{m\_\-pResourceBuffer}]{\setlength{\rightskip}{0pt plus 5cm}CHAR$\ast$ {\bf CWaveFile::m\_\-pResourceBuffer}}}
+\label{class_c_wave_file_afe9cccf84bd794e6f55c3e5e06f558a8}
+\hypertarget{class_c_wave_file_af6ddc54fd08fab871fb6dea739bde255}{
+\index{CWaveFile@{CWaveFile}!m\_\-pwfx@{m\_\-pwfx}}
+\index{m\_\-pwfx@{m\_\-pwfx}!CWaveFile@{CWaveFile}}
+\subsubsection[{m\_\-pwfx}]{\setlength{\rightskip}{0pt plus 5cm}WAVEFORMATEX$\ast$ {\bf CWaveFile::m\_\-pwfx}}}
+\label{class_c_wave_file_af6ddc54fd08fab871fb6dea739bde255}
+\hypertarget{class_c_wave_file_ab6a9adffa66b801758e14431b9fa988d}{
+\index{CWaveFile@{CWaveFile}!m\_\-ulDataSize@{m\_\-ulDataSize}}
+\index{m\_\-ulDataSize@{m\_\-ulDataSize}!CWaveFile@{CWaveFile}}
+\subsubsection[{m\_\-ulDataSize}]{\setlength{\rightskip}{0pt plus 5cm}ULONG {\bf CWaveFile::m\_\-ulDataSize}}}
+\label{class_c_wave_file_ab6a9adffa66b801758e14431b9fa988d}
+
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+C:/Users/doug/Documents/Visual Studio 2008/Projects/enlightened/Enlightened/DXUT/\hyperlink{_d_x_u_tsound_8h}{DXUTsound.h}\item 
+C:/Users/doug/Documents/Visual Studio 2008/Projects/enlightened/Enlightened/DXUT/\hyperlink{_d_x_u_tsound_8cpp}{DXUTsound.cpp}\end{DoxyCompactItemize}

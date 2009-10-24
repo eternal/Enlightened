@@ -1,0 +1,378 @@
+\hypertarget{class_c_d_x_u_t_edit_box}{
+\section{CDXUTEditBox Class Reference}
+\label{class_c_d_x_u_t_edit_box}\index{CDXUTEditBox@{CDXUTEditBox}}
+}
+
+
+{\ttfamily \#include $<$DXUTgui.h$>$}
+
+Inherits \hyperlink{class_c_d_x_u_t_control}{CDXUTControl}.
+
+Inherited by \hyperlink{class_c_d_x_u_t_i_m_e_edit_box}{CDXUTIMEEditBox}.Collaboration diagram for CDXUTEditBox:\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_c_d_x_u_t_edit_box_ad2626863f3d8863dc7d4107e7282db55}{CDXUTEditBox} (\hyperlink{class_c_d_x_u_t_dialog}{CDXUTDialog} $\ast$pDialog=NULL)
+\item 
+virtual \hyperlink{class_c_d_x_u_t_edit_box_a49e591638b55372108780cd926b99f93}{$\sim$CDXUTEditBox} ()
+\item 
+virtual bool \hyperlink{class_c_d_x_u_t_edit_box_a579bcc8298d08c9d52fbf917fa046442}{HandleKeyboard} (UINT uMsg, WPARAM wParam, LPARAM lParam)
+\item 
+virtual bool \hyperlink{class_c_d_x_u_t_edit_box_afadff4a882c187926a7b8173eb7d97cc}{HandleMouse} (UINT uMsg, POINT pt, WPARAM wParam, LPARAM lParam)
+\item 
+virtual bool \hyperlink{class_c_d_x_u_t_edit_box_adca915977ba1b8019594ef5d350ed03e}{MsgProc} (UINT uMsg, WPARAM wParam, LPARAM lParam)
+\item 
+virtual void \hyperlink{class_c_d_x_u_t_edit_box_a86b6a5f6a509b4bc15f2edd8926718d5}{UpdateRects} ()
+\item 
+virtual bool \hyperlink{class_c_d_x_u_t_edit_box_a988225899327c419d70d013ed6ab113a}{CanHaveFocus} ()
+\item 
+virtual void \hyperlink{class_c_d_x_u_t_edit_box_af36e6dfc05fb96ee4f60544cc402e760}{Render} (IDirect3DDevice9 $\ast$pd3dDevice, float fElapsedTime)
+\item 
+virtual void \hyperlink{class_c_d_x_u_t_edit_box_adc767031600f1ea99ebcf533e00d7948}{OnFocusIn} ()
+\item 
+void \hyperlink{class_c_d_x_u_t_edit_box_a3ef3e3ef8a085258ba6bb69285505924}{SetText} (LPCWSTR wszText, bool bSelected=false)
+\item 
+LPCWSTR \hyperlink{class_c_d_x_u_t_edit_box_a7d20deae894a3a0259a2e9fca551371d}{GetText} ()
+\item 
+\hyperlink{_d_x_u_tgui_8cpp_a2d77ed03302b6978834ee3b6f57837fb}{int} \hyperlink{class_c_d_x_u_t_edit_box_a2bb1d1ebe99c30ef317824e852882126}{GetTextLength} ()
+\item 
+HRESULT \hyperlink{class_c_d_x_u_t_edit_box_aa1b4a760e28f3176c18bd635c88525f5}{GetTextCopy} (\hyperlink{_d_x_u_tgui_8cpp_a6ad64a19933213d15128e5fcd09bc1a6}{LPWSTR} strDest, UINT bufferCount)
+\item 
+void \hyperlink{class_c_d_x_u_t_edit_box_a769bc1130895f3d116b45a4f25bc3b78}{ClearText} ()
+\item 
+virtual void \hyperlink{class_c_d_x_u_t_edit_box_a7240aa451e6662077671f754f331edfa}{SetTextColor} (D3DCOLOR Color)
+\item 
+void \hyperlink{class_c_d_x_u_t_edit_box_a44d55aa688bac6e18ea8b86f8707b9b8}{SetSelectedTextColor} (D3DCOLOR Color)
+\item 
+void \hyperlink{class_c_d_x_u_t_edit_box_ae43b2c8142d3ce9602ae73193b0982fe}{SetSelectedBackColor} (D3DCOLOR Color)
+\item 
+void \hyperlink{class_c_d_x_u_t_edit_box_afb8d2b7593862e875daf4b4a63080ddf}{SetCaretColor} (D3DCOLOR Color)
+\item 
+void \hyperlink{class_c_d_x_u_t_edit_box_af9b5c04a9cdda81761cc04d7e70a6a06}{SetBorderWidth} (\hyperlink{_d_x_u_tgui_8cpp_a2d77ed03302b6978834ee3b6f57837fb}{int} nBorder)
+\item 
+void \hyperlink{class_c_d_x_u_t_edit_box_ada1e5253fd1df390a9536cd111ed0121}{SetSpacing} (\hyperlink{_d_x_u_tgui_8cpp_a2d77ed03302b6978834ee3b6f57837fb}{int} nSpacing)
+\item 
+void \hyperlink{class_c_d_x_u_t_edit_box_a7a3810c8c3ee8f44a87451fd0d3ce127}{ParseFloatArray} (float $\ast$pNumbers, \hyperlink{_d_x_u_tgui_8cpp_a2d77ed03302b6978834ee3b6f57837fb}{int} nCount)
+\item 
+void \hyperlink{class_c_d_x_u_t_edit_box_a97571e11cb7c2a19e3cf35239a8ff44e}{SetTextFloatArray} (const float $\ast$pNumbers, \hyperlink{_d_x_u_tgui_8cpp_a2d77ed03302b6978834ee3b6f57837fb}{int} nCount)
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{class_c_d_x_u_t_edit_box_a2719e73a4549625b2f08bacea7abf270}{PlaceCaret} (\hyperlink{_d_x_u_tgui_8cpp_a2d77ed03302b6978834ee3b6f57837fb}{int} nCP)
+\item 
+void \hyperlink{class_c_d_x_u_t_edit_box_a706a8b318a003975afc8db51ec233d70}{DeleteSelectionText} ()
+\item 
+void \hyperlink{class_c_d_x_u_t_edit_box_af04922715d7f262b0e21a98e969f6e9c}{ResetCaretBlink} ()
+\item 
+void \hyperlink{class_c_d_x_u_t_edit_box_aebc41325d7ea210942b6c96c9df6d89e}{CopyToClipboard} ()
+\item 
+void \hyperlink{class_c_d_x_u_t_edit_box_ace90835de5f93d652b474f0b6e16ba9b}{PasteFromClipboard} ()
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_c_uni_buffer}{CUniBuffer} \hyperlink{class_c_d_x_u_t_edit_box_afb55f6d88b6d994cf61227f7afb5f719}{m\_\-Buffer}
+\item 
+\hyperlink{_d_x_u_tgui_8cpp_a2d77ed03302b6978834ee3b6f57837fb}{int} \hyperlink{class_c_d_x_u_t_edit_box_ae4930c5e75aab5ff2b367ac9acdac18f}{m\_\-nBorder}
+\item 
+\hyperlink{_d_x_u_tgui_8cpp_a2d77ed03302b6978834ee3b6f57837fb}{int} \hyperlink{class_c_d_x_u_t_edit_box_a7d9ac282370b9a8f67994cc4a82df00e}{m\_\-nSpacing}
+\item 
+RECT \hyperlink{class_c_d_x_u_t_edit_box_a3ccb7a43b360576571463ae1f38ec111}{m\_\-rcText}
+\item 
+RECT \hyperlink{class_c_d_x_u_t_edit_box_ab65b28d8d4846c70ab893c2117047750}{m\_\-rcRender} \mbox{[}9\mbox{]}
+\item 
+double \hyperlink{class_c_d_x_u_t_edit_box_a487954472ae7688f22aaf01f719a4114}{m\_\-dfBlink}
+\item 
+double \hyperlink{class_c_d_x_u_t_edit_box_aea2dc193c118915719b7905896e1ed3f}{m\_\-dfLastBlink}
+\item 
+bool \hyperlink{class_c_d_x_u_t_edit_box_a2a7a67ef2c2104a2d62a00517915f59b}{m\_\-bCaretOn}
+\item 
+\hyperlink{_d_x_u_tgui_8cpp_a2d77ed03302b6978834ee3b6f57837fb}{int} \hyperlink{class_c_d_x_u_t_edit_box_a148a39c11d4b189d2bbf37e45e74d6d6}{m\_\-nCaret}
+\item 
+bool \hyperlink{class_c_d_x_u_t_edit_box_adb1eaad549f7da1b5eca182d45454fc3}{m\_\-bInsertMode}
+\item 
+\hyperlink{_d_x_u_tgui_8cpp_a2d77ed03302b6978834ee3b6f57837fb}{int} \hyperlink{class_c_d_x_u_t_edit_box_abe8996fe747a8a8244ded9f65b192e21}{m\_\-nSelStart}
+\item 
+\hyperlink{_d_x_u_tgui_8cpp_a2d77ed03302b6978834ee3b6f57837fb}{int} \hyperlink{class_c_d_x_u_t_edit_box_a4f20f987232887403d1234cd275a5e30}{m\_\-nFirstVisible}
+\item 
+D3DCOLOR \hyperlink{class_c_d_x_u_t_edit_box_a4007e072bfbf278bc3cadca555e48ced}{m\_\-TextColor}
+\item 
+D3DCOLOR \hyperlink{class_c_d_x_u_t_edit_box_af7ad30e9b036e11cc008d6061e50fb5c}{m\_\-SelTextColor}
+\item 
+D3DCOLOR \hyperlink{class_c_d_x_u_t_edit_box_a823226b75c0622be3af28a45fedfaeb8}{m\_\-SelBkColor}
+\item 
+D3DCOLOR \hyperlink{class_c_d_x_u_t_edit_box_a9b0c3fb3ddfebd5780f1656048a83c1c}{m\_\-CaretColor}
+\item 
+bool \hyperlink{class_c_d_x_u_t_edit_box_a09b9f704dcf36c70e025c30d32d5d218}{m\_\-bMouseDrag}
+\end{DoxyCompactItemize}
+\subsection*{Static Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static bool \hyperlink{class_c_d_x_u_t_edit_box_af6ee4773c910f27f0b0a4b1d8d47e148}{s\_\-bHideCaret}
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_c_d_x_u_t_edit_box_ad2626863f3d8863dc7d4107e7282db55}{
+\index{CDXUTEditBox@{CDXUTEditBox}!CDXUTEditBox@{CDXUTEditBox}}
+\index{CDXUTEditBox@{CDXUTEditBox}!CDXUTEditBox@{CDXUTEditBox}}
+\subsubsection[{CDXUTEditBox}]{\setlength{\rightskip}{0pt plus 5cm}CDXUTEditBox::CDXUTEditBox ({\bf CDXUTDialog} $\ast$ {\em pDialog} = {\ttfamily NULL})}}
+\label{class_c_d_x_u_t_edit_box_ad2626863f3d8863dc7d4107e7282db55}
+\hypertarget{class_c_d_x_u_t_edit_box_a49e591638b55372108780cd926b99f93}{
+\index{CDXUTEditBox@{CDXUTEditBox}!$\sim$CDXUTEditBox@{$\sim$CDXUTEditBox}}
+\index{$\sim$CDXUTEditBox@{$\sim$CDXUTEditBox}!CDXUTEditBox@{CDXUTEditBox}}
+\subsubsection[{$\sim$CDXUTEditBox}]{\setlength{\rightskip}{0pt plus 5cm}CDXUTEditBox::$\sim$CDXUTEditBox ()\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{class_c_d_x_u_t_edit_box_a49e591638b55372108780cd926b99f93}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_c_d_x_u_t_edit_box_a988225899327c419d70d013ed6ab113a}{
+\index{CDXUTEditBox@{CDXUTEditBox}!CanHaveFocus@{CanHaveFocus}}
+\index{CanHaveFocus@{CanHaveFocus}!CDXUTEditBox@{CDXUTEditBox}}
+\subsubsection[{CanHaveFocus}]{\setlength{\rightskip}{0pt plus 5cm}virtual bool CDXUTEditBox::CanHaveFocus ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}
+\label{class_c_d_x_u_t_edit_box_a988225899327c419d70d013ed6ab113a}
+
+
+Reimplemented from \hyperlink{class_c_d_x_u_t_control_a5b2c6c474236a79b257c86caded9c0b7}{CDXUTControl}.\hypertarget{class_c_d_x_u_t_edit_box_a769bc1130895f3d116b45a4f25bc3b78}{
+\index{CDXUTEditBox@{CDXUTEditBox}!ClearText@{ClearText}}
+\index{ClearText@{ClearText}!CDXUTEditBox@{CDXUTEditBox}}
+\subsubsection[{ClearText}]{\setlength{\rightskip}{0pt plus 5cm}void CDXUTEditBox::ClearText ()}}
+\label{class_c_d_x_u_t_edit_box_a769bc1130895f3d116b45a4f25bc3b78}
+\hypertarget{class_c_d_x_u_t_edit_box_aebc41325d7ea210942b6c96c9df6d89e}{
+\index{CDXUTEditBox@{CDXUTEditBox}!CopyToClipboard@{CopyToClipboard}}
+\index{CopyToClipboard@{CopyToClipboard}!CDXUTEditBox@{CDXUTEditBox}}
+\subsubsection[{CopyToClipboard}]{\setlength{\rightskip}{0pt plus 5cm}void CDXUTEditBox::CopyToClipboard ()\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{class_c_d_x_u_t_edit_box_aebc41325d7ea210942b6c96c9df6d89e}
+\hypertarget{class_c_d_x_u_t_edit_box_a706a8b318a003975afc8db51ec233d70}{
+\index{CDXUTEditBox@{CDXUTEditBox}!DeleteSelectionText@{DeleteSelectionText}}
+\index{DeleteSelectionText@{DeleteSelectionText}!CDXUTEditBox@{CDXUTEditBox}}
+\subsubsection[{DeleteSelectionText}]{\setlength{\rightskip}{0pt plus 5cm}void CDXUTEditBox::DeleteSelectionText ()\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{class_c_d_x_u_t_edit_box_a706a8b318a003975afc8db51ec233d70}
+\hypertarget{class_c_d_x_u_t_edit_box_a7d20deae894a3a0259a2e9fca551371d}{
+\index{CDXUTEditBox@{CDXUTEditBox}!GetText@{GetText}}
+\index{GetText@{GetText}!CDXUTEditBox@{CDXUTEditBox}}
+\subsubsection[{GetText}]{\setlength{\rightskip}{0pt plus 5cm}LPCWSTR CDXUTEditBox::GetText ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_c_d_x_u_t_edit_box_a7d20deae894a3a0259a2e9fca551371d}
+\hypertarget{class_c_d_x_u_t_edit_box_aa1b4a760e28f3176c18bd635c88525f5}{
+\index{CDXUTEditBox@{CDXUTEditBox}!GetTextCopy@{GetTextCopy}}
+\index{GetTextCopy@{GetTextCopy}!CDXUTEditBox@{CDXUTEditBox}}
+\subsubsection[{GetTextCopy}]{\setlength{\rightskip}{0pt plus 5cm}HRESULT CDXUTEditBox::GetTextCopy ({\bf LPWSTR} {\em strDest}, \/  UINT {\em bufferCount})}}
+\label{class_c_d_x_u_t_edit_box_aa1b4a760e28f3176c18bd635c88525f5}
+\hypertarget{class_c_d_x_u_t_edit_box_a2bb1d1ebe99c30ef317824e852882126}{
+\index{CDXUTEditBox@{CDXUTEditBox}!GetTextLength@{GetTextLength}}
+\index{GetTextLength@{GetTextLength}!CDXUTEditBox@{CDXUTEditBox}}
+\subsubsection[{GetTextLength}]{\setlength{\rightskip}{0pt plus 5cm}{\bf int} CDXUTEditBox::GetTextLength ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_c_d_x_u_t_edit_box_a2bb1d1ebe99c30ef317824e852882126}
+\hypertarget{class_c_d_x_u_t_edit_box_a579bcc8298d08c9d52fbf917fa046442}{
+\index{CDXUTEditBox@{CDXUTEditBox}!HandleKeyboard@{HandleKeyboard}}
+\index{HandleKeyboard@{HandleKeyboard}!CDXUTEditBox@{CDXUTEditBox}}
+\subsubsection[{HandleKeyboard}]{\setlength{\rightskip}{0pt plus 5cm}bool CDXUTEditBox::HandleKeyboard (UINT {\em uMsg}, \/  WPARAM {\em wParam}, \/  LPARAM {\em lParam})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{class_c_d_x_u_t_edit_box_a579bcc8298d08c9d52fbf917fa046442}
+
+
+Reimplemented from \hyperlink{class_c_d_x_u_t_control_a94044e608adeac7c329d83cf63587dcf}{CDXUTControl}.\hypertarget{class_c_d_x_u_t_edit_box_afadff4a882c187926a7b8173eb7d97cc}{
+\index{CDXUTEditBox@{CDXUTEditBox}!HandleMouse@{HandleMouse}}
+\index{HandleMouse@{HandleMouse}!CDXUTEditBox@{CDXUTEditBox}}
+\subsubsection[{HandleMouse}]{\setlength{\rightskip}{0pt plus 5cm}bool CDXUTEditBox::HandleMouse (UINT {\em uMsg}, \/  POINT {\em pt}, \/  WPARAM {\em wParam}, \/  LPARAM {\em lParam})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{class_c_d_x_u_t_edit_box_afadff4a882c187926a7b8173eb7d97cc}
+
+
+Reimplemented from \hyperlink{class_c_d_x_u_t_control_a263979b3221cb7a44b4caea72366c335}{CDXUTControl}.
+
+Reimplemented in \hyperlink{class_c_d_x_u_t_i_m_e_edit_box_a02795ef1096e7a276afdc501c606eab9}{CDXUTIMEEditBox}.\hypertarget{class_c_d_x_u_t_edit_box_adca915977ba1b8019594ef5d350ed03e}{
+\index{CDXUTEditBox@{CDXUTEditBox}!MsgProc@{MsgProc}}
+\index{MsgProc@{MsgProc}!CDXUTEditBox@{CDXUTEditBox}}
+\subsubsection[{MsgProc}]{\setlength{\rightskip}{0pt plus 5cm}bool CDXUTEditBox::MsgProc (UINT {\em uMsg}, \/  WPARAM {\em wParam}, \/  LPARAM {\em lParam})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{class_c_d_x_u_t_edit_box_adca915977ba1b8019594ef5d350ed03e}
+
+
+Reimplemented from \hyperlink{class_c_d_x_u_t_control_a58d0d118146c8853a7ccd27da9e3fcf3}{CDXUTControl}.
+
+Reimplemented in \hyperlink{class_c_d_x_u_t_i_m_e_edit_box_ac656a213385fb3245938f0297d58d0de}{CDXUTIMEEditBox}.\hypertarget{class_c_d_x_u_t_edit_box_adc767031600f1ea99ebcf533e00d7948}{
+\index{CDXUTEditBox@{CDXUTEditBox}!OnFocusIn@{OnFocusIn}}
+\index{OnFocusIn@{OnFocusIn}!CDXUTEditBox@{CDXUTEditBox}}
+\subsubsection[{OnFocusIn}]{\setlength{\rightskip}{0pt plus 5cm}void CDXUTEditBox::OnFocusIn ()\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{class_c_d_x_u_t_edit_box_adc767031600f1ea99ebcf533e00d7948}
+
+
+Reimplemented from \hyperlink{class_c_d_x_u_t_control_ab363eb5e296ddfc577f81bcd7667fd9b}{CDXUTControl}.
+
+Reimplemented in \hyperlink{class_c_d_x_u_t_i_m_e_edit_box_a6f3ada4a18eb810420806d5112fd7de6}{CDXUTIMEEditBox}.\hypertarget{class_c_d_x_u_t_edit_box_a7a3810c8c3ee8f44a87451fd0d3ce127}{
+\index{CDXUTEditBox@{CDXUTEditBox}!ParseFloatArray@{ParseFloatArray}}
+\index{ParseFloatArray@{ParseFloatArray}!CDXUTEditBox@{CDXUTEditBox}}
+\subsubsection[{ParseFloatArray}]{\setlength{\rightskip}{0pt plus 5cm}void CDXUTEditBox::ParseFloatArray (float $\ast$ {\em pNumbers}, \/  {\bf int} {\em nCount})}}
+\label{class_c_d_x_u_t_edit_box_a7a3810c8c3ee8f44a87451fd0d3ce127}
+\hypertarget{class_c_d_x_u_t_edit_box_ace90835de5f93d652b474f0b6e16ba9b}{
+\index{CDXUTEditBox@{CDXUTEditBox}!PasteFromClipboard@{PasteFromClipboard}}
+\index{PasteFromClipboard@{PasteFromClipboard}!CDXUTEditBox@{CDXUTEditBox}}
+\subsubsection[{PasteFromClipboard}]{\setlength{\rightskip}{0pt plus 5cm}void CDXUTEditBox::PasteFromClipboard ()\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{class_c_d_x_u_t_edit_box_ace90835de5f93d652b474f0b6e16ba9b}
+\hypertarget{class_c_d_x_u_t_edit_box_a2719e73a4549625b2f08bacea7abf270}{
+\index{CDXUTEditBox@{CDXUTEditBox}!PlaceCaret@{PlaceCaret}}
+\index{PlaceCaret@{PlaceCaret}!CDXUTEditBox@{CDXUTEditBox}}
+\subsubsection[{PlaceCaret}]{\setlength{\rightskip}{0pt plus 5cm}void CDXUTEditBox::PlaceCaret ({\bf int} {\em nCP})\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{class_c_d_x_u_t_edit_box_a2719e73a4549625b2f08bacea7abf270}
+\hypertarget{class_c_d_x_u_t_edit_box_af36e6dfc05fb96ee4f60544cc402e760}{
+\index{CDXUTEditBox@{CDXUTEditBox}!Render@{Render}}
+\index{Render@{Render}!CDXUTEditBox@{CDXUTEditBox}}
+\subsubsection[{Render}]{\setlength{\rightskip}{0pt plus 5cm}void CDXUTEditBox::Render (IDirect3DDevice9 $\ast$ {\em pd3dDevice}, \/  float {\em fElapsedTime})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{class_c_d_x_u_t_edit_box_af36e6dfc05fb96ee4f60544cc402e760}
+
+
+Reimplemented from \hyperlink{class_c_d_x_u_t_control_afd92fa04241f66fdbf207bc5870c9388}{CDXUTControl}.
+
+Reimplemented in \hyperlink{class_c_d_x_u_t_i_m_e_edit_box_aa473937c56d6feef6777fd62b4d5a48c}{CDXUTIMEEditBox}.\hypertarget{class_c_d_x_u_t_edit_box_af04922715d7f262b0e21a98e969f6e9c}{
+\index{CDXUTEditBox@{CDXUTEditBox}!ResetCaretBlink@{ResetCaretBlink}}
+\index{ResetCaretBlink@{ResetCaretBlink}!CDXUTEditBox@{CDXUTEditBox}}
+\subsubsection[{ResetCaretBlink}]{\setlength{\rightskip}{0pt plus 5cm}void CDXUTEditBox::ResetCaretBlink ()\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{class_c_d_x_u_t_edit_box_af04922715d7f262b0e21a98e969f6e9c}
+\hypertarget{class_c_d_x_u_t_edit_box_af9b5c04a9cdda81761cc04d7e70a6a06}{
+\index{CDXUTEditBox@{CDXUTEditBox}!SetBorderWidth@{SetBorderWidth}}
+\index{SetBorderWidth@{SetBorderWidth}!CDXUTEditBox@{CDXUTEditBox}}
+\subsubsection[{SetBorderWidth}]{\setlength{\rightskip}{0pt plus 5cm}void CDXUTEditBox::SetBorderWidth ({\bf int} {\em nBorder})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_c_d_x_u_t_edit_box_af9b5c04a9cdda81761cc04d7e70a6a06}
+\hypertarget{class_c_d_x_u_t_edit_box_afb8d2b7593862e875daf4b4a63080ddf}{
+\index{CDXUTEditBox@{CDXUTEditBox}!SetCaretColor@{SetCaretColor}}
+\index{SetCaretColor@{SetCaretColor}!CDXUTEditBox@{CDXUTEditBox}}
+\subsubsection[{SetCaretColor}]{\setlength{\rightskip}{0pt plus 5cm}void CDXUTEditBox::SetCaretColor (D3DCOLOR {\em Color})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_c_d_x_u_t_edit_box_afb8d2b7593862e875daf4b4a63080ddf}
+\hypertarget{class_c_d_x_u_t_edit_box_ae43b2c8142d3ce9602ae73193b0982fe}{
+\index{CDXUTEditBox@{CDXUTEditBox}!SetSelectedBackColor@{SetSelectedBackColor}}
+\index{SetSelectedBackColor@{SetSelectedBackColor}!CDXUTEditBox@{CDXUTEditBox}}
+\subsubsection[{SetSelectedBackColor}]{\setlength{\rightskip}{0pt plus 5cm}void CDXUTEditBox::SetSelectedBackColor (D3DCOLOR {\em Color})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_c_d_x_u_t_edit_box_ae43b2c8142d3ce9602ae73193b0982fe}
+\hypertarget{class_c_d_x_u_t_edit_box_a44d55aa688bac6e18ea8b86f8707b9b8}{
+\index{CDXUTEditBox@{CDXUTEditBox}!SetSelectedTextColor@{SetSelectedTextColor}}
+\index{SetSelectedTextColor@{SetSelectedTextColor}!CDXUTEditBox@{CDXUTEditBox}}
+\subsubsection[{SetSelectedTextColor}]{\setlength{\rightskip}{0pt plus 5cm}void CDXUTEditBox::SetSelectedTextColor (D3DCOLOR {\em Color})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_c_d_x_u_t_edit_box_a44d55aa688bac6e18ea8b86f8707b9b8}
+\hypertarget{class_c_d_x_u_t_edit_box_ada1e5253fd1df390a9536cd111ed0121}{
+\index{CDXUTEditBox@{CDXUTEditBox}!SetSpacing@{SetSpacing}}
+\index{SetSpacing@{SetSpacing}!CDXUTEditBox@{CDXUTEditBox}}
+\subsubsection[{SetSpacing}]{\setlength{\rightskip}{0pt plus 5cm}void CDXUTEditBox::SetSpacing ({\bf int} {\em nSpacing})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_c_d_x_u_t_edit_box_ada1e5253fd1df390a9536cd111ed0121}
+\hypertarget{class_c_d_x_u_t_edit_box_a3ef3e3ef8a085258ba6bb69285505924}{
+\index{CDXUTEditBox@{CDXUTEditBox}!SetText@{SetText}}
+\index{SetText@{SetText}!CDXUTEditBox@{CDXUTEditBox}}
+\subsubsection[{SetText}]{\setlength{\rightskip}{0pt plus 5cm}void CDXUTEditBox::SetText (LPCWSTR {\em wszText}, \/  bool {\em bSelected} = {\ttfamily false})}}
+\label{class_c_d_x_u_t_edit_box_a3ef3e3ef8a085258ba6bb69285505924}
+\hypertarget{class_c_d_x_u_t_edit_box_a7240aa451e6662077671f754f331edfa}{
+\index{CDXUTEditBox@{CDXUTEditBox}!SetTextColor@{SetTextColor}}
+\index{SetTextColor@{SetTextColor}!CDXUTEditBox@{CDXUTEditBox}}
+\subsubsection[{SetTextColor}]{\setlength{\rightskip}{0pt plus 5cm}virtual void CDXUTEditBox::SetTextColor (D3DCOLOR {\em Color})\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}
+\label{class_c_d_x_u_t_edit_box_a7240aa451e6662077671f754f331edfa}
+
+
+Reimplemented from \hyperlink{class_c_d_x_u_t_control_a9132bb5d6b1d2bff1f20df33fec8c98b}{CDXUTControl}.\hypertarget{class_c_d_x_u_t_edit_box_a97571e11cb7c2a19e3cf35239a8ff44e}{
+\index{CDXUTEditBox@{CDXUTEditBox}!SetTextFloatArray@{SetTextFloatArray}}
+\index{SetTextFloatArray@{SetTextFloatArray}!CDXUTEditBox@{CDXUTEditBox}}
+\subsubsection[{SetTextFloatArray}]{\setlength{\rightskip}{0pt plus 5cm}void CDXUTEditBox::SetTextFloatArray (const float $\ast$ {\em pNumbers}, \/  {\bf int} {\em nCount})}}
+\label{class_c_d_x_u_t_edit_box_a97571e11cb7c2a19e3cf35239a8ff44e}
+\hypertarget{class_c_d_x_u_t_edit_box_a86b6a5f6a509b4bc15f2edd8926718d5}{
+\index{CDXUTEditBox@{CDXUTEditBox}!UpdateRects@{UpdateRects}}
+\index{UpdateRects@{UpdateRects}!CDXUTEditBox@{CDXUTEditBox}}
+\subsubsection[{UpdateRects}]{\setlength{\rightskip}{0pt plus 5cm}void CDXUTEditBox::UpdateRects ()\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{class_c_d_x_u_t_edit_box_a86b6a5f6a509b4bc15f2edd8926718d5}
+
+
+Reimplemented from \hyperlink{class_c_d_x_u_t_control_a5fb3a79178c678abaa0da57566a09002}{CDXUTControl}.
+
+Reimplemented in \hyperlink{class_c_d_x_u_t_i_m_e_edit_box_a5b000e31365cfc36ea9c01cce29d1656}{CDXUTIMEEditBox}.
+
+\subsection{Member Data Documentation}
+\hypertarget{class_c_d_x_u_t_edit_box_a2a7a67ef2c2104a2d62a00517915f59b}{
+\index{CDXUTEditBox@{CDXUTEditBox}!m\_\-bCaretOn@{m\_\-bCaretOn}}
+\index{m\_\-bCaretOn@{m\_\-bCaretOn}!CDXUTEditBox@{CDXUTEditBox}}
+\subsubsection[{m\_\-bCaretOn}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf CDXUTEditBox::m\_\-bCaretOn}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{class_c_d_x_u_t_edit_box_a2a7a67ef2c2104a2d62a00517915f59b}
+\hypertarget{class_c_d_x_u_t_edit_box_adb1eaad549f7da1b5eca182d45454fc3}{
+\index{CDXUTEditBox@{CDXUTEditBox}!m\_\-bInsertMode@{m\_\-bInsertMode}}
+\index{m\_\-bInsertMode@{m\_\-bInsertMode}!CDXUTEditBox@{CDXUTEditBox}}
+\subsubsection[{m\_\-bInsertMode}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf CDXUTEditBox::m\_\-bInsertMode}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{class_c_d_x_u_t_edit_box_adb1eaad549f7da1b5eca182d45454fc3}
+\hypertarget{class_c_d_x_u_t_edit_box_a09b9f704dcf36c70e025c30d32d5d218}{
+\index{CDXUTEditBox@{CDXUTEditBox}!m\_\-bMouseDrag@{m\_\-bMouseDrag}}
+\index{m\_\-bMouseDrag@{m\_\-bMouseDrag}!CDXUTEditBox@{CDXUTEditBox}}
+\subsubsection[{m\_\-bMouseDrag}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf CDXUTEditBox::m\_\-bMouseDrag}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{class_c_d_x_u_t_edit_box_a09b9f704dcf36c70e025c30d32d5d218}
+\hypertarget{class_c_d_x_u_t_edit_box_afb55f6d88b6d994cf61227f7afb5f719}{
+\index{CDXUTEditBox@{CDXUTEditBox}!m\_\-Buffer@{m\_\-Buffer}}
+\index{m\_\-Buffer@{m\_\-Buffer}!CDXUTEditBox@{CDXUTEditBox}}
+\subsubsection[{m\_\-Buffer}]{\setlength{\rightskip}{0pt plus 5cm}{\bf CUniBuffer} {\bf CDXUTEditBox::m\_\-Buffer}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{class_c_d_x_u_t_edit_box_afb55f6d88b6d994cf61227f7afb5f719}
+\hypertarget{class_c_d_x_u_t_edit_box_a9b0c3fb3ddfebd5780f1656048a83c1c}{
+\index{CDXUTEditBox@{CDXUTEditBox}!m\_\-CaretColor@{m\_\-CaretColor}}
+\index{m\_\-CaretColor@{m\_\-CaretColor}!CDXUTEditBox@{CDXUTEditBox}}
+\subsubsection[{m\_\-CaretColor}]{\setlength{\rightskip}{0pt plus 5cm}D3DCOLOR {\bf CDXUTEditBox::m\_\-CaretColor}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{class_c_d_x_u_t_edit_box_a9b0c3fb3ddfebd5780f1656048a83c1c}
+\hypertarget{class_c_d_x_u_t_edit_box_a487954472ae7688f22aaf01f719a4114}{
+\index{CDXUTEditBox@{CDXUTEditBox}!m\_\-dfBlink@{m\_\-dfBlink}}
+\index{m\_\-dfBlink@{m\_\-dfBlink}!CDXUTEditBox@{CDXUTEditBox}}
+\subsubsection[{m\_\-dfBlink}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf CDXUTEditBox::m\_\-dfBlink}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{class_c_d_x_u_t_edit_box_a487954472ae7688f22aaf01f719a4114}
+\hypertarget{class_c_d_x_u_t_edit_box_aea2dc193c118915719b7905896e1ed3f}{
+\index{CDXUTEditBox@{CDXUTEditBox}!m\_\-dfLastBlink@{m\_\-dfLastBlink}}
+\index{m\_\-dfLastBlink@{m\_\-dfLastBlink}!CDXUTEditBox@{CDXUTEditBox}}
+\subsubsection[{m\_\-dfLastBlink}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf CDXUTEditBox::m\_\-dfLastBlink}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{class_c_d_x_u_t_edit_box_aea2dc193c118915719b7905896e1ed3f}
+\hypertarget{class_c_d_x_u_t_edit_box_ae4930c5e75aab5ff2b367ac9acdac18f}{
+\index{CDXUTEditBox@{CDXUTEditBox}!m\_\-nBorder@{m\_\-nBorder}}
+\index{m\_\-nBorder@{m\_\-nBorder}!CDXUTEditBox@{CDXUTEditBox}}
+\subsubsection[{m\_\-nBorder}]{\setlength{\rightskip}{0pt plus 5cm}{\bf int} {\bf CDXUTEditBox::m\_\-nBorder}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{class_c_d_x_u_t_edit_box_ae4930c5e75aab5ff2b367ac9acdac18f}
+\hypertarget{class_c_d_x_u_t_edit_box_a148a39c11d4b189d2bbf37e45e74d6d6}{
+\index{CDXUTEditBox@{CDXUTEditBox}!m\_\-nCaret@{m\_\-nCaret}}
+\index{m\_\-nCaret@{m\_\-nCaret}!CDXUTEditBox@{CDXUTEditBox}}
+\subsubsection[{m\_\-nCaret}]{\setlength{\rightskip}{0pt plus 5cm}{\bf int} {\bf CDXUTEditBox::m\_\-nCaret}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{class_c_d_x_u_t_edit_box_a148a39c11d4b189d2bbf37e45e74d6d6}
+\hypertarget{class_c_d_x_u_t_edit_box_a4f20f987232887403d1234cd275a5e30}{
+\index{CDXUTEditBox@{CDXUTEditBox}!m\_\-nFirstVisible@{m\_\-nFirstVisible}}
+\index{m\_\-nFirstVisible@{m\_\-nFirstVisible}!CDXUTEditBox@{CDXUTEditBox}}
+\subsubsection[{m\_\-nFirstVisible}]{\setlength{\rightskip}{0pt plus 5cm}{\bf int} {\bf CDXUTEditBox::m\_\-nFirstVisible}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{class_c_d_x_u_t_edit_box_a4f20f987232887403d1234cd275a5e30}
+\hypertarget{class_c_d_x_u_t_edit_box_abe8996fe747a8a8244ded9f65b192e21}{
+\index{CDXUTEditBox@{CDXUTEditBox}!m\_\-nSelStart@{m\_\-nSelStart}}
+\index{m\_\-nSelStart@{m\_\-nSelStart}!CDXUTEditBox@{CDXUTEditBox}}
+\subsubsection[{m\_\-nSelStart}]{\setlength{\rightskip}{0pt plus 5cm}{\bf int} {\bf CDXUTEditBox::m\_\-nSelStart}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{class_c_d_x_u_t_edit_box_abe8996fe747a8a8244ded9f65b192e21}
+\hypertarget{class_c_d_x_u_t_edit_box_a7d9ac282370b9a8f67994cc4a82df00e}{
+\index{CDXUTEditBox@{CDXUTEditBox}!m\_\-nSpacing@{m\_\-nSpacing}}
+\index{m\_\-nSpacing@{m\_\-nSpacing}!CDXUTEditBox@{CDXUTEditBox}}
+\subsubsection[{m\_\-nSpacing}]{\setlength{\rightskip}{0pt plus 5cm}{\bf int} {\bf CDXUTEditBox::m\_\-nSpacing}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{class_c_d_x_u_t_edit_box_a7d9ac282370b9a8f67994cc4a82df00e}
+\hypertarget{class_c_d_x_u_t_edit_box_ab65b28d8d4846c70ab893c2117047750}{
+\index{CDXUTEditBox@{CDXUTEditBox}!m\_\-rcRender@{m\_\-rcRender}}
+\index{m\_\-rcRender@{m\_\-rcRender}!CDXUTEditBox@{CDXUTEditBox}}
+\subsubsection[{m\_\-rcRender}]{\setlength{\rightskip}{0pt plus 5cm}RECT {\bf CDXUTEditBox::m\_\-rcRender}\mbox{[}9\mbox{]}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{class_c_d_x_u_t_edit_box_ab65b28d8d4846c70ab893c2117047750}
+\hypertarget{class_c_d_x_u_t_edit_box_a3ccb7a43b360576571463ae1f38ec111}{
+\index{CDXUTEditBox@{CDXUTEditBox}!m\_\-rcText@{m\_\-rcText}}
+\index{m\_\-rcText@{m\_\-rcText}!CDXUTEditBox@{CDXUTEditBox}}
+\subsubsection[{m\_\-rcText}]{\setlength{\rightskip}{0pt plus 5cm}RECT {\bf CDXUTEditBox::m\_\-rcText}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{class_c_d_x_u_t_edit_box_a3ccb7a43b360576571463ae1f38ec111}
+\hypertarget{class_c_d_x_u_t_edit_box_a823226b75c0622be3af28a45fedfaeb8}{
+\index{CDXUTEditBox@{CDXUTEditBox}!m\_\-SelBkColor@{m\_\-SelBkColor}}
+\index{m\_\-SelBkColor@{m\_\-SelBkColor}!CDXUTEditBox@{CDXUTEditBox}}
+\subsubsection[{m\_\-SelBkColor}]{\setlength{\rightskip}{0pt plus 5cm}D3DCOLOR {\bf CDXUTEditBox::m\_\-SelBkColor}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{class_c_d_x_u_t_edit_box_a823226b75c0622be3af28a45fedfaeb8}
+\hypertarget{class_c_d_x_u_t_edit_box_af7ad30e9b036e11cc008d6061e50fb5c}{
+\index{CDXUTEditBox@{CDXUTEditBox}!m\_\-SelTextColor@{m\_\-SelTextColor}}
+\index{m\_\-SelTextColor@{m\_\-SelTextColor}!CDXUTEditBox@{CDXUTEditBox}}
+\subsubsection[{m\_\-SelTextColor}]{\setlength{\rightskip}{0pt plus 5cm}D3DCOLOR {\bf CDXUTEditBox::m\_\-SelTextColor}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{class_c_d_x_u_t_edit_box_af7ad30e9b036e11cc008d6061e50fb5c}
+\hypertarget{class_c_d_x_u_t_edit_box_a4007e072bfbf278bc3cadca555e48ced}{
+\index{CDXUTEditBox@{CDXUTEditBox}!m\_\-TextColor@{m\_\-TextColor}}
+\index{m\_\-TextColor@{m\_\-TextColor}!CDXUTEditBox@{CDXUTEditBox}}
+\subsubsection[{m\_\-TextColor}]{\setlength{\rightskip}{0pt plus 5cm}D3DCOLOR {\bf CDXUTEditBox::m\_\-TextColor}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{class_c_d_x_u_t_edit_box_a4007e072bfbf278bc3cadca555e48ced}
+\hypertarget{class_c_d_x_u_t_edit_box_af6ee4773c910f27f0b0a4b1d8d47e148}{
+\index{CDXUTEditBox@{CDXUTEditBox}!s\_\-bHideCaret@{s\_\-bHideCaret}}
+\index{s\_\-bHideCaret@{s\_\-bHideCaret}!CDXUTEditBox@{CDXUTEditBox}}
+\subsubsection[{s\_\-bHideCaret}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf CDXUTEditBox::s\_\-bHideCaret}\hspace{0.3cm}{\ttfamily  \mbox{[}static, protected\mbox{]}}}}
+\label{class_c_d_x_u_t_edit_box_af6ee4773c910f27f0b0a4b1d8d47e148}
+
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+C:/Users/doug/Documents/Visual Studio 2008/Projects/enlightened/Enlightened/DXUT/\hyperlink{_d_x_u_tgui_8h}{DXUTgui.h}\item 
+C:/Users/doug/Documents/Visual Studio 2008/Projects/enlightened/Enlightened/DXUT/\hyperlink{_d_x_u_tgui_8cpp}{DXUTgui.cpp}\end{DoxyCompactItemize}

@@ -1,0 +1,97 @@
+\hypertarget{class_c_sound_manager}{
+\section{CSoundManager Class Reference}
+\label{class_c_sound_manager}\index{CSoundManager@{CSoundManager}}
+}
+
+
+{\ttfamily \#include $<$DXUTsound.h$>$}\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_c_sound_manager_ae8358c75282bcceb23bd23ea9328e407}{CSoundManager} ()
+\item 
+\hyperlink{class_c_sound_manager_a75bc0ad3cc339baeb29372632c02f5f2}{$\sim$CSoundManager} ()
+\item 
+HRESULT \hyperlink{class_c_sound_manager_a5360f8c247b45d00f141b528892ac4dc}{Initialize} (HWND hWnd, DWORD dwCoopLevel)
+\item 
+LPDIRECTSOUND8 \hyperlink{class_c_sound_manager_a4cf5b72143f7bb5f268b4152008de1dd}{GetDirectSound} ()
+\item 
+HRESULT \hyperlink{class_c_sound_manager_a2e20be973d38797e82362577b9156927}{SetPrimaryBufferFormat} (DWORD dwPrimaryChannels, DWORD dwPrimaryFreq, DWORD dwPrimaryBitRate)
+\item 
+HRESULT \hyperlink{class_c_sound_manager_aac5c452d3d4314c8d3aeb16f9c143652}{Get3DListenerInterface} (LPDIRECTSOUND3DLISTENER $\ast$ppDSListener)
+\item 
+HRESULT \hyperlink{class_c_sound_manager_a7fb7f2a69f7b703da0c81988733d7e31}{Create} (\hyperlink{class_c_sound}{CSound} $\ast$$\ast$ppSound, \hyperlink{_d_x_u_tgui_8cpp_a6ad64a19933213d15128e5fcd09bc1a6}{LPWSTR} strWaveFileName, DWORD dwCreationFlags=0, GUID guid3DAlgorithm=GUID\_\-NULL, DWORD dwNumBuffers=1)
+\item 
+HRESULT \hyperlink{class_c_sound_manager_aeb9aceb7a20e21ec18922fe71cd58307}{CreateFromMemory} (\hyperlink{class_c_sound}{CSound} $\ast$$\ast$ppSound, BYTE $\ast$pbData, ULONG ulDataSize, LPWAVEFORMATEX pwfx, DWORD dwCreationFlags=0, GUID guid3DAlgorithm=GUID\_\-NULL, DWORD dwNumBuffers=1)
+\item 
+HRESULT \hyperlink{class_c_sound_manager_abbcd3543cde00e741c02ae2864516a2c}{CreateStreaming} (\hyperlink{class_c_streaming_sound}{CStreamingSound} $\ast$$\ast$ppStreamingSound, \hyperlink{_d_x_u_tgui_8cpp_a6ad64a19933213d15128e5fcd09bc1a6}{LPWSTR} strWaveFileName, DWORD dwCreationFlags, GUID guid3DAlgorithm, DWORD dwNotifyCount, DWORD dwNotifySize, HANDLE hNotifyEvent)
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+IDirectSound8 $\ast$ \hyperlink{class_c_sound_manager_a453dcab3ba8fc5f622da84e609cb3363}{m\_\-pDS}
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_c_sound_manager_ae8358c75282bcceb23bd23ea9328e407}{
+\index{CSoundManager@{CSoundManager}!CSoundManager@{CSoundManager}}
+\index{CSoundManager@{CSoundManager}!CSoundManager@{CSoundManager}}
+\subsubsection[{CSoundManager}]{\setlength{\rightskip}{0pt plus 5cm}CSoundManager::CSoundManager ()}}
+\label{class_c_sound_manager_ae8358c75282bcceb23bd23ea9328e407}
+\hypertarget{class_c_sound_manager_a75bc0ad3cc339baeb29372632c02f5f2}{
+\index{CSoundManager@{CSoundManager}!$\sim$CSoundManager@{$\sim$CSoundManager}}
+\index{$\sim$CSoundManager@{$\sim$CSoundManager}!CSoundManager@{CSoundManager}}
+\subsubsection[{$\sim$CSoundManager}]{\setlength{\rightskip}{0pt plus 5cm}CSoundManager::$\sim$CSoundManager ()}}
+\label{class_c_sound_manager_a75bc0ad3cc339baeb29372632c02f5f2}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_c_sound_manager_a7fb7f2a69f7b703da0c81988733d7e31}{
+\index{CSoundManager@{CSoundManager}!Create@{Create}}
+\index{Create@{Create}!CSoundManager@{CSoundManager}}
+\subsubsection[{Create}]{\setlength{\rightskip}{0pt plus 5cm}HRESULT CSoundManager::Create ({\bf CSound} $\ast$$\ast$ {\em ppSound}, \/  {\bf LPWSTR} {\em strWaveFileName}, \/  DWORD {\em dwCreationFlags} = {\ttfamily 0}, \/  GUID {\em guid3DAlgorithm} = {\ttfamily GUID\_\-NULL}, \/  DWORD {\em dwNumBuffers} = {\ttfamily 1})}}
+\label{class_c_sound_manager_a7fb7f2a69f7b703da0c81988733d7e31}
+\hypertarget{class_c_sound_manager_aeb9aceb7a20e21ec18922fe71cd58307}{
+\index{CSoundManager@{CSoundManager}!CreateFromMemory@{CreateFromMemory}}
+\index{CreateFromMemory@{CreateFromMemory}!CSoundManager@{CSoundManager}}
+\subsubsection[{CreateFromMemory}]{\setlength{\rightskip}{0pt plus 5cm}HRESULT CSoundManager::CreateFromMemory ({\bf CSound} $\ast$$\ast$ {\em ppSound}, \/  BYTE $\ast$ {\em pbData}, \/  ULONG {\em ulDataSize}, \/  LPWAVEFORMATEX {\em pwfx}, \/  DWORD {\em dwCreationFlags} = {\ttfamily 0}, \/  GUID {\em guid3DAlgorithm} = {\ttfamily GUID\_\-NULL}, \/  DWORD {\em dwNumBuffers} = {\ttfamily 1})}}
+\label{class_c_sound_manager_aeb9aceb7a20e21ec18922fe71cd58307}
+\hypertarget{class_c_sound_manager_abbcd3543cde00e741c02ae2864516a2c}{
+\index{CSoundManager@{CSoundManager}!CreateStreaming@{CreateStreaming}}
+\index{CreateStreaming@{CreateStreaming}!CSoundManager@{CSoundManager}}
+\subsubsection[{CreateStreaming}]{\setlength{\rightskip}{0pt plus 5cm}HRESULT CSoundManager::CreateStreaming ({\bf CStreamingSound} $\ast$$\ast$ {\em ppStreamingSound}, \/  {\bf LPWSTR} {\em strWaveFileName}, \/  DWORD {\em dwCreationFlags}, \/  GUID {\em guid3DAlgorithm}, \/  DWORD {\em dwNotifyCount}, \/  DWORD {\em dwNotifySize}, \/  HANDLE {\em hNotifyEvent})}}
+\label{class_c_sound_manager_abbcd3543cde00e741c02ae2864516a2c}
+\hypertarget{class_c_sound_manager_aac5c452d3d4314c8d3aeb16f9c143652}{
+\index{CSoundManager@{CSoundManager}!Get3DListenerInterface@{Get3DListenerInterface}}
+\index{Get3DListenerInterface@{Get3DListenerInterface}!CSoundManager@{CSoundManager}}
+\subsubsection[{Get3DListenerInterface}]{\setlength{\rightskip}{0pt plus 5cm}HRESULT CSoundManager::Get3DListenerInterface (LPDIRECTSOUND3DLISTENER $\ast$ {\em ppDSListener})}}
+\label{class_c_sound_manager_aac5c452d3d4314c8d3aeb16f9c143652}
+\hypertarget{class_c_sound_manager_a4cf5b72143f7bb5f268b4152008de1dd}{
+\index{CSoundManager@{CSoundManager}!GetDirectSound@{GetDirectSound}}
+\index{GetDirectSound@{GetDirectSound}!CSoundManager@{CSoundManager}}
+\subsubsection[{GetDirectSound}]{\setlength{\rightskip}{0pt plus 5cm}LPDIRECTSOUND8 CSoundManager::GetDirectSound ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_c_sound_manager_a4cf5b72143f7bb5f268b4152008de1dd}
+\hypertarget{class_c_sound_manager_a5360f8c247b45d00f141b528892ac4dc}{
+\index{CSoundManager@{CSoundManager}!Initialize@{Initialize}}
+\index{Initialize@{Initialize}!CSoundManager@{CSoundManager}}
+\subsubsection[{Initialize}]{\setlength{\rightskip}{0pt plus 5cm}HRESULT CSoundManager::Initialize (HWND {\em hWnd}, \/  DWORD {\em dwCoopLevel})}}
+\label{class_c_sound_manager_a5360f8c247b45d00f141b528892ac4dc}
+\hypertarget{class_c_sound_manager_a2e20be973d38797e82362577b9156927}{
+\index{CSoundManager@{CSoundManager}!SetPrimaryBufferFormat@{SetPrimaryBufferFormat}}
+\index{SetPrimaryBufferFormat@{SetPrimaryBufferFormat}!CSoundManager@{CSoundManager}}
+\subsubsection[{SetPrimaryBufferFormat}]{\setlength{\rightskip}{0pt plus 5cm}HRESULT CSoundManager::SetPrimaryBufferFormat (DWORD {\em dwPrimaryChannels}, \/  DWORD {\em dwPrimaryFreq}, \/  DWORD {\em dwPrimaryBitRate})}}
+\label{class_c_sound_manager_a2e20be973d38797e82362577b9156927}
+
+
+\subsection{Member Data Documentation}
+\hypertarget{class_c_sound_manager_a453dcab3ba8fc5f622da84e609cb3363}{
+\index{CSoundManager@{CSoundManager}!m\_\-pDS@{m\_\-pDS}}
+\index{m\_\-pDS@{m\_\-pDS}!CSoundManager@{CSoundManager}}
+\subsubsection[{m\_\-pDS}]{\setlength{\rightskip}{0pt plus 5cm}IDirectSound8$\ast$ {\bf CSoundManager::m\_\-pDS}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{class_c_sound_manager_a453dcab3ba8fc5f622da84e609cb3363}
+
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+C:/Users/doug/Documents/Visual Studio 2008/Projects/enlightened/Enlightened/DXUT/\hyperlink{_d_x_u_tsound_8h}{DXUTsound.h}\item 
+C:/Users/doug/Documents/Visual Studio 2008/Projects/enlightened/Enlightened/DXUT/\hyperlink{_d_x_u_tsound_8cpp}{DXUTsound.cpp}\end{DoxyCompactItemize}

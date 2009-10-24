@@ -1,0 +1,239 @@
+\hypertarget{class_c_d_x_u_t_resource_cache}{
+\section{CDXUTResourceCache Class Reference}
+\label{class_c_d_x_u_t_resource_cache}\index{CDXUTResourceCache@{CDXUTResourceCache}}
+}
+
+
+{\ttfamily \#include $<$DXUTmisc.h$>$}Collaboration diagram for CDXUTResourceCache:\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_c_d_x_u_t_resource_cache_a1986d13c2bac18a41178e446917e1d64}{$\sim$CDXUTResourceCache} ()
+\item 
+HRESULT \hyperlink{class_c_d_x_u_t_resource_cache_a682c9c2045cc661670d98412deb5f4ef}{CreateTextureFromFile} (LPDIRECT3DDEVICE9 pDevice, LPCTSTR pSrcFile, LPDIRECT3DTEXTURE9 $\ast$ppTexture)
+\item 
+HRESULT \hyperlink{class_c_d_x_u_t_resource_cache_a4f33257885010dd13d4e996e9d3d2d3e}{CreateTextureFromFileEx} (LPDIRECT3DDEVICE9 pDevice, LPCTSTR pSrcFile, UINT Width, UINT Height, UINT MipLevels, DWORD Usage, D3DFORMAT Format, D3DPOOL Pool, DWORD Filter, DWORD \hyperlink{shader_8fx_8c_a2d427a0f2ae0e99d2d700cf27d0417aa}{MipFilter}, D3DCOLOR ColorKey, D3DXIMAGE\_\-INFO $\ast$pSrcInfo, PALETTEENTRY $\ast$pPalette, LPDIRECT3DTEXTURE9 $\ast$ppTexture)
+\item 
+HRESULT \hyperlink{class_c_d_x_u_t_resource_cache_ac2289531afd466288f7b35b2aa2a8ab1}{CreateTextureFromResource} (LPDIRECT3DDEVICE9 pDevice, HMODULE hSrcModule, LPCTSTR pSrcResource, LPDIRECT3DTEXTURE9 $\ast$ppTexture)
+\item 
+HRESULT \hyperlink{class_c_d_x_u_t_resource_cache_a0da1d5be9bcc2332a63b6a9f3dac24c6}{CreateTextureFromResourceEx} (LPDIRECT3DDEVICE9 pDevice, HMODULE hSrcModule, LPCTSTR pSrcResource, UINT Width, UINT Height, UINT MipLevels, DWORD Usage, D3DFORMAT Format, D3DPOOL Pool, DWORD Filter, DWORD \hyperlink{shader_8fx_8c_a2d427a0f2ae0e99d2d700cf27d0417aa}{MipFilter}, D3DCOLOR ColorKey, D3DXIMAGE\_\-INFO $\ast$pSrcInfo, PALETTEENTRY $\ast$pPalette, LPDIRECT3DTEXTURE9 $\ast$ppTexture)
+\item 
+HRESULT \hyperlink{class_c_d_x_u_t_resource_cache_ac81b19e2dfca7f4ef542425007b6cfc8}{CreateCubeTextureFromFile} (LPDIRECT3DDEVICE9 pDevice, LPCTSTR pSrcFile, LPDIRECT3DCUBETEXTURE9 $\ast$ppCubeTexture)
+\item 
+HRESULT \hyperlink{class_c_d_x_u_t_resource_cache_a3c03e924cfd9af63363f5976f266c14e}{CreateCubeTextureFromFileEx} (LPDIRECT3DDEVICE9 pDevice, LPCTSTR pSrcFile, UINT Size, UINT MipLevels, DWORD Usage, D3DFORMAT Format, D3DPOOL Pool, DWORD Filter, DWORD \hyperlink{shader_8fx_8c_a2d427a0f2ae0e99d2d700cf27d0417aa}{MipFilter}, D3DCOLOR ColorKey, D3DXIMAGE\_\-INFO $\ast$pSrcInfo, PALETTEENTRY $\ast$pPalette, LPDIRECT3DCUBETEXTURE9 $\ast$ppCubeTexture)
+\item 
+HRESULT \hyperlink{class_c_d_x_u_t_resource_cache_a778a88f6051a949abb95dc1923c13b83}{CreateCubeTextureFromResource} (LPDIRECT3DDEVICE9 pDevice, HMODULE hSrcModule, LPCTSTR pSrcResource, LPDIRECT3DCUBETEXTURE9 $\ast$ppCubeTexture)
+\item 
+HRESULT \hyperlink{class_c_d_x_u_t_resource_cache_afdf53d69820d5c0f5f9af4d7b51bd81a}{CreateCubeTextureFromResourceEx} (LPDIRECT3DDEVICE9 pDevice, HMODULE hSrcModule, LPCTSTR pSrcResource, UINT Size, UINT MipLevels, DWORD Usage, D3DFORMAT Format, D3DPOOL Pool, DWORD Filter, DWORD \hyperlink{shader_8fx_8c_a2d427a0f2ae0e99d2d700cf27d0417aa}{MipFilter}, D3DCOLOR ColorKey, D3DXIMAGE\_\-INFO $\ast$pSrcInfo, PALETTEENTRY $\ast$pPalette, LPDIRECT3DCUBETEXTURE9 $\ast$ppCubeTexture)
+\item 
+HRESULT \hyperlink{class_c_d_x_u_t_resource_cache_aeaf7cd870d8f048f32566aa2964e8b3e}{CreateVolumeTextureFromFile} (LPDIRECT3DDEVICE9 pDevice, LPCTSTR pSrcFile, LPDIRECT3DVOLUMETEXTURE9 $\ast$ppVolumeTexture)
+\item 
+HRESULT \hyperlink{class_c_d_x_u_t_resource_cache_a6fdd52b77094e786e6c4eb6d19c4ec11}{CreateVolumeTextureFromFileEx} (LPDIRECT3DDEVICE9 pDevice, LPCTSTR pSrcFile, UINT Width, UINT Height, UINT Depth, UINT MipLevels, DWORD Usage, D3DFORMAT Format, D3DPOOL Pool, DWORD Filter, DWORD \hyperlink{shader_8fx_8c_a2d427a0f2ae0e99d2d700cf27d0417aa}{MipFilter}, D3DCOLOR ColorKey, D3DXIMAGE\_\-INFO $\ast$pSrcInfo, PALETTEENTRY $\ast$pPalette, LPDIRECT3DVOLUMETEXTURE9 $\ast$ppTexture)
+\item 
+HRESULT \hyperlink{class_c_d_x_u_t_resource_cache_aa016831002fa2b54bd7cea38072c9a5c}{CreateVolumeTextureFromResource} (LPDIRECT3DDEVICE9 pDevice, HMODULE hSrcModule, LPCTSTR pSrcResource, LPDIRECT3DVOLUMETEXTURE9 $\ast$ppVolumeTexture)
+\item 
+HRESULT \hyperlink{class_c_d_x_u_t_resource_cache_a0ffaceddcccad20ae27475f698bd884d}{CreateVolumeTextureFromResourceEx} (LPDIRECT3DDEVICE9 pDevice, HMODULE hSrcModule, LPCTSTR pSrcResource, UINT Width, UINT Height, UINT Depth, UINT MipLevels, DWORD Usage, D3DFORMAT Format, D3DPOOL Pool, DWORD Filter, DWORD \hyperlink{shader_8fx_8c_a2d427a0f2ae0e99d2d700cf27d0417aa}{MipFilter}, D3DCOLOR ColorKey, D3DXIMAGE\_\-INFO $\ast$pSrcInfo, PALETTEENTRY $\ast$pPalette, LPDIRECT3DVOLUMETEXTURE9 $\ast$ppVolumeTexture)
+\item 
+HRESULT \hyperlink{class_c_d_x_u_t_resource_cache_a55e34fa53a7d702d20a20e6c79acd945}{CreateFont} (LPDIRECT3DDEVICE9 pDevice, UINT Height, UINT Width, UINT Weight, UINT MipLevels, BOOL Italic, DWORD CharSet, DWORD OutputPrecision, DWORD Quality, DWORD PitchAndFamily, LPCTSTR pFacename, LPD3DXFONT $\ast$ppFont)
+\item 
+HRESULT \hyperlink{class_c_d_x_u_t_resource_cache_ac3dc49f6b373324035d0833257b1501e}{CreateFontIndirect} (LPDIRECT3DDEVICE9 pDevice, CONST D3DXFONT\_\-DESC $\ast$pDesc, LPD3DXFONT $\ast$ppFont)
+\item 
+HRESULT \hyperlink{class_c_d_x_u_t_resource_cache_a7752a899e2deab9c7b691adc72c45792}{CreateEffectFromFile} (LPDIRECT3DDEVICE9 pDevice, LPCTSTR pSrcFile, const D3DXMACRO $\ast$pDefines, LPD3DXINCLUDE pInclude, DWORD Flags, LPD3DXEFFECTPOOL pPool, LPD3DXEFFECT $\ast$ppEffect, LPD3DXBUFFER $\ast$ppCompilationErrors)
+\item 
+HRESULT \hyperlink{class_c_d_x_u_t_resource_cache_a6bc96eb215a1888bdcbffcbb63e45f6d}{CreateEffectFromResource} (LPDIRECT3DDEVICE9 pDevice, HMODULE hSrcModule, LPCTSTR pSrcResource, const D3DXMACRO $\ast$pDefines, LPD3DXINCLUDE pInclude, DWORD Flags, LPD3DXEFFECTPOOL pPool, LPD3DXEFFECT $\ast$ppEffect, LPD3DXBUFFER $\ast$ppCompilationErrors)
+\item 
+HRESULT \hyperlink{class_c_d_x_u_t_resource_cache_ae502f51b236a110cd2d7470065d284b8}{OnCreateDevice} (IDirect3DDevice9 $\ast$pd3dDevice)
+\item 
+HRESULT \hyperlink{class_c_d_x_u_t_resource_cache_a10f3f5f8c73a0c64cb64e9647a1e3735}{OnResetDevice} (IDirect3DDevice9 $\ast$pd3dDevice)
+\item 
+HRESULT \hyperlink{class_c_d_x_u_t_resource_cache_abaf5192e33946915a9d1a3098ffdd17a}{OnLostDevice} ()
+\item 
+HRESULT \hyperlink{class_c_d_x_u_t_resource_cache_ac91b24c21474e187e21099c72583946e}{OnDestroyDevice} ()
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_c_d_x_u_t_resource_cache_a3bc1b064b7dd4522b89186491179e192}{CDXUTResourceCache} ()
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_c_growable_array}{CGrowableArray}$<$ \hyperlink{struct_d_x_u_t_cache___texture}{DXUTCache\_\-Texture} $>$ \hyperlink{class_c_d_x_u_t_resource_cache_a78a0625d24096363227bf95d51f129ad}{m\_\-TextureCache}
+\item 
+\hyperlink{class_c_growable_array}{CGrowableArray}$<$ \hyperlink{struct_d_x_u_t_cache___effect}{DXUTCache\_\-Effect} $>$ \hyperlink{class_c_d_x_u_t_resource_cache_a8dedf93e482bd77018709733a6c664c0}{m\_\-EffectCache}
+\item 
+\hyperlink{class_c_growable_array}{CGrowableArray}$<$ \hyperlink{struct_d_x_u_t_cache___font}{DXUTCache\_\-Font} $>$ \hyperlink{class_c_d_x_u_t_resource_cache_a014f0621996d9fdb9ad32630ba1d9afa}{m\_\-FontCache}
+\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_c_d_x_u_t_resource_cache}{CDXUTResourceCache} \& \hyperlink{class_c_d_x_u_t_resource_cache_aa4ef62fbd7e1e944b3aea0f090f3de5f}{DXUTGetGlobalResourceCache} ()
+\item 
+HRESULT \hyperlink{class_c_d_x_u_t_resource_cache_a3b09c83d5019bcc724c80b297c581f90}{DXUTInitialize3DEnvironment} ()
+\item 
+HRESULT \hyperlink{class_c_d_x_u_t_resource_cache_ad0f752da1fdf43f04bf43f8210d6e5f0}{DXUTReset3DEnvironment} ()
+\item 
+void \hyperlink{class_c_d_x_u_t_resource_cache_af3c5bc0824d1e05bc4c3a5190896a259}{DXUTCleanup3DEnvironment} (bool bReleaseSettings)
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_c_d_x_u_t_resource_cache_a1986d13c2bac18a41178e446917e1d64}{
+\index{CDXUTResourceCache@{CDXUTResourceCache}!$\sim$CDXUTResourceCache@{$\sim$CDXUTResourceCache}}
+\index{$\sim$CDXUTResourceCache@{$\sim$CDXUTResourceCache}!CDXUTResourceCache@{CDXUTResourceCache}}
+\subsubsection[{$\sim$CDXUTResourceCache}]{\setlength{\rightskip}{0pt plus 5cm}CDXUTResourceCache::$\sim$CDXUTResourceCache ()}}
+\label{class_c_d_x_u_t_resource_cache_a1986d13c2bac18a41178e446917e1d64}
+\hypertarget{class_c_d_x_u_t_resource_cache_a3bc1b064b7dd4522b89186491179e192}{
+\index{CDXUTResourceCache@{CDXUTResourceCache}!CDXUTResourceCache@{CDXUTResourceCache}}
+\index{CDXUTResourceCache@{CDXUTResourceCache}!CDXUTResourceCache@{CDXUTResourceCache}}
+\subsubsection[{CDXUTResourceCache}]{\setlength{\rightskip}{0pt plus 5cm}CDXUTResourceCache::CDXUTResourceCache ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline, protected\mbox{]}}}}
+\label{class_c_d_x_u_t_resource_cache_a3bc1b064b7dd4522b89186491179e192}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_c_d_x_u_t_resource_cache_ac81b19e2dfca7f4ef542425007b6cfc8}{
+\index{CDXUTResourceCache@{CDXUTResourceCache}!CreateCubeTextureFromFile@{CreateCubeTextureFromFile}}
+\index{CreateCubeTextureFromFile@{CreateCubeTextureFromFile}!CDXUTResourceCache@{CDXUTResourceCache}}
+\subsubsection[{CreateCubeTextureFromFile}]{\setlength{\rightskip}{0pt plus 5cm}HRESULT CDXUTResourceCache::CreateCubeTextureFromFile (LPDIRECT3DDEVICE9 {\em pDevice}, \/  LPCTSTR {\em pSrcFile}, \/  LPDIRECT3DCUBETEXTURE9 $\ast$ {\em ppCubeTexture})}}
+\label{class_c_d_x_u_t_resource_cache_ac81b19e2dfca7f4ef542425007b6cfc8}
+\hypertarget{class_c_d_x_u_t_resource_cache_a3c03e924cfd9af63363f5976f266c14e}{
+\index{CDXUTResourceCache@{CDXUTResourceCache}!CreateCubeTextureFromFileEx@{CreateCubeTextureFromFileEx}}
+\index{CreateCubeTextureFromFileEx@{CreateCubeTextureFromFileEx}!CDXUTResourceCache@{CDXUTResourceCache}}
+\subsubsection[{CreateCubeTextureFromFileEx}]{\setlength{\rightskip}{0pt plus 5cm}HRESULT CDXUTResourceCache::CreateCubeTextureFromFileEx (LPDIRECT3DDEVICE9 {\em pDevice}, \/  LPCTSTR {\em pSrcFile}, \/  UINT {\em Size}, \/  UINT {\em MipLevels}, \/  DWORD {\em Usage}, \/  D3DFORMAT {\em Format}, \/  D3DPOOL {\em Pool}, \/  DWORD {\em Filter}, \/  DWORD {\em MipFilter}, \/  D3DCOLOR {\em ColorKey}, \/  D3DXIMAGE\_\-INFO $\ast$ {\em pSrcInfo}, \/  PALETTEENTRY $\ast$ {\em pPalette}, \/  LPDIRECT3DCUBETEXTURE9 $\ast$ {\em ppCubeTexture})}}
+\label{class_c_d_x_u_t_resource_cache_a3c03e924cfd9af63363f5976f266c14e}
+\hypertarget{class_c_d_x_u_t_resource_cache_a778a88f6051a949abb95dc1923c13b83}{
+\index{CDXUTResourceCache@{CDXUTResourceCache}!CreateCubeTextureFromResource@{CreateCubeTextureFromResource}}
+\index{CreateCubeTextureFromResource@{CreateCubeTextureFromResource}!CDXUTResourceCache@{CDXUTResourceCache}}
+\subsubsection[{CreateCubeTextureFromResource}]{\setlength{\rightskip}{0pt plus 5cm}HRESULT CDXUTResourceCache::CreateCubeTextureFromResource (LPDIRECT3DDEVICE9 {\em pDevice}, \/  HMODULE {\em hSrcModule}, \/  LPCTSTR {\em pSrcResource}, \/  LPDIRECT3DCUBETEXTURE9 $\ast$ {\em ppCubeTexture})}}
+\label{class_c_d_x_u_t_resource_cache_a778a88f6051a949abb95dc1923c13b83}
+\hypertarget{class_c_d_x_u_t_resource_cache_afdf53d69820d5c0f5f9af4d7b51bd81a}{
+\index{CDXUTResourceCache@{CDXUTResourceCache}!CreateCubeTextureFromResourceEx@{CreateCubeTextureFromResourceEx}}
+\index{CreateCubeTextureFromResourceEx@{CreateCubeTextureFromResourceEx}!CDXUTResourceCache@{CDXUTResourceCache}}
+\subsubsection[{CreateCubeTextureFromResourceEx}]{\setlength{\rightskip}{0pt plus 5cm}HRESULT CDXUTResourceCache::CreateCubeTextureFromResourceEx (LPDIRECT3DDEVICE9 {\em pDevice}, \/  HMODULE {\em hSrcModule}, \/  LPCTSTR {\em pSrcResource}, \/  UINT {\em Size}, \/  UINT {\em MipLevels}, \/  DWORD {\em Usage}, \/  D3DFORMAT {\em Format}, \/  D3DPOOL {\em Pool}, \/  DWORD {\em Filter}, \/  DWORD {\em MipFilter}, \/  D3DCOLOR {\em ColorKey}, \/  D3DXIMAGE\_\-INFO $\ast$ {\em pSrcInfo}, \/  PALETTEENTRY $\ast$ {\em pPalette}, \/  LPDIRECT3DCUBETEXTURE9 $\ast$ {\em ppCubeTexture})}}
+\label{class_c_d_x_u_t_resource_cache_afdf53d69820d5c0f5f9af4d7b51bd81a}
+\hypertarget{class_c_d_x_u_t_resource_cache_a7752a899e2deab9c7b691adc72c45792}{
+\index{CDXUTResourceCache@{CDXUTResourceCache}!CreateEffectFromFile@{CreateEffectFromFile}}
+\index{CreateEffectFromFile@{CreateEffectFromFile}!CDXUTResourceCache@{CDXUTResourceCache}}
+\subsubsection[{CreateEffectFromFile}]{\setlength{\rightskip}{0pt plus 5cm}HRESULT CDXUTResourceCache::CreateEffectFromFile (LPDIRECT3DDEVICE9 {\em pDevice}, \/  LPCTSTR {\em pSrcFile}, \/  const D3DXMACRO $\ast$ {\em pDefines}, \/  LPD3DXINCLUDE {\em pInclude}, \/  DWORD {\em Flags}, \/  LPD3DXEFFECTPOOL {\em pPool}, \/  LPD3DXEFFECT $\ast$ {\em ppEffect}, \/  LPD3DXBUFFER $\ast$ {\em ppCompilationErrors})}}
+\label{class_c_d_x_u_t_resource_cache_a7752a899e2deab9c7b691adc72c45792}
+\hypertarget{class_c_d_x_u_t_resource_cache_a6bc96eb215a1888bdcbffcbb63e45f6d}{
+\index{CDXUTResourceCache@{CDXUTResourceCache}!CreateEffectFromResource@{CreateEffectFromResource}}
+\index{CreateEffectFromResource@{CreateEffectFromResource}!CDXUTResourceCache@{CDXUTResourceCache}}
+\subsubsection[{CreateEffectFromResource}]{\setlength{\rightskip}{0pt plus 5cm}HRESULT CDXUTResourceCache::CreateEffectFromResource (LPDIRECT3DDEVICE9 {\em pDevice}, \/  HMODULE {\em hSrcModule}, \/  LPCTSTR {\em pSrcResource}, \/  const D3DXMACRO $\ast$ {\em pDefines}, \/  LPD3DXINCLUDE {\em pInclude}, \/  DWORD {\em Flags}, \/  LPD3DXEFFECTPOOL {\em pPool}, \/  LPD3DXEFFECT $\ast$ {\em ppEffect}, \/  LPD3DXBUFFER $\ast$ {\em ppCompilationErrors})}}
+\label{class_c_d_x_u_t_resource_cache_a6bc96eb215a1888bdcbffcbb63e45f6d}
+\hypertarget{class_c_d_x_u_t_resource_cache_a55e34fa53a7d702d20a20e6c79acd945}{
+\index{CDXUTResourceCache@{CDXUTResourceCache}!CreateFont@{CreateFont}}
+\index{CreateFont@{CreateFont}!CDXUTResourceCache@{CDXUTResourceCache}}
+\subsubsection[{CreateFont}]{\setlength{\rightskip}{0pt plus 5cm}HRESULT CDXUTResourceCache::CreateFont (LPDIRECT3DDEVICE9 {\em pDevice}, \/  UINT {\em Height}, \/  UINT {\em Width}, \/  UINT {\em Weight}, \/  UINT {\em MipLevels}, \/  BOOL {\em Italic}, \/  DWORD {\em CharSet}, \/  DWORD {\em OutputPrecision}, \/  DWORD {\em Quality}, \/  DWORD {\em PitchAndFamily}, \/  LPCTSTR {\em pFacename}, \/  LPD3DXFONT $\ast$ {\em ppFont})}}
+\label{class_c_d_x_u_t_resource_cache_a55e34fa53a7d702d20a20e6c79acd945}
+\hypertarget{class_c_d_x_u_t_resource_cache_ac3dc49f6b373324035d0833257b1501e}{
+\index{CDXUTResourceCache@{CDXUTResourceCache}!CreateFontIndirect@{CreateFontIndirect}}
+\index{CreateFontIndirect@{CreateFontIndirect}!CDXUTResourceCache@{CDXUTResourceCache}}
+\subsubsection[{CreateFontIndirect}]{\setlength{\rightskip}{0pt plus 5cm}HRESULT CDXUTResourceCache::CreateFontIndirect (LPDIRECT3DDEVICE9 {\em pDevice}, \/  CONST D3DXFONT\_\-DESC $\ast$ {\em pDesc}, \/  LPD3DXFONT $\ast$ {\em ppFont})}}
+\label{class_c_d_x_u_t_resource_cache_ac3dc49f6b373324035d0833257b1501e}
+\hypertarget{class_c_d_x_u_t_resource_cache_a682c9c2045cc661670d98412deb5f4ef}{
+\index{CDXUTResourceCache@{CDXUTResourceCache}!CreateTextureFromFile@{CreateTextureFromFile}}
+\index{CreateTextureFromFile@{CreateTextureFromFile}!CDXUTResourceCache@{CDXUTResourceCache}}
+\subsubsection[{CreateTextureFromFile}]{\setlength{\rightskip}{0pt plus 5cm}HRESULT CDXUTResourceCache::CreateTextureFromFile (LPDIRECT3DDEVICE9 {\em pDevice}, \/  LPCTSTR {\em pSrcFile}, \/  LPDIRECT3DTEXTURE9 $\ast$ {\em ppTexture})}}
+\label{class_c_d_x_u_t_resource_cache_a682c9c2045cc661670d98412deb5f4ef}
+\hypertarget{class_c_d_x_u_t_resource_cache_a4f33257885010dd13d4e996e9d3d2d3e}{
+\index{CDXUTResourceCache@{CDXUTResourceCache}!CreateTextureFromFileEx@{CreateTextureFromFileEx}}
+\index{CreateTextureFromFileEx@{CreateTextureFromFileEx}!CDXUTResourceCache@{CDXUTResourceCache}}
+\subsubsection[{CreateTextureFromFileEx}]{\setlength{\rightskip}{0pt plus 5cm}HRESULT CDXUTResourceCache::CreateTextureFromFileEx (LPDIRECT3DDEVICE9 {\em pDevice}, \/  LPCTSTR {\em pSrcFile}, \/  UINT {\em Width}, \/  UINT {\em Height}, \/  UINT {\em MipLevels}, \/  DWORD {\em Usage}, \/  D3DFORMAT {\em Format}, \/  D3DPOOL {\em Pool}, \/  DWORD {\em Filter}, \/  DWORD {\em MipFilter}, \/  D3DCOLOR {\em ColorKey}, \/  D3DXIMAGE\_\-INFO $\ast$ {\em pSrcInfo}, \/  PALETTEENTRY $\ast$ {\em pPalette}, \/  LPDIRECT3DTEXTURE9 $\ast$ {\em ppTexture})}}
+\label{class_c_d_x_u_t_resource_cache_a4f33257885010dd13d4e996e9d3d2d3e}
+\hypertarget{class_c_d_x_u_t_resource_cache_ac2289531afd466288f7b35b2aa2a8ab1}{
+\index{CDXUTResourceCache@{CDXUTResourceCache}!CreateTextureFromResource@{CreateTextureFromResource}}
+\index{CreateTextureFromResource@{CreateTextureFromResource}!CDXUTResourceCache@{CDXUTResourceCache}}
+\subsubsection[{CreateTextureFromResource}]{\setlength{\rightskip}{0pt plus 5cm}HRESULT CDXUTResourceCache::CreateTextureFromResource (LPDIRECT3DDEVICE9 {\em pDevice}, \/  HMODULE {\em hSrcModule}, \/  LPCTSTR {\em pSrcResource}, \/  LPDIRECT3DTEXTURE9 $\ast$ {\em ppTexture})}}
+\label{class_c_d_x_u_t_resource_cache_ac2289531afd466288f7b35b2aa2a8ab1}
+\hypertarget{class_c_d_x_u_t_resource_cache_a0da1d5be9bcc2332a63b6a9f3dac24c6}{
+\index{CDXUTResourceCache@{CDXUTResourceCache}!CreateTextureFromResourceEx@{CreateTextureFromResourceEx}}
+\index{CreateTextureFromResourceEx@{CreateTextureFromResourceEx}!CDXUTResourceCache@{CDXUTResourceCache}}
+\subsubsection[{CreateTextureFromResourceEx}]{\setlength{\rightskip}{0pt plus 5cm}HRESULT CDXUTResourceCache::CreateTextureFromResourceEx (LPDIRECT3DDEVICE9 {\em pDevice}, \/  HMODULE {\em hSrcModule}, \/  LPCTSTR {\em pSrcResource}, \/  UINT {\em Width}, \/  UINT {\em Height}, \/  UINT {\em MipLevels}, \/  DWORD {\em Usage}, \/  D3DFORMAT {\em Format}, \/  D3DPOOL {\em Pool}, \/  DWORD {\em Filter}, \/  DWORD {\em MipFilter}, \/  D3DCOLOR {\em ColorKey}, \/  D3DXIMAGE\_\-INFO $\ast$ {\em pSrcInfo}, \/  PALETTEENTRY $\ast$ {\em pPalette}, \/  LPDIRECT3DTEXTURE9 $\ast$ {\em ppTexture})}}
+\label{class_c_d_x_u_t_resource_cache_a0da1d5be9bcc2332a63b6a9f3dac24c6}
+\hypertarget{class_c_d_x_u_t_resource_cache_aeaf7cd870d8f048f32566aa2964e8b3e}{
+\index{CDXUTResourceCache@{CDXUTResourceCache}!CreateVolumeTextureFromFile@{CreateVolumeTextureFromFile}}
+\index{CreateVolumeTextureFromFile@{CreateVolumeTextureFromFile}!CDXUTResourceCache@{CDXUTResourceCache}}
+\subsubsection[{CreateVolumeTextureFromFile}]{\setlength{\rightskip}{0pt plus 5cm}HRESULT CDXUTResourceCache::CreateVolumeTextureFromFile (LPDIRECT3DDEVICE9 {\em pDevice}, \/  LPCTSTR {\em pSrcFile}, \/  LPDIRECT3DVOLUMETEXTURE9 $\ast$ {\em ppVolumeTexture})}}
+\label{class_c_d_x_u_t_resource_cache_aeaf7cd870d8f048f32566aa2964e8b3e}
+\hypertarget{class_c_d_x_u_t_resource_cache_a6fdd52b77094e786e6c4eb6d19c4ec11}{
+\index{CDXUTResourceCache@{CDXUTResourceCache}!CreateVolumeTextureFromFileEx@{CreateVolumeTextureFromFileEx}}
+\index{CreateVolumeTextureFromFileEx@{CreateVolumeTextureFromFileEx}!CDXUTResourceCache@{CDXUTResourceCache}}
+\subsubsection[{CreateVolumeTextureFromFileEx}]{\setlength{\rightskip}{0pt plus 5cm}HRESULT CDXUTResourceCache::CreateVolumeTextureFromFileEx (LPDIRECT3DDEVICE9 {\em pDevice}, \/  LPCTSTR {\em pSrcFile}, \/  UINT {\em Width}, \/  UINT {\em Height}, \/  UINT {\em Depth}, \/  UINT {\em MipLevels}, \/  DWORD {\em Usage}, \/  D3DFORMAT {\em Format}, \/  D3DPOOL {\em Pool}, \/  DWORD {\em Filter}, \/  DWORD {\em MipFilter}, \/  D3DCOLOR {\em ColorKey}, \/  D3DXIMAGE\_\-INFO $\ast$ {\em pSrcInfo}, \/  PALETTEENTRY $\ast$ {\em pPalette}, \/  LPDIRECT3DVOLUMETEXTURE9 $\ast$ {\em ppTexture})}}
+\label{class_c_d_x_u_t_resource_cache_a6fdd52b77094e786e6c4eb6d19c4ec11}
+\hypertarget{class_c_d_x_u_t_resource_cache_aa016831002fa2b54bd7cea38072c9a5c}{
+\index{CDXUTResourceCache@{CDXUTResourceCache}!CreateVolumeTextureFromResource@{CreateVolumeTextureFromResource}}
+\index{CreateVolumeTextureFromResource@{CreateVolumeTextureFromResource}!CDXUTResourceCache@{CDXUTResourceCache}}
+\subsubsection[{CreateVolumeTextureFromResource}]{\setlength{\rightskip}{0pt plus 5cm}HRESULT CDXUTResourceCache::CreateVolumeTextureFromResource (LPDIRECT3DDEVICE9 {\em pDevice}, \/  HMODULE {\em hSrcModule}, \/  LPCTSTR {\em pSrcResource}, \/  LPDIRECT3DVOLUMETEXTURE9 $\ast$ {\em ppVolumeTexture})}}
+\label{class_c_d_x_u_t_resource_cache_aa016831002fa2b54bd7cea38072c9a5c}
+\hypertarget{class_c_d_x_u_t_resource_cache_a0ffaceddcccad20ae27475f698bd884d}{
+\index{CDXUTResourceCache@{CDXUTResourceCache}!CreateVolumeTextureFromResourceEx@{CreateVolumeTextureFromResourceEx}}
+\index{CreateVolumeTextureFromResourceEx@{CreateVolumeTextureFromResourceEx}!CDXUTResourceCache@{CDXUTResourceCache}}
+\subsubsection[{CreateVolumeTextureFromResourceEx}]{\setlength{\rightskip}{0pt plus 5cm}HRESULT CDXUTResourceCache::CreateVolumeTextureFromResourceEx (LPDIRECT3DDEVICE9 {\em pDevice}, \/  HMODULE {\em hSrcModule}, \/  LPCTSTR {\em pSrcResource}, \/  UINT {\em Width}, \/  UINT {\em Height}, \/  UINT {\em Depth}, \/  UINT {\em MipLevels}, \/  DWORD {\em Usage}, \/  D3DFORMAT {\em Format}, \/  D3DPOOL {\em Pool}, \/  DWORD {\em Filter}, \/  DWORD {\em MipFilter}, \/  D3DCOLOR {\em ColorKey}, \/  D3DXIMAGE\_\-INFO $\ast$ {\em pSrcInfo}, \/  PALETTEENTRY $\ast$ {\em pPalette}, \/  LPDIRECT3DVOLUMETEXTURE9 $\ast$ {\em ppVolumeTexture})}}
+\label{class_c_d_x_u_t_resource_cache_a0ffaceddcccad20ae27475f698bd884d}
+\hypertarget{class_c_d_x_u_t_resource_cache_ae502f51b236a110cd2d7470065d284b8}{
+\index{CDXUTResourceCache@{CDXUTResourceCache}!OnCreateDevice@{OnCreateDevice}}
+\index{OnCreateDevice@{OnCreateDevice}!CDXUTResourceCache@{CDXUTResourceCache}}
+\subsubsection[{OnCreateDevice}]{\setlength{\rightskip}{0pt plus 5cm}HRESULT CDXUTResourceCache::OnCreateDevice (IDirect3DDevice9 $\ast$ {\em pd3dDevice})}}
+\label{class_c_d_x_u_t_resource_cache_ae502f51b236a110cd2d7470065d284b8}
+\hypertarget{class_c_d_x_u_t_resource_cache_ac91b24c21474e187e21099c72583946e}{
+\index{CDXUTResourceCache@{CDXUTResourceCache}!OnDestroyDevice@{OnDestroyDevice}}
+\index{OnDestroyDevice@{OnDestroyDevice}!CDXUTResourceCache@{CDXUTResourceCache}}
+\subsubsection[{OnDestroyDevice}]{\setlength{\rightskip}{0pt plus 5cm}HRESULT CDXUTResourceCache::OnDestroyDevice ()}}
+\label{class_c_d_x_u_t_resource_cache_ac91b24c21474e187e21099c72583946e}
+\hypertarget{class_c_d_x_u_t_resource_cache_abaf5192e33946915a9d1a3098ffdd17a}{
+\index{CDXUTResourceCache@{CDXUTResourceCache}!OnLostDevice@{OnLostDevice}}
+\index{OnLostDevice@{OnLostDevice}!CDXUTResourceCache@{CDXUTResourceCache}}
+\subsubsection[{OnLostDevice}]{\setlength{\rightskip}{0pt plus 5cm}HRESULT CDXUTResourceCache::OnLostDevice ()}}
+\label{class_c_d_x_u_t_resource_cache_abaf5192e33946915a9d1a3098ffdd17a}
+\hypertarget{class_c_d_x_u_t_resource_cache_a10f3f5f8c73a0c64cb64e9647a1e3735}{
+\index{CDXUTResourceCache@{CDXUTResourceCache}!OnResetDevice@{OnResetDevice}}
+\index{OnResetDevice@{OnResetDevice}!CDXUTResourceCache@{CDXUTResourceCache}}
+\subsubsection[{OnResetDevice}]{\setlength{\rightskip}{0pt plus 5cm}HRESULT CDXUTResourceCache::OnResetDevice (IDirect3DDevice9 $\ast$ {\em pd3dDevice})}}
+\label{class_c_d_x_u_t_resource_cache_a10f3f5f8c73a0c64cb64e9647a1e3735}
+
+
+\subsection{Friends And Related Function Documentation}
+\hypertarget{class_c_d_x_u_t_resource_cache_af3c5bc0824d1e05bc4c3a5190896a259}{
+\index{CDXUTResourceCache@{CDXUTResourceCache}!DXUTCleanup3DEnvironment@{DXUTCleanup3DEnvironment}}
+\index{DXUTCleanup3DEnvironment@{DXUTCleanup3DEnvironment}!CDXUTResourceCache@{CDXUTResourceCache}}
+\subsubsection[{DXUTCleanup3DEnvironment}]{\setlength{\rightskip}{0pt plus 5cm}void DXUTCleanup3DEnvironment (bool {\em bReleaseSettings} = {\ttfamily true})\hspace{0.3cm}{\ttfamily  \mbox{[}friend\mbox{]}}}}
+\label{class_c_d_x_u_t_resource_cache_af3c5bc0824d1e05bc4c3a5190896a259}
+\hypertarget{class_c_d_x_u_t_resource_cache_aa4ef62fbd7e1e944b3aea0f090f3de5f}{
+\index{CDXUTResourceCache@{CDXUTResourceCache}!DXUTGetGlobalResourceCache@{DXUTGetGlobalResourceCache}}
+\index{DXUTGetGlobalResourceCache@{DXUTGetGlobalResourceCache}!CDXUTResourceCache@{CDXUTResourceCache}}
+\subsubsection[{DXUTGetGlobalResourceCache}]{\setlength{\rightskip}{0pt plus 5cm}{\bf CDXUTResourceCache}\& DXUTGetGlobalResourceCache ()\hspace{0.3cm}{\ttfamily  \mbox{[}friend\mbox{]}}}}
+\label{class_c_d_x_u_t_resource_cache_aa4ef62fbd7e1e944b3aea0f090f3de5f}
+\hypertarget{class_c_d_x_u_t_resource_cache_a3b09c83d5019bcc724c80b297c581f90}{
+\index{CDXUTResourceCache@{CDXUTResourceCache}!DXUTInitialize3DEnvironment@{DXUTInitialize3DEnvironment}}
+\index{DXUTInitialize3DEnvironment@{DXUTInitialize3DEnvironment}!CDXUTResourceCache@{CDXUTResourceCache}}
+\subsubsection[{DXUTInitialize3DEnvironment}]{\setlength{\rightskip}{0pt plus 5cm}HRESULT DXUTInitialize3DEnvironment ()\hspace{0.3cm}{\ttfamily  \mbox{[}friend\mbox{]}}}}
+\label{class_c_d_x_u_t_resource_cache_a3b09c83d5019bcc724c80b297c581f90}
+\hypertarget{class_c_d_x_u_t_resource_cache_ad0f752da1fdf43f04bf43f8210d6e5f0}{
+\index{CDXUTResourceCache@{CDXUTResourceCache}!DXUTReset3DEnvironment@{DXUTReset3DEnvironment}}
+\index{DXUTReset3DEnvironment@{DXUTReset3DEnvironment}!CDXUTResourceCache@{CDXUTResourceCache}}
+\subsubsection[{DXUTReset3DEnvironment}]{\setlength{\rightskip}{0pt plus 5cm}HRESULT DXUTReset3DEnvironment ()\hspace{0.3cm}{\ttfamily  \mbox{[}friend\mbox{]}}}}
+\label{class_c_d_x_u_t_resource_cache_ad0f752da1fdf43f04bf43f8210d6e5f0}
+
+
+\subsection{Member Data Documentation}
+\hypertarget{class_c_d_x_u_t_resource_cache_a8dedf93e482bd77018709733a6c664c0}{
+\index{CDXUTResourceCache@{CDXUTResourceCache}!m\_\-EffectCache@{m\_\-EffectCache}}
+\index{m\_\-EffectCache@{m\_\-EffectCache}!CDXUTResourceCache@{CDXUTResourceCache}}
+\subsubsection[{m\_\-EffectCache}]{\setlength{\rightskip}{0pt plus 5cm}{\bf CGrowableArray}$<$ {\bf DXUTCache\_\-Effect} $>$ {\bf CDXUTResourceCache::m\_\-EffectCache}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{class_c_d_x_u_t_resource_cache_a8dedf93e482bd77018709733a6c664c0}
+\hypertarget{class_c_d_x_u_t_resource_cache_a014f0621996d9fdb9ad32630ba1d9afa}{
+\index{CDXUTResourceCache@{CDXUTResourceCache}!m\_\-FontCache@{m\_\-FontCache}}
+\index{m\_\-FontCache@{m\_\-FontCache}!CDXUTResourceCache@{CDXUTResourceCache}}
+\subsubsection[{m\_\-FontCache}]{\setlength{\rightskip}{0pt plus 5cm}{\bf CGrowableArray}$<$ {\bf DXUTCache\_\-Font} $>$ {\bf CDXUTResourceCache::m\_\-FontCache}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{class_c_d_x_u_t_resource_cache_a014f0621996d9fdb9ad32630ba1d9afa}
+\hypertarget{class_c_d_x_u_t_resource_cache_a78a0625d24096363227bf95d51f129ad}{
+\index{CDXUTResourceCache@{CDXUTResourceCache}!m\_\-TextureCache@{m\_\-TextureCache}}
+\index{m\_\-TextureCache@{m\_\-TextureCache}!CDXUTResourceCache@{CDXUTResourceCache}}
+\subsubsection[{m\_\-TextureCache}]{\setlength{\rightskip}{0pt plus 5cm}{\bf CGrowableArray}$<$ {\bf DXUTCache\_\-Texture} $>$ {\bf CDXUTResourceCache::m\_\-TextureCache}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{class_c_d_x_u_t_resource_cache_a78a0625d24096363227bf95d51f129ad}
+
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+C:/Users/doug/Documents/Visual Studio 2008/Projects/enlightened/Enlightened/DXUT/\hyperlink{_d_x_u_tmisc_8h}{DXUTmisc.h}\item 
+C:/Users/doug/Documents/Visual Studio 2008/Projects/enlightened/Enlightened/DXUT/\hyperlink{_d_x_u_tmisc_8cpp}{DXUTmisc.cpp}\end{DoxyCompactItemize}

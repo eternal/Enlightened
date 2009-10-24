@@ -1,0 +1,291 @@
+\hypertarget{class_c_d_x_u_t_scroll_bar}{
+\section{CDXUTScrollBar Class Reference}
+\label{class_c_d_x_u_t_scroll_bar}\index{CDXUTScrollBar@{CDXUTScrollBar}}
+}
+
+
+{\ttfamily \#include $<$DXUTgui.h$>$}
+
+Inherits \hyperlink{class_c_d_x_u_t_control}{CDXUTControl}.Collaboration diagram for CDXUTScrollBar:\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_c_d_x_u_t_scroll_bar_accc3179c9b36ece4b5560bb1310689e7}{CDXUTScrollBar} (\hyperlink{class_c_d_x_u_t_dialog}{CDXUTDialog} $\ast$pDialog=NULL)
+\item 
+virtual \hyperlink{class_c_d_x_u_t_scroll_bar_a8ebd4d8debf6a5f0f746dd3621162a75}{$\sim$CDXUTScrollBar} ()
+\item 
+virtual bool \hyperlink{class_c_d_x_u_t_scroll_bar_a07c561820f6f3362f94a391c7ff58b04}{HandleKeyboard} (UINT uMsg, WPARAM wParam, LPARAM lParam)
+\item 
+virtual bool \hyperlink{class_c_d_x_u_t_scroll_bar_aa0c2286530836c1ed431dea5760280da}{HandleMouse} (UINT uMsg, POINT pt, WPARAM wParam, LPARAM lParam)
+\item 
+virtual bool \hyperlink{class_c_d_x_u_t_scroll_bar_a8c4363b3a1415d06e22906e706e1ff76}{MsgProc} (UINT uMsg, WPARAM wParam, LPARAM lParam)
+\item 
+virtual void \hyperlink{class_c_d_x_u_t_scroll_bar_a57f6ed8cfcb605406dc8500e8ff86538}{Render} (IDirect3DDevice9 $\ast$pd3dDevice, float fElapsedTime)
+\item 
+virtual void \hyperlink{class_c_d_x_u_t_scroll_bar_ae25e1547d974b0913688da998e43d331}{UpdateRects} ()
+\item 
+void \hyperlink{class_c_d_x_u_t_scroll_bar_ae8eb89fb79562550d1c481ba5f268522}{SetTrackRange} (\hyperlink{_d_x_u_tgui_8cpp_a2d77ed03302b6978834ee3b6f57837fb}{int} nStart, \hyperlink{_d_x_u_tgui_8cpp_a2d77ed03302b6978834ee3b6f57837fb}{int} nEnd)
+\item 
+\hyperlink{_d_x_u_tgui_8cpp_a2d77ed03302b6978834ee3b6f57837fb}{int} \hyperlink{class_c_d_x_u_t_scroll_bar_a96acaab90a5e33368ad8af53cb111e38}{GetTrackPos} ()
+\item 
+void \hyperlink{class_c_d_x_u_t_scroll_bar_af38e14cfcc0d51d1c3238b3ed1d21553}{SetTrackPos} (\hyperlink{_d_x_u_tgui_8cpp_a2d77ed03302b6978834ee3b6f57837fb}{int} nPosition)
+\item 
+\hyperlink{_d_x_u_tgui_8cpp_a2d77ed03302b6978834ee3b6f57837fb}{int} \hyperlink{class_c_d_x_u_t_scroll_bar_aa345a24d104acd194af1c637bb386fc3}{GetPageSize} ()
+\item 
+void \hyperlink{class_c_d_x_u_t_scroll_bar_ad59e8080c3af65a712c725d8cb4f1a10}{SetPageSize} (\hyperlink{_d_x_u_tgui_8cpp_a2d77ed03302b6978834ee3b6f57837fb}{int} nPageSize)
+\item 
+void \hyperlink{class_c_d_x_u_t_scroll_bar_ae0f76bd7f88a7f26fce6b6026c686245}{Scroll} (\hyperlink{_d_x_u_tgui_8cpp_a2d77ed03302b6978834ee3b6f57837fb}{int} nDelta)
+\item 
+void \hyperlink{class_c_d_x_u_t_scroll_bar_ae7cbe7407c725caf9f57ee95a3e633ca}{ShowItem} (\hyperlink{_d_x_u_tgui_8cpp_a2d77ed03302b6978834ee3b6f57837fb}{int} nIndex)
+\end{DoxyCompactItemize}
+\subsection*{Protected Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{class_c_d_x_u_t_scroll_bar_a43b1ef354a17195db720617bf6b34595}{ARROWSTATE} \{ \par
+\hyperlink{class_c_d_x_u_t_scroll_bar_a43b1ef354a17195db720617bf6b34595a58ecc240070da4e972c23f1cd0deee7c}{CLEAR}, 
+\hyperlink{class_c_d_x_u_t_scroll_bar_a43b1ef354a17195db720617bf6b34595a376838d4568537d54ac440758d4361e5}{CLICKED\_\-UP}, 
+\hyperlink{class_c_d_x_u_t_scroll_bar_a43b1ef354a17195db720617bf6b34595a301225074fcc3266420019c1f541bfd3}{CLICKED\_\-DOWN}, 
+\hyperlink{class_c_d_x_u_t_scroll_bar_a43b1ef354a17195db720617bf6b34595a3b7008371084d0e81d4dab21cb8669d7}{HELD\_\-UP}, 
+\par
+\hyperlink{class_c_d_x_u_t_scroll_bar_a43b1ef354a17195db720617bf6b34595ae1d90e180e124651da98fd39f25f65c0}{HELD\_\-DOWN}
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{class_c_d_x_u_t_scroll_bar_aab1de864a32b8813b814a67cc232eeed}{UpdateThumbRect} ()
+\item 
+void \hyperlink{class_c_d_x_u_t_scroll_bar_a2a680f2ce9c5fa971ccc9b618de9e8fa}{Cap} ()
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+bool \hyperlink{class_c_d_x_u_t_scroll_bar_aa7a51e9a1a97f52f0c0867de95f2a348}{m\_\-bShowThumb}
+\item 
+bool \hyperlink{class_c_d_x_u_t_scroll_bar_a01ff830ad7a6126be8fe58c7d6c5a625}{m\_\-bDrag}
+\item 
+RECT \hyperlink{class_c_d_x_u_t_scroll_bar_af4d481a35224a1b9bd6d4b369b3c3dd1}{m\_\-rcUpButton}
+\item 
+RECT \hyperlink{class_c_d_x_u_t_scroll_bar_a7bd528426fbee3aefc6056e8bde9fece}{m\_\-rcDownButton}
+\item 
+RECT \hyperlink{class_c_d_x_u_t_scroll_bar_ae7da461cf4b1658f14ce9ec0d74e8dad}{m\_\-rcTrack}
+\item 
+RECT \hyperlink{class_c_d_x_u_t_scroll_bar_a6b29ad3dbc532c385fd0d67170aa732a}{m\_\-rcThumb}
+\item 
+\hyperlink{_d_x_u_tgui_8cpp_a2d77ed03302b6978834ee3b6f57837fb}{int} \hyperlink{class_c_d_x_u_t_scroll_bar_a56626224bbb2aa068c8d5d4bf2efeab9}{m\_\-nPosition}
+\item 
+\hyperlink{_d_x_u_tgui_8cpp_a2d77ed03302b6978834ee3b6f57837fb}{int} \hyperlink{class_c_d_x_u_t_scroll_bar_afb1955f3af80efd279c38d45882e67e0}{m\_\-nPageSize}
+\item 
+\hyperlink{_d_x_u_tgui_8cpp_a2d77ed03302b6978834ee3b6f57837fb}{int} \hyperlink{class_c_d_x_u_t_scroll_bar_a435f88f5790f27a818502da70f20c5bc}{m\_\-nStart}
+\item 
+\hyperlink{_d_x_u_tgui_8cpp_a2d77ed03302b6978834ee3b6f57837fb}{int} \hyperlink{class_c_d_x_u_t_scroll_bar_afc8b5ddb1c7cc92442d29e3cc23d11f1}{m\_\-nEnd}
+\item 
+POINT \hyperlink{class_c_d_x_u_t_scroll_bar_a1cde93aff0ec2547c01db9afcc508782}{m\_\-LastMouse}
+\item 
+\hyperlink{class_c_d_x_u_t_scroll_bar_a43b1ef354a17195db720617bf6b34595}{ARROWSTATE} \hyperlink{class_c_d_x_u_t_scroll_bar_a909a6087207d8187daacf84356fefbe8}{m\_\-Arrow}
+\item 
+double \hyperlink{class_c_d_x_u_t_scroll_bar_a0e16cf4d357346864321f471afa456cd}{m\_\-dArrowTS}
+\end{DoxyCompactItemize}
+
+
+\subsection{Member Enumeration Documentation}
+\hypertarget{class_c_d_x_u_t_scroll_bar_a43b1ef354a17195db720617bf6b34595}{
+\index{CDXUTScrollBar@{CDXUTScrollBar}!ARROWSTATE@{ARROWSTATE}}
+\index{ARROWSTATE@{ARROWSTATE}!CDXUTScrollBar@{CDXUTScrollBar}}
+\subsubsection[{ARROWSTATE}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf CDXUTScrollBar::ARROWSTATE}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{class_c_d_x_u_t_scroll_bar_a43b1ef354a17195db720617bf6b34595}
+\begin{Desc}
+\item[Enumerator: ]\par
+\begin{description}
+\index{CLEAR@{CLEAR}!CDXUTScrollBar@{CDXUTScrollBar}}\index{CDXUTScrollBar@{CDXUTScrollBar}!CLEAR@{CLEAR}}\item[{\em 
+\hypertarget{class_c_d_x_u_t_scroll_bar_a43b1ef354a17195db720617bf6b34595a58ecc240070da4e972c23f1cd0deee7c}{
+CLEAR}
+\label{class_c_d_x_u_t_scroll_bar_a43b1ef354a17195db720617bf6b34595a58ecc240070da4e972c23f1cd0deee7c}
+}]\index{CLICKED\_\-UP@{CLICKED\_\-UP}!CDXUTScrollBar@{CDXUTScrollBar}}\index{CDXUTScrollBar@{CDXUTScrollBar}!CLICKED\_\-UP@{CLICKED\_\-UP}}\item[{\em 
+\hypertarget{class_c_d_x_u_t_scroll_bar_a43b1ef354a17195db720617bf6b34595a376838d4568537d54ac440758d4361e5}{
+CLICKED\_\-UP}
+\label{class_c_d_x_u_t_scroll_bar_a43b1ef354a17195db720617bf6b34595a376838d4568537d54ac440758d4361e5}
+}]\index{CLICKED\_\-DOWN@{CLICKED\_\-DOWN}!CDXUTScrollBar@{CDXUTScrollBar}}\index{CDXUTScrollBar@{CDXUTScrollBar}!CLICKED\_\-DOWN@{CLICKED\_\-DOWN}}\item[{\em 
+\hypertarget{class_c_d_x_u_t_scroll_bar_a43b1ef354a17195db720617bf6b34595a301225074fcc3266420019c1f541bfd3}{
+CLICKED\_\-DOWN}
+\label{class_c_d_x_u_t_scroll_bar_a43b1ef354a17195db720617bf6b34595a301225074fcc3266420019c1f541bfd3}
+}]\index{HELD\_\-UP@{HELD\_\-UP}!CDXUTScrollBar@{CDXUTScrollBar}}\index{CDXUTScrollBar@{CDXUTScrollBar}!HELD\_\-UP@{HELD\_\-UP}}\item[{\em 
+\hypertarget{class_c_d_x_u_t_scroll_bar_a43b1ef354a17195db720617bf6b34595a3b7008371084d0e81d4dab21cb8669d7}{
+HELD\_\-UP}
+\label{class_c_d_x_u_t_scroll_bar_a43b1ef354a17195db720617bf6b34595a3b7008371084d0e81d4dab21cb8669d7}
+}]\index{HELD\_\-DOWN@{HELD\_\-DOWN}!CDXUTScrollBar@{CDXUTScrollBar}}\index{CDXUTScrollBar@{CDXUTScrollBar}!HELD\_\-DOWN@{HELD\_\-DOWN}}\item[{\em 
+\hypertarget{class_c_d_x_u_t_scroll_bar_a43b1ef354a17195db720617bf6b34595ae1d90e180e124651da98fd39f25f65c0}{
+HELD\_\-DOWN}
+\label{class_c_d_x_u_t_scroll_bar_a43b1ef354a17195db720617bf6b34595ae1d90e180e124651da98fd39f25f65c0}
+}]\end{description}
+\end{Desc}
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_c_d_x_u_t_scroll_bar_accc3179c9b36ece4b5560bb1310689e7}{
+\index{CDXUTScrollBar@{CDXUTScrollBar}!CDXUTScrollBar@{CDXUTScrollBar}}
+\index{CDXUTScrollBar@{CDXUTScrollBar}!CDXUTScrollBar@{CDXUTScrollBar}}
+\subsubsection[{CDXUTScrollBar}]{\setlength{\rightskip}{0pt plus 5cm}CDXUTScrollBar::CDXUTScrollBar ({\bf CDXUTDialog} $\ast$ {\em pDialog} = {\ttfamily NULL})}}
+\label{class_c_d_x_u_t_scroll_bar_accc3179c9b36ece4b5560bb1310689e7}
+\hypertarget{class_c_d_x_u_t_scroll_bar_a8ebd4d8debf6a5f0f746dd3621162a75}{
+\index{CDXUTScrollBar@{CDXUTScrollBar}!$\sim$CDXUTScrollBar@{$\sim$CDXUTScrollBar}}
+\index{$\sim$CDXUTScrollBar@{$\sim$CDXUTScrollBar}!CDXUTScrollBar@{CDXUTScrollBar}}
+\subsubsection[{$\sim$CDXUTScrollBar}]{\setlength{\rightskip}{0pt plus 5cm}CDXUTScrollBar::$\sim$CDXUTScrollBar ()\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{class_c_d_x_u_t_scroll_bar_a8ebd4d8debf6a5f0f746dd3621162a75}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_c_d_x_u_t_scroll_bar_a2a680f2ce9c5fa971ccc9b618de9e8fa}{
+\index{CDXUTScrollBar@{CDXUTScrollBar}!Cap@{Cap}}
+\index{Cap@{Cap}!CDXUTScrollBar@{CDXUTScrollBar}}
+\subsubsection[{Cap}]{\setlength{\rightskip}{0pt plus 5cm}void CDXUTScrollBar::Cap ()\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{class_c_d_x_u_t_scroll_bar_a2a680f2ce9c5fa971ccc9b618de9e8fa}
+\hypertarget{class_c_d_x_u_t_scroll_bar_aa345a24d104acd194af1c637bb386fc3}{
+\index{CDXUTScrollBar@{CDXUTScrollBar}!GetPageSize@{GetPageSize}}
+\index{GetPageSize@{GetPageSize}!CDXUTScrollBar@{CDXUTScrollBar}}
+\subsubsection[{GetPageSize}]{\setlength{\rightskip}{0pt plus 5cm}{\bf int} CDXUTScrollBar::GetPageSize ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_c_d_x_u_t_scroll_bar_aa345a24d104acd194af1c637bb386fc3}
+\hypertarget{class_c_d_x_u_t_scroll_bar_a96acaab90a5e33368ad8af53cb111e38}{
+\index{CDXUTScrollBar@{CDXUTScrollBar}!GetTrackPos@{GetTrackPos}}
+\index{GetTrackPos@{GetTrackPos}!CDXUTScrollBar@{CDXUTScrollBar}}
+\subsubsection[{GetTrackPos}]{\setlength{\rightskip}{0pt plus 5cm}{\bf int} CDXUTScrollBar::GetTrackPos ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_c_d_x_u_t_scroll_bar_a96acaab90a5e33368ad8af53cb111e38}
+\hypertarget{class_c_d_x_u_t_scroll_bar_a07c561820f6f3362f94a391c7ff58b04}{
+\index{CDXUTScrollBar@{CDXUTScrollBar}!HandleKeyboard@{HandleKeyboard}}
+\index{HandleKeyboard@{HandleKeyboard}!CDXUTScrollBar@{CDXUTScrollBar}}
+\subsubsection[{HandleKeyboard}]{\setlength{\rightskip}{0pt plus 5cm}bool CDXUTScrollBar::HandleKeyboard (UINT {\em uMsg}, \/  WPARAM {\em wParam}, \/  LPARAM {\em lParam})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{class_c_d_x_u_t_scroll_bar_a07c561820f6f3362f94a391c7ff58b04}
+
+
+Reimplemented from \hyperlink{class_c_d_x_u_t_control_a94044e608adeac7c329d83cf63587dcf}{CDXUTControl}.\hypertarget{class_c_d_x_u_t_scroll_bar_aa0c2286530836c1ed431dea5760280da}{
+\index{CDXUTScrollBar@{CDXUTScrollBar}!HandleMouse@{HandleMouse}}
+\index{HandleMouse@{HandleMouse}!CDXUTScrollBar@{CDXUTScrollBar}}
+\subsubsection[{HandleMouse}]{\setlength{\rightskip}{0pt plus 5cm}bool CDXUTScrollBar::HandleMouse (UINT {\em uMsg}, \/  POINT {\em pt}, \/  WPARAM {\em wParam}, \/  LPARAM {\em lParam})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{class_c_d_x_u_t_scroll_bar_aa0c2286530836c1ed431dea5760280da}
+
+
+Reimplemented from \hyperlink{class_c_d_x_u_t_control_a263979b3221cb7a44b4caea72366c335}{CDXUTControl}.\hypertarget{class_c_d_x_u_t_scroll_bar_a8c4363b3a1415d06e22906e706e1ff76}{
+\index{CDXUTScrollBar@{CDXUTScrollBar}!MsgProc@{MsgProc}}
+\index{MsgProc@{MsgProc}!CDXUTScrollBar@{CDXUTScrollBar}}
+\subsubsection[{MsgProc}]{\setlength{\rightskip}{0pt plus 5cm}bool CDXUTScrollBar::MsgProc (UINT {\em uMsg}, \/  WPARAM {\em wParam}, \/  LPARAM {\em lParam})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{class_c_d_x_u_t_scroll_bar_a8c4363b3a1415d06e22906e706e1ff76}
+
+
+Reimplemented from \hyperlink{class_c_d_x_u_t_control_a58d0d118146c8853a7ccd27da9e3fcf3}{CDXUTControl}.\hypertarget{class_c_d_x_u_t_scroll_bar_a57f6ed8cfcb605406dc8500e8ff86538}{
+\index{CDXUTScrollBar@{CDXUTScrollBar}!Render@{Render}}
+\index{Render@{Render}!CDXUTScrollBar@{CDXUTScrollBar}}
+\subsubsection[{Render}]{\setlength{\rightskip}{0pt plus 5cm}void CDXUTScrollBar::Render (IDirect3DDevice9 $\ast$ {\em pd3dDevice}, \/  float {\em fElapsedTime})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{class_c_d_x_u_t_scroll_bar_a57f6ed8cfcb605406dc8500e8ff86538}
+
+
+Reimplemented from \hyperlink{class_c_d_x_u_t_control_afd92fa04241f66fdbf207bc5870c9388}{CDXUTControl}.\hypertarget{class_c_d_x_u_t_scroll_bar_ae0f76bd7f88a7f26fce6b6026c686245}{
+\index{CDXUTScrollBar@{CDXUTScrollBar}!Scroll@{Scroll}}
+\index{Scroll@{Scroll}!CDXUTScrollBar@{CDXUTScrollBar}}
+\subsubsection[{Scroll}]{\setlength{\rightskip}{0pt plus 5cm}void CDXUTScrollBar::Scroll ({\bf int} {\em nDelta})}}
+\label{class_c_d_x_u_t_scroll_bar_ae0f76bd7f88a7f26fce6b6026c686245}
+\hypertarget{class_c_d_x_u_t_scroll_bar_ad59e8080c3af65a712c725d8cb4f1a10}{
+\index{CDXUTScrollBar@{CDXUTScrollBar}!SetPageSize@{SetPageSize}}
+\index{SetPageSize@{SetPageSize}!CDXUTScrollBar@{CDXUTScrollBar}}
+\subsubsection[{SetPageSize}]{\setlength{\rightskip}{0pt plus 5cm}void CDXUTScrollBar::SetPageSize ({\bf int} {\em nPageSize})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_c_d_x_u_t_scroll_bar_ad59e8080c3af65a712c725d8cb4f1a10}
+\hypertarget{class_c_d_x_u_t_scroll_bar_af38e14cfcc0d51d1c3238b3ed1d21553}{
+\index{CDXUTScrollBar@{CDXUTScrollBar}!SetTrackPos@{SetTrackPos}}
+\index{SetTrackPos@{SetTrackPos}!CDXUTScrollBar@{CDXUTScrollBar}}
+\subsubsection[{SetTrackPos}]{\setlength{\rightskip}{0pt plus 5cm}void CDXUTScrollBar::SetTrackPos ({\bf int} {\em nPosition})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_c_d_x_u_t_scroll_bar_af38e14cfcc0d51d1c3238b3ed1d21553}
+\hypertarget{class_c_d_x_u_t_scroll_bar_ae8eb89fb79562550d1c481ba5f268522}{
+\index{CDXUTScrollBar@{CDXUTScrollBar}!SetTrackRange@{SetTrackRange}}
+\index{SetTrackRange@{SetTrackRange}!CDXUTScrollBar@{CDXUTScrollBar}}
+\subsubsection[{SetTrackRange}]{\setlength{\rightskip}{0pt plus 5cm}void CDXUTScrollBar::SetTrackRange ({\bf int} {\em nStart}, \/  {\bf int} {\em nEnd})}}
+\label{class_c_d_x_u_t_scroll_bar_ae8eb89fb79562550d1c481ba5f268522}
+\hypertarget{class_c_d_x_u_t_scroll_bar_ae7cbe7407c725caf9f57ee95a3e633ca}{
+\index{CDXUTScrollBar@{CDXUTScrollBar}!ShowItem@{ShowItem}}
+\index{ShowItem@{ShowItem}!CDXUTScrollBar@{CDXUTScrollBar}}
+\subsubsection[{ShowItem}]{\setlength{\rightskip}{0pt plus 5cm}void CDXUTScrollBar::ShowItem ({\bf int} {\em nIndex})}}
+\label{class_c_d_x_u_t_scroll_bar_ae7cbe7407c725caf9f57ee95a3e633ca}
+\hypertarget{class_c_d_x_u_t_scroll_bar_ae25e1547d974b0913688da998e43d331}{
+\index{CDXUTScrollBar@{CDXUTScrollBar}!UpdateRects@{UpdateRects}}
+\index{UpdateRects@{UpdateRects}!CDXUTScrollBar@{CDXUTScrollBar}}
+\subsubsection[{UpdateRects}]{\setlength{\rightskip}{0pt plus 5cm}void CDXUTScrollBar::UpdateRects ()\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{class_c_d_x_u_t_scroll_bar_ae25e1547d974b0913688da998e43d331}
+
+
+Reimplemented from \hyperlink{class_c_d_x_u_t_control_a5fb3a79178c678abaa0da57566a09002}{CDXUTControl}.\hypertarget{class_c_d_x_u_t_scroll_bar_aab1de864a32b8813b814a67cc232eeed}{
+\index{CDXUTScrollBar@{CDXUTScrollBar}!UpdateThumbRect@{UpdateThumbRect}}
+\index{UpdateThumbRect@{UpdateThumbRect}!CDXUTScrollBar@{CDXUTScrollBar}}
+\subsubsection[{UpdateThumbRect}]{\setlength{\rightskip}{0pt plus 5cm}void CDXUTScrollBar::UpdateThumbRect ()\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{class_c_d_x_u_t_scroll_bar_aab1de864a32b8813b814a67cc232eeed}
+
+
+\subsection{Member Data Documentation}
+\hypertarget{class_c_d_x_u_t_scroll_bar_a909a6087207d8187daacf84356fefbe8}{
+\index{CDXUTScrollBar@{CDXUTScrollBar}!m\_\-Arrow@{m\_\-Arrow}}
+\index{m\_\-Arrow@{m\_\-Arrow}!CDXUTScrollBar@{CDXUTScrollBar}}
+\subsubsection[{m\_\-Arrow}]{\setlength{\rightskip}{0pt plus 5cm}{\bf ARROWSTATE} {\bf CDXUTScrollBar::m\_\-Arrow}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{class_c_d_x_u_t_scroll_bar_a909a6087207d8187daacf84356fefbe8}
+\hypertarget{class_c_d_x_u_t_scroll_bar_a01ff830ad7a6126be8fe58c7d6c5a625}{
+\index{CDXUTScrollBar@{CDXUTScrollBar}!m\_\-bDrag@{m\_\-bDrag}}
+\index{m\_\-bDrag@{m\_\-bDrag}!CDXUTScrollBar@{CDXUTScrollBar}}
+\subsubsection[{m\_\-bDrag}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf CDXUTScrollBar::m\_\-bDrag}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{class_c_d_x_u_t_scroll_bar_a01ff830ad7a6126be8fe58c7d6c5a625}
+\hypertarget{class_c_d_x_u_t_scroll_bar_aa7a51e9a1a97f52f0c0867de95f2a348}{
+\index{CDXUTScrollBar@{CDXUTScrollBar}!m\_\-bShowThumb@{m\_\-bShowThumb}}
+\index{m\_\-bShowThumb@{m\_\-bShowThumb}!CDXUTScrollBar@{CDXUTScrollBar}}
+\subsubsection[{m\_\-bShowThumb}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf CDXUTScrollBar::m\_\-bShowThumb}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{class_c_d_x_u_t_scroll_bar_aa7a51e9a1a97f52f0c0867de95f2a348}
+\hypertarget{class_c_d_x_u_t_scroll_bar_a0e16cf4d357346864321f471afa456cd}{
+\index{CDXUTScrollBar@{CDXUTScrollBar}!m\_\-dArrowTS@{m\_\-dArrowTS}}
+\index{m\_\-dArrowTS@{m\_\-dArrowTS}!CDXUTScrollBar@{CDXUTScrollBar}}
+\subsubsection[{m\_\-dArrowTS}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf CDXUTScrollBar::m\_\-dArrowTS}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{class_c_d_x_u_t_scroll_bar_a0e16cf4d357346864321f471afa456cd}
+\hypertarget{class_c_d_x_u_t_scroll_bar_a1cde93aff0ec2547c01db9afcc508782}{
+\index{CDXUTScrollBar@{CDXUTScrollBar}!m\_\-LastMouse@{m\_\-LastMouse}}
+\index{m\_\-LastMouse@{m\_\-LastMouse}!CDXUTScrollBar@{CDXUTScrollBar}}
+\subsubsection[{m\_\-LastMouse}]{\setlength{\rightskip}{0pt plus 5cm}POINT {\bf CDXUTScrollBar::m\_\-LastMouse}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{class_c_d_x_u_t_scroll_bar_a1cde93aff0ec2547c01db9afcc508782}
+\hypertarget{class_c_d_x_u_t_scroll_bar_afc8b5ddb1c7cc92442d29e3cc23d11f1}{
+\index{CDXUTScrollBar@{CDXUTScrollBar}!m\_\-nEnd@{m\_\-nEnd}}
+\index{m\_\-nEnd@{m\_\-nEnd}!CDXUTScrollBar@{CDXUTScrollBar}}
+\subsubsection[{m\_\-nEnd}]{\setlength{\rightskip}{0pt plus 5cm}{\bf int} {\bf CDXUTScrollBar::m\_\-nEnd}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{class_c_d_x_u_t_scroll_bar_afc8b5ddb1c7cc92442d29e3cc23d11f1}
+\hypertarget{class_c_d_x_u_t_scroll_bar_afb1955f3af80efd279c38d45882e67e0}{
+\index{CDXUTScrollBar@{CDXUTScrollBar}!m\_\-nPageSize@{m\_\-nPageSize}}
+\index{m\_\-nPageSize@{m\_\-nPageSize}!CDXUTScrollBar@{CDXUTScrollBar}}
+\subsubsection[{m\_\-nPageSize}]{\setlength{\rightskip}{0pt plus 5cm}{\bf int} {\bf CDXUTScrollBar::m\_\-nPageSize}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{class_c_d_x_u_t_scroll_bar_afb1955f3af80efd279c38d45882e67e0}
+\hypertarget{class_c_d_x_u_t_scroll_bar_a56626224bbb2aa068c8d5d4bf2efeab9}{
+\index{CDXUTScrollBar@{CDXUTScrollBar}!m\_\-nPosition@{m\_\-nPosition}}
+\index{m\_\-nPosition@{m\_\-nPosition}!CDXUTScrollBar@{CDXUTScrollBar}}
+\subsubsection[{m\_\-nPosition}]{\setlength{\rightskip}{0pt plus 5cm}{\bf int} {\bf CDXUTScrollBar::m\_\-nPosition}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{class_c_d_x_u_t_scroll_bar_a56626224bbb2aa068c8d5d4bf2efeab9}
+\hypertarget{class_c_d_x_u_t_scroll_bar_a435f88f5790f27a818502da70f20c5bc}{
+\index{CDXUTScrollBar@{CDXUTScrollBar}!m\_\-nStart@{m\_\-nStart}}
+\index{m\_\-nStart@{m\_\-nStart}!CDXUTScrollBar@{CDXUTScrollBar}}
+\subsubsection[{m\_\-nStart}]{\setlength{\rightskip}{0pt plus 5cm}{\bf int} {\bf CDXUTScrollBar::m\_\-nStart}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{class_c_d_x_u_t_scroll_bar_a435f88f5790f27a818502da70f20c5bc}
+\hypertarget{class_c_d_x_u_t_scroll_bar_a7bd528426fbee3aefc6056e8bde9fece}{
+\index{CDXUTScrollBar@{CDXUTScrollBar}!m\_\-rcDownButton@{m\_\-rcDownButton}}
+\index{m\_\-rcDownButton@{m\_\-rcDownButton}!CDXUTScrollBar@{CDXUTScrollBar}}
+\subsubsection[{m\_\-rcDownButton}]{\setlength{\rightskip}{0pt plus 5cm}RECT {\bf CDXUTScrollBar::m\_\-rcDownButton}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{class_c_d_x_u_t_scroll_bar_a7bd528426fbee3aefc6056e8bde9fece}
+\hypertarget{class_c_d_x_u_t_scroll_bar_a6b29ad3dbc532c385fd0d67170aa732a}{
+\index{CDXUTScrollBar@{CDXUTScrollBar}!m\_\-rcThumb@{m\_\-rcThumb}}
+\index{m\_\-rcThumb@{m\_\-rcThumb}!CDXUTScrollBar@{CDXUTScrollBar}}
+\subsubsection[{m\_\-rcThumb}]{\setlength{\rightskip}{0pt plus 5cm}RECT {\bf CDXUTScrollBar::m\_\-rcThumb}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{class_c_d_x_u_t_scroll_bar_a6b29ad3dbc532c385fd0d67170aa732a}
+\hypertarget{class_c_d_x_u_t_scroll_bar_ae7da461cf4b1658f14ce9ec0d74e8dad}{
+\index{CDXUTScrollBar@{CDXUTScrollBar}!m\_\-rcTrack@{m\_\-rcTrack}}
+\index{m\_\-rcTrack@{m\_\-rcTrack}!CDXUTScrollBar@{CDXUTScrollBar}}
+\subsubsection[{m\_\-rcTrack}]{\setlength{\rightskip}{0pt plus 5cm}RECT {\bf CDXUTScrollBar::m\_\-rcTrack}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{class_c_d_x_u_t_scroll_bar_ae7da461cf4b1658f14ce9ec0d74e8dad}
+\hypertarget{class_c_d_x_u_t_scroll_bar_af4d481a35224a1b9bd6d4b369b3c3dd1}{
+\index{CDXUTScrollBar@{CDXUTScrollBar}!m\_\-rcUpButton@{m\_\-rcUpButton}}
+\index{m\_\-rcUpButton@{m\_\-rcUpButton}!CDXUTScrollBar@{CDXUTScrollBar}}
+\subsubsection[{m\_\-rcUpButton}]{\setlength{\rightskip}{0pt plus 5cm}RECT {\bf CDXUTScrollBar::m\_\-rcUpButton}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{class_c_d_x_u_t_scroll_bar_af4d481a35224a1b9bd6d4b369b3c3dd1}
+
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+C:/Users/doug/Documents/Visual Studio 2008/Projects/enlightened/Enlightened/DXUT/\hyperlink{_d_x_u_tgui_8h}{DXUTgui.h}\item 
+C:/Users/doug/Documents/Visual Studio 2008/Projects/enlightened/Enlightened/DXUT/\hyperlink{_d_x_u_tgui_8cpp}{DXUTgui.cpp}\end{DoxyCompactItemize}

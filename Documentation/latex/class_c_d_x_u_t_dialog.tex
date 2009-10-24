@@ -1,0 +1,603 @@
+\hypertarget{class_c_d_x_u_t_dialog}{
+\section{CDXUTDialog Class Reference}
+\label{class_c_d_x_u_t_dialog}\index{CDXUTDialog@{CDXUTDialog}}
+}
+
+
+{\ttfamily \#include $<$DXUTgui.h$>$}Collaboration diagram for CDXUTDialog:\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_c_d_x_u_t_dialog_ad1d01416a8d21047d45c2ac9253933f9}{CDXUTDialog} ()
+\item 
+\hyperlink{class_c_d_x_u_t_dialog_ab92a5be82801a2ea84538428ef1edc81}{$\sim$CDXUTDialog} ()
+\item 
+void \hyperlink{class_c_d_x_u_t_dialog_a45fcf9a802d8a9f1bce9bded09c58e22}{Init} (\hyperlink{class_c_d_x_u_t_dialog_resource_manager}{CDXUTDialogResourceManager} $\ast$pManager, bool bRegisterDialog=true)
+\item 
+void \hyperlink{class_c_d_x_u_t_dialog_a50607e82b3211003dfaf0daf79aa0719}{Init} (\hyperlink{class_c_d_x_u_t_dialog_resource_manager}{CDXUTDialogResourceManager} $\ast$pManager, bool bRegisterDialog, LPCWSTR pszControlTextureFilename)
+\item 
+void \hyperlink{class_c_d_x_u_t_dialog_aa1de5939c452894caa2602505aa77e72}{Init} (\hyperlink{class_c_d_x_u_t_dialog_resource_manager}{CDXUTDialogResourceManager} $\ast$pManager, bool bRegisterDialog, LPCWSTR szControlTextureResourceName, HMODULE hControlTextureResourceModule)
+\item 
+bool \hyperlink{class_c_d_x_u_t_dialog_abb1e03c6d2da865384e34a6a60a41be4}{MsgProc} (HWND hWnd, UINT uMsg, WPARAM wParam, LPARAM lParam)
+\item 
+HRESULT \hyperlink{class_c_d_x_u_t_dialog_afe893ab17f6905d1908e6fd1499749b1}{AddStatic} (\hyperlink{_d_x_u_tgui_8cpp_a2d77ed03302b6978834ee3b6f57837fb}{int} ID, LPCWSTR strText, \hyperlink{_d_x_u_tgui_8cpp_a2d77ed03302b6978834ee3b6f57837fb}{int} x, \hyperlink{_d_x_u_tgui_8cpp_a2d77ed03302b6978834ee3b6f57837fb}{int} y, \hyperlink{_d_x_u_tgui_8cpp_a2d77ed03302b6978834ee3b6f57837fb}{int} width, \hyperlink{_d_x_u_tgui_8cpp_a2d77ed03302b6978834ee3b6f57837fb}{int} height, bool bIsDefault=false, \hyperlink{class_c_d_x_u_t_static}{CDXUTStatic} $\ast$$\ast$ppCreated=NULL)
+\item 
+HRESULT \hyperlink{class_c_d_x_u_t_dialog_acc5e5c07e3dbbb843a18d4974273d169}{AddButton} (\hyperlink{_d_x_u_tgui_8cpp_a2d77ed03302b6978834ee3b6f57837fb}{int} ID, LPCWSTR strText, \hyperlink{_d_x_u_tgui_8cpp_a2d77ed03302b6978834ee3b6f57837fb}{int} x, \hyperlink{_d_x_u_tgui_8cpp_a2d77ed03302b6978834ee3b6f57837fb}{int} y, \hyperlink{_d_x_u_tgui_8cpp_a2d77ed03302b6978834ee3b6f57837fb}{int} width, \hyperlink{_d_x_u_tgui_8cpp_a2d77ed03302b6978834ee3b6f57837fb}{int} height, UINT nHotkey=0, bool bIsDefault=false, \hyperlink{class_c_d_x_u_t_button}{CDXUTButton} $\ast$$\ast$ppCreated=NULL)
+\item 
+HRESULT \hyperlink{class_c_d_x_u_t_dialog_a9b69134b9abab06bcf3e449ad7323733}{AddCheckBox} (\hyperlink{_d_x_u_tgui_8cpp_a2d77ed03302b6978834ee3b6f57837fb}{int} ID, LPCWSTR strText, \hyperlink{_d_x_u_tgui_8cpp_a2d77ed03302b6978834ee3b6f57837fb}{int} x, \hyperlink{_d_x_u_tgui_8cpp_a2d77ed03302b6978834ee3b6f57837fb}{int} y, \hyperlink{_d_x_u_tgui_8cpp_a2d77ed03302b6978834ee3b6f57837fb}{int} width, \hyperlink{_d_x_u_tgui_8cpp_a2d77ed03302b6978834ee3b6f57837fb}{int} height, bool bChecked=false, UINT nHotkey=0, bool bIsDefault=false, \hyperlink{class_c_d_x_u_t_check_box}{CDXUTCheckBox} $\ast$$\ast$ppCreated=NULL)
+\item 
+HRESULT \hyperlink{class_c_d_x_u_t_dialog_a855c97f014a3a6c63706cf300527a817}{AddRadioButton} (\hyperlink{_d_x_u_tgui_8cpp_a2d77ed03302b6978834ee3b6f57837fb}{int} ID, UINT nButtonGroup, LPCWSTR strText, \hyperlink{_d_x_u_tgui_8cpp_a2d77ed03302b6978834ee3b6f57837fb}{int} x, \hyperlink{_d_x_u_tgui_8cpp_a2d77ed03302b6978834ee3b6f57837fb}{int} y, \hyperlink{_d_x_u_tgui_8cpp_a2d77ed03302b6978834ee3b6f57837fb}{int} width, \hyperlink{_d_x_u_tgui_8cpp_a2d77ed03302b6978834ee3b6f57837fb}{int} height, bool bChecked=false, UINT nHotkey=0, bool bIsDefault=false, \hyperlink{class_c_d_x_u_t_radio_button}{CDXUTRadioButton} $\ast$$\ast$ppCreated=NULL)
+\item 
+HRESULT \hyperlink{class_c_d_x_u_t_dialog_a5027ee1afa698e4273b44af289451d8e}{AddComboBox} (\hyperlink{_d_x_u_tgui_8cpp_a2d77ed03302b6978834ee3b6f57837fb}{int} ID, \hyperlink{_d_x_u_tgui_8cpp_a2d77ed03302b6978834ee3b6f57837fb}{int} x, \hyperlink{_d_x_u_tgui_8cpp_a2d77ed03302b6978834ee3b6f57837fb}{int} y, \hyperlink{_d_x_u_tgui_8cpp_a2d77ed03302b6978834ee3b6f57837fb}{int} width, \hyperlink{_d_x_u_tgui_8cpp_a2d77ed03302b6978834ee3b6f57837fb}{int} height, UINT nHotKey=0, bool bIsDefault=false, \hyperlink{class_c_d_x_u_t_combo_box}{CDXUTComboBox} $\ast$$\ast$ppCreated=NULL)
+\item 
+HRESULT \hyperlink{class_c_d_x_u_t_dialog_aaaaade0b42673d6b6a5a244fe4ae25ee}{AddSlider} (\hyperlink{_d_x_u_tgui_8cpp_a2d77ed03302b6978834ee3b6f57837fb}{int} ID, \hyperlink{_d_x_u_tgui_8cpp_a2d77ed03302b6978834ee3b6f57837fb}{int} x, \hyperlink{_d_x_u_tgui_8cpp_a2d77ed03302b6978834ee3b6f57837fb}{int} y, \hyperlink{_d_x_u_tgui_8cpp_a2d77ed03302b6978834ee3b6f57837fb}{int} width, \hyperlink{_d_x_u_tgui_8cpp_a2d77ed03302b6978834ee3b6f57837fb}{int} height, \hyperlink{_d_x_u_tgui_8cpp_a2d77ed03302b6978834ee3b6f57837fb}{int} min=0, \hyperlink{_d_x_u_tgui_8cpp_a2d77ed03302b6978834ee3b6f57837fb}{int} max=100, \hyperlink{_d_x_u_tgui_8cpp_a2d77ed03302b6978834ee3b6f57837fb}{int} value=50, bool bIsDefault=false, \hyperlink{class_c_d_x_u_t_slider}{CDXUTSlider} $\ast$$\ast$ppCreated=NULL)
+\item 
+HRESULT \hyperlink{class_c_d_x_u_t_dialog_a1374799d1714dc22e7c54a0e76688dcf}{AddEditBox} (\hyperlink{_d_x_u_tgui_8cpp_a2d77ed03302b6978834ee3b6f57837fb}{int} ID, LPCWSTR strText, \hyperlink{_d_x_u_tgui_8cpp_a2d77ed03302b6978834ee3b6f57837fb}{int} x, \hyperlink{_d_x_u_tgui_8cpp_a2d77ed03302b6978834ee3b6f57837fb}{int} y, \hyperlink{_d_x_u_tgui_8cpp_a2d77ed03302b6978834ee3b6f57837fb}{int} width, \hyperlink{_d_x_u_tgui_8cpp_a2d77ed03302b6978834ee3b6f57837fb}{int} height, bool bIsDefault=false, \hyperlink{class_c_d_x_u_t_edit_box}{CDXUTEditBox} $\ast$$\ast$ppCreated=NULL)
+\item 
+HRESULT \hyperlink{class_c_d_x_u_t_dialog_a05c3acfebcc0b6f9ab88a9fb4e0979f5}{AddIMEEditBox} (\hyperlink{_d_x_u_tgui_8cpp_a2d77ed03302b6978834ee3b6f57837fb}{int} ID, LPCWSTR strText, \hyperlink{_d_x_u_tgui_8cpp_a2d77ed03302b6978834ee3b6f57837fb}{int} x, \hyperlink{_d_x_u_tgui_8cpp_a2d77ed03302b6978834ee3b6f57837fb}{int} y, \hyperlink{_d_x_u_tgui_8cpp_a2d77ed03302b6978834ee3b6f57837fb}{int} width, \hyperlink{_d_x_u_tgui_8cpp_a2d77ed03302b6978834ee3b6f57837fb}{int} height, bool bIsDefault=false, \hyperlink{class_c_d_x_u_t_i_m_e_edit_box}{CDXUTIMEEditBox} $\ast$$\ast$ppCreated=NULL)
+\item 
+HRESULT \hyperlink{class_c_d_x_u_t_dialog_a10004abccfeb7cad590614ff5b2cde65}{AddListBox} (\hyperlink{_d_x_u_tgui_8cpp_a2d77ed03302b6978834ee3b6f57837fb}{int} ID, \hyperlink{_d_x_u_tgui_8cpp_a2d77ed03302b6978834ee3b6f57837fb}{int} x, \hyperlink{_d_x_u_tgui_8cpp_a2d77ed03302b6978834ee3b6f57837fb}{int} y, \hyperlink{_d_x_u_tgui_8cpp_a2d77ed03302b6978834ee3b6f57837fb}{int} width, \hyperlink{_d_x_u_tgui_8cpp_a2d77ed03302b6978834ee3b6f57837fb}{int} height, DWORD dwStyle=0, \hyperlink{class_c_d_x_u_t_list_box}{CDXUTListBox} $\ast$$\ast$ppCreated=NULL)
+\item 
+HRESULT \hyperlink{class_c_d_x_u_t_dialog_a5a3ebb7853b588e398eb992b56274c35}{AddControl} (\hyperlink{class_c_d_x_u_t_control}{CDXUTControl} $\ast$\hyperlink{_d_x_u_tgui_8h_a02afd33ae98ec4c57be6013765c03be9}{pControl})
+\item 
+HRESULT \hyperlink{class_c_d_x_u_t_dialog_aacf7b4a85cd752ab8aa9d676138adf86}{InitControl} (\hyperlink{class_c_d_x_u_t_control}{CDXUTControl} $\ast$\hyperlink{_d_x_u_tgui_8h_a02afd33ae98ec4c57be6013765c03be9}{pControl})
+\item 
+\hyperlink{class_c_d_x_u_t_static}{CDXUTStatic} $\ast$ \hyperlink{class_c_d_x_u_t_dialog_a0dd93066e5f93a858ba748d4d61c0f60}{GetStatic} (\hyperlink{_d_x_u_tgui_8cpp_a2d77ed03302b6978834ee3b6f57837fb}{int} ID)
+\item 
+\hyperlink{class_c_d_x_u_t_button}{CDXUTButton} $\ast$ \hyperlink{class_c_d_x_u_t_dialog_a3dc0b6d056c7bc9c035c808d4b2b8803}{GetButton} (\hyperlink{_d_x_u_tgui_8cpp_a2d77ed03302b6978834ee3b6f57837fb}{int} ID)
+\item 
+\hyperlink{class_c_d_x_u_t_check_box}{CDXUTCheckBox} $\ast$ \hyperlink{class_c_d_x_u_t_dialog_a69bff29d7b3dda3665fe23acff9b075d}{GetCheckBox} (\hyperlink{_d_x_u_tgui_8cpp_a2d77ed03302b6978834ee3b6f57837fb}{int} ID)
+\item 
+\hyperlink{class_c_d_x_u_t_radio_button}{CDXUTRadioButton} $\ast$ \hyperlink{class_c_d_x_u_t_dialog_a346d360fc897ec736800dfcf86ca205c}{GetRadioButton} (\hyperlink{_d_x_u_tgui_8cpp_a2d77ed03302b6978834ee3b6f57837fb}{int} ID)
+\item 
+\hyperlink{class_c_d_x_u_t_combo_box}{CDXUTComboBox} $\ast$ \hyperlink{class_c_d_x_u_t_dialog_a2f11b9478861af81e40bebb3718a4ee3}{GetComboBox} (\hyperlink{_d_x_u_tgui_8cpp_a2d77ed03302b6978834ee3b6f57837fb}{int} ID)
+\item 
+\hyperlink{class_c_d_x_u_t_slider}{CDXUTSlider} $\ast$ \hyperlink{class_c_d_x_u_t_dialog_a9218f6cb171d1649cc49d487a3fa66da}{GetSlider} (\hyperlink{_d_x_u_tgui_8cpp_a2d77ed03302b6978834ee3b6f57837fb}{int} ID)
+\item 
+\hyperlink{class_c_d_x_u_t_edit_box}{CDXUTEditBox} $\ast$ \hyperlink{class_c_d_x_u_t_dialog_ad0e0333dfd921e371b1cfaf4aec674fe}{GetEditBox} (\hyperlink{_d_x_u_tgui_8cpp_a2d77ed03302b6978834ee3b6f57837fb}{int} ID)
+\item 
+\hyperlink{class_c_d_x_u_t_i_m_e_edit_box}{CDXUTIMEEditBox} $\ast$ \hyperlink{class_c_d_x_u_t_dialog_ad315cae4c3215cd91a550f3845abf367}{GetIMEEditBox} (\hyperlink{_d_x_u_tgui_8cpp_a2d77ed03302b6978834ee3b6f57837fb}{int} ID)
+\item 
+\hyperlink{class_c_d_x_u_t_list_box}{CDXUTListBox} $\ast$ \hyperlink{class_c_d_x_u_t_dialog_aab44b0aff12eb520b714fa7567ce1d14}{GetListBox} (\hyperlink{_d_x_u_tgui_8cpp_a2d77ed03302b6978834ee3b6f57837fb}{int} ID)
+\item 
+\hyperlink{class_c_d_x_u_t_control}{CDXUTControl} $\ast$ \hyperlink{class_c_d_x_u_t_dialog_ad65e23ac0ba4e4b5af0128f6518f09ae}{GetControl} (\hyperlink{_d_x_u_tgui_8cpp_a2d77ed03302b6978834ee3b6f57837fb}{int} ID)
+\item 
+\hyperlink{class_c_d_x_u_t_control}{CDXUTControl} $\ast$ \hyperlink{class_c_d_x_u_t_dialog_a7490e9cfec52ad62442c30c4f862b83a}{GetControl} (\hyperlink{_d_x_u_tgui_8cpp_a2d77ed03302b6978834ee3b6f57837fb}{int} ID, UINT nControlType)
+\item 
+\hyperlink{class_c_d_x_u_t_control}{CDXUTControl} $\ast$ \hyperlink{class_c_d_x_u_t_dialog_a8d1c613d40be521ed5307446e33196e1}{GetControlAtPoint} (POINT pt)
+\item 
+bool \hyperlink{class_c_d_x_u_t_dialog_a274fa05f0de8b86856434f1f1a93409e}{GetControlEnabled} (\hyperlink{_d_x_u_tgui_8cpp_a2d77ed03302b6978834ee3b6f57837fb}{int} ID)
+\item 
+void \hyperlink{class_c_d_x_u_t_dialog_a38467fd37877a472214cc2b6e95c0059}{SetControlEnabled} (\hyperlink{_d_x_u_tgui_8cpp_a2d77ed03302b6978834ee3b6f57837fb}{int} ID, bool bEnabled)
+\item 
+void \hyperlink{class_c_d_x_u_t_dialog_a1d65298121be1454bf5a3b945d19d6e4}{ClearRadioButtonGroup} (UINT nGroup)
+\item 
+void \hyperlink{class_c_d_x_u_t_dialog_a339029982b93647d9a2d3729066b09da}{ClearComboBox} (\hyperlink{_d_x_u_tgui_8cpp_a2d77ed03302b6978834ee3b6f57837fb}{int} ID)
+\item 
+HRESULT \hyperlink{class_c_d_x_u_t_dialog_ad509ffcb58000556545e337cbba2e656}{SetDefaultElement} (UINT nControlType, UINT iElement, \hyperlink{class_c_d_x_u_t_element}{CDXUTElement} $\ast$pElement)
+\item 
+\hyperlink{class_c_d_x_u_t_element}{CDXUTElement} $\ast$ \hyperlink{class_c_d_x_u_t_dialog_ac77892923ec7d9b8838b745c3937e8db}{GetDefaultElement} (UINT nControlType, UINT iElement)
+\item 
+void \hyperlink{class_c_d_x_u_t_dialog_a8f4afe62626f97855d35438db64c527a}{SendEvent} (UINT nEvent, bool bTriggeredByUser, \hyperlink{class_c_d_x_u_t_control}{CDXUTControl} $\ast$\hyperlink{_d_x_u_tgui_8h_a02afd33ae98ec4c57be6013765c03be9}{pControl})
+\item 
+void \hyperlink{class_c_d_x_u_t_dialog_ad5af120ffc7df861267194e00a7b75ca}{RequestFocus} (\hyperlink{class_c_d_x_u_t_control}{CDXUTControl} $\ast$\hyperlink{_d_x_u_tgui_8h_a02afd33ae98ec4c57be6013765c03be9}{pControl})
+\item 
+HRESULT \hyperlink{class_c_d_x_u_t_dialog_adccd346391230d10adfe508ee29a2a8d}{DrawRect} (RECT $\ast$pRect, D3DCOLOR color)
+\item 
+HRESULT \hyperlink{class_c_d_x_u_t_dialog_ad3345a7a307fa37e32cb3035a127306f}{DrawPolyLine} (POINT $\ast$apPoints, UINT nNumPoints, D3DCOLOR color)
+\item 
+HRESULT \hyperlink{class_c_d_x_u_t_dialog_adeac22d23d8ec3cf2db5ba7ac28d3c61}{DrawSprite} (\hyperlink{class_c_d_x_u_t_element}{CDXUTElement} $\ast$pElement, RECT $\ast$prcDest)
+\item 
+HRESULT \hyperlink{class_c_d_x_u_t_dialog_a94d782e76e3e635c67e9d4326dfa9b66}{CalcTextRect} (LPCWSTR strText, \hyperlink{class_c_d_x_u_t_element}{CDXUTElement} $\ast$pElement, RECT $\ast$prcDest, \hyperlink{_d_x_u_tgui_8cpp_a2d77ed03302b6978834ee3b6f57837fb}{int} nCount=-\/1)
+\item 
+HRESULT \hyperlink{class_c_d_x_u_t_dialog_a78b6b17501a7342ccfac5d22314d12c4}{DrawText} (LPCWSTR strText, \hyperlink{class_c_d_x_u_t_element}{CDXUTElement} $\ast$pElement, RECT $\ast$prcDest, bool bShadow=false, \hyperlink{_d_x_u_tgui_8cpp_a2d77ed03302b6978834ee3b6f57837fb}{int} nCount=-\/1)
+\item 
+bool \hyperlink{class_c_d_x_u_t_dialog_ad80a66dea701bdedee8c3e7ff0ba76db}{GetVisible} ()
+\item 
+void \hyperlink{class_c_d_x_u_t_dialog_aa390f99d291ba0acb73a01dbb7add794}{SetVisible} (bool bVisible)
+\item 
+bool \hyperlink{class_c_d_x_u_t_dialog_a67ac00efe88bc892a832d000960be4b6}{GetMinimized} ()
+\item 
+void \hyperlink{class_c_d_x_u_t_dialog_a464452e6d763a09a896a5f51c20e8011}{SetMinimized} (bool bMinimized)
+\item 
+void \hyperlink{class_c_d_x_u_t_dialog_a787ba45509239dc186d2632984e52bb9}{SetBackgroundColors} (D3DCOLOR colorAllCorners)
+\item 
+void \hyperlink{class_c_d_x_u_t_dialog_a21a0a60808aacbe1af926d3b49589a18}{SetBackgroundColors} (D3DCOLOR colorTopLeft, D3DCOLOR colorTopRight, D3DCOLOR colorBottomLeft, D3DCOLOR colorBottomRight)
+\item 
+void \hyperlink{class_c_d_x_u_t_dialog_ac0fabdca39baa6ed68e5754f99cf5b81}{EnableCaption} (bool bEnable)
+\item 
+\hyperlink{_d_x_u_tgui_8cpp_a2d77ed03302b6978834ee3b6f57837fb}{int} \hyperlink{class_c_d_x_u_t_dialog_a72a80373de83c0a368e04e9d1266494c}{GetCaptionHeight} () const 
+\item 
+void \hyperlink{class_c_d_x_u_t_dialog_a548f7b6caf0780730978344b746351eb}{SetCaptionHeight} (\hyperlink{_d_x_u_tgui_8cpp_a2d77ed03302b6978834ee3b6f57837fb}{int} nHeight)
+\item 
+void \hyperlink{class_c_d_x_u_t_dialog_abdf008c43c24525341ca8db2742eb042}{SetCaptionText} (const WCHAR $\ast$pwszText)
+\item 
+void \hyperlink{class_c_d_x_u_t_dialog_a3ecfd786f830d0049a22f3934eac6bfe}{GetLocation} (POINT \&Pt) const 
+\item 
+void \hyperlink{class_c_d_x_u_t_dialog_af42fdc0cacf7eef44dc518f0cc9903c5}{SetLocation} (\hyperlink{_d_x_u_tgui_8cpp_a2d77ed03302b6978834ee3b6f57837fb}{int} x, \hyperlink{_d_x_u_tgui_8cpp_a2d77ed03302b6978834ee3b6f57837fb}{int} y)
+\item 
+void \hyperlink{class_c_d_x_u_t_dialog_adb63ce7dfbc73250cf7ecd45b424ab96}{SetSize} (\hyperlink{_d_x_u_tgui_8cpp_a2d77ed03302b6978834ee3b6f57837fb}{int} width, \hyperlink{_d_x_u_tgui_8cpp_a2d77ed03302b6978834ee3b6f57837fb}{int} height)
+\item 
+\hyperlink{_d_x_u_tgui_8cpp_a2d77ed03302b6978834ee3b6f57837fb}{int} \hyperlink{class_c_d_x_u_t_dialog_a6dd8c238656eb7260e0eddb8a2c1ec69}{GetWidth} ()
+\item 
+\hyperlink{_d_x_u_tgui_8cpp_a2d77ed03302b6978834ee3b6f57837fb}{int} \hyperlink{class_c_d_x_u_t_dialog_ae6cae46633b8133c0447dcc0e9ae2bdf}{GetHeight} ()
+\item 
+void \hyperlink{class_c_d_x_u_t_dialog_ae30dd98c7baecd3d544ab15c17a32bd3}{RemoveControl} (\hyperlink{_d_x_u_tgui_8cpp_a2d77ed03302b6978834ee3b6f57837fb}{int} ID)
+\item 
+void \hyperlink{class_c_d_x_u_t_dialog_a175f6919678485e740d460add2e5544b}{RemoveAllControls} ()
+\item 
+void \hyperlink{class_c_d_x_u_t_dialog_a082c0600d7f516952cc4a935475f3c49}{SetCallback} (PCALLBACKDXUTGUIEVENT pCallback, void $\ast$\hyperlink{_d_x_u_tgui_8h_adba0f386bf9a8364f3d6c472c6f30caf}{pUserContext}=NULL)
+\item 
+void \hyperlink{class_c_d_x_u_t_dialog_ab4fad093a2509e6813b22cd9342bbff1}{EnableNonUserEvents} (bool bEnable)
+\item 
+void \hyperlink{class_c_d_x_u_t_dialog_a0022392f6e443b015ad8692aa6ab5442}{EnableKeyboardInput} (bool bEnable)
+\item 
+void \hyperlink{class_c_d_x_u_t_dialog_a109b115dd423e6cb42c7fc02bea65ea3}{EnableMouseInput} (bool bEnable)
+\item 
+bool \hyperlink{class_c_d_x_u_t_dialog_abfe2dae7b0eb882e25786ba20d52fc33}{IsKeyboardInputEnabled} () const 
+\item 
+void \hyperlink{class_c_d_x_u_t_dialog_a2fdbbfcd91be886b5843e790336b2f17}{Refresh} ()
+\item 
+HRESULT \hyperlink{class_c_d_x_u_t_dialog_acce59cefc90be252813be4c4e363fd03}{OnRender} (float fElapsedTime)
+\item 
+HRESULT \hyperlink{class_c_d_x_u_t_dialog_a04466dc5ca32546b327aa76e1b57d970}{SetFont} (UINT index, LPCWSTR strFaceName, LONG height, LONG weight)
+\item 
+\hyperlink{struct_d_x_u_t_font_node}{DXUTFontNode} $\ast$ \hyperlink{class_c_d_x_u_t_dialog_abbd6628848668c6f4af3d10fac4411f3}{GetFont} (UINT index)
+\item 
+HRESULT \hyperlink{class_c_d_x_u_t_dialog_aa391160093e64b7ea6b23b334079d960}{SetTexture} (UINT index, LPCWSTR strFilename)
+\item 
+HRESULT \hyperlink{class_c_d_x_u_t_dialog_a136fb315f7d3405c9bd59cac96d32acc}{SetTexture} (UINT index, LPCWSTR strResourceName, HMODULE hResourceModule)
+\item 
+\hyperlink{struct_d_x_u_t_texture_node}{DXUTTextureNode} $\ast$ \hyperlink{class_c_d_x_u_t_dialog_a0d241bc13bf1be8bb179b8c822a5f1e1}{GetTexture} (UINT index)
+\item 
+\hyperlink{class_c_d_x_u_t_dialog_resource_manager}{CDXUTDialogResourceManager} $\ast$ \hyperlink{class_c_d_x_u_t_dialog_afb938675ef8db32b8af0713db150b432}{GetManager} ()
+\item 
+void \hyperlink{class_c_d_x_u_t_dialog_a3a1acadb4feabee897e520b2dbf24fe2}{FocusDefaultControl} ()
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \hyperlink{class_c_d_x_u_t_dialog_a8da046bceb25136e8c34a2553e517097}{SetRefreshTime} (float fTime)
+\item 
+static \hyperlink{class_c_d_x_u_t_control}{CDXUTControl} $\ast$ \hyperlink{class_c_d_x_u_t_dialog_a296f861718f43a5a5ec0d112094f5cc0}{GetNextControl} (\hyperlink{class_c_d_x_u_t_control}{CDXUTControl} $\ast$\hyperlink{_d_x_u_tgui_8h_a02afd33ae98ec4c57be6013765c03be9}{pControl})
+\item 
+static \hyperlink{class_c_d_x_u_t_control}{CDXUTControl} $\ast$ \hyperlink{class_c_d_x_u_t_dialog_ac0999d1694204b66f86a85f117e2a2da}{GetPrevControl} (\hyperlink{class_c_d_x_u_t_control}{CDXUTControl} $\ast$\hyperlink{_d_x_u_tgui_8h_a02afd33ae98ec4c57be6013765c03be9}{pControl})
+\item 
+static void \hyperlink{class_c_d_x_u_t_dialog_ac08c4dea0b23129bb11eae8055d9da27}{ClearFocus} ()
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+bool \hyperlink{class_c_d_x_u_t_dialog_a282063050d5cbad2b070ccafe9edb1d4}{m\_\-bNonUserEvents}
+\item 
+bool \hyperlink{class_c_d_x_u_t_dialog_ab298c311bb2389a8928c0650f8da4df8}{m\_\-bKeyboardInput}
+\item 
+bool \hyperlink{class_c_d_x_u_t_dialog_a4e6779884aa890d660bf43072ff15b2f}{m\_\-bMouseInput}
+\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{class_c_d_x_u_t_dialog_a9f01c7e77f6c0b33ee51859336171041}{CDXUTDialogResourceManager}
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_c_d_x_u_t_dialog_ad1d01416a8d21047d45c2ac9253933f9}{
+\index{CDXUTDialog@{CDXUTDialog}!CDXUTDialog@{CDXUTDialog}}
+\index{CDXUTDialog@{CDXUTDialog}!CDXUTDialog@{CDXUTDialog}}
+\subsubsection[{CDXUTDialog}]{\setlength{\rightskip}{0pt plus 5cm}CDXUTDialog::CDXUTDialog ()}}
+\label{class_c_d_x_u_t_dialog_ad1d01416a8d21047d45c2ac9253933f9}
+\hypertarget{class_c_d_x_u_t_dialog_ab92a5be82801a2ea84538428ef1edc81}{
+\index{CDXUTDialog@{CDXUTDialog}!$\sim$CDXUTDialog@{$\sim$CDXUTDialog}}
+\index{$\sim$CDXUTDialog@{$\sim$CDXUTDialog}!CDXUTDialog@{CDXUTDialog}}
+\subsubsection[{$\sim$CDXUTDialog}]{\setlength{\rightskip}{0pt plus 5cm}CDXUTDialog::$\sim$CDXUTDialog ()}}
+\label{class_c_d_x_u_t_dialog_ab92a5be82801a2ea84538428ef1edc81}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_c_d_x_u_t_dialog_acc5e5c07e3dbbb843a18d4974273d169}{
+\index{CDXUTDialog@{CDXUTDialog}!AddButton@{AddButton}}
+\index{AddButton@{AddButton}!CDXUTDialog@{CDXUTDialog}}
+\subsubsection[{AddButton}]{\setlength{\rightskip}{0pt plus 5cm}HRESULT CDXUTDialog::AddButton ({\bf int} {\em ID}, \/  LPCWSTR {\em strText}, \/  {\bf int} {\em x}, \/  {\bf int} {\em y}, \/  {\bf int} {\em width}, \/  {\bf int} {\em height}, \/  UINT {\em nHotkey} = {\ttfamily 0}, \/  bool {\em bIsDefault} = {\ttfamily false}, \/  {\bf CDXUTButton} $\ast$$\ast$ {\em ppCreated} = {\ttfamily NULL})}}
+\label{class_c_d_x_u_t_dialog_acc5e5c07e3dbbb843a18d4974273d169}
+\hypertarget{class_c_d_x_u_t_dialog_a9b69134b9abab06bcf3e449ad7323733}{
+\index{CDXUTDialog@{CDXUTDialog}!AddCheckBox@{AddCheckBox}}
+\index{AddCheckBox@{AddCheckBox}!CDXUTDialog@{CDXUTDialog}}
+\subsubsection[{AddCheckBox}]{\setlength{\rightskip}{0pt plus 5cm}HRESULT CDXUTDialog::AddCheckBox ({\bf int} {\em ID}, \/  LPCWSTR {\em strText}, \/  {\bf int} {\em x}, \/  {\bf int} {\em y}, \/  {\bf int} {\em width}, \/  {\bf int} {\em height}, \/  bool {\em bChecked} = {\ttfamily false}, \/  UINT {\em nHotkey} = {\ttfamily 0}, \/  bool {\em bIsDefault} = {\ttfamily false}, \/  {\bf CDXUTCheckBox} $\ast$$\ast$ {\em ppCreated} = {\ttfamily NULL})}}
+\label{class_c_d_x_u_t_dialog_a9b69134b9abab06bcf3e449ad7323733}
+\hypertarget{class_c_d_x_u_t_dialog_a5027ee1afa698e4273b44af289451d8e}{
+\index{CDXUTDialog@{CDXUTDialog}!AddComboBox@{AddComboBox}}
+\index{AddComboBox@{AddComboBox}!CDXUTDialog@{CDXUTDialog}}
+\subsubsection[{AddComboBox}]{\setlength{\rightskip}{0pt plus 5cm}HRESULT CDXUTDialog::AddComboBox ({\bf int} {\em ID}, \/  {\bf int} {\em x}, \/  {\bf int} {\em y}, \/  {\bf int} {\em width}, \/  {\bf int} {\em height}, \/  UINT {\em nHotKey} = {\ttfamily 0}, \/  bool {\em bIsDefault} = {\ttfamily false}, \/  {\bf CDXUTComboBox} $\ast$$\ast$ {\em ppCreated} = {\ttfamily NULL})}}
+\label{class_c_d_x_u_t_dialog_a5027ee1afa698e4273b44af289451d8e}
+\hypertarget{class_c_d_x_u_t_dialog_a5a3ebb7853b588e398eb992b56274c35}{
+\index{CDXUTDialog@{CDXUTDialog}!AddControl@{AddControl}}
+\index{AddControl@{AddControl}!CDXUTDialog@{CDXUTDialog}}
+\subsubsection[{AddControl}]{\setlength{\rightskip}{0pt plus 5cm}HRESULT CDXUTDialog::AddControl ({\bf CDXUTControl} $\ast$ {\em pControl})}}
+\label{class_c_d_x_u_t_dialog_a5a3ebb7853b588e398eb992b56274c35}
+\hypertarget{class_c_d_x_u_t_dialog_a1374799d1714dc22e7c54a0e76688dcf}{
+\index{CDXUTDialog@{CDXUTDialog}!AddEditBox@{AddEditBox}}
+\index{AddEditBox@{AddEditBox}!CDXUTDialog@{CDXUTDialog}}
+\subsubsection[{AddEditBox}]{\setlength{\rightskip}{0pt plus 5cm}HRESULT CDXUTDialog::AddEditBox ({\bf int} {\em ID}, \/  LPCWSTR {\em strText}, \/  {\bf int} {\em x}, \/  {\bf int} {\em y}, \/  {\bf int} {\em width}, \/  {\bf int} {\em height}, \/  bool {\em bIsDefault} = {\ttfamily false}, \/  {\bf CDXUTEditBox} $\ast$$\ast$ {\em ppCreated} = {\ttfamily NULL})}}
+\label{class_c_d_x_u_t_dialog_a1374799d1714dc22e7c54a0e76688dcf}
+\hypertarget{class_c_d_x_u_t_dialog_a05c3acfebcc0b6f9ab88a9fb4e0979f5}{
+\index{CDXUTDialog@{CDXUTDialog}!AddIMEEditBox@{AddIMEEditBox}}
+\index{AddIMEEditBox@{AddIMEEditBox}!CDXUTDialog@{CDXUTDialog}}
+\subsubsection[{AddIMEEditBox}]{\setlength{\rightskip}{0pt plus 5cm}HRESULT CDXUTDialog::AddIMEEditBox ({\bf int} {\em ID}, \/  LPCWSTR {\em strText}, \/  {\bf int} {\em x}, \/  {\bf int} {\em y}, \/  {\bf int} {\em width}, \/  {\bf int} {\em height}, \/  bool {\em bIsDefault} = {\ttfamily false}, \/  {\bf CDXUTIMEEditBox} $\ast$$\ast$ {\em ppCreated} = {\ttfamily NULL})}}
+\label{class_c_d_x_u_t_dialog_a05c3acfebcc0b6f9ab88a9fb4e0979f5}
+\hypertarget{class_c_d_x_u_t_dialog_a10004abccfeb7cad590614ff5b2cde65}{
+\index{CDXUTDialog@{CDXUTDialog}!AddListBox@{AddListBox}}
+\index{AddListBox@{AddListBox}!CDXUTDialog@{CDXUTDialog}}
+\subsubsection[{AddListBox}]{\setlength{\rightskip}{0pt plus 5cm}HRESULT CDXUTDialog::AddListBox ({\bf int} {\em ID}, \/  {\bf int} {\em x}, \/  {\bf int} {\em y}, \/  {\bf int} {\em width}, \/  {\bf int} {\em height}, \/  DWORD {\em dwStyle} = {\ttfamily 0}, \/  {\bf CDXUTListBox} $\ast$$\ast$ {\em ppCreated} = {\ttfamily NULL})}}
+\label{class_c_d_x_u_t_dialog_a10004abccfeb7cad590614ff5b2cde65}
+\hypertarget{class_c_d_x_u_t_dialog_a855c97f014a3a6c63706cf300527a817}{
+\index{CDXUTDialog@{CDXUTDialog}!AddRadioButton@{AddRadioButton}}
+\index{AddRadioButton@{AddRadioButton}!CDXUTDialog@{CDXUTDialog}}
+\subsubsection[{AddRadioButton}]{\setlength{\rightskip}{0pt plus 5cm}HRESULT CDXUTDialog::AddRadioButton ({\bf int} {\em ID}, \/  UINT {\em nButtonGroup}, \/  LPCWSTR {\em strText}, \/  {\bf int} {\em x}, \/  {\bf int} {\em y}, \/  {\bf int} {\em width}, \/  {\bf int} {\em height}, \/  bool {\em bChecked} = {\ttfamily false}, \/  UINT {\em nHotkey} = {\ttfamily 0}, \/  bool {\em bIsDefault} = {\ttfamily false}, \/  {\bf CDXUTRadioButton} $\ast$$\ast$ {\em ppCreated} = {\ttfamily NULL})}}
+\label{class_c_d_x_u_t_dialog_a855c97f014a3a6c63706cf300527a817}
+\hypertarget{class_c_d_x_u_t_dialog_aaaaade0b42673d6b6a5a244fe4ae25ee}{
+\index{CDXUTDialog@{CDXUTDialog}!AddSlider@{AddSlider}}
+\index{AddSlider@{AddSlider}!CDXUTDialog@{CDXUTDialog}}
+\subsubsection[{AddSlider}]{\setlength{\rightskip}{0pt plus 5cm}HRESULT CDXUTDialog::AddSlider ({\bf int} {\em ID}, \/  {\bf int} {\em x}, \/  {\bf int} {\em y}, \/  {\bf int} {\em width}, \/  {\bf int} {\em height}, \/  {\bf int} {\em min} = {\ttfamily 0}, \/  {\bf int} {\em max} = {\ttfamily 100}, \/  {\bf int} {\em value} = {\ttfamily 50}, \/  bool {\em bIsDefault} = {\ttfamily false}, \/  {\bf CDXUTSlider} $\ast$$\ast$ {\em ppCreated} = {\ttfamily NULL})}}
+\label{class_c_d_x_u_t_dialog_aaaaade0b42673d6b6a5a244fe4ae25ee}
+\hypertarget{class_c_d_x_u_t_dialog_afe893ab17f6905d1908e6fd1499749b1}{
+\index{CDXUTDialog@{CDXUTDialog}!AddStatic@{AddStatic}}
+\index{AddStatic@{AddStatic}!CDXUTDialog@{CDXUTDialog}}
+\subsubsection[{AddStatic}]{\setlength{\rightskip}{0pt plus 5cm}HRESULT CDXUTDialog::AddStatic ({\bf int} {\em ID}, \/  LPCWSTR {\em strText}, \/  {\bf int} {\em x}, \/  {\bf int} {\em y}, \/  {\bf int} {\em width}, \/  {\bf int} {\em height}, \/  bool {\em bIsDefault} = {\ttfamily false}, \/  {\bf CDXUTStatic} $\ast$$\ast$ {\em ppCreated} = {\ttfamily NULL})}}
+\label{class_c_d_x_u_t_dialog_afe893ab17f6905d1908e6fd1499749b1}
+\hypertarget{class_c_d_x_u_t_dialog_a94d782e76e3e635c67e9d4326dfa9b66}{
+\index{CDXUTDialog@{CDXUTDialog}!CalcTextRect@{CalcTextRect}}
+\index{CalcTextRect@{CalcTextRect}!CDXUTDialog@{CDXUTDialog}}
+\subsubsection[{CalcTextRect}]{\setlength{\rightskip}{0pt plus 5cm}HRESULT CDXUTDialog::CalcTextRect (LPCWSTR {\em strText}, \/  {\bf CDXUTElement} $\ast$ {\em pElement}, \/  RECT $\ast$ {\em prcDest}, \/  {\bf int} {\em nCount} = {\ttfamily -\/1})}}
+\label{class_c_d_x_u_t_dialog_a94d782e76e3e635c67e9d4326dfa9b66}
+\hypertarget{class_c_d_x_u_t_dialog_a339029982b93647d9a2d3729066b09da}{
+\index{CDXUTDialog@{CDXUTDialog}!ClearComboBox@{ClearComboBox}}
+\index{ClearComboBox@{ClearComboBox}!CDXUTDialog@{CDXUTDialog}}
+\subsubsection[{ClearComboBox}]{\setlength{\rightskip}{0pt plus 5cm}void CDXUTDialog::ClearComboBox ({\bf int} {\em ID})}}
+\label{class_c_d_x_u_t_dialog_a339029982b93647d9a2d3729066b09da}
+\hypertarget{class_c_d_x_u_t_dialog_ac08c4dea0b23129bb11eae8055d9da27}{
+\index{CDXUTDialog@{CDXUTDialog}!ClearFocus@{ClearFocus}}
+\index{ClearFocus@{ClearFocus}!CDXUTDialog@{CDXUTDialog}}
+\subsubsection[{ClearFocus}]{\setlength{\rightskip}{0pt plus 5cm}void CDXUTDialog::ClearFocus ()\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}
+\label{class_c_d_x_u_t_dialog_ac08c4dea0b23129bb11eae8055d9da27}
+\hypertarget{class_c_d_x_u_t_dialog_a1d65298121be1454bf5a3b945d19d6e4}{
+\index{CDXUTDialog@{CDXUTDialog}!ClearRadioButtonGroup@{ClearRadioButtonGroup}}
+\index{ClearRadioButtonGroup@{ClearRadioButtonGroup}!CDXUTDialog@{CDXUTDialog}}
+\subsubsection[{ClearRadioButtonGroup}]{\setlength{\rightskip}{0pt plus 5cm}void CDXUTDialog::ClearRadioButtonGroup (UINT {\em nGroup})}}
+\label{class_c_d_x_u_t_dialog_a1d65298121be1454bf5a3b945d19d6e4}
+\hypertarget{class_c_d_x_u_t_dialog_ad3345a7a307fa37e32cb3035a127306f}{
+\index{CDXUTDialog@{CDXUTDialog}!DrawPolyLine@{DrawPolyLine}}
+\index{DrawPolyLine@{DrawPolyLine}!CDXUTDialog@{CDXUTDialog}}
+\subsubsection[{DrawPolyLine}]{\setlength{\rightskip}{0pt plus 5cm}HRESULT CDXUTDialog::DrawPolyLine (POINT $\ast$ {\em apPoints}, \/  UINT {\em nNumPoints}, \/  D3DCOLOR {\em color})}}
+\label{class_c_d_x_u_t_dialog_ad3345a7a307fa37e32cb3035a127306f}
+\hypertarget{class_c_d_x_u_t_dialog_adccd346391230d10adfe508ee29a2a8d}{
+\index{CDXUTDialog@{CDXUTDialog}!DrawRect@{DrawRect}}
+\index{DrawRect@{DrawRect}!CDXUTDialog@{CDXUTDialog}}
+\subsubsection[{DrawRect}]{\setlength{\rightskip}{0pt plus 5cm}HRESULT CDXUTDialog::DrawRect (RECT $\ast$ {\em pRect}, \/  D3DCOLOR {\em color})}}
+\label{class_c_d_x_u_t_dialog_adccd346391230d10adfe508ee29a2a8d}
+\hypertarget{class_c_d_x_u_t_dialog_adeac22d23d8ec3cf2db5ba7ac28d3c61}{
+\index{CDXUTDialog@{CDXUTDialog}!DrawSprite@{DrawSprite}}
+\index{DrawSprite@{DrawSprite}!CDXUTDialog@{CDXUTDialog}}
+\subsubsection[{DrawSprite}]{\setlength{\rightskip}{0pt plus 5cm}HRESULT CDXUTDialog::DrawSprite ({\bf CDXUTElement} $\ast$ {\em pElement}, \/  RECT $\ast$ {\em prcDest})}}
+\label{class_c_d_x_u_t_dialog_adeac22d23d8ec3cf2db5ba7ac28d3c61}
+\hypertarget{class_c_d_x_u_t_dialog_a78b6b17501a7342ccfac5d22314d12c4}{
+\index{CDXUTDialog@{CDXUTDialog}!DrawText@{DrawText}}
+\index{DrawText@{DrawText}!CDXUTDialog@{CDXUTDialog}}
+\subsubsection[{DrawText}]{\setlength{\rightskip}{0pt plus 5cm}HRESULT CDXUTDialog::DrawText (LPCWSTR {\em strText}, \/  {\bf CDXUTElement} $\ast$ {\em pElement}, \/  RECT $\ast$ {\em prcDest}, \/  bool {\em bShadow} = {\ttfamily false}, \/  {\bf int} {\em nCount} = {\ttfamily -\/1})}}
+\label{class_c_d_x_u_t_dialog_a78b6b17501a7342ccfac5d22314d12c4}
+\hypertarget{class_c_d_x_u_t_dialog_ac0fabdca39baa6ed68e5754f99cf5b81}{
+\index{CDXUTDialog@{CDXUTDialog}!EnableCaption@{EnableCaption}}
+\index{EnableCaption@{EnableCaption}!CDXUTDialog@{CDXUTDialog}}
+\subsubsection[{EnableCaption}]{\setlength{\rightskip}{0pt plus 5cm}void CDXUTDialog::EnableCaption (bool {\em bEnable})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_c_d_x_u_t_dialog_ac0fabdca39baa6ed68e5754f99cf5b81}
+\hypertarget{class_c_d_x_u_t_dialog_a0022392f6e443b015ad8692aa6ab5442}{
+\index{CDXUTDialog@{CDXUTDialog}!EnableKeyboardInput@{EnableKeyboardInput}}
+\index{EnableKeyboardInput@{EnableKeyboardInput}!CDXUTDialog@{CDXUTDialog}}
+\subsubsection[{EnableKeyboardInput}]{\setlength{\rightskip}{0pt plus 5cm}void CDXUTDialog::EnableKeyboardInput (bool {\em bEnable})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_c_d_x_u_t_dialog_a0022392f6e443b015ad8692aa6ab5442}
+\hypertarget{class_c_d_x_u_t_dialog_a109b115dd423e6cb42c7fc02bea65ea3}{
+\index{CDXUTDialog@{CDXUTDialog}!EnableMouseInput@{EnableMouseInput}}
+\index{EnableMouseInput@{EnableMouseInput}!CDXUTDialog@{CDXUTDialog}}
+\subsubsection[{EnableMouseInput}]{\setlength{\rightskip}{0pt plus 5cm}void CDXUTDialog::EnableMouseInput (bool {\em bEnable})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_c_d_x_u_t_dialog_a109b115dd423e6cb42c7fc02bea65ea3}
+\hypertarget{class_c_d_x_u_t_dialog_ab4fad093a2509e6813b22cd9342bbff1}{
+\index{CDXUTDialog@{CDXUTDialog}!EnableNonUserEvents@{EnableNonUserEvents}}
+\index{EnableNonUserEvents@{EnableNonUserEvents}!CDXUTDialog@{CDXUTDialog}}
+\subsubsection[{EnableNonUserEvents}]{\setlength{\rightskip}{0pt plus 5cm}void CDXUTDialog::EnableNonUserEvents (bool {\em bEnable})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_c_d_x_u_t_dialog_ab4fad093a2509e6813b22cd9342bbff1}
+\hypertarget{class_c_d_x_u_t_dialog_a3a1acadb4feabee897e520b2dbf24fe2}{
+\index{CDXUTDialog@{CDXUTDialog}!FocusDefaultControl@{FocusDefaultControl}}
+\index{FocusDefaultControl@{FocusDefaultControl}!CDXUTDialog@{CDXUTDialog}}
+\subsubsection[{FocusDefaultControl}]{\setlength{\rightskip}{0pt plus 5cm}void CDXUTDialog::FocusDefaultControl ()}}
+\label{class_c_d_x_u_t_dialog_a3a1acadb4feabee897e520b2dbf24fe2}
+\hypertarget{class_c_d_x_u_t_dialog_a3dc0b6d056c7bc9c035c808d4b2b8803}{
+\index{CDXUTDialog@{CDXUTDialog}!GetButton@{GetButton}}
+\index{GetButton@{GetButton}!CDXUTDialog@{CDXUTDialog}}
+\subsubsection[{GetButton}]{\setlength{\rightskip}{0pt plus 5cm}{\bf CDXUTButton}$\ast$ CDXUTDialog::GetButton ({\bf int} {\em ID})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_c_d_x_u_t_dialog_a3dc0b6d056c7bc9c035c808d4b2b8803}
+\hypertarget{class_c_d_x_u_t_dialog_a72a80373de83c0a368e04e9d1266494c}{
+\index{CDXUTDialog@{CDXUTDialog}!GetCaptionHeight@{GetCaptionHeight}}
+\index{GetCaptionHeight@{GetCaptionHeight}!CDXUTDialog@{CDXUTDialog}}
+\subsubsection[{GetCaptionHeight}]{\setlength{\rightskip}{0pt plus 5cm}{\bf int} CDXUTDialog::GetCaptionHeight () const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_c_d_x_u_t_dialog_a72a80373de83c0a368e04e9d1266494c}
+\hypertarget{class_c_d_x_u_t_dialog_a69bff29d7b3dda3665fe23acff9b075d}{
+\index{CDXUTDialog@{CDXUTDialog}!GetCheckBox@{GetCheckBox}}
+\index{GetCheckBox@{GetCheckBox}!CDXUTDialog@{CDXUTDialog}}
+\subsubsection[{GetCheckBox}]{\setlength{\rightskip}{0pt plus 5cm}{\bf CDXUTCheckBox}$\ast$ CDXUTDialog::GetCheckBox ({\bf int} {\em ID})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_c_d_x_u_t_dialog_a69bff29d7b3dda3665fe23acff9b075d}
+\hypertarget{class_c_d_x_u_t_dialog_a2f11b9478861af81e40bebb3718a4ee3}{
+\index{CDXUTDialog@{CDXUTDialog}!GetComboBox@{GetComboBox}}
+\index{GetComboBox@{GetComboBox}!CDXUTDialog@{CDXUTDialog}}
+\subsubsection[{GetComboBox}]{\setlength{\rightskip}{0pt plus 5cm}{\bf CDXUTComboBox}$\ast$ CDXUTDialog::GetComboBox ({\bf int} {\em ID})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_c_d_x_u_t_dialog_a2f11b9478861af81e40bebb3718a4ee3}
+\hypertarget{class_c_d_x_u_t_dialog_a7490e9cfec52ad62442c30c4f862b83a}{
+\index{CDXUTDialog@{CDXUTDialog}!GetControl@{GetControl}}
+\index{GetControl@{GetControl}!CDXUTDialog@{CDXUTDialog}}
+\subsubsection[{GetControl}]{\setlength{\rightskip}{0pt plus 5cm}{\bf CDXUTControl} $\ast$ CDXUTDialog::GetControl ({\bf int} {\em ID}, \/  UINT {\em nControlType})}}
+\label{class_c_d_x_u_t_dialog_a7490e9cfec52ad62442c30c4f862b83a}
+\hypertarget{class_c_d_x_u_t_dialog_ad65e23ac0ba4e4b5af0128f6518f09ae}{
+\index{CDXUTDialog@{CDXUTDialog}!GetControl@{GetControl}}
+\index{GetControl@{GetControl}!CDXUTDialog@{CDXUTDialog}}
+\subsubsection[{GetControl}]{\setlength{\rightskip}{0pt plus 5cm}{\bf CDXUTControl} $\ast$ CDXUTDialog::GetControl ({\bf int} {\em ID})}}
+\label{class_c_d_x_u_t_dialog_ad65e23ac0ba4e4b5af0128f6518f09ae}
+\hypertarget{class_c_d_x_u_t_dialog_a8d1c613d40be521ed5307446e33196e1}{
+\index{CDXUTDialog@{CDXUTDialog}!GetControlAtPoint@{GetControlAtPoint}}
+\index{GetControlAtPoint@{GetControlAtPoint}!CDXUTDialog@{CDXUTDialog}}
+\subsubsection[{GetControlAtPoint}]{\setlength{\rightskip}{0pt plus 5cm}{\bf CDXUTControl} $\ast$ CDXUTDialog::GetControlAtPoint (POINT {\em pt})}}
+\label{class_c_d_x_u_t_dialog_a8d1c613d40be521ed5307446e33196e1}
+\hypertarget{class_c_d_x_u_t_dialog_a274fa05f0de8b86856434f1f1a93409e}{
+\index{CDXUTDialog@{CDXUTDialog}!GetControlEnabled@{GetControlEnabled}}
+\index{GetControlEnabled@{GetControlEnabled}!CDXUTDialog@{CDXUTDialog}}
+\subsubsection[{GetControlEnabled}]{\setlength{\rightskip}{0pt plus 5cm}bool CDXUTDialog::GetControlEnabled ({\bf int} {\em ID})}}
+\label{class_c_d_x_u_t_dialog_a274fa05f0de8b86856434f1f1a93409e}
+\hypertarget{class_c_d_x_u_t_dialog_ac77892923ec7d9b8838b745c3937e8db}{
+\index{CDXUTDialog@{CDXUTDialog}!GetDefaultElement@{GetDefaultElement}}
+\index{GetDefaultElement@{GetDefaultElement}!CDXUTDialog@{CDXUTDialog}}
+\subsubsection[{GetDefaultElement}]{\setlength{\rightskip}{0pt plus 5cm}{\bf CDXUTElement} $\ast$ CDXUTDialog::GetDefaultElement (UINT {\em nControlType}, \/  UINT {\em iElement})}}
+\label{class_c_d_x_u_t_dialog_ac77892923ec7d9b8838b745c3937e8db}
+\hypertarget{class_c_d_x_u_t_dialog_ad0e0333dfd921e371b1cfaf4aec674fe}{
+\index{CDXUTDialog@{CDXUTDialog}!GetEditBox@{GetEditBox}}
+\index{GetEditBox@{GetEditBox}!CDXUTDialog@{CDXUTDialog}}
+\subsubsection[{GetEditBox}]{\setlength{\rightskip}{0pt plus 5cm}{\bf CDXUTEditBox}$\ast$ CDXUTDialog::GetEditBox ({\bf int} {\em ID})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_c_d_x_u_t_dialog_ad0e0333dfd921e371b1cfaf4aec674fe}
+\hypertarget{class_c_d_x_u_t_dialog_abbd6628848668c6f4af3d10fac4411f3}{
+\index{CDXUTDialog@{CDXUTDialog}!GetFont@{GetFont}}
+\index{GetFont@{GetFont}!CDXUTDialog@{CDXUTDialog}}
+\subsubsection[{GetFont}]{\setlength{\rightskip}{0pt plus 5cm}{\bf DXUTFontNode} $\ast$ CDXUTDialog::GetFont (UINT {\em index})}}
+\label{class_c_d_x_u_t_dialog_abbd6628848668c6f4af3d10fac4411f3}
+\hypertarget{class_c_d_x_u_t_dialog_ae6cae46633b8133c0447dcc0e9ae2bdf}{
+\index{CDXUTDialog@{CDXUTDialog}!GetHeight@{GetHeight}}
+\index{GetHeight@{GetHeight}!CDXUTDialog@{CDXUTDialog}}
+\subsubsection[{GetHeight}]{\setlength{\rightskip}{0pt plus 5cm}{\bf int} CDXUTDialog::GetHeight ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_c_d_x_u_t_dialog_ae6cae46633b8133c0447dcc0e9ae2bdf}
+\hypertarget{class_c_d_x_u_t_dialog_ad315cae4c3215cd91a550f3845abf367}{
+\index{CDXUTDialog@{CDXUTDialog}!GetIMEEditBox@{GetIMEEditBox}}
+\index{GetIMEEditBox@{GetIMEEditBox}!CDXUTDialog@{CDXUTDialog}}
+\subsubsection[{GetIMEEditBox}]{\setlength{\rightskip}{0pt plus 5cm}{\bf CDXUTIMEEditBox}$\ast$ CDXUTDialog::GetIMEEditBox ({\bf int} {\em ID})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_c_d_x_u_t_dialog_ad315cae4c3215cd91a550f3845abf367}
+\hypertarget{class_c_d_x_u_t_dialog_aab44b0aff12eb520b714fa7567ce1d14}{
+\index{CDXUTDialog@{CDXUTDialog}!GetListBox@{GetListBox}}
+\index{GetListBox@{GetListBox}!CDXUTDialog@{CDXUTDialog}}
+\subsubsection[{GetListBox}]{\setlength{\rightskip}{0pt plus 5cm}{\bf CDXUTListBox}$\ast$ CDXUTDialog::GetListBox ({\bf int} {\em ID})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_c_d_x_u_t_dialog_aab44b0aff12eb520b714fa7567ce1d14}
+\hypertarget{class_c_d_x_u_t_dialog_a3ecfd786f830d0049a22f3934eac6bfe}{
+\index{CDXUTDialog@{CDXUTDialog}!GetLocation@{GetLocation}}
+\index{GetLocation@{GetLocation}!CDXUTDialog@{CDXUTDialog}}
+\subsubsection[{GetLocation}]{\setlength{\rightskip}{0pt plus 5cm}void CDXUTDialog::GetLocation (POINT \& {\em Pt}) const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_c_d_x_u_t_dialog_a3ecfd786f830d0049a22f3934eac6bfe}
+\hypertarget{class_c_d_x_u_t_dialog_afb938675ef8db32b8af0713db150b432}{
+\index{CDXUTDialog@{CDXUTDialog}!GetManager@{GetManager}}
+\index{GetManager@{GetManager}!CDXUTDialog@{CDXUTDialog}}
+\subsubsection[{GetManager}]{\setlength{\rightskip}{0pt plus 5cm}{\bf CDXUTDialogResourceManager}$\ast$ CDXUTDialog::GetManager ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_c_d_x_u_t_dialog_afb938675ef8db32b8af0713db150b432}
+\hypertarget{class_c_d_x_u_t_dialog_a67ac00efe88bc892a832d000960be4b6}{
+\index{CDXUTDialog@{CDXUTDialog}!GetMinimized@{GetMinimized}}
+\index{GetMinimized@{GetMinimized}!CDXUTDialog@{CDXUTDialog}}
+\subsubsection[{GetMinimized}]{\setlength{\rightskip}{0pt plus 5cm}bool CDXUTDialog::GetMinimized ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_c_d_x_u_t_dialog_a67ac00efe88bc892a832d000960be4b6}
+\hypertarget{class_c_d_x_u_t_dialog_a296f861718f43a5a5ec0d112094f5cc0}{
+\index{CDXUTDialog@{CDXUTDialog}!GetNextControl@{GetNextControl}}
+\index{GetNextControl@{GetNextControl}!CDXUTDialog@{CDXUTDialog}}
+\subsubsection[{GetNextControl}]{\setlength{\rightskip}{0pt plus 5cm}{\bf CDXUTControl} $\ast$ CDXUTDialog::GetNextControl ({\bf CDXUTControl} $\ast$ {\em pControl})\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}
+\label{class_c_d_x_u_t_dialog_a296f861718f43a5a5ec0d112094f5cc0}
+\hypertarget{class_c_d_x_u_t_dialog_ac0999d1694204b66f86a85f117e2a2da}{
+\index{CDXUTDialog@{CDXUTDialog}!GetPrevControl@{GetPrevControl}}
+\index{GetPrevControl@{GetPrevControl}!CDXUTDialog@{CDXUTDialog}}
+\subsubsection[{GetPrevControl}]{\setlength{\rightskip}{0pt plus 5cm}{\bf CDXUTControl} $\ast$ CDXUTDialog::GetPrevControl ({\bf CDXUTControl} $\ast$ {\em pControl})\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}
+\label{class_c_d_x_u_t_dialog_ac0999d1694204b66f86a85f117e2a2da}
+\hypertarget{class_c_d_x_u_t_dialog_a346d360fc897ec736800dfcf86ca205c}{
+\index{CDXUTDialog@{CDXUTDialog}!GetRadioButton@{GetRadioButton}}
+\index{GetRadioButton@{GetRadioButton}!CDXUTDialog@{CDXUTDialog}}
+\subsubsection[{GetRadioButton}]{\setlength{\rightskip}{0pt plus 5cm}{\bf CDXUTRadioButton}$\ast$ CDXUTDialog::GetRadioButton ({\bf int} {\em ID})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_c_d_x_u_t_dialog_a346d360fc897ec736800dfcf86ca205c}
+\hypertarget{class_c_d_x_u_t_dialog_a9218f6cb171d1649cc49d487a3fa66da}{
+\index{CDXUTDialog@{CDXUTDialog}!GetSlider@{GetSlider}}
+\index{GetSlider@{GetSlider}!CDXUTDialog@{CDXUTDialog}}
+\subsubsection[{GetSlider}]{\setlength{\rightskip}{0pt plus 5cm}{\bf CDXUTSlider}$\ast$ CDXUTDialog::GetSlider ({\bf int} {\em ID})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_c_d_x_u_t_dialog_a9218f6cb171d1649cc49d487a3fa66da}
+\hypertarget{class_c_d_x_u_t_dialog_a0dd93066e5f93a858ba748d4d61c0f60}{
+\index{CDXUTDialog@{CDXUTDialog}!GetStatic@{GetStatic}}
+\index{GetStatic@{GetStatic}!CDXUTDialog@{CDXUTDialog}}
+\subsubsection[{GetStatic}]{\setlength{\rightskip}{0pt plus 5cm}{\bf CDXUTStatic}$\ast$ CDXUTDialog::GetStatic ({\bf int} {\em ID})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_c_d_x_u_t_dialog_a0dd93066e5f93a858ba748d4d61c0f60}
+\hypertarget{class_c_d_x_u_t_dialog_a0d241bc13bf1be8bb179b8c822a5f1e1}{
+\index{CDXUTDialog@{CDXUTDialog}!GetTexture@{GetTexture}}
+\index{GetTexture@{GetTexture}!CDXUTDialog@{CDXUTDialog}}
+\subsubsection[{GetTexture}]{\setlength{\rightskip}{0pt plus 5cm}{\bf DXUTTextureNode} $\ast$ CDXUTDialog::GetTexture (UINT {\em index})}}
+\label{class_c_d_x_u_t_dialog_a0d241bc13bf1be8bb179b8c822a5f1e1}
+\hypertarget{class_c_d_x_u_t_dialog_ad80a66dea701bdedee8c3e7ff0ba76db}{
+\index{CDXUTDialog@{CDXUTDialog}!GetVisible@{GetVisible}}
+\index{GetVisible@{GetVisible}!CDXUTDialog@{CDXUTDialog}}
+\subsubsection[{GetVisible}]{\setlength{\rightskip}{0pt plus 5cm}bool CDXUTDialog::GetVisible ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_c_d_x_u_t_dialog_ad80a66dea701bdedee8c3e7ff0ba76db}
+\hypertarget{class_c_d_x_u_t_dialog_a6dd8c238656eb7260e0eddb8a2c1ec69}{
+\index{CDXUTDialog@{CDXUTDialog}!GetWidth@{GetWidth}}
+\index{GetWidth@{GetWidth}!CDXUTDialog@{CDXUTDialog}}
+\subsubsection[{GetWidth}]{\setlength{\rightskip}{0pt plus 5cm}{\bf int} CDXUTDialog::GetWidth ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_c_d_x_u_t_dialog_a6dd8c238656eb7260e0eddb8a2c1ec69}
+\hypertarget{class_c_d_x_u_t_dialog_aa1de5939c452894caa2602505aa77e72}{
+\index{CDXUTDialog@{CDXUTDialog}!Init@{Init}}
+\index{Init@{Init}!CDXUTDialog@{CDXUTDialog}}
+\subsubsection[{Init}]{\setlength{\rightskip}{0pt plus 5cm}void CDXUTDialog::Init ({\bf CDXUTDialogResourceManager} $\ast$ {\em pManager}, \/  bool {\em bRegisterDialog}, \/  LPCWSTR {\em szControlTextureResourceName}, \/  HMODULE {\em hControlTextureResourceModule})}}
+\label{class_c_d_x_u_t_dialog_aa1de5939c452894caa2602505aa77e72}
+\hypertarget{class_c_d_x_u_t_dialog_a50607e82b3211003dfaf0daf79aa0719}{
+\index{CDXUTDialog@{CDXUTDialog}!Init@{Init}}
+\index{Init@{Init}!CDXUTDialog@{CDXUTDialog}}
+\subsubsection[{Init}]{\setlength{\rightskip}{0pt plus 5cm}void CDXUTDialog::Init ({\bf CDXUTDialogResourceManager} $\ast$ {\em pManager}, \/  bool {\em bRegisterDialog}, \/  LPCWSTR {\em pszControlTextureFilename})}}
+\label{class_c_d_x_u_t_dialog_a50607e82b3211003dfaf0daf79aa0719}
+\hypertarget{class_c_d_x_u_t_dialog_a45fcf9a802d8a9f1bce9bded09c58e22}{
+\index{CDXUTDialog@{CDXUTDialog}!Init@{Init}}
+\index{Init@{Init}!CDXUTDialog@{CDXUTDialog}}
+\subsubsection[{Init}]{\setlength{\rightskip}{0pt plus 5cm}void CDXUTDialog::Init ({\bf CDXUTDialogResourceManager} $\ast$ {\em pManager}, \/  bool {\em bRegisterDialog} = {\ttfamily true})}}
+\label{class_c_d_x_u_t_dialog_a45fcf9a802d8a9f1bce9bded09c58e22}
+\hypertarget{class_c_d_x_u_t_dialog_aacf7b4a85cd752ab8aa9d676138adf86}{
+\index{CDXUTDialog@{CDXUTDialog}!InitControl@{InitControl}}
+\index{InitControl@{InitControl}!CDXUTDialog@{CDXUTDialog}}
+\subsubsection[{InitControl}]{\setlength{\rightskip}{0pt plus 5cm}HRESULT CDXUTDialog::InitControl ({\bf CDXUTControl} $\ast$ {\em pControl})}}
+\label{class_c_d_x_u_t_dialog_aacf7b4a85cd752ab8aa9d676138adf86}
+\hypertarget{class_c_d_x_u_t_dialog_abfe2dae7b0eb882e25786ba20d52fc33}{
+\index{CDXUTDialog@{CDXUTDialog}!IsKeyboardInputEnabled@{IsKeyboardInputEnabled}}
+\index{IsKeyboardInputEnabled@{IsKeyboardInputEnabled}!CDXUTDialog@{CDXUTDialog}}
+\subsubsection[{IsKeyboardInputEnabled}]{\setlength{\rightskip}{0pt plus 5cm}bool CDXUTDialog::IsKeyboardInputEnabled () const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_c_d_x_u_t_dialog_abfe2dae7b0eb882e25786ba20d52fc33}
+\hypertarget{class_c_d_x_u_t_dialog_abb1e03c6d2da865384e34a6a60a41be4}{
+\index{CDXUTDialog@{CDXUTDialog}!MsgProc@{MsgProc}}
+\index{MsgProc@{MsgProc}!CDXUTDialog@{CDXUTDialog}}
+\subsubsection[{MsgProc}]{\setlength{\rightskip}{0pt plus 5cm}bool CDXUTDialog::MsgProc (HWND {\em hWnd}, \/  UINT {\em uMsg}, \/  WPARAM {\em wParam}, \/  LPARAM {\em lParam})}}
+\label{class_c_d_x_u_t_dialog_abb1e03c6d2da865384e34a6a60a41be4}
+\hypertarget{class_c_d_x_u_t_dialog_acce59cefc90be252813be4c4e363fd03}{
+\index{CDXUTDialog@{CDXUTDialog}!OnRender@{OnRender}}
+\index{OnRender@{OnRender}!CDXUTDialog@{CDXUTDialog}}
+\subsubsection[{OnRender}]{\setlength{\rightskip}{0pt plus 5cm}HRESULT CDXUTDialog::OnRender (float {\em fElapsedTime})}}
+\label{class_c_d_x_u_t_dialog_acce59cefc90be252813be4c4e363fd03}
+\hypertarget{class_c_d_x_u_t_dialog_a2fdbbfcd91be886b5843e790336b2f17}{
+\index{CDXUTDialog@{CDXUTDialog}!Refresh@{Refresh}}
+\index{Refresh@{Refresh}!CDXUTDialog@{CDXUTDialog}}
+\subsubsection[{Refresh}]{\setlength{\rightskip}{0pt plus 5cm}void CDXUTDialog::Refresh ()}}
+\label{class_c_d_x_u_t_dialog_a2fdbbfcd91be886b5843e790336b2f17}
+\hypertarget{class_c_d_x_u_t_dialog_a175f6919678485e740d460add2e5544b}{
+\index{CDXUTDialog@{CDXUTDialog}!RemoveAllControls@{RemoveAllControls}}
+\index{RemoveAllControls@{RemoveAllControls}!CDXUTDialog@{CDXUTDialog}}
+\subsubsection[{RemoveAllControls}]{\setlength{\rightskip}{0pt plus 5cm}void CDXUTDialog::RemoveAllControls ()}}
+\label{class_c_d_x_u_t_dialog_a175f6919678485e740d460add2e5544b}
+\hypertarget{class_c_d_x_u_t_dialog_ae30dd98c7baecd3d544ab15c17a32bd3}{
+\index{CDXUTDialog@{CDXUTDialog}!RemoveControl@{RemoveControl}}
+\index{RemoveControl@{RemoveControl}!CDXUTDialog@{CDXUTDialog}}
+\subsubsection[{RemoveControl}]{\setlength{\rightskip}{0pt plus 5cm}void CDXUTDialog::RemoveControl ({\bf int} {\em ID})}}
+\label{class_c_d_x_u_t_dialog_ae30dd98c7baecd3d544ab15c17a32bd3}
+\hypertarget{class_c_d_x_u_t_dialog_ad5af120ffc7df861267194e00a7b75ca}{
+\index{CDXUTDialog@{CDXUTDialog}!RequestFocus@{RequestFocus}}
+\index{RequestFocus@{RequestFocus}!CDXUTDialog@{CDXUTDialog}}
+\subsubsection[{RequestFocus}]{\setlength{\rightskip}{0pt plus 5cm}void CDXUTDialog::RequestFocus ({\bf CDXUTControl} $\ast$ {\em pControl})}}
+\label{class_c_d_x_u_t_dialog_ad5af120ffc7df861267194e00a7b75ca}
+\hypertarget{class_c_d_x_u_t_dialog_a8f4afe62626f97855d35438db64c527a}{
+\index{CDXUTDialog@{CDXUTDialog}!SendEvent@{SendEvent}}
+\index{SendEvent@{SendEvent}!CDXUTDialog@{CDXUTDialog}}
+\subsubsection[{SendEvent}]{\setlength{\rightskip}{0pt plus 5cm}VOID CDXUTDialog::SendEvent (UINT {\em nEvent}, \/  bool {\em bTriggeredByUser}, \/  {\bf CDXUTControl} $\ast$ {\em pControl})}}
+\label{class_c_d_x_u_t_dialog_a8f4afe62626f97855d35438db64c527a}
+\hypertarget{class_c_d_x_u_t_dialog_a21a0a60808aacbe1af926d3b49589a18}{
+\index{CDXUTDialog@{CDXUTDialog}!SetBackgroundColors@{SetBackgroundColors}}
+\index{SetBackgroundColors@{SetBackgroundColors}!CDXUTDialog@{CDXUTDialog}}
+\subsubsection[{SetBackgroundColors}]{\setlength{\rightskip}{0pt plus 5cm}void CDXUTDialog::SetBackgroundColors (D3DCOLOR {\em colorTopLeft}, \/  D3DCOLOR {\em colorTopRight}, \/  D3DCOLOR {\em colorBottomLeft}, \/  D3DCOLOR {\em colorBottomRight})}}
+\label{class_c_d_x_u_t_dialog_a21a0a60808aacbe1af926d3b49589a18}
+\hypertarget{class_c_d_x_u_t_dialog_a787ba45509239dc186d2632984e52bb9}{
+\index{CDXUTDialog@{CDXUTDialog}!SetBackgroundColors@{SetBackgroundColors}}
+\index{SetBackgroundColors@{SetBackgroundColors}!CDXUTDialog@{CDXUTDialog}}
+\subsubsection[{SetBackgroundColors}]{\setlength{\rightskip}{0pt plus 5cm}void CDXUTDialog::SetBackgroundColors (D3DCOLOR {\em colorAllCorners})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_c_d_x_u_t_dialog_a787ba45509239dc186d2632984e52bb9}
+\hypertarget{class_c_d_x_u_t_dialog_a082c0600d7f516952cc4a935475f3c49}{
+\index{CDXUTDialog@{CDXUTDialog}!SetCallback@{SetCallback}}
+\index{SetCallback@{SetCallback}!CDXUTDialog@{CDXUTDialog}}
+\subsubsection[{SetCallback}]{\setlength{\rightskip}{0pt plus 5cm}void CDXUTDialog::SetCallback (PCALLBACKDXUTGUIEVENT {\em pCallback}, \/  void $\ast$ {\em pUserContext} = {\ttfamily NULL})}}
+\label{class_c_d_x_u_t_dialog_a082c0600d7f516952cc4a935475f3c49}
+\hypertarget{class_c_d_x_u_t_dialog_a548f7b6caf0780730978344b746351eb}{
+\index{CDXUTDialog@{CDXUTDialog}!SetCaptionHeight@{SetCaptionHeight}}
+\index{SetCaptionHeight@{SetCaptionHeight}!CDXUTDialog@{CDXUTDialog}}
+\subsubsection[{SetCaptionHeight}]{\setlength{\rightskip}{0pt plus 5cm}void CDXUTDialog::SetCaptionHeight ({\bf int} {\em nHeight})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_c_d_x_u_t_dialog_a548f7b6caf0780730978344b746351eb}
+\hypertarget{class_c_d_x_u_t_dialog_abdf008c43c24525341ca8db2742eb042}{
+\index{CDXUTDialog@{CDXUTDialog}!SetCaptionText@{SetCaptionText}}
+\index{SetCaptionText@{SetCaptionText}!CDXUTDialog@{CDXUTDialog}}
+\subsubsection[{SetCaptionText}]{\setlength{\rightskip}{0pt plus 5cm}void CDXUTDialog::SetCaptionText (const WCHAR $\ast$ {\em pwszText})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_c_d_x_u_t_dialog_abdf008c43c24525341ca8db2742eb042}
+\hypertarget{class_c_d_x_u_t_dialog_a38467fd37877a472214cc2b6e95c0059}{
+\index{CDXUTDialog@{CDXUTDialog}!SetControlEnabled@{SetControlEnabled}}
+\index{SetControlEnabled@{SetControlEnabled}!CDXUTDialog@{CDXUTDialog}}
+\subsubsection[{SetControlEnabled}]{\setlength{\rightskip}{0pt plus 5cm}void CDXUTDialog::SetControlEnabled ({\bf int} {\em ID}, \/  bool {\em bEnabled})}}
+\label{class_c_d_x_u_t_dialog_a38467fd37877a472214cc2b6e95c0059}
+\hypertarget{class_c_d_x_u_t_dialog_ad509ffcb58000556545e337cbba2e656}{
+\index{CDXUTDialog@{CDXUTDialog}!SetDefaultElement@{SetDefaultElement}}
+\index{SetDefaultElement@{SetDefaultElement}!CDXUTDialog@{CDXUTDialog}}
+\subsubsection[{SetDefaultElement}]{\setlength{\rightskip}{0pt plus 5cm}HRESULT CDXUTDialog::SetDefaultElement (UINT {\em nControlType}, \/  UINT {\em iElement}, \/  {\bf CDXUTElement} $\ast$ {\em pElement})}}
+\label{class_c_d_x_u_t_dialog_ad509ffcb58000556545e337cbba2e656}
+\hypertarget{class_c_d_x_u_t_dialog_a04466dc5ca32546b327aa76e1b57d970}{
+\index{CDXUTDialog@{CDXUTDialog}!SetFont@{SetFont}}
+\index{SetFont@{SetFont}!CDXUTDialog@{CDXUTDialog}}
+\subsubsection[{SetFont}]{\setlength{\rightskip}{0pt plus 5cm}HRESULT CDXUTDialog::SetFont (UINT {\em index}, \/  LPCWSTR {\em strFaceName}, \/  LONG {\em height}, \/  LONG {\em weight})}}
+\label{class_c_d_x_u_t_dialog_a04466dc5ca32546b327aa76e1b57d970}
+\hypertarget{class_c_d_x_u_t_dialog_af42fdc0cacf7eef44dc518f0cc9903c5}{
+\index{CDXUTDialog@{CDXUTDialog}!SetLocation@{SetLocation}}
+\index{SetLocation@{SetLocation}!CDXUTDialog@{CDXUTDialog}}
+\subsubsection[{SetLocation}]{\setlength{\rightskip}{0pt plus 5cm}void CDXUTDialog::SetLocation ({\bf int} {\em x}, \/  {\bf int} {\em y})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_c_d_x_u_t_dialog_af42fdc0cacf7eef44dc518f0cc9903c5}
+\hypertarget{class_c_d_x_u_t_dialog_a464452e6d763a09a896a5f51c20e8011}{
+\index{CDXUTDialog@{CDXUTDialog}!SetMinimized@{SetMinimized}}
+\index{SetMinimized@{SetMinimized}!CDXUTDialog@{CDXUTDialog}}
+\subsubsection[{SetMinimized}]{\setlength{\rightskip}{0pt plus 5cm}void CDXUTDialog::SetMinimized (bool {\em bMinimized})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_c_d_x_u_t_dialog_a464452e6d763a09a896a5f51c20e8011}
+\hypertarget{class_c_d_x_u_t_dialog_a8da046bceb25136e8c34a2553e517097}{
+\index{CDXUTDialog@{CDXUTDialog}!SetRefreshTime@{SetRefreshTime}}
+\index{SetRefreshTime@{SetRefreshTime}!CDXUTDialog@{CDXUTDialog}}
+\subsubsection[{SetRefreshTime}]{\setlength{\rightskip}{0pt plus 5cm}static void CDXUTDialog::SetRefreshTime (float {\em fTime})\hspace{0.3cm}{\ttfamily  \mbox{[}inline, static\mbox{]}}}}
+\label{class_c_d_x_u_t_dialog_a8da046bceb25136e8c34a2553e517097}
+\hypertarget{class_c_d_x_u_t_dialog_adb63ce7dfbc73250cf7ecd45b424ab96}{
+\index{CDXUTDialog@{CDXUTDialog}!SetSize@{SetSize}}
+\index{SetSize@{SetSize}!CDXUTDialog@{CDXUTDialog}}
+\subsubsection[{SetSize}]{\setlength{\rightskip}{0pt plus 5cm}void CDXUTDialog::SetSize ({\bf int} {\em width}, \/  {\bf int} {\em height})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_c_d_x_u_t_dialog_adb63ce7dfbc73250cf7ecd45b424ab96}
+\hypertarget{class_c_d_x_u_t_dialog_a136fb315f7d3405c9bd59cac96d32acc}{
+\index{CDXUTDialog@{CDXUTDialog}!SetTexture@{SetTexture}}
+\index{SetTexture@{SetTexture}!CDXUTDialog@{CDXUTDialog}}
+\subsubsection[{SetTexture}]{\setlength{\rightskip}{0pt plus 5cm}HRESULT CDXUTDialog::SetTexture (UINT {\em index}, \/  LPCWSTR {\em strResourceName}, \/  HMODULE {\em hResourceModule})}}
+\label{class_c_d_x_u_t_dialog_a136fb315f7d3405c9bd59cac96d32acc}
+\hypertarget{class_c_d_x_u_t_dialog_aa391160093e64b7ea6b23b334079d960}{
+\index{CDXUTDialog@{CDXUTDialog}!SetTexture@{SetTexture}}
+\index{SetTexture@{SetTexture}!CDXUTDialog@{CDXUTDialog}}
+\subsubsection[{SetTexture}]{\setlength{\rightskip}{0pt plus 5cm}HRESULT CDXUTDialog::SetTexture (UINT {\em index}, \/  LPCWSTR {\em strFilename})}}
+\label{class_c_d_x_u_t_dialog_aa391160093e64b7ea6b23b334079d960}
+\hypertarget{class_c_d_x_u_t_dialog_aa390f99d291ba0acb73a01dbb7add794}{
+\index{CDXUTDialog@{CDXUTDialog}!SetVisible@{SetVisible}}
+\index{SetVisible@{SetVisible}!CDXUTDialog@{CDXUTDialog}}
+\subsubsection[{SetVisible}]{\setlength{\rightskip}{0pt plus 5cm}void CDXUTDialog::SetVisible (bool {\em bVisible})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_c_d_x_u_t_dialog_aa390f99d291ba0acb73a01dbb7add794}
+
+
+\subsection{Friends And Related Function Documentation}
+\hypertarget{class_c_d_x_u_t_dialog_a9f01c7e77f6c0b33ee51859336171041}{
+\index{CDXUTDialog@{CDXUTDialog}!CDXUTDialogResourceManager@{CDXUTDialogResourceManager}}
+\index{CDXUTDialogResourceManager@{CDXUTDialogResourceManager}!CDXUTDialog@{CDXUTDialog}}
+\subsubsection[{CDXUTDialogResourceManager}]{\setlength{\rightskip}{0pt plus 5cm}friend class {\bf CDXUTDialogResourceManager}\hspace{0.3cm}{\ttfamily  \mbox{[}friend\mbox{]}}}}
+\label{class_c_d_x_u_t_dialog_a9f01c7e77f6c0b33ee51859336171041}
+
+
+\subsection{Member Data Documentation}
+\hypertarget{class_c_d_x_u_t_dialog_ab298c311bb2389a8928c0650f8da4df8}{
+\index{CDXUTDialog@{CDXUTDialog}!m\_\-bKeyboardInput@{m\_\-bKeyboardInput}}
+\index{m\_\-bKeyboardInput@{m\_\-bKeyboardInput}!CDXUTDialog@{CDXUTDialog}}
+\subsubsection[{m\_\-bKeyboardInput}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf CDXUTDialog::m\_\-bKeyboardInput}}}
+\label{class_c_d_x_u_t_dialog_ab298c311bb2389a8928c0650f8da4df8}
+\hypertarget{class_c_d_x_u_t_dialog_a4e6779884aa890d660bf43072ff15b2f}{
+\index{CDXUTDialog@{CDXUTDialog}!m\_\-bMouseInput@{m\_\-bMouseInput}}
+\index{m\_\-bMouseInput@{m\_\-bMouseInput}!CDXUTDialog@{CDXUTDialog}}
+\subsubsection[{m\_\-bMouseInput}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf CDXUTDialog::m\_\-bMouseInput}}}
+\label{class_c_d_x_u_t_dialog_a4e6779884aa890d660bf43072ff15b2f}
+\hypertarget{class_c_d_x_u_t_dialog_a282063050d5cbad2b070ccafe9edb1d4}{
+\index{CDXUTDialog@{CDXUTDialog}!m\_\-bNonUserEvents@{m\_\-bNonUserEvents}}
+\index{m\_\-bNonUserEvents@{m\_\-bNonUserEvents}!CDXUTDialog@{CDXUTDialog}}
+\subsubsection[{m\_\-bNonUserEvents}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf CDXUTDialog::m\_\-bNonUserEvents}}}
+\label{class_c_d_x_u_t_dialog_a282063050d5cbad2b070ccafe9edb1d4}
+
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+C:/Users/doug/Documents/Visual Studio 2008/Projects/enlightened/Enlightened/DXUT/\hyperlink{_d_x_u_tgui_8h}{DXUTgui.h}\item 
+C:/Users/doug/Documents/Visual Studio 2008/Projects/enlightened/Enlightened/DXUT/\hyperlink{_d_x_u_tgui_8cpp}{DXUTgui.cpp}\end{DoxyCompactItemize}

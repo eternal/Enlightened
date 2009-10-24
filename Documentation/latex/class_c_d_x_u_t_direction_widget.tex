@@ -1,0 +1,211 @@
+\hypertarget{class_c_d_x_u_t_direction_widget}{
+\section{CDXUTDirectionWidget Class Reference}
+\label{class_c_d_x_u_t_direction_widget}\index{CDXUTDirectionWidget@{CDXUTDirectionWidget}}
+}
+
+
+{\ttfamily \#include $<$DXUTmisc.h$>$}Collaboration diagram for CDXUTDirectionWidget:\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_c_d_x_u_t_direction_widget_ab7899fd28008dba0d9e116c4c122e379}{CDXUTDirectionWidget} ()
+\item 
+HRESULT \hyperlink{class_c_d_x_u_t_direction_widget_ae0750529e0920a79eb814782bf91132e}{OnResetDevice} (const D3DSURFACE\_\-DESC $\ast$pBackBufferSurfaceDesc)
+\item 
+HRESULT \hyperlink{class_c_d_x_u_t_direction_widget_a794aeb666eb91f791434215cfe608edc}{OnRender} (D3DXCOLOR color, const D3DXMATRIX $\ast$pmView, const D3DXMATRIX $\ast$pmProj, const D3DXVECTOR3 $\ast$pEyePt)
+\item 
+LRESULT \hyperlink{class_c_d_x_u_t_direction_widget_aa31062654d6963e8c763626b2413e2c4}{HandleMessages} (HWND hWnd, UINT uMsg, WPARAM wParam, LPARAM lParam)
+\item 
+D3DXVECTOR3 \hyperlink{class_c_d_x_u_t_direction_widget_ad9b37b2fd57967a6284cb56abe1c5e3a}{GetLightDirection} ()
+\item 
+void \hyperlink{class_c_d_x_u_t_direction_widget_a05adf625e2a190ed1e238ddf1879e924}{SetLightDirection} (D3DXVECTOR3 vDir)
+\item 
+void \hyperlink{class_c_d_x_u_t_direction_widget_a00effccf13b6c745ab7e3d327a147074}{SetButtonMask} (\hyperlink{_d_x_u_tgui_8cpp_a2d77ed03302b6978834ee3b6f57837fb}{int} nRotate=MOUSE\_\-RIGHT\_\-BUTTON)
+\item 
+float \hyperlink{class_c_d_x_u_t_direction_widget_a6d6a395df8932ae372b2f7eea3b17f00}{GetRadius} ()
+\item 
+void \hyperlink{class_c_d_x_u_t_direction_widget_addcf13e0f53367fc773228c987bae9b9}{SetRadius} (float fRadius)
+\item 
+bool \hyperlink{class_c_d_x_u_t_direction_widget_a9705e4cdb115b728a6a87d3d535ec64c}{IsBeingDragged} ()
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static HRESULT \hyperlink{class_c_d_x_u_t_direction_widget_ad35c008e4e109f6a79a2b88008a8a614}{StaticOnCreateDevice} (IDirect3DDevice9 $\ast$pd3dDevice)
+\item 
+static void \hyperlink{class_c_d_x_u_t_direction_widget_a22263fd07ccf18a43ffe2cfef4622eaf}{StaticOnLostDevice} ()
+\item 
+static void \hyperlink{class_c_d_x_u_t_direction_widget_af4ba68513e65724768131c2cc8ff06fa}{StaticOnDestroyDevice} ()
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+HRESULT \hyperlink{class_c_d_x_u_t_direction_widget_a35dd2b18e3169755c5d13cb4b8da8ec6}{UpdateLightDir} ()
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+D3DXMATRIXA16 \hyperlink{class_c_d_x_u_t_direction_widget_acd8ea6dfee9ad0593f1dc33a9c6b27ba}{m\_\-mRot}
+\item 
+D3DXMATRIXA16 \hyperlink{class_c_d_x_u_t_direction_widget_a7f48a9c9e0aecffeb01cfbbad4e2736c}{m\_\-mRotSnapshot}
+\item 
+float \hyperlink{class_c_d_x_u_t_direction_widget_a038de5f37cfd414d3abaa1f841d74235}{m\_\-fRadius}
+\item 
+\hyperlink{_d_x_u_tgui_8cpp_a2d77ed03302b6978834ee3b6f57837fb}{int} \hyperlink{class_c_d_x_u_t_direction_widget_a949513e0f0d9c14a68b734019244bafc}{m\_\-nRotateMask}
+\item 
+\hyperlink{class_c_d3_d_arc_ball}{CD3DArcBall} \hyperlink{class_c_d_x_u_t_direction_widget_a36404bb48b163d884cef2f72dfa05d2c}{m\_\-ArcBall}
+\item 
+D3DXVECTOR3 \hyperlink{class_c_d_x_u_t_direction_widget_a856d335ef4da33a0e9e2e0eed0cf3d04}{m\_\-vDefaultDir}
+\item 
+D3DXVECTOR3 \hyperlink{class_c_d_x_u_t_direction_widget_a2e519446bb939006632aeeb310ae2405}{m\_\-vCurrentDir}
+\item 
+D3DXMATRIX \hyperlink{class_c_d_x_u_t_direction_widget_afb92062e4b1ce5678298d653cbe3775c}{m\_\-mView}
+\end{DoxyCompactItemize}
+\subsection*{Static Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static IDirect3DDevice9 $\ast$ \hyperlink{class_c_d_x_u_t_direction_widget_a0ee2ebc3fe9b6da8bef84030a4ccf14a}{s\_\-pd3dDevice} = NULL
+\item 
+static ID3DXEffect $\ast$ \hyperlink{class_c_d_x_u_t_direction_widget_ac14ac40b7d8cc55ec2979cf77f42a448}{s\_\-pEffect} = NULL
+\item 
+static ID3DXMesh $\ast$ \hyperlink{class_c_d_x_u_t_direction_widget_a9d801af6502753f1d6fd4747f18f0a08}{s\_\-pMesh} = NULL
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_c_d_x_u_t_direction_widget_ab7899fd28008dba0d9e116c4c122e379}{
+\index{CDXUTDirectionWidget@{CDXUTDirectionWidget}!CDXUTDirectionWidget@{CDXUTDirectionWidget}}
+\index{CDXUTDirectionWidget@{CDXUTDirectionWidget}!CDXUTDirectionWidget@{CDXUTDirectionWidget}}
+\subsubsection[{CDXUTDirectionWidget}]{\setlength{\rightskip}{0pt plus 5cm}CDXUTDirectionWidget::CDXUTDirectionWidget ()}}
+\label{class_c_d_x_u_t_direction_widget_ab7899fd28008dba0d9e116c4c122e379}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_c_d_x_u_t_direction_widget_ad9b37b2fd57967a6284cb56abe1c5e3a}{
+\index{CDXUTDirectionWidget@{CDXUTDirectionWidget}!GetLightDirection@{GetLightDirection}}
+\index{GetLightDirection@{GetLightDirection}!CDXUTDirectionWidget@{CDXUTDirectionWidget}}
+\subsubsection[{GetLightDirection}]{\setlength{\rightskip}{0pt plus 5cm}D3DXVECTOR3 CDXUTDirectionWidget::GetLightDirection ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_c_d_x_u_t_direction_widget_ad9b37b2fd57967a6284cb56abe1c5e3a}
+\hypertarget{class_c_d_x_u_t_direction_widget_a6d6a395df8932ae372b2f7eea3b17f00}{
+\index{CDXUTDirectionWidget@{CDXUTDirectionWidget}!GetRadius@{GetRadius}}
+\index{GetRadius@{GetRadius}!CDXUTDirectionWidget@{CDXUTDirectionWidget}}
+\subsubsection[{GetRadius}]{\setlength{\rightskip}{0pt plus 5cm}float CDXUTDirectionWidget::GetRadius ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_c_d_x_u_t_direction_widget_a6d6a395df8932ae372b2f7eea3b17f00}
+\hypertarget{class_c_d_x_u_t_direction_widget_aa31062654d6963e8c763626b2413e2c4}{
+\index{CDXUTDirectionWidget@{CDXUTDirectionWidget}!HandleMessages@{HandleMessages}}
+\index{HandleMessages@{HandleMessages}!CDXUTDirectionWidget@{CDXUTDirectionWidget}}
+\subsubsection[{HandleMessages}]{\setlength{\rightskip}{0pt plus 5cm}LRESULT CDXUTDirectionWidget::HandleMessages (HWND {\em hWnd}, \/  UINT {\em uMsg}, \/  WPARAM {\em wParam}, \/  LPARAM {\em lParam})}}
+\label{class_c_d_x_u_t_direction_widget_aa31062654d6963e8c763626b2413e2c4}
+\hypertarget{class_c_d_x_u_t_direction_widget_a9705e4cdb115b728a6a87d3d535ec64c}{
+\index{CDXUTDirectionWidget@{CDXUTDirectionWidget}!IsBeingDragged@{IsBeingDragged}}
+\index{IsBeingDragged@{IsBeingDragged}!CDXUTDirectionWidget@{CDXUTDirectionWidget}}
+\subsubsection[{IsBeingDragged}]{\setlength{\rightskip}{0pt plus 5cm}bool CDXUTDirectionWidget::IsBeingDragged ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_c_d_x_u_t_direction_widget_a9705e4cdb115b728a6a87d3d535ec64c}
+\hypertarget{class_c_d_x_u_t_direction_widget_a794aeb666eb91f791434215cfe608edc}{
+\index{CDXUTDirectionWidget@{CDXUTDirectionWidget}!OnRender@{OnRender}}
+\index{OnRender@{OnRender}!CDXUTDirectionWidget@{CDXUTDirectionWidget}}
+\subsubsection[{OnRender}]{\setlength{\rightskip}{0pt plus 5cm}HRESULT CDXUTDirectionWidget::OnRender (D3DXCOLOR {\em color}, \/  const D3DXMATRIX $\ast$ {\em pmView}, \/  const D3DXMATRIX $\ast$ {\em pmProj}, \/  const D3DXVECTOR3 $\ast$ {\em pEyePt})}}
+\label{class_c_d_x_u_t_direction_widget_a794aeb666eb91f791434215cfe608edc}
+\hypertarget{class_c_d_x_u_t_direction_widget_ae0750529e0920a79eb814782bf91132e}{
+\index{CDXUTDirectionWidget@{CDXUTDirectionWidget}!OnResetDevice@{OnResetDevice}}
+\index{OnResetDevice@{OnResetDevice}!CDXUTDirectionWidget@{CDXUTDirectionWidget}}
+\subsubsection[{OnResetDevice}]{\setlength{\rightskip}{0pt plus 5cm}HRESULT CDXUTDirectionWidget::OnResetDevice (const D3DSURFACE\_\-DESC $\ast$ {\em pBackBufferSurfaceDesc})}}
+\label{class_c_d_x_u_t_direction_widget_ae0750529e0920a79eb814782bf91132e}
+\hypertarget{class_c_d_x_u_t_direction_widget_a00effccf13b6c745ab7e3d327a147074}{
+\index{CDXUTDirectionWidget@{CDXUTDirectionWidget}!SetButtonMask@{SetButtonMask}}
+\index{SetButtonMask@{SetButtonMask}!CDXUTDirectionWidget@{CDXUTDirectionWidget}}
+\subsubsection[{SetButtonMask}]{\setlength{\rightskip}{0pt plus 5cm}void CDXUTDirectionWidget::SetButtonMask ({\bf int} {\em nRotate} = {\ttfamily MOUSE\_\-RIGHT\_\-BUTTON})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_c_d_x_u_t_direction_widget_a00effccf13b6c745ab7e3d327a147074}
+\hypertarget{class_c_d_x_u_t_direction_widget_a05adf625e2a190ed1e238ddf1879e924}{
+\index{CDXUTDirectionWidget@{CDXUTDirectionWidget}!SetLightDirection@{SetLightDirection}}
+\index{SetLightDirection@{SetLightDirection}!CDXUTDirectionWidget@{CDXUTDirectionWidget}}
+\subsubsection[{SetLightDirection}]{\setlength{\rightskip}{0pt plus 5cm}void CDXUTDirectionWidget::SetLightDirection (D3DXVECTOR3 {\em vDir})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_c_d_x_u_t_direction_widget_a05adf625e2a190ed1e238ddf1879e924}
+\hypertarget{class_c_d_x_u_t_direction_widget_addcf13e0f53367fc773228c987bae9b9}{
+\index{CDXUTDirectionWidget@{CDXUTDirectionWidget}!SetRadius@{SetRadius}}
+\index{SetRadius@{SetRadius}!CDXUTDirectionWidget@{CDXUTDirectionWidget}}
+\subsubsection[{SetRadius}]{\setlength{\rightskip}{0pt plus 5cm}void CDXUTDirectionWidget::SetRadius (float {\em fRadius})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_c_d_x_u_t_direction_widget_addcf13e0f53367fc773228c987bae9b9}
+\hypertarget{class_c_d_x_u_t_direction_widget_ad35c008e4e109f6a79a2b88008a8a614}{
+\index{CDXUTDirectionWidget@{CDXUTDirectionWidget}!StaticOnCreateDevice@{StaticOnCreateDevice}}
+\index{StaticOnCreateDevice@{StaticOnCreateDevice}!CDXUTDirectionWidget@{CDXUTDirectionWidget}}
+\subsubsection[{StaticOnCreateDevice}]{\setlength{\rightskip}{0pt plus 5cm}HRESULT CDXUTDirectionWidget::StaticOnCreateDevice (IDirect3DDevice9 $\ast$ {\em pd3dDevice})\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}
+\label{class_c_d_x_u_t_direction_widget_ad35c008e4e109f6a79a2b88008a8a614}
+\hypertarget{class_c_d_x_u_t_direction_widget_af4ba68513e65724768131c2cc8ff06fa}{
+\index{CDXUTDirectionWidget@{CDXUTDirectionWidget}!StaticOnDestroyDevice@{StaticOnDestroyDevice}}
+\index{StaticOnDestroyDevice@{StaticOnDestroyDevice}!CDXUTDirectionWidget@{CDXUTDirectionWidget}}
+\subsubsection[{StaticOnDestroyDevice}]{\setlength{\rightskip}{0pt plus 5cm}void CDXUTDirectionWidget::StaticOnDestroyDevice ()\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}
+\label{class_c_d_x_u_t_direction_widget_af4ba68513e65724768131c2cc8ff06fa}
+\hypertarget{class_c_d_x_u_t_direction_widget_a22263fd07ccf18a43ffe2cfef4622eaf}{
+\index{CDXUTDirectionWidget@{CDXUTDirectionWidget}!StaticOnLostDevice@{StaticOnLostDevice}}
+\index{StaticOnLostDevice@{StaticOnLostDevice}!CDXUTDirectionWidget@{CDXUTDirectionWidget}}
+\subsubsection[{StaticOnLostDevice}]{\setlength{\rightskip}{0pt plus 5cm}void CDXUTDirectionWidget::StaticOnLostDevice ()\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}
+\label{class_c_d_x_u_t_direction_widget_a22263fd07ccf18a43ffe2cfef4622eaf}
+\hypertarget{class_c_d_x_u_t_direction_widget_a35dd2b18e3169755c5d13cb4b8da8ec6}{
+\index{CDXUTDirectionWidget@{CDXUTDirectionWidget}!UpdateLightDir@{UpdateLightDir}}
+\index{UpdateLightDir@{UpdateLightDir}!CDXUTDirectionWidget@{CDXUTDirectionWidget}}
+\subsubsection[{UpdateLightDir}]{\setlength{\rightskip}{0pt plus 5cm}HRESULT CDXUTDirectionWidget::UpdateLightDir ()\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{class_c_d_x_u_t_direction_widget_a35dd2b18e3169755c5d13cb4b8da8ec6}
+
+
+\subsection{Member Data Documentation}
+\hypertarget{class_c_d_x_u_t_direction_widget_a36404bb48b163d884cef2f72dfa05d2c}{
+\index{CDXUTDirectionWidget@{CDXUTDirectionWidget}!m\_\-ArcBall@{m\_\-ArcBall}}
+\index{m\_\-ArcBall@{m\_\-ArcBall}!CDXUTDirectionWidget@{CDXUTDirectionWidget}}
+\subsubsection[{m\_\-ArcBall}]{\setlength{\rightskip}{0pt plus 5cm}{\bf CD3DArcBall} {\bf CDXUTDirectionWidget::m\_\-ArcBall}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{class_c_d_x_u_t_direction_widget_a36404bb48b163d884cef2f72dfa05d2c}
+\hypertarget{class_c_d_x_u_t_direction_widget_a038de5f37cfd414d3abaa1f841d74235}{
+\index{CDXUTDirectionWidget@{CDXUTDirectionWidget}!m\_\-fRadius@{m\_\-fRadius}}
+\index{m\_\-fRadius@{m\_\-fRadius}!CDXUTDirectionWidget@{CDXUTDirectionWidget}}
+\subsubsection[{m\_\-fRadius}]{\setlength{\rightskip}{0pt plus 5cm}float {\bf CDXUTDirectionWidget::m\_\-fRadius}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{class_c_d_x_u_t_direction_widget_a038de5f37cfd414d3abaa1f841d74235}
+\hypertarget{class_c_d_x_u_t_direction_widget_acd8ea6dfee9ad0593f1dc33a9c6b27ba}{
+\index{CDXUTDirectionWidget@{CDXUTDirectionWidget}!m\_\-mRot@{m\_\-mRot}}
+\index{m\_\-mRot@{m\_\-mRot}!CDXUTDirectionWidget@{CDXUTDirectionWidget}}
+\subsubsection[{m\_\-mRot}]{\setlength{\rightskip}{0pt plus 5cm}D3DXMATRIXA16 {\bf CDXUTDirectionWidget::m\_\-mRot}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{class_c_d_x_u_t_direction_widget_acd8ea6dfee9ad0593f1dc33a9c6b27ba}
+\hypertarget{class_c_d_x_u_t_direction_widget_a7f48a9c9e0aecffeb01cfbbad4e2736c}{
+\index{CDXUTDirectionWidget@{CDXUTDirectionWidget}!m\_\-mRotSnapshot@{m\_\-mRotSnapshot}}
+\index{m\_\-mRotSnapshot@{m\_\-mRotSnapshot}!CDXUTDirectionWidget@{CDXUTDirectionWidget}}
+\subsubsection[{m\_\-mRotSnapshot}]{\setlength{\rightskip}{0pt plus 5cm}D3DXMATRIXA16 {\bf CDXUTDirectionWidget::m\_\-mRotSnapshot}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{class_c_d_x_u_t_direction_widget_a7f48a9c9e0aecffeb01cfbbad4e2736c}
+\hypertarget{class_c_d_x_u_t_direction_widget_afb92062e4b1ce5678298d653cbe3775c}{
+\index{CDXUTDirectionWidget@{CDXUTDirectionWidget}!m\_\-mView@{m\_\-mView}}
+\index{m\_\-mView@{m\_\-mView}!CDXUTDirectionWidget@{CDXUTDirectionWidget}}
+\subsubsection[{m\_\-mView}]{\setlength{\rightskip}{0pt plus 5cm}D3DXMATRIX {\bf CDXUTDirectionWidget::m\_\-mView}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{class_c_d_x_u_t_direction_widget_afb92062e4b1ce5678298d653cbe3775c}
+\hypertarget{class_c_d_x_u_t_direction_widget_a949513e0f0d9c14a68b734019244bafc}{
+\index{CDXUTDirectionWidget@{CDXUTDirectionWidget}!m\_\-nRotateMask@{m\_\-nRotateMask}}
+\index{m\_\-nRotateMask@{m\_\-nRotateMask}!CDXUTDirectionWidget@{CDXUTDirectionWidget}}
+\subsubsection[{m\_\-nRotateMask}]{\setlength{\rightskip}{0pt plus 5cm}{\bf int} {\bf CDXUTDirectionWidget::m\_\-nRotateMask}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{class_c_d_x_u_t_direction_widget_a949513e0f0d9c14a68b734019244bafc}
+\hypertarget{class_c_d_x_u_t_direction_widget_a2e519446bb939006632aeeb310ae2405}{
+\index{CDXUTDirectionWidget@{CDXUTDirectionWidget}!m\_\-vCurrentDir@{m\_\-vCurrentDir}}
+\index{m\_\-vCurrentDir@{m\_\-vCurrentDir}!CDXUTDirectionWidget@{CDXUTDirectionWidget}}
+\subsubsection[{m\_\-vCurrentDir}]{\setlength{\rightskip}{0pt plus 5cm}D3DXVECTOR3 {\bf CDXUTDirectionWidget::m\_\-vCurrentDir}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{class_c_d_x_u_t_direction_widget_a2e519446bb939006632aeeb310ae2405}
+\hypertarget{class_c_d_x_u_t_direction_widget_a856d335ef4da33a0e9e2e0eed0cf3d04}{
+\index{CDXUTDirectionWidget@{CDXUTDirectionWidget}!m\_\-vDefaultDir@{m\_\-vDefaultDir}}
+\index{m\_\-vDefaultDir@{m\_\-vDefaultDir}!CDXUTDirectionWidget@{CDXUTDirectionWidget}}
+\subsubsection[{m\_\-vDefaultDir}]{\setlength{\rightskip}{0pt plus 5cm}D3DXVECTOR3 {\bf CDXUTDirectionWidget::m\_\-vDefaultDir}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{class_c_d_x_u_t_direction_widget_a856d335ef4da33a0e9e2e0eed0cf3d04}
+\hypertarget{class_c_d_x_u_t_direction_widget_a0ee2ebc3fe9b6da8bef84030a4ccf14a}{
+\index{CDXUTDirectionWidget@{CDXUTDirectionWidget}!s\_\-pd3dDevice@{s\_\-pd3dDevice}}
+\index{s\_\-pd3dDevice@{s\_\-pd3dDevice}!CDXUTDirectionWidget@{CDXUTDirectionWidget}}
+\subsubsection[{s\_\-pd3dDevice}]{\setlength{\rightskip}{0pt plus 5cm}IDirect3DDevice9 $\ast$ {\bf CDXUTDirectionWidget::s\_\-pd3dDevice} = NULL\hspace{0.3cm}{\ttfamily  \mbox{[}static, protected\mbox{]}}}}
+\label{class_c_d_x_u_t_direction_widget_a0ee2ebc3fe9b6da8bef84030a4ccf14a}
+\hypertarget{class_c_d_x_u_t_direction_widget_ac14ac40b7d8cc55ec2979cf77f42a448}{
+\index{CDXUTDirectionWidget@{CDXUTDirectionWidget}!s\_\-pEffect@{s\_\-pEffect}}
+\index{s\_\-pEffect@{s\_\-pEffect}!CDXUTDirectionWidget@{CDXUTDirectionWidget}}
+\subsubsection[{s\_\-pEffect}]{\setlength{\rightskip}{0pt plus 5cm}ID3DXEffect $\ast$ {\bf CDXUTDirectionWidget::s\_\-pEffect} = NULL\hspace{0.3cm}{\ttfamily  \mbox{[}static, protected\mbox{]}}}}
+\label{class_c_d_x_u_t_direction_widget_ac14ac40b7d8cc55ec2979cf77f42a448}
+\hypertarget{class_c_d_x_u_t_direction_widget_a9d801af6502753f1d6fd4747f18f0a08}{
+\index{CDXUTDirectionWidget@{CDXUTDirectionWidget}!s\_\-pMesh@{s\_\-pMesh}}
+\index{s\_\-pMesh@{s\_\-pMesh}!CDXUTDirectionWidget@{CDXUTDirectionWidget}}
+\subsubsection[{s\_\-pMesh}]{\setlength{\rightskip}{0pt plus 5cm}ID3DXMesh $\ast$ {\bf CDXUTDirectionWidget::s\_\-pMesh} = NULL\hspace{0.3cm}{\ttfamily  \mbox{[}static, protected\mbox{]}}}}
+\label{class_c_d_x_u_t_direction_widget_a9d801af6502753f1d6fd4747f18f0a08}
+
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+C:/Users/doug/Documents/Visual Studio 2008/Projects/enlightened/Enlightened/DXUT/\hyperlink{_d_x_u_tmisc_8h}{DXUTmisc.h}\item 
+C:/Users/doug/Documents/Visual Studio 2008/Projects/enlightened/Enlightened/DXUT/\hyperlink{_d_x_u_tmisc_8cpp}{DXUTmisc.cpp}\end{DoxyCompactItemize}

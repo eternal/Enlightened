@@ -1,0 +1,141 @@
+\hypertarget{class_c_d_x_u_t_mesh_frame}{
+\section{CDXUTMeshFrame Class Reference}
+\label{class_c_d_x_u_t_mesh_frame}\index{CDXUTMeshFrame@{CDXUTMeshFrame}}
+}
+
+
+{\ttfamily \#include $<$DXUTMesh.h$>$}
+
+Inherited by \hyperlink{class_c_d_x_u_t_mesh_file}{CDXUTMeshFile}.Collaboration diagram for CDXUTMeshFrame:\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{class_c_d_x_u_t_mesh_frame_ad526c0fecb1d600a4c6597e4f62331b6}{SetMatrix} (D3DXMATRIX $\ast$pmat)
+\item 
+D3DXMATRIX $\ast$ \hyperlink{class_c_d_x_u_t_mesh_frame_a64ed732741542d6111824d2101dd6374}{GetMatrix} ()
+\item 
+\hyperlink{class_c_d_x_u_t_mesh}{CDXUTMesh} $\ast$ \hyperlink{class_c_d_x_u_t_mesh_frame_a65c4d08739e59490b4e3792a065fd149}{FindMesh} (LPCWSTR strMeshName)
+\item 
+\hyperlink{class_c_d_x_u_t_mesh_frame}{CDXUTMeshFrame} $\ast$ \hyperlink{class_c_d_x_u_t_mesh_frame_a6ac3d9657dc0cc9430f315b1fcc38b6f}{FindFrame} (LPCWSTR strFrameName)
+\item 
+bool \hyperlink{class_c_d_x_u_t_mesh_frame_a6998560440db07c6c62bb84938c65633}{EnumMeshes} (bool($\ast$EnumMeshCB)(\hyperlink{class_c_d_x_u_t_mesh}{CDXUTMesh} $\ast$, void $\ast$), void $\ast$pContext)
+\item 
+HRESULT \hyperlink{class_c_d_x_u_t_mesh_frame_a50ee36ed2f7029f26687ac3704e5b88e}{Destroy} ()
+\item 
+HRESULT \hyperlink{class_c_d_x_u_t_mesh_frame_adb3aba293444d69cf6b60f9b85ed1258}{RestoreDeviceObjects} (LPDIRECT3DDEVICE9 pd3dDevice)
+\item 
+HRESULT \hyperlink{class_c_d_x_u_t_mesh_frame_a1c1963f6cbf1808f4fe6be9a3c73e7a8}{InvalidateDeviceObjects} ()
+\item 
+HRESULT \hyperlink{class_c_d_x_u_t_mesh_frame_aed74e59459faea4616e2af4300a38131}{Render} (LPDIRECT3DDEVICE9 pd3dDevice, bool bDrawOpaqueSubsets=true, bool bDrawAlphaSubsets=true, D3DXMATRIX $\ast$pmatWorldMatrix=NULL)
+\item 
+\hyperlink{class_c_d_x_u_t_mesh_frame_a380a7768fe207481cfac4014f6eba973}{CDXUTMeshFrame} (LPCWSTR strName=L\char`\"{}CDXUTMeshFile\_\-Frame\char`\"{})
+\item 
+virtual \hyperlink{class_c_d_x_u_t_mesh_frame_ab6f087fc03f1af6f082a6fbd22c39a17}{$\sim$CDXUTMeshFrame} ()
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+WCHAR \hyperlink{class_c_d_x_u_t_mesh_frame_a7b42eefd652a2b8003644b8637f5209b}{m\_\-strName} \mbox{[}512\mbox{]}
+\item 
+D3DXMATRIX \hyperlink{class_c_d_x_u_t_mesh_frame_a018ba8d719db33f300d59b99bf0dfd86}{m\_\-mat}
+\item 
+\hyperlink{class_c_d_x_u_t_mesh}{CDXUTMesh} $\ast$ \hyperlink{class_c_d_x_u_t_mesh_frame_ade192a1107df2f8cf1463c8c84dbc145}{m\_\-pMesh}
+\item 
+\hyperlink{class_c_d_x_u_t_mesh_frame}{CDXUTMeshFrame} $\ast$ \hyperlink{class_c_d_x_u_t_mesh_frame_ab462f3935c9bb4308aeb377a225527f7}{m\_\-pNext}
+\item 
+\hyperlink{class_c_d_x_u_t_mesh_frame}{CDXUTMeshFrame} $\ast$ \hyperlink{class_c_d_x_u_t_mesh_frame_afc98448a89a6ac9eb9c9627e557fd37d}{m\_\-pChild}
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_c_d_x_u_t_mesh_frame_a380a7768fe207481cfac4014f6eba973}{
+\index{CDXUTMeshFrame@{CDXUTMeshFrame}!CDXUTMeshFrame@{CDXUTMeshFrame}}
+\index{CDXUTMeshFrame@{CDXUTMeshFrame}!CDXUTMeshFrame@{CDXUTMeshFrame}}
+\subsubsection[{CDXUTMeshFrame}]{\setlength{\rightskip}{0pt plus 5cm}CDXUTMeshFrame::CDXUTMeshFrame (LPCWSTR {\em strName} = {\ttfamily L\char`\"{}CDXUTMeshFile\_\-Frame\char`\"{}})}}
+\label{class_c_d_x_u_t_mesh_frame_a380a7768fe207481cfac4014f6eba973}
+\hypertarget{class_c_d_x_u_t_mesh_frame_ab6f087fc03f1af6f082a6fbd22c39a17}{
+\index{CDXUTMeshFrame@{CDXUTMeshFrame}!$\sim$CDXUTMeshFrame@{$\sim$CDXUTMeshFrame}}
+\index{$\sim$CDXUTMeshFrame@{$\sim$CDXUTMeshFrame}!CDXUTMeshFrame@{CDXUTMeshFrame}}
+\subsubsection[{$\sim$CDXUTMeshFrame}]{\setlength{\rightskip}{0pt plus 5cm}CDXUTMeshFrame::$\sim$CDXUTMeshFrame ()\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{class_c_d_x_u_t_mesh_frame_ab6f087fc03f1af6f082a6fbd22c39a17}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_c_d_x_u_t_mesh_frame_a50ee36ed2f7029f26687ac3704e5b88e}{
+\index{CDXUTMeshFrame@{CDXUTMeshFrame}!Destroy@{Destroy}}
+\index{Destroy@{Destroy}!CDXUTMeshFrame@{CDXUTMeshFrame}}
+\subsubsection[{Destroy}]{\setlength{\rightskip}{0pt plus 5cm}HRESULT CDXUTMeshFrame::Destroy ()}}
+\label{class_c_d_x_u_t_mesh_frame_a50ee36ed2f7029f26687ac3704e5b88e}
+\hypertarget{class_c_d_x_u_t_mesh_frame_a6998560440db07c6c62bb84938c65633}{
+\index{CDXUTMeshFrame@{CDXUTMeshFrame}!EnumMeshes@{EnumMeshes}}
+\index{EnumMeshes@{EnumMeshes}!CDXUTMeshFrame@{CDXUTMeshFrame}}
+\subsubsection[{EnumMeshes}]{\setlength{\rightskip}{0pt plus 5cm}bool CDXUTMeshFrame::EnumMeshes (bool($\ast$)({\bf CDXUTMesh} $\ast$, void $\ast$) {\em EnumMeshCB}, \/  void $\ast$ {\em pContext})}}
+\label{class_c_d_x_u_t_mesh_frame_a6998560440db07c6c62bb84938c65633}
+\hypertarget{class_c_d_x_u_t_mesh_frame_a6ac3d9657dc0cc9430f315b1fcc38b6f}{
+\index{CDXUTMeshFrame@{CDXUTMeshFrame}!FindFrame@{FindFrame}}
+\index{FindFrame@{FindFrame}!CDXUTMeshFrame@{CDXUTMeshFrame}}
+\subsubsection[{FindFrame}]{\setlength{\rightskip}{0pt plus 5cm}{\bf CDXUTMeshFrame} $\ast$ CDXUTMeshFrame::FindFrame (LPCWSTR {\em strFrameName})}}
+\label{class_c_d_x_u_t_mesh_frame_a6ac3d9657dc0cc9430f315b1fcc38b6f}
+\hypertarget{class_c_d_x_u_t_mesh_frame_a65c4d08739e59490b4e3792a065fd149}{
+\index{CDXUTMeshFrame@{CDXUTMeshFrame}!FindMesh@{FindMesh}}
+\index{FindMesh@{FindMesh}!CDXUTMeshFrame@{CDXUTMeshFrame}}
+\subsubsection[{FindMesh}]{\setlength{\rightskip}{0pt plus 5cm}{\bf CDXUTMesh} $\ast$ CDXUTMeshFrame::FindMesh (LPCWSTR {\em strMeshName})}}
+\label{class_c_d_x_u_t_mesh_frame_a65c4d08739e59490b4e3792a065fd149}
+\hypertarget{class_c_d_x_u_t_mesh_frame_a64ed732741542d6111824d2101dd6374}{
+\index{CDXUTMeshFrame@{CDXUTMeshFrame}!GetMatrix@{GetMatrix}}
+\index{GetMatrix@{GetMatrix}!CDXUTMeshFrame@{CDXUTMeshFrame}}
+\subsubsection[{GetMatrix}]{\setlength{\rightskip}{0pt plus 5cm}D3DXMATRIX$\ast$ CDXUTMeshFrame::GetMatrix ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_c_d_x_u_t_mesh_frame_a64ed732741542d6111824d2101dd6374}
+\hypertarget{class_c_d_x_u_t_mesh_frame_a1c1963f6cbf1808f4fe6be9a3c73e7a8}{
+\index{CDXUTMeshFrame@{CDXUTMeshFrame}!InvalidateDeviceObjects@{InvalidateDeviceObjects}}
+\index{InvalidateDeviceObjects@{InvalidateDeviceObjects}!CDXUTMeshFrame@{CDXUTMeshFrame}}
+\subsubsection[{InvalidateDeviceObjects}]{\setlength{\rightskip}{0pt plus 5cm}HRESULT CDXUTMeshFrame::InvalidateDeviceObjects ()}}
+\label{class_c_d_x_u_t_mesh_frame_a1c1963f6cbf1808f4fe6be9a3c73e7a8}
+\hypertarget{class_c_d_x_u_t_mesh_frame_aed74e59459faea4616e2af4300a38131}{
+\index{CDXUTMeshFrame@{CDXUTMeshFrame}!Render@{Render}}
+\index{Render@{Render}!CDXUTMeshFrame@{CDXUTMeshFrame}}
+\subsubsection[{Render}]{\setlength{\rightskip}{0pt plus 5cm}HRESULT CDXUTMeshFrame::Render (LPDIRECT3DDEVICE9 {\em pd3dDevice}, \/  bool {\em bDrawOpaqueSubsets} = {\ttfamily true}, \/  bool {\em bDrawAlphaSubsets} = {\ttfamily true}, \/  D3DXMATRIX $\ast$ {\em pmatWorldMatrix} = {\ttfamily NULL})}}
+\label{class_c_d_x_u_t_mesh_frame_aed74e59459faea4616e2af4300a38131}
+\hypertarget{class_c_d_x_u_t_mesh_frame_adb3aba293444d69cf6b60f9b85ed1258}{
+\index{CDXUTMeshFrame@{CDXUTMeshFrame}!RestoreDeviceObjects@{RestoreDeviceObjects}}
+\index{RestoreDeviceObjects@{RestoreDeviceObjects}!CDXUTMeshFrame@{CDXUTMeshFrame}}
+\subsubsection[{RestoreDeviceObjects}]{\setlength{\rightskip}{0pt plus 5cm}HRESULT CDXUTMeshFrame::RestoreDeviceObjects (LPDIRECT3DDEVICE9 {\em pd3dDevice})}}
+\label{class_c_d_x_u_t_mesh_frame_adb3aba293444d69cf6b60f9b85ed1258}
+\hypertarget{class_c_d_x_u_t_mesh_frame_ad526c0fecb1d600a4c6597e4f62331b6}{
+\index{CDXUTMeshFrame@{CDXUTMeshFrame}!SetMatrix@{SetMatrix}}
+\index{SetMatrix@{SetMatrix}!CDXUTMeshFrame@{CDXUTMeshFrame}}
+\subsubsection[{SetMatrix}]{\setlength{\rightskip}{0pt plus 5cm}void CDXUTMeshFrame::SetMatrix (D3DXMATRIX $\ast$ {\em pmat})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_c_d_x_u_t_mesh_frame_ad526c0fecb1d600a4c6597e4f62331b6}
+
+
+\subsection{Member Data Documentation}
+\hypertarget{class_c_d_x_u_t_mesh_frame_a018ba8d719db33f300d59b99bf0dfd86}{
+\index{CDXUTMeshFrame@{CDXUTMeshFrame}!m\_\-mat@{m\_\-mat}}
+\index{m\_\-mat@{m\_\-mat}!CDXUTMeshFrame@{CDXUTMeshFrame}}
+\subsubsection[{m\_\-mat}]{\setlength{\rightskip}{0pt plus 5cm}D3DXMATRIX {\bf CDXUTMeshFrame::m\_\-mat}}}
+\label{class_c_d_x_u_t_mesh_frame_a018ba8d719db33f300d59b99bf0dfd86}
+\hypertarget{class_c_d_x_u_t_mesh_frame_afc98448a89a6ac9eb9c9627e557fd37d}{
+\index{CDXUTMeshFrame@{CDXUTMeshFrame}!m\_\-pChild@{m\_\-pChild}}
+\index{m\_\-pChild@{m\_\-pChild}!CDXUTMeshFrame@{CDXUTMeshFrame}}
+\subsubsection[{m\_\-pChild}]{\setlength{\rightskip}{0pt plus 5cm}{\bf CDXUTMeshFrame}$\ast$ {\bf CDXUTMeshFrame::m\_\-pChild}}}
+\label{class_c_d_x_u_t_mesh_frame_afc98448a89a6ac9eb9c9627e557fd37d}
+\hypertarget{class_c_d_x_u_t_mesh_frame_ade192a1107df2f8cf1463c8c84dbc145}{
+\index{CDXUTMeshFrame@{CDXUTMeshFrame}!m\_\-pMesh@{m\_\-pMesh}}
+\index{m\_\-pMesh@{m\_\-pMesh}!CDXUTMeshFrame@{CDXUTMeshFrame}}
+\subsubsection[{m\_\-pMesh}]{\setlength{\rightskip}{0pt plus 5cm}{\bf CDXUTMesh}$\ast$ {\bf CDXUTMeshFrame::m\_\-pMesh}}}
+\label{class_c_d_x_u_t_mesh_frame_ade192a1107df2f8cf1463c8c84dbc145}
+\hypertarget{class_c_d_x_u_t_mesh_frame_ab462f3935c9bb4308aeb377a225527f7}{
+\index{CDXUTMeshFrame@{CDXUTMeshFrame}!m\_\-pNext@{m\_\-pNext}}
+\index{m\_\-pNext@{m\_\-pNext}!CDXUTMeshFrame@{CDXUTMeshFrame}}
+\subsubsection[{m\_\-pNext}]{\setlength{\rightskip}{0pt plus 5cm}{\bf CDXUTMeshFrame}$\ast$ {\bf CDXUTMeshFrame::m\_\-pNext}}}
+\label{class_c_d_x_u_t_mesh_frame_ab462f3935c9bb4308aeb377a225527f7}
+\hypertarget{class_c_d_x_u_t_mesh_frame_a7b42eefd652a2b8003644b8637f5209b}{
+\index{CDXUTMeshFrame@{CDXUTMeshFrame}!m\_\-strName@{m\_\-strName}}
+\index{m\_\-strName@{m\_\-strName}!CDXUTMeshFrame@{CDXUTMeshFrame}}
+\subsubsection[{m\_\-strName}]{\setlength{\rightskip}{0pt plus 5cm}WCHAR {\bf CDXUTMeshFrame::m\_\-strName}\mbox{[}512\mbox{]}}}
+\label{class_c_d_x_u_t_mesh_frame_a7b42eefd652a2b8003644b8637f5209b}
+
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+C:/Users/doug/Documents/Visual Studio 2008/Projects/enlightened/Enlightened/DXUT/\hyperlink{_d_x_u_t_mesh_8h}{DXUTMesh.h}\item 
+C:/Users/doug/Documents/Visual Studio 2008/Projects/enlightened/Enlightened/DXUT/\hyperlink{_d_x_u_t_mesh_8cpp}{DXUTMesh.cpp}\end{DoxyCompactItemize}

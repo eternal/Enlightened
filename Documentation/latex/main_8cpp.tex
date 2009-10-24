@@ -1,254 +1,389 @@
+\hypertarget{main_8cpp}{
 \section{C:/Users/doug/Documents/Visual Studio 2008/Projects/enlightened/Enlightened/main.cpp File Reference}
 \label{main_8cpp}\index{C:/Users/doug/Documents/Visual Studio 2008/Projects/enlightened/Enlightened/main.cpp@{C:/Users/doug/Documents/Visual Studio 2008/Projects/enlightened/Enlightened/main.cpp}}
+}
 {\ttfamily \#include \char`\"{}dxstdafx.h\char`\"{}}\par
 {\ttfamily \#include \char`\"{}SGLibResource.h\char`\"{}}\par
 {\ttfamily \#include \char`\"{}MasterShader.h\char`\"{}}\par
 {\ttfamily \#include \char`\"{}Mouse.h\char`\"{}}\par
 {\ttfamily \#include \char`\"{}Camera.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}Renderer.h\char`\"{}}\par
 {\ttfamily \#include $<$sstream$>$}\par
 {\ttfamily \#include $<$map$>$}\par
 {\ttfamily \#include $<$vector$>$}\par
 {\ttfamily \#include $<$string$>$}\par
-\subsection*{Defines}
+Include dependency graph for main.cpp:\subsection*{Defines}
 \begin{DoxyCompactItemize}
 \item 
-\#define {\bf PI}~3.1415926535897932384626433832795028841971693993751058209749445923078164062862089986280348253421170679f
+\#define \hyperlink{main_8cpp_a598a3330b3c21701223ee0ca14316eca}{PI}~3.1415926535897932384626433832795028841971693993751058209749445923078164062862089986280348253421170679f
 \end{DoxyCompactItemize}
 \subsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
-bool CALLBACK {\bf IsDeviceAcceptable} (D3DCAPS9 $\ast$pCaps, D3DFORMAT AdapterFormat, D3DFORMAT BackBufferFormat, bool bWindowed, void $\ast$pUserContext)
+bool CALLBACK \hyperlink{main_8cpp_ab94c0180382a23f0fef5bf9e3986f9da}{IsDeviceAcceptable} (D3DCAPS9 $\ast$pCaps, D3DFORMAT AdapterFormat, D3DFORMAT BackBufferFormat, bool bWindowed, void $\ast$\hyperlink{_d_x_u_tgui_8h_adba0f386bf9a8364f3d6c472c6f30caf}{pUserContext})
 \item 
-bool CALLBACK {\bf ModifyDeviceSettings} (DXUTDeviceSettings $\ast$pDeviceSettings, const D3DCAPS9 $\ast$pCaps, void $\ast$pUserContext)
+bool CALLBACK \hyperlink{main_8cpp_a001a56eaee98f8077852e3dd8ad60f29}{ModifyDeviceSettings} (\hyperlink{struct_d_x_u_t_device_settings}{DXUTDeviceSettings} $\ast$pDeviceSettings, const D3DCAPS9 $\ast$pCaps, void $\ast$\hyperlink{_d_x_u_tgui_8h_adba0f386bf9a8364f3d6c472c6f30caf}{pUserContext})
 \item 
-HRESULT CALLBACK {\bf OnCreateDevice} (IDirect3DDevice9 $\ast$a\_\-device, const D3DSURFACE\_\-DESC $\ast$pBackBufferSurfaceDesc, void $\ast$pUserContext)
+HRESULT CALLBACK \hyperlink{main_8cpp_a47d46e0ebe0a234c2c6a58c8ca392d74}{OnCreateDevice} (IDirect3DDevice9 $\ast$a\_\-device, const D3DSURFACE\_\-DESC $\ast$pBackBufferSurfaceDesc, void $\ast$\hyperlink{_d_x_u_tgui_8h_adba0f386bf9a8364f3d6c472c6f30caf}{pUserContext})
 \item 
-HRESULT CALLBACK {\bf OnResetDevice} (IDirect3DDevice9 $\ast$pd3dDevice, const D3DSURFACE\_\-DESC $\ast$pBackBufferSurfaceDesc, void $\ast$pUserContext)
+HRESULT CALLBACK \hyperlink{main_8cpp_a2130428fa858e2a86b28166e63f4374e}{OnResetDevice} (IDirect3DDevice9 $\ast$pd3dDevice, const D3DSURFACE\_\-DESC $\ast$pBackBufferSurfaceDesc, void $\ast$\hyperlink{_d_x_u_tgui_8h_adba0f386bf9a8364f3d6c472c6f30caf}{pUserContext})
 \item 
-void CALLBACK {\bf OnFrameMove} (IDirect3DDevice9 $\ast$pd3dDevice, double a\_\-time, float a\_\-elapsedTime, void $\ast$pUserContext)
+void CALLBACK \hyperlink{main_8cpp_acfab206dcd4d453c6eb12c42b61a1e0d}{OnFrameMove} (IDirect3DDevice9 $\ast$pd3dDevice, double a\_\-time, float a\_\-elapsedTime, void $\ast$\hyperlink{_d_x_u_tgui_8h_adba0f386bf9a8364f3d6c472c6f30caf}{pUserContext})
 \item 
-void CALLBACK {\bf OnFrameRender} (IDirect3DDevice9 $\ast$pd3dDevice, double dTime, float fElapsedTime, void $\ast$pUserContext)
+void CALLBACK \hyperlink{main_8cpp_a4ea70c24b78c4abd92b442516fa054c3}{OnFrameRender} (IDirect3DDevice9 $\ast$pd3dDevice, double dTime, float fElapsedTime, void $\ast$\hyperlink{_d_x_u_tgui_8h_adba0f386bf9a8364f3d6c472c6f30caf}{pUserContext})
 \item 
-void CALLBACK {\bf OnMouse} (bool a\_\-leftButton, bool a\_\-rightButton, bool a\_\-middleButtonDown, bool a\_\-sideButton1Down, bool a\_\-sideButton2Down, int a\_\-mouseWheelDelta, int a\_\-xPosition, int a\_\-yPosition, void $\ast$a\_\-userContext)
+void CALLBACK \hyperlink{main_8cpp_a3ce2ae82f91e623da2ea0106afbf19d3}{OnMouse} (bool a\_\-leftButton, bool a\_\-rightButton, bool a\_\-middleButtonDown, bool a\_\-sideButton1Down, bool a\_\-sideButton2Down, \hyperlink{_d_x_u_tgui_8cpp_a2d77ed03302b6978834ee3b6f57837fb}{int} a\_\-mouseWheelDelta, \hyperlink{_d_x_u_tgui_8cpp_a2d77ed03302b6978834ee3b6f57837fb}{int} a\_\-xPosition, \hyperlink{_d_x_u_tgui_8cpp_a2d77ed03302b6978834ee3b6f57837fb}{int} a\_\-yPosition, void $\ast$a\_\-userContext)
 \item 
-LRESULT CALLBACK {\bf MsgProc} (HWND hWnd, UINT uMsg, WPARAM wParam, LPARAM lParam, bool $\ast$pbNoFurtherProcessing, void $\ast$pUserContext)
+LRESULT CALLBACK \hyperlink{main_8cpp_ada41d7c415ad7ca4b598647357eabd63}{MsgProc} (HWND hWnd, UINT uMsg, WPARAM wParam, LPARAM lParam, bool $\ast$pbNoFurtherProcessing, void $\ast$\hyperlink{_d_x_u_tgui_8h_adba0f386bf9a8364f3d6c472c6f30caf}{pUserContext})
 \item 
-void CALLBACK {\bf OnLostDevice} (void $\ast$pUserContext)
+void CALLBACK \hyperlink{main_8cpp_a8619e65167cef016a9b827796d09bd06}{OnLostDevice} (void $\ast$\hyperlink{_d_x_u_tgui_8h_adba0f386bf9a8364f3d6c472c6f30caf}{pUserContext})
 \item 
-void CALLBACK {\bf OnDestroyDevice} (void $\ast$pUserContext)
+void CALLBACK \hyperlink{main_8cpp_a6e3dced16e54efc8daddad409cff0336}{OnDestroyDevice} (void $\ast$\hyperlink{_d_x_u_tgui_8h_adba0f386bf9a8364f3d6c472c6f30caf}{pUserContext})
 \item 
-void {\bf InitalizeGraph} ()
+void \hyperlink{main_8cpp_afc9f752ae6b418acf602bc0111458399}{InitalizeGraph} ()
 \item 
-void {\bf CleanUp} ()
+void \hyperlink{main_8cpp_abfc30f91ab75c6f4552003f777672e74}{CleanUp} ()
 \item 
-INT WINAPI {\bf WinMain} (HINSTANCE, HINSTANCE, LPSTR, int)
+\hyperlink{_d_x_u_tgui_8cpp_a2d77ed03302b6978834ee3b6f57837fb}{int} \hyperlink{main_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{main} ()
 \end{DoxyCompactItemize}
 \subsection*{Variables}
 \begin{DoxyCompactItemize}
 \item 
-{\bf MasterShader} $\ast$ {\bf g\_\-masterShader} = NULL
+\hyperlink{class_master_shader}{MasterShader} $\ast$ \hyperlink{main_8cpp_a57d194f8024b9d3f7f6b6adcda7f65ca}{g\_\-masterShader} = NULL
 \item 
-SGRenderer $\ast$ {\bf g\_\-renderer} = NULL
+\hyperlink{class_renderer}{Renderer} $\ast$ \hyperlink{main_8cpp_a39582174fdbdd0a65446d7b04596a07b}{g\_\-renderer} = NULL
 \item 
-{\bf Feisty::Camera} $\ast$ {\bf g\_\-camera} = NULL
+std::vector$<$ LPDIRECT3DTEXTURE9 $>$ $\ast$ \hyperlink{main_8cpp_aa5c4e70356b29ba29a0947033ae0513f}{g\_\-textureShadowMaps}
 \item 
-{\bf Feisty::Mouse} $\ast$ {\bf g\_\-mouse} = NULL
+std::vector$<$ LPDIRECT3DSURFACE9 $>$ $\ast$ \hyperlink{main_8cpp_a04b2b38cf34521d269537eb88ee7b53e}{g\_\-pSurfaceShadowDS}
 \item 
-Projection $\ast$ {\bf g\_\-projection} = NULL
+std::vector$<$ LPDIRECT3DSURFACE9 $>$ $\ast$ \hyperlink{main_8cpp_a2a4b4f7f178f248621e7664716e472fe}{g\_\-shadowMapSurface}
 \item 
-State $\ast$ {\bf g\_\-state} = NULL
+std::vector$<$ D3DXVECTOR3 $>$ $\ast$ \hyperlink{main_8cpp_a44f06dc5471b6e0e9395c00519171da3}{g\_\-billboardTranslates}
 \item 
-Transform $\ast$ {\bf g\_\-dwarfTransform} = NULL
+std::vector$<$ Transform $\ast$ $>$ $\ast$ \hyperlink{main_8cpp_a5036bf70f178c6ac048fdd5869a0aabc}{g\_\-billboardTransforms}
 \item 
-Transform $\ast$ {\bf g\_\-treeTransform} = NULL
+\hyperlink{class_feisty_1_1_camera}{Feisty::Camera} $\ast$ \hyperlink{main_8cpp_ace3aa1fac9bbbaced3fa146958c0379c}{g\_\-camera} = NULL
 \item 
-Transform $\ast$ {\bf g\_\-monsterTransform} = NULL
+\hyperlink{class_feisty_1_1_mouse}{Feisty::Mouse} $\ast$ \hyperlink{main_8cpp_ab8fe643c3caa203940d18a5298a69bc4}{g\_\-mouse} = NULL
 \item 
-Transform $\ast$ {\bf g\_\-gasStationTransform} = NULL
+Projection $\ast$ \hyperlink{main_8cpp_a3d48b89c7587f4bd4138128c10f7b620}{g\_\-projection} = NULL
 \item 
-Transform $\ast$ {\bf g\_\-characterTransform} = NULL
+State $\ast$ \hyperlink{main_8cpp_a7cac590d25452e6fdc8fcc0990d7e6d4}{g\_\-state} = NULL
 \item 
-Geometry $\ast$ {\bf g\_\-dwarfGeometry} = NULL
+Transform $\ast$ \hyperlink{main_8cpp_a6b0628a9f02961163db055e4037feccd}{g\_\-dwarfTransform} = NULL
 \item 
-Geometry $\ast$ {\bf g\_\-treeGeometry} = NULL
+Transform $\ast$ \hyperlink{main_8cpp_a49c675fdd485d63c6f5895d8cd80facf}{g\_\-treeTransform} = NULL
 \item 
-Geometry $\ast$ {\bf g\_\-monsterGeometry} = NULL
+Transform $\ast$ \hyperlink{main_8cpp_a26007bd4443df507e087baa875a3296c}{g\_\-monsterTransform} = NULL
 \item 
-Geometry $\ast$ {\bf g\_\-gasStationGeometry} = NULL
+Transform $\ast$ \hyperlink{main_8cpp_a5b94057a0a773a7aa8acd311b781d115}{g\_\-gasStationTransform} = NULL
 \item 
-Articulated $\ast$ {\bf g\_\-characterNode} = NULL
+Transform $\ast$ \hyperlink{main_8cpp_a8ceca17e6710a25af494585322c2fa11}{g\_\-characterTransform} = NULL
 \item 
-Articulated $\ast$ {\bf g\_\-characterPelvis} = NULL
+Geometry $\ast$ \hyperlink{main_8cpp_ab159d2c6b28524f490d25feaf9fca953}{g\_\-dwarfGeometry} = NULL
 \item 
-Articulated $\ast$ {\bf g\_\-characterRUpperLeg} = NULL
+Geometry $\ast$ \hyperlink{main_8cpp_a2c3ae44c854b16d8ae7c8dc3b4e729fb}{g\_\-treeGeometry} = NULL
 \item 
-Articulated $\ast$ {\bf g\_\-characterLUpperLeg} = NULL
+Geometry $\ast$ \hyperlink{main_8cpp_a2b1a7d9baa6f7e834043d278b7b2ef8c}{g\_\-monsterGeometry} = NULL
 \item 
-Articulated $\ast$ {\bf g\_\-characterRLowerLeg} = NULL
+Geometry $\ast$ \hyperlink{main_8cpp_aa242b632e52deae21e1da999e3e8e6d5}{g\_\-gasStationGeometry} = NULL
 \item 
-Articulated $\ast$ {\bf g\_\-characterLLowerLeg} = NULL
+std::vector$<$ Geometry $\ast$ $>$ $\ast$ \hyperlink{main_8cpp_ae68ffd5746a5cd638c8e5a3acd2074d7}{g\_\-billboardGeometry} = NULL
 \item 
-Articulated $\ast$ {\bf g\_\-characterLowerBack} = NULL
+Articulated $\ast$ \hyperlink{main_8cpp_ad14a3bdc19f2edae2b1a8b3f7fc43280}{g\_\-characterNode} = NULL
 \item 
-Articulated $\ast$ {\bf g\_\-characterUpperBack} = NULL
+Articulated $\ast$ \hyperlink{main_8cpp_aae42f7534fd474743216289bcddb27fb}{g\_\-characterPelvis} = NULL
 \item 
-Articulated $\ast$ {\bf g\_\-characterNeck} = NULL
+Articulated $\ast$ \hyperlink{main_8cpp_afd3069c7a57a92e7c2ebecaf00278836}{g\_\-characterRUpperLeg} = NULL
 \item 
-Articulated $\ast$ {\bf g\_\-characterHead} = NULL
+Articulated $\ast$ \hyperlink{main_8cpp_aadb7bfce0390856b42d0e9f64dcb9a57}{g\_\-characterLUpperLeg} = NULL
 \item 
-Articulated $\ast$ {\bf g\_\-characterShoulders} = NULL
+Articulated $\ast$ \hyperlink{main_8cpp_a9a2b3afdddef870221bd880ad897f625}{g\_\-characterRLowerLeg} = NULL
 \item 
-Articulated $\ast$ {\bf g\_\-characterRUpperArm} = NULL
+Articulated $\ast$ \hyperlink{main_8cpp_a5083fc488e5761896ae166d8ec0e6c9a}{g\_\-characterLLowerLeg} = NULL
 \item 
-Articulated $\ast$ {\bf g\_\-characterLUpperArm} = NULL
+Articulated $\ast$ \hyperlink{main_8cpp_a1e5b4613fb05e573e7231a6c3e0acf0e}{g\_\-characterLowerBack} = NULL
 \item 
-Articulated $\ast$ {\bf g\_\-characterRLowerArm} = NULL
+Articulated $\ast$ \hyperlink{main_8cpp_a5af5178491e81991c56095f9b601444f}{g\_\-characterUpperBack} = NULL
 \item 
-Articulated $\ast$ {\bf g\_\-characterLLowerArm} = NULL
+Articulated $\ast$ \hyperlink{main_8cpp_aa424d880d9792eb1d5ebb5241533f37f}{g\_\-characterNeck} = NULL
 \item 
-bool {\bf g\_\-animating} = false
+Articulated $\ast$ \hyperlink{main_8cpp_a638e515a201184f02d8b8e11a1792a08}{g\_\-characterHead} = NULL
+\item 
+Articulated $\ast$ \hyperlink{main_8cpp_a765758fe2eeada9359aadd8f77024d6a}{g\_\-characterShoulders} = NULL
+\item 
+Articulated $\ast$ \hyperlink{main_8cpp_a13821aedd2696e5731145edc3910b12c}{g\_\-characterRUpperArm} = NULL
+\item 
+Articulated $\ast$ \hyperlink{main_8cpp_a69a275d7564504b4ddf80fe486e5e4a8}{g\_\-characterLUpperArm} = NULL
+\item 
+Articulated $\ast$ \hyperlink{main_8cpp_afa383510790c362c60340a9ec54f12dc}{g\_\-characterRLowerArm} = NULL
+\item 
+Articulated $\ast$ \hyperlink{main_8cpp_afaaa6de660374e440f4b086253de0f0b}{g\_\-characterLLowerArm} = NULL
+\item 
+bool \hyperlink{main_8cpp_ad6795175b9faa5bac4bcacd5456ddbe4}{g\_\-animating} = false
 \end{DoxyCompactItemize}
 
 
 \subsection{Define Documentation}
+\hypertarget{main_8cpp_a598a3330b3c21701223ee0ca14316eca}{
 \index{main.cpp@{main.cpp}!PI@{PI}}
 \index{PI@{PI}!main.cpp@{main.cpp}}
-\subsubsection[{PI}]{\setlength{\rightskip}{0pt plus 5cm}\#define PI~3.1415926535897932384626433832795028841971693993751058209749445923078164062862089986280348253421170679f}\label{main_8cpp_a598a3330b3c21701223ee0ca14316eca}
+\subsubsection[{PI}]{\setlength{\rightskip}{0pt plus 5cm}\#define PI~3.1415926535897932384626433832795028841971693993751058209749445923078164062862089986280348253421170679f}}
+\label{main_8cpp_a598a3330b3c21701223ee0ca14316eca}
 
 
 \subsection{Function Documentation}
+\hypertarget{main_8cpp_abfc30f91ab75c6f4552003f777672e74}{
 \index{main.cpp@{main.cpp}!CleanUp@{CleanUp}}
 \index{CleanUp@{CleanUp}!main.cpp@{main.cpp}}
-\subsubsection[{CleanUp}]{\setlength{\rightskip}{0pt plus 5cm}void CleanUp ()}\label{main_8cpp_abfc30f91ab75c6f4552003f777672e74}
+\subsubsection[{CleanUp}]{\setlength{\rightskip}{0pt plus 5cm}void CleanUp ()}}
+\label{main_8cpp_abfc30f91ab75c6f4552003f777672e74}
+\hypertarget{main_8cpp_afc9f752ae6b418acf602bc0111458399}{
 \index{main.cpp@{main.cpp}!InitalizeGraph@{InitalizeGraph}}
 \index{InitalizeGraph@{InitalizeGraph}!main.cpp@{main.cpp}}
-\subsubsection[{InitalizeGraph}]{\setlength{\rightskip}{0pt plus 5cm}void InitalizeGraph ()}\label{main_8cpp_afc9f752ae6b418acf602bc0111458399}
+\subsubsection[{InitalizeGraph}]{\setlength{\rightskip}{0pt plus 5cm}void InitalizeGraph ()}}
+\label{main_8cpp_afc9f752ae6b418acf602bc0111458399}
+\hypertarget{main_8cpp_ab94c0180382a23f0fef5bf9e3986f9da}{
 \index{main.cpp@{main.cpp}!IsDeviceAcceptable@{IsDeviceAcceptable}}
 \index{IsDeviceAcceptable@{IsDeviceAcceptable}!main.cpp@{main.cpp}}
-\subsubsection[{IsDeviceAcceptable}]{\setlength{\rightskip}{0pt plus 5cm}bool CALLBACK IsDeviceAcceptable (D3DCAPS9 $\ast$ {\em pCaps}, \/  D3DFORMAT {\em AdapterFormat}, \/  D3DFORMAT {\em BackBufferFormat}, \/  bool {\em bWindowed}, \/  void $\ast$ {\em pUserContext})}\label{main_8cpp_ab94c0180382a23f0fef5bf9e3986f9da}
+\subsubsection[{IsDeviceAcceptable}]{\setlength{\rightskip}{0pt plus 5cm}bool CALLBACK IsDeviceAcceptable (D3DCAPS9 $\ast$ {\em pCaps}, \/  D3DFORMAT {\em AdapterFormat}, \/  D3DFORMAT {\em BackBufferFormat}, \/  bool {\em bWindowed}, \/  void $\ast$ {\em pUserContext})}}
+\label{main_8cpp_ab94c0180382a23f0fef5bf9e3986f9da}
+\hypertarget{main_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{
+\index{main.cpp@{main.cpp}!main@{main}}
+\index{main@{main}!main.cpp@{main.cpp}}
+\subsubsection[{main}]{\setlength{\rightskip}{0pt plus 5cm}{\bf int} main ()}}
+\label{main_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}
+\hypertarget{main_8cpp_a001a56eaee98f8077852e3dd8ad60f29}{
 \index{main.cpp@{main.cpp}!ModifyDeviceSettings@{ModifyDeviceSettings}}
 \index{ModifyDeviceSettings@{ModifyDeviceSettings}!main.cpp@{main.cpp}}
-\subsubsection[{ModifyDeviceSettings}]{\setlength{\rightskip}{0pt plus 5cm}bool CALLBACK ModifyDeviceSettings (DXUTDeviceSettings $\ast$ {\em pDeviceSettings}, \/  const D3DCAPS9 $\ast$ {\em pCaps}, \/  void $\ast$ {\em pUserContext})}\label{main_8cpp_a001a56eaee98f8077852e3dd8ad60f29}
+\subsubsection[{ModifyDeviceSettings}]{\setlength{\rightskip}{0pt plus 5cm}bool CALLBACK ModifyDeviceSettings ({\bf DXUTDeviceSettings} $\ast$ {\em pDeviceSettings}, \/  const D3DCAPS9 $\ast$ {\em pCaps}, \/  void $\ast$ {\em pUserContext})}}
+\label{main_8cpp_a001a56eaee98f8077852e3dd8ad60f29}
+\hypertarget{main_8cpp_ada41d7c415ad7ca4b598647357eabd63}{
 \index{main.cpp@{main.cpp}!MsgProc@{MsgProc}}
 \index{MsgProc@{MsgProc}!main.cpp@{main.cpp}}
-\subsubsection[{MsgProc}]{\setlength{\rightskip}{0pt plus 5cm}LRESULT CALLBACK MsgProc (HWND {\em hWnd}, \/  UINT {\em uMsg}, \/  WPARAM {\em wParam}, \/  LPARAM {\em lParam}, \/  bool $\ast$ {\em pbNoFurtherProcessing}, \/  void $\ast$ {\em pUserContext})}\label{main_8cpp_ada41d7c415ad7ca4b598647357eabd63}
+\subsubsection[{MsgProc}]{\setlength{\rightskip}{0pt plus 5cm}LRESULT CALLBACK MsgProc (HWND {\em hWnd}, \/  UINT {\em uMsg}, \/  WPARAM {\em wParam}, \/  LPARAM {\em lParam}, \/  bool $\ast$ {\em pbNoFurtherProcessing}, \/  void $\ast$ {\em pUserContext})}}
+\label{main_8cpp_ada41d7c415ad7ca4b598647357eabd63}
+\hypertarget{main_8cpp_a47d46e0ebe0a234c2c6a58c8ca392d74}{
 \index{main.cpp@{main.cpp}!OnCreateDevice@{OnCreateDevice}}
 \index{OnCreateDevice@{OnCreateDevice}!main.cpp@{main.cpp}}
-\subsubsection[{OnCreateDevice}]{\setlength{\rightskip}{0pt plus 5cm}HRESULT CALLBACK OnCreateDevice (IDirect3DDevice9 $\ast$ {\em a\_\-device}, \/  const D3DSURFACE\_\-DESC $\ast$ {\em pBackBufferSurfaceDesc}, \/  void $\ast$ {\em pUserContext})}\label{main_8cpp_a47d46e0ebe0a234c2c6a58c8ca392d74}
+\subsubsection[{OnCreateDevice}]{\setlength{\rightskip}{0pt plus 5cm}HRESULT CALLBACK OnCreateDevice (IDirect3DDevice9 $\ast$ {\em a\_\-device}, \/  const D3DSURFACE\_\-DESC $\ast$ {\em pBackBufferSurfaceDesc}, \/  void $\ast$ {\em pUserContext})}}
+\label{main_8cpp_a47d46e0ebe0a234c2c6a58c8ca392d74}
+\hypertarget{main_8cpp_a6e3dced16e54efc8daddad409cff0336}{
 \index{main.cpp@{main.cpp}!OnDestroyDevice@{OnDestroyDevice}}
 \index{OnDestroyDevice@{OnDestroyDevice}!main.cpp@{main.cpp}}
-\subsubsection[{OnDestroyDevice}]{\setlength{\rightskip}{0pt plus 5cm}void CALLBACK OnDestroyDevice (void $\ast$ {\em pUserContext})}\label{main_8cpp_a6e3dced16e54efc8daddad409cff0336}
+\subsubsection[{OnDestroyDevice}]{\setlength{\rightskip}{0pt plus 5cm}void CALLBACK OnDestroyDevice (void $\ast$ {\em pUserContext})}}
+\label{main_8cpp_a6e3dced16e54efc8daddad409cff0336}
+\hypertarget{main_8cpp_acfab206dcd4d453c6eb12c42b61a1e0d}{
 \index{main.cpp@{main.cpp}!OnFrameMove@{OnFrameMove}}
 \index{OnFrameMove@{OnFrameMove}!main.cpp@{main.cpp}}
-\subsubsection[{OnFrameMove}]{\setlength{\rightskip}{0pt plus 5cm}void CALLBACK OnFrameMove (IDirect3DDevice9 $\ast$ {\em pd3dDevice}, \/  double {\em a\_\-time}, \/  float {\em a\_\-elapsedTime}, \/  void $\ast$ {\em pUserContext})}\label{main_8cpp_acfab206dcd4d453c6eb12c42b61a1e0d}
+\subsubsection[{OnFrameMove}]{\setlength{\rightskip}{0pt plus 5cm}void CALLBACK OnFrameMove (IDirect3DDevice9 $\ast$ {\em pd3dDevice}, \/  double {\em a\_\-time}, \/  float {\em a\_\-elapsedTime}, \/  void $\ast$ {\em pUserContext})}}
+\label{main_8cpp_acfab206dcd4d453c6eb12c42b61a1e0d}
+\hypertarget{main_8cpp_a4ea70c24b78c4abd92b442516fa054c3}{
 \index{main.cpp@{main.cpp}!OnFrameRender@{OnFrameRender}}
 \index{OnFrameRender@{OnFrameRender}!main.cpp@{main.cpp}}
-\subsubsection[{OnFrameRender}]{\setlength{\rightskip}{0pt plus 5cm}void CALLBACK OnFrameRender (IDirect3DDevice9 $\ast$ {\em pd3dDevice}, \/  double {\em dTime}, \/  float {\em fElapsedTime}, \/  void $\ast$ {\em pUserContext})}\label{main_8cpp_a4ea70c24b78c4abd92b442516fa054c3}
+\subsubsection[{OnFrameRender}]{\setlength{\rightskip}{0pt plus 5cm}void CALLBACK OnFrameRender (IDirect3DDevice9 $\ast$ {\em pd3dDevice}, \/  double {\em dTime}, \/  float {\em fElapsedTime}, \/  void $\ast$ {\em pUserContext})}}
+\label{main_8cpp_a4ea70c24b78c4abd92b442516fa054c3}
+\hypertarget{main_8cpp_a8619e65167cef016a9b827796d09bd06}{
 \index{main.cpp@{main.cpp}!OnLostDevice@{OnLostDevice}}
 \index{OnLostDevice@{OnLostDevice}!main.cpp@{main.cpp}}
-\subsubsection[{OnLostDevice}]{\setlength{\rightskip}{0pt plus 5cm}void CALLBACK OnLostDevice (void $\ast$ {\em pUserContext})}\label{main_8cpp_a8619e65167cef016a9b827796d09bd06}
+\subsubsection[{OnLostDevice}]{\setlength{\rightskip}{0pt plus 5cm}void CALLBACK OnLostDevice (void $\ast$ {\em pUserContext})}}
+\label{main_8cpp_a8619e65167cef016a9b827796d09bd06}
+\hypertarget{main_8cpp_a3ce2ae82f91e623da2ea0106afbf19d3}{
 \index{main.cpp@{main.cpp}!OnMouse@{OnMouse}}
 \index{OnMouse@{OnMouse}!main.cpp@{main.cpp}}
-\subsubsection[{OnMouse}]{\setlength{\rightskip}{0pt plus 5cm}void CALLBACK OnMouse (bool {\em a\_\-leftButton}, \/  bool {\em a\_\-rightButton}, \/  bool {\em a\_\-middleButtonDown}, \/  bool {\em a\_\-sideButton1Down}, \/  bool {\em a\_\-sideButton2Down}, \/  int {\em a\_\-mouseWheelDelta}, \/  int {\em a\_\-xPosition}, \/  int {\em a\_\-yPosition}, \/  void $\ast$ {\em a\_\-userContext})}\label{main_8cpp_a3ce2ae82f91e623da2ea0106afbf19d3}
+\subsubsection[{OnMouse}]{\setlength{\rightskip}{0pt plus 5cm}void CALLBACK OnMouse (bool {\em a\_\-leftButton}, \/  bool {\em a\_\-rightButton}, \/  bool {\em a\_\-middleButtonDown}, \/  bool {\em a\_\-sideButton1Down}, \/  bool {\em a\_\-sideButton2Down}, \/  {\bf int} {\em a\_\-mouseWheelDelta}, \/  {\bf int} {\em a\_\-xPosition}, \/  {\bf int} {\em a\_\-yPosition}, \/  void $\ast$ {\em a\_\-userContext})}}
+\label{main_8cpp_a3ce2ae82f91e623da2ea0106afbf19d3}
+\hypertarget{main_8cpp_a2130428fa858e2a86b28166e63f4374e}{
 \index{main.cpp@{main.cpp}!OnResetDevice@{OnResetDevice}}
 \index{OnResetDevice@{OnResetDevice}!main.cpp@{main.cpp}}
-\subsubsection[{OnResetDevice}]{\setlength{\rightskip}{0pt plus 5cm}HRESULT CALLBACK OnResetDevice (IDirect3DDevice9 $\ast$ {\em pd3dDevice}, \/  const D3DSURFACE\_\-DESC $\ast$ {\em pBackBufferSurfaceDesc}, \/  void $\ast$ {\em pUserContext})}\label{main_8cpp_a2130428fa858e2a86b28166e63f4374e}
-\index{main.cpp@{main.cpp}!WinMain@{WinMain}}
-\index{WinMain@{WinMain}!main.cpp@{main.cpp}}
-\subsubsection[{WinMain}]{\setlength{\rightskip}{0pt plus 5cm}INT WINAPI WinMain (HINSTANCE, \/  HINSTANCE, \/  LPSTR, \/  int)}\label{main_8cpp_a67c12d872037c315a30054edcc303623}
+\subsubsection[{OnResetDevice}]{\setlength{\rightskip}{0pt plus 5cm}HRESULT CALLBACK OnResetDevice (IDirect3DDevice9 $\ast$ {\em pd3dDevice}, \/  const D3DSURFACE\_\-DESC $\ast$ {\em pBackBufferSurfaceDesc}, \/  void $\ast$ {\em pUserContext})}}
+\label{main_8cpp_a2130428fa858e2a86b28166e63f4374e}
 
 
 \subsection{Variable Documentation}
+\hypertarget{main_8cpp_ad6795175b9faa5bac4bcacd5456ddbe4}{
 \index{main.cpp@{main.cpp}!g\_\-animating@{g\_\-animating}}
 \index{g\_\-animating@{g\_\-animating}!main.cpp@{main.cpp}}
-\subsubsection[{g\_\-animating}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf g\_\-animating} = false}\label{main_8cpp_ad6795175b9faa5bac4bcacd5456ddbe4}
+\subsubsection[{g\_\-animating}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf g\_\-animating} = false}}
+\label{main_8cpp_ad6795175b9faa5bac4bcacd5456ddbe4}
+\hypertarget{main_8cpp_ae68ffd5746a5cd638c8e5a3acd2074d7}{
+\index{main.cpp@{main.cpp}!g\_\-billboardGeometry@{g\_\-billboardGeometry}}
+\index{g\_\-billboardGeometry@{g\_\-billboardGeometry}!main.cpp@{main.cpp}}
+\subsubsection[{g\_\-billboardGeometry}]{\setlength{\rightskip}{0pt plus 5cm}std::vector$<$Geometry$\ast$$>$$\ast$ {\bf g\_\-billboardGeometry} = NULL}}
+\label{main_8cpp_ae68ffd5746a5cd638c8e5a3acd2074d7}
+\hypertarget{main_8cpp_a5036bf70f178c6ac048fdd5869a0aabc}{
+\index{main.cpp@{main.cpp}!g\_\-billboardTransforms@{g\_\-billboardTransforms}}
+\index{g\_\-billboardTransforms@{g\_\-billboardTransforms}!main.cpp@{main.cpp}}
+\subsubsection[{g\_\-billboardTransforms}]{\setlength{\rightskip}{0pt plus 5cm}std::vector$<$Transform$\ast$$>$$\ast$ {\bf g\_\-billboardTransforms}}}
+\label{main_8cpp_a5036bf70f178c6ac048fdd5869a0aabc}
+\hypertarget{main_8cpp_a44f06dc5471b6e0e9395c00519171da3}{
+\index{main.cpp@{main.cpp}!g\_\-billboardTranslates@{g\_\-billboardTranslates}}
+\index{g\_\-billboardTranslates@{g\_\-billboardTranslates}!main.cpp@{main.cpp}}
+\subsubsection[{g\_\-billboardTranslates}]{\setlength{\rightskip}{0pt plus 5cm}std::vector$<$D3DXVECTOR3$>$$\ast$ {\bf g\_\-billboardTranslates}}}
+\label{main_8cpp_a44f06dc5471b6e0e9395c00519171da3}
+\hypertarget{main_8cpp_ace3aa1fac9bbbaced3fa146958c0379c}{
 \index{main.cpp@{main.cpp}!g\_\-camera@{g\_\-camera}}
 \index{g\_\-camera@{g\_\-camera}!main.cpp@{main.cpp}}
-\subsubsection[{g\_\-camera}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Feisty::Camera}$\ast$ {\bf g\_\-camera} = NULL}\label{main_8cpp_ace3aa1fac9bbbaced3fa146958c0379c}
+\subsubsection[{g\_\-camera}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Feisty::Camera}$\ast$ {\bf g\_\-camera} = NULL}}
+\label{main_8cpp_ace3aa1fac9bbbaced3fa146958c0379c}
+\hypertarget{main_8cpp_a638e515a201184f02d8b8e11a1792a08}{
 \index{main.cpp@{main.cpp}!g\_\-characterHead@{g\_\-characterHead}}
 \index{g\_\-characterHead@{g\_\-characterHead}!main.cpp@{main.cpp}}
-\subsubsection[{g\_\-characterHead}]{\setlength{\rightskip}{0pt plus 5cm}Articulated$\ast$ {\bf g\_\-characterHead} = NULL}\label{main_8cpp_a638e515a201184f02d8b8e11a1792a08}
+\subsubsection[{g\_\-characterHead}]{\setlength{\rightskip}{0pt plus 5cm}Articulated$\ast$ {\bf g\_\-characterHead} = NULL}}
+\label{main_8cpp_a638e515a201184f02d8b8e11a1792a08}
+\hypertarget{main_8cpp_afaaa6de660374e440f4b086253de0f0b}{
 \index{main.cpp@{main.cpp}!g\_\-characterLLowerArm@{g\_\-characterLLowerArm}}
 \index{g\_\-characterLLowerArm@{g\_\-characterLLowerArm}!main.cpp@{main.cpp}}
-\subsubsection[{g\_\-characterLLowerArm}]{\setlength{\rightskip}{0pt plus 5cm}Articulated$\ast$ {\bf g\_\-characterLLowerArm} = NULL}\label{main_8cpp_afaaa6de660374e440f4b086253de0f0b}
+\subsubsection[{g\_\-characterLLowerArm}]{\setlength{\rightskip}{0pt plus 5cm}Articulated$\ast$ {\bf g\_\-characterLLowerArm} = NULL}}
+\label{main_8cpp_afaaa6de660374e440f4b086253de0f0b}
+\hypertarget{main_8cpp_a5083fc488e5761896ae166d8ec0e6c9a}{
 \index{main.cpp@{main.cpp}!g\_\-characterLLowerLeg@{g\_\-characterLLowerLeg}}
 \index{g\_\-characterLLowerLeg@{g\_\-characterLLowerLeg}!main.cpp@{main.cpp}}
-\subsubsection[{g\_\-characterLLowerLeg}]{\setlength{\rightskip}{0pt plus 5cm}Articulated$\ast$ {\bf g\_\-characterLLowerLeg} = NULL}\label{main_8cpp_a5083fc488e5761896ae166d8ec0e6c9a}
+\subsubsection[{g\_\-characterLLowerLeg}]{\setlength{\rightskip}{0pt plus 5cm}Articulated$\ast$ {\bf g\_\-characterLLowerLeg} = NULL}}
+\label{main_8cpp_a5083fc488e5761896ae166d8ec0e6c9a}
+\hypertarget{main_8cpp_a1e5b4613fb05e573e7231a6c3e0acf0e}{
 \index{main.cpp@{main.cpp}!g\_\-characterLowerBack@{g\_\-characterLowerBack}}
 \index{g\_\-characterLowerBack@{g\_\-characterLowerBack}!main.cpp@{main.cpp}}
-\subsubsection[{g\_\-characterLowerBack}]{\setlength{\rightskip}{0pt plus 5cm}Articulated$\ast$ {\bf g\_\-characterLowerBack} = NULL}\label{main_8cpp_a1e5b4613fb05e573e7231a6c3e0acf0e}
+\subsubsection[{g\_\-characterLowerBack}]{\setlength{\rightskip}{0pt plus 5cm}Articulated$\ast$ {\bf g\_\-characterLowerBack} = NULL}}
+\label{main_8cpp_a1e5b4613fb05e573e7231a6c3e0acf0e}
+\hypertarget{main_8cpp_a69a275d7564504b4ddf80fe486e5e4a8}{
 \index{main.cpp@{main.cpp}!g\_\-characterLUpperArm@{g\_\-characterLUpperArm}}
 \index{g\_\-characterLUpperArm@{g\_\-characterLUpperArm}!main.cpp@{main.cpp}}
-\subsubsection[{g\_\-characterLUpperArm}]{\setlength{\rightskip}{0pt plus 5cm}Articulated$\ast$ {\bf g\_\-characterLUpperArm} = NULL}\label{main_8cpp_a69a275d7564504b4ddf80fe486e5e4a8}
+\subsubsection[{g\_\-characterLUpperArm}]{\setlength{\rightskip}{0pt plus 5cm}Articulated$\ast$ {\bf g\_\-characterLUpperArm} = NULL}}
+\label{main_8cpp_a69a275d7564504b4ddf80fe486e5e4a8}
+\hypertarget{main_8cpp_aadb7bfce0390856b42d0e9f64dcb9a57}{
 \index{main.cpp@{main.cpp}!g\_\-characterLUpperLeg@{g\_\-characterLUpperLeg}}
 \index{g\_\-characterLUpperLeg@{g\_\-characterLUpperLeg}!main.cpp@{main.cpp}}
-\subsubsection[{g\_\-characterLUpperLeg}]{\setlength{\rightskip}{0pt plus 5cm}Articulated$\ast$ {\bf g\_\-characterLUpperLeg} = NULL}\label{main_8cpp_aadb7bfce0390856b42d0e9f64dcb9a57}
+\subsubsection[{g\_\-characterLUpperLeg}]{\setlength{\rightskip}{0pt plus 5cm}Articulated$\ast$ {\bf g\_\-characterLUpperLeg} = NULL}}
+\label{main_8cpp_aadb7bfce0390856b42d0e9f64dcb9a57}
+\hypertarget{main_8cpp_aa424d880d9792eb1d5ebb5241533f37f}{
 \index{main.cpp@{main.cpp}!g\_\-characterNeck@{g\_\-characterNeck}}
 \index{g\_\-characterNeck@{g\_\-characterNeck}!main.cpp@{main.cpp}}
-\subsubsection[{g\_\-characterNeck}]{\setlength{\rightskip}{0pt plus 5cm}Articulated$\ast$ {\bf g\_\-characterNeck} = NULL}\label{main_8cpp_aa424d880d9792eb1d5ebb5241533f37f}
+\subsubsection[{g\_\-characterNeck}]{\setlength{\rightskip}{0pt plus 5cm}Articulated$\ast$ {\bf g\_\-characterNeck} = NULL}}
+\label{main_8cpp_aa424d880d9792eb1d5ebb5241533f37f}
+\hypertarget{main_8cpp_ad14a3bdc19f2edae2b1a8b3f7fc43280}{
 \index{main.cpp@{main.cpp}!g\_\-characterNode@{g\_\-characterNode}}
 \index{g\_\-characterNode@{g\_\-characterNode}!main.cpp@{main.cpp}}
-\subsubsection[{g\_\-characterNode}]{\setlength{\rightskip}{0pt plus 5cm}Articulated$\ast$ {\bf g\_\-characterNode} = NULL}\label{main_8cpp_ad14a3bdc19f2edae2b1a8b3f7fc43280}
+\subsubsection[{g\_\-characterNode}]{\setlength{\rightskip}{0pt plus 5cm}Articulated$\ast$ {\bf g\_\-characterNode} = NULL}}
+\label{main_8cpp_ad14a3bdc19f2edae2b1a8b3f7fc43280}
+\hypertarget{main_8cpp_aae42f7534fd474743216289bcddb27fb}{
 \index{main.cpp@{main.cpp}!g\_\-characterPelvis@{g\_\-characterPelvis}}
 \index{g\_\-characterPelvis@{g\_\-characterPelvis}!main.cpp@{main.cpp}}
-\subsubsection[{g\_\-characterPelvis}]{\setlength{\rightskip}{0pt plus 5cm}Articulated$\ast$ {\bf g\_\-characterPelvis} = NULL}\label{main_8cpp_aae42f7534fd474743216289bcddb27fb}
+\subsubsection[{g\_\-characterPelvis}]{\setlength{\rightskip}{0pt plus 5cm}Articulated$\ast$ {\bf g\_\-characterPelvis} = NULL}}
+\label{main_8cpp_aae42f7534fd474743216289bcddb27fb}
+\hypertarget{main_8cpp_afa383510790c362c60340a9ec54f12dc}{
 \index{main.cpp@{main.cpp}!g\_\-characterRLowerArm@{g\_\-characterRLowerArm}}
 \index{g\_\-characterRLowerArm@{g\_\-characterRLowerArm}!main.cpp@{main.cpp}}
-\subsubsection[{g\_\-characterRLowerArm}]{\setlength{\rightskip}{0pt plus 5cm}Articulated$\ast$ {\bf g\_\-characterRLowerArm} = NULL}\label{main_8cpp_afa383510790c362c60340a9ec54f12dc}
+\subsubsection[{g\_\-characterRLowerArm}]{\setlength{\rightskip}{0pt plus 5cm}Articulated$\ast$ {\bf g\_\-characterRLowerArm} = NULL}}
+\label{main_8cpp_afa383510790c362c60340a9ec54f12dc}
+\hypertarget{main_8cpp_a9a2b3afdddef870221bd880ad897f625}{
 \index{main.cpp@{main.cpp}!g\_\-characterRLowerLeg@{g\_\-characterRLowerLeg}}
 \index{g\_\-characterRLowerLeg@{g\_\-characterRLowerLeg}!main.cpp@{main.cpp}}
-\subsubsection[{g\_\-characterRLowerLeg}]{\setlength{\rightskip}{0pt plus 5cm}Articulated$\ast$ {\bf g\_\-characterRLowerLeg} = NULL}\label{main_8cpp_a9a2b3afdddef870221bd880ad897f625}
+\subsubsection[{g\_\-characterRLowerLeg}]{\setlength{\rightskip}{0pt plus 5cm}Articulated$\ast$ {\bf g\_\-characterRLowerLeg} = NULL}}
+\label{main_8cpp_a9a2b3afdddef870221bd880ad897f625}
+\hypertarget{main_8cpp_a13821aedd2696e5731145edc3910b12c}{
 \index{main.cpp@{main.cpp}!g\_\-characterRUpperArm@{g\_\-characterRUpperArm}}
 \index{g\_\-characterRUpperArm@{g\_\-characterRUpperArm}!main.cpp@{main.cpp}}
-\subsubsection[{g\_\-characterRUpperArm}]{\setlength{\rightskip}{0pt plus 5cm}Articulated$\ast$ {\bf g\_\-characterRUpperArm} = NULL}\label{main_8cpp_a13821aedd2696e5731145edc3910b12c}
+\subsubsection[{g\_\-characterRUpperArm}]{\setlength{\rightskip}{0pt plus 5cm}Articulated$\ast$ {\bf g\_\-characterRUpperArm} = NULL}}
+\label{main_8cpp_a13821aedd2696e5731145edc3910b12c}
+\hypertarget{main_8cpp_afd3069c7a57a92e7c2ebecaf00278836}{
 \index{main.cpp@{main.cpp}!g\_\-characterRUpperLeg@{g\_\-characterRUpperLeg}}
 \index{g\_\-characterRUpperLeg@{g\_\-characterRUpperLeg}!main.cpp@{main.cpp}}
-\subsubsection[{g\_\-characterRUpperLeg}]{\setlength{\rightskip}{0pt plus 5cm}Articulated$\ast$ {\bf g\_\-characterRUpperLeg} = NULL}\label{main_8cpp_afd3069c7a57a92e7c2ebecaf00278836}
+\subsubsection[{g\_\-characterRUpperLeg}]{\setlength{\rightskip}{0pt plus 5cm}Articulated$\ast$ {\bf g\_\-characterRUpperLeg} = NULL}}
+\label{main_8cpp_afd3069c7a57a92e7c2ebecaf00278836}
+\hypertarget{main_8cpp_a765758fe2eeada9359aadd8f77024d6a}{
 \index{main.cpp@{main.cpp}!g\_\-characterShoulders@{g\_\-characterShoulders}}
 \index{g\_\-characterShoulders@{g\_\-characterShoulders}!main.cpp@{main.cpp}}
-\subsubsection[{g\_\-characterShoulders}]{\setlength{\rightskip}{0pt plus 5cm}Articulated$\ast$ {\bf g\_\-characterShoulders} = NULL}\label{main_8cpp_a765758fe2eeada9359aadd8f77024d6a}
+\subsubsection[{g\_\-characterShoulders}]{\setlength{\rightskip}{0pt plus 5cm}Articulated$\ast$ {\bf g\_\-characterShoulders} = NULL}}
+\label{main_8cpp_a765758fe2eeada9359aadd8f77024d6a}
+\hypertarget{main_8cpp_a8ceca17e6710a25af494585322c2fa11}{
 \index{main.cpp@{main.cpp}!g\_\-characterTransform@{g\_\-characterTransform}}
 \index{g\_\-characterTransform@{g\_\-characterTransform}!main.cpp@{main.cpp}}
-\subsubsection[{g\_\-characterTransform}]{\setlength{\rightskip}{0pt plus 5cm}Transform$\ast$ {\bf g\_\-characterTransform} = NULL}\label{main_8cpp_a8ceca17e6710a25af494585322c2fa11}
+\subsubsection[{g\_\-characterTransform}]{\setlength{\rightskip}{0pt plus 5cm}Transform$\ast$ {\bf g\_\-characterTransform} = NULL}}
+\label{main_8cpp_a8ceca17e6710a25af494585322c2fa11}
+\hypertarget{main_8cpp_a5af5178491e81991c56095f9b601444f}{
 \index{main.cpp@{main.cpp}!g\_\-characterUpperBack@{g\_\-characterUpperBack}}
 \index{g\_\-characterUpperBack@{g\_\-characterUpperBack}!main.cpp@{main.cpp}}
-\subsubsection[{g\_\-characterUpperBack}]{\setlength{\rightskip}{0pt plus 5cm}Articulated$\ast$ {\bf g\_\-characterUpperBack} = NULL}\label{main_8cpp_a5af5178491e81991c56095f9b601444f}
+\subsubsection[{g\_\-characterUpperBack}]{\setlength{\rightskip}{0pt plus 5cm}Articulated$\ast$ {\bf g\_\-characterUpperBack} = NULL}}
+\label{main_8cpp_a5af5178491e81991c56095f9b601444f}
+\hypertarget{main_8cpp_ab159d2c6b28524f490d25feaf9fca953}{
 \index{main.cpp@{main.cpp}!g\_\-dwarfGeometry@{g\_\-dwarfGeometry}}
 \index{g\_\-dwarfGeometry@{g\_\-dwarfGeometry}!main.cpp@{main.cpp}}
-\subsubsection[{g\_\-dwarfGeometry}]{\setlength{\rightskip}{0pt plus 5cm}Geometry$\ast$ {\bf g\_\-dwarfGeometry} = NULL}\label{main_8cpp_ab159d2c6b28524f490d25feaf9fca953}
+\subsubsection[{g\_\-dwarfGeometry}]{\setlength{\rightskip}{0pt plus 5cm}Geometry$\ast$ {\bf g\_\-dwarfGeometry} = NULL}}
+\label{main_8cpp_ab159d2c6b28524f490d25feaf9fca953}
+\hypertarget{main_8cpp_a6b0628a9f02961163db055e4037feccd}{
 \index{main.cpp@{main.cpp}!g\_\-dwarfTransform@{g\_\-dwarfTransform}}
 \index{g\_\-dwarfTransform@{g\_\-dwarfTransform}!main.cpp@{main.cpp}}
-\subsubsection[{g\_\-dwarfTransform}]{\setlength{\rightskip}{0pt plus 5cm}Transform$\ast$ {\bf g\_\-dwarfTransform} = NULL}\label{main_8cpp_a6b0628a9f02961163db055e4037feccd}
+\subsubsection[{g\_\-dwarfTransform}]{\setlength{\rightskip}{0pt plus 5cm}Transform$\ast$ {\bf g\_\-dwarfTransform} = NULL}}
+\label{main_8cpp_a6b0628a9f02961163db055e4037feccd}
+\hypertarget{main_8cpp_aa242b632e52deae21e1da999e3e8e6d5}{
 \index{main.cpp@{main.cpp}!g\_\-gasStationGeometry@{g\_\-gasStationGeometry}}
 \index{g\_\-gasStationGeometry@{g\_\-gasStationGeometry}!main.cpp@{main.cpp}}
-\subsubsection[{g\_\-gasStationGeometry}]{\setlength{\rightskip}{0pt plus 5cm}Geometry$\ast$ {\bf g\_\-gasStationGeometry} = NULL}\label{main_8cpp_aa242b632e52deae21e1da999e3e8e6d5}
+\subsubsection[{g\_\-gasStationGeometry}]{\setlength{\rightskip}{0pt plus 5cm}Geometry$\ast$ {\bf g\_\-gasStationGeometry} = NULL}}
+\label{main_8cpp_aa242b632e52deae21e1da999e3e8e6d5}
+\hypertarget{main_8cpp_a5b94057a0a773a7aa8acd311b781d115}{
 \index{main.cpp@{main.cpp}!g\_\-gasStationTransform@{g\_\-gasStationTransform}}
 \index{g\_\-gasStationTransform@{g\_\-gasStationTransform}!main.cpp@{main.cpp}}
-\subsubsection[{g\_\-gasStationTransform}]{\setlength{\rightskip}{0pt plus 5cm}Transform$\ast$ {\bf g\_\-gasStationTransform} = NULL}\label{main_8cpp_a5b94057a0a773a7aa8acd311b781d115}
+\subsubsection[{g\_\-gasStationTransform}]{\setlength{\rightskip}{0pt plus 5cm}Transform$\ast$ {\bf g\_\-gasStationTransform} = NULL}}
+\label{main_8cpp_a5b94057a0a773a7aa8acd311b781d115}
+\hypertarget{main_8cpp_a57d194f8024b9d3f7f6b6adcda7f65ca}{
 \index{main.cpp@{main.cpp}!g\_\-masterShader@{g\_\-masterShader}}
 \index{g\_\-masterShader@{g\_\-masterShader}!main.cpp@{main.cpp}}
-\subsubsection[{g\_\-masterShader}]{\setlength{\rightskip}{0pt plus 5cm}{\bf MasterShader}$\ast$ {\bf g\_\-masterShader} = NULL}\label{main_8cpp_a57d194f8024b9d3f7f6b6adcda7f65ca}
+\subsubsection[{g\_\-masterShader}]{\setlength{\rightskip}{0pt plus 5cm}{\bf MasterShader}$\ast$ {\bf g\_\-masterShader} = NULL}}
+\label{main_8cpp_a57d194f8024b9d3f7f6b6adcda7f65ca}
+\hypertarget{main_8cpp_a2b1a7d9baa6f7e834043d278b7b2ef8c}{
 \index{main.cpp@{main.cpp}!g\_\-monsterGeometry@{g\_\-monsterGeometry}}
 \index{g\_\-monsterGeometry@{g\_\-monsterGeometry}!main.cpp@{main.cpp}}
-\subsubsection[{g\_\-monsterGeometry}]{\setlength{\rightskip}{0pt plus 5cm}Geometry$\ast$ {\bf g\_\-monsterGeometry} = NULL}\label{main_8cpp_a2b1a7d9baa6f7e834043d278b7b2ef8c}
+\subsubsection[{g\_\-monsterGeometry}]{\setlength{\rightskip}{0pt plus 5cm}Geometry$\ast$ {\bf g\_\-monsterGeometry} = NULL}}
+\label{main_8cpp_a2b1a7d9baa6f7e834043d278b7b2ef8c}
+\hypertarget{main_8cpp_a26007bd4443df507e087baa875a3296c}{
 \index{main.cpp@{main.cpp}!g\_\-monsterTransform@{g\_\-monsterTransform}}
 \index{g\_\-monsterTransform@{g\_\-monsterTransform}!main.cpp@{main.cpp}}
-\subsubsection[{g\_\-monsterTransform}]{\setlength{\rightskip}{0pt plus 5cm}Transform$\ast$ {\bf g\_\-monsterTransform} = NULL}\label{main_8cpp_a26007bd4443df507e087baa875a3296c}
+\subsubsection[{g\_\-monsterTransform}]{\setlength{\rightskip}{0pt plus 5cm}Transform$\ast$ {\bf g\_\-monsterTransform} = NULL}}
+\label{main_8cpp_a26007bd4443df507e087baa875a3296c}
+\hypertarget{main_8cpp_ab8fe643c3caa203940d18a5298a69bc4}{
 \index{main.cpp@{main.cpp}!g\_\-mouse@{g\_\-mouse}}
 \index{g\_\-mouse@{g\_\-mouse}!main.cpp@{main.cpp}}
-\subsubsection[{g\_\-mouse}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Feisty::Mouse}$\ast$ {\bf g\_\-mouse} = NULL}\label{main_8cpp_ab8fe643c3caa203940d18a5298a69bc4}
+\subsubsection[{g\_\-mouse}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Feisty::Mouse}$\ast$ {\bf g\_\-mouse} = NULL}}
+\label{main_8cpp_ab8fe643c3caa203940d18a5298a69bc4}
+\hypertarget{main_8cpp_a3d48b89c7587f4bd4138128c10f7b620}{
 \index{main.cpp@{main.cpp}!g\_\-projection@{g\_\-projection}}
 \index{g\_\-projection@{g\_\-projection}!main.cpp@{main.cpp}}
-\subsubsection[{g\_\-projection}]{\setlength{\rightskip}{0pt plus 5cm}Projection$\ast$ {\bf g\_\-projection} = NULL}\label{main_8cpp_a3d48b89c7587f4bd4138128c10f7b620}
+\subsubsection[{g\_\-projection}]{\setlength{\rightskip}{0pt plus 5cm}Projection$\ast$ {\bf g\_\-projection} = NULL}}
+\label{main_8cpp_a3d48b89c7587f4bd4138128c10f7b620}
+\hypertarget{main_8cpp_a04b2b38cf34521d269537eb88ee7b53e}{
+\index{main.cpp@{main.cpp}!g\_\-pSurfaceShadowDS@{g\_\-pSurfaceShadowDS}}
+\index{g\_\-pSurfaceShadowDS@{g\_\-pSurfaceShadowDS}!main.cpp@{main.cpp}}
+\subsubsection[{g\_\-pSurfaceShadowDS}]{\setlength{\rightskip}{0pt plus 5cm}std::vector$<$LPDIRECT3DSURFACE9$>$$\ast$ {\bf g\_\-pSurfaceShadowDS}}}
+\label{main_8cpp_a04b2b38cf34521d269537eb88ee7b53e}
+\hypertarget{main_8cpp_a39582174fdbdd0a65446d7b04596a07b}{
 \index{main.cpp@{main.cpp}!g\_\-renderer@{g\_\-renderer}}
 \index{g\_\-renderer@{g\_\-renderer}!main.cpp@{main.cpp}}
-\subsubsection[{g\_\-renderer}]{\setlength{\rightskip}{0pt plus 5cm}SGRenderer$\ast$ {\bf g\_\-renderer} = NULL}\label{main_8cpp_a80c9e4c9fffd86c86d88ea02191a3599}
+\subsubsection[{g\_\-renderer}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Renderer}$\ast$ {\bf g\_\-renderer} = NULL}}
+\label{main_8cpp_a39582174fdbdd0a65446d7b04596a07b}
+\hypertarget{main_8cpp_a2a4b4f7f178f248621e7664716e472fe}{
+\index{main.cpp@{main.cpp}!g\_\-shadowMapSurface@{g\_\-shadowMapSurface}}
+\index{g\_\-shadowMapSurface@{g\_\-shadowMapSurface}!main.cpp@{main.cpp}}
+\subsubsection[{g\_\-shadowMapSurface}]{\setlength{\rightskip}{0pt plus 5cm}std::vector$<$LPDIRECT3DSURFACE9$>$$\ast$ {\bf g\_\-shadowMapSurface}}}
+\label{main_8cpp_a2a4b4f7f178f248621e7664716e472fe}
+\hypertarget{main_8cpp_a7cac590d25452e6fdc8fcc0990d7e6d4}{
 \index{main.cpp@{main.cpp}!g\_\-state@{g\_\-state}}
 \index{g\_\-state@{g\_\-state}!main.cpp@{main.cpp}}
-\subsubsection[{g\_\-state}]{\setlength{\rightskip}{0pt plus 5cm}State$\ast$ {\bf g\_\-state} = NULL}\label{main_8cpp_a7cac590d25452e6fdc8fcc0990d7e6d4}
+\subsubsection[{g\_\-state}]{\setlength{\rightskip}{0pt plus 5cm}State$\ast$ {\bf g\_\-state} = NULL}}
+\label{main_8cpp_a7cac590d25452e6fdc8fcc0990d7e6d4}
+\hypertarget{main_8cpp_aa5c4e70356b29ba29a0947033ae0513f}{
+\index{main.cpp@{main.cpp}!g\_\-textureShadowMaps@{g\_\-textureShadowMaps}}
+\index{g\_\-textureShadowMaps@{g\_\-textureShadowMaps}!main.cpp@{main.cpp}}
+\subsubsection[{g\_\-textureShadowMaps}]{\setlength{\rightskip}{0pt plus 5cm}std::vector$<$LPDIRECT3DTEXTURE9$>$$\ast$ {\bf g\_\-textureShadowMaps}}}
+\label{main_8cpp_aa5c4e70356b29ba29a0947033ae0513f}
+\hypertarget{main_8cpp_a2c3ae44c854b16d8ae7c8dc3b4e729fb}{
 \index{main.cpp@{main.cpp}!g\_\-treeGeometry@{g\_\-treeGeometry}}
 \index{g\_\-treeGeometry@{g\_\-treeGeometry}!main.cpp@{main.cpp}}
-\subsubsection[{g\_\-treeGeometry}]{\setlength{\rightskip}{0pt plus 5cm}Geometry$\ast$ {\bf g\_\-treeGeometry} = NULL}\label{main_8cpp_a2c3ae44c854b16d8ae7c8dc3b4e729fb}
+\subsubsection[{g\_\-treeGeometry}]{\setlength{\rightskip}{0pt plus 5cm}Geometry$\ast$ {\bf g\_\-treeGeometry} = NULL}}
+\label{main_8cpp_a2c3ae44c854b16d8ae7c8dc3b4e729fb}
+\hypertarget{main_8cpp_a49c675fdd485d63c6f5895d8cd80facf}{
 \index{main.cpp@{main.cpp}!g\_\-treeTransform@{g\_\-treeTransform}}
 \index{g\_\-treeTransform@{g\_\-treeTransform}!main.cpp@{main.cpp}}
-\subsubsection[{g\_\-treeTransform}]{\setlength{\rightskip}{0pt plus 5cm}Transform$\ast$ {\bf g\_\-treeTransform} = NULL}\label{main_8cpp_a49c675fdd485d63c6f5895d8cd80facf}
+\subsubsection[{g\_\-treeTransform}]{\setlength{\rightskip}{0pt plus 5cm}Transform$\ast$ {\bf g\_\-treeTransform} = NULL}}
+\label{main_8cpp_a49c675fdd485d63c6f5895d8cd80facf}

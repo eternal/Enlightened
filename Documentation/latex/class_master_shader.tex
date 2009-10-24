@@ -1,61 +1,133 @@
+\hypertarget{class_master_shader}{
 \section{MasterShader Class Reference}
 \label{class_master_shader}\index{MasterShader@{MasterShader}}
+}
 
 
 {\ttfamily \#include $<$MasterShader.h$>$}
 
-Inherits SGLib::Shader.\subsection*{Public Member Functions}
+Inherits SGLib::Shader.Collaboration diagram for MasterShader:\subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-{\bf MasterShader} (LPDIRECT3DDEVICE9 a\_\-device, LPCTSTR a\_\-fileName, std::vector$<$ std::string $>$ $\ast$a\_\-meshNames)
+\hyperlink{class_master_shader_a07596b503827f3daff4bff10acad03ac}{MasterShader} (LPDIRECT3DDEVICE9 a\_\-device, LPCTSTR a\_\-fileName, std::vector$<$ std::string $>$ $\ast$a\_\-meshNames, std::vector$<$ LPDIRECT3DTEXTURE9 $>$ $\ast$a\_\-textureShadowMap, std::vector$<$ LPDIRECT3DSURFACE9 $>$ $\ast$a\_\-pSurfaceShadowDS, std::vector$<$ LPDIRECT3DSURFACE9 $>$ $\ast$a\_\-shadowMapSurface)
 \item 
-void {\bf Update} (float a\_\-timeDelta)
+void \hyperlink{class_master_shader_acf8849db1f0ac43c2d35bf714ef285ed}{Update} (float a\_\-timeDelta)
 \item 
-{\bf $\sim$MasterShader} ()
+\hyperlink{class_master_shader_af92e2ec718026698de2edcfc4c20948c}{$\sim$MasterShader} ()
 \item 
-void {\bf SetCameraPosition} (D3DXVECTOR3 a\_\-cameraPosition)
+void \hyperlink{class_master_shader_af1125d20e6425a5694700a08ae061d3e}{SetCameraPosition} (D3DXVECTOR3 a\_\-cameraPosition)
 \item 
-void {\bf RenderGeometry} (SGLib::Geometry $\ast$a\_\-geometry)
+void \hyperlink{class_master_shader_ad80b7842501424ac272a1511e77bf56a}{GenerateShadowMap} (UINT index, SGLib::Geometry $\ast$a\_\-geometry, D3DXMATRIX matWorld)
+\item 
+void \hyperlink{class_master_shader_a5fc7f7834ff6938c2b55d6af5c97766d}{RenderGeometry} (SGLib::Geometry $\ast$a\_\-geometry)
 \end{DoxyCompactItemize}
 \subsection*{Protected Attributes}
 \begin{DoxyCompactItemize}
 \item 
-std::map$<$ std::string, LPDIRECT3DTEXTURE9 $>$ $\ast$ {\bf m\_\-normalTextures}
+std::map$<$ std::string, LPDIRECT3DTEXTURE9 $>$ $\ast$ \hyperlink{class_master_shader_aad808d20c01b79a070560263d64541f5}{m\_\-normalTextures}
 \item 
-float {\bf m\_\-time}
+float \hyperlink{class_master_shader_ad7431a0297a89d1505463f4b634fc4ec}{m\_\-time}
+\item 
+\hyperlink{struct_light}{Light} \hyperlink{class_master_shader_abbcc71cc579b0d701276d373932bda52}{m\_\-lights} \mbox{[}6\mbox{]}
+\item 
+std::vector$<$ LPDIRECT3DTEXTURE9 $>$ $\ast$ \hyperlink{class_master_shader_a56acde939cd7a8d278c9ad23b9bc8673}{m\_\-textureShadowMap}
+\item 
+std::vector$<$ LPDIRECT3DSURFACE9 $>$ $\ast$ \hyperlink{class_master_shader_a7e37a6ac3d2d161583c6b567b1762510}{m\_\-shadowMapSurface}
+\item 
+std::vector$<$ LPDIRECT3DSURFACE9 $>$ $\ast$ \hyperlink{class_master_shader_a051e371aa066bcdf405b08f77acdcccf}{m\_\-pSurfaceShadowDS}
+\item 
+LPDIRECT3DVERTEXDECLARATION9 \hyperlink{class_master_shader_a379013e2729350855bd95337848260b9}{m\_\-pVertexDec}
+\item 
+LPDIRECT3DTEXTURE9 \hyperlink{class_master_shader_aa8db1d7a494db1b398700d8185f414f5}{m\_\-billboardTexture}
+\item 
+LPDIRECT3DVERTEXBUFFER9 \hyperlink{class_master_shader_a5082bcc19e3842984e9adc1e7c5f4932}{m\_\-pVB}
 \end{DoxyCompactItemize}
 
 
 \subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_master_shader_a07596b503827f3daff4bff10acad03ac}{
 \index{MasterShader@{MasterShader}!MasterShader@{MasterShader}}
 \index{MasterShader@{MasterShader}!MasterShader@{MasterShader}}
-\subsubsection[{MasterShader}]{\setlength{\rightskip}{0pt plus 5cm}MasterShader::MasterShader (LPDIRECT3DDEVICE9 {\em a\_\-device}, \/  LPCTSTR {\em a\_\-fileName}, \/  std::vector$<$ std::string $>$ $\ast$ {\em a\_\-meshNames})\hspace{0.3cm}{\ttfamily  [inline]}}\label{class_master_shader_adf8b691e77d47763fbbc44c7724fb880}
+\subsubsection[{MasterShader}]{\setlength{\rightskip}{0pt plus 5cm}MasterShader::MasterShader (LPDIRECT3DDEVICE9 {\em a\_\-device}, \/  LPCTSTR {\em a\_\-fileName}, \/  std::vector$<$ std::string $>$ $\ast$ {\em a\_\-meshNames}, \/  std::vector$<$ LPDIRECT3DTEXTURE9 $>$ $\ast$ {\em a\_\-textureShadowMap}, \/  std::vector$<$ LPDIRECT3DSURFACE9 $>$ $\ast$ {\em a\_\-pSurfaceShadowDS}, \/  std::vector$<$ LPDIRECT3DSURFACE9 $>$ $\ast$ {\em a\_\-shadowMapSurface})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_master_shader_a07596b503827f3daff4bff10acad03ac}
+\hypertarget{class_master_shader_af92e2ec718026698de2edcfc4c20948c}{
 \index{MasterShader@{MasterShader}!$\sim$MasterShader@{$\sim$MasterShader}}
 \index{$\sim$MasterShader@{$\sim$MasterShader}!MasterShader@{MasterShader}}
-\subsubsection[{$\sim$MasterShader}]{\setlength{\rightskip}{0pt plus 5cm}MasterShader::$\sim$MasterShader ()\hspace{0.3cm}{\ttfamily  [inline]}}\label{class_master_shader_af92e2ec718026698de2edcfc4c20948c}
+\subsubsection[{$\sim$MasterShader}]{\setlength{\rightskip}{0pt plus 5cm}MasterShader::$\sim$MasterShader ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_master_shader_af92e2ec718026698de2edcfc4c20948c}
 
 
 \subsection{Member Function Documentation}
+\hypertarget{class_master_shader_ad80b7842501424ac272a1511e77bf56a}{
+\index{MasterShader@{MasterShader}!GenerateShadowMap@{GenerateShadowMap}}
+\index{GenerateShadowMap@{GenerateShadowMap}!MasterShader@{MasterShader}}
+\subsubsection[{GenerateShadowMap}]{\setlength{\rightskip}{0pt plus 5cm}void MasterShader::GenerateShadowMap (UINT {\em index}, \/  SGLib::Geometry $\ast$ {\em a\_\-geometry}, \/  D3DXMATRIX {\em matWorld})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_master_shader_ad80b7842501424ac272a1511e77bf56a}
+\hypertarget{class_master_shader_a5fc7f7834ff6938c2b55d6af5c97766d}{
 \index{MasterShader@{MasterShader}!RenderGeometry@{RenderGeometry}}
 \index{RenderGeometry@{RenderGeometry}!MasterShader@{MasterShader}}
-\subsubsection[{RenderGeometry}]{\setlength{\rightskip}{0pt plus 5cm}void MasterShader::RenderGeometry (SGLib::Geometry $\ast$ {\em a\_\-geometry})\hspace{0.3cm}{\ttfamily  [inline]}}\label{class_master_shader_a5fc7f7834ff6938c2b55d6af5c97766d}
+\subsubsection[{RenderGeometry}]{\setlength{\rightskip}{0pt plus 5cm}void MasterShader::RenderGeometry (SGLib::Geometry $\ast$ {\em a\_\-geometry})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_master_shader_a5fc7f7834ff6938c2b55d6af5c97766d}
+\hypertarget{class_master_shader_af1125d20e6425a5694700a08ae061d3e}{
 \index{MasterShader@{MasterShader}!SetCameraPosition@{SetCameraPosition}}
 \index{SetCameraPosition@{SetCameraPosition}!MasterShader@{MasterShader}}
-\subsubsection[{SetCameraPosition}]{\setlength{\rightskip}{0pt plus 5cm}void MasterShader::SetCameraPosition (D3DXVECTOR3 {\em a\_\-cameraPosition})\hspace{0.3cm}{\ttfamily  [inline]}}\label{class_master_shader_af1125d20e6425a5694700a08ae061d3e}
+\subsubsection[{SetCameraPosition}]{\setlength{\rightskip}{0pt plus 5cm}void MasterShader::SetCameraPosition (D3DXVECTOR3 {\em a\_\-cameraPosition})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_master_shader_af1125d20e6425a5694700a08ae061d3e}
+\hypertarget{class_master_shader_acf8849db1f0ac43c2d35bf714ef285ed}{
 \index{MasterShader@{MasterShader}!Update@{Update}}
 \index{Update@{Update}!MasterShader@{MasterShader}}
-\subsubsection[{Update}]{\setlength{\rightskip}{0pt plus 5cm}void MasterShader::Update (float {\em a\_\-timeDelta})\hspace{0.3cm}{\ttfamily  [inline]}}\label{class_master_shader_acf8849db1f0ac43c2d35bf714ef285ed}
+\subsubsection[{Update}]{\setlength{\rightskip}{0pt plus 5cm}void MasterShader::Update (float {\em a\_\-timeDelta})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_master_shader_acf8849db1f0ac43c2d35bf714ef285ed}
 
 
 \subsection{Member Data Documentation}
+\hypertarget{class_master_shader_aa8db1d7a494db1b398700d8185f414f5}{
+\index{MasterShader@{MasterShader}!m\_\-billboardTexture@{m\_\-billboardTexture}}
+\index{m\_\-billboardTexture@{m\_\-billboardTexture}!MasterShader@{MasterShader}}
+\subsubsection[{m\_\-billboardTexture}]{\setlength{\rightskip}{0pt plus 5cm}LPDIRECT3DTEXTURE9 {\bf MasterShader::m\_\-billboardTexture}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{class_master_shader_aa8db1d7a494db1b398700d8185f414f5}
+\hypertarget{class_master_shader_abbcc71cc579b0d701276d373932bda52}{
+\index{MasterShader@{MasterShader}!m\_\-lights@{m\_\-lights}}
+\index{m\_\-lights@{m\_\-lights}!MasterShader@{MasterShader}}
+\subsubsection[{m\_\-lights}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Light} {\bf MasterShader::m\_\-lights}\mbox{[}6\mbox{]}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{class_master_shader_abbcc71cc579b0d701276d373932bda52}
+\hypertarget{class_master_shader_aad808d20c01b79a070560263d64541f5}{
 \index{MasterShader@{MasterShader}!m\_\-normalTextures@{m\_\-normalTextures}}
 \index{m\_\-normalTextures@{m\_\-normalTextures}!MasterShader@{MasterShader}}
-\subsubsection[{m\_\-normalTextures}]{\setlength{\rightskip}{0pt plus 5cm}std::map$<$std::string, LPDIRECT3DTEXTURE9$>$$\ast$ {\bf MasterShader::m\_\-normalTextures}\hspace{0.3cm}{\ttfamily  [protected]}}\label{class_master_shader_aad808d20c01b79a070560263d64541f5}
+\subsubsection[{m\_\-normalTextures}]{\setlength{\rightskip}{0pt plus 5cm}std::map$<$std::string, LPDIRECT3DTEXTURE9$>$$\ast$ {\bf MasterShader::m\_\-normalTextures}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{class_master_shader_aad808d20c01b79a070560263d64541f5}
+\hypertarget{class_master_shader_a051e371aa066bcdf405b08f77acdcccf}{
+\index{MasterShader@{MasterShader}!m\_\-pSurfaceShadowDS@{m\_\-pSurfaceShadowDS}}
+\index{m\_\-pSurfaceShadowDS@{m\_\-pSurfaceShadowDS}!MasterShader@{MasterShader}}
+\subsubsection[{m\_\-pSurfaceShadowDS}]{\setlength{\rightskip}{0pt plus 5cm}std::vector$<$LPDIRECT3DSURFACE9$>$$\ast$ {\bf MasterShader::m\_\-pSurfaceShadowDS}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{class_master_shader_a051e371aa066bcdf405b08f77acdcccf}
+\hypertarget{class_master_shader_a5082bcc19e3842984e9adc1e7c5f4932}{
+\index{MasterShader@{MasterShader}!m\_\-pVB@{m\_\-pVB}}
+\index{m\_\-pVB@{m\_\-pVB}!MasterShader@{MasterShader}}
+\subsubsection[{m\_\-pVB}]{\setlength{\rightskip}{0pt plus 5cm}LPDIRECT3DVERTEXBUFFER9 {\bf MasterShader::m\_\-pVB}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{class_master_shader_a5082bcc19e3842984e9adc1e7c5f4932}
+\hypertarget{class_master_shader_a379013e2729350855bd95337848260b9}{
+\index{MasterShader@{MasterShader}!m\_\-pVertexDec@{m\_\-pVertexDec}}
+\index{m\_\-pVertexDec@{m\_\-pVertexDec}!MasterShader@{MasterShader}}
+\subsubsection[{m\_\-pVertexDec}]{\setlength{\rightskip}{0pt plus 5cm}LPDIRECT3DVERTEXDECLARATION9 {\bf MasterShader::m\_\-pVertexDec}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{class_master_shader_a379013e2729350855bd95337848260b9}
+\hypertarget{class_master_shader_a7e37a6ac3d2d161583c6b567b1762510}{
+\index{MasterShader@{MasterShader}!m\_\-shadowMapSurface@{m\_\-shadowMapSurface}}
+\index{m\_\-shadowMapSurface@{m\_\-shadowMapSurface}!MasterShader@{MasterShader}}
+\subsubsection[{m\_\-shadowMapSurface}]{\setlength{\rightskip}{0pt plus 5cm}std::vector$<$LPDIRECT3DSURFACE9$>$$\ast$ {\bf MasterShader::m\_\-shadowMapSurface}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{class_master_shader_a7e37a6ac3d2d161583c6b567b1762510}
+\hypertarget{class_master_shader_a56acde939cd7a8d278c9ad23b9bc8673}{
+\index{MasterShader@{MasterShader}!m\_\-textureShadowMap@{m\_\-textureShadowMap}}
+\index{m\_\-textureShadowMap@{m\_\-textureShadowMap}!MasterShader@{MasterShader}}
+\subsubsection[{m\_\-textureShadowMap}]{\setlength{\rightskip}{0pt plus 5cm}std::vector$<$LPDIRECT3DTEXTURE9$>$$\ast$ {\bf MasterShader::m\_\-textureShadowMap}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{class_master_shader_a56acde939cd7a8d278c9ad23b9bc8673}
+\hypertarget{class_master_shader_ad7431a0297a89d1505463f4b634fc4ec}{
 \index{MasterShader@{MasterShader}!m\_\-time@{m\_\-time}}
 \index{m\_\-time@{m\_\-time}!MasterShader@{MasterShader}}
-\subsubsection[{m\_\-time}]{\setlength{\rightskip}{0pt plus 5cm}float {\bf MasterShader::m\_\-time}\hspace{0.3cm}{\ttfamily  [protected]}}\label{class_master_shader_ad7431a0297a89d1505463f4b634fc4ec}
+\subsubsection[{m\_\-time}]{\setlength{\rightskip}{0pt plus 5cm}float {\bf MasterShader::m\_\-time}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{class_master_shader_ad7431a0297a89d1505463f4b634fc4ec}
 
 
 The documentation for this class was generated from the following file:\begin{DoxyCompactItemize}
 \item 
-C:/Users/doug/Documents/Visual Studio 2008/Projects/enlightened/Enlightened/{\bf MasterShader.h}\end{DoxyCompactItemize}
+C:/Users/doug/Documents/Visual Studio 2008/Projects/enlightened/Enlightened/\hyperlink{_master_shader_8h}{MasterShader.h}\end{DoxyCompactItemize}

@@ -236,8 +236,6 @@ float4 PS_Lumos(VSOutput a_input, uniform int index) : COLOR0
                  (((material.ambient * (attenuation * lightModel.color))  + g_sunlight) * g_time)        // ambient
                  + (material.diffuse * lightModel.color * normalDotLight * attenuation)        // diffuse
                  + (material.specular * lightModel.color * specularAttenuation * attenuation); // specular
-
-
         }
          
     }

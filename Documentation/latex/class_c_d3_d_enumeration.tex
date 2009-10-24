@@ -1,0 +1,167 @@
+\hypertarget{class_c_d3_d_enumeration}{
+\section{CD3DEnumeration Class Reference}
+\label{class_c_d3_d_enumeration}\index{CD3DEnumeration@{CD3DEnumeration}}
+}
+
+
+{\ttfamily \#include $<$DXUTenum.h$>$}Collaboration diagram for CD3DEnumeration:\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{class_c_d3_d_enumeration_a7e4ccfa7f3ae0f393560d9c2b2e266d2}{SetRequirePostPixelShaderBlending} (bool bRequire)
+\item 
+void \hyperlink{class_c_d3_d_enumeration_abbf7dde5303569d4c3c0591962963b93}{SetResolutionMinMax} (UINT nMinWidth, UINT nMinHeight, UINT nMaxWidth, UINT nMaxHeight)
+\item 
+void \hyperlink{class_c_d3_d_enumeration_a13f65056cc94cb49eacbaf44a7f08ac8}{SetRefreshMinMax} (UINT nMin, UINT nMax)
+\item 
+void \hyperlink{class_c_d3_d_enumeration_ad7b8475ce673795395f252b279a3d622}{SetMultisampleQualityMax} (UINT nMax)
+\item 
+void \hyperlink{class_c_d3_d_enumeration_a4b417d97b0d4342f70486e540cb3e910}{GetPossibleVertexProcessingList} (bool $\ast$pbSoftwareVP, bool $\ast$pbHardwareVP, bool $\ast$pbPureHarewareVP, bool $\ast$pbMixedVP)
+\item 
+void \hyperlink{class_c_d3_d_enumeration_acc023b14d22d5a56f4c20c84bd1fbdb5}{SetPossibleVertexProcessingList} (bool bSoftwareVP, bool bHardwareVP, bool bPureHarewareVP, bool bMixedVP)
+\item 
+\hyperlink{class_c_growable_array}{CGrowableArray}$<$ D3DFORMAT $>$ $\ast$ \hyperlink{class_c_d3_d_enumeration_ae09bcb3c67d88efad3a9b01d2608911f}{GetPossibleDepthStencilFormatList} ()
+\item 
+\hyperlink{class_c_growable_array}{CGrowableArray}$<$ D3DMULTISAMPLE\_\-TYPE $>$ $\ast$ \hyperlink{class_c_d3_d_enumeration_afc90d28425aa281c45cb07f936e6d14e}{GetPossibleMultisampleTypeList} ()
+\item 
+\hyperlink{class_c_growable_array}{CGrowableArray}$<$ UINT $>$ $\ast$ \hyperlink{class_c_d3_d_enumeration_aac5d3d7ad9581157f3ac07413f2d6832}{GetPossiblePresentIntervalList} ()
+\item 
+void \hyperlink{class_c_d3_d_enumeration_a4129dc6557f638c49f7d33a9b788070f}{ResetPossibleDepthStencilFormats} ()
+\item 
+void \hyperlink{class_c_d3_d_enumeration_a8209982a323e3fa1e90779bf2114bda8}{ResetPossibleMultisampleTypeList} ()
+\item 
+void \hyperlink{class_c_d3_d_enumeration_ab5d8cfd17ddf102f83f8b2b19a904283}{ResetPossiblePresentIntervalList} ()
+\item 
+HRESULT \hyperlink{class_c_d3_d_enumeration_aa5114cc4e4ca9c064b27b1284fc1322a}{Enumerate} (IDirect3D9 $\ast$pD3D=NULL, \hyperlink{_d_x_u_t_8h_ae2d164ed8b3156b379e09db1cbead165}{LPDXUTCALLBACKISDEVICEACCEPTABLE} IsDeviceAcceptableFunc=NULL, void $\ast$pIsDeviceAcceptableFuncUserContext=NULL)
+\item 
+\hyperlink{class_c_growable_array}{CGrowableArray}$<$ \hyperlink{class_c_d3_d_enum_adapter_info}{CD3DEnumAdapterInfo} $\ast$ $>$ $\ast$ \hyperlink{class_c_d3_d_enumeration_a4ba124e20eacf7ae3e4ec992b0cca7b5}{GetAdapterInfoList} ()
+\item 
+\hyperlink{class_c_d3_d_enum_adapter_info}{CD3DEnumAdapterInfo} $\ast$ \hyperlink{class_c_d3_d_enumeration_a3a817a286d0ffc931a2ba3702149b6ee}{GetAdapterInfo} (UINT AdapterOrdinal)
+\item 
+\hyperlink{class_c_d3_d_enum_device_info}{CD3DEnumDeviceInfo} $\ast$ \hyperlink{class_c_d3_d_enumeration_a6324bb0b0ea8e89495d4d9372983d162}{GetDeviceInfo} (UINT AdapterOrdinal, D3DDEVTYPE DeviceType)
+\item 
+\hyperlink{struct_c_d3_d_enum_device_settings_combo}{CD3DEnumDeviceSettingsCombo} $\ast$ \hyperlink{class_c_d3_d_enumeration_ac005a832569d4b0365abd49b3ff5b8cf}{GetDeviceSettingsCombo} (\hyperlink{struct_d_x_u_t_device_settings}{DXUTDeviceSettings} $\ast$pDeviceSettings)
+\item 
+\hyperlink{struct_c_d3_d_enum_device_settings_combo}{CD3DEnumDeviceSettingsCombo} $\ast$ \hyperlink{class_c_d3_d_enumeration_ae344a1fde9c6b0f784edd8a2c1828416}{GetDeviceSettingsCombo} (UINT AdapterOrdinal, D3DDEVTYPE DeviceType, D3DFORMAT AdapterFormat, D3DFORMAT BackBufferFormat, BOOL Windowed)
+\item 
+\hyperlink{class_c_d3_d_enumeration_adf74c5d5a66b22c849702ae86080076e}{$\sim$CD3DEnumeration} ()
+\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_c_d3_d_enumeration}{CD3DEnumeration} $\ast$ \hyperlink{class_c_d3_d_enumeration_a36f187d396a6e71a483f426d9beb0ed0}{DXUTGetEnumeration} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_c_d3_d_enumeration_adf74c5d5a66b22c849702ae86080076e}{
+\index{CD3DEnumeration@{CD3DEnumeration}!$\sim$CD3DEnumeration@{$\sim$CD3DEnumeration}}
+\index{$\sim$CD3DEnumeration@{$\sim$CD3DEnumeration}!CD3DEnumeration@{CD3DEnumeration}}
+\subsubsection[{$\sim$CD3DEnumeration}]{\setlength{\rightskip}{0pt plus 5cm}CD3DEnumeration::$\sim$CD3DEnumeration ()}}
+\label{class_c_d3_d_enumeration_adf74c5d5a66b22c849702ae86080076e}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_c_d3_d_enumeration_aa5114cc4e4ca9c064b27b1284fc1322a}{
+\index{CD3DEnumeration@{CD3DEnumeration}!Enumerate@{Enumerate}}
+\index{Enumerate@{Enumerate}!CD3DEnumeration@{CD3DEnumeration}}
+\subsubsection[{Enumerate}]{\setlength{\rightskip}{0pt plus 5cm}HRESULT CD3DEnumeration::Enumerate (IDirect3D9 $\ast$ {\em pD3D} = {\ttfamily NULL}, \/  {\bf LPDXUTCALLBACKISDEVICEACCEPTABLE} {\em IsDeviceAcceptableFunc} = {\ttfamily NULL}, \/  void $\ast$ {\em pIsDeviceAcceptableFuncUserContext} = {\ttfamily NULL})}}
+\label{class_c_d3_d_enumeration_aa5114cc4e4ca9c064b27b1284fc1322a}
+\hypertarget{class_c_d3_d_enumeration_a3a817a286d0ffc931a2ba3702149b6ee}{
+\index{CD3DEnumeration@{CD3DEnumeration}!GetAdapterInfo@{GetAdapterInfo}}
+\index{GetAdapterInfo@{GetAdapterInfo}!CD3DEnumeration@{CD3DEnumeration}}
+\subsubsection[{GetAdapterInfo}]{\setlength{\rightskip}{0pt plus 5cm}{\bf CD3DEnumAdapterInfo} $\ast$ CD3DEnumeration::GetAdapterInfo (UINT {\em AdapterOrdinal})}}
+\label{class_c_d3_d_enumeration_a3a817a286d0ffc931a2ba3702149b6ee}
+\hypertarget{class_c_d3_d_enumeration_a4ba124e20eacf7ae3e4ec992b0cca7b5}{
+\index{CD3DEnumeration@{CD3DEnumeration}!GetAdapterInfoList@{GetAdapterInfoList}}
+\index{GetAdapterInfoList@{GetAdapterInfoList}!CD3DEnumeration@{CD3DEnumeration}}
+\subsubsection[{GetAdapterInfoList}]{\setlength{\rightskip}{0pt plus 5cm}{\bf CGrowableArray}$<$ {\bf CD3DEnumAdapterInfo} $\ast$ $>$ $\ast$ CD3DEnumeration::GetAdapterInfoList ()}}
+\label{class_c_d3_d_enumeration_a4ba124e20eacf7ae3e4ec992b0cca7b5}
+\hypertarget{class_c_d3_d_enumeration_a6324bb0b0ea8e89495d4d9372983d162}{
+\index{CD3DEnumeration@{CD3DEnumeration}!GetDeviceInfo@{GetDeviceInfo}}
+\index{GetDeviceInfo@{GetDeviceInfo}!CD3DEnumeration@{CD3DEnumeration}}
+\subsubsection[{GetDeviceInfo}]{\setlength{\rightskip}{0pt plus 5cm}{\bf CD3DEnumDeviceInfo} $\ast$ CD3DEnumeration::GetDeviceInfo (UINT {\em AdapterOrdinal}, \/  D3DDEVTYPE {\em DeviceType})}}
+\label{class_c_d3_d_enumeration_a6324bb0b0ea8e89495d4d9372983d162}
+\hypertarget{class_c_d3_d_enumeration_ae344a1fde9c6b0f784edd8a2c1828416}{
+\index{CD3DEnumeration@{CD3DEnumeration}!GetDeviceSettingsCombo@{GetDeviceSettingsCombo}}
+\index{GetDeviceSettingsCombo@{GetDeviceSettingsCombo}!CD3DEnumeration@{CD3DEnumeration}}
+\subsubsection[{GetDeviceSettingsCombo}]{\setlength{\rightskip}{0pt plus 5cm}{\bf CD3DEnumDeviceSettingsCombo} $\ast$ CD3DEnumeration::GetDeviceSettingsCombo (UINT {\em AdapterOrdinal}, \/  D3DDEVTYPE {\em DeviceType}, \/  D3DFORMAT {\em AdapterFormat}, \/  D3DFORMAT {\em BackBufferFormat}, \/  BOOL {\em Windowed})}}
+\label{class_c_d3_d_enumeration_ae344a1fde9c6b0f784edd8a2c1828416}
+\hypertarget{class_c_d3_d_enumeration_ac005a832569d4b0365abd49b3ff5b8cf}{
+\index{CD3DEnumeration@{CD3DEnumeration}!GetDeviceSettingsCombo@{GetDeviceSettingsCombo}}
+\index{GetDeviceSettingsCombo@{GetDeviceSettingsCombo}!CD3DEnumeration@{CD3DEnumeration}}
+\subsubsection[{GetDeviceSettingsCombo}]{\setlength{\rightskip}{0pt plus 5cm}{\bf CD3DEnumDeviceSettingsCombo}$\ast$ CD3DEnumeration::GetDeviceSettingsCombo ({\bf DXUTDeviceSettings} $\ast$ {\em pDeviceSettings})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_c_d3_d_enumeration_ac005a832569d4b0365abd49b3ff5b8cf}
+\hypertarget{class_c_d3_d_enumeration_ae09bcb3c67d88efad3a9b01d2608911f}{
+\index{CD3DEnumeration@{CD3DEnumeration}!GetPossibleDepthStencilFormatList@{GetPossibleDepthStencilFormatList}}
+\index{GetPossibleDepthStencilFormatList@{GetPossibleDepthStencilFormatList}!CD3DEnumeration@{CD3DEnumeration}}
+\subsubsection[{GetPossibleDepthStencilFormatList}]{\setlength{\rightskip}{0pt plus 5cm}{\bf CGrowableArray}$<$ D3DFORMAT $>$ $\ast$ CD3DEnumeration::GetPossibleDepthStencilFormatList ()}}
+\label{class_c_d3_d_enumeration_ae09bcb3c67d88efad3a9b01d2608911f}
+\hypertarget{class_c_d3_d_enumeration_afc90d28425aa281c45cb07f936e6d14e}{
+\index{CD3DEnumeration@{CD3DEnumeration}!GetPossibleMultisampleTypeList@{GetPossibleMultisampleTypeList}}
+\index{GetPossibleMultisampleTypeList@{GetPossibleMultisampleTypeList}!CD3DEnumeration@{CD3DEnumeration}}
+\subsubsection[{GetPossibleMultisampleTypeList}]{\setlength{\rightskip}{0pt plus 5cm}{\bf CGrowableArray}$<$ D3DMULTISAMPLE\_\-TYPE $>$ $\ast$ CD3DEnumeration::GetPossibleMultisampleTypeList ()}}
+\label{class_c_d3_d_enumeration_afc90d28425aa281c45cb07f936e6d14e}
+\hypertarget{class_c_d3_d_enumeration_aac5d3d7ad9581157f3ac07413f2d6832}{
+\index{CD3DEnumeration@{CD3DEnumeration}!GetPossiblePresentIntervalList@{GetPossiblePresentIntervalList}}
+\index{GetPossiblePresentIntervalList@{GetPossiblePresentIntervalList}!CD3DEnumeration@{CD3DEnumeration}}
+\subsubsection[{GetPossiblePresentIntervalList}]{\setlength{\rightskip}{0pt plus 5cm}{\bf CGrowableArray}$<$ UINT $>$ $\ast$ CD3DEnumeration::GetPossiblePresentIntervalList ()}}
+\label{class_c_d3_d_enumeration_aac5d3d7ad9581157f3ac07413f2d6832}
+\hypertarget{class_c_d3_d_enumeration_a4b417d97b0d4342f70486e540cb3e910}{
+\index{CD3DEnumeration@{CD3DEnumeration}!GetPossibleVertexProcessingList@{GetPossibleVertexProcessingList}}
+\index{GetPossibleVertexProcessingList@{GetPossibleVertexProcessingList}!CD3DEnumeration@{CD3DEnumeration}}
+\subsubsection[{GetPossibleVertexProcessingList}]{\setlength{\rightskip}{0pt plus 5cm}void CD3DEnumeration::GetPossibleVertexProcessingList (bool $\ast$ {\em pbSoftwareVP}, \/  bool $\ast$ {\em pbHardwareVP}, \/  bool $\ast$ {\em pbPureHarewareVP}, \/  bool $\ast$ {\em pbMixedVP})}}
+\label{class_c_d3_d_enumeration_a4b417d97b0d4342f70486e540cb3e910}
+\hypertarget{class_c_d3_d_enumeration_a4129dc6557f638c49f7d33a9b788070f}{
+\index{CD3DEnumeration@{CD3DEnumeration}!ResetPossibleDepthStencilFormats@{ResetPossibleDepthStencilFormats}}
+\index{ResetPossibleDepthStencilFormats@{ResetPossibleDepthStencilFormats}!CD3DEnumeration@{CD3DEnumeration}}
+\subsubsection[{ResetPossibleDepthStencilFormats}]{\setlength{\rightskip}{0pt plus 5cm}void CD3DEnumeration::ResetPossibleDepthStencilFormats ()}}
+\label{class_c_d3_d_enumeration_a4129dc6557f638c49f7d33a9b788070f}
+\hypertarget{class_c_d3_d_enumeration_a8209982a323e3fa1e90779bf2114bda8}{
+\index{CD3DEnumeration@{CD3DEnumeration}!ResetPossibleMultisampleTypeList@{ResetPossibleMultisampleTypeList}}
+\index{ResetPossibleMultisampleTypeList@{ResetPossibleMultisampleTypeList}!CD3DEnumeration@{CD3DEnumeration}}
+\subsubsection[{ResetPossibleMultisampleTypeList}]{\setlength{\rightskip}{0pt plus 5cm}void CD3DEnumeration::ResetPossibleMultisampleTypeList ()}}
+\label{class_c_d3_d_enumeration_a8209982a323e3fa1e90779bf2114bda8}
+\hypertarget{class_c_d3_d_enumeration_ab5d8cfd17ddf102f83f8b2b19a904283}{
+\index{CD3DEnumeration@{CD3DEnumeration}!ResetPossiblePresentIntervalList@{ResetPossiblePresentIntervalList}}
+\index{ResetPossiblePresentIntervalList@{ResetPossiblePresentIntervalList}!CD3DEnumeration@{CD3DEnumeration}}
+\subsubsection[{ResetPossiblePresentIntervalList}]{\setlength{\rightskip}{0pt plus 5cm}void CD3DEnumeration::ResetPossiblePresentIntervalList ()}}
+\label{class_c_d3_d_enumeration_ab5d8cfd17ddf102f83f8b2b19a904283}
+\hypertarget{class_c_d3_d_enumeration_ad7b8475ce673795395f252b279a3d622}{
+\index{CD3DEnumeration@{CD3DEnumeration}!SetMultisampleQualityMax@{SetMultisampleQualityMax}}
+\index{SetMultisampleQualityMax@{SetMultisampleQualityMax}!CD3DEnumeration@{CD3DEnumeration}}
+\subsubsection[{SetMultisampleQualityMax}]{\setlength{\rightskip}{0pt plus 5cm}void CD3DEnumeration::SetMultisampleQualityMax (UINT {\em nMax})}}
+\label{class_c_d3_d_enumeration_ad7b8475ce673795395f252b279a3d622}
+\hypertarget{class_c_d3_d_enumeration_acc023b14d22d5a56f4c20c84bd1fbdb5}{
+\index{CD3DEnumeration@{CD3DEnumeration}!SetPossibleVertexProcessingList@{SetPossibleVertexProcessingList}}
+\index{SetPossibleVertexProcessingList@{SetPossibleVertexProcessingList}!CD3DEnumeration@{CD3DEnumeration}}
+\subsubsection[{SetPossibleVertexProcessingList}]{\setlength{\rightskip}{0pt plus 5cm}void CD3DEnumeration::SetPossibleVertexProcessingList (bool {\em bSoftwareVP}, \/  bool {\em bHardwareVP}, \/  bool {\em bPureHarewareVP}, \/  bool {\em bMixedVP})}}
+\label{class_c_d3_d_enumeration_acc023b14d22d5a56f4c20c84bd1fbdb5}
+\hypertarget{class_c_d3_d_enumeration_a13f65056cc94cb49eacbaf44a7f08ac8}{
+\index{CD3DEnumeration@{CD3DEnumeration}!SetRefreshMinMax@{SetRefreshMinMax}}
+\index{SetRefreshMinMax@{SetRefreshMinMax}!CD3DEnumeration@{CD3DEnumeration}}
+\subsubsection[{SetRefreshMinMax}]{\setlength{\rightskip}{0pt plus 5cm}void CD3DEnumeration::SetRefreshMinMax (UINT {\em nMin}, \/  UINT {\em nMax})}}
+\label{class_c_d3_d_enumeration_a13f65056cc94cb49eacbaf44a7f08ac8}
+\hypertarget{class_c_d3_d_enumeration_a7e4ccfa7f3ae0f393560d9c2b2e266d2}{
+\index{CD3DEnumeration@{CD3DEnumeration}!SetRequirePostPixelShaderBlending@{SetRequirePostPixelShaderBlending}}
+\index{SetRequirePostPixelShaderBlending@{SetRequirePostPixelShaderBlending}!CD3DEnumeration@{CD3DEnumeration}}
+\subsubsection[{SetRequirePostPixelShaderBlending}]{\setlength{\rightskip}{0pt plus 5cm}void CD3DEnumeration::SetRequirePostPixelShaderBlending (bool {\em bRequire})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_c_d3_d_enumeration_a7e4ccfa7f3ae0f393560d9c2b2e266d2}
+\hypertarget{class_c_d3_d_enumeration_abbf7dde5303569d4c3c0591962963b93}{
+\index{CD3DEnumeration@{CD3DEnumeration}!SetResolutionMinMax@{SetResolutionMinMax}}
+\index{SetResolutionMinMax@{SetResolutionMinMax}!CD3DEnumeration@{CD3DEnumeration}}
+\subsubsection[{SetResolutionMinMax}]{\setlength{\rightskip}{0pt plus 5cm}void CD3DEnumeration::SetResolutionMinMax (UINT {\em nMinWidth}, \/  UINT {\em nMinHeight}, \/  UINT {\em nMaxWidth}, \/  UINT {\em nMaxHeight})}}
+\label{class_c_d3_d_enumeration_abbf7dde5303569d4c3c0591962963b93}
+
+
+\subsection{Friends And Related Function Documentation}
+\hypertarget{class_c_d3_d_enumeration_a36f187d396a6e71a483f426d9beb0ed0}{
+\index{CD3DEnumeration@{CD3DEnumeration}!DXUTGetEnumeration@{DXUTGetEnumeration}}
+\index{DXUTGetEnumeration@{DXUTGetEnumeration}!CD3DEnumeration@{CD3DEnumeration}}
+\subsubsection[{DXUTGetEnumeration}]{\setlength{\rightskip}{0pt plus 5cm}{\bf CD3DEnumeration}$\ast$ DXUTGetEnumeration ()\hspace{0.3cm}{\ttfamily  \mbox{[}friend\mbox{]}}}}
+\label{class_c_d3_d_enumeration_a36f187d396a6e71a483f426d9beb0ed0}
+
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+C:/Users/doug/Documents/Visual Studio 2008/Projects/enlightened/Enlightened/DXUT/\hyperlink{_d_x_u_tenum_8h}{DXUTenum.h}\item 
+C:/Users/doug/Documents/Visual Studio 2008/Projects/enlightened/Enlightened/DXUT/\hyperlink{_d_x_u_tenum_8cpp}{DXUTenum.cpp}\end{DoxyCompactItemize}

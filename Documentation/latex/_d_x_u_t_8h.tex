@@ -1,0 +1,644 @@
+\hypertarget{_d_x_u_t_8h}{
+\section{C:/Users/doug/Documents/Visual Studio 2008/Projects/enlightened/Enlightened/DXUT/DXUT.h File Reference}
+\label{_d_x_u_t_8h}\index{C:/Users/doug/Documents/Visual Studio 2008/Projects/enlightened/Enlightened/DXUT/DXUT.h@{C:/Users/doug/Documents/Visual Studio 2008/Projects/enlightened/Enlightened/DXUT/DXUT.h}}
+}
+This graph shows which files directly or indirectly include this file:\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{struct_d_x_u_t_device_settings}{DXUTDeviceSettings}
+\item 
+struct \hyperlink{struct_d_x_u_t_match_options}{DXUTMatchOptions}
+\end{DoxyCompactItemize}
+\subsection*{Defines}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{_d_x_u_t_8h_ae6e79a8c064d0e52eac6bad76e0029c3}{DXUTERR\_\-NODIRECT3D}~MAKE\_\-HRESULT(SEVERITY\_\-ERROR, FACILITY\_\-ITF, 0x0901)
+\item 
+\#define \hyperlink{_d_x_u_t_8h_a4611e56e16244fb686f9ba3c814a1177}{DXUTERR\_\-NOCOMPATIBLEDEVICES}~MAKE\_\-HRESULT(SEVERITY\_\-ERROR, FACILITY\_\-ITF, 0x0902)
+\item 
+\#define \hyperlink{_d_x_u_t_8h_a75a8a8d1561f381af9ae9bd2c150727a}{DXUTERR\_\-MEDIANOTFOUND}~MAKE\_\-HRESULT(SEVERITY\_\-ERROR, FACILITY\_\-ITF, 0x0903)
+\item 
+\#define \hyperlink{_d_x_u_t_8h_a0cea35b092beb209272a644e4573ddb6}{DXUTERR\_\-NONZEROREFCOUNT}~MAKE\_\-HRESULT(SEVERITY\_\-ERROR, FACILITY\_\-ITF, 0x0904)
+\item 
+\#define \hyperlink{_d_x_u_t_8h_a0d9ded87731f70b3301e5670772206bf}{DXUTERR\_\-CREATINGDEVICE}~MAKE\_\-HRESULT(SEVERITY\_\-ERROR, FACILITY\_\-ITF, 0x0905)
+\item 
+\#define \hyperlink{_d_x_u_t_8h_aeee3ade601ea7533a4c87caeb98647f1}{DXUTERR\_\-RESETTINGDEVICE}~MAKE\_\-HRESULT(SEVERITY\_\-ERROR, FACILITY\_\-ITF, 0x0906)
+\item 
+\#define \hyperlink{_d_x_u_t_8h_a11b55cc69f8f781088dcf8f111f5a2a9}{DXUTERR\_\-CREATINGDEVICEOBJECTS}~MAKE\_\-HRESULT(SEVERITY\_\-ERROR, FACILITY\_\-ITF, 0x0907)
+\item 
+\#define \hyperlink{_d_x_u_t_8h_ac7375f89965add1194e70471f290e978}{DXUTERR\_\-RESETTINGDEVICEOBJECTS}~MAKE\_\-HRESULT(SEVERITY\_\-ERROR, FACILITY\_\-ITF, 0x0908)
+\item 
+\#define \hyperlink{_d_x_u_t_8h_a97d36ef52ef2068cf768c7350941a9e9}{DXUTERR\_\-INCORRECTVERSION}~MAKE\_\-HRESULT(SEVERITY\_\-ERROR, FACILITY\_\-ITF, 0x0909)
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef bool(CALLBACK $\ast$ \hyperlink{_d_x_u_t_8h_ae2d164ed8b3156b379e09db1cbead165}{LPDXUTCALLBACKISDEVICEACCEPTABLE} )(D3DCAPS9 $\ast$pCaps, D3DFORMAT AdapterFormat, D3DFORMAT BackBufferFormat, bool bWindowed, void $\ast$\hyperlink{_d_x_u_tgui_8h_adba0f386bf9a8364f3d6c472c6f30caf}{pUserContext})
+\item 
+typedef bool(CALLBACK $\ast$ \hyperlink{_d_x_u_t_8h_aece7ce83d66003e12aebe05c3ae22c09}{LPDXUTCALLBACKMODIFYDEVICESETTINGS} )(\hyperlink{struct_d_x_u_t_device_settings}{DXUTDeviceSettings} $\ast$pDeviceSettings, const D3DCAPS9 $\ast$pCaps, void $\ast$\hyperlink{_d_x_u_tgui_8h_adba0f386bf9a8364f3d6c472c6f30caf}{pUserContext})
+\item 
+typedef HRESULT(CALLBACK $\ast$ \hyperlink{_d_x_u_t_8h_a359d98461cb8f9435379e46241716dc9}{LPDXUTCALLBACKDEVICECREATED} )(IDirect3DDevice9 $\ast$pd3dDevice, const D3DSURFACE\_\-DESC $\ast$pBackBufferSurfaceDesc, void $\ast$\hyperlink{_d_x_u_tgui_8h_adba0f386bf9a8364f3d6c472c6f30caf}{pUserContext})
+\item 
+typedef HRESULT(CALLBACK $\ast$ \hyperlink{_d_x_u_t_8h_a67752d19953202f34e9f4d8826ee611a}{LPDXUTCALLBACKDEVICERESET} )(IDirect3DDevice9 $\ast$pd3dDevice, const D3DSURFACE\_\-DESC $\ast$pBackBufferSurfaceDesc, void $\ast$\hyperlink{_d_x_u_tgui_8h_adba0f386bf9a8364f3d6c472c6f30caf}{pUserContext})
+\item 
+typedef void(CALLBACK $\ast$ \hyperlink{_d_x_u_t_8h_a1e80f441066b65558266d7a5770cbb6f}{LPDXUTCALLBACKDEVICEDESTROYED} )(void $\ast$\hyperlink{_d_x_u_tgui_8h_adba0f386bf9a8364f3d6c472c6f30caf}{pUserContext})
+\item 
+typedef void(CALLBACK $\ast$ \hyperlink{_d_x_u_t_8h_a38bc1228fe056e0cd5860f48ee6291df}{LPDXUTCALLBACKDEVICELOST} )(void $\ast$\hyperlink{_d_x_u_tgui_8h_adba0f386bf9a8364f3d6c472c6f30caf}{pUserContext})
+\item 
+typedef void(CALLBACK $\ast$ \hyperlink{_d_x_u_t_8h_a3eeca871425fb8ff60e4e76cbedebed4}{LPDXUTCALLBACKFRAMEMOVE} )(IDirect3DDevice9 $\ast$pd3dDevice, double fTime, float fElapsedTime, void $\ast$\hyperlink{_d_x_u_tgui_8h_adba0f386bf9a8364f3d6c472c6f30caf}{pUserContext})
+\item 
+typedef void(CALLBACK $\ast$ \hyperlink{_d_x_u_t_8h_a16135d638bce122f8d286b028d027810}{LPDXUTCALLBACKFRAMERENDER} )(IDirect3DDevice9 $\ast$pd3dDevice, double fTime, float fElapsedTime, void $\ast$\hyperlink{_d_x_u_tgui_8h_adba0f386bf9a8364f3d6c472c6f30caf}{pUserContext})
+\item 
+typedef void(CALLBACK $\ast$ \hyperlink{_d_x_u_t_8h_a194e486838161abf400b6c63ae43da9e}{LPDXUTCALLBACKKEYBOARD} )(UINT nChar, bool bKeyDown, bool bAltDown, void $\ast$\hyperlink{_d_x_u_tgui_8h_adba0f386bf9a8364f3d6c472c6f30caf}{pUserContext})
+\item 
+typedef void(CALLBACK $\ast$ \hyperlink{_d_x_u_t_8h_a5aeb28f9c5f4d5cbd36381f30b92b51a}{LPDXUTCALLBACKMOUSE} )(bool bLeftButtonDown, bool bRightButtonDown, bool bMiddleButtonDown, bool bSideButton1Down, bool bSideButton2Down, \hyperlink{_d_x_u_tgui_8cpp_a2d77ed03302b6978834ee3b6f57837fb}{int} nMouseWheelDelta, \hyperlink{_d_x_u_tgui_8cpp_a2d77ed03302b6978834ee3b6f57837fb}{int} xPos, \hyperlink{_d_x_u_tgui_8cpp_a2d77ed03302b6978834ee3b6f57837fb}{int} yPos, void $\ast$\hyperlink{_d_x_u_tgui_8h_adba0f386bf9a8364f3d6c472c6f30caf}{pUserContext})
+\item 
+typedef LRESULT(CALLBACK $\ast$ \hyperlink{_d_x_u_t_8h_a284dfd4bc64f5867e8198cd565bd4fc7}{LPDXUTCALLBACKMSGPROC} )(HWND hWnd, UINT uMsg, WPARAM wParam, LPARAM lParam, bool $\ast$pbNoFurtherProcessing, void $\ast$\hyperlink{_d_x_u_tgui_8h_adba0f386bf9a8364f3d6c472c6f30caf}{pUserContext})
+\item 
+typedef void(CALLBACK $\ast$ \hyperlink{_d_x_u_t_8h_a8ce5df6fd1b9663490cc97c4f843df03}{LPDXUTCALLBACKTIMER} )(UINT idEvent, void $\ast$\hyperlink{_d_x_u_tgui_8h_adba0f386bf9a8364f3d6c472c6f30caf}{pUserContext})
+\end{DoxyCompactItemize}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{_d_x_u_t_8h_aaa7d287a94f58c93d67a7ec6b4cb0ee3}{DXUT\_\-MATCH\_\-TYPE} \{ \hyperlink{_d_x_u_t_8h_aaa7d287a94f58c93d67a7ec6b4cb0ee3a2ce07763e3cda64d7baae00f94715c28}{DXUTMT\_\-IGNORE\_\-INPUT} =  0, 
+\hyperlink{_d_x_u_t_8h_aaa7d287a94f58c93d67a7ec6b4cb0ee3adf0df5b63feac871cd092d357304dfa2}{DXUTMT\_\-PRESERVE\_\-INPUT}, 
+\hyperlink{_d_x_u_t_8h_aaa7d287a94f58c93d67a7ec6b4cb0ee3aab8ead6270c9684a1239f2f416beeaa9}{DXUTMT\_\-CLOSEST\_\-TO\_\-INPUT}
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{_d_x_u_t_8h_a149fd089567477917d77791bff3ebc6d}{DXUTSetCallbackDeviceCreated} (\hyperlink{_d_x_u_t_8h_a359d98461cb8f9435379e46241716dc9}{LPDXUTCALLBACKDEVICECREATED} pCallbackDeviceCreated, void $\ast$\hyperlink{_d_x_u_tgui_8h_adba0f386bf9a8364f3d6c472c6f30caf}{pUserContext}=NULL)
+\item 
+void \hyperlink{_d_x_u_t_8h_abaed1a96dfc3278aff197f35d2cb29b9}{DXUTSetCallbackDeviceReset} (\hyperlink{_d_x_u_t_8h_a67752d19953202f34e9f4d8826ee611a}{LPDXUTCALLBACKDEVICERESET} pCallbackDeviceReset, void $\ast$\hyperlink{_d_x_u_tgui_8h_adba0f386bf9a8364f3d6c472c6f30caf}{pUserContext}=NULL)
+\item 
+void \hyperlink{_d_x_u_t_8h_a62667d36ab7726920b60ee53d803d1b9}{DXUTSetCallbackDeviceLost} (\hyperlink{_d_x_u_t_8h_a38bc1228fe056e0cd5860f48ee6291df}{LPDXUTCALLBACKDEVICELOST} pCallbackDeviceLost, void $\ast$\hyperlink{_d_x_u_tgui_8h_adba0f386bf9a8364f3d6c472c6f30caf}{pUserContext}=NULL)
+\item 
+void \hyperlink{_d_x_u_t_8h_a5f31d073912917102c034ab1ed937a61}{DXUTSetCallbackDeviceDestroyed} (\hyperlink{_d_x_u_t_8h_a1e80f441066b65558266d7a5770cbb6f}{LPDXUTCALLBACKDEVICEDESTROYED} pCallbackDeviceDestroyed, void $\ast$\hyperlink{_d_x_u_tgui_8h_adba0f386bf9a8364f3d6c472c6f30caf}{pUserContext}=NULL)
+\item 
+void \hyperlink{_d_x_u_t_8h_a01ece5de90a94d9111413f7a2266854b}{DXUTSetCallbackDeviceChanging} (\hyperlink{_d_x_u_t_8h_aece7ce83d66003e12aebe05c3ae22c09}{LPDXUTCALLBACKMODIFYDEVICESETTINGS} pCallbackModifyDeviceSettings, void $\ast$\hyperlink{_d_x_u_tgui_8h_adba0f386bf9a8364f3d6c472c6f30caf}{pUserContext}=NULL)
+\item 
+void \hyperlink{_d_x_u_t_8h_a0763de8f62e3602fc40714891646761e}{DXUTSetCallbackFrameMove} (\hyperlink{_d_x_u_t_8h_a3eeca871425fb8ff60e4e76cbedebed4}{LPDXUTCALLBACKFRAMEMOVE} pCallbackFrameMove, void $\ast$\hyperlink{_d_x_u_tgui_8h_adba0f386bf9a8364f3d6c472c6f30caf}{pUserContext}=NULL)
+\item 
+void \hyperlink{_d_x_u_t_8h_a2c1df546603c069094a65e21f87b3d5f}{DXUTSetCallbackFrameRender} (\hyperlink{_d_x_u_t_8h_a16135d638bce122f8d286b028d027810}{LPDXUTCALLBACKFRAMERENDER} pCallbackFrameRender, void $\ast$\hyperlink{_d_x_u_tgui_8h_adba0f386bf9a8364f3d6c472c6f30caf}{pUserContext}=NULL)
+\item 
+void \hyperlink{_d_x_u_t_8h_a055081bd36f3bb4f12d71994a05ef988}{DXUTSetCallbackKeyboard} (\hyperlink{_d_x_u_t_8h_a194e486838161abf400b6c63ae43da9e}{LPDXUTCALLBACKKEYBOARD} pCallbackKeyboard, void $\ast$\hyperlink{_d_x_u_tgui_8h_adba0f386bf9a8364f3d6c472c6f30caf}{pUserContext}=NULL)
+\item 
+void \hyperlink{_d_x_u_t_8h_a4e7a45b128170acad500ca0d3df31c92}{DXUTSetCallbackMouse} (\hyperlink{_d_x_u_t_8h_a5aeb28f9c5f4d5cbd36381f30b92b51a}{LPDXUTCALLBACKMOUSE} pCallbackMouse, bool bIncludeMouseMove=false, void $\ast$\hyperlink{_d_x_u_tgui_8h_adba0f386bf9a8364f3d6c472c6f30caf}{pUserContext}=NULL)
+\item 
+void \hyperlink{_d_x_u_t_8h_ab4e6d55c37ab53c5b341df88ed4757c7}{DXUTSetCallbackMsgProc} (\hyperlink{_d_x_u_t_8h_a284dfd4bc64f5867e8198cd565bd4fc7}{LPDXUTCALLBACKMSGPROC} pCallbackMsgProc, void $\ast$\hyperlink{_d_x_u_tgui_8h_adba0f386bf9a8364f3d6c472c6f30caf}{pUserContext}=NULL)
+\item 
+HRESULT \hyperlink{_d_x_u_t_8h_af4db47d8941df69b89feba9627ded26c}{DXUTInit} (bool bParseCommandLine=true, bool bHandleDefaultHotkeys=true, bool bShowMsgBoxOnError=true, bool bHandleAltEnter=true)
+\item 
+HRESULT \hyperlink{_d_x_u_t_8h_a0933614b4fa734bddf61847bdeb3845b}{DXUTCreateWindow} (const WCHAR $\ast$strWindowTitle=L\char`\"{}Direct3D Window\char`\"{}, HINSTANCE hInstance=NULL, HICON hIcon=NULL, HMENU hMenu=NULL, \hyperlink{_d_x_u_tgui_8cpp_a2d77ed03302b6978834ee3b6f57837fb}{int} x=CW\_\-USEDEFAULT, \hyperlink{_d_x_u_tgui_8cpp_a2d77ed03302b6978834ee3b6f57837fb}{int} y=CW\_\-USEDEFAULT)
+\item 
+HRESULT \hyperlink{_d_x_u_t_8h_abdbe30b80262953efbe3377ad97f316b}{DXUTSetWindow} (HWND hWndFocus, HWND hWndDeviceFullScreen, HWND hWndDeviceWindowed, bool bHandleMessages=true)
+\item 
+LRESULT CALLBACK \hyperlink{_d_x_u_t_8h_ac51535a54ff2065ae9fddbcbf25350fa}{DXUTStaticWndProc} (HWND hWnd, UINT uMsg, WPARAM wParam, LPARAM lParam)
+\item 
+HRESULT \hyperlink{_d_x_u_t_8h_af4b1703d0dd7cac4e9175443be38b2df}{DXUTCreateDevice} (UINT AdapterOrdinal=D3DADAPTER\_\-DEFAULT, bool bWindowed=true, \hyperlink{_d_x_u_tgui_8cpp_a2d77ed03302b6978834ee3b6f57837fb}{int} nSuggestedWidth=0, \hyperlink{_d_x_u_tgui_8cpp_a2d77ed03302b6978834ee3b6f57837fb}{int} nSuggestedHeight=0, \hyperlink{_d_x_u_t_8h_ae2d164ed8b3156b379e09db1cbead165}{LPDXUTCALLBACKISDEVICEACCEPTABLE} pCallbackIsDeviceAcceptable=NULL, \hyperlink{_d_x_u_t_8h_aece7ce83d66003e12aebe05c3ae22c09}{LPDXUTCALLBACKMODIFYDEVICESETTINGS} pCallbackModifyDeviceSettings=NULL, void $\ast$\hyperlink{_d_x_u_tgui_8h_adba0f386bf9a8364f3d6c472c6f30caf}{pUserContext}=NULL)
+\item 
+HRESULT \hyperlink{_d_x_u_t_8h_a751768e914daeb61487eaca82d1e48d8}{DXUTCreateDeviceFromSettings} (\hyperlink{struct_d_x_u_t_device_settings}{DXUTDeviceSettings} $\ast$pDeviceSettings, bool bPreserveInput=false, bool bClipWindowToSingleAdapter=true)
+\item 
+HRESULT \hyperlink{_d_x_u_t_8h_a488d0874ce1b7ee286507052a472915c}{DXUTSetDevice} (IDirect3DDevice9 $\ast$pd3dDevice)
+\item 
+HRESULT \hyperlink{_d_x_u_t_8h_ac95d0ad3f7e3c28f7392c25b9a188917}{DXUTMainLoop} (HACCEL hAccel=NULL)
+\item 
+void \hyperlink{_d_x_u_t_8h_a4ebd837764f14b400f0960c0aff8a8aa}{DXUTRender3DEnvironment} ()
+\item 
+HRESULT \hyperlink{_d_x_u_t_8h_aec77a25f550580a2b6c1e3eb0e879832}{DXUTFindValidDeviceSettings} (\hyperlink{struct_d_x_u_t_device_settings}{DXUTDeviceSettings} $\ast$pOut, \hyperlink{struct_d_x_u_t_device_settings}{DXUTDeviceSettings} $\ast$pIn=NULL, \hyperlink{struct_d_x_u_t_match_options}{DXUTMatchOptions} $\ast$pMatchOptions=NULL)
+\item 
+void \hyperlink{_d_x_u_t_8h_a7977365af78a78b4af3329ebd6ff7651}{DXUTSetCursorSettings} (bool bShowCursorWhenFullScreen, bool bClipCursorWhenFullScreen)
+\item 
+void \hyperlink{_d_x_u_t_8h_adf1aeb8f49552f7663c8b14df6220467}{DXUTSetMultimonSettings} (bool bAutoChangeAdapter)
+\item 
+void \hyperlink{_d_x_u_t_8h_a7e8e16622467826a67de0691c91ebd72}{DXUTSetShortcutKeySettings} (bool bAllowWhenFullscreen=false, bool bAllowWhenWindowed=true)
+\item 
+void \hyperlink{_d_x_u_t_8h_a0603e61dfd0763b5deea5759d2f67388}{DXUTSetWindowSettings} (bool bCallDefWindowProc=true)
+\item 
+void \hyperlink{_d_x_u_t_8h_a5d1b0526699e40274861c23b96ecb62a}{DXUTSetConstantFrameTime} (bool bConstantFrameTime, float fTimePerFrame=0.0333f)
+\item 
+HRESULT \hyperlink{_d_x_u_t_8h_a08c182c3be7972fc01c4f568d1696d75}{DXUTSetTimer} (\hyperlink{_d_x_u_t_8h_a8ce5df6fd1b9663490cc97c4f843df03}{LPDXUTCALLBACKTIMER} pCallbackTimer, float fTimeoutInSecs=1.0f, UINT $\ast$pnIDEvent=NULL, void $\ast$pCallbackUserContext=NULL)
+\item 
+HRESULT \hyperlink{_d_x_u_t_8h_afe4884a02d1a015dbf7de6b7b0c1a439}{DXUTKillTimer} (UINT nIDEvent)
+\item 
+HRESULT \hyperlink{_d_x_u_t_8h_a2f40d89b0d23a7e1eee2d5266ff5f999}{DXUTToggleFullScreen} ()
+\item 
+HRESULT \hyperlink{_d_x_u_t_8h_ab4813daf9b5fd6e07ec07322e8170b70}{DXUTToggleREF} ()
+\item 
+void \hyperlink{_d_x_u_t_8h_a2e863027b960fb19843f0557520fc2bf}{DXUTPause} (bool bPauseTime, bool bPauseRendering)
+\item 
+void \hyperlink{_d_x_u_t_8h_aaf45d64ae34e200906b6400e231cc758}{DXUTResetFrameworkState} ()
+\item 
+void \hyperlink{_d_x_u_t_8h_ab9502d7f637ac7c6b7a4302572b0a2bc}{DXUTShutdown} (\hyperlink{_d_x_u_tgui_8cpp_a2d77ed03302b6978834ee3b6f57837fb}{int} nExitCode=0)
+\item 
+IDirect3D9 $\ast$ \hyperlink{_d_x_u_t_8h_a5c0defdf85d1c48272af4db2c09625ba}{DXUTGetD3DObject} ()
+\item 
+IDirect3DDevice9 $\ast$ \hyperlink{_d_x_u_t_8h_a83039304bbf7be50e0cb92c46044fb45}{DXUTGetD3DDevice} ()
+\item 
+\hyperlink{struct_d_x_u_t_device_settings}{DXUTDeviceSettings} \hyperlink{_d_x_u_t_8h_aa9e1ee1525bb39d662b855292989d13e}{DXUTGetDeviceSettings} ()
+\item 
+D3DPRESENT\_\-PARAMETERS \hyperlink{_d_x_u_t_8h_a79f44155af0a4308e1934377386a3927}{DXUTGetPresentParameters} ()
+\item 
+const D3DSURFACE\_\-DESC $\ast$ \hyperlink{_d_x_u_t_8h_a686622e137d25b43c2ee9847f0d54186}{DXUTGetBackBufferSurfaceDesc} ()
+\item 
+const D3DCAPS9 $\ast$ \hyperlink{_d_x_u_t_8h_a723ad8aff9c12244efe5b08b165bebfb}{DXUTGetDeviceCaps} ()
+\item 
+HINSTANCE \hyperlink{_d_x_u_t_8h_af165e5c14587f4af55ab8b9aed2b2727}{DXUTGetHINSTANCE} ()
+\item 
+HWND \hyperlink{_d_x_u_t_8h_a1addced3e8a612e9963ddd3d149cd90f}{DXUTGetHWND} ()
+\item 
+HWND \hyperlink{_d_x_u_t_8h_a6a042521920a3d1b82b49c4d95e8e9ba}{DXUTGetHWNDFocus} ()
+\item 
+HWND \hyperlink{_d_x_u_t_8h_a94f2ed1c1ca96b133a72d040e4124048}{DXUTGetHWNDDeviceFullScreen} ()
+\item 
+HWND \hyperlink{_d_x_u_t_8h_a5f9c79665d2d1acae54e78730df82e7b}{DXUTGetHWNDDeviceWindowed} ()
+\item 
+RECT \hyperlink{_d_x_u_t_8h_a101a8b6c2cec85f76cecd7aa1b227614}{DXUTGetWindowClientRect} ()
+\item 
+RECT \hyperlink{_d_x_u_t_8h_a743f3ca78c52f70ca3f6c391e4b6dce5}{DXUTGetWindowClientRectAtModeChange} ()
+\item 
+RECT \hyperlink{_d_x_u_t_8h_a8368dbf927273be19f4267ff69dde347}{DXUTGetFullsceenClientRectAtModeChange} ()
+\item 
+double \hyperlink{_d_x_u_t_8h_a53e5c19427e509f11a24cc4fe8bbf8ae}{DXUTGetTime} ()
+\item 
+float \hyperlink{_d_x_u_t_8h_a1067fac80e434d12ff897c59f255af8e}{DXUTGetElapsedTime} ()
+\item 
+bool \hyperlink{_d_x_u_t_8h_af9ce33baf6a43d02fe11aee094448d5e}{DXUTIsWindowed} ()
+\item 
+float \hyperlink{_d_x_u_t_8h_a9a50994bfa00dd280534058e87a0c399}{DXUTGetFPS} ()
+\item 
+LPCWSTR \hyperlink{_d_x_u_t_8h_a3aa082abe78cdb61bdb21d8d35681d47}{DXUTGetWindowTitle} ()
+\item 
+LPCWSTR \hyperlink{_d_x_u_t_8h_a9e3e91d2e17e438383df20c99159cd81}{DXUTGetFrameStats} (bool bIncludeFPS=false)
+\item 
+LPCWSTR \hyperlink{_d_x_u_t_8h_a3e4ae3da0100b94fc79406b639747c52}{DXUTGetDeviceStats} ()
+\item 
+bool \hyperlink{_d_x_u_t_8h_a1026f4700ea30fb6ebcf6649d77971eb}{DXUTIsRenderingPaused} ()
+\item 
+bool \hyperlink{_d_x_u_t_8h_afb67c3c16618c9bdd50a15f679260c7a}{DXUTIsTimePaused} ()
+\item 
+bool \hyperlink{_d_x_u_t_8h_a51cfa5808c36f5e531c73c6416e4d16d}{DXUTIsActive} ()
+\item 
+\hyperlink{_d_x_u_tgui_8cpp_a2d77ed03302b6978834ee3b6f57837fb}{int} \hyperlink{_d_x_u_t_8h_a74fdc649993c7945682fe0f82a06c50f}{DXUTGetExitCode} ()
+\item 
+bool \hyperlink{_d_x_u_t_8h_a2460592f9f6f7f69a13cb9f168873912}{DXUTGetShowMsgBoxOnError} ()
+\item 
+bool \hyperlink{_d_x_u_t_8h_ae478f2d9d8fe10aeabaac8c7e855a78a}{DXUTGetHandleDefaultHotkeys} ()
+\item 
+bool \hyperlink{_d_x_u_t_8h_a06078f41d2b3b8f85de487cb2322895e}{DXUTIsKeyDown} (BYTE vKey)
+\item 
+bool \hyperlink{_d_x_u_t_8h_af683a7435ece91ee3fb03c17b66b092f}{DXUTIsMouseButtonDown} (BYTE vButton)
+\item 
+bool \hyperlink{_d_x_u_t_8h_aecefbb85617e3118d5c70ebfeba151ca}{DXUTGetAutomation} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Define Documentation}
+\hypertarget{_d_x_u_t_8h_a0d9ded87731f70b3301e5670772206bf}{
+\index{DXUT.h@{DXUT.h}!DXUTERR\_\-CREATINGDEVICE@{DXUTERR\_\-CREATINGDEVICE}}
+\index{DXUTERR\_\-CREATINGDEVICE@{DXUTERR\_\-CREATINGDEVICE}!DXUT.h@{DXUT.h}}
+\subsubsection[{DXUTERR\_\-CREATINGDEVICE}]{\setlength{\rightskip}{0pt plus 5cm}\#define DXUTERR\_\-CREATINGDEVICE~MAKE\_\-HRESULT(SEVERITY\_\-ERROR, FACILITY\_\-ITF, 0x0905)}}
+\label{_d_x_u_t_8h_a0d9ded87731f70b3301e5670772206bf}
+\hypertarget{_d_x_u_t_8h_a11b55cc69f8f781088dcf8f111f5a2a9}{
+\index{DXUT.h@{DXUT.h}!DXUTERR\_\-CREATINGDEVICEOBJECTS@{DXUTERR\_\-CREATINGDEVICEOBJECTS}}
+\index{DXUTERR\_\-CREATINGDEVICEOBJECTS@{DXUTERR\_\-CREATINGDEVICEOBJECTS}!DXUT.h@{DXUT.h}}
+\subsubsection[{DXUTERR\_\-CREATINGDEVICEOBJECTS}]{\setlength{\rightskip}{0pt plus 5cm}\#define DXUTERR\_\-CREATINGDEVICEOBJECTS~MAKE\_\-HRESULT(SEVERITY\_\-ERROR, FACILITY\_\-ITF, 0x0907)}}
+\label{_d_x_u_t_8h_a11b55cc69f8f781088dcf8f111f5a2a9}
+\hypertarget{_d_x_u_t_8h_a97d36ef52ef2068cf768c7350941a9e9}{
+\index{DXUT.h@{DXUT.h}!DXUTERR\_\-INCORRECTVERSION@{DXUTERR\_\-INCORRECTVERSION}}
+\index{DXUTERR\_\-INCORRECTVERSION@{DXUTERR\_\-INCORRECTVERSION}!DXUT.h@{DXUT.h}}
+\subsubsection[{DXUTERR\_\-INCORRECTVERSION}]{\setlength{\rightskip}{0pt plus 5cm}\#define DXUTERR\_\-INCORRECTVERSION~MAKE\_\-HRESULT(SEVERITY\_\-ERROR, FACILITY\_\-ITF, 0x0909)}}
+\label{_d_x_u_t_8h_a97d36ef52ef2068cf768c7350941a9e9}
+\hypertarget{_d_x_u_t_8h_a75a8a8d1561f381af9ae9bd2c150727a}{
+\index{DXUT.h@{DXUT.h}!DXUTERR\_\-MEDIANOTFOUND@{DXUTERR\_\-MEDIANOTFOUND}}
+\index{DXUTERR\_\-MEDIANOTFOUND@{DXUTERR\_\-MEDIANOTFOUND}!DXUT.h@{DXUT.h}}
+\subsubsection[{DXUTERR\_\-MEDIANOTFOUND}]{\setlength{\rightskip}{0pt plus 5cm}\#define DXUTERR\_\-MEDIANOTFOUND~MAKE\_\-HRESULT(SEVERITY\_\-ERROR, FACILITY\_\-ITF, 0x0903)}}
+\label{_d_x_u_t_8h_a75a8a8d1561f381af9ae9bd2c150727a}
+\hypertarget{_d_x_u_t_8h_a4611e56e16244fb686f9ba3c814a1177}{
+\index{DXUT.h@{DXUT.h}!DXUTERR\_\-NOCOMPATIBLEDEVICES@{DXUTERR\_\-NOCOMPATIBLEDEVICES}}
+\index{DXUTERR\_\-NOCOMPATIBLEDEVICES@{DXUTERR\_\-NOCOMPATIBLEDEVICES}!DXUT.h@{DXUT.h}}
+\subsubsection[{DXUTERR\_\-NOCOMPATIBLEDEVICES}]{\setlength{\rightskip}{0pt plus 5cm}\#define DXUTERR\_\-NOCOMPATIBLEDEVICES~MAKE\_\-HRESULT(SEVERITY\_\-ERROR, FACILITY\_\-ITF, 0x0902)}}
+\label{_d_x_u_t_8h_a4611e56e16244fb686f9ba3c814a1177}
+\hypertarget{_d_x_u_t_8h_ae6e79a8c064d0e52eac6bad76e0029c3}{
+\index{DXUT.h@{DXUT.h}!DXUTERR\_\-NODIRECT3D@{DXUTERR\_\-NODIRECT3D}}
+\index{DXUTERR\_\-NODIRECT3D@{DXUTERR\_\-NODIRECT3D}!DXUT.h@{DXUT.h}}
+\subsubsection[{DXUTERR\_\-NODIRECT3D}]{\setlength{\rightskip}{0pt plus 5cm}\#define DXUTERR\_\-NODIRECT3D~MAKE\_\-HRESULT(SEVERITY\_\-ERROR, FACILITY\_\-ITF, 0x0901)}}
+\label{_d_x_u_t_8h_ae6e79a8c064d0e52eac6bad76e0029c3}
+\hypertarget{_d_x_u_t_8h_a0cea35b092beb209272a644e4573ddb6}{
+\index{DXUT.h@{DXUT.h}!DXUTERR\_\-NONZEROREFCOUNT@{DXUTERR\_\-NONZEROREFCOUNT}}
+\index{DXUTERR\_\-NONZEROREFCOUNT@{DXUTERR\_\-NONZEROREFCOUNT}!DXUT.h@{DXUT.h}}
+\subsubsection[{DXUTERR\_\-NONZEROREFCOUNT}]{\setlength{\rightskip}{0pt plus 5cm}\#define DXUTERR\_\-NONZEROREFCOUNT~MAKE\_\-HRESULT(SEVERITY\_\-ERROR, FACILITY\_\-ITF, 0x0904)}}
+\label{_d_x_u_t_8h_a0cea35b092beb209272a644e4573ddb6}
+\hypertarget{_d_x_u_t_8h_aeee3ade601ea7533a4c87caeb98647f1}{
+\index{DXUT.h@{DXUT.h}!DXUTERR\_\-RESETTINGDEVICE@{DXUTERR\_\-RESETTINGDEVICE}}
+\index{DXUTERR\_\-RESETTINGDEVICE@{DXUTERR\_\-RESETTINGDEVICE}!DXUT.h@{DXUT.h}}
+\subsubsection[{DXUTERR\_\-RESETTINGDEVICE}]{\setlength{\rightskip}{0pt plus 5cm}\#define DXUTERR\_\-RESETTINGDEVICE~MAKE\_\-HRESULT(SEVERITY\_\-ERROR, FACILITY\_\-ITF, 0x0906)}}
+\label{_d_x_u_t_8h_aeee3ade601ea7533a4c87caeb98647f1}
+\hypertarget{_d_x_u_t_8h_ac7375f89965add1194e70471f290e978}{
+\index{DXUT.h@{DXUT.h}!DXUTERR\_\-RESETTINGDEVICEOBJECTS@{DXUTERR\_\-RESETTINGDEVICEOBJECTS}}
+\index{DXUTERR\_\-RESETTINGDEVICEOBJECTS@{DXUTERR\_\-RESETTINGDEVICEOBJECTS}!DXUT.h@{DXUT.h}}
+\subsubsection[{DXUTERR\_\-RESETTINGDEVICEOBJECTS}]{\setlength{\rightskip}{0pt plus 5cm}\#define DXUTERR\_\-RESETTINGDEVICEOBJECTS~MAKE\_\-HRESULT(SEVERITY\_\-ERROR, FACILITY\_\-ITF, 0x0908)}}
+\label{_d_x_u_t_8h_ac7375f89965add1194e70471f290e978}
+
+
+\subsection{Typedef Documentation}
+\hypertarget{_d_x_u_t_8h_a359d98461cb8f9435379e46241716dc9}{
+\index{DXUT.h@{DXUT.h}!LPDXUTCALLBACKDEVICECREATED@{LPDXUTCALLBACKDEVICECREATED}}
+\index{LPDXUTCALLBACKDEVICECREATED@{LPDXUTCALLBACKDEVICECREATED}!DXUT.h@{DXUT.h}}
+\subsubsection[{LPDXUTCALLBACKDEVICECREATED}]{\setlength{\rightskip}{0pt plus 5cm}typedef HRESULT(CALLBACK $\ast$ {\bf LPDXUTCALLBACKDEVICECREATED})(IDirect3DDevice9 $\ast$pd3dDevice, const D3DSURFACE\_\-DESC $\ast$pBackBufferSurfaceDesc, void $\ast${\bf pUserContext})}}
+\label{_d_x_u_t_8h_a359d98461cb8f9435379e46241716dc9}
+\hypertarget{_d_x_u_t_8h_a1e80f441066b65558266d7a5770cbb6f}{
+\index{DXUT.h@{DXUT.h}!LPDXUTCALLBACKDEVICEDESTROYED@{LPDXUTCALLBACKDEVICEDESTROYED}}
+\index{LPDXUTCALLBACKDEVICEDESTROYED@{LPDXUTCALLBACKDEVICEDESTROYED}!DXUT.h@{DXUT.h}}
+\subsubsection[{LPDXUTCALLBACKDEVICEDESTROYED}]{\setlength{\rightskip}{0pt plus 5cm}typedef void(CALLBACK $\ast$ {\bf LPDXUTCALLBACKDEVICEDESTROYED})(void $\ast${\bf pUserContext})}}
+\label{_d_x_u_t_8h_a1e80f441066b65558266d7a5770cbb6f}
+\hypertarget{_d_x_u_t_8h_a38bc1228fe056e0cd5860f48ee6291df}{
+\index{DXUT.h@{DXUT.h}!LPDXUTCALLBACKDEVICELOST@{LPDXUTCALLBACKDEVICELOST}}
+\index{LPDXUTCALLBACKDEVICELOST@{LPDXUTCALLBACKDEVICELOST}!DXUT.h@{DXUT.h}}
+\subsubsection[{LPDXUTCALLBACKDEVICELOST}]{\setlength{\rightskip}{0pt plus 5cm}typedef void(CALLBACK $\ast$ {\bf LPDXUTCALLBACKDEVICELOST})(void $\ast${\bf pUserContext})}}
+\label{_d_x_u_t_8h_a38bc1228fe056e0cd5860f48ee6291df}
+\hypertarget{_d_x_u_t_8h_a67752d19953202f34e9f4d8826ee611a}{
+\index{DXUT.h@{DXUT.h}!LPDXUTCALLBACKDEVICERESET@{LPDXUTCALLBACKDEVICERESET}}
+\index{LPDXUTCALLBACKDEVICERESET@{LPDXUTCALLBACKDEVICERESET}!DXUT.h@{DXUT.h}}
+\subsubsection[{LPDXUTCALLBACKDEVICERESET}]{\setlength{\rightskip}{0pt plus 5cm}typedef HRESULT(CALLBACK $\ast$ {\bf LPDXUTCALLBACKDEVICERESET})(IDirect3DDevice9 $\ast$pd3dDevice, const D3DSURFACE\_\-DESC $\ast$pBackBufferSurfaceDesc, void $\ast${\bf pUserContext})}}
+\label{_d_x_u_t_8h_a67752d19953202f34e9f4d8826ee611a}
+\hypertarget{_d_x_u_t_8h_a3eeca871425fb8ff60e4e76cbedebed4}{
+\index{DXUT.h@{DXUT.h}!LPDXUTCALLBACKFRAMEMOVE@{LPDXUTCALLBACKFRAMEMOVE}}
+\index{LPDXUTCALLBACKFRAMEMOVE@{LPDXUTCALLBACKFRAMEMOVE}!DXUT.h@{DXUT.h}}
+\subsubsection[{LPDXUTCALLBACKFRAMEMOVE}]{\setlength{\rightskip}{0pt plus 5cm}typedef void(CALLBACK $\ast$ {\bf LPDXUTCALLBACKFRAMEMOVE})(IDirect3DDevice9 $\ast$pd3dDevice, double fTime, float fElapsedTime, void $\ast${\bf pUserContext})}}
+\label{_d_x_u_t_8h_a3eeca871425fb8ff60e4e76cbedebed4}
+\hypertarget{_d_x_u_t_8h_a16135d638bce122f8d286b028d027810}{
+\index{DXUT.h@{DXUT.h}!LPDXUTCALLBACKFRAMERENDER@{LPDXUTCALLBACKFRAMERENDER}}
+\index{LPDXUTCALLBACKFRAMERENDER@{LPDXUTCALLBACKFRAMERENDER}!DXUT.h@{DXUT.h}}
+\subsubsection[{LPDXUTCALLBACKFRAMERENDER}]{\setlength{\rightskip}{0pt plus 5cm}typedef void(CALLBACK $\ast$ {\bf LPDXUTCALLBACKFRAMERENDER})(IDirect3DDevice9 $\ast$pd3dDevice, double fTime, float fElapsedTime, void $\ast${\bf pUserContext})}}
+\label{_d_x_u_t_8h_a16135d638bce122f8d286b028d027810}
+\hypertarget{_d_x_u_t_8h_ae2d164ed8b3156b379e09db1cbead165}{
+\index{DXUT.h@{DXUT.h}!LPDXUTCALLBACKISDEVICEACCEPTABLE@{LPDXUTCALLBACKISDEVICEACCEPTABLE}}
+\index{LPDXUTCALLBACKISDEVICEACCEPTABLE@{LPDXUTCALLBACKISDEVICEACCEPTABLE}!DXUT.h@{DXUT.h}}
+\subsubsection[{LPDXUTCALLBACKISDEVICEACCEPTABLE}]{\setlength{\rightskip}{0pt plus 5cm}typedef bool(CALLBACK $\ast$ {\bf LPDXUTCALLBACKISDEVICEACCEPTABLE})(D3DCAPS9 $\ast$pCaps, D3DFORMAT AdapterFormat, D3DFORMAT BackBufferFormat, bool bWindowed, void $\ast${\bf pUserContext})}}
+\label{_d_x_u_t_8h_ae2d164ed8b3156b379e09db1cbead165}
+\hypertarget{_d_x_u_t_8h_a194e486838161abf400b6c63ae43da9e}{
+\index{DXUT.h@{DXUT.h}!LPDXUTCALLBACKKEYBOARD@{LPDXUTCALLBACKKEYBOARD}}
+\index{LPDXUTCALLBACKKEYBOARD@{LPDXUTCALLBACKKEYBOARD}!DXUT.h@{DXUT.h}}
+\subsubsection[{LPDXUTCALLBACKKEYBOARD}]{\setlength{\rightskip}{0pt plus 5cm}typedef void(CALLBACK $\ast$ {\bf LPDXUTCALLBACKKEYBOARD})(UINT nChar, bool bKeyDown, bool bAltDown, void $\ast${\bf pUserContext})}}
+\label{_d_x_u_t_8h_a194e486838161abf400b6c63ae43da9e}
+\hypertarget{_d_x_u_t_8h_aece7ce83d66003e12aebe05c3ae22c09}{
+\index{DXUT.h@{DXUT.h}!LPDXUTCALLBACKMODIFYDEVICESETTINGS@{LPDXUTCALLBACKMODIFYDEVICESETTINGS}}
+\index{LPDXUTCALLBACKMODIFYDEVICESETTINGS@{LPDXUTCALLBACKMODIFYDEVICESETTINGS}!DXUT.h@{DXUT.h}}
+\subsubsection[{LPDXUTCALLBACKMODIFYDEVICESETTINGS}]{\setlength{\rightskip}{0pt plus 5cm}typedef bool(CALLBACK $\ast$ {\bf LPDXUTCALLBACKMODIFYDEVICESETTINGS})({\bf DXUTDeviceSettings} $\ast$pDeviceSettings, const D3DCAPS9 $\ast$pCaps, void $\ast${\bf pUserContext})}}
+\label{_d_x_u_t_8h_aece7ce83d66003e12aebe05c3ae22c09}
+\hypertarget{_d_x_u_t_8h_a5aeb28f9c5f4d5cbd36381f30b92b51a}{
+\index{DXUT.h@{DXUT.h}!LPDXUTCALLBACKMOUSE@{LPDXUTCALLBACKMOUSE}}
+\index{LPDXUTCALLBACKMOUSE@{LPDXUTCALLBACKMOUSE}!DXUT.h@{DXUT.h}}
+\subsubsection[{LPDXUTCALLBACKMOUSE}]{\setlength{\rightskip}{0pt plus 5cm}typedef void(CALLBACK $\ast$ {\bf LPDXUTCALLBACKMOUSE})(bool bLeftButtonDown, bool bRightButtonDown, bool bMiddleButtonDown, bool bSideButton1Down, bool bSideButton2Down, {\bf int} nMouseWheelDelta, {\bf int} xPos, {\bf int} yPos, void $\ast${\bf pUserContext})}}
+\label{_d_x_u_t_8h_a5aeb28f9c5f4d5cbd36381f30b92b51a}
+\hypertarget{_d_x_u_t_8h_a284dfd4bc64f5867e8198cd565bd4fc7}{
+\index{DXUT.h@{DXUT.h}!LPDXUTCALLBACKMSGPROC@{LPDXUTCALLBACKMSGPROC}}
+\index{LPDXUTCALLBACKMSGPROC@{LPDXUTCALLBACKMSGPROC}!DXUT.h@{DXUT.h}}
+\subsubsection[{LPDXUTCALLBACKMSGPROC}]{\setlength{\rightskip}{0pt plus 5cm}typedef LRESULT(CALLBACK $\ast$ {\bf LPDXUTCALLBACKMSGPROC})(HWND hWnd, UINT uMsg, WPARAM wParam, LPARAM lParam, bool $\ast$pbNoFurtherProcessing, void $\ast${\bf pUserContext})}}
+\label{_d_x_u_t_8h_a284dfd4bc64f5867e8198cd565bd4fc7}
+\hypertarget{_d_x_u_t_8h_a8ce5df6fd1b9663490cc97c4f843df03}{
+\index{DXUT.h@{DXUT.h}!LPDXUTCALLBACKTIMER@{LPDXUTCALLBACKTIMER}}
+\index{LPDXUTCALLBACKTIMER@{LPDXUTCALLBACKTIMER}!DXUT.h@{DXUT.h}}
+\subsubsection[{LPDXUTCALLBACKTIMER}]{\setlength{\rightskip}{0pt plus 5cm}typedef void(CALLBACK $\ast$ {\bf LPDXUTCALLBACKTIMER})(UINT idEvent, void $\ast${\bf pUserContext})}}
+\label{_d_x_u_t_8h_a8ce5df6fd1b9663490cc97c4f843df03}
+
+
+\subsection{Enumeration Type Documentation}
+\hypertarget{_d_x_u_t_8h_aaa7d287a94f58c93d67a7ec6b4cb0ee3}{
+\index{DXUT.h@{DXUT.h}!DXUT\_\-MATCH\_\-TYPE@{DXUT\_\-MATCH\_\-TYPE}}
+\index{DXUT\_\-MATCH\_\-TYPE@{DXUT\_\-MATCH\_\-TYPE}!DXUT.h@{DXUT.h}}
+\subsubsection[{DXUT\_\-MATCH\_\-TYPE}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf DXUT\_\-MATCH\_\-TYPE}}}
+\label{_d_x_u_t_8h_aaa7d287a94f58c93d67a7ec6b4cb0ee3}
+\begin{Desc}
+\item[Enumerator: ]\par
+\begin{description}
+\index{DXUTMT\_\-IGNORE\_\-INPUT@{DXUTMT\_\-IGNORE\_\-INPUT}!DXUT.h@{DXUT.h}}\index{DXUT.h@{DXUT.h}!DXUTMT\_\-IGNORE\_\-INPUT@{DXUTMT\_\-IGNORE\_\-INPUT}}\item[{\em 
+\hypertarget{_d_x_u_t_8h_aaa7d287a94f58c93d67a7ec6b4cb0ee3a2ce07763e3cda64d7baae00f94715c28}{
+DXUTMT\_\-IGNORE\_\-INPUT}
+\label{_d_x_u_t_8h_aaa7d287a94f58c93d67a7ec6b4cb0ee3a2ce07763e3cda64d7baae00f94715c28}
+}]\index{DXUTMT\_\-PRESERVE\_\-INPUT@{DXUTMT\_\-PRESERVE\_\-INPUT}!DXUT.h@{DXUT.h}}\index{DXUT.h@{DXUT.h}!DXUTMT\_\-PRESERVE\_\-INPUT@{DXUTMT\_\-PRESERVE\_\-INPUT}}\item[{\em 
+\hypertarget{_d_x_u_t_8h_aaa7d287a94f58c93d67a7ec6b4cb0ee3adf0df5b63feac871cd092d357304dfa2}{
+DXUTMT\_\-PRESERVE\_\-INPUT}
+\label{_d_x_u_t_8h_aaa7d287a94f58c93d67a7ec6b4cb0ee3adf0df5b63feac871cd092d357304dfa2}
+}]\index{DXUTMT\_\-CLOSEST\_\-TO\_\-INPUT@{DXUTMT\_\-CLOSEST\_\-TO\_\-INPUT}!DXUT.h@{DXUT.h}}\index{DXUT.h@{DXUT.h}!DXUTMT\_\-CLOSEST\_\-TO\_\-INPUT@{DXUTMT\_\-CLOSEST\_\-TO\_\-INPUT}}\item[{\em 
+\hypertarget{_d_x_u_t_8h_aaa7d287a94f58c93d67a7ec6b4cb0ee3aab8ead6270c9684a1239f2f416beeaa9}{
+DXUTMT\_\-CLOSEST\_\-TO\_\-INPUT}
+\label{_d_x_u_t_8h_aaa7d287a94f58c93d67a7ec6b4cb0ee3aab8ead6270c9684a1239f2f416beeaa9}
+}]\end{description}
+\end{Desc}
+
+
+
+\subsection{Function Documentation}
+\hypertarget{_d_x_u_t_8h_af4b1703d0dd7cac4e9175443be38b2df}{
+\index{DXUT.h@{DXUT.h}!DXUTCreateDevice@{DXUTCreateDevice}}
+\index{DXUTCreateDevice@{DXUTCreateDevice}!DXUT.h@{DXUT.h}}
+\subsubsection[{DXUTCreateDevice}]{\setlength{\rightskip}{0pt plus 5cm}HRESULT DXUTCreateDevice (UINT {\em AdapterOrdinal} = {\ttfamily D3DADAPTER\_\-DEFAULT}, \/  bool {\em bWindowed} = {\ttfamily true}, \/  {\bf int} {\em nSuggestedWidth} = {\ttfamily 0}, \/  {\bf int} {\em nSuggestedHeight} = {\ttfamily 0}, \/  {\bf LPDXUTCALLBACKISDEVICEACCEPTABLE} {\em pCallbackIsDeviceAcceptable} = {\ttfamily NULL}, \/  {\bf LPDXUTCALLBACKMODIFYDEVICESETTINGS} {\em pCallbackModifyDeviceSettings} = {\ttfamily NULL}, \/  void $\ast$ {\em pUserContext} = {\ttfamily NULL})}}
+\label{_d_x_u_t_8h_af4b1703d0dd7cac4e9175443be38b2df}
+\hypertarget{_d_x_u_t_8h_a751768e914daeb61487eaca82d1e48d8}{
+\index{DXUT.h@{DXUT.h}!DXUTCreateDeviceFromSettings@{DXUTCreateDeviceFromSettings}}
+\index{DXUTCreateDeviceFromSettings@{DXUTCreateDeviceFromSettings}!DXUT.h@{DXUT.h}}
+\subsubsection[{DXUTCreateDeviceFromSettings}]{\setlength{\rightskip}{0pt plus 5cm}HRESULT DXUTCreateDeviceFromSettings ({\bf DXUTDeviceSettings} $\ast$ {\em pDeviceSettings}, \/  bool {\em bPreserveInput} = {\ttfamily false}, \/  bool {\em bClipWindowToSingleAdapter} = {\ttfamily true})}}
+\label{_d_x_u_t_8h_a751768e914daeb61487eaca82d1e48d8}
+\hypertarget{_d_x_u_t_8h_a0933614b4fa734bddf61847bdeb3845b}{
+\index{DXUT.h@{DXUT.h}!DXUTCreateWindow@{DXUTCreateWindow}}
+\index{DXUTCreateWindow@{DXUTCreateWindow}!DXUT.h@{DXUT.h}}
+\subsubsection[{DXUTCreateWindow}]{\setlength{\rightskip}{0pt plus 5cm}HRESULT DXUTCreateWindow (const WCHAR $\ast$ {\em strWindowTitle} = {\ttfamily L\char`\"{}Direct3D~Window\char`\"{}}, \/  HINSTANCE {\em hInstance} = {\ttfamily NULL}, \/  HICON {\em hIcon} = {\ttfamily NULL}, \/  HMENU {\em hMenu} = {\ttfamily NULL}, \/  {\bf int} {\em x} = {\ttfamily CW\_\-USEDEFAULT}, \/  {\bf int} {\em y} = {\ttfamily CW\_\-USEDEFAULT})}}
+\label{_d_x_u_t_8h_a0933614b4fa734bddf61847bdeb3845b}
+\hypertarget{_d_x_u_t_8h_aec77a25f550580a2b6c1e3eb0e879832}{
+\index{DXUT.h@{DXUT.h}!DXUTFindValidDeviceSettings@{DXUTFindValidDeviceSettings}}
+\index{DXUTFindValidDeviceSettings@{DXUTFindValidDeviceSettings}!DXUT.h@{DXUT.h}}
+\subsubsection[{DXUTFindValidDeviceSettings}]{\setlength{\rightskip}{0pt plus 5cm}HRESULT DXUTFindValidDeviceSettings ({\bf DXUTDeviceSettings} $\ast$ {\em pOut}, \/  {\bf DXUTDeviceSettings} $\ast$ {\em pIn} = {\ttfamily NULL}, \/  {\bf DXUTMatchOptions} $\ast$ {\em pMatchOptions} = {\ttfamily NULL})}}
+\label{_d_x_u_t_8h_aec77a25f550580a2b6c1e3eb0e879832}
+\hypertarget{_d_x_u_t_8h_aecefbb85617e3118d5c70ebfeba151ca}{
+\index{DXUT.h@{DXUT.h}!DXUTGetAutomation@{DXUTGetAutomation}}
+\index{DXUTGetAutomation@{DXUTGetAutomation}!DXUT.h@{DXUT.h}}
+\subsubsection[{DXUTGetAutomation}]{\setlength{\rightskip}{0pt plus 5cm}bool DXUTGetAutomation ()}}
+\label{_d_x_u_t_8h_aecefbb85617e3118d5c70ebfeba151ca}
+\hypertarget{_d_x_u_t_8h_a686622e137d25b43c2ee9847f0d54186}{
+\index{DXUT.h@{DXUT.h}!DXUTGetBackBufferSurfaceDesc@{DXUTGetBackBufferSurfaceDesc}}
+\index{DXUTGetBackBufferSurfaceDesc@{DXUTGetBackBufferSurfaceDesc}!DXUT.h@{DXUT.h}}
+\subsubsection[{DXUTGetBackBufferSurfaceDesc}]{\setlength{\rightskip}{0pt plus 5cm}const D3DSURFACE\_\-DESC$\ast$ DXUTGetBackBufferSurfaceDesc ()}}
+\label{_d_x_u_t_8h_a686622e137d25b43c2ee9847f0d54186}
+\hypertarget{_d_x_u_t_8h_a83039304bbf7be50e0cb92c46044fb45}{
+\index{DXUT.h@{DXUT.h}!DXUTGetD3DDevice@{DXUTGetD3DDevice}}
+\index{DXUTGetD3DDevice@{DXUTGetD3DDevice}!DXUT.h@{DXUT.h}}
+\subsubsection[{DXUTGetD3DDevice}]{\setlength{\rightskip}{0pt plus 5cm}IDirect3DDevice9$\ast$ DXUTGetD3DDevice ()}}
+\label{_d_x_u_t_8h_a83039304bbf7be50e0cb92c46044fb45}
+\hypertarget{_d_x_u_t_8h_a5c0defdf85d1c48272af4db2c09625ba}{
+\index{DXUT.h@{DXUT.h}!DXUTGetD3DObject@{DXUTGetD3DObject}}
+\index{DXUTGetD3DObject@{DXUTGetD3DObject}!DXUT.h@{DXUT.h}}
+\subsubsection[{DXUTGetD3DObject}]{\setlength{\rightskip}{0pt plus 5cm}IDirect3D9$\ast$ DXUTGetD3DObject ()}}
+\label{_d_x_u_t_8h_a5c0defdf85d1c48272af4db2c09625ba}
+\hypertarget{_d_x_u_t_8h_a723ad8aff9c12244efe5b08b165bebfb}{
+\index{DXUT.h@{DXUT.h}!DXUTGetDeviceCaps@{DXUTGetDeviceCaps}}
+\index{DXUTGetDeviceCaps@{DXUTGetDeviceCaps}!DXUT.h@{DXUT.h}}
+\subsubsection[{DXUTGetDeviceCaps}]{\setlength{\rightskip}{0pt plus 5cm}const D3DCAPS9$\ast$ DXUTGetDeviceCaps ()}}
+\label{_d_x_u_t_8h_a723ad8aff9c12244efe5b08b165bebfb}
+\hypertarget{_d_x_u_t_8h_aa9e1ee1525bb39d662b855292989d13e}{
+\index{DXUT.h@{DXUT.h}!DXUTGetDeviceSettings@{DXUTGetDeviceSettings}}
+\index{DXUTGetDeviceSettings@{DXUTGetDeviceSettings}!DXUT.h@{DXUT.h}}
+\subsubsection[{DXUTGetDeviceSettings}]{\setlength{\rightskip}{0pt plus 5cm}{\bf DXUTDeviceSettings} DXUTGetDeviceSettings ()}}
+\label{_d_x_u_t_8h_aa9e1ee1525bb39d662b855292989d13e}
+\hypertarget{_d_x_u_t_8h_a3e4ae3da0100b94fc79406b639747c52}{
+\index{DXUT.h@{DXUT.h}!DXUTGetDeviceStats@{DXUTGetDeviceStats}}
+\index{DXUTGetDeviceStats@{DXUTGetDeviceStats}!DXUT.h@{DXUT.h}}
+\subsubsection[{DXUTGetDeviceStats}]{\setlength{\rightskip}{0pt plus 5cm}LPCWSTR DXUTGetDeviceStats ()}}
+\label{_d_x_u_t_8h_a3e4ae3da0100b94fc79406b639747c52}
+\hypertarget{_d_x_u_t_8h_a1067fac80e434d12ff897c59f255af8e}{
+\index{DXUT.h@{DXUT.h}!DXUTGetElapsedTime@{DXUTGetElapsedTime}}
+\index{DXUTGetElapsedTime@{DXUTGetElapsedTime}!DXUT.h@{DXUT.h}}
+\subsubsection[{DXUTGetElapsedTime}]{\setlength{\rightskip}{0pt plus 5cm}float DXUTGetElapsedTime ()}}
+\label{_d_x_u_t_8h_a1067fac80e434d12ff897c59f255af8e}
+\hypertarget{_d_x_u_t_8h_a74fdc649993c7945682fe0f82a06c50f}{
+\index{DXUT.h@{DXUT.h}!DXUTGetExitCode@{DXUTGetExitCode}}
+\index{DXUTGetExitCode@{DXUTGetExitCode}!DXUT.h@{DXUT.h}}
+\subsubsection[{DXUTGetExitCode}]{\setlength{\rightskip}{0pt plus 5cm}{\bf int} DXUTGetExitCode ()}}
+\label{_d_x_u_t_8h_a74fdc649993c7945682fe0f82a06c50f}
+\hypertarget{_d_x_u_t_8h_a9a50994bfa00dd280534058e87a0c399}{
+\index{DXUT.h@{DXUT.h}!DXUTGetFPS@{DXUTGetFPS}}
+\index{DXUTGetFPS@{DXUTGetFPS}!DXUT.h@{DXUT.h}}
+\subsubsection[{DXUTGetFPS}]{\setlength{\rightskip}{0pt plus 5cm}float DXUTGetFPS ()}}
+\label{_d_x_u_t_8h_a9a50994bfa00dd280534058e87a0c399}
+\hypertarget{_d_x_u_t_8h_a9e3e91d2e17e438383df20c99159cd81}{
+\index{DXUT.h@{DXUT.h}!DXUTGetFrameStats@{DXUTGetFrameStats}}
+\index{DXUTGetFrameStats@{DXUTGetFrameStats}!DXUT.h@{DXUT.h}}
+\subsubsection[{DXUTGetFrameStats}]{\setlength{\rightskip}{0pt plus 5cm}LPCWSTR DXUTGetFrameStats (bool {\em bIncludeFPS} = {\ttfamily false})}}
+\label{_d_x_u_t_8h_a9e3e91d2e17e438383df20c99159cd81}
+\hypertarget{_d_x_u_t_8h_a8368dbf927273be19f4267ff69dde347}{
+\index{DXUT.h@{DXUT.h}!DXUTGetFullsceenClientRectAtModeChange@{DXUTGetFullsceenClientRectAtModeChange}}
+\index{DXUTGetFullsceenClientRectAtModeChange@{DXUTGetFullsceenClientRectAtModeChange}!DXUT.h@{DXUT.h}}
+\subsubsection[{DXUTGetFullsceenClientRectAtModeChange}]{\setlength{\rightskip}{0pt plus 5cm}RECT DXUTGetFullsceenClientRectAtModeChange ()}}
+\label{_d_x_u_t_8h_a8368dbf927273be19f4267ff69dde347}
+\hypertarget{_d_x_u_t_8h_ae478f2d9d8fe10aeabaac8c7e855a78a}{
+\index{DXUT.h@{DXUT.h}!DXUTGetHandleDefaultHotkeys@{DXUTGetHandleDefaultHotkeys}}
+\index{DXUTGetHandleDefaultHotkeys@{DXUTGetHandleDefaultHotkeys}!DXUT.h@{DXUT.h}}
+\subsubsection[{DXUTGetHandleDefaultHotkeys}]{\setlength{\rightskip}{0pt plus 5cm}bool DXUTGetHandleDefaultHotkeys ()}}
+\label{_d_x_u_t_8h_ae478f2d9d8fe10aeabaac8c7e855a78a}
+\hypertarget{_d_x_u_t_8h_af165e5c14587f4af55ab8b9aed2b2727}{
+\index{DXUT.h@{DXUT.h}!DXUTGetHINSTANCE@{DXUTGetHINSTANCE}}
+\index{DXUTGetHINSTANCE@{DXUTGetHINSTANCE}!DXUT.h@{DXUT.h}}
+\subsubsection[{DXUTGetHINSTANCE}]{\setlength{\rightskip}{0pt plus 5cm}HINSTANCE DXUTGetHINSTANCE ()}}
+\label{_d_x_u_t_8h_af165e5c14587f4af55ab8b9aed2b2727}
+\hypertarget{_d_x_u_t_8h_a1addced3e8a612e9963ddd3d149cd90f}{
+\index{DXUT.h@{DXUT.h}!DXUTGetHWND@{DXUTGetHWND}}
+\index{DXUTGetHWND@{DXUTGetHWND}!DXUT.h@{DXUT.h}}
+\subsubsection[{DXUTGetHWND}]{\setlength{\rightskip}{0pt plus 5cm}HWND DXUTGetHWND ()}}
+\label{_d_x_u_t_8h_a1addced3e8a612e9963ddd3d149cd90f}
+\hypertarget{_d_x_u_t_8h_a94f2ed1c1ca96b133a72d040e4124048}{
+\index{DXUT.h@{DXUT.h}!DXUTGetHWNDDeviceFullScreen@{DXUTGetHWNDDeviceFullScreen}}
+\index{DXUTGetHWNDDeviceFullScreen@{DXUTGetHWNDDeviceFullScreen}!DXUT.h@{DXUT.h}}
+\subsubsection[{DXUTGetHWNDDeviceFullScreen}]{\setlength{\rightskip}{0pt plus 5cm}HWND DXUTGetHWNDDeviceFullScreen ()}}
+\label{_d_x_u_t_8h_a94f2ed1c1ca96b133a72d040e4124048}
+\hypertarget{_d_x_u_t_8h_a5f9c79665d2d1acae54e78730df82e7b}{
+\index{DXUT.h@{DXUT.h}!DXUTGetHWNDDeviceWindowed@{DXUTGetHWNDDeviceWindowed}}
+\index{DXUTGetHWNDDeviceWindowed@{DXUTGetHWNDDeviceWindowed}!DXUT.h@{DXUT.h}}
+\subsubsection[{DXUTGetHWNDDeviceWindowed}]{\setlength{\rightskip}{0pt plus 5cm}HWND DXUTGetHWNDDeviceWindowed ()}}
+\label{_d_x_u_t_8h_a5f9c79665d2d1acae54e78730df82e7b}
+\hypertarget{_d_x_u_t_8h_a6a042521920a3d1b82b49c4d95e8e9ba}{
+\index{DXUT.h@{DXUT.h}!DXUTGetHWNDFocus@{DXUTGetHWNDFocus}}
+\index{DXUTGetHWNDFocus@{DXUTGetHWNDFocus}!DXUT.h@{DXUT.h}}
+\subsubsection[{DXUTGetHWNDFocus}]{\setlength{\rightskip}{0pt plus 5cm}HWND DXUTGetHWNDFocus ()}}
+\label{_d_x_u_t_8h_a6a042521920a3d1b82b49c4d95e8e9ba}
+\hypertarget{_d_x_u_t_8h_a79f44155af0a4308e1934377386a3927}{
+\index{DXUT.h@{DXUT.h}!DXUTGetPresentParameters@{DXUTGetPresentParameters}}
+\index{DXUTGetPresentParameters@{DXUTGetPresentParameters}!DXUT.h@{DXUT.h}}
+\subsubsection[{DXUTGetPresentParameters}]{\setlength{\rightskip}{0pt plus 5cm}D3DPRESENT\_\-PARAMETERS DXUTGetPresentParameters ()}}
+\label{_d_x_u_t_8h_a79f44155af0a4308e1934377386a3927}
+\hypertarget{_d_x_u_t_8h_a2460592f9f6f7f69a13cb9f168873912}{
+\index{DXUT.h@{DXUT.h}!DXUTGetShowMsgBoxOnError@{DXUTGetShowMsgBoxOnError}}
+\index{DXUTGetShowMsgBoxOnError@{DXUTGetShowMsgBoxOnError}!DXUT.h@{DXUT.h}}
+\subsubsection[{DXUTGetShowMsgBoxOnError}]{\setlength{\rightskip}{0pt plus 5cm}bool DXUTGetShowMsgBoxOnError ()}}
+\label{_d_x_u_t_8h_a2460592f9f6f7f69a13cb9f168873912}
+\hypertarget{_d_x_u_t_8h_a53e5c19427e509f11a24cc4fe8bbf8ae}{
+\index{DXUT.h@{DXUT.h}!DXUTGetTime@{DXUTGetTime}}
+\index{DXUTGetTime@{DXUTGetTime}!DXUT.h@{DXUT.h}}
+\subsubsection[{DXUTGetTime}]{\setlength{\rightskip}{0pt plus 5cm}double DXUTGetTime ()}}
+\label{_d_x_u_t_8h_a53e5c19427e509f11a24cc4fe8bbf8ae}
+\hypertarget{_d_x_u_t_8h_a101a8b6c2cec85f76cecd7aa1b227614}{
+\index{DXUT.h@{DXUT.h}!DXUTGetWindowClientRect@{DXUTGetWindowClientRect}}
+\index{DXUTGetWindowClientRect@{DXUTGetWindowClientRect}!DXUT.h@{DXUT.h}}
+\subsubsection[{DXUTGetWindowClientRect}]{\setlength{\rightskip}{0pt plus 5cm}RECT DXUTGetWindowClientRect ()}}
+\label{_d_x_u_t_8h_a101a8b6c2cec85f76cecd7aa1b227614}
+\hypertarget{_d_x_u_t_8h_a743f3ca78c52f70ca3f6c391e4b6dce5}{
+\index{DXUT.h@{DXUT.h}!DXUTGetWindowClientRectAtModeChange@{DXUTGetWindowClientRectAtModeChange}}
+\index{DXUTGetWindowClientRectAtModeChange@{DXUTGetWindowClientRectAtModeChange}!DXUT.h@{DXUT.h}}
+\subsubsection[{DXUTGetWindowClientRectAtModeChange}]{\setlength{\rightskip}{0pt plus 5cm}RECT DXUTGetWindowClientRectAtModeChange ()}}
+\label{_d_x_u_t_8h_a743f3ca78c52f70ca3f6c391e4b6dce5}
+\hypertarget{_d_x_u_t_8h_a3aa082abe78cdb61bdb21d8d35681d47}{
+\index{DXUT.h@{DXUT.h}!DXUTGetWindowTitle@{DXUTGetWindowTitle}}
+\index{DXUTGetWindowTitle@{DXUTGetWindowTitle}!DXUT.h@{DXUT.h}}
+\subsubsection[{DXUTGetWindowTitle}]{\setlength{\rightskip}{0pt plus 5cm}LPCWSTR DXUTGetWindowTitle ()}}
+\label{_d_x_u_t_8h_a3aa082abe78cdb61bdb21d8d35681d47}
+\hypertarget{_d_x_u_t_8h_af4db47d8941df69b89feba9627ded26c}{
+\index{DXUT.h@{DXUT.h}!DXUTInit@{DXUTInit}}
+\index{DXUTInit@{DXUTInit}!DXUT.h@{DXUT.h}}
+\subsubsection[{DXUTInit}]{\setlength{\rightskip}{0pt plus 5cm}HRESULT DXUTInit (bool {\em bParseCommandLine} = {\ttfamily true}, \/  bool {\em bHandleDefaultHotkeys} = {\ttfamily true}, \/  bool {\em bShowMsgBoxOnError} = {\ttfamily true}, \/  bool {\em bHandleAltEnter} = {\ttfamily true})}}
+\label{_d_x_u_t_8h_af4db47d8941df69b89feba9627ded26c}
+\hypertarget{_d_x_u_t_8h_a51cfa5808c36f5e531c73c6416e4d16d}{
+\index{DXUT.h@{DXUT.h}!DXUTIsActive@{DXUTIsActive}}
+\index{DXUTIsActive@{DXUTIsActive}!DXUT.h@{DXUT.h}}
+\subsubsection[{DXUTIsActive}]{\setlength{\rightskip}{0pt plus 5cm}bool DXUTIsActive ()}}
+\label{_d_x_u_t_8h_a51cfa5808c36f5e531c73c6416e4d16d}
+\hypertarget{_d_x_u_t_8h_a06078f41d2b3b8f85de487cb2322895e}{
+\index{DXUT.h@{DXUT.h}!DXUTIsKeyDown@{DXUTIsKeyDown}}
+\index{DXUTIsKeyDown@{DXUTIsKeyDown}!DXUT.h@{DXUT.h}}
+\subsubsection[{DXUTIsKeyDown}]{\setlength{\rightskip}{0pt plus 5cm}bool DXUTIsKeyDown (BYTE {\em vKey})}}
+\label{_d_x_u_t_8h_a06078f41d2b3b8f85de487cb2322895e}
+\hypertarget{_d_x_u_t_8h_af683a7435ece91ee3fb03c17b66b092f}{
+\index{DXUT.h@{DXUT.h}!DXUTIsMouseButtonDown@{DXUTIsMouseButtonDown}}
+\index{DXUTIsMouseButtonDown@{DXUTIsMouseButtonDown}!DXUT.h@{DXUT.h}}
+\subsubsection[{DXUTIsMouseButtonDown}]{\setlength{\rightskip}{0pt plus 5cm}bool DXUTIsMouseButtonDown (BYTE {\em vButton})}}
+\label{_d_x_u_t_8h_af683a7435ece91ee3fb03c17b66b092f}
+\hypertarget{_d_x_u_t_8h_a1026f4700ea30fb6ebcf6649d77971eb}{
+\index{DXUT.h@{DXUT.h}!DXUTIsRenderingPaused@{DXUTIsRenderingPaused}}
+\index{DXUTIsRenderingPaused@{DXUTIsRenderingPaused}!DXUT.h@{DXUT.h}}
+\subsubsection[{DXUTIsRenderingPaused}]{\setlength{\rightskip}{0pt plus 5cm}bool DXUTIsRenderingPaused ()}}
+\label{_d_x_u_t_8h_a1026f4700ea30fb6ebcf6649d77971eb}
+\hypertarget{_d_x_u_t_8h_afb67c3c16618c9bdd50a15f679260c7a}{
+\index{DXUT.h@{DXUT.h}!DXUTIsTimePaused@{DXUTIsTimePaused}}
+\index{DXUTIsTimePaused@{DXUTIsTimePaused}!DXUT.h@{DXUT.h}}
+\subsubsection[{DXUTIsTimePaused}]{\setlength{\rightskip}{0pt plus 5cm}bool DXUTIsTimePaused ()}}
+\label{_d_x_u_t_8h_afb67c3c16618c9bdd50a15f679260c7a}
+\hypertarget{_d_x_u_t_8h_af9ce33baf6a43d02fe11aee094448d5e}{
+\index{DXUT.h@{DXUT.h}!DXUTIsWindowed@{DXUTIsWindowed}}
+\index{DXUTIsWindowed@{DXUTIsWindowed}!DXUT.h@{DXUT.h}}
+\subsubsection[{DXUTIsWindowed}]{\setlength{\rightskip}{0pt plus 5cm}bool DXUTIsWindowed ()}}
+\label{_d_x_u_t_8h_af9ce33baf6a43d02fe11aee094448d5e}
+\hypertarget{_d_x_u_t_8h_afe4884a02d1a015dbf7de6b7b0c1a439}{
+\index{DXUT.h@{DXUT.h}!DXUTKillTimer@{DXUTKillTimer}}
+\index{DXUTKillTimer@{DXUTKillTimer}!DXUT.h@{DXUT.h}}
+\subsubsection[{DXUTKillTimer}]{\setlength{\rightskip}{0pt plus 5cm}HRESULT DXUTKillTimer (UINT {\em nIDEvent})}}
+\label{_d_x_u_t_8h_afe4884a02d1a015dbf7de6b7b0c1a439}
+\hypertarget{_d_x_u_t_8h_ac95d0ad3f7e3c28f7392c25b9a188917}{
+\index{DXUT.h@{DXUT.h}!DXUTMainLoop@{DXUTMainLoop}}
+\index{DXUTMainLoop@{DXUTMainLoop}!DXUT.h@{DXUT.h}}
+\subsubsection[{DXUTMainLoop}]{\setlength{\rightskip}{0pt plus 5cm}HRESULT DXUTMainLoop (HACCEL {\em hAccel} = {\ttfamily NULL})}}
+\label{_d_x_u_t_8h_ac95d0ad3f7e3c28f7392c25b9a188917}
+\hypertarget{_d_x_u_t_8h_a2e863027b960fb19843f0557520fc2bf}{
+\index{DXUT.h@{DXUT.h}!DXUTPause@{DXUTPause}}
+\index{DXUTPause@{DXUTPause}!DXUT.h@{DXUT.h}}
+\subsubsection[{DXUTPause}]{\setlength{\rightskip}{0pt plus 5cm}void DXUTPause (bool {\em bPauseTime}, \/  bool {\em bPauseRendering})}}
+\label{_d_x_u_t_8h_a2e863027b960fb19843f0557520fc2bf}
+\hypertarget{_d_x_u_t_8h_a4ebd837764f14b400f0960c0aff8a8aa}{
+\index{DXUT.h@{DXUT.h}!DXUTRender3DEnvironment@{DXUTRender3DEnvironment}}
+\index{DXUTRender3DEnvironment@{DXUTRender3DEnvironment}!DXUT.h@{DXUT.h}}
+\subsubsection[{DXUTRender3DEnvironment}]{\setlength{\rightskip}{0pt plus 5cm}void DXUTRender3DEnvironment ()}}
+\label{_d_x_u_t_8h_a4ebd837764f14b400f0960c0aff8a8aa}
+\hypertarget{_d_x_u_t_8h_aaf45d64ae34e200906b6400e231cc758}{
+\index{DXUT.h@{DXUT.h}!DXUTResetFrameworkState@{DXUTResetFrameworkState}}
+\index{DXUTResetFrameworkState@{DXUTResetFrameworkState}!DXUT.h@{DXUT.h}}
+\subsubsection[{DXUTResetFrameworkState}]{\setlength{\rightskip}{0pt plus 5cm}void DXUTResetFrameworkState ()}}
+\label{_d_x_u_t_8h_aaf45d64ae34e200906b6400e231cc758}
+\hypertarget{_d_x_u_t_8h_a01ece5de90a94d9111413f7a2266854b}{
+\index{DXUT.h@{DXUT.h}!DXUTSetCallbackDeviceChanging@{DXUTSetCallbackDeviceChanging}}
+\index{DXUTSetCallbackDeviceChanging@{DXUTSetCallbackDeviceChanging}!DXUT.h@{DXUT.h}}
+\subsubsection[{DXUTSetCallbackDeviceChanging}]{\setlength{\rightskip}{0pt plus 5cm}void DXUTSetCallbackDeviceChanging ({\bf LPDXUTCALLBACKMODIFYDEVICESETTINGS} {\em pCallbackModifyDeviceSettings}, \/  void $\ast$ {\em pUserContext} = {\ttfamily NULL})}}
+\label{_d_x_u_t_8h_a01ece5de90a94d9111413f7a2266854b}
+\hypertarget{_d_x_u_t_8h_a149fd089567477917d77791bff3ebc6d}{
+\index{DXUT.h@{DXUT.h}!DXUTSetCallbackDeviceCreated@{DXUTSetCallbackDeviceCreated}}
+\index{DXUTSetCallbackDeviceCreated@{DXUTSetCallbackDeviceCreated}!DXUT.h@{DXUT.h}}
+\subsubsection[{DXUTSetCallbackDeviceCreated}]{\setlength{\rightskip}{0pt plus 5cm}void DXUTSetCallbackDeviceCreated ({\bf LPDXUTCALLBACKDEVICECREATED} {\em pCallbackDeviceCreated}, \/  void $\ast$ {\em pUserContext} = {\ttfamily NULL})}}
+\label{_d_x_u_t_8h_a149fd089567477917d77791bff3ebc6d}
+\hypertarget{_d_x_u_t_8h_a5f31d073912917102c034ab1ed937a61}{
+\index{DXUT.h@{DXUT.h}!DXUTSetCallbackDeviceDestroyed@{DXUTSetCallbackDeviceDestroyed}}
+\index{DXUTSetCallbackDeviceDestroyed@{DXUTSetCallbackDeviceDestroyed}!DXUT.h@{DXUT.h}}
+\subsubsection[{DXUTSetCallbackDeviceDestroyed}]{\setlength{\rightskip}{0pt plus 5cm}void DXUTSetCallbackDeviceDestroyed ({\bf LPDXUTCALLBACKDEVICEDESTROYED} {\em pCallbackDeviceDestroyed}, \/  void $\ast$ {\em pUserContext} = {\ttfamily NULL})}}
+\label{_d_x_u_t_8h_a5f31d073912917102c034ab1ed937a61}
+\hypertarget{_d_x_u_t_8h_a62667d36ab7726920b60ee53d803d1b9}{
+\index{DXUT.h@{DXUT.h}!DXUTSetCallbackDeviceLost@{DXUTSetCallbackDeviceLost}}
+\index{DXUTSetCallbackDeviceLost@{DXUTSetCallbackDeviceLost}!DXUT.h@{DXUT.h}}
+\subsubsection[{DXUTSetCallbackDeviceLost}]{\setlength{\rightskip}{0pt plus 5cm}void DXUTSetCallbackDeviceLost ({\bf LPDXUTCALLBACKDEVICELOST} {\em pCallbackDeviceLost}, \/  void $\ast$ {\em pUserContext} = {\ttfamily NULL})}}
+\label{_d_x_u_t_8h_a62667d36ab7726920b60ee53d803d1b9}
+\hypertarget{_d_x_u_t_8h_abaed1a96dfc3278aff197f35d2cb29b9}{
+\index{DXUT.h@{DXUT.h}!DXUTSetCallbackDeviceReset@{DXUTSetCallbackDeviceReset}}
+\index{DXUTSetCallbackDeviceReset@{DXUTSetCallbackDeviceReset}!DXUT.h@{DXUT.h}}
+\subsubsection[{DXUTSetCallbackDeviceReset}]{\setlength{\rightskip}{0pt plus 5cm}void DXUTSetCallbackDeviceReset ({\bf LPDXUTCALLBACKDEVICERESET} {\em pCallbackDeviceReset}, \/  void $\ast$ {\em pUserContext} = {\ttfamily NULL})}}
+\label{_d_x_u_t_8h_abaed1a96dfc3278aff197f35d2cb29b9}
+\hypertarget{_d_x_u_t_8h_a0763de8f62e3602fc40714891646761e}{
+\index{DXUT.h@{DXUT.h}!DXUTSetCallbackFrameMove@{DXUTSetCallbackFrameMove}}
+\index{DXUTSetCallbackFrameMove@{DXUTSetCallbackFrameMove}!DXUT.h@{DXUT.h}}
+\subsubsection[{DXUTSetCallbackFrameMove}]{\setlength{\rightskip}{0pt plus 5cm}void DXUTSetCallbackFrameMove ({\bf LPDXUTCALLBACKFRAMEMOVE} {\em pCallbackFrameMove}, \/  void $\ast$ {\em pUserContext} = {\ttfamily NULL})}}
+\label{_d_x_u_t_8h_a0763de8f62e3602fc40714891646761e}
+\hypertarget{_d_x_u_t_8h_a2c1df546603c069094a65e21f87b3d5f}{
+\index{DXUT.h@{DXUT.h}!DXUTSetCallbackFrameRender@{DXUTSetCallbackFrameRender}}
+\index{DXUTSetCallbackFrameRender@{DXUTSetCallbackFrameRender}!DXUT.h@{DXUT.h}}
+\subsubsection[{DXUTSetCallbackFrameRender}]{\setlength{\rightskip}{0pt plus 5cm}void DXUTSetCallbackFrameRender ({\bf LPDXUTCALLBACKFRAMERENDER} {\em pCallbackFrameRender}, \/  void $\ast$ {\em pUserContext} = {\ttfamily NULL})}}
+\label{_d_x_u_t_8h_a2c1df546603c069094a65e21f87b3d5f}
+\hypertarget{_d_x_u_t_8h_a055081bd36f3bb4f12d71994a05ef988}{
+\index{DXUT.h@{DXUT.h}!DXUTSetCallbackKeyboard@{DXUTSetCallbackKeyboard}}
+\index{DXUTSetCallbackKeyboard@{DXUTSetCallbackKeyboard}!DXUT.h@{DXUT.h}}
+\subsubsection[{DXUTSetCallbackKeyboard}]{\setlength{\rightskip}{0pt plus 5cm}void DXUTSetCallbackKeyboard ({\bf LPDXUTCALLBACKKEYBOARD} {\em pCallbackKeyboard}, \/  void $\ast$ {\em pUserContext} = {\ttfamily NULL})}}
+\label{_d_x_u_t_8h_a055081bd36f3bb4f12d71994a05ef988}
+\hypertarget{_d_x_u_t_8h_a4e7a45b128170acad500ca0d3df31c92}{
+\index{DXUT.h@{DXUT.h}!DXUTSetCallbackMouse@{DXUTSetCallbackMouse}}
+\index{DXUTSetCallbackMouse@{DXUTSetCallbackMouse}!DXUT.h@{DXUT.h}}
+\subsubsection[{DXUTSetCallbackMouse}]{\setlength{\rightskip}{0pt plus 5cm}void DXUTSetCallbackMouse ({\bf LPDXUTCALLBACKMOUSE} {\em pCallbackMouse}, \/  bool {\em bIncludeMouseMove} = {\ttfamily false}, \/  void $\ast$ {\em pUserContext} = {\ttfamily NULL})}}
+\label{_d_x_u_t_8h_a4e7a45b128170acad500ca0d3df31c92}
+\hypertarget{_d_x_u_t_8h_ab4e6d55c37ab53c5b341df88ed4757c7}{
+\index{DXUT.h@{DXUT.h}!DXUTSetCallbackMsgProc@{DXUTSetCallbackMsgProc}}
+\index{DXUTSetCallbackMsgProc@{DXUTSetCallbackMsgProc}!DXUT.h@{DXUT.h}}
+\subsubsection[{DXUTSetCallbackMsgProc}]{\setlength{\rightskip}{0pt plus 5cm}void DXUTSetCallbackMsgProc ({\bf LPDXUTCALLBACKMSGPROC} {\em pCallbackMsgProc}, \/  void $\ast$ {\em pUserContext} = {\ttfamily NULL})}}
+\label{_d_x_u_t_8h_ab4e6d55c37ab53c5b341df88ed4757c7}
+\hypertarget{_d_x_u_t_8h_a5d1b0526699e40274861c23b96ecb62a}{
+\index{DXUT.h@{DXUT.h}!DXUTSetConstantFrameTime@{DXUTSetConstantFrameTime}}
+\index{DXUTSetConstantFrameTime@{DXUTSetConstantFrameTime}!DXUT.h@{DXUT.h}}
+\subsubsection[{DXUTSetConstantFrameTime}]{\setlength{\rightskip}{0pt plus 5cm}void DXUTSetConstantFrameTime (bool {\em bConstantFrameTime}, \/  float {\em fTimePerFrame} = {\ttfamily 0.0333f})}}
+\label{_d_x_u_t_8h_a5d1b0526699e40274861c23b96ecb62a}
+\hypertarget{_d_x_u_t_8h_a7977365af78a78b4af3329ebd6ff7651}{
+\index{DXUT.h@{DXUT.h}!DXUTSetCursorSettings@{DXUTSetCursorSettings}}
+\index{DXUTSetCursorSettings@{DXUTSetCursorSettings}!DXUT.h@{DXUT.h}}
+\subsubsection[{DXUTSetCursorSettings}]{\setlength{\rightskip}{0pt plus 5cm}void DXUTSetCursorSettings (bool {\em bShowCursorWhenFullScreen}, \/  bool {\em bClipCursorWhenFullScreen})}}
+\label{_d_x_u_t_8h_a7977365af78a78b4af3329ebd6ff7651}
+\hypertarget{_d_x_u_t_8h_a488d0874ce1b7ee286507052a472915c}{
+\index{DXUT.h@{DXUT.h}!DXUTSetDevice@{DXUTSetDevice}}
+\index{DXUTSetDevice@{DXUTSetDevice}!DXUT.h@{DXUT.h}}
+\subsubsection[{DXUTSetDevice}]{\setlength{\rightskip}{0pt plus 5cm}HRESULT DXUTSetDevice (IDirect3DDevice9 $\ast$ {\em pd3dDevice})}}
+\label{_d_x_u_t_8h_a488d0874ce1b7ee286507052a472915c}
+\hypertarget{_d_x_u_t_8h_adf1aeb8f49552f7663c8b14df6220467}{
+\index{DXUT.h@{DXUT.h}!DXUTSetMultimonSettings@{DXUTSetMultimonSettings}}
+\index{DXUTSetMultimonSettings@{DXUTSetMultimonSettings}!DXUT.h@{DXUT.h}}
+\subsubsection[{DXUTSetMultimonSettings}]{\setlength{\rightskip}{0pt plus 5cm}void DXUTSetMultimonSettings (bool {\em bAutoChangeAdapter})}}
+\label{_d_x_u_t_8h_adf1aeb8f49552f7663c8b14df6220467}
+\hypertarget{_d_x_u_t_8h_a7e8e16622467826a67de0691c91ebd72}{
+\index{DXUT.h@{DXUT.h}!DXUTSetShortcutKeySettings@{DXUTSetShortcutKeySettings}}
+\index{DXUTSetShortcutKeySettings@{DXUTSetShortcutKeySettings}!DXUT.h@{DXUT.h}}
+\subsubsection[{DXUTSetShortcutKeySettings}]{\setlength{\rightskip}{0pt plus 5cm}void DXUTSetShortcutKeySettings (bool {\em bAllowWhenFullscreen} = {\ttfamily false}, \/  bool {\em bAllowWhenWindowed} = {\ttfamily true})}}
+\label{_d_x_u_t_8h_a7e8e16622467826a67de0691c91ebd72}
+\hypertarget{_d_x_u_t_8h_a08c182c3be7972fc01c4f568d1696d75}{
+\index{DXUT.h@{DXUT.h}!DXUTSetTimer@{DXUTSetTimer}}
+\index{DXUTSetTimer@{DXUTSetTimer}!DXUT.h@{DXUT.h}}
+\subsubsection[{DXUTSetTimer}]{\setlength{\rightskip}{0pt plus 5cm}HRESULT DXUTSetTimer ({\bf LPDXUTCALLBACKTIMER} {\em pCallbackTimer}, \/  float {\em fTimeoutInSecs} = {\ttfamily 1.0f}, \/  UINT $\ast$ {\em pnIDEvent} = {\ttfamily NULL}, \/  void $\ast$ {\em pCallbackUserContext} = {\ttfamily NULL})}}
+\label{_d_x_u_t_8h_a08c182c3be7972fc01c4f568d1696d75}
+\hypertarget{_d_x_u_t_8h_abdbe30b80262953efbe3377ad97f316b}{
+\index{DXUT.h@{DXUT.h}!DXUTSetWindow@{DXUTSetWindow}}
+\index{DXUTSetWindow@{DXUTSetWindow}!DXUT.h@{DXUT.h}}
+\subsubsection[{DXUTSetWindow}]{\setlength{\rightskip}{0pt plus 5cm}HRESULT DXUTSetWindow (HWND {\em hWndFocus}, \/  HWND {\em hWndDeviceFullScreen}, \/  HWND {\em hWndDeviceWindowed}, \/  bool {\em bHandleMessages} = {\ttfamily true})}}
+\label{_d_x_u_t_8h_abdbe30b80262953efbe3377ad97f316b}
+\hypertarget{_d_x_u_t_8h_a0603e61dfd0763b5deea5759d2f67388}{
+\index{DXUT.h@{DXUT.h}!DXUTSetWindowSettings@{DXUTSetWindowSettings}}
+\index{DXUTSetWindowSettings@{DXUTSetWindowSettings}!DXUT.h@{DXUT.h}}
+\subsubsection[{DXUTSetWindowSettings}]{\setlength{\rightskip}{0pt plus 5cm}void DXUTSetWindowSettings (bool {\em bCallDefWindowProc} = {\ttfamily true})}}
+\label{_d_x_u_t_8h_a0603e61dfd0763b5deea5759d2f67388}
+\hypertarget{_d_x_u_t_8h_ab9502d7f637ac7c6b7a4302572b0a2bc}{
+\index{DXUT.h@{DXUT.h}!DXUTShutdown@{DXUTShutdown}}
+\index{DXUTShutdown@{DXUTShutdown}!DXUT.h@{DXUT.h}}
+\subsubsection[{DXUTShutdown}]{\setlength{\rightskip}{0pt plus 5cm}void DXUTShutdown ({\bf int} {\em nExitCode} = {\ttfamily 0})}}
+\label{_d_x_u_t_8h_ab9502d7f637ac7c6b7a4302572b0a2bc}
+\hypertarget{_d_x_u_t_8h_ac51535a54ff2065ae9fddbcbf25350fa}{
+\index{DXUT.h@{DXUT.h}!DXUTStaticWndProc@{DXUTStaticWndProc}}
+\index{DXUTStaticWndProc@{DXUTStaticWndProc}!DXUT.h@{DXUT.h}}
+\subsubsection[{DXUTStaticWndProc}]{\setlength{\rightskip}{0pt plus 5cm}LRESULT CALLBACK DXUTStaticWndProc (HWND {\em hWnd}, \/  UINT {\em uMsg}, \/  WPARAM {\em wParam}, \/  LPARAM {\em lParam})}}
+\label{_d_x_u_t_8h_ac51535a54ff2065ae9fddbcbf25350fa}
+\hypertarget{_d_x_u_t_8h_a2f40d89b0d23a7e1eee2d5266ff5f999}{
+\index{DXUT.h@{DXUT.h}!DXUTToggleFullScreen@{DXUTToggleFullScreen}}
+\index{DXUTToggleFullScreen@{DXUTToggleFullScreen}!DXUT.h@{DXUT.h}}
+\subsubsection[{DXUTToggleFullScreen}]{\setlength{\rightskip}{0pt plus 5cm}HRESULT DXUTToggleFullScreen ()}}
+\label{_d_x_u_t_8h_a2f40d89b0d23a7e1eee2d5266ff5f999}
+\hypertarget{_d_x_u_t_8h_ab4813daf9b5fd6e07ec07322e8170b70}{
+\index{DXUT.h@{DXUT.h}!DXUTToggleREF@{DXUTToggleREF}}
+\index{DXUTToggleREF@{DXUTToggleREF}!DXUT.h@{DXUT.h}}
+\subsubsection[{DXUTToggleREF}]{\setlength{\rightskip}{0pt plus 5cm}HRESULT DXUTToggleREF ()}}
+\label{_d_x_u_t_8h_ab4813daf9b5fd6e07ec07322e8170b70}

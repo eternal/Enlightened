@@ -1,0 +1,46 @@
+digraph G
+{
+  edge [fontname="FreeSans",fontsize="10",labelfontname="FreeSans",labelfontsize="10"];
+  node [fontname="FreeSans",fontsize="10",shape=record];
+  rankdir=LR;
+  Node1 [label="CDXUTEditBox",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled" fontcolor="black"];
+  Node2 -> Node1 [dir=back,color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node2 [label="CDXUTControl",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_d_x_u_t_control.html"];
+  Node3 -> Node2 [dir=back,color="darkorchid3",fontsize="10",style="dashed",label="m_Elements",fontname="FreeSans"];
+  Node3 [label="CGrowableArray\< CDXUTElement * \>",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_growable_array.html"];
+  Node4 -> Node3 [dir=back,color="darkorchid3",fontsize="10",style="dashed",label="m_pData",fontname="FreeSans"];
+  Node4 [label="CDXUTElement",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_d_x_u_t_element.html"];
+  Node5 -> Node4 [dir=back,color="darkorchid3",fontsize="10",style="dashed",label="FontColor\nTextureColor",fontname="FreeSans"];
+  Node5 [label="DXUTBlendColor",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$struct_d_x_u_t_blend_color.html"];
+  Node6 -> Node2 [dir=back,color="darkorchid3",fontsize="10",style="dashed",label="m_pDialog",fontname="FreeSans"];
+  Node6 [label="CDXUTDialog",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_d_x_u_t_dialog.html"];
+  Node7 -> Node6 [dir=back,color="darkorchid3",fontsize="10",style="dashed",label="m_Fonts\nm_Textures",fontname="FreeSans"];
+  Node7 [label="CGrowableArray\< int \>",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_growable_array.html"];
+  Node8 -> Node6 [dir=back,color="darkorchid3",fontsize="10",style="dashed",label="m_Controls",fontname="FreeSans"];
+  Node8 [label="CGrowableArray\< CDXUTControl * \>",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_growable_array.html"];
+  Node2 -> Node8 [dir=back,color="darkorchid3",fontsize="10",style="dashed",label="m_pData",fontname="FreeSans"];
+  Node2 -> Node6 [dir=back,color="darkorchid3",fontsize="10",style="dashed",label="m_pControlMouseOver\ns_pControlFocus\ns_pControlPressed",fontname="FreeSans"];
+  Node9 -> Node6 [dir=back,color="darkorchid3",fontsize="10",style="dashed",label="m_pManager",fontname="FreeSans"];
+  Node9 [label="CDXUTDialogResourceManager",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_d_x_u_t_dialog_resource_manager.html"];
+  Node10 -> Node9 [dir=back,color="darkorchid3",fontsize="10",style="dashed",label="m_Dialogs",fontname="FreeSans"];
+  Node10 [label="CGrowableArray\< CDXUTDialog * \>",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_growable_array.html"];
+  Node6 -> Node10 [dir=back,color="darkorchid3",fontsize="10",style="dashed",label="m_pData",fontname="FreeSans"];
+  Node11 -> Node9 [dir=back,color="darkorchid3",fontsize="10",style="dashed",label="m_FontCache",fontname="FreeSans"];
+  Node11 [label="CGrowableArray\< DXUTFontNode * \>",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_growable_array.html"];
+  Node12 -> Node11 [dir=back,color="darkorchid3",fontsize="10",style="dashed",label="m_pData",fontname="FreeSans"];
+  Node12 [label="DXUTFontNode",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$struct_d_x_u_t_font_node.html"];
+  Node13 -> Node9 [dir=back,color="darkorchid3",fontsize="10",style="dashed",label="m_TextureCache",fontname="FreeSans"];
+  Node13 [label="CGrowableArray\< DXUTTextureNode * \>",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_growable_array.html"];
+  Node14 -> Node13 [dir=back,color="darkorchid3",fontsize="10",style="dashed",label="m_pData",fontname="FreeSans"];
+  Node14 [label="DXUTTextureNode",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$struct_d_x_u_t_texture_node.html"];
+  Node6 -> Node6 [dir=back,color="darkorchid3",fontsize="10",style="dashed",label="m_pPrevDialog\nm_pNextDialog",fontname="FreeSans"];
+  Node4 -> Node6 [dir=back,color="darkorchid3",fontsize="10",style="dashed",label="m_CapElement",fontname="FreeSans"];
+  Node15 -> Node6 [dir=back,color="darkorchid3",fontsize="10",style="dashed",label="m_DefaultElements",fontname="FreeSans"];
+  Node15 [label="CGrowableArray\< DXUTElementHolder * \>",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_growable_array.html"];
+  Node16 -> Node15 [dir=back,color="darkorchid3",fontsize="10",style="dashed",label="m_pData",fontname="FreeSans"];
+  Node16 [label="DXUTElementHolder",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$struct_d_x_u_t_element_holder.html"];
+  Node4 -> Node16 [dir=back,color="darkorchid3",fontsize="10",style="dashed",label="Element",fontname="FreeSans"];
+  Node17 -> Node1 [dir=back,color="darkorchid3",fontsize="10",style="dashed",label="m_Buffer",fontname="FreeSans"];
+  Node17 [label="CUniBuffer",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_uni_buffer.html"];
+  Node12 -> Node17 [dir=back,color="darkorchid3",fontsize="10",style="dashed",label="m_pFontNode",fontname="FreeSans"];
+}

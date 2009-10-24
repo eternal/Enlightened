@@ -1,0 +1,143 @@
+\hypertarget{class_c_d_x_u_t_check_box}{
+\section{CDXUTCheckBox Class Reference}
+\label{class_c_d_x_u_t_check_box}\index{CDXUTCheckBox@{CDXUTCheckBox}}
+}
+
+
+{\ttfamily \#include $<$DXUTgui.h$>$}
+
+Inherits \hyperlink{class_c_d_x_u_t_button}{CDXUTButton}.
+
+Inherited by \hyperlink{class_c_d_x_u_t_radio_button}{CDXUTRadioButton}.Collaboration diagram for CDXUTCheckBox:\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_c_d_x_u_t_check_box_a68cb9ebbafe610be02ad6b8ca72ca5d7}{CDXUTCheckBox} (\hyperlink{class_c_d_x_u_t_dialog}{CDXUTDialog} $\ast$pDialog=NULL)
+\item 
+virtual bool \hyperlink{class_c_d_x_u_t_check_box_a6e37b9b6be8e2c13df2927c1cf3d63ef}{HandleKeyboard} (UINT uMsg, WPARAM wParam, LPARAM lParam)
+\item 
+virtual bool \hyperlink{class_c_d_x_u_t_check_box_a4638ad4bb74d1a5fae3ba2b8b01072d6}{HandleMouse} (UINT uMsg, POINT pt, WPARAM wParam, LPARAM lParam)
+\item 
+virtual void \hyperlink{class_c_d_x_u_t_check_box_a5d9a74ce30be05f4867945c80f298a0a}{OnHotkey} ()
+\item 
+virtual BOOL \hyperlink{class_c_d_x_u_t_check_box_af0a106a73957da96d23dd53c2b9da8e8}{ContainsPoint} (POINT pt)
+\item 
+virtual void \hyperlink{class_c_d_x_u_t_check_box_a3b60479864ee9a21c14f92ff5373fc14}{UpdateRects} ()
+\item 
+virtual void \hyperlink{class_c_d_x_u_t_check_box_a518c5e4d5250b1c0be83bf456c43f8b8}{Render} (IDirect3DDevice9 $\ast$pd3dDevice, float fElapsedTime)
+\item 
+bool \hyperlink{class_c_d_x_u_t_check_box_a17449ea0718aa35b988bb6d079e36a58}{GetChecked} ()
+\item 
+void \hyperlink{class_c_d_x_u_t_check_box_ac6fa565a1c5740f2a908746b977689a2}{SetChecked} (bool bChecked)
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \hyperlink{class_c_d_x_u_t_check_box_a022d282182fef2c403b7f57ba3c81019}{SetCheckedInternal} (bool bChecked, bool bFromInput)
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+bool \hyperlink{class_c_d_x_u_t_check_box_ac2d09bf808d218c90f013d5f0ea5cfa0}{m\_\-bChecked}
+\item 
+RECT \hyperlink{class_c_d_x_u_t_check_box_a9629eb23cf728bccd8e5850e2e49e74d}{m\_\-rcButton}
+\item 
+RECT \hyperlink{class_c_d_x_u_t_check_box_af80193c178d600a91d9a8a53b1f852c7}{m\_\-rcText}
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_c_d_x_u_t_check_box_a68cb9ebbafe610be02ad6b8ca72ca5d7}{
+\index{CDXUTCheckBox@{CDXUTCheckBox}!CDXUTCheckBox@{CDXUTCheckBox}}
+\index{CDXUTCheckBox@{CDXUTCheckBox}!CDXUTCheckBox@{CDXUTCheckBox}}
+\subsubsection[{CDXUTCheckBox}]{\setlength{\rightskip}{0pt plus 5cm}CDXUTCheckBox::CDXUTCheckBox ({\bf CDXUTDialog} $\ast$ {\em pDialog} = {\ttfamily NULL})}}
+\label{class_c_d_x_u_t_check_box_a68cb9ebbafe610be02ad6b8ca72ca5d7}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_c_d_x_u_t_check_box_af0a106a73957da96d23dd53c2b9da8e8}{
+\index{CDXUTCheckBox@{CDXUTCheckBox}!ContainsPoint@{ContainsPoint}}
+\index{ContainsPoint@{ContainsPoint}!CDXUTCheckBox@{CDXUTCheckBox}}
+\subsubsection[{ContainsPoint}]{\setlength{\rightskip}{0pt plus 5cm}BOOL CDXUTCheckBox::ContainsPoint (POINT {\em pt})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{class_c_d_x_u_t_check_box_af0a106a73957da96d23dd53c2b9da8e8}
+
+
+Reimplemented from \hyperlink{class_c_d_x_u_t_button_a2209ea24f5ba76d7506b368c80940172}{CDXUTButton}.\hypertarget{class_c_d_x_u_t_check_box_a17449ea0718aa35b988bb6d079e36a58}{
+\index{CDXUTCheckBox@{CDXUTCheckBox}!GetChecked@{GetChecked}}
+\index{GetChecked@{GetChecked}!CDXUTCheckBox@{CDXUTCheckBox}}
+\subsubsection[{GetChecked}]{\setlength{\rightskip}{0pt plus 5cm}bool CDXUTCheckBox::GetChecked ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_c_d_x_u_t_check_box_a17449ea0718aa35b988bb6d079e36a58}
+\hypertarget{class_c_d_x_u_t_check_box_a6e37b9b6be8e2c13df2927c1cf3d63ef}{
+\index{CDXUTCheckBox@{CDXUTCheckBox}!HandleKeyboard@{HandleKeyboard}}
+\index{HandleKeyboard@{HandleKeyboard}!CDXUTCheckBox@{CDXUTCheckBox}}
+\subsubsection[{HandleKeyboard}]{\setlength{\rightskip}{0pt plus 5cm}bool CDXUTCheckBox::HandleKeyboard (UINT {\em uMsg}, \/  WPARAM {\em wParam}, \/  LPARAM {\em lParam})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{class_c_d_x_u_t_check_box_a6e37b9b6be8e2c13df2927c1cf3d63ef}
+
+
+Reimplemented from \hyperlink{class_c_d_x_u_t_button_ae8da8eb3729b62ac3651eeca42d72530}{CDXUTButton}.
+
+Reimplemented in \hyperlink{class_c_d_x_u_t_radio_button_a221492c2a117d1faaab749c1f3a88a4d}{CDXUTRadioButton}.\hypertarget{class_c_d_x_u_t_check_box_a4638ad4bb74d1a5fae3ba2b8b01072d6}{
+\index{CDXUTCheckBox@{CDXUTCheckBox}!HandleMouse@{HandleMouse}}
+\index{HandleMouse@{HandleMouse}!CDXUTCheckBox@{CDXUTCheckBox}}
+\subsubsection[{HandleMouse}]{\setlength{\rightskip}{0pt plus 5cm}bool CDXUTCheckBox::HandleMouse (UINT {\em uMsg}, \/  POINT {\em pt}, \/  WPARAM {\em wParam}, \/  LPARAM {\em lParam})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{class_c_d_x_u_t_check_box_a4638ad4bb74d1a5fae3ba2b8b01072d6}
+
+
+Reimplemented from \hyperlink{class_c_d_x_u_t_button_ac0bb3da0b5cc77e4cadfbbed72d3e5b7}{CDXUTButton}.
+
+Reimplemented in \hyperlink{class_c_d_x_u_t_radio_button_aab0a615727913f7f6c8e8d35cc2220e6}{CDXUTRadioButton}.\hypertarget{class_c_d_x_u_t_check_box_a5d9a74ce30be05f4867945c80f298a0a}{
+\index{CDXUTCheckBox@{CDXUTCheckBox}!OnHotkey@{OnHotkey}}
+\index{OnHotkey@{OnHotkey}!CDXUTCheckBox@{CDXUTCheckBox}}
+\subsubsection[{OnHotkey}]{\setlength{\rightskip}{0pt plus 5cm}virtual void CDXUTCheckBox::OnHotkey ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}
+\label{class_c_d_x_u_t_check_box_a5d9a74ce30be05f4867945c80f298a0a}
+
+
+Reimplemented from \hyperlink{class_c_d_x_u_t_button_ae63ba50da1c035a9aaa983bafd5eae97}{CDXUTButton}.
+
+Reimplemented in \hyperlink{class_c_d_x_u_t_radio_button_a2950447936727f33130fa4f6928045ac}{CDXUTRadioButton}.\hypertarget{class_c_d_x_u_t_check_box_a518c5e4d5250b1c0be83bf456c43f8b8}{
+\index{CDXUTCheckBox@{CDXUTCheckBox}!Render@{Render}}
+\index{Render@{Render}!CDXUTCheckBox@{CDXUTCheckBox}}
+\subsubsection[{Render}]{\setlength{\rightskip}{0pt plus 5cm}void CDXUTCheckBox::Render (IDirect3DDevice9 $\ast$ {\em pd3dDevice}, \/  float {\em fElapsedTime})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{class_c_d_x_u_t_check_box_a518c5e4d5250b1c0be83bf456c43f8b8}
+
+
+Reimplemented from \hyperlink{class_c_d_x_u_t_button_a75a837a8eca0777b51d3aac6de6d6144}{CDXUTButton}.\hypertarget{class_c_d_x_u_t_check_box_ac6fa565a1c5740f2a908746b977689a2}{
+\index{CDXUTCheckBox@{CDXUTCheckBox}!SetChecked@{SetChecked}}
+\index{SetChecked@{SetChecked}!CDXUTCheckBox@{CDXUTCheckBox}}
+\subsubsection[{SetChecked}]{\setlength{\rightskip}{0pt plus 5cm}void CDXUTCheckBox::SetChecked (bool {\em bChecked})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_c_d_x_u_t_check_box_ac6fa565a1c5740f2a908746b977689a2}
+\hypertarget{class_c_d_x_u_t_check_box_a022d282182fef2c403b7f57ba3c81019}{
+\index{CDXUTCheckBox@{CDXUTCheckBox}!SetCheckedInternal@{SetCheckedInternal}}
+\index{SetCheckedInternal@{SetCheckedInternal}!CDXUTCheckBox@{CDXUTCheckBox}}
+\subsubsection[{SetCheckedInternal}]{\setlength{\rightskip}{0pt plus 5cm}void CDXUTCheckBox::SetCheckedInternal (bool {\em bChecked}, \/  bool {\em bFromInput})\hspace{0.3cm}{\ttfamily  \mbox{[}protected, virtual\mbox{]}}}}
+\label{class_c_d_x_u_t_check_box_a022d282182fef2c403b7f57ba3c81019}
+\hypertarget{class_c_d_x_u_t_check_box_a3b60479864ee9a21c14f92ff5373fc14}{
+\index{CDXUTCheckBox@{CDXUTCheckBox}!UpdateRects@{UpdateRects}}
+\index{UpdateRects@{UpdateRects}!CDXUTCheckBox@{CDXUTCheckBox}}
+\subsubsection[{UpdateRects}]{\setlength{\rightskip}{0pt plus 5cm}void CDXUTCheckBox::UpdateRects ()\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{class_c_d_x_u_t_check_box_a3b60479864ee9a21c14f92ff5373fc14}
+
+
+Reimplemented from \hyperlink{class_c_d_x_u_t_control_a5fb3a79178c678abaa0da57566a09002}{CDXUTControl}.
+
+\subsection{Member Data Documentation}
+\hypertarget{class_c_d_x_u_t_check_box_ac2d09bf808d218c90f013d5f0ea5cfa0}{
+\index{CDXUTCheckBox@{CDXUTCheckBox}!m\_\-bChecked@{m\_\-bChecked}}
+\index{m\_\-bChecked@{m\_\-bChecked}!CDXUTCheckBox@{CDXUTCheckBox}}
+\subsubsection[{m\_\-bChecked}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf CDXUTCheckBox::m\_\-bChecked}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{class_c_d_x_u_t_check_box_ac2d09bf808d218c90f013d5f0ea5cfa0}
+\hypertarget{class_c_d_x_u_t_check_box_a9629eb23cf728bccd8e5850e2e49e74d}{
+\index{CDXUTCheckBox@{CDXUTCheckBox}!m\_\-rcButton@{m\_\-rcButton}}
+\index{m\_\-rcButton@{m\_\-rcButton}!CDXUTCheckBox@{CDXUTCheckBox}}
+\subsubsection[{m\_\-rcButton}]{\setlength{\rightskip}{0pt plus 5cm}RECT {\bf CDXUTCheckBox::m\_\-rcButton}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{class_c_d_x_u_t_check_box_a9629eb23cf728bccd8e5850e2e49e74d}
+\hypertarget{class_c_d_x_u_t_check_box_af80193c178d600a91d9a8a53b1f852c7}{
+\index{CDXUTCheckBox@{CDXUTCheckBox}!m\_\-rcText@{m\_\-rcText}}
+\index{m\_\-rcText@{m\_\-rcText}!CDXUTCheckBox@{CDXUTCheckBox}}
+\subsubsection[{m\_\-rcText}]{\setlength{\rightskip}{0pt plus 5cm}RECT {\bf CDXUTCheckBox::m\_\-rcText}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{class_c_d_x_u_t_check_box_af80193c178d600a91d9a8a53b1f852c7}
+
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+C:/Users/doug/Documents/Visual Studio 2008/Projects/enlightened/Enlightened/DXUT/\hyperlink{_d_x_u_tgui_8h}{DXUTgui.h}\item 
+C:/Users/doug/Documents/Visual Studio 2008/Projects/enlightened/Enlightened/DXUT/\hyperlink{_d_x_u_tgui_8cpp}{DXUTgui.cpp}\end{DoxyCompactItemize}

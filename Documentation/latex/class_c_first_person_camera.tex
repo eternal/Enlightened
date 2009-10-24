@@ -1,0 +1,124 @@
+\hypertarget{class_c_first_person_camera}{
+\section{CFirstPersonCamera Class Reference}
+\label{class_c_first_person_camera}\index{CFirstPersonCamera@{CFirstPersonCamera}}
+}
+
+
+{\ttfamily \#include $<$DXUTmisc.h$>$}
+
+Inherits \hyperlink{class_c_base_camera}{CBaseCamera}.Collaboration diagram for CFirstPersonCamera:\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_c_first_person_camera_a0c277136d6a3593f8206428eb37e0500}{CFirstPersonCamera} ()
+\item 
+virtual void \hyperlink{class_c_first_person_camera_a86e482e92a7a17db600e82ad9a29ca01}{FrameMove} (FLOAT fElapsedTime)
+\item 
+void \hyperlink{class_c_first_person_camera_a96068a7b6bd4cdeeedc72877dba948dc}{SetRotateButtons} (bool bLeft, bool bMiddle, bool bRight, bool bRotateWithoutButtonDown=false)
+\item 
+void \hyperlink{class_c_first_person_camera_a3dab3253ef350050b3cb03e6e059596a}{SetResetCursorAfterMove} (bool bResetCursorAfterMove)
+\item 
+D3DXMATRIX $\ast$ \hyperlink{class_c_first_person_camera_af24e375a682bac077ab06c24a22870e3}{GetWorldMatrix} ()
+\item 
+const D3DXVECTOR3 $\ast$ \hyperlink{class_c_first_person_camera_a0ca46ea7c1d52786b1f149b4a12be986}{GetWorldRight} () const 
+\item 
+const D3DXVECTOR3 $\ast$ \hyperlink{class_c_first_person_camera_adb1c6d58d95eb38416facd8217d9e565}{GetWorldUp} () const 
+\item 
+const D3DXVECTOR3 $\ast$ \hyperlink{class_c_first_person_camera_ab672fff686f1f13a88997176bdd2bd04}{GetWorldAhead} () const 
+\item 
+const D3DXVECTOR3 $\ast$ \hyperlink{class_c_first_person_camera_a0191f784e950825ac77825ef5c3b6295}{GetEyePt} () const 
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+D3DXMATRIX \hyperlink{class_c_first_person_camera_a4065145f014e4ea76ad27537418fd34e}{m\_\-mCameraWorld}
+\item 
+\hyperlink{_d_x_u_tgui_8cpp_a2d77ed03302b6978834ee3b6f57837fb}{int} \hyperlink{class_c_first_person_camera_a443dce2d48aa73eaecffd696eed9bd94}{m\_\-nActiveButtonMask}
+\item 
+bool \hyperlink{class_c_first_person_camera_a5fbd2d7347724f3d22c2ff78d9547c52}{m\_\-bRotateWithoutButtonDown}
+\item 
+bool \hyperlink{class_c_first_person_camera_a94d8d853ab5a68c7138dd6e47ad8b47f}{m\_\-bResetCursorAfterMove}
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_c_first_person_camera_a0c277136d6a3593f8206428eb37e0500}{
+\index{CFirstPersonCamera@{CFirstPersonCamera}!CFirstPersonCamera@{CFirstPersonCamera}}
+\index{CFirstPersonCamera@{CFirstPersonCamera}!CFirstPersonCamera@{CFirstPersonCamera}}
+\subsubsection[{CFirstPersonCamera}]{\setlength{\rightskip}{0pt plus 5cm}CFirstPersonCamera::CFirstPersonCamera ()}}
+\label{class_c_first_person_camera_a0c277136d6a3593f8206428eb37e0500}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_c_first_person_camera_a86e482e92a7a17db600e82ad9a29ca01}{
+\index{CFirstPersonCamera@{CFirstPersonCamera}!FrameMove@{FrameMove}}
+\index{FrameMove@{FrameMove}!CFirstPersonCamera@{CFirstPersonCamera}}
+\subsubsection[{FrameMove}]{\setlength{\rightskip}{0pt plus 5cm}VOID CFirstPersonCamera::FrameMove (FLOAT {\em fElapsedTime})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{class_c_first_person_camera_a86e482e92a7a17db600e82ad9a29ca01}
+
+
+Implements \hyperlink{class_c_base_camera_a21db15a8cdca60d1540d958a32708703}{CBaseCamera}.\hypertarget{class_c_first_person_camera_a0191f784e950825ac77825ef5c3b6295}{
+\index{CFirstPersonCamera@{CFirstPersonCamera}!GetEyePt@{GetEyePt}}
+\index{GetEyePt@{GetEyePt}!CFirstPersonCamera@{CFirstPersonCamera}}
+\subsubsection[{GetEyePt}]{\setlength{\rightskip}{0pt plus 5cm}const D3DXVECTOR3$\ast$ CFirstPersonCamera::GetEyePt () const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_c_first_person_camera_a0191f784e950825ac77825ef5c3b6295}
+
+
+Reimplemented from \hyperlink{class_c_base_camera_ae08632cf51cc263cdd2d78eea8af442a}{CBaseCamera}.\hypertarget{class_c_first_person_camera_ab672fff686f1f13a88997176bdd2bd04}{
+\index{CFirstPersonCamera@{CFirstPersonCamera}!GetWorldAhead@{GetWorldAhead}}
+\index{GetWorldAhead@{GetWorldAhead}!CFirstPersonCamera@{CFirstPersonCamera}}
+\subsubsection[{GetWorldAhead}]{\setlength{\rightskip}{0pt plus 5cm}const D3DXVECTOR3$\ast$ CFirstPersonCamera::GetWorldAhead () const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_c_first_person_camera_ab672fff686f1f13a88997176bdd2bd04}
+\hypertarget{class_c_first_person_camera_af24e375a682bac077ab06c24a22870e3}{
+\index{CFirstPersonCamera@{CFirstPersonCamera}!GetWorldMatrix@{GetWorldMatrix}}
+\index{GetWorldMatrix@{GetWorldMatrix}!CFirstPersonCamera@{CFirstPersonCamera}}
+\subsubsection[{GetWorldMatrix}]{\setlength{\rightskip}{0pt plus 5cm}D3DXMATRIX$\ast$ CFirstPersonCamera::GetWorldMatrix ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_c_first_person_camera_af24e375a682bac077ab06c24a22870e3}
+\hypertarget{class_c_first_person_camera_a0ca46ea7c1d52786b1f149b4a12be986}{
+\index{CFirstPersonCamera@{CFirstPersonCamera}!GetWorldRight@{GetWorldRight}}
+\index{GetWorldRight@{GetWorldRight}!CFirstPersonCamera@{CFirstPersonCamera}}
+\subsubsection[{GetWorldRight}]{\setlength{\rightskip}{0pt plus 5cm}const D3DXVECTOR3$\ast$ CFirstPersonCamera::GetWorldRight () const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_c_first_person_camera_a0ca46ea7c1d52786b1f149b4a12be986}
+\hypertarget{class_c_first_person_camera_adb1c6d58d95eb38416facd8217d9e565}{
+\index{CFirstPersonCamera@{CFirstPersonCamera}!GetWorldUp@{GetWorldUp}}
+\index{GetWorldUp@{GetWorldUp}!CFirstPersonCamera@{CFirstPersonCamera}}
+\subsubsection[{GetWorldUp}]{\setlength{\rightskip}{0pt plus 5cm}const D3DXVECTOR3$\ast$ CFirstPersonCamera::GetWorldUp () const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_c_first_person_camera_adb1c6d58d95eb38416facd8217d9e565}
+\hypertarget{class_c_first_person_camera_a3dab3253ef350050b3cb03e6e059596a}{
+\index{CFirstPersonCamera@{CFirstPersonCamera}!SetResetCursorAfterMove@{SetResetCursorAfterMove}}
+\index{SetResetCursorAfterMove@{SetResetCursorAfterMove}!CFirstPersonCamera@{CFirstPersonCamera}}
+\subsubsection[{SetResetCursorAfterMove}]{\setlength{\rightskip}{0pt plus 5cm}void CFirstPersonCamera::SetResetCursorAfterMove (bool {\em bResetCursorAfterMove})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_c_first_person_camera_a3dab3253ef350050b3cb03e6e059596a}
+\hypertarget{class_c_first_person_camera_a96068a7b6bd4cdeeedc72877dba948dc}{
+\index{CFirstPersonCamera@{CFirstPersonCamera}!SetRotateButtons@{SetRotateButtons}}
+\index{SetRotateButtons@{SetRotateButtons}!CFirstPersonCamera@{CFirstPersonCamera}}
+\subsubsection[{SetRotateButtons}]{\setlength{\rightskip}{0pt plus 5cm}void CFirstPersonCamera::SetRotateButtons (bool {\em bLeft}, \/  bool {\em bMiddle}, \/  bool {\em bRight}, \/  bool {\em bRotateWithoutButtonDown} = {\ttfamily false})}}
+\label{class_c_first_person_camera_a96068a7b6bd4cdeeedc72877dba948dc}
+
+
+\subsection{Member Data Documentation}
+\hypertarget{class_c_first_person_camera_a94d8d853ab5a68c7138dd6e47ad8b47f}{
+\index{CFirstPersonCamera@{CFirstPersonCamera}!m\_\-bResetCursorAfterMove@{m\_\-bResetCursorAfterMove}}
+\index{m\_\-bResetCursorAfterMove@{m\_\-bResetCursorAfterMove}!CFirstPersonCamera@{CFirstPersonCamera}}
+\subsubsection[{m\_\-bResetCursorAfterMove}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf CFirstPersonCamera::m\_\-bResetCursorAfterMove}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{class_c_first_person_camera_a94d8d853ab5a68c7138dd6e47ad8b47f}
+\hypertarget{class_c_first_person_camera_a5fbd2d7347724f3d22c2ff78d9547c52}{
+\index{CFirstPersonCamera@{CFirstPersonCamera}!m\_\-bRotateWithoutButtonDown@{m\_\-bRotateWithoutButtonDown}}
+\index{m\_\-bRotateWithoutButtonDown@{m\_\-bRotateWithoutButtonDown}!CFirstPersonCamera@{CFirstPersonCamera}}
+\subsubsection[{m\_\-bRotateWithoutButtonDown}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf CFirstPersonCamera::m\_\-bRotateWithoutButtonDown}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{class_c_first_person_camera_a5fbd2d7347724f3d22c2ff78d9547c52}
+\hypertarget{class_c_first_person_camera_a4065145f014e4ea76ad27537418fd34e}{
+\index{CFirstPersonCamera@{CFirstPersonCamera}!m\_\-mCameraWorld@{m\_\-mCameraWorld}}
+\index{m\_\-mCameraWorld@{m\_\-mCameraWorld}!CFirstPersonCamera@{CFirstPersonCamera}}
+\subsubsection[{m\_\-mCameraWorld}]{\setlength{\rightskip}{0pt plus 5cm}D3DXMATRIX {\bf CFirstPersonCamera::m\_\-mCameraWorld}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{class_c_first_person_camera_a4065145f014e4ea76ad27537418fd34e}
+\hypertarget{class_c_first_person_camera_a443dce2d48aa73eaecffd696eed9bd94}{
+\index{CFirstPersonCamera@{CFirstPersonCamera}!m\_\-nActiveButtonMask@{m\_\-nActiveButtonMask}}
+\index{m\_\-nActiveButtonMask@{m\_\-nActiveButtonMask}!CFirstPersonCamera@{CFirstPersonCamera}}
+\subsubsection[{m\_\-nActiveButtonMask}]{\setlength{\rightskip}{0pt plus 5cm}{\bf int} {\bf CFirstPersonCamera::m\_\-nActiveButtonMask}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{class_c_first_person_camera_a443dce2d48aa73eaecffd696eed9bd94}
+
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+C:/Users/doug/Documents/Visual Studio 2008/Projects/enlightened/Enlightened/DXUT/\hyperlink{_d_x_u_tmisc_8h}{DXUTmisc.h}\item 
+C:/Users/doug/Documents/Visual Studio 2008/Projects/enlightened/Enlightened/DXUT/\hyperlink{_d_x_u_tmisc_8cpp}{DXUTmisc.cpp}\end{DoxyCompactItemize}

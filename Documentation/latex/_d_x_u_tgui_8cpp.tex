@@ -1,0 +1,610 @@
+\hypertarget{_d_x_u_tgui_8cpp}{
+\section{C:/Users/doug/Documents/Visual Studio 2008/Projects/enlightened/Enlightened/DXUT/DXUTgui.cpp File Reference}
+\label{_d_x_u_tgui_8cpp}\index{C:/Users/doug/Documents/Visual Studio 2008/Projects/enlightened/Enlightened/DXUT/DXUTgui.cpp@{C:/Users/doug/Documents/Visual Studio 2008/Projects/enlightened/Enlightened/DXUT/DXUTgui.cpp}}
+}
+{\ttfamily \#include \char`\"{}dxstdafx.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}DXUTgui.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}DXUTsettingsDlg.h\char`\"{}}\par
+Include dependency graph for DXUTgui.cpp:\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{struct_d_x_u_t___s_c_r_e_e_n___v_e_r_t_e_x}{DXUT\_\-SCREEN\_\-VERTEX}
+\item 
+struct \hyperlink{struct_d_x_u_t___s_c_r_e_e_n___v_e_r_t_e_x___u_n_t_e_x}{DXUT\_\-SCREEN\_\-VERTEX\_\-UNTEX}
+\end{DoxyCompactItemize}
+\subsection*{Defines}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{_d_x_u_tgui_8cpp_a847d827f781702b7b7ecf13a70d0cf56}{WM\_\-XBUTTONDOWN}~0x020B
+\item 
+\#define \hyperlink{_d_x_u_tgui_8cpp_a616cb7a5bd545fb32808031dfd5f587f}{WM\_\-XBUTTONUP}~0x020C
+\item 
+\#define \hyperlink{_d_x_u_tgui_8cpp_a9d3b2a3f4572e6ec9d3ce57fec9d8083}{WM\_\-MOUSEWHEEL}~0x020A
+\item 
+\#define \hyperlink{_d_x_u_tgui_8cpp_a2a0e477b7ffd2a6e6cb81454a3238140}{WHEEL\_\-DELTA}~120
+\item 
+\#define \hyperlink{_d_x_u_tgui_8cpp_a4fa5e496081f1f06d2950f57b48cc250}{SCROLLBAR\_\-MINTHUMBSIZE}~8
+\item 
+\#define \hyperlink{_d_x_u_tgui_8cpp_ae1a24f8643c388418ae47cb782641ff5}{SCROLLBAR\_\-ARROWCLICK\_\-DELAY}~0.33
+\item 
+\#define \hyperlink{_d_x_u_tgui_8cpp_a2c317b43e0b62b026ae0ee3887732ba2}{SCROLLBAR\_\-ARROWCLICK\_\-REPEAT}~0.05
+\item 
+\#define \hyperlink{_d_x_u_tgui_8cpp_a120a87212318680eba3ad3dbd1000323}{UNISCRIBE\_\-DLLNAME}~L\char`\"{}$\backslash$$\backslash$usp10.dll\char`\"{}
+\item 
+\#define \hyperlink{_d_x_u_tgui_8cpp_a27f05d8c972a70e545b6f3e22ab26e16}{GETPROCADDRESS}(Module, APIName, Temp)
+\item 
+\#define \hyperlink{_d_x_u_tgui_8cpp_aea978568cd314cec515b31d93e53b0f0}{PLACEHOLDERPROC}(APIName)~\_\-\#\#APIName = Dummy\_\-\#\#APIName
+\item 
+\#define \hyperlink{_d_x_u_tgui_8cpp_af42058ad9f15bd5f0bc394ea66d1115d}{IMM32\_\-DLLNAME}~L\char`\"{}$\backslash$$\backslash$imm32.dll\char`\"{}
+\item 
+\#define \hyperlink{_d_x_u_tgui_8cpp_af798203147a8ca05bf6bc777e251fa07}{VER\_\-DLLNAME}~L\char`\"{}$\backslash$$\backslash$version.dll\char`\"{}
+\item 
+\#define \hyperlink{_d_x_u_tgui_8cpp_a006bb6549d3e9047d5add83ed9477023}{DXUT\_\-MAX\_\-EDITBOXLENGTH}~0xFFFF
+\item 
+\#define \hyperlink{_d_x_u_tgui_8cpp_a801363f9b00713b8a01f8e2900fc4658}{EDITBOX\_\-SCROLLEXTENT}~4
+\item 
+\#define \hyperlink{_d_x_u_tgui_8cpp_a31d551a626fdba043fcbe5a3bd756abd}{IN\_\-FLOAT\_\-CHARSET}(c)~( (c) == L'-\/' $|$$|$ (c) == L'.' $|$$|$ ( (c) $>$= L'0' \&\& (c) $<$= L'9' ) )
+\item 
+\#define \hyperlink{_d_x_u_tgui_8cpp_a9dc7d9dfab5e6df4ae9ab998faf61cf0}{CHT\_\-IMEFILENAME1}~\char`\"{}TINTLGNT.IME\char`\"{}
+\item 
+\#define \hyperlink{_d_x_u_tgui_8cpp_a76abc03f9b585aff1b50a7200b463dfb}{CHT\_\-IMEFILENAME2}~\char`\"{}CINTLGNT.IME\char`\"{}
+\item 
+\#define \hyperlink{_d_x_u_tgui_8cpp_a27df355aaa161ffaca3123936e747e46}{CHT\_\-IMEFILENAME3}~\char`\"{}MSTCIPHA.IME\char`\"{}
+\item 
+\#define \hyperlink{_d_x_u_tgui_8cpp_a822087407f383fdeb5c3744b437f266e}{CHS\_\-IMEFILENAME1}~\char`\"{}PINTLGNT.IME\char`\"{}
+\item 
+\#define \hyperlink{_d_x_u_tgui_8cpp_aef87eea3057fc5d55d714dda17f423ff}{CHS\_\-IMEFILENAME2}~\char`\"{}MSSCIPYA.IME\char`\"{}
+\item 
+\#define \hyperlink{_d_x_u_tgui_8cpp_a3e2e733d43f02ce6f08cb4f7297d0e30}{LANG\_\-CHT}~MAKELANGID(LANG\_\-CHINESE, SUBLANG\_\-CHINESE\_\-TRADITIONAL)
+\item 
+\#define \hyperlink{_d_x_u_tgui_8cpp_a3277a152d7aca399f85142b2eeb3e51b}{LANG\_\-CHS}~MAKELANGID(LANG\_\-CHINESE, SUBLANG\_\-CHINESE\_\-SIMPLIFIED)
+\item 
+\#define \hyperlink{_d_x_u_tgui_8cpp_a7312db8d89e44e69223d27a59382edb8}{\_\-CHT\_\-HKL}~( (HKL)(INT\_\-PTR)0xE0080404 )
+\item 
+\#define \hyperlink{_d_x_u_tgui_8cpp_a9a0e3bfa5602f4d982b2abe1fd8fa8fc}{\_\-CHT\_\-HKL2}~( (HKL)(INT\_\-PTR)0xE0090404 )
+\item 
+\#define \hyperlink{_d_x_u_tgui_8cpp_af1d47882c0b77f01a8e93cf1a6a12292}{\_\-CHS\_\-HKL}~( (HKL)(INT\_\-PTR)0xE00E0804 )
+\item 
+\#define \hyperlink{_d_x_u_tgui_8cpp_aa1ea838b922d2fdeb3568b6525d8f8ef}{MAKEIMEVERSION}(major, minor)~( (DWORD)( ( (BYTE)( major ) $<$$<$ 24 ) $|$ ( (BYTE)( minor ) $<$$<$ 16 ) ) )
+\item 
+\#define \hyperlink{_d_x_u_tgui_8cpp_a01c074d7ac3911eef2c4465b8446952b}{IMEID\_\-CHT\_\-VER42}~( LANG\_\-CHT $|$ MAKEIMEVERSION( 4, 2 ) )
+\item 
+\#define \hyperlink{_d_x_u_tgui_8cpp_a7e2d7d5a23b55deb74eaf9d090ae66bb}{IMEID\_\-CHT\_\-VER43}~( LANG\_\-CHT $|$ MAKEIMEVERSION( 4, 3 ) )
+\item 
+\#define \hyperlink{_d_x_u_tgui_8cpp_a5a80c755247df34d79b545f62b2a8abe}{IMEID\_\-CHT\_\-VER44}~( LANG\_\-CHT $|$ MAKEIMEVERSION( 4, 4 ) )
+\item 
+\#define \hyperlink{_d_x_u_tgui_8cpp_a0c56f971c797ef85fe44fcf65dd3493e}{IMEID\_\-CHT\_\-VER50}~( LANG\_\-CHT $|$ MAKEIMEVERSION( 5, 0 ) )
+\item 
+\#define \hyperlink{_d_x_u_tgui_8cpp_ad823e2b4862fb31c644395321bca7d62}{IMEID\_\-CHT\_\-VER51}~( LANG\_\-CHT $|$ MAKEIMEVERSION( 5, 1 ) )
+\item 
+\#define \hyperlink{_d_x_u_tgui_8cpp_a579516179cf466336c0ba65879dc9dc0}{IMEID\_\-CHT\_\-VER52}~( LANG\_\-CHT $|$ MAKEIMEVERSION( 5, 2 ) )
+\item 
+\#define \hyperlink{_d_x_u_tgui_8cpp_a428471daa95e1e567b8434ca5167b5b5}{IMEID\_\-CHT\_\-VER60}~( LANG\_\-CHT $|$ MAKEIMEVERSION( 6, 0 ) )
+\item 
+\#define \hyperlink{_d_x_u_tgui_8cpp_a6d841ff792e6624a23d86f870938469e}{IMEID\_\-CHS\_\-VER41}~( LANG\_\-CHS $|$ MAKEIMEVERSION( 4, 1 ) )
+\item 
+\#define \hyperlink{_d_x_u_tgui_8cpp_a1c356158387d314befe7295fb201e5fc}{IMEID\_\-CHS\_\-VER42}~( LANG\_\-CHS $|$ MAKEIMEVERSION( 4, 2 ) )
+\item 
+\#define \hyperlink{_d_x_u_tgui_8cpp_adfa207461ed66c182e8e3c03116f3f2c}{IMEID\_\-CHS\_\-VER53}~( LANG\_\-CHS $|$ MAKEIMEVERSION( 5, 3 ) )
+\item 
+\#define \hyperlink{_d_x_u_tgui_8cpp_a54ea04b30c9b81d479cc4eb7e3ceace7}{LCID\_\-INVARIANT}~MAKELCID(MAKELANGID(LANG\_\-ENGLISH, SUBLANG\_\-ENGLISH\_\-US), SORT\_\-DEFAULT)
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{_d_x_u_tgui_8cpp_a2d77ed03302b6978834ee3b6f57837fb}{int} \hyperlink{_d_x_u_tgui_8cpp_a211560ddd9e5c0d675406dff883e308f}{RectWidth} (RECT \&rc)
+\item 
+\hyperlink{_d_x_u_tgui_8cpp_a2d77ed03302b6978834ee3b6f57837fb}{int} \hyperlink{_d_x_u_tgui_8cpp_a066bd6b23d32cf14daa1ced1fa3771f0}{RectHeight} (RECT \&rc)
+\item 
+\hyperlink{_d_x_u_tgui_8cpp_a6c228d238e021b96b1798517535c78ac}{HRESULT} (WINAPI $\ast$CUniBuffer::\_\-ScriptApplyDigitSubstitution)(const SCRIPT\_\-DIGITSUBSTITUTE $\ast$
+\item 
+SCRIPT\_\-CONTROL SCRIPT\_\-STATE $\ast$ \hyperlink{_d_x_u_tgui_8cpp_a982a29c1bc2de38f0de85086d7614ccd}{HRESULT} (WINAPI $\ast$CUniBuffer::\_\-ScriptStringAnalyse)(HDC
+\item 
+SCRIPT\_\-CONTROL SCRIPT\_\-STATE $\ast$const void SCRIPT\_\-CONTROL SCRIPT\_\-STATE const \hyperlink{_d_x_u_tgui_8cpp_a2d77ed03302b6978834ee3b6f57837fb}{int} SCRIPT\_\-TABDEF const BYTE SCRIPT\_\-STRING\_\-ANALYSIS $\ast$ \hyperlink{_d_x_u_tgui_8cpp_ac3792f4b7a9665755dfbcaa86484679e}{HRESULT} (WINAPI $\ast$CUniBuffer::\_\-ScriptStringCPtoX)(SCRIPT\_\-STRING\_\-ANALYSIS
+\item 
+SCRIPT\_\-CONTROL SCRIPT\_\-STATE $\ast$const void SCRIPT\_\-CONTROL SCRIPT\_\-STATE const \hyperlink{_d_x_u_tgui_8cpp_a2d77ed03302b6978834ee3b6f57837fb}{int} SCRIPT\_\-TABDEF const BYTE SCRIPT\_\-STRING\_\-ANALYSIS \hyperlink{_d_x_u_tgui_8cpp_a2d77ed03302b6978834ee3b6f57837fb}{int} $\ast$ \hyperlink{_d_x_u_tgui_8cpp_a180d54b5758a868918fa5b5c8c0abc64}{HRESULT} (WINAPI $\ast$CUniBuffer::\_\-ScriptStringXtoCP)(SCRIPT\_\-STRING\_\-ANALYSIS
+\item 
+SCRIPT\_\-CONTROL SCRIPT\_\-STATE $\ast$const void SCRIPT\_\-CONTROL SCRIPT\_\-STATE const \hyperlink{_d_x_u_tgui_8cpp_a2d77ed03302b6978834ee3b6f57837fb}{int} SCRIPT\_\-TABDEF const BYTE SCRIPT\_\-STRING\_\-ANALYSIS \hyperlink{_d_x_u_tgui_8cpp_a2d77ed03302b6978834ee3b6f57837fb}{int} \hyperlink{_d_x_u_tgui_8cpp_a2d77ed03302b6978834ee3b6f57837fb}{int} \hyperlink{_d_x_u_tgui_8cpp_a2d77ed03302b6978834ee3b6f57837fb}{int} $\ast$ \hyperlink{_d_x_u_tgui_8cpp_a676d4da2b648a42d83ab753ed08fade7}{HRESULT} (WINAPI $\ast$CUniBuffer::\_\-ScriptStringFree)(SCRIPT\_\-STRING\_\-ANALYSIS $\ast$)
+\item 
+\hyperlink{_d_x_u_tgui_8cpp_a84b7d8340a79efd65fadfa1a9b665868}{BOOL} (WINAPI $\ast$CDXUTIMEEditBox::\_\-ImmUnlockIMC)(HIMC)
+\item 
+\hyperlink{_d_x_u_tgui_8cpp_ab4230bd2b2a25b286c3e9fd3da6f3ba2}{LPVOID} (WINAPI $\ast$CDXUTIMEEditBox::\_\-ImmLockIMCC)(HIMCC)
+\item 
+\hyperlink{_d_x_u_tgui_8cpp_a19d711592062841acaab21341e5e2760}{BOOL} (WINAPI $\ast$CDXUTIMEEditBox::\_\-ImmUnlockIMCC)(HIMCC)
+\item 
+\hyperlink{_d_x_u_tgui_8cpp_a837476de51cf356d96cdfb031581a339}{BOOL} (WINAPI $\ast$CDXUTIMEEditBox::\_\-ImmDisableTextFrameService)(DWORD)
+\item 
+\hyperlink{_d_x_u_tgui_8cpp_a58b1c4235a99dbef231f2a25446d3fa1}{LONG} (WINAPI $\ast$CDXUTIMEEditBox::\_\-ImmGetCompositionStringW)(HIMC
+\item 
+\hyperlink{_d_x_u_tgui_8cpp_a70a8e982ea2e0ab752cb7bef11b8b31f}{DWORD} (WINAPI $\ast$CDXUTIMEEditBox::\_\-ImmGetCandidateListW)(HIMC
+\item 
+\hyperlink{_d_x_u_tgui_8cpp_a98e5384408c30de4d2a185db5321ca7b}{HIMC} (WINAPI $\ast$CDXUTIMEEditBox::\_\-ImmGetContext)(HWND)
+\item 
+\hyperlink{_d_x_u_tgui_8cpp_ad05976ea2e0b574c8ad6a3f0d7f3ab7f}{BOOL} (WINAPI $\ast$CDXUTIMEEditBox::\_\-ImmReleaseContext)(HWND
+\item 
+\hyperlink{_d_x_u_tgui_8cpp_adfc7258352dcb8b39e13ee1d63582b5a}{HIMC} (WINAPI $\ast$CDXUTIMEEditBox::\_\-ImmAssociateContext)(HWND
+\item 
+\hyperlink{_d_x_u_tgui_8cpp_a77811b2e21e0e691707acdd29aabc49f}{BOOL} (WINAPI $\ast$CDXUTIMEEditBox::\_\-ImmGetOpenStatus)(HIMC)
+\item 
+\hyperlink{_d_x_u_tgui_8cpp_a0d315afb89381dcdefd75149589f0058}{BOOL} (WINAPI $\ast$CDXUTIMEEditBox::\_\-ImmSetOpenStatus)(HIMC
+\item 
+\hyperlink{_d_x_u_tgui_8cpp_ab5b0348a208e87c961c10fd38c6b514d}{BOOL} (WINAPI $\ast$CDXUTIMEEditBox::\_\-ImmGetConversionStatus)(HIMC
+\item 
+\hyperlink{_d_x_u_tgui_8cpp_a95b68aed21ddf8232ed6339656cb2857}{HWND} (WINAPI $\ast$CDXUTIMEEditBox::\_\-ImmGetDefaultIMEWnd)(HWND)
+\item 
+\hyperlink{_d_x_u_tgui_8cpp_adbe61a7511746349f14b5747af8af4e7}{UINT} (WINAPI $\ast$CDXUTIMEEditBox::\_\-ImmGetIMEFileNameA)(HKL
+\item 
+\hyperlink{_d_x_u_tgui_8cpp_aae3824731b5350c8c2d8c362cb35fcc1}{UINT} (WINAPI $\ast$CDXUTIMEEditBox::\_\-ImmGetVirtualKey)(HWND)
+\item 
+\hyperlink{_d_x_u_tgui_8cpp_a4d494054fae4d75cccb9fd36abfa3e68}{BOOL} (WINAPI $\ast$CDXUTIMEEditBox::\_\-ImmNotifyIME)(HIMC
+\item 
+\hyperlink{_d_x_u_tgui_8cpp_aa58ab5fabb6bb200b73bda08a27da5f8}{BOOL} (WINAPI $\ast$CDXUTIMEEditBox::\_\-ImmSetConversionStatus)(HIMC
+\item 
+\hyperlink{_d_x_u_tgui_8cpp_a0070226fa5b1a76a36dbee3588d89af2}{BOOL} (WINAPI $\ast$CDXUTIMEEditBox::\_\-ImmSimulateHotKey)(HWND
+\item 
+\hyperlink{_d_x_u_tgui_8cpp_af0f1a7454dd9438cd1c8696dab1b0b53}{BOOL} (WINAPI $\ast$CDXUTIMEEditBox::\_\-ImmIsIME)(HKL)
+\item 
+\hyperlink{_d_x_u_tgui_8cpp_a1c03118aad1925f129e7ef826a20f2bf}{UINT} (WINAPI $\ast$CDXUTIMEEditBox::\_\-GetReadingString)(HIMC
+\item 
+\hyperlink{_d_x_u_tgui_8cpp_a2092161fc52269b11343ec6dc18ba84f}{BOOL} (WINAPI $\ast$CDXUTIMEEditBox::\_\-ShowReadingWindow)(HIMC
+\item 
+\hyperlink{_d_x_u_tgui_8cpp_ac76f383e99d4e400ba9efe1afa011a34}{BOOL} (APIENTRY $\ast$CDXUTIMEEditBox::\_\-VerQueryValueA)(const LPVOID
+\item 
+\hyperlink{_d_x_u_tgui_8cpp_ae35eb7159a28d63e67eb5233927d526a}{BOOL} (APIENTRY $\ast$CDXUTIMEEditBox::\_\-GetFileVersionInfoA)(\hyperlink{_d_x_u_tgui_8cpp_a1ac6c31d2a593ae0f1396a32db06c8b7}{LPSTR}
+\item 
+\hyperlink{_d_x_u_tgui_8cpp_a4b00291232c1f7e44cd57631c65b1241}{DWORD} (APIENTRY $\ast$CDXUTIMEEditBox::\_\-GetFileVersionInfoSizeA)(\hyperlink{_d_x_u_tgui_8cpp_a1ac6c31d2a593ae0f1396a32db06c8b7}{LPSTR}
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+SCRIPT\_\-CONTROL SCRIPT\_\-STATE $\ast$const void \hyperlink{_d_x_u_tgui_8cpp_a2d77ed03302b6978834ee3b6f57837fb}{int}
+\item 
+SCRIPT\_\-CONTROL SCRIPT\_\-STATE $\ast$const void \hyperlink{_d_x_u_tgui_8cpp_a8aec363bdef0c755693c97d1757e8642}{DWORD} = CDXUTIMEEditBox::Dummy\_\-ImmGetCompositionStringW
+\item 
+SCRIPT\_\-CONTROL SCRIPT\_\-STATE $\ast$const void SCRIPT\_\-CONTROL SCRIPT\_\-STATE const \hyperlink{_d_x_u_tgui_8cpp_a2d77ed03302b6978834ee3b6f57837fb}{int} SCRIPT\_\-TABDEF const BYTE SCRIPT\_\-STRING\_\-ANALYSIS \hyperlink{_d_x_u_tgui_8cpp_a3e5b8192e7d9ffaf3542f1210aec18dd}{BOOL} = CDXUTIMEEditBox::Dummy\_\-ImmSetOpenStatus
+\item 
+\hyperlink{_d_x_u_tgui_8cpp_abd563f1fc65c6bef801a2e255af26c14}{LPVOID} = CDXUTIMEEditBox::Dummy\_\-GetFileVersionInfoA
+\item 
+\hyperlink{_d_x_u_tgui_8cpp_a3cc29f2b7b6c2b8e425ca4d42f77f31c}{LPCANDIDATELIST}
+\item 
+\hyperlink{_d_x_u_tgui_8cpp_ad9e523d44eef393e0d9be80d1e8b606c}{HIMC} = CDXUTIMEEditBox::Dummy\_\-ImmReleaseContext
+\item 
+\hyperlink{_d_x_u_tgui_8cpp_ac166c5e0d003c1b8b2bfd35a96e24436}{LPDWORD} = CDXUTIMEEditBox::Dummy\_\-ImmGetConversionStatus
+\item 
+\hyperlink{_d_x_u_tgui_8cpp_a1ac6c31d2a593ae0f1396a32db06c8b7}{LPSTR}
+\item 
+\hyperlink{_d_x_u_tgui_8cpp_afff0ab3629a68bc1bb3b2a2f4296173f}{UINT} = CDXUTIMEEditBox::Dummy\_\-ImmGetIMEFileNameA
+\item 
+\hyperlink{_d_x_u_tgui_8cpp_a6ad64a19933213d15128e5fcd09bc1a6}{LPWSTR}
+\item 
+\hyperlink{_d_x_u_tgui_8cpp_a3f2291edc03bb9ce2e52c8b893b4281d}{PINT}
+\item 
+BOOL \hyperlink{_d_x_u_tgui_8cpp_ab918a11bd94185b9daec38baf43d9417}{PUINT} = CDXUTIMEEditBox::Dummy\_\-GetReadingString
+\end{DoxyCompactItemize}
+
+
+\subsection{Define Documentation}
+\hypertarget{_d_x_u_tgui_8cpp_af1d47882c0b77f01a8e93cf1a6a12292}{
+\index{DXUTgui.cpp@{DXUTgui.cpp}!\_\-CHS\_\-HKL@{\_\-CHS\_\-HKL}}
+\index{\_\-CHS\_\-HKL@{\_\-CHS\_\-HKL}!DXUTgui.cpp@{DXUTgui.cpp}}
+\subsubsection[{\_\-CHS\_\-HKL}]{\setlength{\rightskip}{0pt plus 5cm}\#define \_\-CHS\_\-HKL~( (HKL)(INT\_\-PTR)0xE00E0804 )}}
+\label{_d_x_u_tgui_8cpp_af1d47882c0b77f01a8e93cf1a6a12292}
+\hypertarget{_d_x_u_tgui_8cpp_a7312db8d89e44e69223d27a59382edb8}{
+\index{DXUTgui.cpp@{DXUTgui.cpp}!\_\-CHT\_\-HKL@{\_\-CHT\_\-HKL}}
+\index{\_\-CHT\_\-HKL@{\_\-CHT\_\-HKL}!DXUTgui.cpp@{DXUTgui.cpp}}
+\subsubsection[{\_\-CHT\_\-HKL}]{\setlength{\rightskip}{0pt plus 5cm}\#define \_\-CHT\_\-HKL~( (HKL)(INT\_\-PTR)0xE0080404 )}}
+\label{_d_x_u_tgui_8cpp_a7312db8d89e44e69223d27a59382edb8}
+\hypertarget{_d_x_u_tgui_8cpp_a9a0e3bfa5602f4d982b2abe1fd8fa8fc}{
+\index{DXUTgui.cpp@{DXUTgui.cpp}!\_\-CHT\_\-HKL2@{\_\-CHT\_\-HKL2}}
+\index{\_\-CHT\_\-HKL2@{\_\-CHT\_\-HKL2}!DXUTgui.cpp@{DXUTgui.cpp}}
+\subsubsection[{\_\-CHT\_\-HKL2}]{\setlength{\rightskip}{0pt plus 5cm}\#define \_\-CHT\_\-HKL2~( (HKL)(INT\_\-PTR)0xE0090404 )}}
+\label{_d_x_u_tgui_8cpp_a9a0e3bfa5602f4d982b2abe1fd8fa8fc}
+\hypertarget{_d_x_u_tgui_8cpp_a822087407f383fdeb5c3744b437f266e}{
+\index{DXUTgui.cpp@{DXUTgui.cpp}!CHS\_\-IMEFILENAME1@{CHS\_\-IMEFILENAME1}}
+\index{CHS\_\-IMEFILENAME1@{CHS\_\-IMEFILENAME1}!DXUTgui.cpp@{DXUTgui.cpp}}
+\subsubsection[{CHS\_\-IMEFILENAME1}]{\setlength{\rightskip}{0pt plus 5cm}\#define CHS\_\-IMEFILENAME1~\char`\"{}PINTLGNT.IME\char`\"{}}}
+\label{_d_x_u_tgui_8cpp_a822087407f383fdeb5c3744b437f266e}
+\hypertarget{_d_x_u_tgui_8cpp_aef87eea3057fc5d55d714dda17f423ff}{
+\index{DXUTgui.cpp@{DXUTgui.cpp}!CHS\_\-IMEFILENAME2@{CHS\_\-IMEFILENAME2}}
+\index{CHS\_\-IMEFILENAME2@{CHS\_\-IMEFILENAME2}!DXUTgui.cpp@{DXUTgui.cpp}}
+\subsubsection[{CHS\_\-IMEFILENAME2}]{\setlength{\rightskip}{0pt plus 5cm}\#define CHS\_\-IMEFILENAME2~\char`\"{}MSSCIPYA.IME\char`\"{}}}
+\label{_d_x_u_tgui_8cpp_aef87eea3057fc5d55d714dda17f423ff}
+\hypertarget{_d_x_u_tgui_8cpp_a9dc7d9dfab5e6df4ae9ab998faf61cf0}{
+\index{DXUTgui.cpp@{DXUTgui.cpp}!CHT\_\-IMEFILENAME1@{CHT\_\-IMEFILENAME1}}
+\index{CHT\_\-IMEFILENAME1@{CHT\_\-IMEFILENAME1}!DXUTgui.cpp@{DXUTgui.cpp}}
+\subsubsection[{CHT\_\-IMEFILENAME1}]{\setlength{\rightskip}{0pt plus 5cm}\#define CHT\_\-IMEFILENAME1~\char`\"{}TINTLGNT.IME\char`\"{}}}
+\label{_d_x_u_tgui_8cpp_a9dc7d9dfab5e6df4ae9ab998faf61cf0}
+\hypertarget{_d_x_u_tgui_8cpp_a76abc03f9b585aff1b50a7200b463dfb}{
+\index{DXUTgui.cpp@{DXUTgui.cpp}!CHT\_\-IMEFILENAME2@{CHT\_\-IMEFILENAME2}}
+\index{CHT\_\-IMEFILENAME2@{CHT\_\-IMEFILENAME2}!DXUTgui.cpp@{DXUTgui.cpp}}
+\subsubsection[{CHT\_\-IMEFILENAME2}]{\setlength{\rightskip}{0pt plus 5cm}\#define CHT\_\-IMEFILENAME2~\char`\"{}CINTLGNT.IME\char`\"{}}}
+\label{_d_x_u_tgui_8cpp_a76abc03f9b585aff1b50a7200b463dfb}
+\hypertarget{_d_x_u_tgui_8cpp_a27df355aaa161ffaca3123936e747e46}{
+\index{DXUTgui.cpp@{DXUTgui.cpp}!CHT\_\-IMEFILENAME3@{CHT\_\-IMEFILENAME3}}
+\index{CHT\_\-IMEFILENAME3@{CHT\_\-IMEFILENAME3}!DXUTgui.cpp@{DXUTgui.cpp}}
+\subsubsection[{CHT\_\-IMEFILENAME3}]{\setlength{\rightskip}{0pt plus 5cm}\#define CHT\_\-IMEFILENAME3~\char`\"{}MSTCIPHA.IME\char`\"{}}}
+\label{_d_x_u_tgui_8cpp_a27df355aaa161ffaca3123936e747e46}
+\hypertarget{_d_x_u_tgui_8cpp_a006bb6549d3e9047d5add83ed9477023}{
+\index{DXUTgui.cpp@{DXUTgui.cpp}!DXUT\_\-MAX\_\-EDITBOXLENGTH@{DXUT\_\-MAX\_\-EDITBOXLENGTH}}
+\index{DXUT\_\-MAX\_\-EDITBOXLENGTH@{DXUT\_\-MAX\_\-EDITBOXLENGTH}!DXUTgui.cpp@{DXUTgui.cpp}}
+\subsubsection[{DXUT\_\-MAX\_\-EDITBOXLENGTH}]{\setlength{\rightskip}{0pt plus 5cm}\#define DXUT\_\-MAX\_\-EDITBOXLENGTH~0xFFFF}}
+\label{_d_x_u_tgui_8cpp_a006bb6549d3e9047d5add83ed9477023}
+\hypertarget{_d_x_u_tgui_8cpp_a801363f9b00713b8a01f8e2900fc4658}{
+\index{DXUTgui.cpp@{DXUTgui.cpp}!EDITBOX\_\-SCROLLEXTENT@{EDITBOX\_\-SCROLLEXTENT}}
+\index{EDITBOX\_\-SCROLLEXTENT@{EDITBOX\_\-SCROLLEXTENT}!DXUTgui.cpp@{DXUTgui.cpp}}
+\subsubsection[{EDITBOX\_\-SCROLLEXTENT}]{\setlength{\rightskip}{0pt plus 5cm}\#define EDITBOX\_\-SCROLLEXTENT~4}}
+\label{_d_x_u_tgui_8cpp_a801363f9b00713b8a01f8e2900fc4658}
+\hypertarget{_d_x_u_tgui_8cpp_a27f05d8c972a70e545b6f3e22ab26e16}{
+\index{DXUTgui.cpp@{DXUTgui.cpp}!GETPROCADDRESS@{GETPROCADDRESS}}
+\index{GETPROCADDRESS@{GETPROCADDRESS}!DXUTgui.cpp@{DXUTgui.cpp}}
+\subsubsection[{GETPROCADDRESS}]{\setlength{\rightskip}{0pt plus 5cm}\#define GETPROCADDRESS(Module, \/  APIName, \/  Temp)}}
+\label{_d_x_u_tgui_8cpp_a27f05d8c972a70e545b6f3e22ab26e16}
+{\bfseries Value:}
+\begin{DoxyCode}
+Temp = GetProcAddress( Module, #APIName ); \
+    if( Temp ) \
+        *(FARPROC*)&_##APIName = Temp
+\end{DoxyCode}
+\hypertarget{_d_x_u_tgui_8cpp_a6d841ff792e6624a23d86f870938469e}{
+\index{DXUTgui.cpp@{DXUTgui.cpp}!IMEID\_\-CHS\_\-VER41@{IMEID\_\-CHS\_\-VER41}}
+\index{IMEID\_\-CHS\_\-VER41@{IMEID\_\-CHS\_\-VER41}!DXUTgui.cpp@{DXUTgui.cpp}}
+\subsubsection[{IMEID\_\-CHS\_\-VER41}]{\setlength{\rightskip}{0pt plus 5cm}\#define IMEID\_\-CHS\_\-VER41~( LANG\_\-CHS $|$ MAKEIMEVERSION( 4, 1 ) )}}
+\label{_d_x_u_tgui_8cpp_a6d841ff792e6624a23d86f870938469e}
+\hypertarget{_d_x_u_tgui_8cpp_a1c356158387d314befe7295fb201e5fc}{
+\index{DXUTgui.cpp@{DXUTgui.cpp}!IMEID\_\-CHS\_\-VER42@{IMEID\_\-CHS\_\-VER42}}
+\index{IMEID\_\-CHS\_\-VER42@{IMEID\_\-CHS\_\-VER42}!DXUTgui.cpp@{DXUTgui.cpp}}
+\subsubsection[{IMEID\_\-CHS\_\-VER42}]{\setlength{\rightskip}{0pt plus 5cm}\#define IMEID\_\-CHS\_\-VER42~( LANG\_\-CHS $|$ MAKEIMEVERSION( 4, 2 ) )}}
+\label{_d_x_u_tgui_8cpp_a1c356158387d314befe7295fb201e5fc}
+\hypertarget{_d_x_u_tgui_8cpp_adfa207461ed66c182e8e3c03116f3f2c}{
+\index{DXUTgui.cpp@{DXUTgui.cpp}!IMEID\_\-CHS\_\-VER53@{IMEID\_\-CHS\_\-VER53}}
+\index{IMEID\_\-CHS\_\-VER53@{IMEID\_\-CHS\_\-VER53}!DXUTgui.cpp@{DXUTgui.cpp}}
+\subsubsection[{IMEID\_\-CHS\_\-VER53}]{\setlength{\rightskip}{0pt plus 5cm}\#define IMEID\_\-CHS\_\-VER53~( LANG\_\-CHS $|$ MAKEIMEVERSION( 5, 3 ) )}}
+\label{_d_x_u_tgui_8cpp_adfa207461ed66c182e8e3c03116f3f2c}
+\hypertarget{_d_x_u_tgui_8cpp_a01c074d7ac3911eef2c4465b8446952b}{
+\index{DXUTgui.cpp@{DXUTgui.cpp}!IMEID\_\-CHT\_\-VER42@{IMEID\_\-CHT\_\-VER42}}
+\index{IMEID\_\-CHT\_\-VER42@{IMEID\_\-CHT\_\-VER42}!DXUTgui.cpp@{DXUTgui.cpp}}
+\subsubsection[{IMEID\_\-CHT\_\-VER42}]{\setlength{\rightskip}{0pt plus 5cm}\#define IMEID\_\-CHT\_\-VER42~( LANG\_\-CHT $|$ MAKEIMEVERSION( 4, 2 ) )}}
+\label{_d_x_u_tgui_8cpp_a01c074d7ac3911eef2c4465b8446952b}
+\hypertarget{_d_x_u_tgui_8cpp_a7e2d7d5a23b55deb74eaf9d090ae66bb}{
+\index{DXUTgui.cpp@{DXUTgui.cpp}!IMEID\_\-CHT\_\-VER43@{IMEID\_\-CHT\_\-VER43}}
+\index{IMEID\_\-CHT\_\-VER43@{IMEID\_\-CHT\_\-VER43}!DXUTgui.cpp@{DXUTgui.cpp}}
+\subsubsection[{IMEID\_\-CHT\_\-VER43}]{\setlength{\rightskip}{0pt plus 5cm}\#define IMEID\_\-CHT\_\-VER43~( LANG\_\-CHT $|$ MAKEIMEVERSION( 4, 3 ) )}}
+\label{_d_x_u_tgui_8cpp_a7e2d7d5a23b55deb74eaf9d090ae66bb}
+\hypertarget{_d_x_u_tgui_8cpp_a5a80c755247df34d79b545f62b2a8abe}{
+\index{DXUTgui.cpp@{DXUTgui.cpp}!IMEID\_\-CHT\_\-VER44@{IMEID\_\-CHT\_\-VER44}}
+\index{IMEID\_\-CHT\_\-VER44@{IMEID\_\-CHT\_\-VER44}!DXUTgui.cpp@{DXUTgui.cpp}}
+\subsubsection[{IMEID\_\-CHT\_\-VER44}]{\setlength{\rightskip}{0pt plus 5cm}\#define IMEID\_\-CHT\_\-VER44~( LANG\_\-CHT $|$ MAKEIMEVERSION( 4, 4 ) )}}
+\label{_d_x_u_tgui_8cpp_a5a80c755247df34d79b545f62b2a8abe}
+\hypertarget{_d_x_u_tgui_8cpp_a0c56f971c797ef85fe44fcf65dd3493e}{
+\index{DXUTgui.cpp@{DXUTgui.cpp}!IMEID\_\-CHT\_\-VER50@{IMEID\_\-CHT\_\-VER50}}
+\index{IMEID\_\-CHT\_\-VER50@{IMEID\_\-CHT\_\-VER50}!DXUTgui.cpp@{DXUTgui.cpp}}
+\subsubsection[{IMEID\_\-CHT\_\-VER50}]{\setlength{\rightskip}{0pt plus 5cm}\#define IMEID\_\-CHT\_\-VER50~( LANG\_\-CHT $|$ MAKEIMEVERSION( 5, 0 ) )}}
+\label{_d_x_u_tgui_8cpp_a0c56f971c797ef85fe44fcf65dd3493e}
+\hypertarget{_d_x_u_tgui_8cpp_ad823e2b4862fb31c644395321bca7d62}{
+\index{DXUTgui.cpp@{DXUTgui.cpp}!IMEID\_\-CHT\_\-VER51@{IMEID\_\-CHT\_\-VER51}}
+\index{IMEID\_\-CHT\_\-VER51@{IMEID\_\-CHT\_\-VER51}!DXUTgui.cpp@{DXUTgui.cpp}}
+\subsubsection[{IMEID\_\-CHT\_\-VER51}]{\setlength{\rightskip}{0pt plus 5cm}\#define IMEID\_\-CHT\_\-VER51~( LANG\_\-CHT $|$ MAKEIMEVERSION( 5, 1 ) )}}
+\label{_d_x_u_tgui_8cpp_ad823e2b4862fb31c644395321bca7d62}
+\hypertarget{_d_x_u_tgui_8cpp_a579516179cf466336c0ba65879dc9dc0}{
+\index{DXUTgui.cpp@{DXUTgui.cpp}!IMEID\_\-CHT\_\-VER52@{IMEID\_\-CHT\_\-VER52}}
+\index{IMEID\_\-CHT\_\-VER52@{IMEID\_\-CHT\_\-VER52}!DXUTgui.cpp@{DXUTgui.cpp}}
+\subsubsection[{IMEID\_\-CHT\_\-VER52}]{\setlength{\rightskip}{0pt plus 5cm}\#define IMEID\_\-CHT\_\-VER52~( LANG\_\-CHT $|$ MAKEIMEVERSION( 5, 2 ) )}}
+\label{_d_x_u_tgui_8cpp_a579516179cf466336c0ba65879dc9dc0}
+\hypertarget{_d_x_u_tgui_8cpp_a428471daa95e1e567b8434ca5167b5b5}{
+\index{DXUTgui.cpp@{DXUTgui.cpp}!IMEID\_\-CHT\_\-VER60@{IMEID\_\-CHT\_\-VER60}}
+\index{IMEID\_\-CHT\_\-VER60@{IMEID\_\-CHT\_\-VER60}!DXUTgui.cpp@{DXUTgui.cpp}}
+\subsubsection[{IMEID\_\-CHT\_\-VER60}]{\setlength{\rightskip}{0pt plus 5cm}\#define IMEID\_\-CHT\_\-VER60~( LANG\_\-CHT $|$ MAKEIMEVERSION( 6, 0 ) )}}
+\label{_d_x_u_tgui_8cpp_a428471daa95e1e567b8434ca5167b5b5}
+\hypertarget{_d_x_u_tgui_8cpp_af42058ad9f15bd5f0bc394ea66d1115d}{
+\index{DXUTgui.cpp@{DXUTgui.cpp}!IMM32\_\-DLLNAME@{IMM32\_\-DLLNAME}}
+\index{IMM32\_\-DLLNAME@{IMM32\_\-DLLNAME}!DXUTgui.cpp@{DXUTgui.cpp}}
+\subsubsection[{IMM32\_\-DLLNAME}]{\setlength{\rightskip}{0pt plus 5cm}\#define IMM32\_\-DLLNAME~L\char`\"{}$\backslash$$\backslash$imm32.dll\char`\"{}}}
+\label{_d_x_u_tgui_8cpp_af42058ad9f15bd5f0bc394ea66d1115d}
+\hypertarget{_d_x_u_tgui_8cpp_a31d551a626fdba043fcbe5a3bd756abd}{
+\index{DXUTgui.cpp@{DXUTgui.cpp}!IN\_\-FLOAT\_\-CHARSET@{IN\_\-FLOAT\_\-CHARSET}}
+\index{IN\_\-FLOAT\_\-CHARSET@{IN\_\-FLOAT\_\-CHARSET}!DXUTgui.cpp@{DXUTgui.cpp}}
+\subsubsection[{IN\_\-FLOAT\_\-CHARSET}]{\setlength{\rightskip}{0pt plus 5cm}\#define IN\_\-FLOAT\_\-CHARSET(c)~( (c) == L'-\/' $|$$|$ (c) == L'.' $|$$|$ ( (c) $>$= L'0' \&\& (c) $<$= L'9' ) )}}
+\label{_d_x_u_tgui_8cpp_a31d551a626fdba043fcbe5a3bd756abd}
+\hypertarget{_d_x_u_tgui_8cpp_a3277a152d7aca399f85142b2eeb3e51b}{
+\index{DXUTgui.cpp@{DXUTgui.cpp}!LANG\_\-CHS@{LANG\_\-CHS}}
+\index{LANG\_\-CHS@{LANG\_\-CHS}!DXUTgui.cpp@{DXUTgui.cpp}}
+\subsubsection[{LANG\_\-CHS}]{\setlength{\rightskip}{0pt plus 5cm}\#define LANG\_\-CHS~MAKELANGID(LANG\_\-CHINESE, SUBLANG\_\-CHINESE\_\-SIMPLIFIED)}}
+\label{_d_x_u_tgui_8cpp_a3277a152d7aca399f85142b2eeb3e51b}
+\hypertarget{_d_x_u_tgui_8cpp_a3e2e733d43f02ce6f08cb4f7297d0e30}{
+\index{DXUTgui.cpp@{DXUTgui.cpp}!LANG\_\-CHT@{LANG\_\-CHT}}
+\index{LANG\_\-CHT@{LANG\_\-CHT}!DXUTgui.cpp@{DXUTgui.cpp}}
+\subsubsection[{LANG\_\-CHT}]{\setlength{\rightskip}{0pt plus 5cm}\#define LANG\_\-CHT~MAKELANGID(LANG\_\-CHINESE, SUBLANG\_\-CHINESE\_\-TRADITIONAL)}}
+\label{_d_x_u_tgui_8cpp_a3e2e733d43f02ce6f08cb4f7297d0e30}
+\hypertarget{_d_x_u_tgui_8cpp_a54ea04b30c9b81d479cc4eb7e3ceace7}{
+\index{DXUTgui.cpp@{DXUTgui.cpp}!LCID\_\-INVARIANT@{LCID\_\-INVARIANT}}
+\index{LCID\_\-INVARIANT@{LCID\_\-INVARIANT}!DXUTgui.cpp@{DXUTgui.cpp}}
+\subsubsection[{LCID\_\-INVARIANT}]{\setlength{\rightskip}{0pt plus 5cm}\#define LCID\_\-INVARIANT~MAKELCID(MAKELANGID(LANG\_\-ENGLISH, SUBLANG\_\-ENGLISH\_\-US), SORT\_\-DEFAULT)}}
+\label{_d_x_u_tgui_8cpp_a54ea04b30c9b81d479cc4eb7e3ceace7}
+\hypertarget{_d_x_u_tgui_8cpp_aa1ea838b922d2fdeb3568b6525d8f8ef}{
+\index{DXUTgui.cpp@{DXUTgui.cpp}!MAKEIMEVERSION@{MAKEIMEVERSION}}
+\index{MAKEIMEVERSION@{MAKEIMEVERSION}!DXUTgui.cpp@{DXUTgui.cpp}}
+\subsubsection[{MAKEIMEVERSION}]{\setlength{\rightskip}{0pt plus 5cm}\#define MAKEIMEVERSION(major, \/  minor)~( (DWORD)( ( (BYTE)( major ) $<$$<$ 24 ) $|$ ( (BYTE)( minor ) $<$$<$ 16 ) ) )}}
+\label{_d_x_u_tgui_8cpp_aa1ea838b922d2fdeb3568b6525d8f8ef}
+\hypertarget{_d_x_u_tgui_8cpp_aea978568cd314cec515b31d93e53b0f0}{
+\index{DXUTgui.cpp@{DXUTgui.cpp}!PLACEHOLDERPROC@{PLACEHOLDERPROC}}
+\index{PLACEHOLDERPROC@{PLACEHOLDERPROC}!DXUTgui.cpp@{DXUTgui.cpp}}
+\subsubsection[{PLACEHOLDERPROC}]{\setlength{\rightskip}{0pt plus 5cm}\#define PLACEHOLDERPROC(APIName)~\_\-\#\#APIName = Dummy\_\-\#\#APIName}}
+\label{_d_x_u_tgui_8cpp_aea978568cd314cec515b31d93e53b0f0}
+\hypertarget{_d_x_u_tgui_8cpp_ae1a24f8643c388418ae47cb782641ff5}{
+\index{DXUTgui.cpp@{DXUTgui.cpp}!SCROLLBAR\_\-ARROWCLICK\_\-DELAY@{SCROLLBAR\_\-ARROWCLICK\_\-DELAY}}
+\index{SCROLLBAR\_\-ARROWCLICK\_\-DELAY@{SCROLLBAR\_\-ARROWCLICK\_\-DELAY}!DXUTgui.cpp@{DXUTgui.cpp}}
+\subsubsection[{SCROLLBAR\_\-ARROWCLICK\_\-DELAY}]{\setlength{\rightskip}{0pt plus 5cm}\#define SCROLLBAR\_\-ARROWCLICK\_\-DELAY~0.33}}
+\label{_d_x_u_tgui_8cpp_ae1a24f8643c388418ae47cb782641ff5}
+\hypertarget{_d_x_u_tgui_8cpp_a2c317b43e0b62b026ae0ee3887732ba2}{
+\index{DXUTgui.cpp@{DXUTgui.cpp}!SCROLLBAR\_\-ARROWCLICK\_\-REPEAT@{SCROLLBAR\_\-ARROWCLICK\_\-REPEAT}}
+\index{SCROLLBAR\_\-ARROWCLICK\_\-REPEAT@{SCROLLBAR\_\-ARROWCLICK\_\-REPEAT}!DXUTgui.cpp@{DXUTgui.cpp}}
+\subsubsection[{SCROLLBAR\_\-ARROWCLICK\_\-REPEAT}]{\setlength{\rightskip}{0pt plus 5cm}\#define SCROLLBAR\_\-ARROWCLICK\_\-REPEAT~0.05}}
+\label{_d_x_u_tgui_8cpp_a2c317b43e0b62b026ae0ee3887732ba2}
+\hypertarget{_d_x_u_tgui_8cpp_a4fa5e496081f1f06d2950f57b48cc250}{
+\index{DXUTgui.cpp@{DXUTgui.cpp}!SCROLLBAR\_\-MINTHUMBSIZE@{SCROLLBAR\_\-MINTHUMBSIZE}}
+\index{SCROLLBAR\_\-MINTHUMBSIZE@{SCROLLBAR\_\-MINTHUMBSIZE}!DXUTgui.cpp@{DXUTgui.cpp}}
+\subsubsection[{SCROLLBAR\_\-MINTHUMBSIZE}]{\setlength{\rightskip}{0pt plus 5cm}\#define SCROLLBAR\_\-MINTHUMBSIZE~8}}
+\label{_d_x_u_tgui_8cpp_a4fa5e496081f1f06d2950f57b48cc250}
+\hypertarget{_d_x_u_tgui_8cpp_a120a87212318680eba3ad3dbd1000323}{
+\index{DXUTgui.cpp@{DXUTgui.cpp}!UNISCRIBE\_\-DLLNAME@{UNISCRIBE\_\-DLLNAME}}
+\index{UNISCRIBE\_\-DLLNAME@{UNISCRIBE\_\-DLLNAME}!DXUTgui.cpp@{DXUTgui.cpp}}
+\subsubsection[{UNISCRIBE\_\-DLLNAME}]{\setlength{\rightskip}{0pt plus 5cm}\#define UNISCRIBE\_\-DLLNAME~L\char`\"{}$\backslash$$\backslash$usp10.dll\char`\"{}}}
+\label{_d_x_u_tgui_8cpp_a120a87212318680eba3ad3dbd1000323}
+\hypertarget{_d_x_u_tgui_8cpp_af798203147a8ca05bf6bc777e251fa07}{
+\index{DXUTgui.cpp@{DXUTgui.cpp}!VER\_\-DLLNAME@{VER\_\-DLLNAME}}
+\index{VER\_\-DLLNAME@{VER\_\-DLLNAME}!DXUTgui.cpp@{DXUTgui.cpp}}
+\subsubsection[{VER\_\-DLLNAME}]{\setlength{\rightskip}{0pt plus 5cm}\#define VER\_\-DLLNAME~L\char`\"{}$\backslash$$\backslash$version.dll\char`\"{}}}
+\label{_d_x_u_tgui_8cpp_af798203147a8ca05bf6bc777e251fa07}
+\hypertarget{_d_x_u_tgui_8cpp_a2a0e477b7ffd2a6e6cb81454a3238140}{
+\index{DXUTgui.cpp@{DXUTgui.cpp}!WHEEL\_\-DELTA@{WHEEL\_\-DELTA}}
+\index{WHEEL\_\-DELTA@{WHEEL\_\-DELTA}!DXUTgui.cpp@{DXUTgui.cpp}}
+\subsubsection[{WHEEL\_\-DELTA}]{\setlength{\rightskip}{0pt plus 5cm}\#define WHEEL\_\-DELTA~120}}
+\label{_d_x_u_tgui_8cpp_a2a0e477b7ffd2a6e6cb81454a3238140}
+\hypertarget{_d_x_u_tgui_8cpp_a9d3b2a3f4572e6ec9d3ce57fec9d8083}{
+\index{DXUTgui.cpp@{DXUTgui.cpp}!WM\_\-MOUSEWHEEL@{WM\_\-MOUSEWHEEL}}
+\index{WM\_\-MOUSEWHEEL@{WM\_\-MOUSEWHEEL}!DXUTgui.cpp@{DXUTgui.cpp}}
+\subsubsection[{WM\_\-MOUSEWHEEL}]{\setlength{\rightskip}{0pt plus 5cm}\#define WM\_\-MOUSEWHEEL~0x020A}}
+\label{_d_x_u_tgui_8cpp_a9d3b2a3f4572e6ec9d3ce57fec9d8083}
+\hypertarget{_d_x_u_tgui_8cpp_a847d827f781702b7b7ecf13a70d0cf56}{
+\index{DXUTgui.cpp@{DXUTgui.cpp}!WM\_\-XBUTTONDOWN@{WM\_\-XBUTTONDOWN}}
+\index{WM\_\-XBUTTONDOWN@{WM\_\-XBUTTONDOWN}!DXUTgui.cpp@{DXUTgui.cpp}}
+\subsubsection[{WM\_\-XBUTTONDOWN}]{\setlength{\rightskip}{0pt plus 5cm}\#define WM\_\-XBUTTONDOWN~0x020B}}
+\label{_d_x_u_tgui_8cpp_a847d827f781702b7b7ecf13a70d0cf56}
+\hypertarget{_d_x_u_tgui_8cpp_a616cb7a5bd545fb32808031dfd5f587f}{
+\index{DXUTgui.cpp@{DXUTgui.cpp}!WM\_\-XBUTTONUP@{WM\_\-XBUTTONUP}}
+\index{WM\_\-XBUTTONUP@{WM\_\-XBUTTONUP}!DXUTgui.cpp@{DXUTgui.cpp}}
+\subsubsection[{WM\_\-XBUTTONUP}]{\setlength{\rightskip}{0pt plus 5cm}\#define WM\_\-XBUTTONUP~0x020C}}
+\label{_d_x_u_tgui_8cpp_a616cb7a5bd545fb32808031dfd5f587f}
+
+
+\subsection{Function Documentation}
+\hypertarget{_d_x_u_tgui_8cpp_ae35eb7159a28d63e67eb5233927d526a}{
+\index{DXUTgui.cpp@{DXUTgui.cpp}!BOOL@{BOOL}}
+\index{BOOL@{BOOL}!DXUTgui.cpp@{DXUTgui.cpp}}
+\subsubsection[{BOOL}]{\setlength{\rightskip}{0pt plus 5cm}BOOL (APIENTRY $\ast$CDXUTIMEEditBox::\_\-GetFileVersionInfoA)}}
+\label{_d_x_u_tgui_8cpp_ae35eb7159a28d63e67eb5233927d526a}
+\hypertarget{_d_x_u_tgui_8cpp_ac76f383e99d4e400ba9efe1afa011a34}{
+\index{DXUTgui.cpp@{DXUTgui.cpp}!BOOL@{BOOL}}
+\index{BOOL@{BOOL}!DXUTgui.cpp@{DXUTgui.cpp}}
+\subsubsection[{BOOL}]{\setlength{\rightskip}{0pt plus 5cm}BOOL (APIENTRY $\ast$CDXUTIMEEditBox::\_\-VerQueryValueA) const}}
+\label{_d_x_u_tgui_8cpp_ac76f383e99d4e400ba9efe1afa011a34}
+\hypertarget{_d_x_u_tgui_8cpp_a2092161fc52269b11343ec6dc18ba84f}{
+\index{DXUTgui.cpp@{DXUTgui.cpp}!BOOL@{BOOL}}
+\index{BOOL@{BOOL}!DXUTgui.cpp@{DXUTgui.cpp}}
+\subsubsection[{BOOL}]{\setlength{\rightskip}{0pt plus 5cm}BOOL (WINAPI $\ast$CDXUTIMEEditBox::\_\-ShowReadingWindow)}}
+\label{_d_x_u_tgui_8cpp_a2092161fc52269b11343ec6dc18ba84f}
+\hypertarget{_d_x_u_tgui_8cpp_af0f1a7454dd9438cd1c8696dab1b0b53}{
+\index{DXUTgui.cpp@{DXUTgui.cpp}!BOOL@{BOOL}}
+\index{BOOL@{BOOL}!DXUTgui.cpp@{DXUTgui.cpp}}
+\subsubsection[{BOOL}]{\setlength{\rightskip}{0pt plus 5cm}BOOL (WINAPI $\ast$CDXUTIMEEditBox::\_\-ImmIsIME)}}
+\label{_d_x_u_tgui_8cpp_af0f1a7454dd9438cd1c8696dab1b0b53}
+\hypertarget{_d_x_u_tgui_8cpp_a0070226fa5b1a76a36dbee3588d89af2}{
+\index{DXUTgui.cpp@{DXUTgui.cpp}!BOOL@{BOOL}}
+\index{BOOL@{BOOL}!DXUTgui.cpp@{DXUTgui.cpp}}
+\subsubsection[{BOOL}]{\setlength{\rightskip}{0pt plus 5cm}BOOL (WINAPI $\ast$CDXUTIMEEditBox::\_\-ImmSimulateHotKey)}}
+\label{_d_x_u_tgui_8cpp_a0070226fa5b1a76a36dbee3588d89af2}
+\hypertarget{_d_x_u_tgui_8cpp_aa58ab5fabb6bb200b73bda08a27da5f8}{
+\index{DXUTgui.cpp@{DXUTgui.cpp}!BOOL@{BOOL}}
+\index{BOOL@{BOOL}!DXUTgui.cpp@{DXUTgui.cpp}}
+\subsubsection[{BOOL}]{\setlength{\rightskip}{0pt plus 5cm}BOOL (WINAPI $\ast$CDXUTIMEEditBox::\_\-ImmSetConversionStatus)}}
+\label{_d_x_u_tgui_8cpp_aa58ab5fabb6bb200b73bda08a27da5f8}
+\hypertarget{_d_x_u_tgui_8cpp_a4d494054fae4d75cccb9fd36abfa3e68}{
+\index{DXUTgui.cpp@{DXUTgui.cpp}!BOOL@{BOOL}}
+\index{BOOL@{BOOL}!DXUTgui.cpp@{DXUTgui.cpp}}
+\subsubsection[{BOOL}]{\setlength{\rightskip}{0pt plus 5cm}BOOL (WINAPI $\ast$CDXUTIMEEditBox::\_\-ImmNotifyIME)}}
+\label{_d_x_u_tgui_8cpp_a4d494054fae4d75cccb9fd36abfa3e68}
+\hypertarget{_d_x_u_tgui_8cpp_ab5b0348a208e87c961c10fd38c6b514d}{
+\index{DXUTgui.cpp@{DXUTgui.cpp}!BOOL@{BOOL}}
+\index{BOOL@{BOOL}!DXUTgui.cpp@{DXUTgui.cpp}}
+\subsubsection[{BOOL}]{\setlength{\rightskip}{0pt plus 5cm}BOOL (WINAPI $\ast$CDXUTIMEEditBox::\_\-ImmGetConversionStatus)}}
+\label{_d_x_u_tgui_8cpp_ab5b0348a208e87c961c10fd38c6b514d}
+\hypertarget{_d_x_u_tgui_8cpp_a0d315afb89381dcdefd75149589f0058}{
+\index{DXUTgui.cpp@{DXUTgui.cpp}!BOOL@{BOOL}}
+\index{BOOL@{BOOL}!DXUTgui.cpp@{DXUTgui.cpp}}
+\subsubsection[{BOOL}]{\setlength{\rightskip}{0pt plus 5cm}BOOL (WINAPI $\ast$CDXUTIMEEditBox::\_\-ImmSetOpenStatus)}}
+\label{_d_x_u_tgui_8cpp_a0d315afb89381dcdefd75149589f0058}
+\hypertarget{_d_x_u_tgui_8cpp_a77811b2e21e0e691707acdd29aabc49f}{
+\index{DXUTgui.cpp@{DXUTgui.cpp}!BOOL@{BOOL}}
+\index{BOOL@{BOOL}!DXUTgui.cpp@{DXUTgui.cpp}}
+\subsubsection[{BOOL}]{\setlength{\rightskip}{0pt plus 5cm}BOOL (WINAPI $\ast$CDXUTIMEEditBox::\_\-ImmGetOpenStatus)}}
+\label{_d_x_u_tgui_8cpp_a77811b2e21e0e691707acdd29aabc49f}
+\hypertarget{_d_x_u_tgui_8cpp_ad05976ea2e0b574c8ad6a3f0d7f3ab7f}{
+\index{DXUTgui.cpp@{DXUTgui.cpp}!BOOL@{BOOL}}
+\index{BOOL@{BOOL}!DXUTgui.cpp@{DXUTgui.cpp}}
+\subsubsection[{BOOL}]{\setlength{\rightskip}{0pt plus 5cm}BOOL (WINAPI $\ast$CDXUTIMEEditBox::\_\-ImmReleaseContext)}}
+\label{_d_x_u_tgui_8cpp_ad05976ea2e0b574c8ad6a3f0d7f3ab7f}
+\hypertarget{_d_x_u_tgui_8cpp_a837476de51cf356d96cdfb031581a339}{
+\index{DXUTgui.cpp@{DXUTgui.cpp}!BOOL@{BOOL}}
+\index{BOOL@{BOOL}!DXUTgui.cpp@{DXUTgui.cpp}}
+\subsubsection[{BOOL}]{\setlength{\rightskip}{0pt plus 5cm}BOOL (WINAPI $\ast$CDXUTIMEEditBox::\_\-ImmDisableTextFrameService)}}
+\label{_d_x_u_tgui_8cpp_a837476de51cf356d96cdfb031581a339}
+\hypertarget{_d_x_u_tgui_8cpp_a19d711592062841acaab21341e5e2760}{
+\index{DXUTgui.cpp@{DXUTgui.cpp}!BOOL@{BOOL}}
+\index{BOOL@{BOOL}!DXUTgui.cpp@{DXUTgui.cpp}}
+\subsubsection[{BOOL}]{\setlength{\rightskip}{0pt plus 5cm}BOOL (WINAPI $\ast$CDXUTIMEEditBox::\_\-ImmUnlockIMCC)}}
+\label{_d_x_u_tgui_8cpp_a19d711592062841acaab21341e5e2760}
+\hypertarget{_d_x_u_tgui_8cpp_a84b7d8340a79efd65fadfa1a9b665868}{
+\index{DXUTgui.cpp@{DXUTgui.cpp}!BOOL@{BOOL}}
+\index{BOOL@{BOOL}!DXUTgui.cpp@{DXUTgui.cpp}}
+\subsubsection[{BOOL}]{\setlength{\rightskip}{0pt plus 5cm}BOOL (WINAPI $\ast$CDXUTIMEEditBox::\_\-ImmUnlockIMC)}}
+\label{_d_x_u_tgui_8cpp_a84b7d8340a79efd65fadfa1a9b665868}
+\hypertarget{_d_x_u_tgui_8cpp_a4b00291232c1f7e44cd57631c65b1241}{
+\index{DXUTgui.cpp@{DXUTgui.cpp}!DWORD@{DWORD}}
+\index{DWORD@{DWORD}!DXUTgui.cpp@{DXUTgui.cpp}}
+\subsubsection[{DWORD}]{\setlength{\rightskip}{0pt plus 5cm}DWORD (APIENTRY $\ast$CDXUTIMEEditBox::\_\-GetFileVersionInfoSizeA)}}
+\label{_d_x_u_tgui_8cpp_a4b00291232c1f7e44cd57631c65b1241}
+\hypertarget{_d_x_u_tgui_8cpp_a70a8e982ea2e0ab752cb7bef11b8b31f}{
+\index{DXUTgui.cpp@{DXUTgui.cpp}!DWORD@{DWORD}}
+\index{DWORD@{DWORD}!DXUTgui.cpp@{DXUTgui.cpp}}
+\subsubsection[{DWORD}]{\setlength{\rightskip}{0pt plus 5cm}DWORD (WINAPI $\ast$CDXUTIMEEditBox::\_\-ImmGetCandidateListW)}}
+\label{_d_x_u_tgui_8cpp_a70a8e982ea2e0ab752cb7bef11b8b31f}
+\hypertarget{_d_x_u_tgui_8cpp_adfc7258352dcb8b39e13ee1d63582b5a}{
+\index{DXUTgui.cpp@{DXUTgui.cpp}!HIMC@{HIMC}}
+\index{HIMC@{HIMC}!DXUTgui.cpp@{DXUTgui.cpp}}
+\subsubsection[{HIMC}]{\setlength{\rightskip}{0pt plus 5cm}HIMC (WINAPI $\ast$CDXUTIMEEditBox::\_\-ImmAssociateContext)}}
+\label{_d_x_u_tgui_8cpp_adfc7258352dcb8b39e13ee1d63582b5a}
+\hypertarget{_d_x_u_tgui_8cpp_a98e5384408c30de4d2a185db5321ca7b}{
+\index{DXUTgui.cpp@{DXUTgui.cpp}!HIMC@{HIMC}}
+\index{HIMC@{HIMC}!DXUTgui.cpp@{DXUTgui.cpp}}
+\subsubsection[{HIMC}]{\setlength{\rightskip}{0pt plus 5cm}HIMC (WINAPI $\ast$CDXUTIMEEditBox::\_\-ImmGetContext)}}
+\label{_d_x_u_tgui_8cpp_a98e5384408c30de4d2a185db5321ca7b}
+\hypertarget{_d_x_u_tgui_8cpp_a676d4da2b648a42d83ab753ed08fade7}{
+\index{DXUTgui.cpp@{DXUTgui.cpp}!HRESULT@{HRESULT}}
+\index{HRESULT@{HRESULT}!DXUTgui.cpp@{DXUTgui.cpp}}
+\subsubsection[{HRESULT}]{\setlength{\rightskip}{0pt plus 5cm}SCRIPT\_\-CONTROL SCRIPT\_\-STATE$\ast$ const void SCRIPT\_\-CONTROL SCRIPT\_\-STATE const {\bf int} SCRIPT\_\-TABDEF const BYTE SCRIPT\_\-STRING\_\-ANALYSIS {\bf int} {\bf int} {\bf int}$\ast$ HRESULT (WINAPI $\ast$CUniBuffer::\_\-ScriptStringFree)}}
+\label{_d_x_u_tgui_8cpp_a676d4da2b648a42d83ab753ed08fade7}
+\begin{Desc}
+\item[Type Constraints]\begin{description}
+\end{description}
+\end{Desc}
+\hypertarget{_d_x_u_tgui_8cpp_a180d54b5758a868918fa5b5c8c0abc64}{
+\index{DXUTgui.cpp@{DXUTgui.cpp}!HRESULT@{HRESULT}}
+\index{HRESULT@{HRESULT}!DXUTgui.cpp@{DXUTgui.cpp}}
+\subsubsection[{HRESULT}]{\setlength{\rightskip}{0pt plus 5cm}SCRIPT\_\-CONTROL SCRIPT\_\-STATE$\ast$ const void SCRIPT\_\-CONTROL SCRIPT\_\-STATE const {\bf int} SCRIPT\_\-TABDEF const BYTE SCRIPT\_\-STRING\_\-ANALYSIS {\bf int}$\ast$ HRESULT (WINAPI $\ast$CUniBuffer::\_\-ScriptStringXtoCP)}}
+\label{_d_x_u_tgui_8cpp_a180d54b5758a868918fa5b5c8c0abc64}
+\begin{Desc}
+\item[Type Constraints]\begin{description}
+\end{description}
+\end{Desc}
+\hypertarget{_d_x_u_tgui_8cpp_ac3792f4b7a9665755dfbcaa86484679e}{
+\index{DXUTgui.cpp@{DXUTgui.cpp}!HRESULT@{HRESULT}}
+\index{HRESULT@{HRESULT}!DXUTgui.cpp@{DXUTgui.cpp}}
+\subsubsection[{HRESULT}]{\setlength{\rightskip}{0pt plus 5cm}SCRIPT\_\-CONTROL SCRIPT\_\-STATE$\ast$ const void SCRIPT\_\-CONTROL SCRIPT\_\-STATE const {\bf int} SCRIPT\_\-TABDEF const BYTE SCRIPT\_\-STRING\_\-ANALYSIS$\ast$ HRESULT (WINAPI $\ast$CUniBuffer::\_\-ScriptStringCPtoX)}}
+\label{_d_x_u_tgui_8cpp_ac3792f4b7a9665755dfbcaa86484679e}
+\begin{Desc}
+\item[Type Constraints]\begin{description}
+\end{description}
+\end{Desc}
+\hypertarget{_d_x_u_tgui_8cpp_a982a29c1bc2de38f0de85086d7614ccd}{
+\index{DXUTgui.cpp@{DXUTgui.cpp}!HRESULT@{HRESULT}}
+\index{HRESULT@{HRESULT}!DXUTgui.cpp@{DXUTgui.cpp}}
+\subsubsection[{HRESULT}]{\setlength{\rightskip}{0pt plus 5cm}SCRIPT\_\-CONTROL SCRIPT\_\-STATE$\ast$ HRESULT (WINAPI $\ast$CUniBuffer::\_\-ScriptStringAnalyse)}}
+\label{_d_x_u_tgui_8cpp_a982a29c1bc2de38f0de85086d7614ccd}
+\hypertarget{_d_x_u_tgui_8cpp_a6c228d238e021b96b1798517535c78ac}{
+\index{DXUTgui.cpp@{DXUTgui.cpp}!HRESULT@{HRESULT}}
+\index{HRESULT@{HRESULT}!DXUTgui.cpp@{DXUTgui.cpp}}
+\subsubsection[{HRESULT}]{\setlength{\rightskip}{0pt plus 5cm}HRESULT (WINAPI $\ast$CUniBuffer::\_\-ScriptApplyDigitSubstitution) const}}
+\label{_d_x_u_tgui_8cpp_a6c228d238e021b96b1798517535c78ac}
+\hypertarget{_d_x_u_tgui_8cpp_a95b68aed21ddf8232ed6339656cb2857}{
+\index{DXUTgui.cpp@{DXUTgui.cpp}!HWND@{HWND}}
+\index{HWND@{HWND}!DXUTgui.cpp@{DXUTgui.cpp}}
+\subsubsection[{HWND}]{\setlength{\rightskip}{0pt plus 5cm}HWND (WINAPI $\ast$CDXUTIMEEditBox::\_\-ImmGetDefaultIMEWnd)}}
+\label{_d_x_u_tgui_8cpp_a95b68aed21ddf8232ed6339656cb2857}
+\hypertarget{_d_x_u_tgui_8cpp_a58b1c4235a99dbef231f2a25446d3fa1}{
+\index{DXUTgui.cpp@{DXUTgui.cpp}!LONG@{LONG}}
+\index{LONG@{LONG}!DXUTgui.cpp@{DXUTgui.cpp}}
+\subsubsection[{LONG}]{\setlength{\rightskip}{0pt plus 5cm}LONG (WINAPI $\ast$CDXUTIMEEditBox::\_\-ImmGetCompositionStringW)}}
+\label{_d_x_u_tgui_8cpp_a58b1c4235a99dbef231f2a25446d3fa1}
+\hypertarget{_d_x_u_tgui_8cpp_ab4230bd2b2a25b286c3e9fd3da6f3ba2}{
+\index{DXUTgui.cpp@{DXUTgui.cpp}!LPVOID@{LPVOID}}
+\index{LPVOID@{LPVOID}!DXUTgui.cpp@{DXUTgui.cpp}}
+\subsubsection[{LPVOID}]{\setlength{\rightskip}{0pt plus 5cm}LPVOID (WINAPI $\ast$CDXUTIMEEditBox::\_\-ImmLockIMCC)}}
+\label{_d_x_u_tgui_8cpp_ab4230bd2b2a25b286c3e9fd3da6f3ba2}
+\hypertarget{_d_x_u_tgui_8cpp_a066bd6b23d32cf14daa1ced1fa3771f0}{
+\index{DXUTgui.cpp@{DXUTgui.cpp}!RectHeight@{RectHeight}}
+\index{RectHeight@{RectHeight}!DXUTgui.cpp@{DXUTgui.cpp}}
+\subsubsection[{RectHeight}]{\setlength{\rightskip}{0pt plus 5cm}{\bf int} RectHeight (RECT \& {\em rc})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{_d_x_u_tgui_8cpp_a066bd6b23d32cf14daa1ced1fa3771f0}
+\hypertarget{_d_x_u_tgui_8cpp_a211560ddd9e5c0d675406dff883e308f}{
+\index{DXUTgui.cpp@{DXUTgui.cpp}!RectWidth@{RectWidth}}
+\index{RectWidth@{RectWidth}!DXUTgui.cpp@{DXUTgui.cpp}}
+\subsubsection[{RectWidth}]{\setlength{\rightskip}{0pt plus 5cm}{\bf int} RectWidth (RECT \& {\em rc})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{_d_x_u_tgui_8cpp_a211560ddd9e5c0d675406dff883e308f}
+\hypertarget{_d_x_u_tgui_8cpp_a1c03118aad1925f129e7ef826a20f2bf}{
+\index{DXUTgui.cpp@{DXUTgui.cpp}!UINT@{UINT}}
+\index{UINT@{UINT}!DXUTgui.cpp@{DXUTgui.cpp}}
+\subsubsection[{UINT}]{\setlength{\rightskip}{0pt plus 5cm}UINT (WINAPI $\ast$CDXUTIMEEditBox::\_\-GetReadingString)}}
+\label{_d_x_u_tgui_8cpp_a1c03118aad1925f129e7ef826a20f2bf}
+\hypertarget{_d_x_u_tgui_8cpp_aae3824731b5350c8c2d8c362cb35fcc1}{
+\index{DXUTgui.cpp@{DXUTgui.cpp}!UINT@{UINT}}
+\index{UINT@{UINT}!DXUTgui.cpp@{DXUTgui.cpp}}
+\subsubsection[{UINT}]{\setlength{\rightskip}{0pt plus 5cm}UINT (WINAPI $\ast$CDXUTIMEEditBox::\_\-ImmGetVirtualKey)}}
+\label{_d_x_u_tgui_8cpp_aae3824731b5350c8c2d8c362cb35fcc1}
+\hypertarget{_d_x_u_tgui_8cpp_adbe61a7511746349f14b5747af8af4e7}{
+\index{DXUTgui.cpp@{DXUTgui.cpp}!UINT@{UINT}}
+\index{UINT@{UINT}!DXUTgui.cpp@{DXUTgui.cpp}}
+\subsubsection[{UINT}]{\setlength{\rightskip}{0pt plus 5cm}UINT (WINAPI $\ast$CDXUTIMEEditBox::\_\-ImmGetIMEFileNameA)}}
+\label{_d_x_u_tgui_8cpp_adbe61a7511746349f14b5747af8af4e7}
+
+
+\subsection{Variable Documentation}
+\hypertarget{_d_x_u_tgui_8cpp_a3e5b8192e7d9ffaf3542f1210aec18dd}{
+\index{DXUTgui.cpp@{DXUTgui.cpp}!BOOL@{BOOL}}
+\index{BOOL@{BOOL}!DXUTgui.cpp@{DXUTgui.cpp}}
+\subsubsection[{BOOL}]{\setlength{\rightskip}{0pt plus 5cm}BOOL = CDXUTIMEEditBox::Dummy\_\-ImmSetOpenStatus}}
+\label{_d_x_u_tgui_8cpp_a3e5b8192e7d9ffaf3542f1210aec18dd}
+\hypertarget{_d_x_u_tgui_8cpp_a8aec363bdef0c755693c97d1757e8642}{
+\index{DXUTgui.cpp@{DXUTgui.cpp}!DWORD@{DWORD}}
+\index{DWORD@{DWORD}!DXUTgui.cpp@{DXUTgui.cpp}}
+\subsubsection[{DWORD}]{\setlength{\rightskip}{0pt plus 5cm}DWORD = CDXUTIMEEditBox::Dummy\_\-ImmGetCompositionStringW}}
+\label{_d_x_u_tgui_8cpp_a8aec363bdef0c755693c97d1757e8642}
+\hypertarget{_d_x_u_tgui_8cpp_ad9e523d44eef393e0d9be80d1e8b606c}{
+\index{DXUTgui.cpp@{DXUTgui.cpp}!HIMC@{HIMC}}
+\index{HIMC@{HIMC}!DXUTgui.cpp@{DXUTgui.cpp}}
+\subsubsection[{HIMC}]{\setlength{\rightskip}{0pt plus 5cm}HIMC = CDXUTIMEEditBox::Dummy\_\-ImmReleaseContext}}
+\label{_d_x_u_tgui_8cpp_ad9e523d44eef393e0d9be80d1e8b606c}
+\hypertarget{_d_x_u_tgui_8cpp_a2d77ed03302b6978834ee3b6f57837fb}{
+\index{DXUTgui.cpp@{DXUTgui.cpp}!int@{int}}
+\index{int@{int}!DXUTgui.cpp@{DXUTgui.cpp}}
+\subsubsection[{int}]{\setlength{\rightskip}{0pt plus 5cm}SCRIPT\_\-CONTROL SCRIPT\_\-STATE $\ast$const void SCRIPT\_\-CONTROL SCRIPT\_\-STATE const {\bf int} SCRIPT\_\-TABDEF const BYTE SCRIPT\_\-STRING\_\-ANALYSIS {\bf int} $\ast$ {\bf int}}}
+\label{_d_x_u_tgui_8cpp_a2d77ed03302b6978834ee3b6f57837fb}
+\hypertarget{_d_x_u_tgui_8cpp_a3cc29f2b7b6c2b8e425ca4d42f77f31c}{
+\index{DXUTgui.cpp@{DXUTgui.cpp}!LPCANDIDATELIST@{LPCANDIDATELIST}}
+\index{LPCANDIDATELIST@{LPCANDIDATELIST}!DXUTgui.cpp@{DXUTgui.cpp}}
+\subsubsection[{LPCANDIDATELIST}]{\setlength{\rightskip}{0pt plus 5cm}{\bf LPCANDIDATELIST}}}
+\label{_d_x_u_tgui_8cpp_a3cc29f2b7b6c2b8e425ca4d42f77f31c}
+\hypertarget{_d_x_u_tgui_8cpp_ac166c5e0d003c1b8b2bfd35a96e24436}{
+\index{DXUTgui.cpp@{DXUTgui.cpp}!LPDWORD@{LPDWORD}}
+\index{LPDWORD@{LPDWORD}!DXUTgui.cpp@{DXUTgui.cpp}}
+\subsubsection[{LPDWORD}]{\setlength{\rightskip}{0pt plus 5cm}{\bf LPDWORD} = CDXUTIMEEditBox::Dummy\_\-ImmGetConversionStatus}}
+\label{_d_x_u_tgui_8cpp_ac166c5e0d003c1b8b2bfd35a96e24436}
+\hypertarget{_d_x_u_tgui_8cpp_a1ac6c31d2a593ae0f1396a32db06c8b7}{
+\index{DXUTgui.cpp@{DXUTgui.cpp}!LPSTR@{LPSTR}}
+\index{LPSTR@{LPSTR}!DXUTgui.cpp@{DXUTgui.cpp}}
+\subsubsection[{LPSTR}]{\setlength{\rightskip}{0pt plus 5cm}{\bf LPSTR}}}
+\label{_d_x_u_tgui_8cpp_a1ac6c31d2a593ae0f1396a32db06c8b7}
+\hypertarget{_d_x_u_tgui_8cpp_abd563f1fc65c6bef801a2e255af26c14}{
+\index{DXUTgui.cpp@{DXUTgui.cpp}!LPVOID@{LPVOID}}
+\index{LPVOID@{LPVOID}!DXUTgui.cpp@{DXUTgui.cpp}}
+\subsubsection[{LPVOID}]{\setlength{\rightskip}{0pt plus 5cm}LPVOID = CDXUTIMEEditBox::Dummy\_\-GetFileVersionInfoA}}
+\label{_d_x_u_tgui_8cpp_abd563f1fc65c6bef801a2e255af26c14}
+\hypertarget{_d_x_u_tgui_8cpp_a6ad64a19933213d15128e5fcd09bc1a6}{
+\index{DXUTgui.cpp@{DXUTgui.cpp}!LPWSTR@{LPWSTR}}
+\index{LPWSTR@{LPWSTR}!DXUTgui.cpp@{DXUTgui.cpp}}
+\subsubsection[{LPWSTR}]{\setlength{\rightskip}{0pt plus 5cm}{\bf LPWSTR}}}
+\label{_d_x_u_tgui_8cpp_a6ad64a19933213d15128e5fcd09bc1a6}
+\hypertarget{_d_x_u_tgui_8cpp_a3f2291edc03bb9ce2e52c8b893b4281d}{
+\index{DXUTgui.cpp@{DXUTgui.cpp}!PINT@{PINT}}
+\index{PINT@{PINT}!DXUTgui.cpp@{DXUTgui.cpp}}
+\subsubsection[{PINT}]{\setlength{\rightskip}{0pt plus 5cm}{\bf PINT}}}
+\label{_d_x_u_tgui_8cpp_a3f2291edc03bb9ce2e52c8b893b4281d}
+\hypertarget{_d_x_u_tgui_8cpp_ab918a11bd94185b9daec38baf43d9417}{
+\index{DXUTgui.cpp@{DXUTgui.cpp}!PUINT@{PUINT}}
+\index{PUINT@{PUINT}!DXUTgui.cpp@{DXUTgui.cpp}}
+\subsubsection[{PUINT}]{\setlength{\rightskip}{0pt plus 5cm}LPVOID {\bf PUINT} = CDXUTIMEEditBox::Dummy\_\-GetReadingString}}
+\label{_d_x_u_tgui_8cpp_ab918a11bd94185b9daec38baf43d9417}
+\hypertarget{_d_x_u_tgui_8cpp_afff0ab3629a68bc1bb3b2a2f4296173f}{
+\index{DXUTgui.cpp@{DXUTgui.cpp}!UINT@{UINT}}
+\index{UINT@{UINT}!DXUTgui.cpp@{DXUTgui.cpp}}
+\subsubsection[{UINT}]{\setlength{\rightskip}{0pt plus 5cm}UINT = CDXUTIMEEditBox::Dummy\_\-ImmGetIMEFileNameA}}
+\label{_d_x_u_tgui_8cpp_afff0ab3629a68bc1bb3b2a2f4296173f}

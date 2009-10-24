@@ -1,0 +1,149 @@
+\hypertarget{class_c_d_x_u_t_timer}{
+\section{CDXUTTimer Class Reference}
+\label{class_c_d_x_u_t_timer}\index{CDXUTTimer@{CDXUTTimer}}
+}
+
+
+{\ttfamily \#include $<$DXUTmisc.h$>$}\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_c_d_x_u_t_timer_ac5c3ca2e7b862f4283ecbe9fd749d906}{CDXUTTimer} ()
+\item 
+void \hyperlink{class_c_d_x_u_t_timer_adc40e951f6157dc82883294a19f8e04b}{Reset} ()
+\item 
+void \hyperlink{class_c_d_x_u_t_timer_a970f9d5dc0b3b84f6445ec756c188f4b}{Start} ()
+\item 
+void \hyperlink{class_c_d_x_u_t_timer_a6e0b8b06ade854d7bc8f190cee75de11}{Stop} ()
+\item 
+void \hyperlink{class_c_d_x_u_t_timer_a1a40a2b93164867f6d895b755a6e2938}{Advance} ()
+\item 
+double \hyperlink{class_c_d_x_u_t_timer_a0a742c4999a06c61c8558f58ef9211ce}{GetAbsoluteTime} ()
+\item 
+double \hyperlink{class_c_d_x_u_t_timer_a48c372d2d7ba669872d4a77d46aec33b}{GetTime} ()
+\item 
+double \hyperlink{class_c_d_x_u_t_timer_a425d2ad814bcea3a2cef5518a98168f8}{GetElapsedTime} ()
+\item 
+void \hyperlink{class_c_d_x_u_t_timer_a1e8c30855b6baab4993edafba1cca65c}{GetTimeValues} (double $\ast$pfTime, double $\ast$pfAbsoluteTime, float $\ast$pfElapsedTime)
+\item 
+bool \hyperlink{class_c_d_x_u_t_timer_a97fbd0e9bbc85c7369df4b1556713751}{IsStopped} ()
+\item 
+void \hyperlink{class_c_d_x_u_t_timer_a0e07e5d07c8521dac1b8299c4271742e}{LimitThreadAffinityToCurrentProc} ()
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+LARGE\_\-INTEGER \hyperlink{class_c_d_x_u_t_timer_ae3e30ee1953d922c42dae96088b5842f}{GetAdjustedCurrentTime} ()
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+bool \hyperlink{class_c_d_x_u_t_timer_ab6969b767724f796674c46618a9cef34}{m\_\-bTimerStopped}
+\item 
+LONGLONG \hyperlink{class_c_d_x_u_t_timer_a5d02af56056a52900a24a0b2a4890ebd}{m\_\-llQPFTicksPerSec}
+\item 
+LONGLONG \hyperlink{class_c_d_x_u_t_timer_ad27f97d31ae946f1c0b55ddaa11902cb}{m\_\-llStopTime}
+\item 
+LONGLONG \hyperlink{class_c_d_x_u_t_timer_a9dc6f56a2fddb4c275d33ca8858f2367}{m\_\-llLastElapsedTime}
+\item 
+LONGLONG \hyperlink{class_c_d_x_u_t_timer_ab756323e5a37b91a5eab6275a27a734a}{m\_\-llBaseTime}
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_c_d_x_u_t_timer_ac5c3ca2e7b862f4283ecbe9fd749d906}{
+\index{CDXUTTimer@{CDXUTTimer}!CDXUTTimer@{CDXUTTimer}}
+\index{CDXUTTimer@{CDXUTTimer}!CDXUTTimer@{CDXUTTimer}}
+\subsubsection[{CDXUTTimer}]{\setlength{\rightskip}{0pt plus 5cm}CDXUTTimer::CDXUTTimer ()}}
+\label{class_c_d_x_u_t_timer_ac5c3ca2e7b862f4283ecbe9fd749d906}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_c_d_x_u_t_timer_a1a40a2b93164867f6d895b755a6e2938}{
+\index{CDXUTTimer@{CDXUTTimer}!Advance@{Advance}}
+\index{Advance@{Advance}!CDXUTTimer@{CDXUTTimer}}
+\subsubsection[{Advance}]{\setlength{\rightskip}{0pt plus 5cm}void CDXUTTimer::Advance ()}}
+\label{class_c_d_x_u_t_timer_a1a40a2b93164867f6d895b755a6e2938}
+\hypertarget{class_c_d_x_u_t_timer_a0a742c4999a06c61c8558f58ef9211ce}{
+\index{CDXUTTimer@{CDXUTTimer}!GetAbsoluteTime@{GetAbsoluteTime}}
+\index{GetAbsoluteTime@{GetAbsoluteTime}!CDXUTTimer@{CDXUTTimer}}
+\subsubsection[{GetAbsoluteTime}]{\setlength{\rightskip}{0pt plus 5cm}double CDXUTTimer::GetAbsoluteTime ()}}
+\label{class_c_d_x_u_t_timer_a0a742c4999a06c61c8558f58ef9211ce}
+\hypertarget{class_c_d_x_u_t_timer_ae3e30ee1953d922c42dae96088b5842f}{
+\index{CDXUTTimer@{CDXUTTimer}!GetAdjustedCurrentTime@{GetAdjustedCurrentTime}}
+\index{GetAdjustedCurrentTime@{GetAdjustedCurrentTime}!CDXUTTimer@{CDXUTTimer}}
+\subsubsection[{GetAdjustedCurrentTime}]{\setlength{\rightskip}{0pt plus 5cm}LARGE\_\-INTEGER CDXUTTimer::GetAdjustedCurrentTime ()\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{class_c_d_x_u_t_timer_ae3e30ee1953d922c42dae96088b5842f}
+\hypertarget{class_c_d_x_u_t_timer_a425d2ad814bcea3a2cef5518a98168f8}{
+\index{CDXUTTimer@{CDXUTTimer}!GetElapsedTime@{GetElapsedTime}}
+\index{GetElapsedTime@{GetElapsedTime}!CDXUTTimer@{CDXUTTimer}}
+\subsubsection[{GetElapsedTime}]{\setlength{\rightskip}{0pt plus 5cm}double CDXUTTimer::GetElapsedTime ()}}
+\label{class_c_d_x_u_t_timer_a425d2ad814bcea3a2cef5518a98168f8}
+\hypertarget{class_c_d_x_u_t_timer_a48c372d2d7ba669872d4a77d46aec33b}{
+\index{CDXUTTimer@{CDXUTTimer}!GetTime@{GetTime}}
+\index{GetTime@{GetTime}!CDXUTTimer@{CDXUTTimer}}
+\subsubsection[{GetTime}]{\setlength{\rightskip}{0pt plus 5cm}double CDXUTTimer::GetTime ()}}
+\label{class_c_d_x_u_t_timer_a48c372d2d7ba669872d4a77d46aec33b}
+\hypertarget{class_c_d_x_u_t_timer_a1e8c30855b6baab4993edafba1cca65c}{
+\index{CDXUTTimer@{CDXUTTimer}!GetTimeValues@{GetTimeValues}}
+\index{GetTimeValues@{GetTimeValues}!CDXUTTimer@{CDXUTTimer}}
+\subsubsection[{GetTimeValues}]{\setlength{\rightskip}{0pt plus 5cm}void CDXUTTimer::GetTimeValues (double $\ast$ {\em pfTime}, \/  double $\ast$ {\em pfAbsoluteTime}, \/  float $\ast$ {\em pfElapsedTime})}}
+\label{class_c_d_x_u_t_timer_a1e8c30855b6baab4993edafba1cca65c}
+\hypertarget{class_c_d_x_u_t_timer_a97fbd0e9bbc85c7369df4b1556713751}{
+\index{CDXUTTimer@{CDXUTTimer}!IsStopped@{IsStopped}}
+\index{IsStopped@{IsStopped}!CDXUTTimer@{CDXUTTimer}}
+\subsubsection[{IsStopped}]{\setlength{\rightskip}{0pt plus 5cm}bool CDXUTTimer::IsStopped ()}}
+\label{class_c_d_x_u_t_timer_a97fbd0e9bbc85c7369df4b1556713751}
+\hypertarget{class_c_d_x_u_t_timer_a0e07e5d07c8521dac1b8299c4271742e}{
+\index{CDXUTTimer@{CDXUTTimer}!LimitThreadAffinityToCurrentProc@{LimitThreadAffinityToCurrentProc}}
+\index{LimitThreadAffinityToCurrentProc@{LimitThreadAffinityToCurrentProc}!CDXUTTimer@{CDXUTTimer}}
+\subsubsection[{LimitThreadAffinityToCurrentProc}]{\setlength{\rightskip}{0pt plus 5cm}void CDXUTTimer::LimitThreadAffinityToCurrentProc ()}}
+\label{class_c_d_x_u_t_timer_a0e07e5d07c8521dac1b8299c4271742e}
+\hypertarget{class_c_d_x_u_t_timer_adc40e951f6157dc82883294a19f8e04b}{
+\index{CDXUTTimer@{CDXUTTimer}!Reset@{Reset}}
+\index{Reset@{Reset}!CDXUTTimer@{CDXUTTimer}}
+\subsubsection[{Reset}]{\setlength{\rightskip}{0pt plus 5cm}void CDXUTTimer::Reset ()}}
+\label{class_c_d_x_u_t_timer_adc40e951f6157dc82883294a19f8e04b}
+\hypertarget{class_c_d_x_u_t_timer_a970f9d5dc0b3b84f6445ec756c188f4b}{
+\index{CDXUTTimer@{CDXUTTimer}!Start@{Start}}
+\index{Start@{Start}!CDXUTTimer@{CDXUTTimer}}
+\subsubsection[{Start}]{\setlength{\rightskip}{0pt plus 5cm}void CDXUTTimer::Start ()}}
+\label{class_c_d_x_u_t_timer_a970f9d5dc0b3b84f6445ec756c188f4b}
+\hypertarget{class_c_d_x_u_t_timer_a6e0b8b06ade854d7bc8f190cee75de11}{
+\index{CDXUTTimer@{CDXUTTimer}!Stop@{Stop}}
+\index{Stop@{Stop}!CDXUTTimer@{CDXUTTimer}}
+\subsubsection[{Stop}]{\setlength{\rightskip}{0pt plus 5cm}void CDXUTTimer::Stop ()}}
+\label{class_c_d_x_u_t_timer_a6e0b8b06ade854d7bc8f190cee75de11}
+
+
+\subsection{Member Data Documentation}
+\hypertarget{class_c_d_x_u_t_timer_ab6969b767724f796674c46618a9cef34}{
+\index{CDXUTTimer@{CDXUTTimer}!m\_\-bTimerStopped@{m\_\-bTimerStopped}}
+\index{m\_\-bTimerStopped@{m\_\-bTimerStopped}!CDXUTTimer@{CDXUTTimer}}
+\subsubsection[{m\_\-bTimerStopped}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf CDXUTTimer::m\_\-bTimerStopped}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{class_c_d_x_u_t_timer_ab6969b767724f796674c46618a9cef34}
+\hypertarget{class_c_d_x_u_t_timer_ab756323e5a37b91a5eab6275a27a734a}{
+\index{CDXUTTimer@{CDXUTTimer}!m\_\-llBaseTime@{m\_\-llBaseTime}}
+\index{m\_\-llBaseTime@{m\_\-llBaseTime}!CDXUTTimer@{CDXUTTimer}}
+\subsubsection[{m\_\-llBaseTime}]{\setlength{\rightskip}{0pt plus 5cm}LONGLONG {\bf CDXUTTimer::m\_\-llBaseTime}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{class_c_d_x_u_t_timer_ab756323e5a37b91a5eab6275a27a734a}
+\hypertarget{class_c_d_x_u_t_timer_a9dc6f56a2fddb4c275d33ca8858f2367}{
+\index{CDXUTTimer@{CDXUTTimer}!m\_\-llLastElapsedTime@{m\_\-llLastElapsedTime}}
+\index{m\_\-llLastElapsedTime@{m\_\-llLastElapsedTime}!CDXUTTimer@{CDXUTTimer}}
+\subsubsection[{m\_\-llLastElapsedTime}]{\setlength{\rightskip}{0pt plus 5cm}LONGLONG {\bf CDXUTTimer::m\_\-llLastElapsedTime}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{class_c_d_x_u_t_timer_a9dc6f56a2fddb4c275d33ca8858f2367}
+\hypertarget{class_c_d_x_u_t_timer_a5d02af56056a52900a24a0b2a4890ebd}{
+\index{CDXUTTimer@{CDXUTTimer}!m\_\-llQPFTicksPerSec@{m\_\-llQPFTicksPerSec}}
+\index{m\_\-llQPFTicksPerSec@{m\_\-llQPFTicksPerSec}!CDXUTTimer@{CDXUTTimer}}
+\subsubsection[{m\_\-llQPFTicksPerSec}]{\setlength{\rightskip}{0pt plus 5cm}LONGLONG {\bf CDXUTTimer::m\_\-llQPFTicksPerSec}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{class_c_d_x_u_t_timer_a5d02af56056a52900a24a0b2a4890ebd}
+\hypertarget{class_c_d_x_u_t_timer_ad27f97d31ae946f1c0b55ddaa11902cb}{
+\index{CDXUTTimer@{CDXUTTimer}!m\_\-llStopTime@{m\_\-llStopTime}}
+\index{m\_\-llStopTime@{m\_\-llStopTime}!CDXUTTimer@{CDXUTTimer}}
+\subsubsection[{m\_\-llStopTime}]{\setlength{\rightskip}{0pt plus 5cm}LONGLONG {\bf CDXUTTimer::m\_\-llStopTime}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{class_c_d_x_u_t_timer_ad27f97d31ae946f1c0b55ddaa11902cb}
+
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+C:/Users/doug/Documents/Visual Studio 2008/Projects/enlightened/Enlightened/DXUT/\hyperlink{_d_x_u_tmisc_8h}{DXUTmisc.h}\item 
+C:/Users/doug/Documents/Visual Studio 2008/Projects/enlightened/Enlightened/DXUT/\hyperlink{_d_x_u_tmisc_8cpp}{DXUTmisc.cpp}\end{DoxyCompactItemize}

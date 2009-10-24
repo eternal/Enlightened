@@ -1,0 +1,548 @@
+\hypertarget{class_c_base_camera}{
+\section{CBaseCamera Class Reference}
+\label{class_c_base_camera}\index{CBaseCamera@{CBaseCamera}}
+}
+
+
+{\ttfamily \#include $<$DXUTmisc.h$>$}
+
+Inherited by \hyperlink{class_c_first_person_camera}{CFirstPersonCamera}, and \hyperlink{class_c_model_viewer_camera}{CModelViewerCamera}.Collaboration diagram for CBaseCamera:\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_c_base_camera_a4f4eaa45a5d8632abb98b035219e6b82}{CBaseCamera} ()
+\item 
+virtual LRESULT \hyperlink{class_c_base_camera_a77cc040ed2d0b3479412b81316beb793}{HandleMessages} (HWND hWnd, UINT uMsg, WPARAM wParam, LPARAM lParam)
+\item 
+virtual void \hyperlink{class_c_base_camera_a21db15a8cdca60d1540d958a32708703}{FrameMove} (FLOAT fElapsedTime)=0
+\item 
+virtual void \hyperlink{class_c_base_camera_adc95e71e268d59a084f6e8d95a9aadb9}{Reset} ()
+\item 
+virtual void \hyperlink{class_c_base_camera_a17b45dd3b6055bc761058d57f5a10c02}{SetViewParams} (D3DXVECTOR3 $\ast$pvEyePt, D3DXVECTOR3 $\ast$pvLookatPt)
+\item 
+virtual void \hyperlink{class_c_base_camera_a08cfa8a4246cd6115e6522821e573e89}{SetProjParams} (FLOAT fFOV, FLOAT fAspect, FLOAT fNearPlane, FLOAT fFarPlane)
+\item 
+virtual void \hyperlink{class_c_base_camera_a8c425184f1114f17bb8e1b3505c13036}{SetDragRect} (RECT \&rc)
+\item 
+void \hyperlink{class_c_base_camera_ad76b241a4bf9ef386563fd1a38ef70ae}{SetInvertPitch} (bool bInvertPitch)
+\item 
+void \hyperlink{class_c_base_camera_a029f5a9a3e3555c94e8b88783a9d51f3}{SetDrag} (bool bMovementDrag, FLOAT fTotalDragTimeToZero=0.25f)
+\item 
+void \hyperlink{class_c_base_camera_a5eb76cd5ca8ee2b377cf7434ee718547}{SetEnableYAxisMovement} (bool bEnableYAxisMovement)
+\item 
+void \hyperlink{class_c_base_camera_a6f65efa814bda8435fb45cca7f9c1f32}{SetEnablePositionMovement} (bool bEnablePositionMovement)
+\item 
+void \hyperlink{class_c_base_camera_a5e3ec99a05164a281f55a812b755a6da}{SetClipToBoundary} (bool bClipToBoundary, D3DXVECTOR3 $\ast$pvMinBoundary, D3DXVECTOR3 $\ast$pvMaxBoundary)
+\item 
+void \hyperlink{class_c_base_camera_a33c8df00f0f8d644744621ac7142d5f8}{SetScalers} (FLOAT fRotationScaler=0.01f, FLOAT fMoveScaler=5.0f)
+\item 
+void \hyperlink{class_c_base_camera_a7cda8d85d13b016697b4c4e27d57e41c}{SetNumberOfFramesToSmoothMouseData} (\hyperlink{_d_x_u_tgui_8cpp_a2d77ed03302b6978834ee3b6f57837fb}{int} nFrames)
+\item 
+const D3DXMATRIX $\ast$ \hyperlink{class_c_base_camera_a10c93bd976787aec5b71daecd3448047}{GetViewMatrix} () const 
+\item 
+const D3DXMATRIX $\ast$ \hyperlink{class_c_base_camera_abd1fd54b7481f136ff160528caac139a}{GetProjMatrix} () const 
+\item 
+const D3DXVECTOR3 $\ast$ \hyperlink{class_c_base_camera_ae08632cf51cc263cdd2d78eea8af442a}{GetEyePt} () const 
+\item 
+const D3DXVECTOR3 $\ast$ \hyperlink{class_c_base_camera_a9b4df40fa4654c10205d15ff79376e77}{GetLookAtPt} () const 
+\item 
+float \hyperlink{class_c_base_camera_ab99c79000b2d4fbf59c181032bccb95d}{GetNearClip} () const 
+\item 
+float \hyperlink{class_c_base_camera_a381de0e1f449208b1c2cb86e462c8643}{GetFarClip} () const 
+\item 
+bool \hyperlink{class_c_base_camera_a3928806e81783b1b3138833585d5f5d0}{IsBeingDragged} () const 
+\item 
+bool \hyperlink{class_c_base_camera_a9b7c2e2595e2c7fff4afe8a92291feaf}{IsMouseLButtonDown} () const 
+\item 
+bool \hyperlink{class_c_base_camera_ae258726567f469b2e2bdbca54c3b9203}{IsMouseMButtonDown} () const 
+\item 
+bool \hyperlink{class_c_base_camera_a23062c3b30369799c572fdba7b61ef13}{IsMouseRButtonDown} () const 
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual \hyperlink{_d_x_u_tmisc_8h_a4b2404de98d0b5f4a0efe1a7752fffa2}{D3DUtil\_\-CameraKeys} \hyperlink{class_c_base_camera_afb3c6111e9b929ddc40b65dded48d17f}{MapKey} (UINT nKey)
+\item 
+bool \hyperlink{class_c_base_camera_ac00770963442a7527b0fafe4a9ade260}{IsKeyDown} (BYTE key) const 
+\item 
+bool \hyperlink{class_c_base_camera_ab4e5634db9c77f98b4f1f87b4de391dd}{WasKeyDown} (BYTE key) const 
+\item 
+void \hyperlink{class_c_base_camera_a1d888b7ae8d6c49ee564720bcaee2e95}{ConstrainToBoundary} (D3DXVECTOR3 $\ast$pV)
+\item 
+void \hyperlink{class_c_base_camera_afcca5c9bdc793eb6f1f8c0530b8b93f2}{UpdateVelocity} (float fElapsedTime)
+\item 
+void \hyperlink{class_c_base_camera_ac0f6595e3bddfd13d620f5a38598192b}{GetInput} (bool bGetKeyboardInput, bool bGetMouseInput, bool bGetGamepadInput, bool bResetCursorAfterMove)
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+D3DXMATRIX \hyperlink{class_c_base_camera_aa4e76560bdadc557f2e279e8ab00e405}{m\_\-mView}
+\item 
+D3DXMATRIX \hyperlink{class_c_base_camera_a97b8a160735a4b812e7d3e2637d2025c}{m\_\-mProj}
+\item 
+\hyperlink{struct_d_x_u_t___g_a_m_e_p_a_d}{DXUT\_\-GAMEPAD} \hyperlink{class_c_base_camera_a944fb74264227b610464a055a6d8c9c4}{m\_\-GamePad} \mbox{[}DXUT\_\-MAX\_\-CONTROLLERS\mbox{]}
+\item 
+D3DXVECTOR3 \hyperlink{class_c_base_camera_a82a20dcc1d03a97e52f9f336b0f0e33b}{m\_\-vGamePadLeftThumb}
+\item 
+D3DXVECTOR3 \hyperlink{class_c_base_camera_a1b9e69b2140314515049b30091d9a788}{m\_\-vGamePadRightThumb}
+\item 
+double \hyperlink{class_c_base_camera_ae2731931f0485bb49b9f3178f9aabe6f}{m\_\-GamePadLastActive} \mbox{[}DXUT\_\-MAX\_\-CONTROLLERS\mbox{]}
+\item 
+\hyperlink{_d_x_u_tgui_8cpp_a2d77ed03302b6978834ee3b6f57837fb}{int} \hyperlink{class_c_base_camera_ae12aee70bbb423a26ae9ea2161a6eacc}{m\_\-cKeysDown}
+\item 
+BYTE \hyperlink{class_c_base_camera_aab24266faedbce6a95ca36c23726064c}{m\_\-aKeys} \mbox{[}CAM\_\-MAX\_\-KEYS\mbox{]}
+\item 
+D3DXVECTOR3 \hyperlink{class_c_base_camera_aed43d3466c7a2d60b7b62845ab602b6f}{m\_\-vKeyboardDirection}
+\item 
+POINT \hyperlink{class_c_base_camera_a6019b5ba50a3e7c57187d8341292c7d2}{m\_\-ptLastMousePosition}
+\item 
+bool \hyperlink{class_c_base_camera_a328bd336893fea3959fafeb2938bc426}{m\_\-bMouseLButtonDown}
+\item 
+bool \hyperlink{class_c_base_camera_a1b56edb22dc3c1383da3524211dcfa6f}{m\_\-bMouseMButtonDown}
+\item 
+bool \hyperlink{class_c_base_camera_aeed297c389f73cae17eb0b923aa0092e}{m\_\-bMouseRButtonDown}
+\item 
+\hyperlink{_d_x_u_tgui_8cpp_a2d77ed03302b6978834ee3b6f57837fb}{int} \hyperlink{class_c_base_camera_aa30c8f1421c0e0f00dd1b3b37165bffd}{m\_\-nCurrentButtonMask}
+\item 
+\hyperlink{_d_x_u_tgui_8cpp_a2d77ed03302b6978834ee3b6f57837fb}{int} \hyperlink{class_c_base_camera_ae6f0a643e814c30ae8f8fe7d8e49c46e}{m\_\-nMouseWheelDelta}
+\item 
+D3DXVECTOR2 \hyperlink{class_c_base_camera_ab884ec4d7972fed1319ed867a542f041}{m\_\-vMouseDelta}
+\item 
+float \hyperlink{class_c_base_camera_af9b4d43933754929e66403e0435d6387}{m\_\-fFramesToSmoothMouseData}
+\item 
+D3DXVECTOR3 \hyperlink{class_c_base_camera_a71147e92520e8965eac70517585ffe3c}{m\_\-vDefaultEye}
+\item 
+D3DXVECTOR3 \hyperlink{class_c_base_camera_ad3dd204ec2e0c44f6757ea3ac83a4f6e}{m\_\-vDefaultLookAt}
+\item 
+D3DXVECTOR3 \hyperlink{class_c_base_camera_aa7b7cd1276331e8ab614e04ddcde14e7}{m\_\-vEye}
+\item 
+D3DXVECTOR3 \hyperlink{class_c_base_camera_a0c773d85e2ca0bf6eaf60e90478b6520}{m\_\-vLookAt}
+\item 
+float \hyperlink{class_c_base_camera_afe69549c26475e5d4f577cf8d2dce8cb}{m\_\-fCameraYawAngle}
+\item 
+float \hyperlink{class_c_base_camera_afa9c9ae13a628b3dc352b6985d3a1acc}{m\_\-fCameraPitchAngle}
+\item 
+RECT \hyperlink{class_c_base_camera_a1a22483b3f168a945864e5fd156ca820}{m\_\-rcDrag}
+\item 
+D3DXVECTOR3 \hyperlink{class_c_base_camera_abce9d814274b2bdb4da95fc3b3dca575}{m\_\-vVelocity}
+\item 
+bool \hyperlink{class_c_base_camera_abbd0b30b993e305bc7deb7a985a3ea8b}{m\_\-bMovementDrag}
+\item 
+D3DXVECTOR3 \hyperlink{class_c_base_camera_a541e0833b62dac8d0dcff9f95be9220f}{m\_\-vVelocityDrag}
+\item 
+FLOAT \hyperlink{class_c_base_camera_aae76e8c993f56e6b21fa64b3bf0ee58a}{m\_\-fDragTimer}
+\item 
+FLOAT \hyperlink{class_c_base_camera_a39abb4e2ffe603d95bc1f80c3b7e7c86}{m\_\-fTotalDragTimeToZero}
+\item 
+D3DXVECTOR2 \hyperlink{class_c_base_camera_a462bb1b209e135dcaab3d95e7e709512}{m\_\-vRotVelocity}
+\item 
+float \hyperlink{class_c_base_camera_ad480f1dc8ae654fc126cc2dfb57a1ec0}{m\_\-fFOV}
+\item 
+float \hyperlink{class_c_base_camera_a605bbe3c728cc72c3f7dcae3c0bac16e}{m\_\-fAspect}
+\item 
+float \hyperlink{class_c_base_camera_ac4d819f24b173b951db77377c20f33a1}{m\_\-fNearPlane}
+\item 
+float \hyperlink{class_c_base_camera_a667fbeae2b0445a30819109cd745764a}{m\_\-fFarPlane}
+\item 
+float \hyperlink{class_c_base_camera_a2faeeb72dd3ec59cb4bb05726341bca8}{m\_\-fRotationScaler}
+\item 
+float \hyperlink{class_c_base_camera_ac45d164a6908b70b436223a89d48f158}{m\_\-fMoveScaler}
+\item 
+bool \hyperlink{class_c_base_camera_a6d12cd53bc908e4da00a7c3581807598}{m\_\-bInvertPitch}
+\item 
+bool \hyperlink{class_c_base_camera_a59fae15ac67cb211049b17bf38672ac8}{m\_\-bEnablePositionMovement}
+\item 
+bool \hyperlink{class_c_base_camera_a2fbcc041572a057cfd03c27f157eaf08}{m\_\-bEnableYAxisMovement}
+\item 
+bool \hyperlink{class_c_base_camera_a1087c9e2eaf936be735df38f6f8719ad}{m\_\-bClipToBoundary}
+\item 
+D3DXVECTOR3 \hyperlink{class_c_base_camera_a63dd58475f7382d77ada28b763e7a422}{m\_\-vMinBoundary}
+\item 
+D3DXVECTOR3 \hyperlink{class_c_base_camera_a8f823201300bc646e232a82a4c5b6eea}{m\_\-vMaxBoundary}
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_c_base_camera_a4f4eaa45a5d8632abb98b035219e6b82}{
+\index{CBaseCamera@{CBaseCamera}!CBaseCamera@{CBaseCamera}}
+\index{CBaseCamera@{CBaseCamera}!CBaseCamera@{CBaseCamera}}
+\subsubsection[{CBaseCamera}]{\setlength{\rightskip}{0pt plus 5cm}CBaseCamera::CBaseCamera ()}}
+\label{class_c_base_camera_a4f4eaa45a5d8632abb98b035219e6b82}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_c_base_camera_a1d888b7ae8d6c49ee564720bcaee2e95}{
+\index{CBaseCamera@{CBaseCamera}!ConstrainToBoundary@{ConstrainToBoundary}}
+\index{ConstrainToBoundary@{ConstrainToBoundary}!CBaseCamera@{CBaseCamera}}
+\subsubsection[{ConstrainToBoundary}]{\setlength{\rightskip}{0pt plus 5cm}void CBaseCamera::ConstrainToBoundary (D3DXVECTOR3 $\ast$ {\em pV})\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{class_c_base_camera_a1d888b7ae8d6c49ee564720bcaee2e95}
+\hypertarget{class_c_base_camera_a21db15a8cdca60d1540d958a32708703}{
+\index{CBaseCamera@{CBaseCamera}!FrameMove@{FrameMove}}
+\index{FrameMove@{FrameMove}!CBaseCamera@{CBaseCamera}}
+\subsubsection[{FrameMove}]{\setlength{\rightskip}{0pt plus 5cm}virtual void CBaseCamera::FrameMove (FLOAT {\em fElapsedTime})\hspace{0.3cm}{\ttfamily  \mbox{[}pure virtual\mbox{]}}}}
+\label{class_c_base_camera_a21db15a8cdca60d1540d958a32708703}
+
+
+Implemented in \hyperlink{class_c_first_person_camera_a86e482e92a7a17db600e82ad9a29ca01}{CFirstPersonCamera}, and \hyperlink{class_c_model_viewer_camera_a5309ad1ff0044124c05737da466b7315}{CModelViewerCamera}.\hypertarget{class_c_base_camera_ae08632cf51cc263cdd2d78eea8af442a}{
+\index{CBaseCamera@{CBaseCamera}!GetEyePt@{GetEyePt}}
+\index{GetEyePt@{GetEyePt}!CBaseCamera@{CBaseCamera}}
+\subsubsection[{GetEyePt}]{\setlength{\rightskip}{0pt plus 5cm}const D3DXVECTOR3$\ast$ CBaseCamera::GetEyePt () const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_c_base_camera_ae08632cf51cc263cdd2d78eea8af442a}
+
+
+Reimplemented in \hyperlink{class_c_first_person_camera_a0191f784e950825ac77825ef5c3b6295}{CFirstPersonCamera}.\hypertarget{class_c_base_camera_a381de0e1f449208b1c2cb86e462c8643}{
+\index{CBaseCamera@{CBaseCamera}!GetFarClip@{GetFarClip}}
+\index{GetFarClip@{GetFarClip}!CBaseCamera@{CBaseCamera}}
+\subsubsection[{GetFarClip}]{\setlength{\rightskip}{0pt plus 5cm}float CBaseCamera::GetFarClip () const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_c_base_camera_a381de0e1f449208b1c2cb86e462c8643}
+\hypertarget{class_c_base_camera_ac0f6595e3bddfd13d620f5a38598192b}{
+\index{CBaseCamera@{CBaseCamera}!GetInput@{GetInput}}
+\index{GetInput@{GetInput}!CBaseCamera@{CBaseCamera}}
+\subsubsection[{GetInput}]{\setlength{\rightskip}{0pt plus 5cm}void CBaseCamera::GetInput (bool {\em bGetKeyboardInput}, \/  bool {\em bGetMouseInput}, \/  bool {\em bGetGamepadInput}, \/  bool {\em bResetCursorAfterMove})\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{class_c_base_camera_ac0f6595e3bddfd13d620f5a38598192b}
+\hypertarget{class_c_base_camera_a9b4df40fa4654c10205d15ff79376e77}{
+\index{CBaseCamera@{CBaseCamera}!GetLookAtPt@{GetLookAtPt}}
+\index{GetLookAtPt@{GetLookAtPt}!CBaseCamera@{CBaseCamera}}
+\subsubsection[{GetLookAtPt}]{\setlength{\rightskip}{0pt plus 5cm}const D3DXVECTOR3$\ast$ CBaseCamera::GetLookAtPt () const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_c_base_camera_a9b4df40fa4654c10205d15ff79376e77}
+\hypertarget{class_c_base_camera_ab99c79000b2d4fbf59c181032bccb95d}{
+\index{CBaseCamera@{CBaseCamera}!GetNearClip@{GetNearClip}}
+\index{GetNearClip@{GetNearClip}!CBaseCamera@{CBaseCamera}}
+\subsubsection[{GetNearClip}]{\setlength{\rightskip}{0pt plus 5cm}float CBaseCamera::GetNearClip () const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_c_base_camera_ab99c79000b2d4fbf59c181032bccb95d}
+\hypertarget{class_c_base_camera_abd1fd54b7481f136ff160528caac139a}{
+\index{CBaseCamera@{CBaseCamera}!GetProjMatrix@{GetProjMatrix}}
+\index{GetProjMatrix@{GetProjMatrix}!CBaseCamera@{CBaseCamera}}
+\subsubsection[{GetProjMatrix}]{\setlength{\rightskip}{0pt plus 5cm}const D3DXMATRIX$\ast$ CBaseCamera::GetProjMatrix () const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_c_base_camera_abd1fd54b7481f136ff160528caac139a}
+\hypertarget{class_c_base_camera_a10c93bd976787aec5b71daecd3448047}{
+\index{CBaseCamera@{CBaseCamera}!GetViewMatrix@{GetViewMatrix}}
+\index{GetViewMatrix@{GetViewMatrix}!CBaseCamera@{CBaseCamera}}
+\subsubsection[{GetViewMatrix}]{\setlength{\rightskip}{0pt plus 5cm}const D3DXMATRIX$\ast$ CBaseCamera::GetViewMatrix () const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_c_base_camera_a10c93bd976787aec5b71daecd3448047}
+\hypertarget{class_c_base_camera_a77cc040ed2d0b3479412b81316beb793}{
+\index{CBaseCamera@{CBaseCamera}!HandleMessages@{HandleMessages}}
+\index{HandleMessages@{HandleMessages}!CBaseCamera@{CBaseCamera}}
+\subsubsection[{HandleMessages}]{\setlength{\rightskip}{0pt plus 5cm}LRESULT CBaseCamera::HandleMessages (HWND {\em hWnd}, \/  UINT {\em uMsg}, \/  WPARAM {\em wParam}, \/  LPARAM {\em lParam})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{class_c_base_camera_a77cc040ed2d0b3479412b81316beb793}
+
+
+Reimplemented in \hyperlink{class_c_model_viewer_camera_ad50f3bd74420f1ee3c0b6ca9ac3ec348}{CModelViewerCamera}.\hypertarget{class_c_base_camera_a3928806e81783b1b3138833585d5f5d0}{
+\index{CBaseCamera@{CBaseCamera}!IsBeingDragged@{IsBeingDragged}}
+\index{IsBeingDragged@{IsBeingDragged}!CBaseCamera@{CBaseCamera}}
+\subsubsection[{IsBeingDragged}]{\setlength{\rightskip}{0pt plus 5cm}bool CBaseCamera::IsBeingDragged () const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_c_base_camera_a3928806e81783b1b3138833585d5f5d0}
+\hypertarget{class_c_base_camera_ac00770963442a7527b0fafe4a9ade260}{
+\index{CBaseCamera@{CBaseCamera}!IsKeyDown@{IsKeyDown}}
+\index{IsKeyDown@{IsKeyDown}!CBaseCamera@{CBaseCamera}}
+\subsubsection[{IsKeyDown}]{\setlength{\rightskip}{0pt plus 5cm}bool CBaseCamera::IsKeyDown (BYTE {\em key}) const\hspace{0.3cm}{\ttfamily  \mbox{[}inline, protected\mbox{]}}}}
+\label{class_c_base_camera_ac00770963442a7527b0fafe4a9ade260}
+\hypertarget{class_c_base_camera_a9b7c2e2595e2c7fff4afe8a92291feaf}{
+\index{CBaseCamera@{CBaseCamera}!IsMouseLButtonDown@{IsMouseLButtonDown}}
+\index{IsMouseLButtonDown@{IsMouseLButtonDown}!CBaseCamera@{CBaseCamera}}
+\subsubsection[{IsMouseLButtonDown}]{\setlength{\rightskip}{0pt plus 5cm}bool CBaseCamera::IsMouseLButtonDown () const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_c_base_camera_a9b7c2e2595e2c7fff4afe8a92291feaf}
+\hypertarget{class_c_base_camera_ae258726567f469b2e2bdbca54c3b9203}{
+\index{CBaseCamera@{CBaseCamera}!IsMouseMButtonDown@{IsMouseMButtonDown}}
+\index{IsMouseMButtonDown@{IsMouseMButtonDown}!CBaseCamera@{CBaseCamera}}
+\subsubsection[{IsMouseMButtonDown}]{\setlength{\rightskip}{0pt plus 5cm}bool CBaseCamera::IsMouseMButtonDown () const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_c_base_camera_ae258726567f469b2e2bdbca54c3b9203}
+\hypertarget{class_c_base_camera_a23062c3b30369799c572fdba7b61ef13}{
+\index{CBaseCamera@{CBaseCamera}!IsMouseRButtonDown@{IsMouseRButtonDown}}
+\index{IsMouseRButtonDown@{IsMouseRButtonDown}!CBaseCamera@{CBaseCamera}}
+\subsubsection[{IsMouseRButtonDown}]{\setlength{\rightskip}{0pt plus 5cm}bool CBaseCamera::IsMouseRButtonDown () const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_c_base_camera_a23062c3b30369799c572fdba7b61ef13}
+\hypertarget{class_c_base_camera_afb3c6111e9b929ddc40b65dded48d17f}{
+\index{CBaseCamera@{CBaseCamera}!MapKey@{MapKey}}
+\index{MapKey@{MapKey}!CBaseCamera@{CBaseCamera}}
+\subsubsection[{MapKey}]{\setlength{\rightskip}{0pt plus 5cm}{\bf D3DUtil\_\-CameraKeys} CBaseCamera::MapKey (UINT {\em nKey})\hspace{0.3cm}{\ttfamily  \mbox{[}protected, virtual\mbox{]}}}}
+\label{class_c_base_camera_afb3c6111e9b929ddc40b65dded48d17f}
+\hypertarget{class_c_base_camera_adc95e71e268d59a084f6e8d95a9aadb9}{
+\index{CBaseCamera@{CBaseCamera}!Reset@{Reset}}
+\index{Reset@{Reset}!CBaseCamera@{CBaseCamera}}
+\subsubsection[{Reset}]{\setlength{\rightskip}{0pt plus 5cm}VOID CBaseCamera::Reset ()\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{class_c_base_camera_adc95e71e268d59a084f6e8d95a9aadb9}
+
+
+Reimplemented in \hyperlink{class_c_model_viewer_camera_a64f3b265b831578d24faadec70f9dc1b}{CModelViewerCamera}.\hypertarget{class_c_base_camera_a5e3ec99a05164a281f55a812b755a6da}{
+\index{CBaseCamera@{CBaseCamera}!SetClipToBoundary@{SetClipToBoundary}}
+\index{SetClipToBoundary@{SetClipToBoundary}!CBaseCamera@{CBaseCamera}}
+\subsubsection[{SetClipToBoundary}]{\setlength{\rightskip}{0pt plus 5cm}void CBaseCamera::SetClipToBoundary (bool {\em bClipToBoundary}, \/  D3DXVECTOR3 $\ast$ {\em pvMinBoundary}, \/  D3DXVECTOR3 $\ast$ {\em pvMaxBoundary})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_c_base_camera_a5e3ec99a05164a281f55a812b755a6da}
+\hypertarget{class_c_base_camera_a029f5a9a3e3555c94e8b88783a9d51f3}{
+\index{CBaseCamera@{CBaseCamera}!SetDrag@{SetDrag}}
+\index{SetDrag@{SetDrag}!CBaseCamera@{CBaseCamera}}
+\subsubsection[{SetDrag}]{\setlength{\rightskip}{0pt plus 5cm}void CBaseCamera::SetDrag (bool {\em bMovementDrag}, \/  FLOAT {\em fTotalDragTimeToZero} = {\ttfamily 0.25f})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_c_base_camera_a029f5a9a3e3555c94e8b88783a9d51f3}
+\hypertarget{class_c_base_camera_a8c425184f1114f17bb8e1b3505c13036}{
+\index{CBaseCamera@{CBaseCamera}!SetDragRect@{SetDragRect}}
+\index{SetDragRect@{SetDragRect}!CBaseCamera@{CBaseCamera}}
+\subsubsection[{SetDragRect}]{\setlength{\rightskip}{0pt plus 5cm}virtual void CBaseCamera::SetDragRect (RECT \& {\em rc})\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}
+\label{class_c_base_camera_a8c425184f1114f17bb8e1b3505c13036}
+
+
+Reimplemented in \hyperlink{class_c_model_viewer_camera_aecba47f0c48401639138f602d3ed28bd}{CModelViewerCamera}.\hypertarget{class_c_base_camera_a6f65efa814bda8435fb45cca7f9c1f32}{
+\index{CBaseCamera@{CBaseCamera}!SetEnablePositionMovement@{SetEnablePositionMovement}}
+\index{SetEnablePositionMovement@{SetEnablePositionMovement}!CBaseCamera@{CBaseCamera}}
+\subsubsection[{SetEnablePositionMovement}]{\setlength{\rightskip}{0pt plus 5cm}void CBaseCamera::SetEnablePositionMovement (bool {\em bEnablePositionMovement})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_c_base_camera_a6f65efa814bda8435fb45cca7f9c1f32}
+\hypertarget{class_c_base_camera_a5eb76cd5ca8ee2b377cf7434ee718547}{
+\index{CBaseCamera@{CBaseCamera}!SetEnableYAxisMovement@{SetEnableYAxisMovement}}
+\index{SetEnableYAxisMovement@{SetEnableYAxisMovement}!CBaseCamera@{CBaseCamera}}
+\subsubsection[{SetEnableYAxisMovement}]{\setlength{\rightskip}{0pt plus 5cm}void CBaseCamera::SetEnableYAxisMovement (bool {\em bEnableYAxisMovement})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_c_base_camera_a5eb76cd5ca8ee2b377cf7434ee718547}
+\hypertarget{class_c_base_camera_ad76b241a4bf9ef386563fd1a38ef70ae}{
+\index{CBaseCamera@{CBaseCamera}!SetInvertPitch@{SetInvertPitch}}
+\index{SetInvertPitch@{SetInvertPitch}!CBaseCamera@{CBaseCamera}}
+\subsubsection[{SetInvertPitch}]{\setlength{\rightskip}{0pt plus 5cm}void CBaseCamera::SetInvertPitch (bool {\em bInvertPitch})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_c_base_camera_ad76b241a4bf9ef386563fd1a38ef70ae}
+\hypertarget{class_c_base_camera_a7cda8d85d13b016697b4c4e27d57e41c}{
+\index{CBaseCamera@{CBaseCamera}!SetNumberOfFramesToSmoothMouseData@{SetNumberOfFramesToSmoothMouseData}}
+\index{SetNumberOfFramesToSmoothMouseData@{SetNumberOfFramesToSmoothMouseData}!CBaseCamera@{CBaseCamera}}
+\subsubsection[{SetNumberOfFramesToSmoothMouseData}]{\setlength{\rightskip}{0pt plus 5cm}void CBaseCamera::SetNumberOfFramesToSmoothMouseData ({\bf int} {\em nFrames})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_c_base_camera_a7cda8d85d13b016697b4c4e27d57e41c}
+\hypertarget{class_c_base_camera_a08cfa8a4246cd6115e6522821e573e89}{
+\index{CBaseCamera@{CBaseCamera}!SetProjParams@{SetProjParams}}
+\index{SetProjParams@{SetProjParams}!CBaseCamera@{CBaseCamera}}
+\subsubsection[{SetProjParams}]{\setlength{\rightskip}{0pt plus 5cm}VOID CBaseCamera::SetProjParams (FLOAT {\em fFOV}, \/  FLOAT {\em fAspect}, \/  FLOAT {\em fNearPlane}, \/  FLOAT {\em fFarPlane})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{class_c_base_camera_a08cfa8a4246cd6115e6522821e573e89}
+\hypertarget{class_c_base_camera_a33c8df00f0f8d644744621ac7142d5f8}{
+\index{CBaseCamera@{CBaseCamera}!SetScalers@{SetScalers}}
+\index{SetScalers@{SetScalers}!CBaseCamera@{CBaseCamera}}
+\subsubsection[{SetScalers}]{\setlength{\rightskip}{0pt plus 5cm}void CBaseCamera::SetScalers (FLOAT {\em fRotationScaler} = {\ttfamily 0.01f}, \/  FLOAT {\em fMoveScaler} = {\ttfamily 5.0f})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_c_base_camera_a33c8df00f0f8d644744621ac7142d5f8}
+\hypertarget{class_c_base_camera_a17b45dd3b6055bc761058d57f5a10c02}{
+\index{CBaseCamera@{CBaseCamera}!SetViewParams@{SetViewParams}}
+\index{SetViewParams@{SetViewParams}!CBaseCamera@{CBaseCamera}}
+\subsubsection[{SetViewParams}]{\setlength{\rightskip}{0pt plus 5cm}VOID CBaseCamera::SetViewParams (D3DXVECTOR3 $\ast$ {\em pvEyePt}, \/  D3DXVECTOR3 $\ast$ {\em pvLookatPt})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{class_c_base_camera_a17b45dd3b6055bc761058d57f5a10c02}
+
+
+Reimplemented in \hyperlink{class_c_model_viewer_camera_a3cfc3e0fd350457b4206054c96fc39f7}{CModelViewerCamera}.\hypertarget{class_c_base_camera_afcca5c9bdc793eb6f1f8c0530b8b93f2}{
+\index{CBaseCamera@{CBaseCamera}!UpdateVelocity@{UpdateVelocity}}
+\index{UpdateVelocity@{UpdateVelocity}!CBaseCamera@{CBaseCamera}}
+\subsubsection[{UpdateVelocity}]{\setlength{\rightskip}{0pt plus 5cm}void CBaseCamera::UpdateVelocity (float {\em fElapsedTime})\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{class_c_base_camera_afcca5c9bdc793eb6f1f8c0530b8b93f2}
+\hypertarget{class_c_base_camera_ab4e5634db9c77f98b4f1f87b4de391dd}{
+\index{CBaseCamera@{CBaseCamera}!WasKeyDown@{WasKeyDown}}
+\index{WasKeyDown@{WasKeyDown}!CBaseCamera@{CBaseCamera}}
+\subsubsection[{WasKeyDown}]{\setlength{\rightskip}{0pt plus 5cm}bool CBaseCamera::WasKeyDown (BYTE {\em key}) const\hspace{0.3cm}{\ttfamily  \mbox{[}inline, protected\mbox{]}}}}
+\label{class_c_base_camera_ab4e5634db9c77f98b4f1f87b4de391dd}
+
+
+\subsection{Member Data Documentation}
+\hypertarget{class_c_base_camera_aab24266faedbce6a95ca36c23726064c}{
+\index{CBaseCamera@{CBaseCamera}!m\_\-aKeys@{m\_\-aKeys}}
+\index{m\_\-aKeys@{m\_\-aKeys}!CBaseCamera@{CBaseCamera}}
+\subsubsection[{m\_\-aKeys}]{\setlength{\rightskip}{0pt plus 5cm}BYTE {\bf CBaseCamera::m\_\-aKeys}\mbox{[}CAM\_\-MAX\_\-KEYS\mbox{]}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{class_c_base_camera_aab24266faedbce6a95ca36c23726064c}
+\hypertarget{class_c_base_camera_a1087c9e2eaf936be735df38f6f8719ad}{
+\index{CBaseCamera@{CBaseCamera}!m\_\-bClipToBoundary@{m\_\-bClipToBoundary}}
+\index{m\_\-bClipToBoundary@{m\_\-bClipToBoundary}!CBaseCamera@{CBaseCamera}}
+\subsubsection[{m\_\-bClipToBoundary}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf CBaseCamera::m\_\-bClipToBoundary}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{class_c_base_camera_a1087c9e2eaf936be735df38f6f8719ad}
+\hypertarget{class_c_base_camera_a59fae15ac67cb211049b17bf38672ac8}{
+\index{CBaseCamera@{CBaseCamera}!m\_\-bEnablePositionMovement@{m\_\-bEnablePositionMovement}}
+\index{m\_\-bEnablePositionMovement@{m\_\-bEnablePositionMovement}!CBaseCamera@{CBaseCamera}}
+\subsubsection[{m\_\-bEnablePositionMovement}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf CBaseCamera::m\_\-bEnablePositionMovement}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{class_c_base_camera_a59fae15ac67cb211049b17bf38672ac8}
+\hypertarget{class_c_base_camera_a2fbcc041572a057cfd03c27f157eaf08}{
+\index{CBaseCamera@{CBaseCamera}!m\_\-bEnableYAxisMovement@{m\_\-bEnableYAxisMovement}}
+\index{m\_\-bEnableYAxisMovement@{m\_\-bEnableYAxisMovement}!CBaseCamera@{CBaseCamera}}
+\subsubsection[{m\_\-bEnableYAxisMovement}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf CBaseCamera::m\_\-bEnableYAxisMovement}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{class_c_base_camera_a2fbcc041572a057cfd03c27f157eaf08}
+\hypertarget{class_c_base_camera_a6d12cd53bc908e4da00a7c3581807598}{
+\index{CBaseCamera@{CBaseCamera}!m\_\-bInvertPitch@{m\_\-bInvertPitch}}
+\index{m\_\-bInvertPitch@{m\_\-bInvertPitch}!CBaseCamera@{CBaseCamera}}
+\subsubsection[{m\_\-bInvertPitch}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf CBaseCamera::m\_\-bInvertPitch}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{class_c_base_camera_a6d12cd53bc908e4da00a7c3581807598}
+\hypertarget{class_c_base_camera_a328bd336893fea3959fafeb2938bc426}{
+\index{CBaseCamera@{CBaseCamera}!m\_\-bMouseLButtonDown@{m\_\-bMouseLButtonDown}}
+\index{m\_\-bMouseLButtonDown@{m\_\-bMouseLButtonDown}!CBaseCamera@{CBaseCamera}}
+\subsubsection[{m\_\-bMouseLButtonDown}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf CBaseCamera::m\_\-bMouseLButtonDown}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{class_c_base_camera_a328bd336893fea3959fafeb2938bc426}
+\hypertarget{class_c_base_camera_a1b56edb22dc3c1383da3524211dcfa6f}{
+\index{CBaseCamera@{CBaseCamera}!m\_\-bMouseMButtonDown@{m\_\-bMouseMButtonDown}}
+\index{m\_\-bMouseMButtonDown@{m\_\-bMouseMButtonDown}!CBaseCamera@{CBaseCamera}}
+\subsubsection[{m\_\-bMouseMButtonDown}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf CBaseCamera::m\_\-bMouseMButtonDown}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{class_c_base_camera_a1b56edb22dc3c1383da3524211dcfa6f}
+\hypertarget{class_c_base_camera_aeed297c389f73cae17eb0b923aa0092e}{
+\index{CBaseCamera@{CBaseCamera}!m\_\-bMouseRButtonDown@{m\_\-bMouseRButtonDown}}
+\index{m\_\-bMouseRButtonDown@{m\_\-bMouseRButtonDown}!CBaseCamera@{CBaseCamera}}
+\subsubsection[{m\_\-bMouseRButtonDown}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf CBaseCamera::m\_\-bMouseRButtonDown}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{class_c_base_camera_aeed297c389f73cae17eb0b923aa0092e}
+\hypertarget{class_c_base_camera_abbd0b30b993e305bc7deb7a985a3ea8b}{
+\index{CBaseCamera@{CBaseCamera}!m\_\-bMovementDrag@{m\_\-bMovementDrag}}
+\index{m\_\-bMovementDrag@{m\_\-bMovementDrag}!CBaseCamera@{CBaseCamera}}
+\subsubsection[{m\_\-bMovementDrag}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf CBaseCamera::m\_\-bMovementDrag}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{class_c_base_camera_abbd0b30b993e305bc7deb7a985a3ea8b}
+\hypertarget{class_c_base_camera_ae12aee70bbb423a26ae9ea2161a6eacc}{
+\index{CBaseCamera@{CBaseCamera}!m\_\-cKeysDown@{m\_\-cKeysDown}}
+\index{m\_\-cKeysDown@{m\_\-cKeysDown}!CBaseCamera@{CBaseCamera}}
+\subsubsection[{m\_\-cKeysDown}]{\setlength{\rightskip}{0pt plus 5cm}{\bf int} {\bf CBaseCamera::m\_\-cKeysDown}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{class_c_base_camera_ae12aee70bbb423a26ae9ea2161a6eacc}
+\hypertarget{class_c_base_camera_a605bbe3c728cc72c3f7dcae3c0bac16e}{
+\index{CBaseCamera@{CBaseCamera}!m\_\-fAspect@{m\_\-fAspect}}
+\index{m\_\-fAspect@{m\_\-fAspect}!CBaseCamera@{CBaseCamera}}
+\subsubsection[{m\_\-fAspect}]{\setlength{\rightskip}{0pt plus 5cm}float {\bf CBaseCamera::m\_\-fAspect}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{class_c_base_camera_a605bbe3c728cc72c3f7dcae3c0bac16e}
+\hypertarget{class_c_base_camera_afa9c9ae13a628b3dc352b6985d3a1acc}{
+\index{CBaseCamera@{CBaseCamera}!m\_\-fCameraPitchAngle@{m\_\-fCameraPitchAngle}}
+\index{m\_\-fCameraPitchAngle@{m\_\-fCameraPitchAngle}!CBaseCamera@{CBaseCamera}}
+\subsubsection[{m\_\-fCameraPitchAngle}]{\setlength{\rightskip}{0pt plus 5cm}float {\bf CBaseCamera::m\_\-fCameraPitchAngle}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{class_c_base_camera_afa9c9ae13a628b3dc352b6985d3a1acc}
+\hypertarget{class_c_base_camera_afe69549c26475e5d4f577cf8d2dce8cb}{
+\index{CBaseCamera@{CBaseCamera}!m\_\-fCameraYawAngle@{m\_\-fCameraYawAngle}}
+\index{m\_\-fCameraYawAngle@{m\_\-fCameraYawAngle}!CBaseCamera@{CBaseCamera}}
+\subsubsection[{m\_\-fCameraYawAngle}]{\setlength{\rightskip}{0pt plus 5cm}float {\bf CBaseCamera::m\_\-fCameraYawAngle}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{class_c_base_camera_afe69549c26475e5d4f577cf8d2dce8cb}
+\hypertarget{class_c_base_camera_aae76e8c993f56e6b21fa64b3bf0ee58a}{
+\index{CBaseCamera@{CBaseCamera}!m\_\-fDragTimer@{m\_\-fDragTimer}}
+\index{m\_\-fDragTimer@{m\_\-fDragTimer}!CBaseCamera@{CBaseCamera}}
+\subsubsection[{m\_\-fDragTimer}]{\setlength{\rightskip}{0pt plus 5cm}FLOAT {\bf CBaseCamera::m\_\-fDragTimer}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{class_c_base_camera_aae76e8c993f56e6b21fa64b3bf0ee58a}
+\hypertarget{class_c_base_camera_a667fbeae2b0445a30819109cd745764a}{
+\index{CBaseCamera@{CBaseCamera}!m\_\-fFarPlane@{m\_\-fFarPlane}}
+\index{m\_\-fFarPlane@{m\_\-fFarPlane}!CBaseCamera@{CBaseCamera}}
+\subsubsection[{m\_\-fFarPlane}]{\setlength{\rightskip}{0pt plus 5cm}float {\bf CBaseCamera::m\_\-fFarPlane}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{class_c_base_camera_a667fbeae2b0445a30819109cd745764a}
+\hypertarget{class_c_base_camera_ad480f1dc8ae654fc126cc2dfb57a1ec0}{
+\index{CBaseCamera@{CBaseCamera}!m\_\-fFOV@{m\_\-fFOV}}
+\index{m\_\-fFOV@{m\_\-fFOV}!CBaseCamera@{CBaseCamera}}
+\subsubsection[{m\_\-fFOV}]{\setlength{\rightskip}{0pt plus 5cm}float {\bf CBaseCamera::m\_\-fFOV}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{class_c_base_camera_ad480f1dc8ae654fc126cc2dfb57a1ec0}
+\hypertarget{class_c_base_camera_af9b4d43933754929e66403e0435d6387}{
+\index{CBaseCamera@{CBaseCamera}!m\_\-fFramesToSmoothMouseData@{m\_\-fFramesToSmoothMouseData}}
+\index{m\_\-fFramesToSmoothMouseData@{m\_\-fFramesToSmoothMouseData}!CBaseCamera@{CBaseCamera}}
+\subsubsection[{m\_\-fFramesToSmoothMouseData}]{\setlength{\rightskip}{0pt plus 5cm}float {\bf CBaseCamera::m\_\-fFramesToSmoothMouseData}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{class_c_base_camera_af9b4d43933754929e66403e0435d6387}
+\hypertarget{class_c_base_camera_ac45d164a6908b70b436223a89d48f158}{
+\index{CBaseCamera@{CBaseCamera}!m\_\-fMoveScaler@{m\_\-fMoveScaler}}
+\index{m\_\-fMoveScaler@{m\_\-fMoveScaler}!CBaseCamera@{CBaseCamera}}
+\subsubsection[{m\_\-fMoveScaler}]{\setlength{\rightskip}{0pt plus 5cm}float {\bf CBaseCamera::m\_\-fMoveScaler}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{class_c_base_camera_ac45d164a6908b70b436223a89d48f158}
+\hypertarget{class_c_base_camera_ac4d819f24b173b951db77377c20f33a1}{
+\index{CBaseCamera@{CBaseCamera}!m\_\-fNearPlane@{m\_\-fNearPlane}}
+\index{m\_\-fNearPlane@{m\_\-fNearPlane}!CBaseCamera@{CBaseCamera}}
+\subsubsection[{m\_\-fNearPlane}]{\setlength{\rightskip}{0pt plus 5cm}float {\bf CBaseCamera::m\_\-fNearPlane}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{class_c_base_camera_ac4d819f24b173b951db77377c20f33a1}
+\hypertarget{class_c_base_camera_a2faeeb72dd3ec59cb4bb05726341bca8}{
+\index{CBaseCamera@{CBaseCamera}!m\_\-fRotationScaler@{m\_\-fRotationScaler}}
+\index{m\_\-fRotationScaler@{m\_\-fRotationScaler}!CBaseCamera@{CBaseCamera}}
+\subsubsection[{m\_\-fRotationScaler}]{\setlength{\rightskip}{0pt plus 5cm}float {\bf CBaseCamera::m\_\-fRotationScaler}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{class_c_base_camera_a2faeeb72dd3ec59cb4bb05726341bca8}
+\hypertarget{class_c_base_camera_a39abb4e2ffe603d95bc1f80c3b7e7c86}{
+\index{CBaseCamera@{CBaseCamera}!m\_\-fTotalDragTimeToZero@{m\_\-fTotalDragTimeToZero}}
+\index{m\_\-fTotalDragTimeToZero@{m\_\-fTotalDragTimeToZero}!CBaseCamera@{CBaseCamera}}
+\subsubsection[{m\_\-fTotalDragTimeToZero}]{\setlength{\rightskip}{0pt plus 5cm}FLOAT {\bf CBaseCamera::m\_\-fTotalDragTimeToZero}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{class_c_base_camera_a39abb4e2ffe603d95bc1f80c3b7e7c86}
+\hypertarget{class_c_base_camera_a944fb74264227b610464a055a6d8c9c4}{
+\index{CBaseCamera@{CBaseCamera}!m\_\-GamePad@{m\_\-GamePad}}
+\index{m\_\-GamePad@{m\_\-GamePad}!CBaseCamera@{CBaseCamera}}
+\subsubsection[{m\_\-GamePad}]{\setlength{\rightskip}{0pt plus 5cm}{\bf DXUT\_\-GAMEPAD} {\bf CBaseCamera::m\_\-GamePad}\mbox{[}DXUT\_\-MAX\_\-CONTROLLERS\mbox{]}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{class_c_base_camera_a944fb74264227b610464a055a6d8c9c4}
+\hypertarget{class_c_base_camera_ae2731931f0485bb49b9f3178f9aabe6f}{
+\index{CBaseCamera@{CBaseCamera}!m\_\-GamePadLastActive@{m\_\-GamePadLastActive}}
+\index{m\_\-GamePadLastActive@{m\_\-GamePadLastActive}!CBaseCamera@{CBaseCamera}}
+\subsubsection[{m\_\-GamePadLastActive}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf CBaseCamera::m\_\-GamePadLastActive}\mbox{[}DXUT\_\-MAX\_\-CONTROLLERS\mbox{]}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{class_c_base_camera_ae2731931f0485bb49b9f3178f9aabe6f}
+\hypertarget{class_c_base_camera_a97b8a160735a4b812e7d3e2637d2025c}{
+\index{CBaseCamera@{CBaseCamera}!m\_\-mProj@{m\_\-mProj}}
+\index{m\_\-mProj@{m\_\-mProj}!CBaseCamera@{CBaseCamera}}
+\subsubsection[{m\_\-mProj}]{\setlength{\rightskip}{0pt plus 5cm}D3DXMATRIX {\bf CBaseCamera::m\_\-mProj}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{class_c_base_camera_a97b8a160735a4b812e7d3e2637d2025c}
+\hypertarget{class_c_base_camera_aa4e76560bdadc557f2e279e8ab00e405}{
+\index{CBaseCamera@{CBaseCamera}!m\_\-mView@{m\_\-mView}}
+\index{m\_\-mView@{m\_\-mView}!CBaseCamera@{CBaseCamera}}
+\subsubsection[{m\_\-mView}]{\setlength{\rightskip}{0pt plus 5cm}D3DXMATRIX {\bf CBaseCamera::m\_\-mView}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{class_c_base_camera_aa4e76560bdadc557f2e279e8ab00e405}
+\hypertarget{class_c_base_camera_aa30c8f1421c0e0f00dd1b3b37165bffd}{
+\index{CBaseCamera@{CBaseCamera}!m\_\-nCurrentButtonMask@{m\_\-nCurrentButtonMask}}
+\index{m\_\-nCurrentButtonMask@{m\_\-nCurrentButtonMask}!CBaseCamera@{CBaseCamera}}
+\subsubsection[{m\_\-nCurrentButtonMask}]{\setlength{\rightskip}{0pt plus 5cm}{\bf int} {\bf CBaseCamera::m\_\-nCurrentButtonMask}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{class_c_base_camera_aa30c8f1421c0e0f00dd1b3b37165bffd}
+\hypertarget{class_c_base_camera_ae6f0a643e814c30ae8f8fe7d8e49c46e}{
+\index{CBaseCamera@{CBaseCamera}!m\_\-nMouseWheelDelta@{m\_\-nMouseWheelDelta}}
+\index{m\_\-nMouseWheelDelta@{m\_\-nMouseWheelDelta}!CBaseCamera@{CBaseCamera}}
+\subsubsection[{m\_\-nMouseWheelDelta}]{\setlength{\rightskip}{0pt plus 5cm}{\bf int} {\bf CBaseCamera::m\_\-nMouseWheelDelta}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{class_c_base_camera_ae6f0a643e814c30ae8f8fe7d8e49c46e}
+\hypertarget{class_c_base_camera_a6019b5ba50a3e7c57187d8341292c7d2}{
+\index{CBaseCamera@{CBaseCamera}!m\_\-ptLastMousePosition@{m\_\-ptLastMousePosition}}
+\index{m\_\-ptLastMousePosition@{m\_\-ptLastMousePosition}!CBaseCamera@{CBaseCamera}}
+\subsubsection[{m\_\-ptLastMousePosition}]{\setlength{\rightskip}{0pt plus 5cm}POINT {\bf CBaseCamera::m\_\-ptLastMousePosition}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{class_c_base_camera_a6019b5ba50a3e7c57187d8341292c7d2}
+\hypertarget{class_c_base_camera_a1a22483b3f168a945864e5fd156ca820}{
+\index{CBaseCamera@{CBaseCamera}!m\_\-rcDrag@{m\_\-rcDrag}}
+\index{m\_\-rcDrag@{m\_\-rcDrag}!CBaseCamera@{CBaseCamera}}
+\subsubsection[{m\_\-rcDrag}]{\setlength{\rightskip}{0pt plus 5cm}RECT {\bf CBaseCamera::m\_\-rcDrag}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{class_c_base_camera_a1a22483b3f168a945864e5fd156ca820}
+\hypertarget{class_c_base_camera_a71147e92520e8965eac70517585ffe3c}{
+\index{CBaseCamera@{CBaseCamera}!m\_\-vDefaultEye@{m\_\-vDefaultEye}}
+\index{m\_\-vDefaultEye@{m\_\-vDefaultEye}!CBaseCamera@{CBaseCamera}}
+\subsubsection[{m\_\-vDefaultEye}]{\setlength{\rightskip}{0pt plus 5cm}D3DXVECTOR3 {\bf CBaseCamera::m\_\-vDefaultEye}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{class_c_base_camera_a71147e92520e8965eac70517585ffe3c}
+\hypertarget{class_c_base_camera_ad3dd204ec2e0c44f6757ea3ac83a4f6e}{
+\index{CBaseCamera@{CBaseCamera}!m\_\-vDefaultLookAt@{m\_\-vDefaultLookAt}}
+\index{m\_\-vDefaultLookAt@{m\_\-vDefaultLookAt}!CBaseCamera@{CBaseCamera}}
+\subsubsection[{m\_\-vDefaultLookAt}]{\setlength{\rightskip}{0pt plus 5cm}D3DXVECTOR3 {\bf CBaseCamera::m\_\-vDefaultLookAt}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{class_c_base_camera_ad3dd204ec2e0c44f6757ea3ac83a4f6e}
+\hypertarget{class_c_base_camera_aa7b7cd1276331e8ab614e04ddcde14e7}{
+\index{CBaseCamera@{CBaseCamera}!m\_\-vEye@{m\_\-vEye}}
+\index{m\_\-vEye@{m\_\-vEye}!CBaseCamera@{CBaseCamera}}
+\subsubsection[{m\_\-vEye}]{\setlength{\rightskip}{0pt plus 5cm}D3DXVECTOR3 {\bf CBaseCamera::m\_\-vEye}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{class_c_base_camera_aa7b7cd1276331e8ab614e04ddcde14e7}
+\hypertarget{class_c_base_camera_a82a20dcc1d03a97e52f9f336b0f0e33b}{
+\index{CBaseCamera@{CBaseCamera}!m\_\-vGamePadLeftThumb@{m\_\-vGamePadLeftThumb}}
+\index{m\_\-vGamePadLeftThumb@{m\_\-vGamePadLeftThumb}!CBaseCamera@{CBaseCamera}}
+\subsubsection[{m\_\-vGamePadLeftThumb}]{\setlength{\rightskip}{0pt plus 5cm}D3DXVECTOR3 {\bf CBaseCamera::m\_\-vGamePadLeftThumb}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{class_c_base_camera_a82a20dcc1d03a97e52f9f336b0f0e33b}
+\hypertarget{class_c_base_camera_a1b9e69b2140314515049b30091d9a788}{
+\index{CBaseCamera@{CBaseCamera}!m\_\-vGamePadRightThumb@{m\_\-vGamePadRightThumb}}
+\index{m\_\-vGamePadRightThumb@{m\_\-vGamePadRightThumb}!CBaseCamera@{CBaseCamera}}
+\subsubsection[{m\_\-vGamePadRightThumb}]{\setlength{\rightskip}{0pt plus 5cm}D3DXVECTOR3 {\bf CBaseCamera::m\_\-vGamePadRightThumb}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{class_c_base_camera_a1b9e69b2140314515049b30091d9a788}
+\hypertarget{class_c_base_camera_aed43d3466c7a2d60b7b62845ab602b6f}{
+\index{CBaseCamera@{CBaseCamera}!m\_\-vKeyboardDirection@{m\_\-vKeyboardDirection}}
+\index{m\_\-vKeyboardDirection@{m\_\-vKeyboardDirection}!CBaseCamera@{CBaseCamera}}
+\subsubsection[{m\_\-vKeyboardDirection}]{\setlength{\rightskip}{0pt plus 5cm}D3DXVECTOR3 {\bf CBaseCamera::m\_\-vKeyboardDirection}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{class_c_base_camera_aed43d3466c7a2d60b7b62845ab602b6f}
+\hypertarget{class_c_base_camera_a0c773d85e2ca0bf6eaf60e90478b6520}{
+\index{CBaseCamera@{CBaseCamera}!m\_\-vLookAt@{m\_\-vLookAt}}
+\index{m\_\-vLookAt@{m\_\-vLookAt}!CBaseCamera@{CBaseCamera}}
+\subsubsection[{m\_\-vLookAt}]{\setlength{\rightskip}{0pt plus 5cm}D3DXVECTOR3 {\bf CBaseCamera::m\_\-vLookAt}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{class_c_base_camera_a0c773d85e2ca0bf6eaf60e90478b6520}
+\hypertarget{class_c_base_camera_a8f823201300bc646e232a82a4c5b6eea}{
+\index{CBaseCamera@{CBaseCamera}!m\_\-vMaxBoundary@{m\_\-vMaxBoundary}}
+\index{m\_\-vMaxBoundary@{m\_\-vMaxBoundary}!CBaseCamera@{CBaseCamera}}
+\subsubsection[{m\_\-vMaxBoundary}]{\setlength{\rightskip}{0pt plus 5cm}D3DXVECTOR3 {\bf CBaseCamera::m\_\-vMaxBoundary}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{class_c_base_camera_a8f823201300bc646e232a82a4c5b6eea}
+\hypertarget{class_c_base_camera_a63dd58475f7382d77ada28b763e7a422}{
+\index{CBaseCamera@{CBaseCamera}!m\_\-vMinBoundary@{m\_\-vMinBoundary}}
+\index{m\_\-vMinBoundary@{m\_\-vMinBoundary}!CBaseCamera@{CBaseCamera}}
+\subsubsection[{m\_\-vMinBoundary}]{\setlength{\rightskip}{0pt plus 5cm}D3DXVECTOR3 {\bf CBaseCamera::m\_\-vMinBoundary}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{class_c_base_camera_a63dd58475f7382d77ada28b763e7a422}
+\hypertarget{class_c_base_camera_ab884ec4d7972fed1319ed867a542f041}{
+\index{CBaseCamera@{CBaseCamera}!m\_\-vMouseDelta@{m\_\-vMouseDelta}}
+\index{m\_\-vMouseDelta@{m\_\-vMouseDelta}!CBaseCamera@{CBaseCamera}}
+\subsubsection[{m\_\-vMouseDelta}]{\setlength{\rightskip}{0pt plus 5cm}D3DXVECTOR2 {\bf CBaseCamera::m\_\-vMouseDelta}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{class_c_base_camera_ab884ec4d7972fed1319ed867a542f041}
+\hypertarget{class_c_base_camera_a462bb1b209e135dcaab3d95e7e709512}{
+\index{CBaseCamera@{CBaseCamera}!m\_\-vRotVelocity@{m\_\-vRotVelocity}}
+\index{m\_\-vRotVelocity@{m\_\-vRotVelocity}!CBaseCamera@{CBaseCamera}}
+\subsubsection[{m\_\-vRotVelocity}]{\setlength{\rightskip}{0pt plus 5cm}D3DXVECTOR2 {\bf CBaseCamera::m\_\-vRotVelocity}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{class_c_base_camera_a462bb1b209e135dcaab3d95e7e709512}
+\hypertarget{class_c_base_camera_abce9d814274b2bdb4da95fc3b3dca575}{
+\index{CBaseCamera@{CBaseCamera}!m\_\-vVelocity@{m\_\-vVelocity}}
+\index{m\_\-vVelocity@{m\_\-vVelocity}!CBaseCamera@{CBaseCamera}}
+\subsubsection[{m\_\-vVelocity}]{\setlength{\rightskip}{0pt plus 5cm}D3DXVECTOR3 {\bf CBaseCamera::m\_\-vVelocity}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{class_c_base_camera_abce9d814274b2bdb4da95fc3b3dca575}
+\hypertarget{class_c_base_camera_a541e0833b62dac8d0dcff9f95be9220f}{
+\index{CBaseCamera@{CBaseCamera}!m\_\-vVelocityDrag@{m\_\-vVelocityDrag}}
+\index{m\_\-vVelocityDrag@{m\_\-vVelocityDrag}!CBaseCamera@{CBaseCamera}}
+\subsubsection[{m\_\-vVelocityDrag}]{\setlength{\rightskip}{0pt plus 5cm}D3DXVECTOR3 {\bf CBaseCamera::m\_\-vVelocityDrag}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{class_c_base_camera_a541e0833b62dac8d0dcff9f95be9220f}
+
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+C:/Users/doug/Documents/Visual Studio 2008/Projects/enlightened/Enlightened/DXUT/\hyperlink{_d_x_u_tmisc_8h}{DXUTmisc.h}\item 
+C:/Users/doug/Documents/Visual Studio 2008/Projects/enlightened/Enlightened/DXUT/\hyperlink{_d_x_u_tmisc_8cpp}{DXUTmisc.cpp}\end{DoxyCompactItemize}

@@ -1,0 +1,568 @@
+\hypertarget{_d_x_u_tmisc_8h}{
+\section{C:/Users/doug/Documents/Visual Studio 2008/Projects/enlightened/Enlightened/DXUT/DXUTmisc.h File Reference}
+\label{_d_x_u_tmisc_8h}\index{C:/Users/doug/Documents/Visual Studio 2008/Projects/enlightened/Enlightened/DXUT/DXUTmisc.h@{C:/Users/doug/Documents/Visual Studio 2008/Projects/enlightened/Enlightened/DXUT/DXUTmisc.h}}
+}
+This graph shows which files directly or indirectly include this file:\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{struct_d_x_u_t___g_a_m_e_p_a_d}{DXUT\_\-GAMEPAD}
+\item 
+class \hyperlink{class_c_growable_array}{CGrowableArray$<$ TYPE $>$}
+\item 
+class \hyperlink{class_c_d_x_u_t_timer}{CDXUTTimer}
+\item 
+struct \hyperlink{struct_d_x_u_t_cache___texture}{DXUTCache\_\-Texture}
+\item 
+struct \hyperlink{struct_d_x_u_t_cache___font}{DXUTCache\_\-Font}
+\item 
+struct \hyperlink{struct_d_x_u_t_cache___effect}{DXUTCache\_\-Effect}
+\item 
+class \hyperlink{class_c_d_x_u_t_resource_cache}{CDXUTResourceCache}
+\item 
+class \hyperlink{class_c_d3_d_arc_ball}{CD3DArcBall}
+\item 
+class \hyperlink{class_c_base_camera}{CBaseCamera}
+\item 
+class \hyperlink{class_c_first_person_camera}{CFirstPersonCamera}
+\item 
+class \hyperlink{class_c_model_viewer_camera}{CModelViewerCamera}
+\item 
+class \hyperlink{class_c_d_x_u_t_text_helper}{CDXUTTextHelper}
+\item 
+class \hyperlink{class_c_d_x_u_t_line_manager}{CDXUTLineManager}
+\item 
+struct \hyperlink{struct_c_d_x_u_t_line_manager_1_1_l_i_n_e___n_o_d_e}{CDXUTLineManager::LINE\_\-NODE}
+\item 
+class \hyperlink{class_c_d_x_u_t_direction_widget}{CDXUTDirectionWidget}
+\item 
+class \hyperlink{class_c_d_x_u_t_perf_event_generator}{CDXUTPerfEventGenerator}
+\item 
+struct \hyperlink{structtag_m_o_n_i_t_o_r_i_n_f_o}{tagMONITORINFO}
+\item 
+struct \hyperlink{structtag_m_o_n_i_t_o_r_i_n_f_o_e_x_w}{tagMONITORINFOEXW}
+\end{DoxyCompactItemize}
+\subsection*{Defines}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{_d_x_u_tmisc_8h_a2717f7b49d17112e2ac91abe021dc980}{DXUT\_\-MAX\_\-CONTROLLERS}~4
+\item 
+\#define \hyperlink{_d_x_u_tmisc_8h_aff864772a97332facec5e39758ec809d}{KEY\_\-WAS\_\-DOWN\_\-MASK}~0x80
+\item 
+\#define \hyperlink{_d_x_u_tmisc_8h_a39e692a1c38b57e6ca1b6f29fe67cc85}{KEY\_\-IS\_\-DOWN\_\-MASK}~0x01
+\item 
+\#define \hyperlink{_d_x_u_tmisc_8h_afb42537b362f394ed4db90fd34c87330}{MOUSE\_\-LEFT\_\-BUTTON}~0x01
+\item 
+\#define \hyperlink{_d_x_u_tmisc_8h_af198ea1d58a225ba7fce4ae77e2faa04}{MOUSE\_\-MIDDLE\_\-BUTTON}~0x02
+\item 
+\#define \hyperlink{_d_x_u_tmisc_8h_aa1092e0190b6ee5bc6733943d970fed7}{MOUSE\_\-RIGHT\_\-BUTTON}~0x04
+\item 
+\#define \hyperlink{_d_x_u_tmisc_8h_a941896ca7c68c553dc4d9e7b79f0eb11}{MOUSE\_\-WHEEL}~0x08
+\item 
+\#define \hyperlink{_d_x_u_tmisc_8h_a5e27a94cd1754e1e997d66266b36f2da}{DXUTOutputDebugString}~DXUTOutputDebugStringA
+\item 
+\#define \hyperlink{_d_x_u_tmisc_8h_a3d12d6352df2d8f264bc3e8a4df83ed1}{DXUT\_\-ERR}(str, hr)~(hr)
+\item 
+\#define \hyperlink{_d_x_u_tmisc_8h_aa5549e4efee079707297539a82a1e468}{DXUT\_\-ERR\_\-MSGBOX}(str, hr)~(hr)
+\item 
+\#define \hyperlink{_d_x_u_tmisc_8h_aa37dfef3caea64bf228636d5afc2b74e}{DXUTTRACE}~(\_\-\_\-noop)
+\item 
+\#define \hyperlink{_d_x_u_tmisc_8h_ad832e96862ef076fbaa54590aaf203ed}{DXUT\_\-BeginPerfEvent}(color, pstrMessage)~(\_\-\_\-noop)
+\item 
+\#define \hyperlink{_d_x_u_tmisc_8h_ae573b36178f051b9134f2443151f4ee3}{DXUT\_\-EndPerfEvent}()~(\_\-\_\-noop)
+\item 
+\#define \hyperlink{_d_x_u_tmisc_8h_a4f74b617756af885e2322132810f9c1a}{DXUT\_\-SetPerfMarker}(color, pstrMessage)~(\_\-\_\-noop)
+\item 
+\#define \hyperlink{_d_x_u_tmisc_8h_a2086fefb243781bd66802344355231c5}{MONITORINFOF\_\-PRIMARY}~0x00000001
+\item 
+\#define \hyperlink{_d_x_u_tmisc_8h_a6e6e40aeeb76f700242d0b1d4ebf4736}{MONITOR\_\-DEFAULTTONULL}~0x00000000
+\item 
+\#define \hyperlink{_d_x_u_tmisc_8h_a01e0ea400a1c34af3868761380847d73}{MONITOR\_\-DEFAULTTOPRIMARY}~0x00000001
+\item 
+\#define \hyperlink{_d_x_u_tmisc_8h_a53126a8b0dec984366283010ba1e2bf7}{MONITOR\_\-DEFAULTTONEAREST}~0x00000002
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct \hyperlink{structtag_m_o_n_i_t_o_r_i_n_f_o}{tagMONITORINFO} \hyperlink{_d_x_u_tmisc_8h_a6a038489bc01272a01ea9e4b8bd68701}{MONITORINFO}
+\item 
+typedef struct \hyperlink{structtag_m_o_n_i_t_o_r_i_n_f_o}{tagMONITORINFO} $\ast$ \hyperlink{_d_x_u_tmisc_8h_a1ed1026bd1790a58887d4f2a3bacdf93}{LPMONITORINFO}
+\item 
+typedef \hyperlink{structtag_m_o_n_i_t_o_r_i_n_f_o_e_x_w}{tagMONITORINFOEXW} \hyperlink{_d_x_u_tmisc_8h_a993792b5933cfbe8f46ea3e247beba1c}{MONITORINFOEXW}
+\item 
+typedef \hyperlink{structtag_m_o_n_i_t_o_r_i_n_f_o_e_x_w}{tagMONITORINFOEXW} $\ast$ \hyperlink{_d_x_u_tmisc_8h_afaa32db7f75252c45afc560e76da2f8e}{LPMONITORINFOEXW}
+\item 
+typedef \hyperlink{structtag_m_o_n_i_t_o_r_i_n_f_o_e_x_w}{MONITORINFOEXW} \hyperlink{_d_x_u_tmisc_8h_a85a8cd89485ca31f587b5124c067d5da}{MONITORINFOEX}
+\item 
+typedef \hyperlink{structtag_m_o_n_i_t_o_r_i_n_f_o_e_x_w}{LPMONITORINFOEXW} \hyperlink{_d_x_u_tmisc_8h_a462678a551ad8927947dacbc29f14891}{LPMONITORINFOEX}
+\end{DoxyCompactItemize}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{_d_x_u_tmisc_8h_a76e8535d530eae9300822134c181e733}{DXUTCACHE\_\-SOURCELOCATION} \{ \hyperlink{_d_x_u_tmisc_8h_a76e8535d530eae9300822134c181e733a34be7e21d82209b2189e3095c90d7e3e}{DXUTCACHE\_\-LOCATION\_\-FILE}, 
+\hyperlink{_d_x_u_tmisc_8h_a76e8535d530eae9300822134c181e733a39e9b2531d12a08b35274aa0a434d82c}{DXUTCACHE\_\-LOCATION\_\-RESOURCE}
+ \}
+\item 
+enum \hyperlink{_d_x_u_tmisc_8h_a4b2404de98d0b5f4a0efe1a7752fffa2}{D3DUtil\_\-CameraKeys} \{ \par
+\hyperlink{_d_x_u_tmisc_8h_a4b2404de98d0b5f4a0efe1a7752fffa2a9ebbc12d353b73bf060b6be2388f61cc}{CAM\_\-STRAFE\_\-LEFT} =  0, 
+\hyperlink{_d_x_u_tmisc_8h_a4b2404de98d0b5f4a0efe1a7752fffa2a022ce82fb69c8a537a8b141207071ed3}{CAM\_\-STRAFE\_\-RIGHT}, 
+\hyperlink{_d_x_u_tmisc_8h_a4b2404de98d0b5f4a0efe1a7752fffa2ad69c3a5aa1a9b0346685966751142184}{CAM\_\-MOVE\_\-FORWARD}, 
+\hyperlink{_d_x_u_tmisc_8h_a4b2404de98d0b5f4a0efe1a7752fffa2a699a3d5fdfe73daaa2f2bf9aff505985}{CAM\_\-MOVE\_\-BACKWARD}, 
+\par
+\hyperlink{_d_x_u_tmisc_8h_a4b2404de98d0b5f4a0efe1a7752fffa2a4728afba5a7bf281476b27419a8853f4}{CAM\_\-MOVE\_\-UP}, 
+\hyperlink{_d_x_u_tmisc_8h_a4b2404de98d0b5f4a0efe1a7752fffa2a228a121dff941ea98be9bbbab463b6ef}{CAM\_\-MOVE\_\-DOWN}, 
+\hyperlink{_d_x_u_tmisc_8h_a4b2404de98d0b5f4a0efe1a7752fffa2a0fa9d8fc0f98ac0196870216d7f2c383}{CAM\_\-RESET}, 
+\hyperlink{_d_x_u_tmisc_8h_a4b2404de98d0b5f4a0efe1a7752fffa2aa39d04f07066589adc4ec53a11ef4614}{CAM\_\-CONTROLDOWN}, 
+\par
+\hyperlink{_d_x_u_tmisc_8h_a4b2404de98d0b5f4a0efe1a7752fffa2a21a4331af4dab51344af94c70571ce1e}{CAM\_\-MAX\_\-KEYS}, 
+\hyperlink{_d_x_u_tmisc_8h_a4b2404de98d0b5f4a0efe1a7752fffa2a3e3a357964326feba04cd73c1bbb8a15}{CAM\_\-UNKNOWN} =  0xFF
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+HRESULT \hyperlink{_d_x_u_tmisc_8h_a9c9021fdb607dfbc52ed98c353f0f617}{DXUTGetGamepadState} (DWORD dwPort, \hyperlink{struct_d_x_u_t___g_a_m_e_p_a_d}{DXUT\_\-GAMEPAD} $\ast$pGamePad, bool bThumbstickDeadZone=true, bool bSnapThumbstickToCardinals=true)
+\item 
+HRESULT \hyperlink{_d_x_u_tmisc_8h_afd12f16e31c2fdec2a5f024535233e73}{DXUTStopRumbleOnAllControllers} ()
+\item 
+void \hyperlink{_d_x_u_tmisc_8h_adab0cd30b2ecd88bc4f772112e9cbdb9}{DXUTEnableXInput} (bool bEnable)
+\item 
+\hyperlink{class_c_d_x_u_t_timer}{CDXUTTimer} $\ast$ \hyperlink{_d_x_u_tmisc_8h_a01fb029efdf40f0edec30410feaa8e96}{DXUTGetGlobalTimer} ()
+\item 
+\hyperlink{class_c_d_x_u_t_resource_cache}{CDXUTResourceCache} \& \hyperlink{_d_x_u_tmisc_8h_aa4ef62fbd7e1e944b3aea0f090f3de5f}{DXUTGetGlobalResourceCache} ()
+\item 
+void \hyperlink{_d_x_u_tmisc_8h_a4cc8e02a1956cdad39913f57c930fe1e}{DXUTDisplaySwitchingToREFWarning} ()
+\item 
+HRESULT \hyperlink{_d_x_u_tmisc_8h_a08d81bd8687eac30cf68bfacb7e1d7f4}{DXUTFindDXSDKMediaFileCch} (WCHAR $\ast$strDestPath, \hyperlink{_d_x_u_tgui_8cpp_a2d77ed03302b6978834ee3b6f57837fb}{int} cchDest, LPCWSTR strFilename)
+\item 
+HRESULT \hyperlink{_d_x_u_tmisc_8h_a23d3a1c266fd977cb8bd7453db83a0a8}{DXUTSetMediaSearchPath} (LPCWSTR strPath)
+\item 
+LPCWSTR \hyperlink{_d_x_u_tmisc_8h_ad3d5e392423b0a1d33913dd284c4221f}{DXUTGetMediaSearchPath} ()
+\item 
+LPCWSTR \hyperlink{_d_x_u_tmisc_8h_a7e32e6dc88078d0acab59a548a0d4838}{DXUTD3DFormatToString} (D3DFORMAT format, bool bWithPrefix)
+\item 
+D3DXMATRIX \hyperlink{_d_x_u_tmisc_8h_ada16fab6af540ee0f3afd608dc8ed30c}{DXUTGetCubeMapViewMatrix} (DWORD dwFace)
+\item 
+bool \hyperlink{_d_x_u_tmisc_8h_a1c9bd80b9f0ad177865650ca9ca90175}{DXUTReLaunchMediaCenter} ()
+\item 
+void \hyperlink{_d_x_u_tmisc_8h_a9505155c076de4d4cc3c313f2ff25823}{DXUTOutputDebugStringW} (LPCWSTR strMsg,...)
+\item 
+void \hyperlink{_d_x_u_tmisc_8h_a611614d089525f35e395c25ea8027b30}{DXUTOutputDebugStringA} (LPCSTR strMsg,...)
+\item 
+HRESULT WINAPI \hyperlink{_d_x_u_tmisc_8h_a3a29e214649a51ccbbec1253753f4148}{DXUTTrace} (const CHAR $\ast$strFile, DWORD dwLine, HRESULT hr, const WCHAR $\ast$strMsg, bool bPopMsgBox)
+\item 
+void \hyperlink{_d_x_u_tmisc_8h_a205815707b519d9d4454b86c84f489c6}{DXUTTraceDecl} (D3DVERTEXELEMENT9 decl\mbox{[}MAX\_\-FVF\_\-DECL\_\-SIZE\mbox{]})
+\item 
+WCHAR $\ast$ \hyperlink{_d_x_u_tmisc_8h_ab6f12af3c0996f374905cd9d1ab4251c}{DXUTTraceD3DDECLUSAGEtoString} (BYTE u)
+\item 
+WCHAR $\ast$ \hyperlink{_d_x_u_tmisc_8h_a54bf02f83beeeecb0b43353415d9c506}{DXUTTraceD3DDECLMETHODtoString} (BYTE m)
+\item 
+WCHAR $\ast$ \hyperlink{_d_x_u_tmisc_8h_a5ed5428145d6777a1a0e8504792d1f14}{DXUTTraceD3DDECLTYPEtoString} (BYTE t)
+\item 
+IDirect3D9 $\ast$WINAPI \hyperlink{_d_x_u_tmisc_8h_aa3b55878c3738d21e81459152d46d47a}{DXUT\_\-Dynamic\_\-Direct3DCreate9} (UINT SDKVersion)
+\item 
+\hyperlink{_d_x_u_tgui_8cpp_a2d77ed03302b6978834ee3b6f57837fb}{int} WINAPI \hyperlink{_d_x_u_tmisc_8h_a6474643fc474f5f14116b47c346ba362}{DXUT\_\-Dynamic\_\-D3DPERF\_\-BeginEvent} (D3DCOLOR col, LPCWSTR wszName)
+\item 
+\hyperlink{_d_x_u_tgui_8cpp_a2d77ed03302b6978834ee3b6f57837fb}{int} WINAPI \hyperlink{_d_x_u_tmisc_8h_a111b7ce49428c2bf7dd2f5c09e71de7d}{DXUT\_\-Dynamic\_\-D3DPERF\_\-EndEvent} (void)
+\item 
+void WINAPI \hyperlink{_d_x_u_tmisc_8h_a08bf66ce59dab9bcf43da407d1edce3c}{DXUT\_\-Dynamic\_\-D3DPERF\_\-SetMarker} (D3DCOLOR col, LPCWSTR wszName)
+\item 
+void WINAPI \hyperlink{_d_x_u_tmisc_8h_abc96b7a600c737d0ae61741f100bd85e}{DXUT\_\-Dynamic\_\-D3DPERF\_\-SetRegion} (D3DCOLOR col, LPCWSTR wszName)
+\item 
+BOOL WINAPI \hyperlink{_d_x_u_tmisc_8h_a80afdfb4d03a33818503dfe2c5a8611e}{DXUT\_\-Dynamic\_\-D3DPERF\_\-QueryRepeatFrame} (void)
+\item 
+void WINAPI \hyperlink{_d_x_u_tmisc_8h_ad152141f06f193b1fc564ea90798fc20}{DXUT\_\-Dynamic\_\-D3DPERF\_\-SetOptions} (DWORD dwOptions)
+\item 
+DWORD WINAPI \hyperlink{_d_x_u_tmisc_8h_a54fec71cdf8a36fbe7f55a47db285612}{DXUT\_\-Dynamic\_\-D3DPERF\_\-GetStatus} (void)
+\item 
+HMONITOR \hyperlink{_d_x_u_tmisc_8h_ae6e09c803d7d9f956a48cb9922f18a2e}{DXUTMonitorFromWindow} (HWND hWnd, DWORD dwFlags)
+\item 
+BOOL \hyperlink{_d_x_u_tmisc_8h_a4c209d9c386ad3cececbb29a6d2df38d}{DXUTGetMonitorInfo} (HMONITOR hMonitor, \hyperlink{structtag_m_o_n_i_t_o_r_i_n_f_o}{LPMONITORINFO} lpMonitorInfo)
+\item 
+void \hyperlink{_d_x_u_tmisc_8h_a9ab098cd39d1ca175cdb0b245126204b}{DXUTGetDesktopResolution} (UINT AdapterOrdinal, UINT $\ast$pWidth, UINT $\ast$pHeight)
+\item 
+IDirect3DDevice9 $\ast$ \hyperlink{_d_x_u_tmisc_8h_a83dec8909c5b14661c6efe575a4e67af}{DXUTCreateRefDevice} (HWND hWnd, bool bNullRef=true)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+const D3DCOLOR \hyperlink{_d_x_u_tmisc_8h_addbab3f2f3548262af21366347d010c2}{DXUT\_\-PERFEVENTCOLOR} = D3DCOLOR\_\-XRGB(200,100,100)
+\item 
+const D3DCOLOR \hyperlink{_d_x_u_tmisc_8h_a92ad13941733538ceaf3b4d0b99c5940}{DXUT\_\-PERFEVENTCOLOR2} = D3DCOLOR\_\-XRGB(100,200,100)
+\item 
+const D3DCOLOR \hyperlink{_d_x_u_tmisc_8h_afb1b05533326e5326fcf49e0bb829945}{DXUT\_\-PERFEVENTCOLOR3} = D3DCOLOR\_\-XRGB(100,100,200)
+\end{DoxyCompactItemize}
+
+
+\subsection{Define Documentation}
+\hypertarget{_d_x_u_tmisc_8h_ad832e96862ef076fbaa54590aaf203ed}{
+\index{DXUTmisc.h@{DXUTmisc.h}!DXUT\_\-BeginPerfEvent@{DXUT\_\-BeginPerfEvent}}
+\index{DXUT\_\-BeginPerfEvent@{DXUT\_\-BeginPerfEvent}!DXUTmisc.h@{DXUTmisc.h}}
+\subsubsection[{DXUT\_\-BeginPerfEvent}]{\setlength{\rightskip}{0pt plus 5cm}\#define DXUT\_\-BeginPerfEvent(color, \/  pstrMessage)~(\_\-\_\-noop)}}
+\label{_d_x_u_tmisc_8h_ad832e96862ef076fbaa54590aaf203ed}
+\hypertarget{_d_x_u_tmisc_8h_ae573b36178f051b9134f2443151f4ee3}{
+\index{DXUTmisc.h@{DXUTmisc.h}!DXUT\_\-EndPerfEvent@{DXUT\_\-EndPerfEvent}}
+\index{DXUT\_\-EndPerfEvent@{DXUT\_\-EndPerfEvent}!DXUTmisc.h@{DXUTmisc.h}}
+\subsubsection[{DXUT\_\-EndPerfEvent}]{\setlength{\rightskip}{0pt plus 5cm}\#define DXUT\_\-EndPerfEvent()~(\_\-\_\-noop)}}
+\label{_d_x_u_tmisc_8h_ae573b36178f051b9134f2443151f4ee3}
+\hypertarget{_d_x_u_tmisc_8h_a3d12d6352df2d8f264bc3e8a4df83ed1}{
+\index{DXUTmisc.h@{DXUTmisc.h}!DXUT\_\-ERR@{DXUT\_\-ERR}}
+\index{DXUT\_\-ERR@{DXUT\_\-ERR}!DXUTmisc.h@{DXUTmisc.h}}
+\subsubsection[{DXUT\_\-ERR}]{\setlength{\rightskip}{0pt plus 5cm}\#define DXUT\_\-ERR(str, \/  hr)~(hr)}}
+\label{_d_x_u_tmisc_8h_a3d12d6352df2d8f264bc3e8a4df83ed1}
+\hypertarget{_d_x_u_tmisc_8h_aa5549e4efee079707297539a82a1e468}{
+\index{DXUTmisc.h@{DXUTmisc.h}!DXUT\_\-ERR\_\-MSGBOX@{DXUT\_\-ERR\_\-MSGBOX}}
+\index{DXUT\_\-ERR\_\-MSGBOX@{DXUT\_\-ERR\_\-MSGBOX}!DXUTmisc.h@{DXUTmisc.h}}
+\subsubsection[{DXUT\_\-ERR\_\-MSGBOX}]{\setlength{\rightskip}{0pt plus 5cm}\#define DXUT\_\-ERR\_\-MSGBOX(str, \/  hr)~(hr)}}
+\label{_d_x_u_tmisc_8h_aa5549e4efee079707297539a82a1e468}
+\hypertarget{_d_x_u_tmisc_8h_a2717f7b49d17112e2ac91abe021dc980}{
+\index{DXUTmisc.h@{DXUTmisc.h}!DXUT\_\-MAX\_\-CONTROLLERS@{DXUT\_\-MAX\_\-CONTROLLERS}}
+\index{DXUT\_\-MAX\_\-CONTROLLERS@{DXUT\_\-MAX\_\-CONTROLLERS}!DXUTmisc.h@{DXUTmisc.h}}
+\subsubsection[{DXUT\_\-MAX\_\-CONTROLLERS}]{\setlength{\rightskip}{0pt plus 5cm}\#define DXUT\_\-MAX\_\-CONTROLLERS~4}}
+\label{_d_x_u_tmisc_8h_a2717f7b49d17112e2ac91abe021dc980}
+\hypertarget{_d_x_u_tmisc_8h_a4f74b617756af885e2322132810f9c1a}{
+\index{DXUTmisc.h@{DXUTmisc.h}!DXUT\_\-SetPerfMarker@{DXUT\_\-SetPerfMarker}}
+\index{DXUT\_\-SetPerfMarker@{DXUT\_\-SetPerfMarker}!DXUTmisc.h@{DXUTmisc.h}}
+\subsubsection[{DXUT\_\-SetPerfMarker}]{\setlength{\rightskip}{0pt plus 5cm}\#define DXUT\_\-SetPerfMarker(color, \/  pstrMessage)~(\_\-\_\-noop)}}
+\label{_d_x_u_tmisc_8h_a4f74b617756af885e2322132810f9c1a}
+\hypertarget{_d_x_u_tmisc_8h_a5e27a94cd1754e1e997d66266b36f2da}{
+\index{DXUTmisc.h@{DXUTmisc.h}!DXUTOutputDebugString@{DXUTOutputDebugString}}
+\index{DXUTOutputDebugString@{DXUTOutputDebugString}!DXUTmisc.h@{DXUTmisc.h}}
+\subsubsection[{DXUTOutputDebugString}]{\setlength{\rightskip}{0pt plus 5cm}\#define DXUTOutputDebugString~DXUTOutputDebugStringA}}
+\label{_d_x_u_tmisc_8h_a5e27a94cd1754e1e997d66266b36f2da}
+\hypertarget{_d_x_u_tmisc_8h_aa37dfef3caea64bf228636d5afc2b74e}{
+\index{DXUTmisc.h@{DXUTmisc.h}!DXUTTRACE@{DXUTTRACE}}
+\index{DXUTTRACE@{DXUTTRACE}!DXUTmisc.h@{DXUTmisc.h}}
+\subsubsection[{DXUTTRACE}]{\setlength{\rightskip}{0pt plus 5cm}\#define DXUTTRACE~(\_\-\_\-noop)}}
+\label{_d_x_u_tmisc_8h_aa37dfef3caea64bf228636d5afc2b74e}
+\hypertarget{_d_x_u_tmisc_8h_a39e692a1c38b57e6ca1b6f29fe67cc85}{
+\index{DXUTmisc.h@{DXUTmisc.h}!KEY\_\-IS\_\-DOWN\_\-MASK@{KEY\_\-IS\_\-DOWN\_\-MASK}}
+\index{KEY\_\-IS\_\-DOWN\_\-MASK@{KEY\_\-IS\_\-DOWN\_\-MASK}!DXUTmisc.h@{DXUTmisc.h}}
+\subsubsection[{KEY\_\-IS\_\-DOWN\_\-MASK}]{\setlength{\rightskip}{0pt plus 5cm}\#define KEY\_\-IS\_\-DOWN\_\-MASK~0x01}}
+\label{_d_x_u_tmisc_8h_a39e692a1c38b57e6ca1b6f29fe67cc85}
+\hypertarget{_d_x_u_tmisc_8h_aff864772a97332facec5e39758ec809d}{
+\index{DXUTmisc.h@{DXUTmisc.h}!KEY\_\-WAS\_\-DOWN\_\-MASK@{KEY\_\-WAS\_\-DOWN\_\-MASK}}
+\index{KEY\_\-WAS\_\-DOWN\_\-MASK@{KEY\_\-WAS\_\-DOWN\_\-MASK}!DXUTmisc.h@{DXUTmisc.h}}
+\subsubsection[{KEY\_\-WAS\_\-DOWN\_\-MASK}]{\setlength{\rightskip}{0pt plus 5cm}\#define KEY\_\-WAS\_\-DOWN\_\-MASK~0x80}}
+\label{_d_x_u_tmisc_8h_aff864772a97332facec5e39758ec809d}
+\hypertarget{_d_x_u_tmisc_8h_a53126a8b0dec984366283010ba1e2bf7}{
+\index{DXUTmisc.h@{DXUTmisc.h}!MONITOR\_\-DEFAULTTONEAREST@{MONITOR\_\-DEFAULTTONEAREST}}
+\index{MONITOR\_\-DEFAULTTONEAREST@{MONITOR\_\-DEFAULTTONEAREST}!DXUTmisc.h@{DXUTmisc.h}}
+\subsubsection[{MONITOR\_\-DEFAULTTONEAREST}]{\setlength{\rightskip}{0pt plus 5cm}\#define MONITOR\_\-DEFAULTTONEAREST~0x00000002}}
+\label{_d_x_u_tmisc_8h_a53126a8b0dec984366283010ba1e2bf7}
+\hypertarget{_d_x_u_tmisc_8h_a6e6e40aeeb76f700242d0b1d4ebf4736}{
+\index{DXUTmisc.h@{DXUTmisc.h}!MONITOR\_\-DEFAULTTONULL@{MONITOR\_\-DEFAULTTONULL}}
+\index{MONITOR\_\-DEFAULTTONULL@{MONITOR\_\-DEFAULTTONULL}!DXUTmisc.h@{DXUTmisc.h}}
+\subsubsection[{MONITOR\_\-DEFAULTTONULL}]{\setlength{\rightskip}{0pt plus 5cm}\#define MONITOR\_\-DEFAULTTONULL~0x00000000}}
+\label{_d_x_u_tmisc_8h_a6e6e40aeeb76f700242d0b1d4ebf4736}
+\hypertarget{_d_x_u_tmisc_8h_a01e0ea400a1c34af3868761380847d73}{
+\index{DXUTmisc.h@{DXUTmisc.h}!MONITOR\_\-DEFAULTTOPRIMARY@{MONITOR\_\-DEFAULTTOPRIMARY}}
+\index{MONITOR\_\-DEFAULTTOPRIMARY@{MONITOR\_\-DEFAULTTOPRIMARY}!DXUTmisc.h@{DXUTmisc.h}}
+\subsubsection[{MONITOR\_\-DEFAULTTOPRIMARY}]{\setlength{\rightskip}{0pt plus 5cm}\#define MONITOR\_\-DEFAULTTOPRIMARY~0x00000001}}
+\label{_d_x_u_tmisc_8h_a01e0ea400a1c34af3868761380847d73}
+\hypertarget{_d_x_u_tmisc_8h_a2086fefb243781bd66802344355231c5}{
+\index{DXUTmisc.h@{DXUTmisc.h}!MONITORINFOF\_\-PRIMARY@{MONITORINFOF\_\-PRIMARY}}
+\index{MONITORINFOF\_\-PRIMARY@{MONITORINFOF\_\-PRIMARY}!DXUTmisc.h@{DXUTmisc.h}}
+\subsubsection[{MONITORINFOF\_\-PRIMARY}]{\setlength{\rightskip}{0pt plus 5cm}\#define MONITORINFOF\_\-PRIMARY~0x00000001}}
+\label{_d_x_u_tmisc_8h_a2086fefb243781bd66802344355231c5}
+\hypertarget{_d_x_u_tmisc_8h_afb42537b362f394ed4db90fd34c87330}{
+\index{DXUTmisc.h@{DXUTmisc.h}!MOUSE\_\-LEFT\_\-BUTTON@{MOUSE\_\-LEFT\_\-BUTTON}}
+\index{MOUSE\_\-LEFT\_\-BUTTON@{MOUSE\_\-LEFT\_\-BUTTON}!DXUTmisc.h@{DXUTmisc.h}}
+\subsubsection[{MOUSE\_\-LEFT\_\-BUTTON}]{\setlength{\rightskip}{0pt plus 5cm}\#define MOUSE\_\-LEFT\_\-BUTTON~0x01}}
+\label{_d_x_u_tmisc_8h_afb42537b362f394ed4db90fd34c87330}
+\hypertarget{_d_x_u_tmisc_8h_af198ea1d58a225ba7fce4ae77e2faa04}{
+\index{DXUTmisc.h@{DXUTmisc.h}!MOUSE\_\-MIDDLE\_\-BUTTON@{MOUSE\_\-MIDDLE\_\-BUTTON}}
+\index{MOUSE\_\-MIDDLE\_\-BUTTON@{MOUSE\_\-MIDDLE\_\-BUTTON}!DXUTmisc.h@{DXUTmisc.h}}
+\subsubsection[{MOUSE\_\-MIDDLE\_\-BUTTON}]{\setlength{\rightskip}{0pt plus 5cm}\#define MOUSE\_\-MIDDLE\_\-BUTTON~0x02}}
+\label{_d_x_u_tmisc_8h_af198ea1d58a225ba7fce4ae77e2faa04}
+\hypertarget{_d_x_u_tmisc_8h_aa1092e0190b6ee5bc6733943d970fed7}{
+\index{DXUTmisc.h@{DXUTmisc.h}!MOUSE\_\-RIGHT\_\-BUTTON@{MOUSE\_\-RIGHT\_\-BUTTON}}
+\index{MOUSE\_\-RIGHT\_\-BUTTON@{MOUSE\_\-RIGHT\_\-BUTTON}!DXUTmisc.h@{DXUTmisc.h}}
+\subsubsection[{MOUSE\_\-RIGHT\_\-BUTTON}]{\setlength{\rightskip}{0pt plus 5cm}\#define MOUSE\_\-RIGHT\_\-BUTTON~0x04}}
+\label{_d_x_u_tmisc_8h_aa1092e0190b6ee5bc6733943d970fed7}
+\hypertarget{_d_x_u_tmisc_8h_a941896ca7c68c553dc4d9e7b79f0eb11}{
+\index{DXUTmisc.h@{DXUTmisc.h}!MOUSE\_\-WHEEL@{MOUSE\_\-WHEEL}}
+\index{MOUSE\_\-WHEEL@{MOUSE\_\-WHEEL}!DXUTmisc.h@{DXUTmisc.h}}
+\subsubsection[{MOUSE\_\-WHEEL}]{\setlength{\rightskip}{0pt plus 5cm}\#define MOUSE\_\-WHEEL~0x08}}
+\label{_d_x_u_tmisc_8h_a941896ca7c68c553dc4d9e7b79f0eb11}
+
+
+\subsection{Typedef Documentation}
+\hypertarget{_d_x_u_tmisc_8h_a1ed1026bd1790a58887d4f2a3bacdf93}{
+\index{DXUTmisc.h@{DXUTmisc.h}!LPMONITORINFO@{LPMONITORINFO}}
+\index{LPMONITORINFO@{LPMONITORINFO}!DXUTmisc.h@{DXUTmisc.h}}
+\subsubsection[{LPMONITORINFO}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf tagMONITORINFO} $\ast$ {\bf LPMONITORINFO}}}
+\label{_d_x_u_tmisc_8h_a1ed1026bd1790a58887d4f2a3bacdf93}
+\hypertarget{_d_x_u_tmisc_8h_a462678a551ad8927947dacbc29f14891}{
+\index{DXUTmisc.h@{DXUTmisc.h}!LPMONITORINFOEX@{LPMONITORINFOEX}}
+\index{LPMONITORINFOEX@{LPMONITORINFOEX}!DXUTmisc.h@{DXUTmisc.h}}
+\subsubsection[{LPMONITORINFOEX}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf LPMONITORINFOEXW} {\bf LPMONITORINFOEX}}}
+\label{_d_x_u_tmisc_8h_a462678a551ad8927947dacbc29f14891}
+\hypertarget{_d_x_u_tmisc_8h_afaa32db7f75252c45afc560e76da2f8e}{
+\index{DXUTmisc.h@{DXUTmisc.h}!LPMONITORINFOEXW@{LPMONITORINFOEXW}}
+\index{LPMONITORINFOEXW@{LPMONITORINFOEXW}!DXUTmisc.h@{DXUTmisc.h}}
+\subsubsection[{LPMONITORINFOEXW}]{\setlength{\rightskip}{0pt plus 5cm}typedef  {\bf tagMONITORINFOEXW} $\ast$ {\bf LPMONITORINFOEXW}}}
+\label{_d_x_u_tmisc_8h_afaa32db7f75252c45afc560e76da2f8e}
+\hypertarget{_d_x_u_tmisc_8h_a6a038489bc01272a01ea9e4b8bd68701}{
+\index{DXUTmisc.h@{DXUTmisc.h}!MONITORINFO@{MONITORINFO}}
+\index{MONITORINFO@{MONITORINFO}!DXUTmisc.h@{DXUTmisc.h}}
+\subsubsection[{MONITORINFO}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf tagMONITORINFO}  {\bf MONITORINFO}}}
+\label{_d_x_u_tmisc_8h_a6a038489bc01272a01ea9e4b8bd68701}
+\hypertarget{_d_x_u_tmisc_8h_a85a8cd89485ca31f587b5124c067d5da}{
+\index{DXUTmisc.h@{DXUTmisc.h}!MONITORINFOEX@{MONITORINFOEX}}
+\index{MONITORINFOEX@{MONITORINFOEX}!DXUTmisc.h@{DXUTmisc.h}}
+\subsubsection[{MONITORINFOEX}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf MONITORINFOEXW} {\bf MONITORINFOEX}}}
+\label{_d_x_u_tmisc_8h_a85a8cd89485ca31f587b5124c067d5da}
+\hypertarget{_d_x_u_tmisc_8h_a993792b5933cfbe8f46ea3e247beba1c}{
+\index{DXUTmisc.h@{DXUTmisc.h}!MONITORINFOEXW@{MONITORINFOEXW}}
+\index{MONITORINFOEXW@{MONITORINFOEXW}!DXUTmisc.h@{DXUTmisc.h}}
+\subsubsection[{MONITORINFOEXW}]{\setlength{\rightskip}{0pt plus 5cm}typedef  {\bf tagMONITORINFOEXW}  {\bf MONITORINFOEXW}}}
+\label{_d_x_u_tmisc_8h_a993792b5933cfbe8f46ea3e247beba1c}
+
+
+\subsection{Enumeration Type Documentation}
+\hypertarget{_d_x_u_tmisc_8h_a4b2404de98d0b5f4a0efe1a7752fffa2}{
+\index{DXUTmisc.h@{DXUTmisc.h}!D3DUtil\_\-CameraKeys@{D3DUtil\_\-CameraKeys}}
+\index{D3DUtil\_\-CameraKeys@{D3DUtil\_\-CameraKeys}!DXUTmisc.h@{DXUTmisc.h}}
+\subsubsection[{D3DUtil\_\-CameraKeys}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf D3DUtil\_\-CameraKeys}}}
+\label{_d_x_u_tmisc_8h_a4b2404de98d0b5f4a0efe1a7752fffa2}
+\begin{Desc}
+\item[Enumerator: ]\par
+\begin{description}
+\index{CAM\_\-STRAFE\_\-LEFT@{CAM\_\-STRAFE\_\-LEFT}!DXUTmisc.h@{DXUTmisc.h}}\index{DXUTmisc.h@{DXUTmisc.h}!CAM\_\-STRAFE\_\-LEFT@{CAM\_\-STRAFE\_\-LEFT}}\item[{\em 
+\hypertarget{_d_x_u_tmisc_8h_a4b2404de98d0b5f4a0efe1a7752fffa2a9ebbc12d353b73bf060b6be2388f61cc}{
+CAM\_\-STRAFE\_\-LEFT}
+\label{_d_x_u_tmisc_8h_a4b2404de98d0b5f4a0efe1a7752fffa2a9ebbc12d353b73bf060b6be2388f61cc}
+}]\index{CAM\_\-STRAFE\_\-RIGHT@{CAM\_\-STRAFE\_\-RIGHT}!DXUTmisc.h@{DXUTmisc.h}}\index{DXUTmisc.h@{DXUTmisc.h}!CAM\_\-STRAFE\_\-RIGHT@{CAM\_\-STRAFE\_\-RIGHT}}\item[{\em 
+\hypertarget{_d_x_u_tmisc_8h_a4b2404de98d0b5f4a0efe1a7752fffa2a022ce82fb69c8a537a8b141207071ed3}{
+CAM\_\-STRAFE\_\-RIGHT}
+\label{_d_x_u_tmisc_8h_a4b2404de98d0b5f4a0efe1a7752fffa2a022ce82fb69c8a537a8b141207071ed3}
+}]\index{CAM\_\-MOVE\_\-FORWARD@{CAM\_\-MOVE\_\-FORWARD}!DXUTmisc.h@{DXUTmisc.h}}\index{DXUTmisc.h@{DXUTmisc.h}!CAM\_\-MOVE\_\-FORWARD@{CAM\_\-MOVE\_\-FORWARD}}\item[{\em 
+\hypertarget{_d_x_u_tmisc_8h_a4b2404de98d0b5f4a0efe1a7752fffa2ad69c3a5aa1a9b0346685966751142184}{
+CAM\_\-MOVE\_\-FORWARD}
+\label{_d_x_u_tmisc_8h_a4b2404de98d0b5f4a0efe1a7752fffa2ad69c3a5aa1a9b0346685966751142184}
+}]\index{CAM\_\-MOVE\_\-BACKWARD@{CAM\_\-MOVE\_\-BACKWARD}!DXUTmisc.h@{DXUTmisc.h}}\index{DXUTmisc.h@{DXUTmisc.h}!CAM\_\-MOVE\_\-BACKWARD@{CAM\_\-MOVE\_\-BACKWARD}}\item[{\em 
+\hypertarget{_d_x_u_tmisc_8h_a4b2404de98d0b5f4a0efe1a7752fffa2a699a3d5fdfe73daaa2f2bf9aff505985}{
+CAM\_\-MOVE\_\-BACKWARD}
+\label{_d_x_u_tmisc_8h_a4b2404de98d0b5f4a0efe1a7752fffa2a699a3d5fdfe73daaa2f2bf9aff505985}
+}]\index{CAM\_\-MOVE\_\-UP@{CAM\_\-MOVE\_\-UP}!DXUTmisc.h@{DXUTmisc.h}}\index{DXUTmisc.h@{DXUTmisc.h}!CAM\_\-MOVE\_\-UP@{CAM\_\-MOVE\_\-UP}}\item[{\em 
+\hypertarget{_d_x_u_tmisc_8h_a4b2404de98d0b5f4a0efe1a7752fffa2a4728afba5a7bf281476b27419a8853f4}{
+CAM\_\-MOVE\_\-UP}
+\label{_d_x_u_tmisc_8h_a4b2404de98d0b5f4a0efe1a7752fffa2a4728afba5a7bf281476b27419a8853f4}
+}]\index{CAM\_\-MOVE\_\-DOWN@{CAM\_\-MOVE\_\-DOWN}!DXUTmisc.h@{DXUTmisc.h}}\index{DXUTmisc.h@{DXUTmisc.h}!CAM\_\-MOVE\_\-DOWN@{CAM\_\-MOVE\_\-DOWN}}\item[{\em 
+\hypertarget{_d_x_u_tmisc_8h_a4b2404de98d0b5f4a0efe1a7752fffa2a228a121dff941ea98be9bbbab463b6ef}{
+CAM\_\-MOVE\_\-DOWN}
+\label{_d_x_u_tmisc_8h_a4b2404de98d0b5f4a0efe1a7752fffa2a228a121dff941ea98be9bbbab463b6ef}
+}]\index{CAM\_\-RESET@{CAM\_\-RESET}!DXUTmisc.h@{DXUTmisc.h}}\index{DXUTmisc.h@{DXUTmisc.h}!CAM\_\-RESET@{CAM\_\-RESET}}\item[{\em 
+\hypertarget{_d_x_u_tmisc_8h_a4b2404de98d0b5f4a0efe1a7752fffa2a0fa9d8fc0f98ac0196870216d7f2c383}{
+CAM\_\-RESET}
+\label{_d_x_u_tmisc_8h_a4b2404de98d0b5f4a0efe1a7752fffa2a0fa9d8fc0f98ac0196870216d7f2c383}
+}]\index{CAM\_\-CONTROLDOWN@{CAM\_\-CONTROLDOWN}!DXUTmisc.h@{DXUTmisc.h}}\index{DXUTmisc.h@{DXUTmisc.h}!CAM\_\-CONTROLDOWN@{CAM\_\-CONTROLDOWN}}\item[{\em 
+\hypertarget{_d_x_u_tmisc_8h_a4b2404de98d0b5f4a0efe1a7752fffa2aa39d04f07066589adc4ec53a11ef4614}{
+CAM\_\-CONTROLDOWN}
+\label{_d_x_u_tmisc_8h_a4b2404de98d0b5f4a0efe1a7752fffa2aa39d04f07066589adc4ec53a11ef4614}
+}]\index{CAM\_\-MAX\_\-KEYS@{CAM\_\-MAX\_\-KEYS}!DXUTmisc.h@{DXUTmisc.h}}\index{DXUTmisc.h@{DXUTmisc.h}!CAM\_\-MAX\_\-KEYS@{CAM\_\-MAX\_\-KEYS}}\item[{\em 
+\hypertarget{_d_x_u_tmisc_8h_a4b2404de98d0b5f4a0efe1a7752fffa2a21a4331af4dab51344af94c70571ce1e}{
+CAM\_\-MAX\_\-KEYS}
+\label{_d_x_u_tmisc_8h_a4b2404de98d0b5f4a0efe1a7752fffa2a21a4331af4dab51344af94c70571ce1e}
+}]\index{CAM\_\-UNKNOWN@{CAM\_\-UNKNOWN}!DXUTmisc.h@{DXUTmisc.h}}\index{DXUTmisc.h@{DXUTmisc.h}!CAM\_\-UNKNOWN@{CAM\_\-UNKNOWN}}\item[{\em 
+\hypertarget{_d_x_u_tmisc_8h_a4b2404de98d0b5f4a0efe1a7752fffa2a3e3a357964326feba04cd73c1bbb8a15}{
+CAM\_\-UNKNOWN}
+\label{_d_x_u_tmisc_8h_a4b2404de98d0b5f4a0efe1a7752fffa2a3e3a357964326feba04cd73c1bbb8a15}
+}]\end{description}
+\end{Desc}
+
+\hypertarget{_d_x_u_tmisc_8h_a76e8535d530eae9300822134c181e733}{
+\index{DXUTmisc.h@{DXUTmisc.h}!DXUTCACHE\_\-SOURCELOCATION@{DXUTCACHE\_\-SOURCELOCATION}}
+\index{DXUTCACHE\_\-SOURCELOCATION@{DXUTCACHE\_\-SOURCELOCATION}!DXUTmisc.h@{DXUTmisc.h}}
+\subsubsection[{DXUTCACHE\_\-SOURCELOCATION}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf DXUTCACHE\_\-SOURCELOCATION}}}
+\label{_d_x_u_tmisc_8h_a76e8535d530eae9300822134c181e733}
+\begin{Desc}
+\item[Enumerator: ]\par
+\begin{description}
+\index{DXUTCACHE\_\-LOCATION\_\-FILE@{DXUTCACHE\_\-LOCATION\_\-FILE}!DXUTmisc.h@{DXUTmisc.h}}\index{DXUTmisc.h@{DXUTmisc.h}!DXUTCACHE\_\-LOCATION\_\-FILE@{DXUTCACHE\_\-LOCATION\_\-FILE}}\item[{\em 
+\hypertarget{_d_x_u_tmisc_8h_a76e8535d530eae9300822134c181e733a34be7e21d82209b2189e3095c90d7e3e}{
+DXUTCACHE\_\-LOCATION\_\-FILE}
+\label{_d_x_u_tmisc_8h_a76e8535d530eae9300822134c181e733a34be7e21d82209b2189e3095c90d7e3e}
+}]\index{DXUTCACHE\_\-LOCATION\_\-RESOURCE@{DXUTCACHE\_\-LOCATION\_\-RESOURCE}!DXUTmisc.h@{DXUTmisc.h}}\index{DXUTmisc.h@{DXUTmisc.h}!DXUTCACHE\_\-LOCATION\_\-RESOURCE@{DXUTCACHE\_\-LOCATION\_\-RESOURCE}}\item[{\em 
+\hypertarget{_d_x_u_tmisc_8h_a76e8535d530eae9300822134c181e733a39e9b2531d12a08b35274aa0a434d82c}{
+DXUTCACHE\_\-LOCATION\_\-RESOURCE}
+\label{_d_x_u_tmisc_8h_a76e8535d530eae9300822134c181e733a39e9b2531d12a08b35274aa0a434d82c}
+}]\end{description}
+\end{Desc}
+
+
+
+\subsection{Function Documentation}
+\hypertarget{_d_x_u_tmisc_8h_a6474643fc474f5f14116b47c346ba362}{
+\index{DXUTmisc.h@{DXUTmisc.h}!DXUT\_\-Dynamic\_\-D3DPERF\_\-BeginEvent@{DXUT\_\-Dynamic\_\-D3DPERF\_\-BeginEvent}}
+\index{DXUT\_\-Dynamic\_\-D3DPERF\_\-BeginEvent@{DXUT\_\-Dynamic\_\-D3DPERF\_\-BeginEvent}!DXUTmisc.h@{DXUTmisc.h}}
+\subsubsection[{DXUT\_\-Dynamic\_\-D3DPERF\_\-BeginEvent}]{\setlength{\rightskip}{0pt plus 5cm}{\bf int} WINAPI DXUT\_\-Dynamic\_\-D3DPERF\_\-BeginEvent (D3DCOLOR {\em col}, \/  LPCWSTR {\em wszName})}}
+\label{_d_x_u_tmisc_8h_a6474643fc474f5f14116b47c346ba362}
+\hypertarget{_d_x_u_tmisc_8h_a111b7ce49428c2bf7dd2f5c09e71de7d}{
+\index{DXUTmisc.h@{DXUTmisc.h}!DXUT\_\-Dynamic\_\-D3DPERF\_\-EndEvent@{DXUT\_\-Dynamic\_\-D3DPERF\_\-EndEvent}}
+\index{DXUT\_\-Dynamic\_\-D3DPERF\_\-EndEvent@{DXUT\_\-Dynamic\_\-D3DPERF\_\-EndEvent}!DXUTmisc.h@{DXUTmisc.h}}
+\subsubsection[{DXUT\_\-Dynamic\_\-D3DPERF\_\-EndEvent}]{\setlength{\rightskip}{0pt plus 5cm}{\bf int} WINAPI DXUT\_\-Dynamic\_\-D3DPERF\_\-EndEvent (void)}}
+\label{_d_x_u_tmisc_8h_a111b7ce49428c2bf7dd2f5c09e71de7d}
+\hypertarget{_d_x_u_tmisc_8h_a54fec71cdf8a36fbe7f55a47db285612}{
+\index{DXUTmisc.h@{DXUTmisc.h}!DXUT\_\-Dynamic\_\-D3DPERF\_\-GetStatus@{DXUT\_\-Dynamic\_\-D3DPERF\_\-GetStatus}}
+\index{DXUT\_\-Dynamic\_\-D3DPERF\_\-GetStatus@{DXUT\_\-Dynamic\_\-D3DPERF\_\-GetStatus}!DXUTmisc.h@{DXUTmisc.h}}
+\subsubsection[{DXUT\_\-Dynamic\_\-D3DPERF\_\-GetStatus}]{\setlength{\rightskip}{0pt plus 5cm}DWORD WINAPI DXUT\_\-Dynamic\_\-D3DPERF\_\-GetStatus (void)}}
+\label{_d_x_u_tmisc_8h_a54fec71cdf8a36fbe7f55a47db285612}
+\hypertarget{_d_x_u_tmisc_8h_a80afdfb4d03a33818503dfe2c5a8611e}{
+\index{DXUTmisc.h@{DXUTmisc.h}!DXUT\_\-Dynamic\_\-D3DPERF\_\-QueryRepeatFrame@{DXUT\_\-Dynamic\_\-D3DPERF\_\-QueryRepeatFrame}}
+\index{DXUT\_\-Dynamic\_\-D3DPERF\_\-QueryRepeatFrame@{DXUT\_\-Dynamic\_\-D3DPERF\_\-QueryRepeatFrame}!DXUTmisc.h@{DXUTmisc.h}}
+\subsubsection[{DXUT\_\-Dynamic\_\-D3DPERF\_\-QueryRepeatFrame}]{\setlength{\rightskip}{0pt plus 5cm}BOOL WINAPI DXUT\_\-Dynamic\_\-D3DPERF\_\-QueryRepeatFrame (void)}}
+\label{_d_x_u_tmisc_8h_a80afdfb4d03a33818503dfe2c5a8611e}
+\hypertarget{_d_x_u_tmisc_8h_a08bf66ce59dab9bcf43da407d1edce3c}{
+\index{DXUTmisc.h@{DXUTmisc.h}!DXUT\_\-Dynamic\_\-D3DPERF\_\-SetMarker@{DXUT\_\-Dynamic\_\-D3DPERF\_\-SetMarker}}
+\index{DXUT\_\-Dynamic\_\-D3DPERF\_\-SetMarker@{DXUT\_\-Dynamic\_\-D3DPERF\_\-SetMarker}!DXUTmisc.h@{DXUTmisc.h}}
+\subsubsection[{DXUT\_\-Dynamic\_\-D3DPERF\_\-SetMarker}]{\setlength{\rightskip}{0pt plus 5cm}void WINAPI DXUT\_\-Dynamic\_\-D3DPERF\_\-SetMarker (D3DCOLOR {\em col}, \/  LPCWSTR {\em wszName})}}
+\label{_d_x_u_tmisc_8h_a08bf66ce59dab9bcf43da407d1edce3c}
+\hypertarget{_d_x_u_tmisc_8h_ad152141f06f193b1fc564ea90798fc20}{
+\index{DXUTmisc.h@{DXUTmisc.h}!DXUT\_\-Dynamic\_\-D3DPERF\_\-SetOptions@{DXUT\_\-Dynamic\_\-D3DPERF\_\-SetOptions}}
+\index{DXUT\_\-Dynamic\_\-D3DPERF\_\-SetOptions@{DXUT\_\-Dynamic\_\-D3DPERF\_\-SetOptions}!DXUTmisc.h@{DXUTmisc.h}}
+\subsubsection[{DXUT\_\-Dynamic\_\-D3DPERF\_\-SetOptions}]{\setlength{\rightskip}{0pt plus 5cm}void WINAPI DXUT\_\-Dynamic\_\-D3DPERF\_\-SetOptions (DWORD {\em dwOptions})}}
+\label{_d_x_u_tmisc_8h_ad152141f06f193b1fc564ea90798fc20}
+\hypertarget{_d_x_u_tmisc_8h_abc96b7a600c737d0ae61741f100bd85e}{
+\index{DXUTmisc.h@{DXUTmisc.h}!DXUT\_\-Dynamic\_\-D3DPERF\_\-SetRegion@{DXUT\_\-Dynamic\_\-D3DPERF\_\-SetRegion}}
+\index{DXUT\_\-Dynamic\_\-D3DPERF\_\-SetRegion@{DXUT\_\-Dynamic\_\-D3DPERF\_\-SetRegion}!DXUTmisc.h@{DXUTmisc.h}}
+\subsubsection[{DXUT\_\-Dynamic\_\-D3DPERF\_\-SetRegion}]{\setlength{\rightskip}{0pt plus 5cm}void WINAPI DXUT\_\-Dynamic\_\-D3DPERF\_\-SetRegion (D3DCOLOR {\em col}, \/  LPCWSTR {\em wszName})}}
+\label{_d_x_u_tmisc_8h_abc96b7a600c737d0ae61741f100bd85e}
+\hypertarget{_d_x_u_tmisc_8h_aa3b55878c3738d21e81459152d46d47a}{
+\index{DXUTmisc.h@{DXUTmisc.h}!DXUT\_\-Dynamic\_\-Direct3DCreate9@{DXUT\_\-Dynamic\_\-Direct3DCreate9}}
+\index{DXUT\_\-Dynamic\_\-Direct3DCreate9@{DXUT\_\-Dynamic\_\-Direct3DCreate9}!DXUTmisc.h@{DXUTmisc.h}}
+\subsubsection[{DXUT\_\-Dynamic\_\-Direct3DCreate9}]{\setlength{\rightskip}{0pt plus 5cm}IDirect3D9$\ast$ WINAPI DXUT\_\-Dynamic\_\-Direct3DCreate9 (UINT {\em SDKVersion})}}
+\label{_d_x_u_tmisc_8h_aa3b55878c3738d21e81459152d46d47a}
+\hypertarget{_d_x_u_tmisc_8h_a83dec8909c5b14661c6efe575a4e67af}{
+\index{DXUTmisc.h@{DXUTmisc.h}!DXUTCreateRefDevice@{DXUTCreateRefDevice}}
+\index{DXUTCreateRefDevice@{DXUTCreateRefDevice}!DXUTmisc.h@{DXUTmisc.h}}
+\subsubsection[{DXUTCreateRefDevice}]{\setlength{\rightskip}{0pt plus 5cm}IDirect3DDevice9$\ast$ DXUTCreateRefDevice (HWND {\em hWnd}, \/  bool {\em bNullRef} = {\ttfamily true})}}
+\label{_d_x_u_tmisc_8h_a83dec8909c5b14661c6efe575a4e67af}
+\hypertarget{_d_x_u_tmisc_8h_a7e32e6dc88078d0acab59a548a0d4838}{
+\index{DXUTmisc.h@{DXUTmisc.h}!DXUTD3DFormatToString@{DXUTD3DFormatToString}}
+\index{DXUTD3DFormatToString@{DXUTD3DFormatToString}!DXUTmisc.h@{DXUTmisc.h}}
+\subsubsection[{DXUTD3DFormatToString}]{\setlength{\rightskip}{0pt plus 5cm}LPCWSTR DXUTD3DFormatToString (D3DFORMAT {\em format}, \/  bool {\em bWithPrefix})}}
+\label{_d_x_u_tmisc_8h_a7e32e6dc88078d0acab59a548a0d4838}
+\hypertarget{_d_x_u_tmisc_8h_a4cc8e02a1956cdad39913f57c930fe1e}{
+\index{DXUTmisc.h@{DXUTmisc.h}!DXUTDisplaySwitchingToREFWarning@{DXUTDisplaySwitchingToREFWarning}}
+\index{DXUTDisplaySwitchingToREFWarning@{DXUTDisplaySwitchingToREFWarning}!DXUTmisc.h@{DXUTmisc.h}}
+\subsubsection[{DXUTDisplaySwitchingToREFWarning}]{\setlength{\rightskip}{0pt plus 5cm}void DXUTDisplaySwitchingToREFWarning ()}}
+\label{_d_x_u_tmisc_8h_a4cc8e02a1956cdad39913f57c930fe1e}
+\hypertarget{_d_x_u_tmisc_8h_adab0cd30b2ecd88bc4f772112e9cbdb9}{
+\index{DXUTmisc.h@{DXUTmisc.h}!DXUTEnableXInput@{DXUTEnableXInput}}
+\index{DXUTEnableXInput@{DXUTEnableXInput}!DXUTmisc.h@{DXUTmisc.h}}
+\subsubsection[{DXUTEnableXInput}]{\setlength{\rightskip}{0pt plus 5cm}void DXUTEnableXInput (bool {\em bEnable})}}
+\label{_d_x_u_tmisc_8h_adab0cd30b2ecd88bc4f772112e9cbdb9}
+\hypertarget{_d_x_u_tmisc_8h_a08d81bd8687eac30cf68bfacb7e1d7f4}{
+\index{DXUTmisc.h@{DXUTmisc.h}!DXUTFindDXSDKMediaFileCch@{DXUTFindDXSDKMediaFileCch}}
+\index{DXUTFindDXSDKMediaFileCch@{DXUTFindDXSDKMediaFileCch}!DXUTmisc.h@{DXUTmisc.h}}
+\subsubsection[{DXUTFindDXSDKMediaFileCch}]{\setlength{\rightskip}{0pt plus 5cm}HRESULT DXUTFindDXSDKMediaFileCch (WCHAR $\ast$ {\em strDestPath}, \/  {\bf int} {\em cchDest}, \/  LPCWSTR {\em strFilename})}}
+\label{_d_x_u_tmisc_8h_a08d81bd8687eac30cf68bfacb7e1d7f4}
+\hypertarget{_d_x_u_tmisc_8h_ada16fab6af540ee0f3afd608dc8ed30c}{
+\index{DXUTmisc.h@{DXUTmisc.h}!DXUTGetCubeMapViewMatrix@{DXUTGetCubeMapViewMatrix}}
+\index{DXUTGetCubeMapViewMatrix@{DXUTGetCubeMapViewMatrix}!DXUTmisc.h@{DXUTmisc.h}}
+\subsubsection[{DXUTGetCubeMapViewMatrix}]{\setlength{\rightskip}{0pt plus 5cm}D3DXMATRIX DXUTGetCubeMapViewMatrix (DWORD {\em dwFace})}}
+\label{_d_x_u_tmisc_8h_ada16fab6af540ee0f3afd608dc8ed30c}
+\hypertarget{_d_x_u_tmisc_8h_a9ab098cd39d1ca175cdb0b245126204b}{
+\index{DXUTmisc.h@{DXUTmisc.h}!DXUTGetDesktopResolution@{DXUTGetDesktopResolution}}
+\index{DXUTGetDesktopResolution@{DXUTGetDesktopResolution}!DXUTmisc.h@{DXUTmisc.h}}
+\subsubsection[{DXUTGetDesktopResolution}]{\setlength{\rightskip}{0pt plus 5cm}void DXUTGetDesktopResolution (UINT {\em AdapterOrdinal}, \/  UINT $\ast$ {\em pWidth}, \/  UINT $\ast$ {\em pHeight})}}
+\label{_d_x_u_tmisc_8h_a9ab098cd39d1ca175cdb0b245126204b}
+\hypertarget{_d_x_u_tmisc_8h_a9c9021fdb607dfbc52ed98c353f0f617}{
+\index{DXUTmisc.h@{DXUTmisc.h}!DXUTGetGamepadState@{DXUTGetGamepadState}}
+\index{DXUTGetGamepadState@{DXUTGetGamepadState}!DXUTmisc.h@{DXUTmisc.h}}
+\subsubsection[{DXUTGetGamepadState}]{\setlength{\rightskip}{0pt plus 5cm}HRESULT DXUTGetGamepadState (DWORD {\em dwPort}, \/  {\bf DXUT\_\-GAMEPAD} $\ast$ {\em pGamePad}, \/  bool {\em bThumbstickDeadZone} = {\ttfamily true}, \/  bool {\em bSnapThumbstickToCardinals} = {\ttfamily true})}}
+\label{_d_x_u_tmisc_8h_a9c9021fdb607dfbc52ed98c353f0f617}
+\hypertarget{_d_x_u_tmisc_8h_aa4ef62fbd7e1e944b3aea0f090f3de5f}{
+\index{DXUTmisc.h@{DXUTmisc.h}!DXUTGetGlobalResourceCache@{DXUTGetGlobalResourceCache}}
+\index{DXUTGetGlobalResourceCache@{DXUTGetGlobalResourceCache}!DXUTmisc.h@{DXUTmisc.h}}
+\subsubsection[{DXUTGetGlobalResourceCache}]{\setlength{\rightskip}{0pt plus 5cm}{\bf CDXUTResourceCache}\& DXUTGetGlobalResourceCache ()}}
+\label{_d_x_u_tmisc_8h_aa4ef62fbd7e1e944b3aea0f090f3de5f}
+\hypertarget{_d_x_u_tmisc_8h_a01fb029efdf40f0edec30410feaa8e96}{
+\index{DXUTmisc.h@{DXUTmisc.h}!DXUTGetGlobalTimer@{DXUTGetGlobalTimer}}
+\index{DXUTGetGlobalTimer@{DXUTGetGlobalTimer}!DXUTmisc.h@{DXUTmisc.h}}
+\subsubsection[{DXUTGetGlobalTimer}]{\setlength{\rightskip}{0pt plus 5cm}{\bf CDXUTTimer}$\ast$ DXUTGetGlobalTimer ()}}
+\label{_d_x_u_tmisc_8h_a01fb029efdf40f0edec30410feaa8e96}
+\hypertarget{_d_x_u_tmisc_8h_ad3d5e392423b0a1d33913dd284c4221f}{
+\index{DXUTmisc.h@{DXUTmisc.h}!DXUTGetMediaSearchPath@{DXUTGetMediaSearchPath}}
+\index{DXUTGetMediaSearchPath@{DXUTGetMediaSearchPath}!DXUTmisc.h@{DXUTmisc.h}}
+\subsubsection[{DXUTGetMediaSearchPath}]{\setlength{\rightskip}{0pt plus 5cm}LPCWSTR DXUTGetMediaSearchPath ()}}
+\label{_d_x_u_tmisc_8h_ad3d5e392423b0a1d33913dd284c4221f}
+\hypertarget{_d_x_u_tmisc_8h_a4c209d9c386ad3cececbb29a6d2df38d}{
+\index{DXUTmisc.h@{DXUTmisc.h}!DXUTGetMonitorInfo@{DXUTGetMonitorInfo}}
+\index{DXUTGetMonitorInfo@{DXUTGetMonitorInfo}!DXUTmisc.h@{DXUTmisc.h}}
+\subsubsection[{DXUTGetMonitorInfo}]{\setlength{\rightskip}{0pt plus 5cm}BOOL DXUTGetMonitorInfo (HMONITOR {\em hMonitor}, \/  {\bf LPMONITORINFO} {\em lpMonitorInfo})}}
+\label{_d_x_u_tmisc_8h_a4c209d9c386ad3cececbb29a6d2df38d}
+\hypertarget{_d_x_u_tmisc_8h_ae6e09c803d7d9f956a48cb9922f18a2e}{
+\index{DXUTmisc.h@{DXUTmisc.h}!DXUTMonitorFromWindow@{DXUTMonitorFromWindow}}
+\index{DXUTMonitorFromWindow@{DXUTMonitorFromWindow}!DXUTmisc.h@{DXUTmisc.h}}
+\subsubsection[{DXUTMonitorFromWindow}]{\setlength{\rightskip}{0pt plus 5cm}HMONITOR DXUTMonitorFromWindow (HWND {\em hWnd}, \/  DWORD {\em dwFlags})}}
+\label{_d_x_u_tmisc_8h_ae6e09c803d7d9f956a48cb9922f18a2e}
+\hypertarget{_d_x_u_tmisc_8h_a611614d089525f35e395c25ea8027b30}{
+\index{DXUTmisc.h@{DXUTmisc.h}!DXUTOutputDebugStringA@{DXUTOutputDebugStringA}}
+\index{DXUTOutputDebugStringA@{DXUTOutputDebugStringA}!DXUTmisc.h@{DXUTmisc.h}}
+\subsubsection[{DXUTOutputDebugStringA}]{\setlength{\rightskip}{0pt plus 5cm}void DXUTOutputDebugStringA (LPCSTR {\em strMsg}, \/   {\em ...})}}
+\label{_d_x_u_tmisc_8h_a611614d089525f35e395c25ea8027b30}
+\hypertarget{_d_x_u_tmisc_8h_a9505155c076de4d4cc3c313f2ff25823}{
+\index{DXUTmisc.h@{DXUTmisc.h}!DXUTOutputDebugStringW@{DXUTOutputDebugStringW}}
+\index{DXUTOutputDebugStringW@{DXUTOutputDebugStringW}!DXUTmisc.h@{DXUTmisc.h}}
+\subsubsection[{DXUTOutputDebugStringW}]{\setlength{\rightskip}{0pt plus 5cm}void DXUTOutputDebugStringW (LPCWSTR {\em strMsg}, \/   {\em ...})}}
+\label{_d_x_u_tmisc_8h_a9505155c076de4d4cc3c313f2ff25823}
+\hypertarget{_d_x_u_tmisc_8h_a1c9bd80b9f0ad177865650ca9ca90175}{
+\index{DXUTmisc.h@{DXUTmisc.h}!DXUTReLaunchMediaCenter@{DXUTReLaunchMediaCenter}}
+\index{DXUTReLaunchMediaCenter@{DXUTReLaunchMediaCenter}!DXUTmisc.h@{DXUTmisc.h}}
+\subsubsection[{DXUTReLaunchMediaCenter}]{\setlength{\rightskip}{0pt plus 5cm}bool DXUTReLaunchMediaCenter ()}}
+\label{_d_x_u_tmisc_8h_a1c9bd80b9f0ad177865650ca9ca90175}
+\hypertarget{_d_x_u_tmisc_8h_a23d3a1c266fd977cb8bd7453db83a0a8}{
+\index{DXUTmisc.h@{DXUTmisc.h}!DXUTSetMediaSearchPath@{DXUTSetMediaSearchPath}}
+\index{DXUTSetMediaSearchPath@{DXUTSetMediaSearchPath}!DXUTmisc.h@{DXUTmisc.h}}
+\subsubsection[{DXUTSetMediaSearchPath}]{\setlength{\rightskip}{0pt plus 5cm}HRESULT DXUTSetMediaSearchPath (LPCWSTR {\em strPath})}}
+\label{_d_x_u_tmisc_8h_a23d3a1c266fd977cb8bd7453db83a0a8}
+\hypertarget{_d_x_u_tmisc_8h_afd12f16e31c2fdec2a5f024535233e73}{
+\index{DXUTmisc.h@{DXUTmisc.h}!DXUTStopRumbleOnAllControllers@{DXUTStopRumbleOnAllControllers}}
+\index{DXUTStopRumbleOnAllControllers@{DXUTStopRumbleOnAllControllers}!DXUTmisc.h@{DXUTmisc.h}}
+\subsubsection[{DXUTStopRumbleOnAllControllers}]{\setlength{\rightskip}{0pt plus 5cm}HRESULT DXUTStopRumbleOnAllControllers ()}}
+\label{_d_x_u_tmisc_8h_afd12f16e31c2fdec2a5f024535233e73}
+\hypertarget{_d_x_u_tmisc_8h_a3a29e214649a51ccbbec1253753f4148}{
+\index{DXUTmisc.h@{DXUTmisc.h}!DXUTTrace@{DXUTTrace}}
+\index{DXUTTrace@{DXUTTrace}!DXUTmisc.h@{DXUTmisc.h}}
+\subsubsection[{DXUTTrace}]{\setlength{\rightskip}{0pt plus 5cm}HRESULT WINAPI DXUTTrace (const CHAR $\ast$ {\em strFile}, \/  DWORD {\em dwLine}, \/  HRESULT {\em hr}, \/  const WCHAR $\ast$ {\em strMsg}, \/  bool {\em bPopMsgBox})}}
+\label{_d_x_u_tmisc_8h_a3a29e214649a51ccbbec1253753f4148}
+\hypertarget{_d_x_u_tmisc_8h_a54bf02f83beeeecb0b43353415d9c506}{
+\index{DXUTmisc.h@{DXUTmisc.h}!DXUTTraceD3DDECLMETHODtoString@{DXUTTraceD3DDECLMETHODtoString}}
+\index{DXUTTraceD3DDECLMETHODtoString@{DXUTTraceD3DDECLMETHODtoString}!DXUTmisc.h@{DXUTmisc.h}}
+\subsubsection[{DXUTTraceD3DDECLMETHODtoString}]{\setlength{\rightskip}{0pt plus 5cm}WCHAR$\ast$ DXUTTraceD3DDECLMETHODtoString (BYTE {\em m})}}
+\label{_d_x_u_tmisc_8h_a54bf02f83beeeecb0b43353415d9c506}
+\hypertarget{_d_x_u_tmisc_8h_a5ed5428145d6777a1a0e8504792d1f14}{
+\index{DXUTmisc.h@{DXUTmisc.h}!DXUTTraceD3DDECLTYPEtoString@{DXUTTraceD3DDECLTYPEtoString}}
+\index{DXUTTraceD3DDECLTYPEtoString@{DXUTTraceD3DDECLTYPEtoString}!DXUTmisc.h@{DXUTmisc.h}}
+\subsubsection[{DXUTTraceD3DDECLTYPEtoString}]{\setlength{\rightskip}{0pt plus 5cm}WCHAR$\ast$ DXUTTraceD3DDECLTYPEtoString (BYTE {\em t})}}
+\label{_d_x_u_tmisc_8h_a5ed5428145d6777a1a0e8504792d1f14}
+\hypertarget{_d_x_u_tmisc_8h_ab6f12af3c0996f374905cd9d1ab4251c}{
+\index{DXUTmisc.h@{DXUTmisc.h}!DXUTTraceD3DDECLUSAGEtoString@{DXUTTraceD3DDECLUSAGEtoString}}
+\index{DXUTTraceD3DDECLUSAGEtoString@{DXUTTraceD3DDECLUSAGEtoString}!DXUTmisc.h@{DXUTmisc.h}}
+\subsubsection[{DXUTTraceD3DDECLUSAGEtoString}]{\setlength{\rightskip}{0pt plus 5cm}WCHAR$\ast$ DXUTTraceD3DDECLUSAGEtoString (BYTE {\em u})}}
+\label{_d_x_u_tmisc_8h_ab6f12af3c0996f374905cd9d1ab4251c}
+\hypertarget{_d_x_u_tmisc_8h_a205815707b519d9d4454b86c84f489c6}{
+\index{DXUTmisc.h@{DXUTmisc.h}!DXUTTraceDecl@{DXUTTraceDecl}}
+\index{DXUTTraceDecl@{DXUTTraceDecl}!DXUTmisc.h@{DXUTmisc.h}}
+\subsubsection[{DXUTTraceDecl}]{\setlength{\rightskip}{0pt plus 5cm}void DXUTTraceDecl (D3DVERTEXELEMENT9 {\em decl}\mbox{[}MAX\_\-FVF\_\-DECL\_\-SIZE\mbox{]})}}
+\label{_d_x_u_tmisc_8h_a205815707b519d9d4454b86c84f489c6}
+
+
+\subsection{Variable Documentation}
+\hypertarget{_d_x_u_tmisc_8h_addbab3f2f3548262af21366347d010c2}{
+\index{DXUTmisc.h@{DXUTmisc.h}!DXUT\_\-PERFEVENTCOLOR@{DXUT\_\-PERFEVENTCOLOR}}
+\index{DXUT\_\-PERFEVENTCOLOR@{DXUT\_\-PERFEVENTCOLOR}!DXUTmisc.h@{DXUTmisc.h}}
+\subsubsection[{DXUT\_\-PERFEVENTCOLOR}]{\setlength{\rightskip}{0pt plus 5cm}const D3DCOLOR {\bf DXUT\_\-PERFEVENTCOLOR} = D3DCOLOR\_\-XRGB(200,100,100)}}
+\label{_d_x_u_tmisc_8h_addbab3f2f3548262af21366347d010c2}
+\hypertarget{_d_x_u_tmisc_8h_a92ad13941733538ceaf3b4d0b99c5940}{
+\index{DXUTmisc.h@{DXUTmisc.h}!DXUT\_\-PERFEVENTCOLOR2@{DXUT\_\-PERFEVENTCOLOR2}}
+\index{DXUT\_\-PERFEVENTCOLOR2@{DXUT\_\-PERFEVENTCOLOR2}!DXUTmisc.h@{DXUTmisc.h}}
+\subsubsection[{DXUT\_\-PERFEVENTCOLOR2}]{\setlength{\rightskip}{0pt plus 5cm}const D3DCOLOR {\bf DXUT\_\-PERFEVENTCOLOR2} = D3DCOLOR\_\-XRGB(100,200,100)}}
+\label{_d_x_u_tmisc_8h_a92ad13941733538ceaf3b4d0b99c5940}
+\hypertarget{_d_x_u_tmisc_8h_afb1b05533326e5326fcf49e0bb829945}{
+\index{DXUTmisc.h@{DXUTmisc.h}!DXUT\_\-PERFEVENTCOLOR3@{DXUT\_\-PERFEVENTCOLOR3}}
+\index{DXUT\_\-PERFEVENTCOLOR3@{DXUT\_\-PERFEVENTCOLOR3}!DXUTmisc.h@{DXUTmisc.h}}
+\subsubsection[{DXUT\_\-PERFEVENTCOLOR3}]{\setlength{\rightskip}{0pt plus 5cm}const D3DCOLOR {\bf DXUT\_\-PERFEVENTCOLOR3} = D3DCOLOR\_\-XRGB(100,100,200)}}
+\label{_d_x_u_tmisc_8h_afb1b05533326e5326fcf49e0bb829945}

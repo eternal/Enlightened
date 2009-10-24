@@ -1,0 +1,153 @@
+\hypertarget{class_c_sound}{
+\section{CSound Class Reference}
+\label{class_c_sound}\index{CSound@{CSound}}
+}
+
+
+{\ttfamily \#include $<$DXUTsound.h$>$}
+
+Inherited by \hyperlink{class_c_streaming_sound}{CStreamingSound}.Collaboration diagram for CSound:\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_c_sound_aa9aaa0a90651513608392e520a19bedf}{CSound} (LPDIRECTSOUNDBUFFER $\ast$apDSBuffer, DWORD dwDSBufferSize, DWORD dwNumBuffers, \hyperlink{class_c_wave_file}{CWaveFile} $\ast$pWaveFile, DWORD dwCreationFlags)
+\item 
+virtual \hyperlink{class_c_sound_afe00e938f0c637e80ae2e3d30faa5add}{$\sim$CSound} ()
+\item 
+HRESULT \hyperlink{class_c_sound_a8cc12b7a0c95af64112dd511b93fff79}{Get3DBufferInterface} (DWORD dwIndex, LPDIRECTSOUND3DBUFFER $\ast$ppDS3DBuffer)
+\item 
+HRESULT \hyperlink{class_c_sound_a5591cb7ebe3a9cb04e2a57fba3462510}{FillBufferWithSound} (LPDIRECTSOUNDBUFFER pDSB, BOOL bRepeatWavIfBufferLarger)
+\item 
+LPDIRECTSOUNDBUFFER \hyperlink{class_c_sound_a270ce46e674cb5f39fecfbbee8f45b41}{GetFreeBuffer} ()
+\item 
+LPDIRECTSOUNDBUFFER \hyperlink{class_c_sound_a74133e53b2e5393eef4048036c9d2d61}{GetBuffer} (DWORD dwIndex)
+\item 
+HRESULT \hyperlink{class_c_sound_a9c0e5e3cf50601f679d17a38036cef14}{Play} (DWORD dwPriority=0, DWORD dwFlags=0, LONG lVolume=0, LONG lFrequency=-\/1, LONG lPan=0)
+\item 
+HRESULT \hyperlink{class_c_sound_aac53e4ca27f447ca2477d3e9ab50938a}{Play3D} (LPDS3DBUFFER p3DBuffer, DWORD dwPriority=0, DWORD dwFlags=0, LONG lFrequency=0)
+\item 
+HRESULT \hyperlink{class_c_sound_af394d295721d4d8bf05dd20531b4cf91}{Stop} ()
+\item 
+HRESULT \hyperlink{class_c_sound_aaf2b066d599976ba180082b4fa3880e3}{Reset} ()
+\item 
+BOOL \hyperlink{class_c_sound_ae4677b9565a96892a3a494698392670b}{IsSoundPlaying} ()
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+HRESULT \hyperlink{class_c_sound_ab74aca2529b37470e7dcb7bc4eadbdbc}{RestoreBuffer} (LPDIRECTSOUNDBUFFER pDSB, BOOL $\ast$pbWasRestored)
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+LPDIRECTSOUNDBUFFER $\ast$ \hyperlink{class_c_sound_aad77495aa3800132a4f2fde0a9467b1f}{m\_\-apDSBuffer}
+\item 
+DWORD \hyperlink{class_c_sound_a69bdf453a29ab40f8b7fb2eecc026820}{m\_\-dwDSBufferSize}
+\item 
+\hyperlink{class_c_wave_file}{CWaveFile} $\ast$ \hyperlink{class_c_sound_aa8a1f977f2acf3049096d3b74f75e500}{m\_\-pWaveFile}
+\item 
+DWORD \hyperlink{class_c_sound_ac224963b022a2ee97ca30d872f9a1927}{m\_\-dwNumBuffers}
+\item 
+DWORD \hyperlink{class_c_sound_a0787066767c1f65d7b9cd2179513d7d8}{m\_\-dwCreationFlags}
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_c_sound_aa9aaa0a90651513608392e520a19bedf}{
+\index{CSound@{CSound}!CSound@{CSound}}
+\index{CSound@{CSound}!CSound@{CSound}}
+\subsubsection[{CSound}]{\setlength{\rightskip}{0pt plus 5cm}CSound::CSound (LPDIRECTSOUNDBUFFER $\ast$ {\em apDSBuffer}, \/  DWORD {\em dwDSBufferSize}, \/  DWORD {\em dwNumBuffers}, \/  {\bf CWaveFile} $\ast$ {\em pWaveFile}, \/  DWORD {\em dwCreationFlags})}}
+\label{class_c_sound_aa9aaa0a90651513608392e520a19bedf}
+\hypertarget{class_c_sound_afe00e938f0c637e80ae2e3d30faa5add}{
+\index{CSound@{CSound}!$\sim$CSound@{$\sim$CSound}}
+\index{$\sim$CSound@{$\sim$CSound}!CSound@{CSound}}
+\subsubsection[{$\sim$CSound}]{\setlength{\rightskip}{0pt plus 5cm}CSound::$\sim$CSound ()\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{class_c_sound_afe00e938f0c637e80ae2e3d30faa5add}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_c_sound_a5591cb7ebe3a9cb04e2a57fba3462510}{
+\index{CSound@{CSound}!FillBufferWithSound@{FillBufferWithSound}}
+\index{FillBufferWithSound@{FillBufferWithSound}!CSound@{CSound}}
+\subsubsection[{FillBufferWithSound}]{\setlength{\rightskip}{0pt plus 5cm}HRESULT CSound::FillBufferWithSound (LPDIRECTSOUNDBUFFER {\em pDSB}, \/  BOOL {\em bRepeatWavIfBufferLarger})}}
+\label{class_c_sound_a5591cb7ebe3a9cb04e2a57fba3462510}
+\hypertarget{class_c_sound_a8cc12b7a0c95af64112dd511b93fff79}{
+\index{CSound@{CSound}!Get3DBufferInterface@{Get3DBufferInterface}}
+\index{Get3DBufferInterface@{Get3DBufferInterface}!CSound@{CSound}}
+\subsubsection[{Get3DBufferInterface}]{\setlength{\rightskip}{0pt plus 5cm}HRESULT CSound::Get3DBufferInterface (DWORD {\em dwIndex}, \/  LPDIRECTSOUND3DBUFFER $\ast$ {\em ppDS3DBuffer})}}
+\label{class_c_sound_a8cc12b7a0c95af64112dd511b93fff79}
+\hypertarget{class_c_sound_a74133e53b2e5393eef4048036c9d2d61}{
+\index{CSound@{CSound}!GetBuffer@{GetBuffer}}
+\index{GetBuffer@{GetBuffer}!CSound@{CSound}}
+\subsubsection[{GetBuffer}]{\setlength{\rightskip}{0pt plus 5cm}LPDIRECTSOUNDBUFFER CSound::GetBuffer (DWORD {\em dwIndex})}}
+\label{class_c_sound_a74133e53b2e5393eef4048036c9d2d61}
+\hypertarget{class_c_sound_a270ce46e674cb5f39fecfbbee8f45b41}{
+\index{CSound@{CSound}!GetFreeBuffer@{GetFreeBuffer}}
+\index{GetFreeBuffer@{GetFreeBuffer}!CSound@{CSound}}
+\subsubsection[{GetFreeBuffer}]{\setlength{\rightskip}{0pt plus 5cm}LPDIRECTSOUNDBUFFER CSound::GetFreeBuffer ()}}
+\label{class_c_sound_a270ce46e674cb5f39fecfbbee8f45b41}
+\hypertarget{class_c_sound_ae4677b9565a96892a3a494698392670b}{
+\index{CSound@{CSound}!IsSoundPlaying@{IsSoundPlaying}}
+\index{IsSoundPlaying@{IsSoundPlaying}!CSound@{CSound}}
+\subsubsection[{IsSoundPlaying}]{\setlength{\rightskip}{0pt plus 5cm}BOOL CSound::IsSoundPlaying ()}}
+\label{class_c_sound_ae4677b9565a96892a3a494698392670b}
+\hypertarget{class_c_sound_a9c0e5e3cf50601f679d17a38036cef14}{
+\index{CSound@{CSound}!Play@{Play}}
+\index{Play@{Play}!CSound@{CSound}}
+\subsubsection[{Play}]{\setlength{\rightskip}{0pt plus 5cm}HRESULT CSound::Play (DWORD {\em dwPriority} = {\ttfamily 0}, \/  DWORD {\em dwFlags} = {\ttfamily 0}, \/  LONG {\em lVolume} = {\ttfamily 0}, \/  LONG {\em lFrequency} = {\ttfamily -\/1}, \/  LONG {\em lPan} = {\ttfamily 0})}}
+\label{class_c_sound_a9c0e5e3cf50601f679d17a38036cef14}
+\hypertarget{class_c_sound_aac53e4ca27f447ca2477d3e9ab50938a}{
+\index{CSound@{CSound}!Play3D@{Play3D}}
+\index{Play3D@{Play3D}!CSound@{CSound}}
+\subsubsection[{Play3D}]{\setlength{\rightskip}{0pt plus 5cm}HRESULT CSound::Play3D (LPDS3DBUFFER {\em p3DBuffer}, \/  DWORD {\em dwPriority} = {\ttfamily 0}, \/  DWORD {\em dwFlags} = {\ttfamily 0}, \/  LONG {\em lFrequency} = {\ttfamily 0})}}
+\label{class_c_sound_aac53e4ca27f447ca2477d3e9ab50938a}
+\hypertarget{class_c_sound_aaf2b066d599976ba180082b4fa3880e3}{
+\index{CSound@{CSound}!Reset@{Reset}}
+\index{Reset@{Reset}!CSound@{CSound}}
+\subsubsection[{Reset}]{\setlength{\rightskip}{0pt plus 5cm}HRESULT CSound::Reset ()}}
+\label{class_c_sound_aaf2b066d599976ba180082b4fa3880e3}
+
+
+Reimplemented in \hyperlink{class_c_streaming_sound_a566d5512e22de66e7cfbab17784335cf}{CStreamingSound}.\hypertarget{class_c_sound_ab74aca2529b37470e7dcb7bc4eadbdbc}{
+\index{CSound@{CSound}!RestoreBuffer@{RestoreBuffer}}
+\index{RestoreBuffer@{RestoreBuffer}!CSound@{CSound}}
+\subsubsection[{RestoreBuffer}]{\setlength{\rightskip}{0pt plus 5cm}HRESULT CSound::RestoreBuffer (LPDIRECTSOUNDBUFFER {\em pDSB}, \/  BOOL $\ast$ {\em pbWasRestored})\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{class_c_sound_ab74aca2529b37470e7dcb7bc4eadbdbc}
+\hypertarget{class_c_sound_af394d295721d4d8bf05dd20531b4cf91}{
+\index{CSound@{CSound}!Stop@{Stop}}
+\index{Stop@{Stop}!CSound@{CSound}}
+\subsubsection[{Stop}]{\setlength{\rightskip}{0pt plus 5cm}HRESULT CSound::Stop ()}}
+\label{class_c_sound_af394d295721d4d8bf05dd20531b4cf91}
+
+
+\subsection{Member Data Documentation}
+\hypertarget{class_c_sound_aad77495aa3800132a4f2fde0a9467b1f}{
+\index{CSound@{CSound}!m\_\-apDSBuffer@{m\_\-apDSBuffer}}
+\index{m\_\-apDSBuffer@{m\_\-apDSBuffer}!CSound@{CSound}}
+\subsubsection[{m\_\-apDSBuffer}]{\setlength{\rightskip}{0pt plus 5cm}LPDIRECTSOUNDBUFFER$\ast$ {\bf CSound::m\_\-apDSBuffer}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{class_c_sound_aad77495aa3800132a4f2fde0a9467b1f}
+\hypertarget{class_c_sound_a0787066767c1f65d7b9cd2179513d7d8}{
+\index{CSound@{CSound}!m\_\-dwCreationFlags@{m\_\-dwCreationFlags}}
+\index{m\_\-dwCreationFlags@{m\_\-dwCreationFlags}!CSound@{CSound}}
+\subsubsection[{m\_\-dwCreationFlags}]{\setlength{\rightskip}{0pt plus 5cm}DWORD {\bf CSound::m\_\-dwCreationFlags}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{class_c_sound_a0787066767c1f65d7b9cd2179513d7d8}
+\hypertarget{class_c_sound_a69bdf453a29ab40f8b7fb2eecc026820}{
+\index{CSound@{CSound}!m\_\-dwDSBufferSize@{m\_\-dwDSBufferSize}}
+\index{m\_\-dwDSBufferSize@{m\_\-dwDSBufferSize}!CSound@{CSound}}
+\subsubsection[{m\_\-dwDSBufferSize}]{\setlength{\rightskip}{0pt plus 5cm}DWORD {\bf CSound::m\_\-dwDSBufferSize}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{class_c_sound_a69bdf453a29ab40f8b7fb2eecc026820}
+\hypertarget{class_c_sound_ac224963b022a2ee97ca30d872f9a1927}{
+\index{CSound@{CSound}!m\_\-dwNumBuffers@{m\_\-dwNumBuffers}}
+\index{m\_\-dwNumBuffers@{m\_\-dwNumBuffers}!CSound@{CSound}}
+\subsubsection[{m\_\-dwNumBuffers}]{\setlength{\rightskip}{0pt plus 5cm}DWORD {\bf CSound::m\_\-dwNumBuffers}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{class_c_sound_ac224963b022a2ee97ca30d872f9a1927}
+\hypertarget{class_c_sound_aa8a1f977f2acf3049096d3b74f75e500}{
+\index{CSound@{CSound}!m\_\-pWaveFile@{m\_\-pWaveFile}}
+\index{m\_\-pWaveFile@{m\_\-pWaveFile}!CSound@{CSound}}
+\subsubsection[{m\_\-pWaveFile}]{\setlength{\rightskip}{0pt plus 5cm}{\bf CWaveFile}$\ast$ {\bf CSound::m\_\-pWaveFile}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{class_c_sound_aa8a1f977f2acf3049096d3b74f75e500}
+
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+C:/Users/doug/Documents/Visual Studio 2008/Projects/enlightened/Enlightened/DXUT/\hyperlink{_d_x_u_tsound_8h}{DXUTsound.h}\item 
+C:/Users/doug/Documents/Visual Studio 2008/Projects/enlightened/Enlightened/DXUT/\hyperlink{_d_x_u_tsound_8cpp}{DXUTsound.cpp}\end{DoxyCompactItemize}

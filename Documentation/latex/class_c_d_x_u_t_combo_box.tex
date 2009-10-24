@@ -1,0 +1,320 @@
+\hypertarget{class_c_d_x_u_t_combo_box}{
+\section{CDXUTComboBox Class Reference}
+\label{class_c_d_x_u_t_combo_box}\index{CDXUTComboBox@{CDXUTComboBox}}
+}
+
+
+{\ttfamily \#include $<$DXUTgui.h$>$}
+
+Inherits \hyperlink{class_c_d_x_u_t_button}{CDXUTButton}.Collaboration diagram for CDXUTComboBox:\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_c_d_x_u_t_combo_box_ab7f69be9c0bd5cee7b8057eb73db69c7}{CDXUTComboBox} (\hyperlink{class_c_d_x_u_t_dialog}{CDXUTDialog} $\ast$pDialog=NULL)
+\item 
+virtual \hyperlink{class_c_d_x_u_t_combo_box_ac4aa6d69b8f19e38d215ce9d749f2840}{$\sim$CDXUTComboBox} ()
+\item 
+virtual void \hyperlink{class_c_d_x_u_t_combo_box_ab023a8c2522432d14096f70fb902a0d4}{SetTextColor} (D3DCOLOR Color)
+\item 
+virtual HRESULT \hyperlink{class_c_d_x_u_t_combo_box_a57760cc904757ae273c297245743f3af}{OnInit} ()
+\item 
+virtual bool \hyperlink{class_c_d_x_u_t_combo_box_abe59d59e89767472038d69260ef73f9d}{HandleKeyboard} (UINT uMsg, WPARAM wParam, LPARAM lParam)
+\item 
+virtual bool \hyperlink{class_c_d_x_u_t_combo_box_a1cc659081f04fdf657f644d9970a7df8}{HandleMouse} (UINT uMsg, POINT pt, WPARAM wParam, LPARAM lParam)
+\item 
+virtual void \hyperlink{class_c_d_x_u_t_combo_box_a09eecfbd4d5173cf55c15c583b1a2209}{OnHotkey} ()
+\item 
+virtual bool \hyperlink{class_c_d_x_u_t_combo_box_a274c5f85816abf1d040ea1606bd3447c}{CanHaveFocus} ()
+\item 
+virtual void \hyperlink{class_c_d_x_u_t_combo_box_a513be57f0d60315b255ef11f5998c268}{OnFocusOut} ()
+\item 
+virtual void \hyperlink{class_c_d_x_u_t_combo_box_affcd25fdf9baf53e39e7b50e58ee05d4}{Render} (IDirect3DDevice9 $\ast$pd3dDevice, float fElapsedTime)
+\item 
+virtual void \hyperlink{class_c_d_x_u_t_combo_box_a2170bab00045ce0e43f2381d2c5f3648}{UpdateRects} ()
+\item 
+HRESULT \hyperlink{class_c_d_x_u_t_combo_box_aa444c95e8c96e0e16a5184de95cd3bd9}{AddItem} (const WCHAR $\ast$strText, void $\ast$pData)
+\item 
+void \hyperlink{class_c_d_x_u_t_combo_box_a8554b7a381480a1698e283908bb3ebcc}{RemoveAllItems} ()
+\item 
+void \hyperlink{class_c_d_x_u_t_combo_box_aa2b97d66478fa689d7e05d0e84f227b6}{RemoveItem} (UINT index)
+\item 
+bool \hyperlink{class_c_d_x_u_t_combo_box_a1f2a004f544f4ce18603688572594967}{ContainsItem} (const WCHAR $\ast$strText, UINT iStart=0)
+\item 
+\hyperlink{_d_x_u_tgui_8cpp_a2d77ed03302b6978834ee3b6f57837fb}{int} \hyperlink{class_c_d_x_u_t_combo_box_acb2d98d5fa0b8f9984f253dffaea2318}{FindItem} (const WCHAR $\ast$strText, UINT iStart=0)
+\item 
+void $\ast$ \hyperlink{class_c_d_x_u_t_combo_box_a25cd3ea3c6094505c29ca6bf2c90d4af}{GetItemData} (const WCHAR $\ast$strText)
+\item 
+void $\ast$ \hyperlink{class_c_d_x_u_t_combo_box_a93938cc0dcad77883818800ff4c68e5e}{GetItemData} (\hyperlink{_d_x_u_tgui_8cpp_a2d77ed03302b6978834ee3b6f57837fb}{int} nIndex)
+\item 
+void \hyperlink{class_c_d_x_u_t_combo_box_a1ace87e91be7ab78d7367e99f1788952}{SetDropHeight} (UINT nHeight)
+\item 
+\hyperlink{_d_x_u_tgui_8cpp_a2d77ed03302b6978834ee3b6f57837fb}{int} \hyperlink{class_c_d_x_u_t_combo_box_a47644eab0287801bf65a37fe9c03989b}{GetScrollBarWidth} () const 
+\item 
+void \hyperlink{class_c_d_x_u_t_combo_box_a88c5c2c892f239357443fc6b3b37c40d}{SetScrollBarWidth} (\hyperlink{_d_x_u_tgui_8cpp_a2d77ed03302b6978834ee3b6f57837fb}{int} nWidth)
+\item 
+void $\ast$ \hyperlink{class_c_d_x_u_t_combo_box_abaf5f86c0e1f652aa1f71a8cbc63122a}{GetSelectedData} ()
+\item 
+\hyperlink{struct_d_x_u_t_combo_box_item}{DXUTComboBoxItem} $\ast$ \hyperlink{class_c_d_x_u_t_combo_box_a99d3048050a0e6934ecc6140d350f222}{GetSelectedItem} ()
+\item 
+UINT \hyperlink{class_c_d_x_u_t_combo_box_a4706b4e1da4030d3107b76885a27e3e9}{GetNumItems} ()
+\item 
+\hyperlink{struct_d_x_u_t_combo_box_item}{DXUTComboBoxItem} $\ast$ \hyperlink{class_c_d_x_u_t_combo_box_a2235c56b715f74aea5aa175cf0a8caa8}{GetItem} (UINT index)
+\item 
+HRESULT \hyperlink{class_c_d_x_u_t_combo_box_aa4b0062f2e1a3a01c2fcc63a652482ef}{SetSelectedByIndex} (UINT index)
+\item 
+HRESULT \hyperlink{class_c_d_x_u_t_combo_box_a6efbd6c0b3cbd66389ad21e25e5fbb14}{SetSelectedByText} (const WCHAR $\ast$strText)
+\item 
+HRESULT \hyperlink{class_c_d_x_u_t_combo_box_a66f4a4f8a88f37f0719942b7eac7fed8}{SetSelectedByData} (void $\ast$pData)
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{_d_x_u_tgui_8cpp_a2d77ed03302b6978834ee3b6f57837fb}{int} \hyperlink{class_c_d_x_u_t_combo_box_a99b930287892598483a9f781d64fec12}{m\_\-iSelected}
+\item 
+\hyperlink{_d_x_u_tgui_8cpp_a2d77ed03302b6978834ee3b6f57837fb}{int} \hyperlink{class_c_d_x_u_t_combo_box_abd641180c69582003b5f40f49c9027b2}{m\_\-iFocused}
+\item 
+\hyperlink{_d_x_u_tgui_8cpp_a2d77ed03302b6978834ee3b6f57837fb}{int} \hyperlink{class_c_d_x_u_t_combo_box_a6d3b08d846a3173ecc7254ea52fae484}{m\_\-nDropHeight}
+\item 
+\hyperlink{class_c_d_x_u_t_scroll_bar}{CDXUTScrollBar} \hyperlink{class_c_d_x_u_t_combo_box_aa1f843f80e2acfe7fb7eff78f2814451}{m\_\-ScrollBar}
+\item 
+\hyperlink{_d_x_u_tgui_8cpp_a2d77ed03302b6978834ee3b6f57837fb}{int} \hyperlink{class_c_d_x_u_t_combo_box_a8a93260e93691d37486a6891a65122da}{m\_\-nSBWidth}
+\item 
+bool \hyperlink{class_c_d_x_u_t_combo_box_aa39eaf7eff000dd8dcfc8fac5eb8c8e6}{m\_\-bOpened}
+\item 
+RECT \hyperlink{class_c_d_x_u_t_combo_box_a39744f7d6e1e6aec8523b35223f45d9a}{m\_\-rcText}
+\item 
+RECT \hyperlink{class_c_d_x_u_t_combo_box_a9bd51f17fe1da9c55c4def1efce27f52}{m\_\-rcButton}
+\item 
+RECT \hyperlink{class_c_d_x_u_t_combo_box_a9dbf700ec2d33fb50397fb24e11a34a1}{m\_\-rcDropdown}
+\item 
+RECT \hyperlink{class_c_d_x_u_t_combo_box_a7e48109d7bcd08b41a2ebfa2b69a5b92}{m\_\-rcDropdownText}
+\item 
+\hyperlink{class_c_growable_array}{CGrowableArray}$<$ \hyperlink{struct_d_x_u_t_combo_box_item}{DXUTComboBoxItem} $\ast$ $>$ \hyperlink{class_c_d_x_u_t_combo_box_a40515ea29c58caaf49d309be5a6bb2fb}{m\_\-Items}
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_c_d_x_u_t_combo_box_ab7f69be9c0bd5cee7b8057eb73db69c7}{
+\index{CDXUTComboBox@{CDXUTComboBox}!CDXUTComboBox@{CDXUTComboBox}}
+\index{CDXUTComboBox@{CDXUTComboBox}!CDXUTComboBox@{CDXUTComboBox}}
+\subsubsection[{CDXUTComboBox}]{\setlength{\rightskip}{0pt plus 5cm}CDXUTComboBox::CDXUTComboBox ({\bf CDXUTDialog} $\ast$ {\em pDialog} = {\ttfamily NULL})}}
+\label{class_c_d_x_u_t_combo_box_ab7f69be9c0bd5cee7b8057eb73db69c7}
+\hypertarget{class_c_d_x_u_t_combo_box_ac4aa6d69b8f19e38d215ce9d749f2840}{
+\index{CDXUTComboBox@{CDXUTComboBox}!$\sim$CDXUTComboBox@{$\sim$CDXUTComboBox}}
+\index{$\sim$CDXUTComboBox@{$\sim$CDXUTComboBox}!CDXUTComboBox@{CDXUTComboBox}}
+\subsubsection[{$\sim$CDXUTComboBox}]{\setlength{\rightskip}{0pt plus 5cm}CDXUTComboBox::$\sim$CDXUTComboBox ()\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{class_c_d_x_u_t_combo_box_ac4aa6d69b8f19e38d215ce9d749f2840}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_c_d_x_u_t_combo_box_aa444c95e8c96e0e16a5184de95cd3bd9}{
+\index{CDXUTComboBox@{CDXUTComboBox}!AddItem@{AddItem}}
+\index{AddItem@{AddItem}!CDXUTComboBox@{CDXUTComboBox}}
+\subsubsection[{AddItem}]{\setlength{\rightskip}{0pt plus 5cm}HRESULT CDXUTComboBox::AddItem (const WCHAR $\ast$ {\em strText}, \/  void $\ast$ {\em pData})}}
+\label{class_c_d_x_u_t_combo_box_aa444c95e8c96e0e16a5184de95cd3bd9}
+\hypertarget{class_c_d_x_u_t_combo_box_a274c5f85816abf1d040ea1606bd3447c}{
+\index{CDXUTComboBox@{CDXUTComboBox}!CanHaveFocus@{CanHaveFocus}}
+\index{CanHaveFocus@{CanHaveFocus}!CDXUTComboBox@{CDXUTComboBox}}
+\subsubsection[{CanHaveFocus}]{\setlength{\rightskip}{0pt plus 5cm}virtual bool CDXUTComboBox::CanHaveFocus ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}
+\label{class_c_d_x_u_t_combo_box_a274c5f85816abf1d040ea1606bd3447c}
+
+
+Reimplemented from \hyperlink{class_c_d_x_u_t_button_a81d210561344736cca99976a8c8e6d57}{CDXUTButton}.\hypertarget{class_c_d_x_u_t_combo_box_a1f2a004f544f4ce18603688572594967}{
+\index{CDXUTComboBox@{CDXUTComboBox}!ContainsItem@{ContainsItem}}
+\index{ContainsItem@{ContainsItem}!CDXUTComboBox@{CDXUTComboBox}}
+\subsubsection[{ContainsItem}]{\setlength{\rightskip}{0pt plus 5cm}bool CDXUTComboBox::ContainsItem (const WCHAR $\ast$ {\em strText}, \/  UINT {\em iStart} = {\ttfamily 0})}}
+\label{class_c_d_x_u_t_combo_box_a1f2a004f544f4ce18603688572594967}
+\hypertarget{class_c_d_x_u_t_combo_box_acb2d98d5fa0b8f9984f253dffaea2318}{
+\index{CDXUTComboBox@{CDXUTComboBox}!FindItem@{FindItem}}
+\index{FindItem@{FindItem}!CDXUTComboBox@{CDXUTComboBox}}
+\subsubsection[{FindItem}]{\setlength{\rightskip}{0pt plus 5cm}{\bf int} CDXUTComboBox::FindItem (const WCHAR $\ast$ {\em strText}, \/  UINT {\em iStart} = {\ttfamily 0})}}
+\label{class_c_d_x_u_t_combo_box_acb2d98d5fa0b8f9984f253dffaea2318}
+\hypertarget{class_c_d_x_u_t_combo_box_a2235c56b715f74aea5aa175cf0a8caa8}{
+\index{CDXUTComboBox@{CDXUTComboBox}!GetItem@{GetItem}}
+\index{GetItem@{GetItem}!CDXUTComboBox@{CDXUTComboBox}}
+\subsubsection[{GetItem}]{\setlength{\rightskip}{0pt plus 5cm}{\bf DXUTComboBoxItem}$\ast$ CDXUTComboBox::GetItem (UINT {\em index})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_c_d_x_u_t_combo_box_a2235c56b715f74aea5aa175cf0a8caa8}
+\hypertarget{class_c_d_x_u_t_combo_box_a93938cc0dcad77883818800ff4c68e5e}{
+\index{CDXUTComboBox@{CDXUTComboBox}!GetItemData@{GetItemData}}
+\index{GetItemData@{GetItemData}!CDXUTComboBox@{CDXUTComboBox}}
+\subsubsection[{GetItemData}]{\setlength{\rightskip}{0pt plus 5cm}void $\ast$ CDXUTComboBox::GetItemData ({\bf int} {\em nIndex})}}
+\label{class_c_d_x_u_t_combo_box_a93938cc0dcad77883818800ff4c68e5e}
+\hypertarget{class_c_d_x_u_t_combo_box_a25cd3ea3c6094505c29ca6bf2c90d4af}{
+\index{CDXUTComboBox@{CDXUTComboBox}!GetItemData@{GetItemData}}
+\index{GetItemData@{GetItemData}!CDXUTComboBox@{CDXUTComboBox}}
+\subsubsection[{GetItemData}]{\setlength{\rightskip}{0pt plus 5cm}void $\ast$ CDXUTComboBox::GetItemData (const WCHAR $\ast$ {\em strText})}}
+\label{class_c_d_x_u_t_combo_box_a25cd3ea3c6094505c29ca6bf2c90d4af}
+\hypertarget{class_c_d_x_u_t_combo_box_a4706b4e1da4030d3107b76885a27e3e9}{
+\index{CDXUTComboBox@{CDXUTComboBox}!GetNumItems@{GetNumItems}}
+\index{GetNumItems@{GetNumItems}!CDXUTComboBox@{CDXUTComboBox}}
+\subsubsection[{GetNumItems}]{\setlength{\rightskip}{0pt plus 5cm}UINT CDXUTComboBox::GetNumItems ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_c_d_x_u_t_combo_box_a4706b4e1da4030d3107b76885a27e3e9}
+\hypertarget{class_c_d_x_u_t_combo_box_a47644eab0287801bf65a37fe9c03989b}{
+\index{CDXUTComboBox@{CDXUTComboBox}!GetScrollBarWidth@{GetScrollBarWidth}}
+\index{GetScrollBarWidth@{GetScrollBarWidth}!CDXUTComboBox@{CDXUTComboBox}}
+\subsubsection[{GetScrollBarWidth}]{\setlength{\rightskip}{0pt plus 5cm}{\bf int} CDXUTComboBox::GetScrollBarWidth () const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_c_d_x_u_t_combo_box_a47644eab0287801bf65a37fe9c03989b}
+\hypertarget{class_c_d_x_u_t_combo_box_abaf5f86c0e1f652aa1f71a8cbc63122a}{
+\index{CDXUTComboBox@{CDXUTComboBox}!GetSelectedData@{GetSelectedData}}
+\index{GetSelectedData@{GetSelectedData}!CDXUTComboBox@{CDXUTComboBox}}
+\subsubsection[{GetSelectedData}]{\setlength{\rightskip}{0pt plus 5cm}void $\ast$ CDXUTComboBox::GetSelectedData ()}}
+\label{class_c_d_x_u_t_combo_box_abaf5f86c0e1f652aa1f71a8cbc63122a}
+\hypertarget{class_c_d_x_u_t_combo_box_a99d3048050a0e6934ecc6140d350f222}{
+\index{CDXUTComboBox@{CDXUTComboBox}!GetSelectedItem@{GetSelectedItem}}
+\index{GetSelectedItem@{GetSelectedItem}!CDXUTComboBox@{CDXUTComboBox}}
+\subsubsection[{GetSelectedItem}]{\setlength{\rightskip}{0pt plus 5cm}{\bf DXUTComboBoxItem} $\ast$ CDXUTComboBox::GetSelectedItem ()}}
+\label{class_c_d_x_u_t_combo_box_a99d3048050a0e6934ecc6140d350f222}
+\hypertarget{class_c_d_x_u_t_combo_box_abe59d59e89767472038d69260ef73f9d}{
+\index{CDXUTComboBox@{CDXUTComboBox}!HandleKeyboard@{HandleKeyboard}}
+\index{HandleKeyboard@{HandleKeyboard}!CDXUTComboBox@{CDXUTComboBox}}
+\subsubsection[{HandleKeyboard}]{\setlength{\rightskip}{0pt plus 5cm}bool CDXUTComboBox::HandleKeyboard (UINT {\em uMsg}, \/  WPARAM {\em wParam}, \/  LPARAM {\em lParam})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{class_c_d_x_u_t_combo_box_abe59d59e89767472038d69260ef73f9d}
+
+
+Reimplemented from \hyperlink{class_c_d_x_u_t_button_ae8da8eb3729b62ac3651eeca42d72530}{CDXUTButton}.\hypertarget{class_c_d_x_u_t_combo_box_a1cc659081f04fdf657f644d9970a7df8}{
+\index{CDXUTComboBox@{CDXUTComboBox}!HandleMouse@{HandleMouse}}
+\index{HandleMouse@{HandleMouse}!CDXUTComboBox@{CDXUTComboBox}}
+\subsubsection[{HandleMouse}]{\setlength{\rightskip}{0pt plus 5cm}bool CDXUTComboBox::HandleMouse (UINT {\em uMsg}, \/  POINT {\em pt}, \/  WPARAM {\em wParam}, \/  LPARAM {\em lParam})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{class_c_d_x_u_t_combo_box_a1cc659081f04fdf657f644d9970a7df8}
+
+
+Reimplemented from \hyperlink{class_c_d_x_u_t_button_ac0bb3da0b5cc77e4cadfbbed72d3e5b7}{CDXUTButton}.\hypertarget{class_c_d_x_u_t_combo_box_a513be57f0d60315b255ef11f5998c268}{
+\index{CDXUTComboBox@{CDXUTComboBox}!OnFocusOut@{OnFocusOut}}
+\index{OnFocusOut@{OnFocusOut}!CDXUTComboBox@{CDXUTComboBox}}
+\subsubsection[{OnFocusOut}]{\setlength{\rightskip}{0pt plus 5cm}void CDXUTComboBox::OnFocusOut ()\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{class_c_d_x_u_t_combo_box_a513be57f0d60315b255ef11f5998c268}
+
+
+Reimplemented from \hyperlink{class_c_d_x_u_t_control_afd5667a4ba9349e98db8c27a1b1d280d}{CDXUTControl}.\hypertarget{class_c_d_x_u_t_combo_box_a09eecfbd4d5173cf55c15c583b1a2209}{
+\index{CDXUTComboBox@{CDXUTComboBox}!OnHotkey@{OnHotkey}}
+\index{OnHotkey@{OnHotkey}!CDXUTComboBox@{CDXUTComboBox}}
+\subsubsection[{OnHotkey}]{\setlength{\rightskip}{0pt plus 5cm}void CDXUTComboBox::OnHotkey ()\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{class_c_d_x_u_t_combo_box_a09eecfbd4d5173cf55c15c583b1a2209}
+
+
+Reimplemented from \hyperlink{class_c_d_x_u_t_button_ae63ba50da1c035a9aaa983bafd5eae97}{CDXUTButton}.\hypertarget{class_c_d_x_u_t_combo_box_a57760cc904757ae273c297245743f3af}{
+\index{CDXUTComboBox@{CDXUTComboBox}!OnInit@{OnInit}}
+\index{OnInit@{OnInit}!CDXUTComboBox@{CDXUTComboBox}}
+\subsubsection[{OnInit}]{\setlength{\rightskip}{0pt plus 5cm}virtual HRESULT CDXUTComboBox::OnInit ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}
+\label{class_c_d_x_u_t_combo_box_a57760cc904757ae273c297245743f3af}
+
+
+Reimplemented from \hyperlink{class_c_d_x_u_t_control_a8f1418d201b97e0a9dc83a0e25207eca}{CDXUTControl}.\hypertarget{class_c_d_x_u_t_combo_box_a8554b7a381480a1698e283908bb3ebcc}{
+\index{CDXUTComboBox@{CDXUTComboBox}!RemoveAllItems@{RemoveAllItems}}
+\index{RemoveAllItems@{RemoveAllItems}!CDXUTComboBox@{CDXUTComboBox}}
+\subsubsection[{RemoveAllItems}]{\setlength{\rightskip}{0pt plus 5cm}void CDXUTComboBox::RemoveAllItems ()}}
+\label{class_c_d_x_u_t_combo_box_a8554b7a381480a1698e283908bb3ebcc}
+\hypertarget{class_c_d_x_u_t_combo_box_aa2b97d66478fa689d7e05d0e84f227b6}{
+\index{CDXUTComboBox@{CDXUTComboBox}!RemoveItem@{RemoveItem}}
+\index{RemoveItem@{RemoveItem}!CDXUTComboBox@{CDXUTComboBox}}
+\subsubsection[{RemoveItem}]{\setlength{\rightskip}{0pt plus 5cm}void CDXUTComboBox::RemoveItem (UINT {\em index})}}
+\label{class_c_d_x_u_t_combo_box_aa2b97d66478fa689d7e05d0e84f227b6}
+\hypertarget{class_c_d_x_u_t_combo_box_affcd25fdf9baf53e39e7b50e58ee05d4}{
+\index{CDXUTComboBox@{CDXUTComboBox}!Render@{Render}}
+\index{Render@{Render}!CDXUTComboBox@{CDXUTComboBox}}
+\subsubsection[{Render}]{\setlength{\rightskip}{0pt plus 5cm}void CDXUTComboBox::Render (IDirect3DDevice9 $\ast$ {\em pd3dDevice}, \/  float {\em fElapsedTime})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{class_c_d_x_u_t_combo_box_affcd25fdf9baf53e39e7b50e58ee05d4}
+
+
+Reimplemented from \hyperlink{class_c_d_x_u_t_button_a75a837a8eca0777b51d3aac6de6d6144}{CDXUTButton}.\hypertarget{class_c_d_x_u_t_combo_box_a1ace87e91be7ab78d7367e99f1788952}{
+\index{CDXUTComboBox@{CDXUTComboBox}!SetDropHeight@{SetDropHeight}}
+\index{SetDropHeight@{SetDropHeight}!CDXUTComboBox@{CDXUTComboBox}}
+\subsubsection[{SetDropHeight}]{\setlength{\rightskip}{0pt plus 5cm}void CDXUTComboBox::SetDropHeight (UINT {\em nHeight})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_c_d_x_u_t_combo_box_a1ace87e91be7ab78d7367e99f1788952}
+\hypertarget{class_c_d_x_u_t_combo_box_a88c5c2c892f239357443fc6b3b37c40d}{
+\index{CDXUTComboBox@{CDXUTComboBox}!SetScrollBarWidth@{SetScrollBarWidth}}
+\index{SetScrollBarWidth@{SetScrollBarWidth}!CDXUTComboBox@{CDXUTComboBox}}
+\subsubsection[{SetScrollBarWidth}]{\setlength{\rightskip}{0pt plus 5cm}void CDXUTComboBox::SetScrollBarWidth ({\bf int} {\em nWidth})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_c_d_x_u_t_combo_box_a88c5c2c892f239357443fc6b3b37c40d}
+\hypertarget{class_c_d_x_u_t_combo_box_a66f4a4f8a88f37f0719942b7eac7fed8}{
+\index{CDXUTComboBox@{CDXUTComboBox}!SetSelectedByData@{SetSelectedByData}}
+\index{SetSelectedByData@{SetSelectedByData}!CDXUTComboBox@{CDXUTComboBox}}
+\subsubsection[{SetSelectedByData}]{\setlength{\rightskip}{0pt plus 5cm}HRESULT CDXUTComboBox::SetSelectedByData (void $\ast$ {\em pData})}}
+\label{class_c_d_x_u_t_combo_box_a66f4a4f8a88f37f0719942b7eac7fed8}
+\hypertarget{class_c_d_x_u_t_combo_box_aa4b0062f2e1a3a01c2fcc63a652482ef}{
+\index{CDXUTComboBox@{CDXUTComboBox}!SetSelectedByIndex@{SetSelectedByIndex}}
+\index{SetSelectedByIndex@{SetSelectedByIndex}!CDXUTComboBox@{CDXUTComboBox}}
+\subsubsection[{SetSelectedByIndex}]{\setlength{\rightskip}{0pt plus 5cm}HRESULT CDXUTComboBox::SetSelectedByIndex (UINT {\em index})}}
+\label{class_c_d_x_u_t_combo_box_aa4b0062f2e1a3a01c2fcc63a652482ef}
+\hypertarget{class_c_d_x_u_t_combo_box_a6efbd6c0b3cbd66389ad21e25e5fbb14}{
+\index{CDXUTComboBox@{CDXUTComboBox}!SetSelectedByText@{SetSelectedByText}}
+\index{SetSelectedByText@{SetSelectedByText}!CDXUTComboBox@{CDXUTComboBox}}
+\subsubsection[{SetSelectedByText}]{\setlength{\rightskip}{0pt plus 5cm}HRESULT CDXUTComboBox::SetSelectedByText (const WCHAR $\ast$ {\em strText})}}
+\label{class_c_d_x_u_t_combo_box_a6efbd6c0b3cbd66389ad21e25e5fbb14}
+\hypertarget{class_c_d_x_u_t_combo_box_ab023a8c2522432d14096f70fb902a0d4}{
+\index{CDXUTComboBox@{CDXUTComboBox}!SetTextColor@{SetTextColor}}
+\index{SetTextColor@{SetTextColor}!CDXUTComboBox@{CDXUTComboBox}}
+\subsubsection[{SetTextColor}]{\setlength{\rightskip}{0pt plus 5cm}void CDXUTComboBox::SetTextColor (D3DCOLOR {\em Color})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{class_c_d_x_u_t_combo_box_ab023a8c2522432d14096f70fb902a0d4}
+
+
+Reimplemented from \hyperlink{class_c_d_x_u_t_control_a9132bb5d6b1d2bff1f20df33fec8c98b}{CDXUTControl}.\hypertarget{class_c_d_x_u_t_combo_box_a2170bab00045ce0e43f2381d2c5f3648}{
+\index{CDXUTComboBox@{CDXUTComboBox}!UpdateRects@{UpdateRects}}
+\index{UpdateRects@{UpdateRects}!CDXUTComboBox@{CDXUTComboBox}}
+\subsubsection[{UpdateRects}]{\setlength{\rightskip}{0pt plus 5cm}void CDXUTComboBox::UpdateRects ()\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{class_c_d_x_u_t_combo_box_a2170bab00045ce0e43f2381d2c5f3648}
+
+
+Reimplemented from \hyperlink{class_c_d_x_u_t_control_a5fb3a79178c678abaa0da57566a09002}{CDXUTControl}.
+
+\subsection{Member Data Documentation}
+\hypertarget{class_c_d_x_u_t_combo_box_aa39eaf7eff000dd8dcfc8fac5eb8c8e6}{
+\index{CDXUTComboBox@{CDXUTComboBox}!m\_\-bOpened@{m\_\-bOpened}}
+\index{m\_\-bOpened@{m\_\-bOpened}!CDXUTComboBox@{CDXUTComboBox}}
+\subsubsection[{m\_\-bOpened}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf CDXUTComboBox::m\_\-bOpened}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{class_c_d_x_u_t_combo_box_aa39eaf7eff000dd8dcfc8fac5eb8c8e6}
+\hypertarget{class_c_d_x_u_t_combo_box_abd641180c69582003b5f40f49c9027b2}{
+\index{CDXUTComboBox@{CDXUTComboBox}!m\_\-iFocused@{m\_\-iFocused}}
+\index{m\_\-iFocused@{m\_\-iFocused}!CDXUTComboBox@{CDXUTComboBox}}
+\subsubsection[{m\_\-iFocused}]{\setlength{\rightskip}{0pt plus 5cm}{\bf int} {\bf CDXUTComboBox::m\_\-iFocused}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{class_c_d_x_u_t_combo_box_abd641180c69582003b5f40f49c9027b2}
+\hypertarget{class_c_d_x_u_t_combo_box_a99b930287892598483a9f781d64fec12}{
+\index{CDXUTComboBox@{CDXUTComboBox}!m\_\-iSelected@{m\_\-iSelected}}
+\index{m\_\-iSelected@{m\_\-iSelected}!CDXUTComboBox@{CDXUTComboBox}}
+\subsubsection[{m\_\-iSelected}]{\setlength{\rightskip}{0pt plus 5cm}{\bf int} {\bf CDXUTComboBox::m\_\-iSelected}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{class_c_d_x_u_t_combo_box_a99b930287892598483a9f781d64fec12}
+\hypertarget{class_c_d_x_u_t_combo_box_a40515ea29c58caaf49d309be5a6bb2fb}{
+\index{CDXUTComboBox@{CDXUTComboBox}!m\_\-Items@{m\_\-Items}}
+\index{m\_\-Items@{m\_\-Items}!CDXUTComboBox@{CDXUTComboBox}}
+\subsubsection[{m\_\-Items}]{\setlength{\rightskip}{0pt plus 5cm}{\bf CGrowableArray}$<$ {\bf DXUTComboBoxItem}$\ast$ $>$ {\bf CDXUTComboBox::m\_\-Items}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{class_c_d_x_u_t_combo_box_a40515ea29c58caaf49d309be5a6bb2fb}
+\hypertarget{class_c_d_x_u_t_combo_box_a6d3b08d846a3173ecc7254ea52fae484}{
+\index{CDXUTComboBox@{CDXUTComboBox}!m\_\-nDropHeight@{m\_\-nDropHeight}}
+\index{m\_\-nDropHeight@{m\_\-nDropHeight}!CDXUTComboBox@{CDXUTComboBox}}
+\subsubsection[{m\_\-nDropHeight}]{\setlength{\rightskip}{0pt plus 5cm}{\bf int} {\bf CDXUTComboBox::m\_\-nDropHeight}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{class_c_d_x_u_t_combo_box_a6d3b08d846a3173ecc7254ea52fae484}
+\hypertarget{class_c_d_x_u_t_combo_box_a8a93260e93691d37486a6891a65122da}{
+\index{CDXUTComboBox@{CDXUTComboBox}!m\_\-nSBWidth@{m\_\-nSBWidth}}
+\index{m\_\-nSBWidth@{m\_\-nSBWidth}!CDXUTComboBox@{CDXUTComboBox}}
+\subsubsection[{m\_\-nSBWidth}]{\setlength{\rightskip}{0pt plus 5cm}{\bf int} {\bf CDXUTComboBox::m\_\-nSBWidth}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{class_c_d_x_u_t_combo_box_a8a93260e93691d37486a6891a65122da}
+\hypertarget{class_c_d_x_u_t_combo_box_a9bd51f17fe1da9c55c4def1efce27f52}{
+\index{CDXUTComboBox@{CDXUTComboBox}!m\_\-rcButton@{m\_\-rcButton}}
+\index{m\_\-rcButton@{m\_\-rcButton}!CDXUTComboBox@{CDXUTComboBox}}
+\subsubsection[{m\_\-rcButton}]{\setlength{\rightskip}{0pt plus 5cm}RECT {\bf CDXUTComboBox::m\_\-rcButton}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{class_c_d_x_u_t_combo_box_a9bd51f17fe1da9c55c4def1efce27f52}
+\hypertarget{class_c_d_x_u_t_combo_box_a9dbf700ec2d33fb50397fb24e11a34a1}{
+\index{CDXUTComboBox@{CDXUTComboBox}!m\_\-rcDropdown@{m\_\-rcDropdown}}
+\index{m\_\-rcDropdown@{m\_\-rcDropdown}!CDXUTComboBox@{CDXUTComboBox}}
+\subsubsection[{m\_\-rcDropdown}]{\setlength{\rightskip}{0pt plus 5cm}RECT {\bf CDXUTComboBox::m\_\-rcDropdown}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{class_c_d_x_u_t_combo_box_a9dbf700ec2d33fb50397fb24e11a34a1}
+\hypertarget{class_c_d_x_u_t_combo_box_a7e48109d7bcd08b41a2ebfa2b69a5b92}{
+\index{CDXUTComboBox@{CDXUTComboBox}!m\_\-rcDropdownText@{m\_\-rcDropdownText}}
+\index{m\_\-rcDropdownText@{m\_\-rcDropdownText}!CDXUTComboBox@{CDXUTComboBox}}
+\subsubsection[{m\_\-rcDropdownText}]{\setlength{\rightskip}{0pt plus 5cm}RECT {\bf CDXUTComboBox::m\_\-rcDropdownText}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{class_c_d_x_u_t_combo_box_a7e48109d7bcd08b41a2ebfa2b69a5b92}
+\hypertarget{class_c_d_x_u_t_combo_box_a39744f7d6e1e6aec8523b35223f45d9a}{
+\index{CDXUTComboBox@{CDXUTComboBox}!m\_\-rcText@{m\_\-rcText}}
+\index{m\_\-rcText@{m\_\-rcText}!CDXUTComboBox@{CDXUTComboBox}}
+\subsubsection[{m\_\-rcText}]{\setlength{\rightskip}{0pt plus 5cm}RECT {\bf CDXUTComboBox::m\_\-rcText}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{class_c_d_x_u_t_combo_box_a39744f7d6e1e6aec8523b35223f45d9a}
+\hypertarget{class_c_d_x_u_t_combo_box_aa1f843f80e2acfe7fb7eff78f2814451}{
+\index{CDXUTComboBox@{CDXUTComboBox}!m\_\-ScrollBar@{m\_\-ScrollBar}}
+\index{m\_\-ScrollBar@{m\_\-ScrollBar}!CDXUTComboBox@{CDXUTComboBox}}
+\subsubsection[{m\_\-ScrollBar}]{\setlength{\rightskip}{0pt plus 5cm}{\bf CDXUTScrollBar} {\bf CDXUTComboBox::m\_\-ScrollBar}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{class_c_d_x_u_t_combo_box_aa1f843f80e2acfe7fb7eff78f2814451}
+
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+C:/Users/doug/Documents/Visual Studio 2008/Projects/enlightened/Enlightened/DXUT/\hyperlink{_d_x_u_tgui_8h}{DXUTgui.h}\item 
+C:/Users/doug/Documents/Visual Studio 2008/Projects/enlightened/Enlightened/DXUT/\hyperlink{_d_x_u_tgui_8cpp}{DXUTgui.cpp}\end{DoxyCompactItemize}

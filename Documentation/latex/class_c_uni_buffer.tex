@@ -1,0 +1,171 @@
+\hypertarget{class_c_uni_buffer}{
+\section{CUniBuffer Class Reference}
+\label{class_c_uni_buffer}\index{CUniBuffer@{CUniBuffer}}
+}
+
+
+{\ttfamily \#include $<$DXUTgui.h$>$}Collaboration diagram for CUniBuffer:\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_c_uni_buffer_af89473fb3587314c4b3d773f0ed4fde1}{CUniBuffer} (int nInitialSize=1)
+\item 
+\hyperlink{class_c_uni_buffer_ab8612aea115b768b9927239c2e9568d0}{$\sim$CUniBuffer} ()
+\item 
+int \hyperlink{class_c_uni_buffer_acba24481f6d469d762e0c39f31eba80d}{GetBufferSize} ()
+\item 
+bool \hyperlink{class_c_uni_buffer_ac1584ce27e2969eb9a33159a15d0b1e6}{SetBufferSize} (int nSize)
+\item 
+int \hyperlink{class_c_uni_buffer_a2e50dad415c9fa8ef56926b76500f7a3}{GetTextSize} ()
+\item 
+const WCHAR $\ast$ \hyperlink{class_c_uni_buffer_a0a2a93af329ebeedcea0cf67b166fd8f}{GetBuffer} ()
+\item 
+const WCHAR \& \hyperlink{class_c_uni_buffer_a1d875e8c38094170c15cb551817bbedf}{operator\mbox{[}$\,$\mbox{]}} (int n) const 
+\item 
+WCHAR \& \hyperlink{class_c_uni_buffer_ae763d81a4be9f18f82dcf389184892b7}{operator\mbox{[}$\,$\mbox{]}} (int n)
+\item 
+\hyperlink{struct_d_x_u_t_font_node}{DXUTFontNode} $\ast$ \hyperlink{class_c_uni_buffer_a8c781a0b6673cb2e1c0fd67e9bdcebb5}{GetFontNode} ()
+\item 
+void \hyperlink{class_c_uni_buffer_abfc7664ed4c8da9b254dc75137da17b3}{SetFontNode} (\hyperlink{struct_d_x_u_t_font_node}{DXUTFontNode} $\ast$pFontNode)
+\item 
+void \hyperlink{class_c_uni_buffer_a6939a6f250ac4d32314e2124f17a037f}{Clear} ()
+\item 
+bool \hyperlink{class_c_uni_buffer_a23dfb66bd7d577ca78d55f387945b635}{InsertChar} (int nIndex, WCHAR wChar)
+\item 
+bool \hyperlink{class_c_uni_buffer_a2b0be4cc48030eab8027b9c27c11b3ba}{RemoveChar} (int nIndex)
+\item 
+bool \hyperlink{class_c_uni_buffer_a7c4687bd6d8d4cafd7842b9097089c8e}{InsertString} (int nIndex, const WCHAR $\ast$pStr, int nCount=-\/1)
+\item 
+bool \hyperlink{class_c_uni_buffer_a1d0bcdd0278d7d49bfc4dd00898730b2}{SetText} (LPCWSTR wszText)
+\item 
+HRESULT \hyperlink{class_c_uni_buffer_a9d8522f9cb2fcc14b0e9e43cd4b70f44}{CPtoX} (int nCP, BOOL bTrail, int $\ast$pX)
+\item 
+HRESULT \hyperlink{class_c_uni_buffer_adea62d3f30ad870b207d8816b0a1ce89}{XtoCP} (int nX, int $\ast$pCP, int $\ast$pnTrail)
+\item 
+void \hyperlink{class_c_uni_buffer_aef3e042ec363325c37371880c0490aa4}{GetPriorItemPos} (int nCP, int $\ast$pPrior)
+\item 
+void \hyperlink{class_c_uni_buffer_a925e667b4bdfa744f41d1fc4852d2ab1}{GetNextItemPos} (int nCP, int $\ast$pPrior)
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \hyperlink{class_c_uni_buffer_a05f3f1bcd1444d9e5ae974f9d83fe5f8}{Initialize} ()
+\item 
+static void \hyperlink{class_c_uni_buffer_a6c35e6bd8c80ef44836b228bd07a17c4}{Uninitialize} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_c_uni_buffer_af89473fb3587314c4b3d773f0ed4fde1}{
+\index{CUniBuffer@{CUniBuffer}!CUniBuffer@{CUniBuffer}}
+\index{CUniBuffer@{CUniBuffer}!CUniBuffer@{CUniBuffer}}
+\subsubsection[{CUniBuffer}]{\setlength{\rightskip}{0pt plus 5cm}CUniBuffer::CUniBuffer (int {\em nInitialSize} = {\ttfamily 1})}}
+\label{class_c_uni_buffer_af89473fb3587314c4b3d773f0ed4fde1}
+\hypertarget{class_c_uni_buffer_ab8612aea115b768b9927239c2e9568d0}{
+\index{CUniBuffer@{CUniBuffer}!$\sim$CUniBuffer@{$\sim$CUniBuffer}}
+\index{$\sim$CUniBuffer@{$\sim$CUniBuffer}!CUniBuffer@{CUniBuffer}}
+\subsubsection[{$\sim$CUniBuffer}]{\setlength{\rightskip}{0pt plus 5cm}CUniBuffer::$\sim$CUniBuffer ()}}
+\label{class_c_uni_buffer_ab8612aea115b768b9927239c2e9568d0}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_c_uni_buffer_a6939a6f250ac4d32314e2124f17a037f}{
+\index{CUniBuffer@{CUniBuffer}!Clear@{Clear}}
+\index{Clear@{Clear}!CUniBuffer@{CUniBuffer}}
+\subsubsection[{Clear}]{\setlength{\rightskip}{0pt plus 5cm}void CUniBuffer::Clear ()}}
+\label{class_c_uni_buffer_a6939a6f250ac4d32314e2124f17a037f}
+\hypertarget{class_c_uni_buffer_a9d8522f9cb2fcc14b0e9e43cd4b70f44}{
+\index{CUniBuffer@{CUniBuffer}!CPtoX@{CPtoX}}
+\index{CPtoX@{CPtoX}!CUniBuffer@{CUniBuffer}}
+\subsubsection[{CPtoX}]{\setlength{\rightskip}{0pt plus 5cm}HRESULT CUniBuffer::CPtoX (int {\em nCP}, \/  BOOL {\em bTrail}, \/  int $\ast$ {\em pX})}}
+\label{class_c_uni_buffer_a9d8522f9cb2fcc14b0e9e43cd4b70f44}
+\hypertarget{class_c_uni_buffer_a0a2a93af329ebeedcea0cf67b166fd8f}{
+\index{CUniBuffer@{CUniBuffer}!GetBuffer@{GetBuffer}}
+\index{GetBuffer@{GetBuffer}!CUniBuffer@{CUniBuffer}}
+\subsubsection[{GetBuffer}]{\setlength{\rightskip}{0pt plus 5cm}const WCHAR$\ast$ CUniBuffer::GetBuffer ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_c_uni_buffer_a0a2a93af329ebeedcea0cf67b166fd8f}
+\hypertarget{class_c_uni_buffer_acba24481f6d469d762e0c39f31eba80d}{
+\index{CUniBuffer@{CUniBuffer}!GetBufferSize@{GetBufferSize}}
+\index{GetBufferSize@{GetBufferSize}!CUniBuffer@{CUniBuffer}}
+\subsubsection[{GetBufferSize}]{\setlength{\rightskip}{0pt plus 5cm}int CUniBuffer::GetBufferSize ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_c_uni_buffer_acba24481f6d469d762e0c39f31eba80d}
+\hypertarget{class_c_uni_buffer_a8c781a0b6673cb2e1c0fd67e9bdcebb5}{
+\index{CUniBuffer@{CUniBuffer}!GetFontNode@{GetFontNode}}
+\index{GetFontNode@{GetFontNode}!CUniBuffer@{CUniBuffer}}
+\subsubsection[{GetFontNode}]{\setlength{\rightskip}{0pt plus 5cm}{\bf DXUTFontNode}$\ast$ CUniBuffer::GetFontNode ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_c_uni_buffer_a8c781a0b6673cb2e1c0fd67e9bdcebb5}
+\hypertarget{class_c_uni_buffer_a925e667b4bdfa744f41d1fc4852d2ab1}{
+\index{CUniBuffer@{CUniBuffer}!GetNextItemPos@{GetNextItemPos}}
+\index{GetNextItemPos@{GetNextItemPos}!CUniBuffer@{CUniBuffer}}
+\subsubsection[{GetNextItemPos}]{\setlength{\rightskip}{0pt plus 5cm}void CUniBuffer::GetNextItemPos (int {\em nCP}, \/  int $\ast$ {\em pPrior})}}
+\label{class_c_uni_buffer_a925e667b4bdfa744f41d1fc4852d2ab1}
+\hypertarget{class_c_uni_buffer_aef3e042ec363325c37371880c0490aa4}{
+\index{CUniBuffer@{CUniBuffer}!GetPriorItemPos@{GetPriorItemPos}}
+\index{GetPriorItemPos@{GetPriorItemPos}!CUniBuffer@{CUniBuffer}}
+\subsubsection[{GetPriorItemPos}]{\setlength{\rightskip}{0pt plus 5cm}void CUniBuffer::GetPriorItemPos (int {\em nCP}, \/  int $\ast$ {\em pPrior})}}
+\label{class_c_uni_buffer_aef3e042ec363325c37371880c0490aa4}
+\hypertarget{class_c_uni_buffer_a2e50dad415c9fa8ef56926b76500f7a3}{
+\index{CUniBuffer@{CUniBuffer}!GetTextSize@{GetTextSize}}
+\index{GetTextSize@{GetTextSize}!CUniBuffer@{CUniBuffer}}
+\subsubsection[{GetTextSize}]{\setlength{\rightskip}{0pt plus 5cm}int CUniBuffer::GetTextSize ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_c_uni_buffer_a2e50dad415c9fa8ef56926b76500f7a3}
+\hypertarget{class_c_uni_buffer_a05f3f1bcd1444d9e5ae974f9d83fe5f8}{
+\index{CUniBuffer@{CUniBuffer}!Initialize@{Initialize}}
+\index{Initialize@{Initialize}!CUniBuffer@{CUniBuffer}}
+\subsubsection[{Initialize}]{\setlength{\rightskip}{0pt plus 5cm}void CUniBuffer::Initialize ()\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}
+\label{class_c_uni_buffer_a05f3f1bcd1444d9e5ae974f9d83fe5f8}
+\hypertarget{class_c_uni_buffer_a23dfb66bd7d577ca78d55f387945b635}{
+\index{CUniBuffer@{CUniBuffer}!InsertChar@{InsertChar}}
+\index{InsertChar@{InsertChar}!CUniBuffer@{CUniBuffer}}
+\subsubsection[{InsertChar}]{\setlength{\rightskip}{0pt plus 5cm}bool CUniBuffer::InsertChar (int {\em nIndex}, \/  WCHAR {\em wChar})}}
+\label{class_c_uni_buffer_a23dfb66bd7d577ca78d55f387945b635}
+\hypertarget{class_c_uni_buffer_a7c4687bd6d8d4cafd7842b9097089c8e}{
+\index{CUniBuffer@{CUniBuffer}!InsertString@{InsertString}}
+\index{InsertString@{InsertString}!CUniBuffer@{CUniBuffer}}
+\subsubsection[{InsertString}]{\setlength{\rightskip}{0pt plus 5cm}bool CUniBuffer::InsertString (int {\em nIndex}, \/  const WCHAR $\ast$ {\em pStr}, \/  int {\em nCount} = {\ttfamily -\/1})}}
+\label{class_c_uni_buffer_a7c4687bd6d8d4cafd7842b9097089c8e}
+\hypertarget{class_c_uni_buffer_ae763d81a4be9f18f82dcf389184892b7}{
+\index{CUniBuffer@{CUniBuffer}!operator\mbox{[}\mbox{]}@{operator[]}}
+\index{operator\mbox{[}\mbox{]}@{operator[]}!CUniBuffer@{CUniBuffer}}
+\subsubsection[{operator[]}]{\setlength{\rightskip}{0pt plus 5cm}WCHAR \& CUniBuffer::operator\mbox{[}$\,$\mbox{]} (int {\em n})}}
+\label{class_c_uni_buffer_ae763d81a4be9f18f82dcf389184892b7}
+\hypertarget{class_c_uni_buffer_a1d875e8c38094170c15cb551817bbedf}{
+\index{CUniBuffer@{CUniBuffer}!operator\mbox{[}\mbox{]}@{operator[]}}
+\index{operator\mbox{[}\mbox{]}@{operator[]}!CUniBuffer@{CUniBuffer}}
+\subsubsection[{operator[]}]{\setlength{\rightskip}{0pt plus 5cm}const WCHAR\& CUniBuffer::operator\mbox{[}$\,$\mbox{]} (int {\em n}) const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_c_uni_buffer_a1d875e8c38094170c15cb551817bbedf}
+\hypertarget{class_c_uni_buffer_a2b0be4cc48030eab8027b9c27c11b3ba}{
+\index{CUniBuffer@{CUniBuffer}!RemoveChar@{RemoveChar}}
+\index{RemoveChar@{RemoveChar}!CUniBuffer@{CUniBuffer}}
+\subsubsection[{RemoveChar}]{\setlength{\rightskip}{0pt plus 5cm}bool CUniBuffer::RemoveChar (int {\em nIndex})}}
+\label{class_c_uni_buffer_a2b0be4cc48030eab8027b9c27c11b3ba}
+\hypertarget{class_c_uni_buffer_ac1584ce27e2969eb9a33159a15d0b1e6}{
+\index{CUniBuffer@{CUniBuffer}!SetBufferSize@{SetBufferSize}}
+\index{SetBufferSize@{SetBufferSize}!CUniBuffer@{CUniBuffer}}
+\subsubsection[{SetBufferSize}]{\setlength{\rightskip}{0pt plus 5cm}bool CUniBuffer::SetBufferSize (int {\em nSize})}}
+\label{class_c_uni_buffer_ac1584ce27e2969eb9a33159a15d0b1e6}
+\hypertarget{class_c_uni_buffer_abfc7664ed4c8da9b254dc75137da17b3}{
+\index{CUniBuffer@{CUniBuffer}!SetFontNode@{SetFontNode}}
+\index{SetFontNode@{SetFontNode}!CUniBuffer@{CUniBuffer}}
+\subsubsection[{SetFontNode}]{\setlength{\rightskip}{0pt plus 5cm}void CUniBuffer::SetFontNode ({\bf DXUTFontNode} $\ast$ {\em pFontNode})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_c_uni_buffer_abfc7664ed4c8da9b254dc75137da17b3}
+\hypertarget{class_c_uni_buffer_a1d0bcdd0278d7d49bfc4dd00898730b2}{
+\index{CUniBuffer@{CUniBuffer}!SetText@{SetText}}
+\index{SetText@{SetText}!CUniBuffer@{CUniBuffer}}
+\subsubsection[{SetText}]{\setlength{\rightskip}{0pt plus 5cm}bool CUniBuffer::SetText (LPCWSTR {\em wszText})}}
+\label{class_c_uni_buffer_a1d0bcdd0278d7d49bfc4dd00898730b2}
+\hypertarget{class_c_uni_buffer_a6c35e6bd8c80ef44836b228bd07a17c4}{
+\index{CUniBuffer@{CUniBuffer}!Uninitialize@{Uninitialize}}
+\index{Uninitialize@{Uninitialize}!CUniBuffer@{CUniBuffer}}
+\subsubsection[{Uninitialize}]{\setlength{\rightskip}{0pt plus 5cm}void CUniBuffer::Uninitialize ()\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}
+\label{class_c_uni_buffer_a6c35e6bd8c80ef44836b228bd07a17c4}
+\hypertarget{class_c_uni_buffer_adea62d3f30ad870b207d8816b0a1ce89}{
+\index{CUniBuffer@{CUniBuffer}!XtoCP@{XtoCP}}
+\index{XtoCP@{XtoCP}!CUniBuffer@{CUniBuffer}}
+\subsubsection[{XtoCP}]{\setlength{\rightskip}{0pt plus 5cm}HRESULT CUniBuffer::XtoCP (int {\em nX}, \/  int $\ast$ {\em pCP}, \/  int $\ast$ {\em pnTrail})}}
+\label{class_c_uni_buffer_adea62d3f30ad870b207d8816b0a1ce89}
+
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+C:/Users/doug/Documents/Visual Studio 2008/Projects/enlightened/Enlightened/DXUT/\hyperlink{_d_x_u_tgui_8h}{DXUTgui.h}\item 
+C:/Users/doug/Documents/Visual Studio 2008/Projects/enlightened/Enlightened/DXUT/\hyperlink{_d_x_u_tgui_8cpp}{DXUTgui.cpp}\end{DoxyCompactItemize}

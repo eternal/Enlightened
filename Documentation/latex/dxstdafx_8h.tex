@@ -1,0 +1,91 @@
+\hypertarget{dxstdafx_8h}{
+\section{C:/Users/doug/Documents/Visual Studio 2008/Projects/enlightened/Enlightened/DXUT/dxstdafx.h File Reference}
+\label{dxstdafx_8h}\index{C:/Users/doug/Documents/Visual Studio 2008/Projects/enlightened/Enlightened/DXUT/dxstdafx.h@{C:/Users/doug/Documents/Visual Studio 2008/Projects/enlightened/Enlightened/DXUT/dxstdafx.h}}
+}
+{\ttfamily \#include $<$windows.h$>$}\par
+{\ttfamily \#include $<$assert.h$>$}\par
+{\ttfamily \#include $<$wchar.h$>$}\par
+{\ttfamily \#include $<$mmsystem.h$>$}\par
+{\ttfamily \#include $<$commctrl.h$>$}\par
+{\ttfamily \#include $<$shellapi.h$>$}\par
+{\ttfamily \#include $<$new.h$>$}\par
+{\ttfamily \#include $<$math.h$>$}\par
+{\ttfamily \#include $<$limits.h$>$}\par
+{\ttfamily \#include $<$stdio.h$>$}\par
+{\ttfamily \#include $<$XInput.h$>$}\par
+{\ttfamily \#include $<$d3d9.h$>$}\par
+{\ttfamily \#include $<$d3dx9.h$>$}\par
+{\ttfamily \#include $<$dxerr.h$>$}\par
+{\ttfamily \#include $<$mmreg.h$>$}\par
+{\ttfamily \#include $<$dsound.h$>$}\par
+{\ttfamily \#include $<$strsafe.h$>$}\par
+{\ttfamily \#include \char`\"{}DXUT.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}DXUTmisc.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}DXUTenum.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}DXUTmesh.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}DXUTgui.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}DXUTsettingsDlg.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}DXUTSound.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}DXUTRes.h\char`\"{}}\par
+Include dependency graph for dxstdafx.h:This graph shows which files directly or indirectly include this file:\subsection*{Defines}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{dxstdafx_8h_a966cd377b9f3fdeb1432460c33352af1}{WINVER}~0x0410
+\item 
+\#define \hyperlink{dxstdafx_8h_a074ca98c073d899c62fc6629918186c8}{\_\-WIN32\_\-WINDOWS}~0x0410
+\item 
+\#define \hyperlink{dxstdafx_8h_ac50762666aa00bd3a4308158510f1748}{\_\-WIN32\_\-WINNT}~0x0500
+\item 
+\#define \hyperlink{dxstdafx_8h_a5d2e64c561275bcf703c30edd5494288}{V}(x)~\{ hr = x; \}
+\item 
+\#define \hyperlink{dxstdafx_8h_af2b382cafebcd802f68fbdee2fba77fa}{V\_\-RETURN}(x)~\{ hr = x; if( FAILED(hr) ) \{ return hr; \} \}
+\item 
+\#define \hyperlink{dxstdafx_8h_a9bbcd82e77c41df827c09759def05c9a}{SAFE\_\-DELETE}(p)~\{ if(p) \{ delete (p);     (p)=NULL; \} \}
+\item 
+\#define \hyperlink{dxstdafx_8h_a506b3685b3eb05aac751f9e14cbed93b}{SAFE\_\-DELETE\_\-ARRAY}(p)~\{ if(p) \{ delete\mbox{[}$\,$\mbox{]} (p);   (p)=NULL; \} \}
+\item 
+\#define \hyperlink{dxstdafx_8h_a6038f7bdb274c2e159988a57dedbf93d}{SAFE\_\-RELEASE}(p)~\{ if(p) \{ (p)-\/$>$Release(); (p)=NULL; \} \}
+\end{DoxyCompactItemize}
+
+
+\subsection{Define Documentation}
+\hypertarget{dxstdafx_8h_a074ca98c073d899c62fc6629918186c8}{
+\index{dxstdafx.h@{dxstdafx.h}!\_\-WIN32\_\-WINDOWS@{\_\-WIN32\_\-WINDOWS}}
+\index{\_\-WIN32\_\-WINDOWS@{\_\-WIN32\_\-WINDOWS}!dxstdafx.h@{dxstdafx.h}}
+\subsubsection[{\_\-WIN32\_\-WINDOWS}]{\setlength{\rightskip}{0pt plus 5cm}\#define \_\-WIN32\_\-WINDOWS~0x0410}}
+\label{dxstdafx_8h_a074ca98c073d899c62fc6629918186c8}
+\hypertarget{dxstdafx_8h_ac50762666aa00bd3a4308158510f1748}{
+\index{dxstdafx.h@{dxstdafx.h}!\_\-WIN32\_\-WINNT@{\_\-WIN32\_\-WINNT}}
+\index{\_\-WIN32\_\-WINNT@{\_\-WIN32\_\-WINNT}!dxstdafx.h@{dxstdafx.h}}
+\subsubsection[{\_\-WIN32\_\-WINNT}]{\setlength{\rightskip}{0pt plus 5cm}\#define \_\-WIN32\_\-WINNT~0x0500}}
+\label{dxstdafx_8h_ac50762666aa00bd3a4308158510f1748}
+\hypertarget{dxstdafx_8h_a9bbcd82e77c41df827c09759def05c9a}{
+\index{dxstdafx.h@{dxstdafx.h}!SAFE\_\-DELETE@{SAFE\_\-DELETE}}
+\index{SAFE\_\-DELETE@{SAFE\_\-DELETE}!dxstdafx.h@{dxstdafx.h}}
+\subsubsection[{SAFE\_\-DELETE}]{\setlength{\rightskip}{0pt plus 5cm}\#define SAFE\_\-DELETE(p)~\{ if(p) \{ delete (p);     (p)=NULL; \} \}}}
+\label{dxstdafx_8h_a9bbcd82e77c41df827c09759def05c9a}
+\hypertarget{dxstdafx_8h_a506b3685b3eb05aac751f9e14cbed93b}{
+\index{dxstdafx.h@{dxstdafx.h}!SAFE\_\-DELETE\_\-ARRAY@{SAFE\_\-DELETE\_\-ARRAY}}
+\index{SAFE\_\-DELETE\_\-ARRAY@{SAFE\_\-DELETE\_\-ARRAY}!dxstdafx.h@{dxstdafx.h}}
+\subsubsection[{SAFE\_\-DELETE\_\-ARRAY}]{\setlength{\rightskip}{0pt plus 5cm}\#define SAFE\_\-DELETE\_\-ARRAY(p)~\{ if(p) \{ delete\mbox{[}$\,$\mbox{]} (p);   (p)=NULL; \} \}}}
+\label{dxstdafx_8h_a506b3685b3eb05aac751f9e14cbed93b}
+\hypertarget{dxstdafx_8h_a6038f7bdb274c2e159988a57dedbf93d}{
+\index{dxstdafx.h@{dxstdafx.h}!SAFE\_\-RELEASE@{SAFE\_\-RELEASE}}
+\index{SAFE\_\-RELEASE@{SAFE\_\-RELEASE}!dxstdafx.h@{dxstdafx.h}}
+\subsubsection[{SAFE\_\-RELEASE}]{\setlength{\rightskip}{0pt plus 5cm}\#define SAFE\_\-RELEASE(p)~\{ if(p) \{ (p)-\/$>$Release(); (p)=NULL; \} \}}}
+\label{dxstdafx_8h_a6038f7bdb274c2e159988a57dedbf93d}
+\hypertarget{dxstdafx_8h_a5d2e64c561275bcf703c30edd5494288}{
+\index{dxstdafx.h@{dxstdafx.h}!V@{V}}
+\index{V@{V}!dxstdafx.h@{dxstdafx.h}}
+\subsubsection[{V}]{\setlength{\rightskip}{0pt plus 5cm}\#define V(x)~\{ hr = x; \}}}
+\label{dxstdafx_8h_a5d2e64c561275bcf703c30edd5494288}
+\hypertarget{dxstdafx_8h_af2b382cafebcd802f68fbdee2fba77fa}{
+\index{dxstdafx.h@{dxstdafx.h}!V\_\-RETURN@{V\_\-RETURN}}
+\index{V\_\-RETURN@{V\_\-RETURN}!dxstdafx.h@{dxstdafx.h}}
+\subsubsection[{V\_\-RETURN}]{\setlength{\rightskip}{0pt plus 5cm}\#define V\_\-RETURN(x)~\{ hr = x; if( FAILED(hr) ) \{ return hr; \} \}}}
+\label{dxstdafx_8h_af2b382cafebcd802f68fbdee2fba77fa}
+\hypertarget{dxstdafx_8h_a966cd377b9f3fdeb1432460c33352af1}{
+\index{dxstdafx.h@{dxstdafx.h}!WINVER@{WINVER}}
+\index{WINVER@{WINVER}!dxstdafx.h@{dxstdafx.h}}
+\subsubsection[{WINVER}]{\setlength{\rightskip}{0pt plus 5cm}\#define WINVER~0x0410}}
+\label{dxstdafx_8h_a966cd377b9f3fdeb1432460c33352af1}

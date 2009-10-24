@@ -1,0 +1,257 @@
+\hypertarget{class_c_d3_d_arc_ball}{
+\section{CD3DArcBall Class Reference}
+\label{class_c_d3_d_arc_ball}\index{CD3DArcBall@{CD3DArcBall}}
+}
+
+
+{\ttfamily \#include $<$DXUTmisc.h$>$}\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_c_d3_d_arc_ball_ae5b332fb9c87ddde4670c782b8299e40}{CD3DArcBall} ()
+\item 
+void \hyperlink{class_c_d3_d_arc_ball_a8e25a9fee7bdad867cf8feb623a3dd1f}{Reset} ()
+\item 
+void \hyperlink{class_c_d3_d_arc_ball_a72c32f8aa6d34f89765ea75139f65b87}{SetTranslationRadius} (FLOAT fRadiusTranslation)
+\item 
+void \hyperlink{class_c_d3_d_arc_ball_aac7e91ff2fb6770b18b62b7eaecba6c4}{SetWindow} (INT nWidth, INT nHeight, FLOAT fRadius=0.9f)
+\item 
+void \hyperlink{class_c_d3_d_arc_ball_a781313e96e3a63e69facead4ca70cf79}{SetOffset} (INT nX, INT nY)
+\item 
+void \hyperlink{class_c_d3_d_arc_ball_a86882ddd7ee5330641a57b24fd8006f3}{OnBegin} (\hyperlink{_d_x_u_tgui_8cpp_a2d77ed03302b6978834ee3b6f57837fb}{int} nX, \hyperlink{_d_x_u_tgui_8cpp_a2d77ed03302b6978834ee3b6f57837fb}{int} nY)
+\item 
+void \hyperlink{class_c_d3_d_arc_ball_aab40fc2905516034b37ba0d14b6a6a76}{OnMove} (\hyperlink{_d_x_u_tgui_8cpp_a2d77ed03302b6978834ee3b6f57837fb}{int} nX, \hyperlink{_d_x_u_tgui_8cpp_a2d77ed03302b6978834ee3b6f57837fb}{int} nY)
+\item 
+void \hyperlink{class_c_d3_d_arc_ball_abf187ce0c2926384d28166ee30df6c24}{OnEnd} ()
+\item 
+LRESULT \hyperlink{class_c_d3_d_arc_ball_ac2f906cc45310c55c03b6403c22817ca}{HandleMessages} (HWND hWnd, UINT uMsg, WPARAM wParam, LPARAM lParam)
+\item 
+const D3DXMATRIX $\ast$ \hyperlink{class_c_d3_d_arc_ball_a546036e679d57ea3258a4f77ba8b9df8}{GetRotationMatrix} ()
+\item 
+const D3DXMATRIX $\ast$ \hyperlink{class_c_d3_d_arc_ball_ad100e8818466d636d428e49fbe634f5b}{GetTranslationMatrix} () const 
+\item 
+const D3DXMATRIX $\ast$ \hyperlink{class_c_d3_d_arc_ball_a4b402efbd90ff4f6fc916eadfcf61482}{GetTranslationDeltaMatrix} () const 
+\item 
+bool \hyperlink{class_c_d3_d_arc_ball_ac7ca13b553ce0ecce4d375697d0866e3}{IsBeingDragged} () const 
+\item 
+D3DXQUATERNION \hyperlink{class_c_d3_d_arc_ball_ad256f4f111901c148228b745a274d828}{GetQuatNow} () const 
+\item 
+void \hyperlink{class_c_d3_d_arc_ball_ad3140af4e1b4f62a18238ac2991de9a6}{SetQuatNow} (D3DXQUATERNION q)
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static D3DXQUATERNION \hyperlink{class_c_d3_d_arc_ball_ab4ab2df9ad0ee6239a79bc826dc35249}{QuatFromBallPoints} (const D3DXVECTOR3 \&vFrom, const D3DXVECTOR3 \&vTo)
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+D3DXVECTOR3 \hyperlink{class_c_d3_d_arc_ball_a7c1d50c7a090b1b64ea528cddc1858dc}{ScreenToVector} (float fScreenPtX, float fScreenPtY)
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+D3DXMATRIXA16 \hyperlink{class_c_d3_d_arc_ball_a02619e72fe82db21a3c237a94eb31a37}{m\_\-mRotation}
+\item 
+D3DXMATRIXA16 \hyperlink{class_c_d3_d_arc_ball_a2d9f13c59ac72cec38ab704159b7e4e9}{m\_\-mTranslation}
+\item 
+D3DXMATRIXA16 \hyperlink{class_c_d3_d_arc_ball_ad630f2a7fc9ca7f77574ba9e9560c672}{m\_\-mTranslationDelta}
+\item 
+POINT \hyperlink{class_c_d3_d_arc_ball_ab6246cc5b63d98a3dfcb4530cae75ef4}{m\_\-Offset}
+\item 
+INT \hyperlink{class_c_d3_d_arc_ball_a71b658e5247eb150029dfe923bd116c3}{m\_\-nWidth}
+\item 
+INT \hyperlink{class_c_d3_d_arc_ball_a53bb3eeba4a817148421c5c53b4b846d}{m\_\-nHeight}
+\item 
+D3DXVECTOR2 \hyperlink{class_c_d3_d_arc_ball_a6075b159b5221b3091e32b090c0dcab3}{m\_\-vCenter}
+\item 
+FLOAT \hyperlink{class_c_d3_d_arc_ball_a11401fa5425ecaab3669745a4c20e552}{m\_\-fRadius}
+\item 
+FLOAT \hyperlink{class_c_d3_d_arc_ball_a4600c8ffe537118ba7b8f7fdc60c9322}{m\_\-fRadiusTranslation}
+\item 
+D3DXQUATERNION \hyperlink{class_c_d3_d_arc_ball_a944bbe7cbea8e5c715b1c62a0a6ba32f}{m\_\-qDown}
+\item 
+D3DXQUATERNION \hyperlink{class_c_d3_d_arc_ball_a248db3d61e41f65195810367bbe849f1}{m\_\-qNow}
+\item 
+bool \hyperlink{class_c_d3_d_arc_ball_a437b55976f4fe81a6f294a2d1f11ac81}{m\_\-bDrag}
+\item 
+POINT \hyperlink{class_c_d3_d_arc_ball_ae4114109f3ae6ae749748210b54405ad}{m\_\-ptLastMouse}
+\item 
+D3DXVECTOR3 \hyperlink{class_c_d3_d_arc_ball_a702ae593d9a99c473c33bc762b6034de}{m\_\-vDownPt}
+\item 
+D3DXVECTOR3 \hyperlink{class_c_d3_d_arc_ball_a759c768375a12e49cfdad6d141e60d21}{m\_\-vCurrentPt}
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_c_d3_d_arc_ball_ae5b332fb9c87ddde4670c782b8299e40}{
+\index{CD3DArcBall@{CD3DArcBall}!CD3DArcBall@{CD3DArcBall}}
+\index{CD3DArcBall@{CD3DArcBall}!CD3DArcBall@{CD3DArcBall}}
+\subsubsection[{CD3DArcBall}]{\setlength{\rightskip}{0pt plus 5cm}CD3DArcBall::CD3DArcBall ()}}
+\label{class_c_d3_d_arc_ball_ae5b332fb9c87ddde4670c782b8299e40}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_c_d3_d_arc_ball_ad256f4f111901c148228b745a274d828}{
+\index{CD3DArcBall@{CD3DArcBall}!GetQuatNow@{GetQuatNow}}
+\index{GetQuatNow@{GetQuatNow}!CD3DArcBall@{CD3DArcBall}}
+\subsubsection[{GetQuatNow}]{\setlength{\rightskip}{0pt plus 5cm}D3DXQUATERNION CD3DArcBall::GetQuatNow () const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_c_d3_d_arc_ball_ad256f4f111901c148228b745a274d828}
+\hypertarget{class_c_d3_d_arc_ball_a546036e679d57ea3258a4f77ba8b9df8}{
+\index{CD3DArcBall@{CD3DArcBall}!GetRotationMatrix@{GetRotationMatrix}}
+\index{GetRotationMatrix@{GetRotationMatrix}!CD3DArcBall@{CD3DArcBall}}
+\subsubsection[{GetRotationMatrix}]{\setlength{\rightskip}{0pt plus 5cm}const D3DXMATRIX$\ast$ CD3DArcBall::GetRotationMatrix ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_c_d3_d_arc_ball_a546036e679d57ea3258a4f77ba8b9df8}
+\hypertarget{class_c_d3_d_arc_ball_a4b402efbd90ff4f6fc916eadfcf61482}{
+\index{CD3DArcBall@{CD3DArcBall}!GetTranslationDeltaMatrix@{GetTranslationDeltaMatrix}}
+\index{GetTranslationDeltaMatrix@{GetTranslationDeltaMatrix}!CD3DArcBall@{CD3DArcBall}}
+\subsubsection[{GetTranslationDeltaMatrix}]{\setlength{\rightskip}{0pt plus 5cm}const D3DXMATRIX$\ast$ CD3DArcBall::GetTranslationDeltaMatrix () const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_c_d3_d_arc_ball_a4b402efbd90ff4f6fc916eadfcf61482}
+\hypertarget{class_c_d3_d_arc_ball_ad100e8818466d636d428e49fbe634f5b}{
+\index{CD3DArcBall@{CD3DArcBall}!GetTranslationMatrix@{GetTranslationMatrix}}
+\index{GetTranslationMatrix@{GetTranslationMatrix}!CD3DArcBall@{CD3DArcBall}}
+\subsubsection[{GetTranslationMatrix}]{\setlength{\rightskip}{0pt plus 5cm}const D3DXMATRIX$\ast$ CD3DArcBall::GetTranslationMatrix () const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_c_d3_d_arc_ball_ad100e8818466d636d428e49fbe634f5b}
+\hypertarget{class_c_d3_d_arc_ball_ac2f906cc45310c55c03b6403c22817ca}{
+\index{CD3DArcBall@{CD3DArcBall}!HandleMessages@{HandleMessages}}
+\index{HandleMessages@{HandleMessages}!CD3DArcBall@{CD3DArcBall}}
+\subsubsection[{HandleMessages}]{\setlength{\rightskip}{0pt plus 5cm}LRESULT CD3DArcBall::HandleMessages (HWND {\em hWnd}, \/  UINT {\em uMsg}, \/  WPARAM {\em wParam}, \/  LPARAM {\em lParam})}}
+\label{class_c_d3_d_arc_ball_ac2f906cc45310c55c03b6403c22817ca}
+\hypertarget{class_c_d3_d_arc_ball_ac7ca13b553ce0ecce4d375697d0866e3}{
+\index{CD3DArcBall@{CD3DArcBall}!IsBeingDragged@{IsBeingDragged}}
+\index{IsBeingDragged@{IsBeingDragged}!CD3DArcBall@{CD3DArcBall}}
+\subsubsection[{IsBeingDragged}]{\setlength{\rightskip}{0pt plus 5cm}bool CD3DArcBall::IsBeingDragged () const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_c_d3_d_arc_ball_ac7ca13b553ce0ecce4d375697d0866e3}
+\hypertarget{class_c_d3_d_arc_ball_a86882ddd7ee5330641a57b24fd8006f3}{
+\index{CD3DArcBall@{CD3DArcBall}!OnBegin@{OnBegin}}
+\index{OnBegin@{OnBegin}!CD3DArcBall@{CD3DArcBall}}
+\subsubsection[{OnBegin}]{\setlength{\rightskip}{0pt plus 5cm}void CD3DArcBall::OnBegin ({\bf int} {\em nX}, \/  {\bf int} {\em nY})}}
+\label{class_c_d3_d_arc_ball_a86882ddd7ee5330641a57b24fd8006f3}
+\hypertarget{class_c_d3_d_arc_ball_abf187ce0c2926384d28166ee30df6c24}{
+\index{CD3DArcBall@{CD3DArcBall}!OnEnd@{OnEnd}}
+\index{OnEnd@{OnEnd}!CD3DArcBall@{CD3DArcBall}}
+\subsubsection[{OnEnd}]{\setlength{\rightskip}{0pt plus 5cm}void CD3DArcBall::OnEnd ()}}
+\label{class_c_d3_d_arc_ball_abf187ce0c2926384d28166ee30df6c24}
+\hypertarget{class_c_d3_d_arc_ball_aab40fc2905516034b37ba0d14b6a6a76}{
+\index{CD3DArcBall@{CD3DArcBall}!OnMove@{OnMove}}
+\index{OnMove@{OnMove}!CD3DArcBall@{CD3DArcBall}}
+\subsubsection[{OnMove}]{\setlength{\rightskip}{0pt plus 5cm}void CD3DArcBall::OnMove ({\bf int} {\em nX}, \/  {\bf int} {\em nY})}}
+\label{class_c_d3_d_arc_ball_aab40fc2905516034b37ba0d14b6a6a76}
+\hypertarget{class_c_d3_d_arc_ball_ab4ab2df9ad0ee6239a79bc826dc35249}{
+\index{CD3DArcBall@{CD3DArcBall}!QuatFromBallPoints@{QuatFromBallPoints}}
+\index{QuatFromBallPoints@{QuatFromBallPoints}!CD3DArcBall@{CD3DArcBall}}
+\subsubsection[{QuatFromBallPoints}]{\setlength{\rightskip}{0pt plus 5cm}D3DXQUATERNION CD3DArcBall::QuatFromBallPoints (const D3DXVECTOR3 \& {\em vFrom}, \/  const D3DXVECTOR3 \& {\em vTo})\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}
+\label{class_c_d3_d_arc_ball_ab4ab2df9ad0ee6239a79bc826dc35249}
+\hypertarget{class_c_d3_d_arc_ball_a8e25a9fee7bdad867cf8feb623a3dd1f}{
+\index{CD3DArcBall@{CD3DArcBall}!Reset@{Reset}}
+\index{Reset@{Reset}!CD3DArcBall@{CD3DArcBall}}
+\subsubsection[{Reset}]{\setlength{\rightskip}{0pt plus 5cm}void CD3DArcBall::Reset ()}}
+\label{class_c_d3_d_arc_ball_a8e25a9fee7bdad867cf8feb623a3dd1f}
+\hypertarget{class_c_d3_d_arc_ball_a7c1d50c7a090b1b64ea528cddc1858dc}{
+\index{CD3DArcBall@{CD3DArcBall}!ScreenToVector@{ScreenToVector}}
+\index{ScreenToVector@{ScreenToVector}!CD3DArcBall@{CD3DArcBall}}
+\subsubsection[{ScreenToVector}]{\setlength{\rightskip}{0pt plus 5cm}D3DXVECTOR3 CD3DArcBall::ScreenToVector (float {\em fScreenPtX}, \/  float {\em fScreenPtY})\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{class_c_d3_d_arc_ball_a7c1d50c7a090b1b64ea528cddc1858dc}
+\hypertarget{class_c_d3_d_arc_ball_a781313e96e3a63e69facead4ca70cf79}{
+\index{CD3DArcBall@{CD3DArcBall}!SetOffset@{SetOffset}}
+\index{SetOffset@{SetOffset}!CD3DArcBall@{CD3DArcBall}}
+\subsubsection[{SetOffset}]{\setlength{\rightskip}{0pt plus 5cm}void CD3DArcBall::SetOffset (INT {\em nX}, \/  INT {\em nY})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_c_d3_d_arc_ball_a781313e96e3a63e69facead4ca70cf79}
+\hypertarget{class_c_d3_d_arc_ball_ad3140af4e1b4f62a18238ac2991de9a6}{
+\index{CD3DArcBall@{CD3DArcBall}!SetQuatNow@{SetQuatNow}}
+\index{SetQuatNow@{SetQuatNow}!CD3DArcBall@{CD3DArcBall}}
+\subsubsection[{SetQuatNow}]{\setlength{\rightskip}{0pt plus 5cm}void CD3DArcBall::SetQuatNow (D3DXQUATERNION {\em q})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_c_d3_d_arc_ball_ad3140af4e1b4f62a18238ac2991de9a6}
+\hypertarget{class_c_d3_d_arc_ball_a72c32f8aa6d34f89765ea75139f65b87}{
+\index{CD3DArcBall@{CD3DArcBall}!SetTranslationRadius@{SetTranslationRadius}}
+\index{SetTranslationRadius@{SetTranslationRadius}!CD3DArcBall@{CD3DArcBall}}
+\subsubsection[{SetTranslationRadius}]{\setlength{\rightskip}{0pt plus 5cm}void CD3DArcBall::SetTranslationRadius (FLOAT {\em fRadiusTranslation})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_c_d3_d_arc_ball_a72c32f8aa6d34f89765ea75139f65b87}
+\hypertarget{class_c_d3_d_arc_ball_aac7e91ff2fb6770b18b62b7eaecba6c4}{
+\index{CD3DArcBall@{CD3DArcBall}!SetWindow@{SetWindow}}
+\index{SetWindow@{SetWindow}!CD3DArcBall@{CD3DArcBall}}
+\subsubsection[{SetWindow}]{\setlength{\rightskip}{0pt plus 5cm}void CD3DArcBall::SetWindow (INT {\em nWidth}, \/  INT {\em nHeight}, \/  FLOAT {\em fRadius} = {\ttfamily 0.9f})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_c_d3_d_arc_ball_aac7e91ff2fb6770b18b62b7eaecba6c4}
+
+
+\subsection{Member Data Documentation}
+\hypertarget{class_c_d3_d_arc_ball_a437b55976f4fe81a6f294a2d1f11ac81}{
+\index{CD3DArcBall@{CD3DArcBall}!m\_\-bDrag@{m\_\-bDrag}}
+\index{m\_\-bDrag@{m\_\-bDrag}!CD3DArcBall@{CD3DArcBall}}
+\subsubsection[{m\_\-bDrag}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf CD3DArcBall::m\_\-bDrag}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{class_c_d3_d_arc_ball_a437b55976f4fe81a6f294a2d1f11ac81}
+\hypertarget{class_c_d3_d_arc_ball_a11401fa5425ecaab3669745a4c20e552}{
+\index{CD3DArcBall@{CD3DArcBall}!m\_\-fRadius@{m\_\-fRadius}}
+\index{m\_\-fRadius@{m\_\-fRadius}!CD3DArcBall@{CD3DArcBall}}
+\subsubsection[{m\_\-fRadius}]{\setlength{\rightskip}{0pt plus 5cm}FLOAT {\bf CD3DArcBall::m\_\-fRadius}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{class_c_d3_d_arc_ball_a11401fa5425ecaab3669745a4c20e552}
+\hypertarget{class_c_d3_d_arc_ball_a4600c8ffe537118ba7b8f7fdc60c9322}{
+\index{CD3DArcBall@{CD3DArcBall}!m\_\-fRadiusTranslation@{m\_\-fRadiusTranslation}}
+\index{m\_\-fRadiusTranslation@{m\_\-fRadiusTranslation}!CD3DArcBall@{CD3DArcBall}}
+\subsubsection[{m\_\-fRadiusTranslation}]{\setlength{\rightskip}{0pt plus 5cm}FLOAT {\bf CD3DArcBall::m\_\-fRadiusTranslation}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{class_c_d3_d_arc_ball_a4600c8ffe537118ba7b8f7fdc60c9322}
+\hypertarget{class_c_d3_d_arc_ball_a02619e72fe82db21a3c237a94eb31a37}{
+\index{CD3DArcBall@{CD3DArcBall}!m\_\-mRotation@{m\_\-mRotation}}
+\index{m\_\-mRotation@{m\_\-mRotation}!CD3DArcBall@{CD3DArcBall}}
+\subsubsection[{m\_\-mRotation}]{\setlength{\rightskip}{0pt plus 5cm}D3DXMATRIXA16 {\bf CD3DArcBall::m\_\-mRotation}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{class_c_d3_d_arc_ball_a02619e72fe82db21a3c237a94eb31a37}
+\hypertarget{class_c_d3_d_arc_ball_a2d9f13c59ac72cec38ab704159b7e4e9}{
+\index{CD3DArcBall@{CD3DArcBall}!m\_\-mTranslation@{m\_\-mTranslation}}
+\index{m\_\-mTranslation@{m\_\-mTranslation}!CD3DArcBall@{CD3DArcBall}}
+\subsubsection[{m\_\-mTranslation}]{\setlength{\rightskip}{0pt plus 5cm}D3DXMATRIXA16 {\bf CD3DArcBall::m\_\-mTranslation}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{class_c_d3_d_arc_ball_a2d9f13c59ac72cec38ab704159b7e4e9}
+\hypertarget{class_c_d3_d_arc_ball_ad630f2a7fc9ca7f77574ba9e9560c672}{
+\index{CD3DArcBall@{CD3DArcBall}!m\_\-mTranslationDelta@{m\_\-mTranslationDelta}}
+\index{m\_\-mTranslationDelta@{m\_\-mTranslationDelta}!CD3DArcBall@{CD3DArcBall}}
+\subsubsection[{m\_\-mTranslationDelta}]{\setlength{\rightskip}{0pt plus 5cm}D3DXMATRIXA16 {\bf CD3DArcBall::m\_\-mTranslationDelta}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{class_c_d3_d_arc_ball_ad630f2a7fc9ca7f77574ba9e9560c672}
+\hypertarget{class_c_d3_d_arc_ball_a53bb3eeba4a817148421c5c53b4b846d}{
+\index{CD3DArcBall@{CD3DArcBall}!m\_\-nHeight@{m\_\-nHeight}}
+\index{m\_\-nHeight@{m\_\-nHeight}!CD3DArcBall@{CD3DArcBall}}
+\subsubsection[{m\_\-nHeight}]{\setlength{\rightskip}{0pt plus 5cm}INT {\bf CD3DArcBall::m\_\-nHeight}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{class_c_d3_d_arc_ball_a53bb3eeba4a817148421c5c53b4b846d}
+\hypertarget{class_c_d3_d_arc_ball_a71b658e5247eb150029dfe923bd116c3}{
+\index{CD3DArcBall@{CD3DArcBall}!m\_\-nWidth@{m\_\-nWidth}}
+\index{m\_\-nWidth@{m\_\-nWidth}!CD3DArcBall@{CD3DArcBall}}
+\subsubsection[{m\_\-nWidth}]{\setlength{\rightskip}{0pt plus 5cm}INT {\bf CD3DArcBall::m\_\-nWidth}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{class_c_d3_d_arc_ball_a71b658e5247eb150029dfe923bd116c3}
+\hypertarget{class_c_d3_d_arc_ball_ab6246cc5b63d98a3dfcb4530cae75ef4}{
+\index{CD3DArcBall@{CD3DArcBall}!m\_\-Offset@{m\_\-Offset}}
+\index{m\_\-Offset@{m\_\-Offset}!CD3DArcBall@{CD3DArcBall}}
+\subsubsection[{m\_\-Offset}]{\setlength{\rightskip}{0pt plus 5cm}POINT {\bf CD3DArcBall::m\_\-Offset}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{class_c_d3_d_arc_ball_ab6246cc5b63d98a3dfcb4530cae75ef4}
+\hypertarget{class_c_d3_d_arc_ball_ae4114109f3ae6ae749748210b54405ad}{
+\index{CD3DArcBall@{CD3DArcBall}!m\_\-ptLastMouse@{m\_\-ptLastMouse}}
+\index{m\_\-ptLastMouse@{m\_\-ptLastMouse}!CD3DArcBall@{CD3DArcBall}}
+\subsubsection[{m\_\-ptLastMouse}]{\setlength{\rightskip}{0pt plus 5cm}POINT {\bf CD3DArcBall::m\_\-ptLastMouse}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{class_c_d3_d_arc_ball_ae4114109f3ae6ae749748210b54405ad}
+\hypertarget{class_c_d3_d_arc_ball_a944bbe7cbea8e5c715b1c62a0a6ba32f}{
+\index{CD3DArcBall@{CD3DArcBall}!m\_\-qDown@{m\_\-qDown}}
+\index{m\_\-qDown@{m\_\-qDown}!CD3DArcBall@{CD3DArcBall}}
+\subsubsection[{m\_\-qDown}]{\setlength{\rightskip}{0pt plus 5cm}D3DXQUATERNION {\bf CD3DArcBall::m\_\-qDown}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{class_c_d3_d_arc_ball_a944bbe7cbea8e5c715b1c62a0a6ba32f}
+\hypertarget{class_c_d3_d_arc_ball_a248db3d61e41f65195810367bbe849f1}{
+\index{CD3DArcBall@{CD3DArcBall}!m\_\-qNow@{m\_\-qNow}}
+\index{m\_\-qNow@{m\_\-qNow}!CD3DArcBall@{CD3DArcBall}}
+\subsubsection[{m\_\-qNow}]{\setlength{\rightskip}{0pt plus 5cm}D3DXQUATERNION {\bf CD3DArcBall::m\_\-qNow}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{class_c_d3_d_arc_ball_a248db3d61e41f65195810367bbe849f1}
+\hypertarget{class_c_d3_d_arc_ball_a6075b159b5221b3091e32b090c0dcab3}{
+\index{CD3DArcBall@{CD3DArcBall}!m\_\-vCenter@{m\_\-vCenter}}
+\index{m\_\-vCenter@{m\_\-vCenter}!CD3DArcBall@{CD3DArcBall}}
+\subsubsection[{m\_\-vCenter}]{\setlength{\rightskip}{0pt plus 5cm}D3DXVECTOR2 {\bf CD3DArcBall::m\_\-vCenter}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{class_c_d3_d_arc_ball_a6075b159b5221b3091e32b090c0dcab3}
+\hypertarget{class_c_d3_d_arc_ball_a759c768375a12e49cfdad6d141e60d21}{
+\index{CD3DArcBall@{CD3DArcBall}!m\_\-vCurrentPt@{m\_\-vCurrentPt}}
+\index{m\_\-vCurrentPt@{m\_\-vCurrentPt}!CD3DArcBall@{CD3DArcBall}}
+\subsubsection[{m\_\-vCurrentPt}]{\setlength{\rightskip}{0pt plus 5cm}D3DXVECTOR3 {\bf CD3DArcBall::m\_\-vCurrentPt}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{class_c_d3_d_arc_ball_a759c768375a12e49cfdad6d141e60d21}
+\hypertarget{class_c_d3_d_arc_ball_a702ae593d9a99c473c33bc762b6034de}{
+\index{CD3DArcBall@{CD3DArcBall}!m\_\-vDownPt@{m\_\-vDownPt}}
+\index{m\_\-vDownPt@{m\_\-vDownPt}!CD3DArcBall@{CD3DArcBall}}
+\subsubsection[{m\_\-vDownPt}]{\setlength{\rightskip}{0pt plus 5cm}D3DXVECTOR3 {\bf CD3DArcBall::m\_\-vDownPt}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{class_c_d3_d_arc_ball_a702ae593d9a99c473c33bc762b6034de}
+
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+C:/Users/doug/Documents/Visual Studio 2008/Projects/enlightened/Enlightened/DXUT/\hyperlink{_d_x_u_tmisc_8h}{DXUTmisc.h}\item 
+C:/Users/doug/Documents/Visual Studio 2008/Projects/enlightened/Enlightened/DXUT/\hyperlink{_d_x_u_tmisc_8cpp}{DXUTmisc.cpp}\end{DoxyCompactItemize}

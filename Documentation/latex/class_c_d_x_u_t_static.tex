@@ -1,0 +1,88 @@
+\hypertarget{class_c_d_x_u_t_static}{
+\section{CDXUTStatic Class Reference}
+\label{class_c_d_x_u_t_static}\index{CDXUTStatic@{CDXUTStatic}}
+}
+
+
+{\ttfamily \#include $<$DXUTgui.h$>$}
+
+Inherits \hyperlink{class_c_d_x_u_t_control}{CDXUTControl}.
+
+Inherited by \hyperlink{class_c_d_x_u_t_button}{CDXUTButton}.Collaboration diagram for CDXUTStatic:\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_c_d_x_u_t_static_ac0533bb16db426e6a3f4e180f0a18fc4}{CDXUTStatic} (\hyperlink{class_c_d_x_u_t_dialog}{CDXUTDialog} $\ast$pDialog=NULL)
+\item 
+virtual void \hyperlink{class_c_d_x_u_t_static_a7237fbf3accc077c35c2dd79b9bd2e3e}{Render} (IDirect3DDevice9 $\ast$pd3dDevice, float fElapsedTime)
+\item 
+virtual BOOL \hyperlink{class_c_d_x_u_t_static_ae32024764670a1f5b1ad0ba4a8570d63}{ContainsPoint} (POINT pt)
+\item 
+HRESULT \hyperlink{class_c_d_x_u_t_static_a8e72da05ab9718c59f1c667289950c5d}{GetTextCopy} (\hyperlink{_d_x_u_tgui_8cpp_a6ad64a19933213d15128e5fcd09bc1a6}{LPWSTR} strDest, UINT bufferCount)
+\item 
+LPCWSTR \hyperlink{class_c_d_x_u_t_static_a3da09900b41866941215aacc9da64803}{GetText} ()
+\item 
+HRESULT \hyperlink{class_c_d_x_u_t_static_ac5dd2c6b2a9da5eeb57ad377286ac568}{SetText} (LPCWSTR strText)
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+WCHAR \hyperlink{class_c_d_x_u_t_static_a196a0036e5d50df0986db5537c9e05d4}{m\_\-strText} \mbox{[}MAX\_\-PATH\mbox{]}
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_c_d_x_u_t_static_ac0533bb16db426e6a3f4e180f0a18fc4}{
+\index{CDXUTStatic@{CDXUTStatic}!CDXUTStatic@{CDXUTStatic}}
+\index{CDXUTStatic@{CDXUTStatic}!CDXUTStatic@{CDXUTStatic}}
+\subsubsection[{CDXUTStatic}]{\setlength{\rightskip}{0pt plus 5cm}CDXUTStatic::CDXUTStatic ({\bf CDXUTDialog} $\ast$ {\em pDialog} = {\ttfamily NULL})}}
+\label{class_c_d_x_u_t_static_ac0533bb16db426e6a3f4e180f0a18fc4}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_c_d_x_u_t_static_ae32024764670a1f5b1ad0ba4a8570d63}{
+\index{CDXUTStatic@{CDXUTStatic}!ContainsPoint@{ContainsPoint}}
+\index{ContainsPoint@{ContainsPoint}!CDXUTStatic@{CDXUTStatic}}
+\subsubsection[{ContainsPoint}]{\setlength{\rightskip}{0pt plus 5cm}virtual BOOL CDXUTStatic::ContainsPoint (POINT {\em pt})\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}
+\label{class_c_d_x_u_t_static_ae32024764670a1f5b1ad0ba4a8570d63}
+
+
+Reimplemented from \hyperlink{class_c_d_x_u_t_control_a9b4410bbd1cac9a0ffce760aaa9a2d48}{CDXUTControl}.
+
+Reimplemented in \hyperlink{class_c_d_x_u_t_button_a2209ea24f5ba76d7506b368c80940172}{CDXUTButton}, and \hyperlink{class_c_d_x_u_t_check_box_af0a106a73957da96d23dd53c2b9da8e8}{CDXUTCheckBox}.\hypertarget{class_c_d_x_u_t_static_a3da09900b41866941215aacc9da64803}{
+\index{CDXUTStatic@{CDXUTStatic}!GetText@{GetText}}
+\index{GetText@{GetText}!CDXUTStatic@{CDXUTStatic}}
+\subsubsection[{GetText}]{\setlength{\rightskip}{0pt plus 5cm}LPCWSTR CDXUTStatic::GetText ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_c_d_x_u_t_static_a3da09900b41866941215aacc9da64803}
+\hypertarget{class_c_d_x_u_t_static_a8e72da05ab9718c59f1c667289950c5d}{
+\index{CDXUTStatic@{CDXUTStatic}!GetTextCopy@{GetTextCopy}}
+\index{GetTextCopy@{GetTextCopy}!CDXUTStatic@{CDXUTStatic}}
+\subsubsection[{GetTextCopy}]{\setlength{\rightskip}{0pt plus 5cm}HRESULT CDXUTStatic::GetTextCopy ({\bf LPWSTR} {\em strDest}, \/  UINT {\em bufferCount})}}
+\label{class_c_d_x_u_t_static_a8e72da05ab9718c59f1c667289950c5d}
+\hypertarget{class_c_d_x_u_t_static_a7237fbf3accc077c35c2dd79b9bd2e3e}{
+\index{CDXUTStatic@{CDXUTStatic}!Render@{Render}}
+\index{Render@{Render}!CDXUTStatic@{CDXUTStatic}}
+\subsubsection[{Render}]{\setlength{\rightskip}{0pt plus 5cm}void CDXUTStatic::Render (IDirect3DDevice9 $\ast$ {\em pd3dDevice}, \/  float {\em fElapsedTime})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{class_c_d_x_u_t_static_a7237fbf3accc077c35c2dd79b9bd2e3e}
+
+
+Reimplemented from \hyperlink{class_c_d_x_u_t_control_afd92fa04241f66fdbf207bc5870c9388}{CDXUTControl}.
+
+Reimplemented in \hyperlink{class_c_d_x_u_t_button_a75a837a8eca0777b51d3aac6de6d6144}{CDXUTButton}, \hyperlink{class_c_d_x_u_t_check_box_a518c5e4d5250b1c0be83bf456c43f8b8}{CDXUTCheckBox}, and \hyperlink{class_c_d_x_u_t_combo_box_affcd25fdf9baf53e39e7b50e58ee05d4}{CDXUTComboBox}.\hypertarget{class_c_d_x_u_t_static_ac5dd2c6b2a9da5eeb57ad377286ac568}{
+\index{CDXUTStatic@{CDXUTStatic}!SetText@{SetText}}
+\index{SetText@{SetText}!CDXUTStatic@{CDXUTStatic}}
+\subsubsection[{SetText}]{\setlength{\rightskip}{0pt plus 5cm}HRESULT CDXUTStatic::SetText (LPCWSTR {\em strText})}}
+\label{class_c_d_x_u_t_static_ac5dd2c6b2a9da5eeb57ad377286ac568}
+
+
+\subsection{Member Data Documentation}
+\hypertarget{class_c_d_x_u_t_static_a196a0036e5d50df0986db5537c9e05d4}{
+\index{CDXUTStatic@{CDXUTStatic}!m\_\-strText@{m\_\-strText}}
+\index{m\_\-strText@{m\_\-strText}!CDXUTStatic@{CDXUTStatic}}
+\subsubsection[{m\_\-strText}]{\setlength{\rightskip}{0pt plus 5cm}WCHAR {\bf CDXUTStatic::m\_\-strText}\mbox{[}MAX\_\-PATH\mbox{]}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{class_c_d_x_u_t_static_a196a0036e5d50df0986db5537c9e05d4}
+
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+C:/Users/doug/Documents/Visual Studio 2008/Projects/enlightened/Enlightened/DXUT/\hyperlink{_d_x_u_tgui_8h}{DXUTgui.h}\item 
+C:/Users/doug/Documents/Visual Studio 2008/Projects/enlightened/Enlightened/DXUT/\hyperlink{_d_x_u_tgui_8cpp}{DXUTgui.cpp}\end{DoxyCompactItemize}

@@ -1,0 +1,130 @@
+\hypertarget{class_c_d_x_u_t_line_manager}{
+\section{CDXUTLineManager Class Reference}
+\label{class_c_d_x_u_t_line_manager}\index{CDXUTLineManager@{CDXUTLineManager}}
+}
+
+
+{\ttfamily \#include $<$DXUTmisc.h$>$}Collaboration diagram for CDXUTLineManager:\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{struct_c_d_x_u_t_line_manager_1_1_l_i_n_e___n_o_d_e}{LINE\_\-NODE}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_c_d_x_u_t_line_manager_a81d134fec2bd2c9944bdea59b61d311b}{CDXUTLineManager} ()
+\item 
+\hyperlink{class_c_d_x_u_t_line_manager_a47573159d45aaf222cd31bcc192308fe}{$\sim$CDXUTLineManager} ()
+\item 
+HRESULT \hyperlink{class_c_d_x_u_t_line_manager_ae5dc0839102d2daa1193f3c377af0833}{OnCreatedDevice} (IDirect3DDevice9 $\ast$pd3dDevice)
+\item 
+HRESULT \hyperlink{class_c_d_x_u_t_line_manager_af0a79d23ae9c18275b57c59c36828ca8}{OnResetDevice} ()
+\item 
+HRESULT \hyperlink{class_c_d_x_u_t_line_manager_a7bac9b5284fe576db806cba8423b2eda}{OnRender} ()
+\item 
+HRESULT \hyperlink{class_c_d_x_u_t_line_manager_a609fbd2215c2c4fbb02bf42d98686346}{OnLostDevice} ()
+\item 
+HRESULT \hyperlink{class_c_d_x_u_t_line_manager_a4ad6b10373fe6179783f3805379643c4}{OnDeletedDevice} ()
+\item 
+HRESULT \hyperlink{class_c_d_x_u_t_line_manager_a943c26c0d740ebcb58e24b1a8f8c70de}{AddLine} (\hyperlink{_d_x_u_tgui_8cpp_a2d77ed03302b6978834ee3b6f57837fb}{int} $\ast$pnLineID, D3DXVECTOR2 $\ast$pVertexList, DWORD dwVertexListCount, D3DCOLOR Color, float fWidth, float fScaleRatio, bool bAntiAlias)
+\item 
+HRESULT \hyperlink{class_c_d_x_u_t_line_manager_ab6a0ff03d7acdabd30ff92c92e696b65}{AddRect} (\hyperlink{_d_x_u_tgui_8cpp_a2d77ed03302b6978834ee3b6f57837fb}{int} $\ast$pnLineID, RECT rc, D3DCOLOR Color, float fWidth, float fScaleRatio, bool bAntiAlias)
+\item 
+HRESULT \hyperlink{class_c_d_x_u_t_line_manager_aabb8acc5fc21c6a283575031fe49ed90}{RemoveLine} (\hyperlink{_d_x_u_tgui_8cpp_a2d77ed03302b6978834ee3b6f57837fb}{int} nLineID)
+\item 
+HRESULT \hyperlink{class_c_d_x_u_t_line_manager_ad07600de77c719bb97f1ee004387d241}{RemoveAllLines} ()
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_c_growable_array}{CGrowableArray}$<$ \hyperlink{struct_c_d_x_u_t_line_manager_1_1_l_i_n_e___n_o_d_e}{LINE\_\-NODE} $\ast$ $>$ \hyperlink{class_c_d_x_u_t_line_manager_a529b6d8c2c733005bb6114809b70b58a}{m\_\-LinesList}
+\item 
+IDirect3DDevice9 $\ast$ \hyperlink{class_c_d_x_u_t_line_manager_a14112175096fd07b59058fed2a83ae6d}{m\_\-pd3dDevice}
+\item 
+ID3DXLine $\ast$ \hyperlink{class_c_d_x_u_t_line_manager_a34d87cec39b6a73c9f3dc3608859892a}{m\_\-pD3DXLine}
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_c_d_x_u_t_line_manager_a81d134fec2bd2c9944bdea59b61d311b}{
+\index{CDXUTLineManager@{CDXUTLineManager}!CDXUTLineManager@{CDXUTLineManager}}
+\index{CDXUTLineManager@{CDXUTLineManager}!CDXUTLineManager@{CDXUTLineManager}}
+\subsubsection[{CDXUTLineManager}]{\setlength{\rightskip}{0pt plus 5cm}CDXUTLineManager::CDXUTLineManager ()}}
+\label{class_c_d_x_u_t_line_manager_a81d134fec2bd2c9944bdea59b61d311b}
+\hypertarget{class_c_d_x_u_t_line_manager_a47573159d45aaf222cd31bcc192308fe}{
+\index{CDXUTLineManager@{CDXUTLineManager}!$\sim$CDXUTLineManager@{$\sim$CDXUTLineManager}}
+\index{$\sim$CDXUTLineManager@{$\sim$CDXUTLineManager}!CDXUTLineManager@{CDXUTLineManager}}
+\subsubsection[{$\sim$CDXUTLineManager}]{\setlength{\rightskip}{0pt plus 5cm}CDXUTLineManager::$\sim$CDXUTLineManager ()}}
+\label{class_c_d_x_u_t_line_manager_a47573159d45aaf222cd31bcc192308fe}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_c_d_x_u_t_line_manager_a943c26c0d740ebcb58e24b1a8f8c70de}{
+\index{CDXUTLineManager@{CDXUTLineManager}!AddLine@{AddLine}}
+\index{AddLine@{AddLine}!CDXUTLineManager@{CDXUTLineManager}}
+\subsubsection[{AddLine}]{\setlength{\rightskip}{0pt plus 5cm}HRESULT CDXUTLineManager::AddLine ({\bf int} $\ast$ {\em pnLineID}, \/  D3DXVECTOR2 $\ast$ {\em pVertexList}, \/  DWORD {\em dwVertexListCount}, \/  D3DCOLOR {\em Color}, \/  float {\em fWidth}, \/  float {\em fScaleRatio}, \/  bool {\em bAntiAlias})}}
+\label{class_c_d_x_u_t_line_manager_a943c26c0d740ebcb58e24b1a8f8c70de}
+\hypertarget{class_c_d_x_u_t_line_manager_ab6a0ff03d7acdabd30ff92c92e696b65}{
+\index{CDXUTLineManager@{CDXUTLineManager}!AddRect@{AddRect}}
+\index{AddRect@{AddRect}!CDXUTLineManager@{CDXUTLineManager}}
+\subsubsection[{AddRect}]{\setlength{\rightskip}{0pt plus 5cm}HRESULT CDXUTLineManager::AddRect ({\bf int} $\ast$ {\em pnLineID}, \/  RECT {\em rc}, \/  D3DCOLOR {\em Color}, \/  float {\em fWidth}, \/  float {\em fScaleRatio}, \/  bool {\em bAntiAlias})}}
+\label{class_c_d_x_u_t_line_manager_ab6a0ff03d7acdabd30ff92c92e696b65}
+\hypertarget{class_c_d_x_u_t_line_manager_ae5dc0839102d2daa1193f3c377af0833}{
+\index{CDXUTLineManager@{CDXUTLineManager}!OnCreatedDevice@{OnCreatedDevice}}
+\index{OnCreatedDevice@{OnCreatedDevice}!CDXUTLineManager@{CDXUTLineManager}}
+\subsubsection[{OnCreatedDevice}]{\setlength{\rightskip}{0pt plus 5cm}HRESULT CDXUTLineManager::OnCreatedDevice (IDirect3DDevice9 $\ast$ {\em pd3dDevice})}}
+\label{class_c_d_x_u_t_line_manager_ae5dc0839102d2daa1193f3c377af0833}
+\hypertarget{class_c_d_x_u_t_line_manager_a4ad6b10373fe6179783f3805379643c4}{
+\index{CDXUTLineManager@{CDXUTLineManager}!OnDeletedDevice@{OnDeletedDevice}}
+\index{OnDeletedDevice@{OnDeletedDevice}!CDXUTLineManager@{CDXUTLineManager}}
+\subsubsection[{OnDeletedDevice}]{\setlength{\rightskip}{0pt plus 5cm}HRESULT CDXUTLineManager::OnDeletedDevice ()}}
+\label{class_c_d_x_u_t_line_manager_a4ad6b10373fe6179783f3805379643c4}
+\hypertarget{class_c_d_x_u_t_line_manager_a609fbd2215c2c4fbb02bf42d98686346}{
+\index{CDXUTLineManager@{CDXUTLineManager}!OnLostDevice@{OnLostDevice}}
+\index{OnLostDevice@{OnLostDevice}!CDXUTLineManager@{CDXUTLineManager}}
+\subsubsection[{OnLostDevice}]{\setlength{\rightskip}{0pt plus 5cm}HRESULT CDXUTLineManager::OnLostDevice ()}}
+\label{class_c_d_x_u_t_line_manager_a609fbd2215c2c4fbb02bf42d98686346}
+\hypertarget{class_c_d_x_u_t_line_manager_a7bac9b5284fe576db806cba8423b2eda}{
+\index{CDXUTLineManager@{CDXUTLineManager}!OnRender@{OnRender}}
+\index{OnRender@{OnRender}!CDXUTLineManager@{CDXUTLineManager}}
+\subsubsection[{OnRender}]{\setlength{\rightskip}{0pt plus 5cm}HRESULT CDXUTLineManager::OnRender ()}}
+\label{class_c_d_x_u_t_line_manager_a7bac9b5284fe576db806cba8423b2eda}
+\hypertarget{class_c_d_x_u_t_line_manager_af0a79d23ae9c18275b57c59c36828ca8}{
+\index{CDXUTLineManager@{CDXUTLineManager}!OnResetDevice@{OnResetDevice}}
+\index{OnResetDevice@{OnResetDevice}!CDXUTLineManager@{CDXUTLineManager}}
+\subsubsection[{OnResetDevice}]{\setlength{\rightskip}{0pt plus 5cm}HRESULT CDXUTLineManager::OnResetDevice ()}}
+\label{class_c_d_x_u_t_line_manager_af0a79d23ae9c18275b57c59c36828ca8}
+\hypertarget{class_c_d_x_u_t_line_manager_ad07600de77c719bb97f1ee004387d241}{
+\index{CDXUTLineManager@{CDXUTLineManager}!RemoveAllLines@{RemoveAllLines}}
+\index{RemoveAllLines@{RemoveAllLines}!CDXUTLineManager@{CDXUTLineManager}}
+\subsubsection[{RemoveAllLines}]{\setlength{\rightskip}{0pt plus 5cm}HRESULT CDXUTLineManager::RemoveAllLines ()}}
+\label{class_c_d_x_u_t_line_manager_ad07600de77c719bb97f1ee004387d241}
+\hypertarget{class_c_d_x_u_t_line_manager_aabb8acc5fc21c6a283575031fe49ed90}{
+\index{CDXUTLineManager@{CDXUTLineManager}!RemoveLine@{RemoveLine}}
+\index{RemoveLine@{RemoveLine}!CDXUTLineManager@{CDXUTLineManager}}
+\subsubsection[{RemoveLine}]{\setlength{\rightskip}{0pt plus 5cm}HRESULT CDXUTLineManager::RemoveLine ({\bf int} {\em nLineID})}}
+\label{class_c_d_x_u_t_line_manager_aabb8acc5fc21c6a283575031fe49ed90}
+
+
+\subsection{Member Data Documentation}
+\hypertarget{class_c_d_x_u_t_line_manager_a529b6d8c2c733005bb6114809b70b58a}{
+\index{CDXUTLineManager@{CDXUTLineManager}!m\_\-LinesList@{m\_\-LinesList}}
+\index{m\_\-LinesList@{m\_\-LinesList}!CDXUTLineManager@{CDXUTLineManager}}
+\subsubsection[{m\_\-LinesList}]{\setlength{\rightskip}{0pt plus 5cm}{\bf CGrowableArray}$<${\bf LINE\_\-NODE}$\ast$$>$ {\bf CDXUTLineManager::m\_\-LinesList}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{class_c_d_x_u_t_line_manager_a529b6d8c2c733005bb6114809b70b58a}
+\hypertarget{class_c_d_x_u_t_line_manager_a14112175096fd07b59058fed2a83ae6d}{
+\index{CDXUTLineManager@{CDXUTLineManager}!m\_\-pd3dDevice@{m\_\-pd3dDevice}}
+\index{m\_\-pd3dDevice@{m\_\-pd3dDevice}!CDXUTLineManager@{CDXUTLineManager}}
+\subsubsection[{m\_\-pd3dDevice}]{\setlength{\rightskip}{0pt plus 5cm}IDirect3DDevice9$\ast$ {\bf CDXUTLineManager::m\_\-pd3dDevice}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{class_c_d_x_u_t_line_manager_a14112175096fd07b59058fed2a83ae6d}
+\hypertarget{class_c_d_x_u_t_line_manager_a34d87cec39b6a73c9f3dc3608859892a}{
+\index{CDXUTLineManager@{CDXUTLineManager}!m\_\-pD3DXLine@{m\_\-pD3DXLine}}
+\index{m\_\-pD3DXLine@{m\_\-pD3DXLine}!CDXUTLineManager@{CDXUTLineManager}}
+\subsubsection[{m\_\-pD3DXLine}]{\setlength{\rightskip}{0pt plus 5cm}ID3DXLine$\ast$ {\bf CDXUTLineManager::m\_\-pD3DXLine}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{class_c_d_x_u_t_line_manager_a34d87cec39b6a73c9f3dc3608859892a}
+
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+C:/Users/doug/Documents/Visual Studio 2008/Projects/enlightened/Enlightened/DXUT/\hyperlink{_d_x_u_tmisc_8h}{DXUTmisc.h}\item 
+C:/Users/doug/Documents/Visual Studio 2008/Projects/enlightened/Enlightened/DXUT/\hyperlink{_d_x_u_tmisc_8cpp}{DXUTmisc.cpp}\end{DoxyCompactItemize}

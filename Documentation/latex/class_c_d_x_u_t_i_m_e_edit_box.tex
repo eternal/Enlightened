@@ -1,0 +1,1095 @@
+\hypertarget{class_c_d_x_u_t_i_m_e_edit_box}{
+\section{CDXUTIMEEditBox Class Reference}
+\label{class_c_d_x_u_t_i_m_e_edit_box}\index{CDXUTIMEEditBox@{CDXUTIMEEditBox}}
+}
+
+
+{\ttfamily \#include $<$DXUTgui.h$>$}
+
+Inherits \hyperlink{class_c_d_x_u_t_edit_box}{CDXUTEditBox}.Collaboration diagram for CDXUTIMEEditBox:\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{struct_c_d_x_u_t_i_m_e_edit_box_1_1_c_cand_list}{CCandList}
+\item 
+struct \hyperlink{struct_c_d_x_u_t_i_m_e_edit_box_1_1_c_input_locale}{CInputLocale}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_c_d_x_u_t_i_m_e_edit_box_a4fe495517cf6a25bee93336af1e8a7c8}{CDXUTIMEEditBox} (\hyperlink{class_c_d_x_u_t_dialog}{CDXUTDialog} $\ast$pDialog=NULL)
+\item 
+virtual \hyperlink{class_c_d_x_u_t_i_m_e_edit_box_af7ff487e10a4aae66d61614dae5b08c0}{$\sim$CDXUTIMEEditBox} ()
+\item 
+virtual void \hyperlink{class_c_d_x_u_t_i_m_e_edit_box_aa473937c56d6feef6777fd62b4d5a48c}{Render} (IDirect3DDevice9 $\ast$pd3dDevice, float fElapsedTime)
+\item 
+virtual bool \hyperlink{class_c_d_x_u_t_i_m_e_edit_box_ac656a213385fb3245938f0297d58d0de}{MsgProc} (\hyperlink{class_c_d_x_u_t_i_m_e_edit_box_a7c83b549328a07897bdac88bb0ac4d68}{UINT} uMsg, WPARAM wParam, LPARAM lParam)
+\item 
+virtual bool \hyperlink{class_c_d_x_u_t_i_m_e_edit_box_a02795ef1096e7a276afdc501c606eab9}{HandleMouse} (\hyperlink{class_c_d_x_u_t_i_m_e_edit_box_a7c83b549328a07897bdac88bb0ac4d68}{UINT} uMsg, POINT pt, WPARAM wParam, LPARAM lParam)
+\item 
+virtual void \hyperlink{class_c_d_x_u_t_i_m_e_edit_box_a5b000e31365cfc36ea9c01cce29d1656}{UpdateRects} ()
+\item 
+virtual void \hyperlink{class_c_d_x_u_t_i_m_e_edit_box_a6f3ada4a18eb810420806d5112fd7de6}{OnFocusIn} ()
+\item 
+virtual void \hyperlink{class_c_d_x_u_t_i_m_e_edit_box_a32592319ff970787b0cfa1c59b61f4d6}{OnFocusOut} ()
+\item 
+void \hyperlink{class_c_d_x_u_t_i_m_e_edit_box_a3abd5952d806d278c1778c2b27327d25}{PumpMessage} ()
+\item 
+virtual void \hyperlink{class_c_d_x_u_t_i_m_e_edit_box_a86b36b4e056be117ba0a59550edae849}{RenderCandidateReadingWindow} (IDirect3DDevice9 $\ast$pd3dDevice, float fElapsedTime, bool bReading)
+\item 
+virtual void \hyperlink{class_c_d_x_u_t_i_m_e_edit_box_ad8480eedb3123ada70d9b3a702a83c57}{RenderComposition} (IDirect3DDevice9 $\ast$pd3dDevice, float fElapsedTime)
+\item 
+virtual void \hyperlink{class_c_d_x_u_t_i_m_e_edit_box_a02bbb85b3dd6c19cf6bb2312c8ee4595}{RenderIndicator} (IDirect3DDevice9 $\ast$pd3dDevice, float fElapsedTime)
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \hyperlink{class_c_d_x_u_t_i_m_e_edit_box_abf7a8ceb1f658ddbde5493c319edcac1}{Initialize} ()
+\item 
+static void \hyperlink{class_c_d_x_u_t_i_m_e_edit_box_a4841b38797ea767a64898d95fee899cf}{Uninitialize} ()
+\item 
+static HRESULT \hyperlink{class_c_d_x_u_t_i_m_e_edit_box_a6bd5ac93dd74ac14a1e6422d9d549aad}{StaticOnCreateDevice} ()
+\item 
+static bool \hyperlink{class_c_d_x_u_t_i_m_e_edit_box_ae6c5d46eaaf42af035d3b4dbaa420243}{StaticMsgProc} (\hyperlink{class_c_d_x_u_t_i_m_e_edit_box_a7c83b549328a07897bdac88bb0ac4d68}{UINT} uMsg, WPARAM wParam, LPARAM lParam)
+\item 
+static void \hyperlink{class_c_d_x_u_t_i_m_e_edit_box_ae8f7bd48b81e44c434a14107f8d36076}{EnableImeSystem} (bool bEnable)
+\end{DoxyCompactItemize}
+\subsection*{Protected Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \{ \par
+\hyperlink{class_c_d_x_u_t_i_m_e_edit_box_a3ed4d9f2016d546ab06a859728c079d9a42cffb2bda6f0fbd7445dfeac185da4f}{INDICATOR\_\-NON\_\-IME}, 
+\hyperlink{class_c_d_x_u_t_i_m_e_edit_box_a3ed4d9f2016d546ab06a859728c079d9a1094c443a66339e8f49b1776806b1c45}{INDICATOR\_\-CHS}, 
+\hyperlink{class_c_d_x_u_t_i_m_e_edit_box_a3ed4d9f2016d546ab06a859728c079d9a4be1cf30b37172f37a966965b8e9b270}{INDICATOR\_\-CHT}, 
+\hyperlink{class_c_d_x_u_t_i_m_e_edit_box_a3ed4d9f2016d546ab06a859728c079d9a11f9c15497b6759e5f19ece18ea3dc5b}{INDICATOR\_\-KOREAN}, 
+\par
+\hyperlink{class_c_d_x_u_t_i_m_e_edit_box_a3ed4d9f2016d546ab06a859728c079d9a20dedc79016b7d61bebf024c3acbfebe}{INDICATOR\_\-JAPANESE}
+ \}
+\item 
+enum \hyperlink{class_c_d_x_u_t_i_m_e_edit_box_ab368d30c2733c242574b8388065d09f2}{IMESTATE} \{ \hyperlink{class_c_d_x_u_t_i_m_e_edit_box_ab368d30c2733c242574b8388065d09f2a4ff8ca238fe3e11934a6aa7cf9494e1d}{IMEUI\_\-STATE\_\-OFF}, 
+\hyperlink{class_c_d_x_u_t_i_m_e_edit_box_ab368d30c2733c242574b8388065d09f2aea3de31c8cae605a2de27846bfda4b73}{IMEUI\_\-STATE\_\-ON}, 
+\hyperlink{class_c_d_x_u_t_i_m_e_edit_box_ab368d30c2733c242574b8388065d09f2afafd2c0d84569198cc136f9bde5dad1a}{IMEUI\_\-STATE\_\-ENGLISH}
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{class_c_d_x_u_t_i_m_e_edit_box_acf5f110e7519e5aa82ef1e107bfc0613}{TruncateCompString} (bool bUseBackSpace=true, \hyperlink{_d_x_u_tgui_8cpp_a2d77ed03302b6978834ee3b6f57837fb}{int} iNewStrLen=0)
+\item 
+void \hyperlink{class_c_d_x_u_t_i_m_e_edit_box_a220c48fee1e5049fc24313a10ef2201f}{FinalizeString} (bool bSend)
+\item 
+void \hyperlink{class_c_d_x_u_t_i_m_e_edit_box_a1f3cf8e4deb6c0881aa4036b3669825c}{SendCompString} ()
+\end{DoxyCompactItemize}
+\subsection*{Static Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static INPUTCONTEXT $\ast$WINAPI \hyperlink{class_c_d_x_u_t_i_m_e_edit_box_a0251f6c7891e81c331f93217805ef9c0}{Dummy\_\-ImmLockIMC} (\hyperlink{class_c_d_x_u_t_i_m_e_edit_box_aa9afdec726ecd526e2a0abc01537426c}{HIMC})
+\item 
+static \hyperlink{class_c_d_x_u_t_i_m_e_edit_box_ad2239c74ad7d59cbb8e6d2b5bf17bcb8}{BOOL} WINAPI \hyperlink{class_c_d_x_u_t_i_m_e_edit_box_a84759711c77bb12d6dbf10ce089e36c9}{Dummy\_\-ImmUnlockIMC} (\hyperlink{class_c_d_x_u_t_i_m_e_edit_box_aa9afdec726ecd526e2a0abc01537426c}{HIMC})
+\item 
+static \hyperlink{class_c_d_x_u_t_i_m_e_edit_box_a1fb0e05d8b96c531c1b69d06391b21f7}{LPVOID} WINAPI \hyperlink{class_c_d_x_u_t_i_m_e_edit_box_a3c14311c66c4a77d5b621192fe54f3b0}{Dummy\_\-ImmLockIMCC} (HIMCC)
+\item 
+static \hyperlink{class_c_d_x_u_t_i_m_e_edit_box_ad2239c74ad7d59cbb8e6d2b5bf17bcb8}{BOOL} WINAPI \hyperlink{class_c_d_x_u_t_i_m_e_edit_box_a5795f61c3458a7f260e6af8a874cc509}{Dummy\_\-ImmUnlockIMCC} (HIMCC)
+\item 
+static \hyperlink{class_c_d_x_u_t_i_m_e_edit_box_ad2239c74ad7d59cbb8e6d2b5bf17bcb8}{BOOL} WINAPI \hyperlink{class_c_d_x_u_t_i_m_e_edit_box_af417993379722080b7adbeaaef621d87}{Dummy\_\-ImmDisableTextFrameService} (\hyperlink{class_c_d_x_u_t_i_m_e_edit_box_a4666fce9b285d692ceb0515bf2dbde90}{DWORD})
+\item 
+static LONG WINAPI \hyperlink{class_c_d_x_u_t_i_m_e_edit_box_a45677be982c66ec3db85f619ebab910b}{Dummy\_\-ImmGetCompositionStringW} (\hyperlink{class_c_d_x_u_t_i_m_e_edit_box_aa9afdec726ecd526e2a0abc01537426c}{HIMC}, \hyperlink{class_c_d_x_u_t_i_m_e_edit_box_a4666fce9b285d692ceb0515bf2dbde90}{DWORD}, \hyperlink{class_c_d_x_u_t_i_m_e_edit_box_a1fb0e05d8b96c531c1b69d06391b21f7}{LPVOID}, \hyperlink{class_c_d_x_u_t_i_m_e_edit_box_a4666fce9b285d692ceb0515bf2dbde90}{DWORD})
+\item 
+static \hyperlink{class_c_d_x_u_t_i_m_e_edit_box_a4666fce9b285d692ceb0515bf2dbde90}{DWORD} WINAPI \hyperlink{class_c_d_x_u_t_i_m_e_edit_box_a76d4496d2c82e04f87b79a162c08de37}{Dummy\_\-ImmGetCandidateListW} (\hyperlink{class_c_d_x_u_t_i_m_e_edit_box_aa9afdec726ecd526e2a0abc01537426c}{HIMC}, \hyperlink{class_c_d_x_u_t_i_m_e_edit_box_a4666fce9b285d692ceb0515bf2dbde90}{DWORD}, \hyperlink{class_c_d_x_u_t_i_m_e_edit_box_aad569bc50d5e5e35422883375e07ff36}{LPCANDIDATELIST}, \hyperlink{class_c_d_x_u_t_i_m_e_edit_box_a4666fce9b285d692ceb0515bf2dbde90}{DWORD})
+\item 
+static \hyperlink{class_c_d_x_u_t_i_m_e_edit_box_aa9afdec726ecd526e2a0abc01537426c}{HIMC} WINAPI \hyperlink{class_c_d_x_u_t_i_m_e_edit_box_adc9a00e652fc7ddeb39674bb38998848}{Dummy\_\-ImmGetContext} (HWND)
+\item 
+static \hyperlink{class_c_d_x_u_t_i_m_e_edit_box_ad2239c74ad7d59cbb8e6d2b5bf17bcb8}{BOOL} WINAPI \hyperlink{class_c_d_x_u_t_i_m_e_edit_box_a9b878886ec372fd37be7ec1d9fcf448f}{Dummy\_\-ImmReleaseContext} (HWND, \hyperlink{class_c_d_x_u_t_i_m_e_edit_box_aa9afdec726ecd526e2a0abc01537426c}{HIMC})
+\item 
+static \hyperlink{class_c_d_x_u_t_i_m_e_edit_box_aa9afdec726ecd526e2a0abc01537426c}{HIMC} WINAPI \hyperlink{class_c_d_x_u_t_i_m_e_edit_box_a30b830faa43dc64e1d1131aa57c36bce}{Dummy\_\-ImmAssociateContext} (HWND, \hyperlink{class_c_d_x_u_t_i_m_e_edit_box_aa9afdec726ecd526e2a0abc01537426c}{HIMC})
+\item 
+static \hyperlink{class_c_d_x_u_t_i_m_e_edit_box_ad2239c74ad7d59cbb8e6d2b5bf17bcb8}{BOOL} WINAPI \hyperlink{class_c_d_x_u_t_i_m_e_edit_box_aa765987d0faac289568999c30cfa318f}{Dummy\_\-ImmGetOpenStatus} (\hyperlink{class_c_d_x_u_t_i_m_e_edit_box_aa9afdec726ecd526e2a0abc01537426c}{HIMC})
+\item 
+static \hyperlink{class_c_d_x_u_t_i_m_e_edit_box_ad2239c74ad7d59cbb8e6d2b5bf17bcb8}{BOOL} WINAPI \hyperlink{class_c_d_x_u_t_i_m_e_edit_box_acf3e0acb26812bcf8285d81e3bd268c5}{Dummy\_\-ImmSetOpenStatus} (\hyperlink{class_c_d_x_u_t_i_m_e_edit_box_aa9afdec726ecd526e2a0abc01537426c}{HIMC}, \hyperlink{class_c_d_x_u_t_i_m_e_edit_box_ad2239c74ad7d59cbb8e6d2b5bf17bcb8}{BOOL})
+\item 
+static \hyperlink{class_c_d_x_u_t_i_m_e_edit_box_ad2239c74ad7d59cbb8e6d2b5bf17bcb8}{BOOL} WINAPI \hyperlink{class_c_d_x_u_t_i_m_e_edit_box_a1c601fc105fded94dddc03d5201886bd}{Dummy\_\-ImmGetConversionStatus} (\hyperlink{class_c_d_x_u_t_i_m_e_edit_box_aa9afdec726ecd526e2a0abc01537426c}{HIMC}, \hyperlink{class_c_d_x_u_t_i_m_e_edit_box_a13c133202b7126d255528d5573500007}{LPDWORD}, \hyperlink{class_c_d_x_u_t_i_m_e_edit_box_a13c133202b7126d255528d5573500007}{LPDWORD})
+\item 
+static HWND WINAPI \hyperlink{class_c_d_x_u_t_i_m_e_edit_box_a9fed648c769d710f28388f9f8113db28}{Dummy\_\-ImmGetDefaultIMEWnd} (HWND)
+\item 
+static \hyperlink{class_c_d_x_u_t_i_m_e_edit_box_a7c83b549328a07897bdac88bb0ac4d68}{UINT} WINAPI \hyperlink{class_c_d_x_u_t_i_m_e_edit_box_a2741f033ba2d986072d42e06cfe6964e}{Dummy\_\-ImmGetIMEFileNameA} (HKL, \hyperlink{class_c_d_x_u_t_i_m_e_edit_box_ab59f6a19cb5a1ca421bcb075676ec5f1}{LPSTR}, \hyperlink{class_c_d_x_u_t_i_m_e_edit_box_a7c83b549328a07897bdac88bb0ac4d68}{UINT})
+\item 
+static \hyperlink{class_c_d_x_u_t_i_m_e_edit_box_a7c83b549328a07897bdac88bb0ac4d68}{UINT} WINAPI \hyperlink{class_c_d_x_u_t_i_m_e_edit_box_a27d9701b01e3dd2f619bfed972a20c84}{Dummy\_\-ImmGetVirtualKey} (HWND)
+\item 
+static \hyperlink{class_c_d_x_u_t_i_m_e_edit_box_ad2239c74ad7d59cbb8e6d2b5bf17bcb8}{BOOL} WINAPI \hyperlink{class_c_d_x_u_t_i_m_e_edit_box_ac1aa6446ec3d96e8dd281a66d99d2aea}{Dummy\_\-ImmNotifyIME} (\hyperlink{class_c_d_x_u_t_i_m_e_edit_box_aa9afdec726ecd526e2a0abc01537426c}{HIMC}, \hyperlink{class_c_d_x_u_t_i_m_e_edit_box_a4666fce9b285d692ceb0515bf2dbde90}{DWORD}, \hyperlink{class_c_d_x_u_t_i_m_e_edit_box_a4666fce9b285d692ceb0515bf2dbde90}{DWORD}, \hyperlink{class_c_d_x_u_t_i_m_e_edit_box_a4666fce9b285d692ceb0515bf2dbde90}{DWORD})
+\item 
+static \hyperlink{class_c_d_x_u_t_i_m_e_edit_box_ad2239c74ad7d59cbb8e6d2b5bf17bcb8}{BOOL} WINAPI \hyperlink{class_c_d_x_u_t_i_m_e_edit_box_a4fbcb1ed6d0f08f1a2149e86af71c8a6}{Dummy\_\-ImmSetConversionStatus} (\hyperlink{class_c_d_x_u_t_i_m_e_edit_box_aa9afdec726ecd526e2a0abc01537426c}{HIMC}, \hyperlink{class_c_d_x_u_t_i_m_e_edit_box_a4666fce9b285d692ceb0515bf2dbde90}{DWORD}, \hyperlink{class_c_d_x_u_t_i_m_e_edit_box_a4666fce9b285d692ceb0515bf2dbde90}{DWORD})
+\item 
+static \hyperlink{class_c_d_x_u_t_i_m_e_edit_box_ad2239c74ad7d59cbb8e6d2b5bf17bcb8}{BOOL} WINAPI \hyperlink{class_c_d_x_u_t_i_m_e_edit_box_a91ad4dfb9e1f2e4194557a36989de3d6}{Dummy\_\-ImmSimulateHotKey} (HWND, \hyperlink{class_c_d_x_u_t_i_m_e_edit_box_a4666fce9b285d692ceb0515bf2dbde90}{DWORD})
+\item 
+static \hyperlink{class_c_d_x_u_t_i_m_e_edit_box_ad2239c74ad7d59cbb8e6d2b5bf17bcb8}{BOOL} WINAPI \hyperlink{class_c_d_x_u_t_i_m_e_edit_box_a0429a5b7c90ab227fc79d0e82f61db9d}{Dummy\_\-ImmIsIME} (HKL)
+\item 
+static \hyperlink{class_c_d_x_u_t_i_m_e_edit_box_a7c83b549328a07897bdac88bb0ac4d68}{UINT} WINAPI \hyperlink{class_c_d_x_u_t_i_m_e_edit_box_a54618d363797a91b5e1f42da21f66c82}{Dummy\_\-GetReadingString} (\hyperlink{class_c_d_x_u_t_i_m_e_edit_box_aa9afdec726ecd526e2a0abc01537426c}{HIMC}, \hyperlink{class_c_d_x_u_t_i_m_e_edit_box_a7c83b549328a07897bdac88bb0ac4d68}{UINT}, \hyperlink{class_c_d_x_u_t_i_m_e_edit_box_ab64b30f7dfad94f5fdffbe58821da2ff}{LPWSTR}, \hyperlink{class_c_d_x_u_t_i_m_e_edit_box_a96f42b574c3273edb514d6490a7fee62}{PINT}, \hyperlink{class_c_d_x_u_t_i_m_e_edit_box_ad2239c74ad7d59cbb8e6d2b5bf17bcb8}{BOOL} $\ast$, \hyperlink{class_c_d_x_u_t_i_m_e_edit_box_a0bcfcce05c77e66c32a46c02ae6bbed0}{PUINT})
+\item 
+static \hyperlink{class_c_d_x_u_t_i_m_e_edit_box_ad2239c74ad7d59cbb8e6d2b5bf17bcb8}{BOOL} WINAPI \hyperlink{class_c_d_x_u_t_i_m_e_edit_box_acf63c3fc67325d84c868546f4fa45a48}{Dummy\_\-ShowReadingWindow} (\hyperlink{class_c_d_x_u_t_i_m_e_edit_box_aa9afdec726ecd526e2a0abc01537426c}{HIMC}, \hyperlink{class_c_d_x_u_t_i_m_e_edit_box_ad2239c74ad7d59cbb8e6d2b5bf17bcb8}{BOOL})
+\item 
+static \hyperlink{class_c_d_x_u_t_i_m_e_edit_box_ad2239c74ad7d59cbb8e6d2b5bf17bcb8}{BOOL} APIENTRY \hyperlink{class_c_d_x_u_t_i_m_e_edit_box_af205e8fd2967b53c64f9a1d9a9436130}{Dummy\_\-VerQueryValueA} (const \hyperlink{class_c_d_x_u_t_i_m_e_edit_box_a1fb0e05d8b96c531c1b69d06391b21f7}{LPVOID}, \hyperlink{class_c_d_x_u_t_i_m_e_edit_box_ab59f6a19cb5a1ca421bcb075676ec5f1}{LPSTR}, \hyperlink{class_c_d_x_u_t_i_m_e_edit_box_a1fb0e05d8b96c531c1b69d06391b21f7}{LPVOID} $\ast$, \hyperlink{class_c_d_x_u_t_i_m_e_edit_box_a0bcfcce05c77e66c32a46c02ae6bbed0}{PUINT})
+\item 
+static \hyperlink{class_c_d_x_u_t_i_m_e_edit_box_ad2239c74ad7d59cbb8e6d2b5bf17bcb8}{BOOL} APIENTRY \hyperlink{class_c_d_x_u_t_i_m_e_edit_box_aa34e1f7d0fb0b2fcd5d668d6f95db8db}{Dummy\_\-GetFileVersionInfoA} (\hyperlink{class_c_d_x_u_t_i_m_e_edit_box_ab59f6a19cb5a1ca421bcb075676ec5f1}{LPSTR}, \hyperlink{class_c_d_x_u_t_i_m_e_edit_box_a4666fce9b285d692ceb0515bf2dbde90}{DWORD}, \hyperlink{class_c_d_x_u_t_i_m_e_edit_box_a4666fce9b285d692ceb0515bf2dbde90}{DWORD}, \hyperlink{class_c_d_x_u_t_i_m_e_edit_box_a1fb0e05d8b96c531c1b69d06391b21f7}{LPVOID})
+\item 
+static \hyperlink{class_c_d_x_u_t_i_m_e_edit_box_a4666fce9b285d692ceb0515bf2dbde90}{DWORD} APIENTRY \hyperlink{class_c_d_x_u_t_i_m_e_edit_box_a1d4b814a9bc32ee6b96e73a1d0cd8783}{Dummy\_\-GetFileVersionInfoSizeA} (\hyperlink{class_c_d_x_u_t_i_m_e_edit_box_ab59f6a19cb5a1ca421bcb075676ec5f1}{LPSTR}, \hyperlink{class_c_d_x_u_t_i_m_e_edit_box_a13c133202b7126d255528d5573500007}{LPDWORD})
+\item 
+static INPUTCONTEXT $\ast$WINAPI $\ast$ \hyperlink{class_c_d_x_u_t_i_m_e_edit_box_a5cf2b997f3ea6ca52ce55139373829db}{\_\-ImmLockIMC} (\hyperlink{class_c_d_x_u_t_i_m_e_edit_box_aa9afdec726ecd526e2a0abc01537426c}{HIMC}) = CDXUTIMEEditBox::Dummy\_\-ImmLockIMC
+\item 
+static \hyperlink{class_c_d_x_u_t_i_m_e_edit_box_af5189ef3dc85e23e56fa3938f7d84248}{BOOL} (WINAPI $\ast$\_\-ImmUnlockIMC)(\hyperlink{class_c_d_x_u_t_i_m_e_edit_box_aa9afdec726ecd526e2a0abc01537426c}{HIMC})
+\item 
+static \hyperlink{class_c_d_x_u_t_i_m_e_edit_box_a09d09ca5bffb9f421c9c97858105586b}{LPVOID} (WINAPI $\ast$\_\-ImmLockIMCC)(HIMCC)
+\item 
+static \hyperlink{class_c_d_x_u_t_i_m_e_edit_box_a371801e557ba4ff1b753b33c1229574f}{BOOL} (WINAPI $\ast$\_\-ImmUnlockIMCC)(HIMCC)
+\item 
+static \hyperlink{class_c_d_x_u_t_i_m_e_edit_box_afcf48d94d78c8b2c71af2019c635f0fc}{BOOL} (WINAPI $\ast$\_\-ImmDisableTextFrameService)(\hyperlink{class_c_d_x_u_t_i_m_e_edit_box_a4666fce9b285d692ceb0515bf2dbde90}{DWORD})
+\item 
+static \hyperlink{class_c_d_x_u_t_i_m_e_edit_box_a5ea3424861783fb93d639481681ee338}{LONG} (WINAPI $\ast$\_\-ImmGetCompositionStringW)(\hyperlink{class_c_d_x_u_t_i_m_e_edit_box_aa9afdec726ecd526e2a0abc01537426c}{HIMC}
+\item 
+static \hyperlink{class_c_d_x_u_t_i_m_e_edit_box_a6e59c0aeb1b6cd02eb08437d5996a1c0}{DWORD} (WINAPI $\ast$\_\-ImmGetCandidateListW)(\hyperlink{class_c_d_x_u_t_i_m_e_edit_box_aa9afdec726ecd526e2a0abc01537426c}{HIMC}
+\item 
+static \hyperlink{class_c_d_x_u_t_i_m_e_edit_box_a0811d012d7ddb5d3384cdea1beb5aa68}{HIMC} (WINAPI $\ast$\_\-ImmGetContext)(HWND)
+\item 
+static \hyperlink{class_c_d_x_u_t_i_m_e_edit_box_ab1828ba67744482b0aec50deb5f9ddaf}{BOOL} (WINAPI $\ast$\_\-ImmReleaseContext)(HWND
+\item 
+static \hyperlink{class_c_d_x_u_t_i_m_e_edit_box_a933f71681cd58fae53c1ee3cb04d5484}{HIMC} (WINAPI $\ast$\_\-ImmAssociateContext)(HWND
+\item 
+static \hyperlink{class_c_d_x_u_t_i_m_e_edit_box_a5041919da19236ee4c67984b6f784789}{BOOL} (WINAPI $\ast$\_\-ImmGetOpenStatus)(\hyperlink{class_c_d_x_u_t_i_m_e_edit_box_aa9afdec726ecd526e2a0abc01537426c}{HIMC})
+\item 
+static \hyperlink{class_c_d_x_u_t_i_m_e_edit_box_abf576cfdcf09229db4caefc448285a7e}{BOOL} (WINAPI $\ast$\_\-ImmSetOpenStatus)(\hyperlink{class_c_d_x_u_t_i_m_e_edit_box_aa9afdec726ecd526e2a0abc01537426c}{HIMC}
+\item 
+static \hyperlink{class_c_d_x_u_t_i_m_e_edit_box_a3ba80e837a90d59f621fdd1bbca61a98}{BOOL} (WINAPI $\ast$\_\-ImmGetConversionStatus)(\hyperlink{class_c_d_x_u_t_i_m_e_edit_box_aa9afdec726ecd526e2a0abc01537426c}{HIMC}
+\item 
+static \hyperlink{class_c_d_x_u_t_i_m_e_edit_box_a383dbe71ad7fe88f3a4b2e6bfd588ca4}{HWND} (WINAPI $\ast$\_\-ImmGetDefaultIMEWnd)(HWND)
+\item 
+static \hyperlink{class_c_d_x_u_t_i_m_e_edit_box_a9117b4b1a7dc485c06b2c74421b28374}{UINT} (WINAPI $\ast$\_\-ImmGetIMEFileNameA)(HKL
+\item 
+static \hyperlink{class_c_d_x_u_t_i_m_e_edit_box_a2a1aec6144102d56aa1ecd8500df4cf1}{UINT} (WINAPI $\ast$\_\-ImmGetVirtualKey)(HWND)
+\item 
+static \hyperlink{class_c_d_x_u_t_i_m_e_edit_box_a92caced3bb5c9e6169fb6ad258fb5f5e}{BOOL} (WINAPI $\ast$\_\-ImmNotifyIME)(\hyperlink{class_c_d_x_u_t_i_m_e_edit_box_aa9afdec726ecd526e2a0abc01537426c}{HIMC}
+\item 
+static \hyperlink{class_c_d_x_u_t_i_m_e_edit_box_a2dd03073c1bff3083265e0db340e1655}{BOOL} (WINAPI $\ast$\_\-ImmSetConversionStatus)(\hyperlink{class_c_d_x_u_t_i_m_e_edit_box_aa9afdec726ecd526e2a0abc01537426c}{HIMC}
+\item 
+static \hyperlink{class_c_d_x_u_t_i_m_e_edit_box_aa9307cf2877e1f886685977900653228}{BOOL} (WINAPI $\ast$\_\-ImmSimulateHotKey)(HWND
+\item 
+static \hyperlink{class_c_d_x_u_t_i_m_e_edit_box_ab3159cf044c8eb289cd7ed646a0fb76d}{BOOL} (WINAPI $\ast$\_\-ImmIsIME)(HKL)
+\item 
+static \hyperlink{class_c_d_x_u_t_i_m_e_edit_box_af04efdabbdd396a3bee0f746e3248abd}{UINT} (WINAPI $\ast$\_\-GetReadingString)(\hyperlink{class_c_d_x_u_t_i_m_e_edit_box_aa9afdec726ecd526e2a0abc01537426c}{HIMC}
+\item 
+static \hyperlink{class_c_d_x_u_t_i_m_e_edit_box_a2b8bfe740199d131e01cf47ca67e1270}{BOOL} (WINAPI $\ast$\_\-ShowReadingWindow)(\hyperlink{class_c_d_x_u_t_i_m_e_edit_box_aa9afdec726ecd526e2a0abc01537426c}{HIMC}
+\item 
+static \hyperlink{class_c_d_x_u_t_i_m_e_edit_box_aa9ff3052536b322df532c0a6bd048988}{BOOL} (APIENTRY $\ast$\_\-VerQueryValueA)(const \hyperlink{class_c_d_x_u_t_i_m_e_edit_box_a1fb0e05d8b96c531c1b69d06391b21f7}{LPVOID}
+\item 
+static \hyperlink{class_c_d_x_u_t_i_m_e_edit_box_a740dde8f3e869867214a9708eb171664}{BOOL} (APIENTRY $\ast$\_\-GetFileVersionInfoA)(\hyperlink{class_c_d_x_u_t_i_m_e_edit_box_ab59f6a19cb5a1ca421bcb075676ec5f1}{LPSTR}
+\item 
+static \hyperlink{class_c_d_x_u_t_i_m_e_edit_box_a69382519044b224504e511141bcaeae3}{DWORD} (APIENTRY $\ast$\_\-GetFileVersionInfoSizeA)(\hyperlink{class_c_d_x_u_t_i_m_e_edit_box_ab59f6a19cb5a1ca421bcb075676ec5f1}{LPSTR}
+\item 
+static WORD \hyperlink{class_c_d_x_u_t_i_m_e_edit_box_aba18bf16401dd53980681c8e80aed8fd}{GetLanguage} ()
+\item 
+static WORD \hyperlink{class_c_d_x_u_t_i_m_e_edit_box_a4edd66c64b9c6df7f2a2e2e58992fab0}{GetPrimaryLanguage} ()
+\item 
+static WORD \hyperlink{class_c_d_x_u_t_i_m_e_edit_box_ad919907a4c55dad632a9195b49c63765}{GetSubLanguage} ()
+\item 
+static void \hyperlink{class_c_d_x_u_t_i_m_e_edit_box_a41a841ff166e8221dd4a82c58661790f}{SendKey} (BYTE nVirtKey)
+\item 
+static \hyperlink{class_c_d_x_u_t_i_m_e_edit_box_a4666fce9b285d692ceb0515bf2dbde90}{DWORD} \hyperlink{class_c_d_x_u_t_i_m_e_edit_box_a4b734d1075be1611fbbd0455ccfedc8f}{GetImeId} (\hyperlink{class_c_d_x_u_t_i_m_e_edit_box_a7c83b549328a07897bdac88bb0ac4d68}{UINT} uIndex=0)
+\item 
+static void \hyperlink{class_c_d_x_u_t_i_m_e_edit_box_a77eef5eb2d0b144a985692d8a4cd5d3c}{CheckInputLocale} ()
+\item 
+static void \hyperlink{class_c_d_x_u_t_i_m_e_edit_box_a6b51f5a9a9170a89b0430224b0d56757}{CheckToggleState} ()
+\item 
+static void \hyperlink{class_c_d_x_u_t_i_m_e_edit_box_a0f59d99fd3cef32c0a0a1b4c3b5bcfd8}{SetupImeApi} ()
+\item 
+static void \hyperlink{class_c_d_x_u_t_i_m_e_edit_box_aaf6fd90a9cd492f6194bb0a8053fbcc3}{ResetCompositionString} ()
+\item 
+static void \hyperlink{class_c_d_x_u_t_i_m_e_edit_box_ac6593b484984dd398fa7311b010380ca}{GetReadingWindowOrientation} (\hyperlink{class_c_d_x_u_t_i_m_e_edit_box_a4666fce9b285d692ceb0515bf2dbde90}{DWORD} dwId)
+\item 
+static void \hyperlink{class_c_d_x_u_t_i_m_e_edit_box_aef1648e42d87d0f46691c427759cf71d}{GetPrivateReadingString} ()
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static \hyperlink{class_c_d_x_u_t_i_m_e_edit_box_a4666fce9b285d692ceb0515bf2dbde90}{DWORD}
+\item 
+static \hyperlink{class_c_d_x_u_t_i_m_e_edit_box_a1fb0e05d8b96c531c1b69d06391b21f7}{LPVOID}
+\item 
+static \hyperlink{class_c_d_x_u_t_i_m_e_edit_box_aad569bc50d5e5e35422883375e07ff36}{LPCANDIDATELIST}
+\item 
+static \hyperlink{class_c_d_x_u_t_i_m_e_edit_box_aa9afdec726ecd526e2a0abc01537426c}{HIMC}
+\item 
+static \hyperlink{class_c_d_x_u_t_i_m_e_edit_box_ad2239c74ad7d59cbb8e6d2b5bf17bcb8}{BOOL}
+\item 
+static \hyperlink{class_c_d_x_u_t_i_m_e_edit_box_a13c133202b7126d255528d5573500007}{LPDWORD}
+\item 
+static \hyperlink{class_c_d_x_u_t_i_m_e_edit_box_ab59f6a19cb5a1ca421bcb075676ec5f1}{LPSTR}
+\item 
+static \hyperlink{class_c_d_x_u_t_i_m_e_edit_box_a7c83b549328a07897bdac88bb0ac4d68}{UINT}
+\item 
+static \hyperlink{class_c_d_x_u_t_i_m_e_edit_box_ab64b30f7dfad94f5fdffbe58821da2ff}{LPWSTR}
+\item 
+static \hyperlink{class_c_d_x_u_t_i_m_e_edit_box_a96f42b574c3273edb514d6490a7fee62}{PINT}
+\item 
+static \hyperlink{class_c_d_x_u_t_i_m_e_edit_box_ad2239c74ad7d59cbb8e6d2b5bf17bcb8}{BOOL} \hyperlink{class_c_d_x_u_t_i_m_e_edit_box_a0bcfcce05c77e66c32a46c02ae6bbed0}{PUINT}
+\item 
+static \hyperlink{class_c_d_x_u_t_i_m_e_edit_box_a1fb0e05d8b96c531c1b69d06391b21f7}{LPVOID} \hyperlink{class_c_d_x_u_t_i_m_e_edit_box_a866116315de54f6b982526a070d01fdd}{PUINT}
+\item 
+D3DCOLOR \hyperlink{class_c_d_x_u_t_i_m_e_edit_box_a5963bda0b88c359e6360b437abd86e7f}{m\_\-ReadingColor}
+\item 
+D3DCOLOR \hyperlink{class_c_d_x_u_t_i_m_e_edit_box_a9971f0c9b8a12a60884ccbe75667550d}{m\_\-ReadingWinColor}
+\item 
+D3DCOLOR \hyperlink{class_c_d_x_u_t_i_m_e_edit_box_a9e4793780d2c6cf0819d3d0d277df0a0}{m\_\-ReadingSelColor}
+\item 
+D3DCOLOR \hyperlink{class_c_d_x_u_t_i_m_e_edit_box_ae63f71f182df873c2126c0c6d416ac90}{m\_\-ReadingSelBkColor}
+\item 
+D3DCOLOR \hyperlink{class_c_d_x_u_t_i_m_e_edit_box_a8b8a608af08e7fb7ec24200a892779d8}{m\_\-CandidateColor}
+\item 
+D3DCOLOR \hyperlink{class_c_d_x_u_t_i_m_e_edit_box_a3c5516213f115dc7d518f4de53cfbf71}{m\_\-CandidateWinColor}
+\item 
+D3DCOLOR \hyperlink{class_c_d_x_u_t_i_m_e_edit_box_a371964cf3f276e8a2bc844dafb8c63c2}{m\_\-CandidateSelColor}
+\item 
+D3DCOLOR \hyperlink{class_c_d_x_u_t_i_m_e_edit_box_a5fc0a54d7470b0fef69ef6f3b5d3d9b1}{m\_\-CandidateSelBkColor}
+\item 
+D3DCOLOR \hyperlink{class_c_d_x_u_t_i_m_e_edit_box_a43d97af287e09d32fe03c9ec2a28d5ea}{m\_\-CompColor}
+\item 
+D3DCOLOR \hyperlink{class_c_d_x_u_t_i_m_e_edit_box_a176310771bab6938087f89b678400ba2}{m\_\-CompWinColor}
+\item 
+D3DCOLOR \hyperlink{class_c_d_x_u_t_i_m_e_edit_box_a16acb29b8433a114b9e56319d54dd418}{m\_\-CompCaretColor}
+\item 
+D3DCOLOR \hyperlink{class_c_d_x_u_t_i_m_e_edit_box_ac03e89b53c4bcc8574aba818a8f53ade}{m\_\-CompTargetColor}
+\item 
+D3DCOLOR \hyperlink{class_c_d_x_u_t_i_m_e_edit_box_abab28401ad563686e82cd22324bdfc71}{m\_\-CompTargetBkColor}
+\item 
+D3DCOLOR \hyperlink{class_c_d_x_u_t_i_m_e_edit_box_ad1285ec420c985d70b5bdb093da16594}{m\_\-CompTargetNonColor}
+\item 
+D3DCOLOR \hyperlink{class_c_d_x_u_t_i_m_e_edit_box_a7bf58b958e0e9dc439c4e3c5f75998b0}{m\_\-CompTargetNonBkColor}
+\item 
+D3DCOLOR \hyperlink{class_c_d_x_u_t_i_m_e_edit_box_a38ca1864482d5a7f0b021f3c223a7cce}{m\_\-IndicatorImeColor}
+\item 
+D3DCOLOR \hyperlink{class_c_d_x_u_t_i_m_e_edit_box_ac905236eb64b937da8a2756bd78473ae}{m\_\-IndicatorEngColor}
+\item 
+D3DCOLOR \hyperlink{class_c_d_x_u_t_i_m_e_edit_box_a19e7f372fee68a764208a5d7f32d7e37}{m\_\-IndicatorBkColor}
+\item 
+\hyperlink{_d_x_u_tgui_8cpp_a2d77ed03302b6978834ee3b6f57837fb}{int} \hyperlink{class_c_d_x_u_t_i_m_e_edit_box_af69a3a78e89ed011a11c9ae3d19bbb66}{m\_\-nIndicatorWidth}
+\item 
+RECT \hyperlink{class_c_d_x_u_t_i_m_e_edit_box_a0cd04d0239f03ac23bb29da73b2c1f32}{m\_\-rcIndicator}
+\end{DoxyCompactItemize}
+\subsection*{Static Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static HINSTANCE \hyperlink{class_c_d_x_u_t_i_m_e_edit_box_ade09c72a407c2efe010fed40eac354dd}{s\_\-hDllImm32}
+\item 
+static HINSTANCE \hyperlink{class_c_d_x_u_t_i_m_e_edit_box_a980f6732a5bd1fbf27e9d0feeaab3fca}{s\_\-hDllVer}
+\item 
+static \hyperlink{class_c_d_x_u_t_i_m_e_edit_box_aa9afdec726ecd526e2a0abc01537426c}{HIMC} \hyperlink{class_c_d_x_u_t_i_m_e_edit_box_a8923bb4730fb126748d1d38da4de5ae2}{s\_\-hImcDef}
+\item 
+static HKL \hyperlink{class_c_d_x_u_t_i_m_e_edit_box_a1cc2b2c882ca9512ba1058c6c697f0ec}{s\_\-hklCurrent}
+\item 
+static bool \hyperlink{class_c_d_x_u_t_i_m_e_edit_box_add6b8ff15715843ade40e9e9325d190b}{s\_\-bVerticalCand}
+\item 
+static \hyperlink{class_c_d_x_u_t_i_m_e_edit_box_ab64b30f7dfad94f5fdffbe58821da2ff}{LPWSTR} \hyperlink{class_c_d_x_u_t_i_m_e_edit_box_aad444411a488a4cffc4e221338948a86}{s\_\-wszCurrIndicator} = \hyperlink{class_c_d_x_u_t_i_m_e_edit_box_a1f391bcb993b9f6c995f9a972efea9fc}{CDXUTIMEEditBox::s\_\-aszIndicator}\mbox{[}0\mbox{]}
+\item 
+static WCHAR \hyperlink{class_c_d_x_u_t_i_m_e_edit_box_a1f391bcb993b9f6c995f9a972efea9fc}{s\_\-aszIndicator} \mbox{[}5\mbox{]}\mbox{[}3\mbox{]}
+\item 
+static bool \hyperlink{class_c_d_x_u_t_i_m_e_edit_box_aabc194ed63ce823d2e37a38b01e924cf}{s\_\-bInsertOnType}
+\item 
+static HINSTANCE \hyperlink{class_c_d_x_u_t_i_m_e_edit_box_abb6052b511e90fa7118d7cbb6d92989b}{s\_\-hDllIme}
+\item 
+static \hyperlink{class_c_d_x_u_t_i_m_e_edit_box_ab368d30c2733c242574b8388065d09f2}{IMESTATE} \hyperlink{class_c_d_x_u_t_i_m_e_edit_box_ac2c4d60cd29e91321145867d96d05605}{s\_\-ImeState} = IMEUI\_\-STATE\_\-OFF
+\item 
+static bool \hyperlink{class_c_d_x_u_t_i_m_e_edit_box_aaf0464cb8cb7d2bea823712c322f2b78}{s\_\-bEnableImeSystem}
+\item 
+static POINT \hyperlink{class_c_d_x_u_t_i_m_e_edit_box_a784afa5dea8c27e3f6d7ad9972536d4a}{s\_\-ptCompString}
+\item 
+static \hyperlink{_d_x_u_tgui_8cpp_a2d77ed03302b6978834ee3b6f57837fb}{int} \hyperlink{class_c_d_x_u_t_i_m_e_edit_box_a468c906ac88033afd0042eef35d21dd0}{s\_\-nCompCaret}
+\item 
+static \hyperlink{_d_x_u_tgui_8cpp_a2d77ed03302b6978834ee3b6f57837fb}{int} \hyperlink{class_c_d_x_u_t_i_m_e_edit_box_af459146e6164aa670ca187920a3e5ba0}{s\_\-nFirstTargetConv}
+\item 
+static \hyperlink{class_c_uni_buffer}{CUniBuffer} \hyperlink{class_c_d_x_u_t_i_m_e_edit_box_ab6fd6572bf140a685ca9227690fc8bb1}{s\_\-CompString} = \hyperlink{class_c_uni_buffer}{CUniBuffer}( 0 )
+\item 
+static BYTE \hyperlink{class_c_d_x_u_t_i_m_e_edit_box_abcf78691a5ecce45e721f4533ebe7a26}{s\_\-abCompStringAttr} \mbox{[}MAX\_\-COMPSTRING\_\-SIZE\mbox{]}
+\item 
+static \hyperlink{class_c_d_x_u_t_i_m_e_edit_box_a4666fce9b285d692ceb0515bf2dbde90}{DWORD} \hyperlink{class_c_d_x_u_t_i_m_e_edit_box_ac2f3b1d2aedb78d1cf1e4aa1f816c58b}{s\_\-adwCompStringClause} \mbox{[}MAX\_\-COMPSTRING\_\-SIZE\mbox{]}
+\item 
+static WCHAR \hyperlink{class_c_d_x_u_t_i_m_e_edit_box_a858d222d1a4282ce8154bb3867018e1f}{s\_\-wszReadingString} \mbox{[}32\mbox{]}
+\item 
+static \hyperlink{struct_c_d_x_u_t_i_m_e_edit_box_1_1_c_cand_list}{CCandList} \hyperlink{class_c_d_x_u_t_i_m_e_edit_box_aba2312ad3f47e27702ce20c5055416e6}{s\_\-CandList}
+\item 
+static bool \hyperlink{class_c_d_x_u_t_i_m_e_edit_box_a78764a7d5df3030a42d380306d85ea89}{s\_\-bShowReadingWindow}
+\item 
+static bool \hyperlink{class_c_d_x_u_t_i_m_e_edit_box_aa097905fa88e08934010ce7ead10fb0b}{s\_\-bHorizontalReading}
+\item 
+static bool \hyperlink{class_c_d_x_u_t_i_m_e_edit_box_afbfbbd0bfc8427fc6eb91f33a7338fcd}{s\_\-bChineseIME}
+\item 
+static \hyperlink{class_c_growable_array}{CGrowableArray}$<$ \hyperlink{struct_c_d_x_u_t_i_m_e_edit_box_1_1_c_input_locale}{CInputLocale} $>$ \hyperlink{class_c_d_x_u_t_i_m_e_edit_box_adbf262dfa3249b26d569dd04d4cdbb01}{s\_\-Locale}
+\end{DoxyCompactItemize}
+
+
+\subsection{Member Enumeration Documentation}
+\hypertarget{class_c_d_x_u_t_i_m_e_edit_box_a3ed4d9f2016d546ab06a859728c079d9}{
+\subsubsection[{"@0}]{\setlength{\rightskip}{0pt plus 5cm}anonymous enum\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{class_c_d_x_u_t_i_m_e_edit_box_a3ed4d9f2016d546ab06a859728c079d9}
+\begin{Desc}
+\item[Enumerator: ]\par
+\begin{description}
+\index{INDICATOR\_\-NON\_\-IME@{INDICATOR\_\-NON\_\-IME}!CDXUTIMEEditBox@{CDXUTIMEEditBox}}\index{CDXUTIMEEditBox@{CDXUTIMEEditBox}!INDICATOR\_\-NON\_\-IME@{INDICATOR\_\-NON\_\-IME}}\item[{\em 
+\hypertarget{class_c_d_x_u_t_i_m_e_edit_box_a3ed4d9f2016d546ab06a859728c079d9a42cffb2bda6f0fbd7445dfeac185da4f}{
+INDICATOR\_\-NON\_\-IME}
+\label{class_c_d_x_u_t_i_m_e_edit_box_a3ed4d9f2016d546ab06a859728c079d9a42cffb2bda6f0fbd7445dfeac185da4f}
+}]\index{INDICATOR\_\-CHS@{INDICATOR\_\-CHS}!CDXUTIMEEditBox@{CDXUTIMEEditBox}}\index{CDXUTIMEEditBox@{CDXUTIMEEditBox}!INDICATOR\_\-CHS@{INDICATOR\_\-CHS}}\item[{\em 
+\hypertarget{class_c_d_x_u_t_i_m_e_edit_box_a3ed4d9f2016d546ab06a859728c079d9a1094c443a66339e8f49b1776806b1c45}{
+INDICATOR\_\-CHS}
+\label{class_c_d_x_u_t_i_m_e_edit_box_a3ed4d9f2016d546ab06a859728c079d9a1094c443a66339e8f49b1776806b1c45}
+}]\index{INDICATOR\_\-CHT@{INDICATOR\_\-CHT}!CDXUTIMEEditBox@{CDXUTIMEEditBox}}\index{CDXUTIMEEditBox@{CDXUTIMEEditBox}!INDICATOR\_\-CHT@{INDICATOR\_\-CHT}}\item[{\em 
+\hypertarget{class_c_d_x_u_t_i_m_e_edit_box_a3ed4d9f2016d546ab06a859728c079d9a4be1cf30b37172f37a966965b8e9b270}{
+INDICATOR\_\-CHT}
+\label{class_c_d_x_u_t_i_m_e_edit_box_a3ed4d9f2016d546ab06a859728c079d9a4be1cf30b37172f37a966965b8e9b270}
+}]\index{INDICATOR\_\-KOREAN@{INDICATOR\_\-KOREAN}!CDXUTIMEEditBox@{CDXUTIMEEditBox}}\index{CDXUTIMEEditBox@{CDXUTIMEEditBox}!INDICATOR\_\-KOREAN@{INDICATOR\_\-KOREAN}}\item[{\em 
+\hypertarget{class_c_d_x_u_t_i_m_e_edit_box_a3ed4d9f2016d546ab06a859728c079d9a11f9c15497b6759e5f19ece18ea3dc5b}{
+INDICATOR\_\-KOREAN}
+\label{class_c_d_x_u_t_i_m_e_edit_box_a3ed4d9f2016d546ab06a859728c079d9a11f9c15497b6759e5f19ece18ea3dc5b}
+}]\index{INDICATOR\_\-JAPANESE@{INDICATOR\_\-JAPANESE}!CDXUTIMEEditBox@{CDXUTIMEEditBox}}\index{CDXUTIMEEditBox@{CDXUTIMEEditBox}!INDICATOR\_\-JAPANESE@{INDICATOR\_\-JAPANESE}}\item[{\em 
+\hypertarget{class_c_d_x_u_t_i_m_e_edit_box_a3ed4d9f2016d546ab06a859728c079d9a20dedc79016b7d61bebf024c3acbfebe}{
+INDICATOR\_\-JAPANESE}
+\label{class_c_d_x_u_t_i_m_e_edit_box_a3ed4d9f2016d546ab06a859728c079d9a20dedc79016b7d61bebf024c3acbfebe}
+}]\end{description}
+\end{Desc}
+
+\hypertarget{class_c_d_x_u_t_i_m_e_edit_box_ab368d30c2733c242574b8388065d09f2}{
+\index{CDXUTIMEEditBox@{CDXUTIMEEditBox}!IMESTATE@{IMESTATE}}
+\index{IMESTATE@{IMESTATE}!CDXUTIMEEditBox@{CDXUTIMEEditBox}}
+\subsubsection[{IMESTATE}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf CDXUTIMEEditBox::IMESTATE}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{class_c_d_x_u_t_i_m_e_edit_box_ab368d30c2733c242574b8388065d09f2}
+\begin{Desc}
+\item[Enumerator: ]\par
+\begin{description}
+\index{IMEUI\_\-STATE\_\-OFF@{IMEUI\_\-STATE\_\-OFF}!CDXUTIMEEditBox@{CDXUTIMEEditBox}}\index{CDXUTIMEEditBox@{CDXUTIMEEditBox}!IMEUI\_\-STATE\_\-OFF@{IMEUI\_\-STATE\_\-OFF}}\item[{\em 
+\hypertarget{class_c_d_x_u_t_i_m_e_edit_box_ab368d30c2733c242574b8388065d09f2a4ff8ca238fe3e11934a6aa7cf9494e1d}{
+IMEUI\_\-STATE\_\-OFF}
+\label{class_c_d_x_u_t_i_m_e_edit_box_ab368d30c2733c242574b8388065d09f2a4ff8ca238fe3e11934a6aa7cf9494e1d}
+}]\index{IMEUI\_\-STATE\_\-ON@{IMEUI\_\-STATE\_\-ON}!CDXUTIMEEditBox@{CDXUTIMEEditBox}}\index{CDXUTIMEEditBox@{CDXUTIMEEditBox}!IMEUI\_\-STATE\_\-ON@{IMEUI\_\-STATE\_\-ON}}\item[{\em 
+\hypertarget{class_c_d_x_u_t_i_m_e_edit_box_ab368d30c2733c242574b8388065d09f2aea3de31c8cae605a2de27846bfda4b73}{
+IMEUI\_\-STATE\_\-ON}
+\label{class_c_d_x_u_t_i_m_e_edit_box_ab368d30c2733c242574b8388065d09f2aea3de31c8cae605a2de27846bfda4b73}
+}]\index{IMEUI\_\-STATE\_\-ENGLISH@{IMEUI\_\-STATE\_\-ENGLISH}!CDXUTIMEEditBox@{CDXUTIMEEditBox}}\index{CDXUTIMEEditBox@{CDXUTIMEEditBox}!IMEUI\_\-STATE\_\-ENGLISH@{IMEUI\_\-STATE\_\-ENGLISH}}\item[{\em 
+\hypertarget{class_c_d_x_u_t_i_m_e_edit_box_ab368d30c2733c242574b8388065d09f2afafd2c0d84569198cc136f9bde5dad1a}{
+IMEUI\_\-STATE\_\-ENGLISH}
+\label{class_c_d_x_u_t_i_m_e_edit_box_ab368d30c2733c242574b8388065d09f2afafd2c0d84569198cc136f9bde5dad1a}
+}]\end{description}
+\end{Desc}
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_c_d_x_u_t_i_m_e_edit_box_a4fe495517cf6a25bee93336af1e8a7c8}{
+\index{CDXUTIMEEditBox@{CDXUTIMEEditBox}!CDXUTIMEEditBox@{CDXUTIMEEditBox}}
+\index{CDXUTIMEEditBox@{CDXUTIMEEditBox}!CDXUTIMEEditBox@{CDXUTIMEEditBox}}
+\subsubsection[{CDXUTIMEEditBox}]{\setlength{\rightskip}{0pt plus 5cm}CDXUTIMEEditBox::CDXUTIMEEditBox ({\bf CDXUTDialog} $\ast$ {\em pDialog} = {\ttfamily NULL})}}
+\label{class_c_d_x_u_t_i_m_e_edit_box_a4fe495517cf6a25bee93336af1e8a7c8}
+\hypertarget{class_c_d_x_u_t_i_m_e_edit_box_af7ff487e10a4aae66d61614dae5b08c0}{
+\index{CDXUTIMEEditBox@{CDXUTIMEEditBox}!$\sim$CDXUTIMEEditBox@{$\sim$CDXUTIMEEditBox}}
+\index{$\sim$CDXUTIMEEditBox@{$\sim$CDXUTIMEEditBox}!CDXUTIMEEditBox@{CDXUTIMEEditBox}}
+\subsubsection[{$\sim$CDXUTIMEEditBox}]{\setlength{\rightskip}{0pt plus 5cm}CDXUTIMEEditBox::$\sim$CDXUTIMEEditBox ()\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{class_c_d_x_u_t_i_m_e_edit_box_af7ff487e10a4aae66d61614dae5b08c0}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_c_d_x_u_t_i_m_e_edit_box_a5cf2b997f3ea6ca52ce55139373829db}{
+\index{CDXUTIMEEditBox@{CDXUTIMEEditBox}!\_\-ImmLockIMC@{\_\-ImmLockIMC}}
+\index{\_\-ImmLockIMC@{\_\-ImmLockIMC}!CDXUTIMEEditBox@{CDXUTIMEEditBox}}
+\subsubsection[{\_\-ImmLockIMC}]{\setlength{\rightskip}{0pt plus 5cm}INPUTCONTEXT $\ast$WINAPI $\ast$ CDXUTIMEEditBox::\_\-ImmLockIMC ({\bf HIMC}) = CDXUTIMEEditBox::Dummy\_\-ImmLockIMC\hspace{0.3cm}{\ttfamily  \mbox{[}static, protected\mbox{]}}}}
+\label{class_c_d_x_u_t_i_m_e_edit_box_a5cf2b997f3ea6ca52ce55139373829db}
+\hypertarget{class_c_d_x_u_t_i_m_e_edit_box_a740dde8f3e869867214a9708eb171664}{
+\index{CDXUTIMEEditBox@{CDXUTIMEEditBox}!BOOL@{BOOL}}
+\index{BOOL@{BOOL}!CDXUTIMEEditBox@{CDXUTIMEEditBox}}
+\subsubsection[{BOOL}]{\setlength{\rightskip}{0pt plus 5cm}static {\bf CDXUTIMEEditBox::BOOL} (APIENTRY $\ast$ {\em \_\-GetFileVersionInfoA})\hspace{0.3cm}{\ttfamily  \mbox{[}static, protected\mbox{]}}}}
+\label{class_c_d_x_u_t_i_m_e_edit_box_a740dde8f3e869867214a9708eb171664}
+\hypertarget{class_c_d_x_u_t_i_m_e_edit_box_aa9ff3052536b322df532c0a6bd048988}{
+\index{CDXUTIMEEditBox@{CDXUTIMEEditBox}!BOOL@{BOOL}}
+\index{BOOL@{BOOL}!CDXUTIMEEditBox@{CDXUTIMEEditBox}}
+\subsubsection[{BOOL}]{\setlength{\rightskip}{0pt plus 5cm}static {\bf CDXUTIMEEditBox::BOOL} (APIENTRY $\ast$ {\em \_\-VerQueryValueA}) const\hspace{0.3cm}{\ttfamily  \mbox{[}static, protected\mbox{]}}}}
+\label{class_c_d_x_u_t_i_m_e_edit_box_aa9ff3052536b322df532c0a6bd048988}
+\hypertarget{class_c_d_x_u_t_i_m_e_edit_box_a2b8bfe740199d131e01cf47ca67e1270}{
+\index{CDXUTIMEEditBox@{CDXUTIMEEditBox}!BOOL@{BOOL}}
+\index{BOOL@{BOOL}!CDXUTIMEEditBox@{CDXUTIMEEditBox}}
+\subsubsection[{BOOL}]{\setlength{\rightskip}{0pt plus 5cm}static {\bf CDXUTIMEEditBox::BOOL} (WINAPI $\ast$ {\em \_\-ShowReadingWindow})\hspace{0.3cm}{\ttfamily  \mbox{[}static, protected\mbox{]}}}}
+\label{class_c_d_x_u_t_i_m_e_edit_box_a2b8bfe740199d131e01cf47ca67e1270}
+\hypertarget{class_c_d_x_u_t_i_m_e_edit_box_ab3159cf044c8eb289cd7ed646a0fb76d}{
+\index{CDXUTIMEEditBox@{CDXUTIMEEditBox}!BOOL@{BOOL}}
+\index{BOOL@{BOOL}!CDXUTIMEEditBox@{CDXUTIMEEditBox}}
+\subsubsection[{BOOL}]{\setlength{\rightskip}{0pt plus 5cm}static {\bf CDXUTIMEEditBox::BOOL} (WINAPI $\ast$ {\em \_\-ImmIsIME})\hspace{0.3cm}{\ttfamily  \mbox{[}static, protected\mbox{]}}}}
+\label{class_c_d_x_u_t_i_m_e_edit_box_ab3159cf044c8eb289cd7ed646a0fb76d}
+\hypertarget{class_c_d_x_u_t_i_m_e_edit_box_aa9307cf2877e1f886685977900653228}{
+\index{CDXUTIMEEditBox@{CDXUTIMEEditBox}!BOOL@{BOOL}}
+\index{BOOL@{BOOL}!CDXUTIMEEditBox@{CDXUTIMEEditBox}}
+\subsubsection[{BOOL}]{\setlength{\rightskip}{0pt plus 5cm}static {\bf CDXUTIMEEditBox::BOOL} (WINAPI $\ast$ {\em \_\-ImmSimulateHotKey})\hspace{0.3cm}{\ttfamily  \mbox{[}static, protected\mbox{]}}}}
+\label{class_c_d_x_u_t_i_m_e_edit_box_aa9307cf2877e1f886685977900653228}
+\hypertarget{class_c_d_x_u_t_i_m_e_edit_box_a2dd03073c1bff3083265e0db340e1655}{
+\index{CDXUTIMEEditBox@{CDXUTIMEEditBox}!BOOL@{BOOL}}
+\index{BOOL@{BOOL}!CDXUTIMEEditBox@{CDXUTIMEEditBox}}
+\subsubsection[{BOOL}]{\setlength{\rightskip}{0pt plus 5cm}static {\bf CDXUTIMEEditBox::BOOL} (WINAPI $\ast$ {\em \_\-ImmSetConversionStatus})\hspace{0.3cm}{\ttfamily  \mbox{[}static, protected\mbox{]}}}}
+\label{class_c_d_x_u_t_i_m_e_edit_box_a2dd03073c1bff3083265e0db340e1655}
+\hypertarget{class_c_d_x_u_t_i_m_e_edit_box_a92caced3bb5c9e6169fb6ad258fb5f5e}{
+\index{CDXUTIMEEditBox@{CDXUTIMEEditBox}!BOOL@{BOOL}}
+\index{BOOL@{BOOL}!CDXUTIMEEditBox@{CDXUTIMEEditBox}}
+\subsubsection[{BOOL}]{\setlength{\rightskip}{0pt plus 5cm}static {\bf CDXUTIMEEditBox::BOOL} (WINAPI $\ast$ {\em \_\-ImmNotifyIME})\hspace{0.3cm}{\ttfamily  \mbox{[}static, protected\mbox{]}}}}
+\label{class_c_d_x_u_t_i_m_e_edit_box_a92caced3bb5c9e6169fb6ad258fb5f5e}
+\hypertarget{class_c_d_x_u_t_i_m_e_edit_box_a3ba80e837a90d59f621fdd1bbca61a98}{
+\index{CDXUTIMEEditBox@{CDXUTIMEEditBox}!BOOL@{BOOL}}
+\index{BOOL@{BOOL}!CDXUTIMEEditBox@{CDXUTIMEEditBox}}
+\subsubsection[{BOOL}]{\setlength{\rightskip}{0pt plus 5cm}static {\bf CDXUTIMEEditBox::BOOL} (WINAPI $\ast$ {\em \_\-ImmGetConversionStatus})\hspace{0.3cm}{\ttfamily  \mbox{[}static, protected\mbox{]}}}}
+\label{class_c_d_x_u_t_i_m_e_edit_box_a3ba80e837a90d59f621fdd1bbca61a98}
+\hypertarget{class_c_d_x_u_t_i_m_e_edit_box_abf576cfdcf09229db4caefc448285a7e}{
+\index{CDXUTIMEEditBox@{CDXUTIMEEditBox}!BOOL@{BOOL}}
+\index{BOOL@{BOOL}!CDXUTIMEEditBox@{CDXUTIMEEditBox}}
+\subsubsection[{BOOL}]{\setlength{\rightskip}{0pt plus 5cm}static {\bf CDXUTIMEEditBox::BOOL} (WINAPI $\ast$ {\em \_\-ImmSetOpenStatus})\hspace{0.3cm}{\ttfamily  \mbox{[}static, protected\mbox{]}}}}
+\label{class_c_d_x_u_t_i_m_e_edit_box_abf576cfdcf09229db4caefc448285a7e}
+\hypertarget{class_c_d_x_u_t_i_m_e_edit_box_a5041919da19236ee4c67984b6f784789}{
+\index{CDXUTIMEEditBox@{CDXUTIMEEditBox}!BOOL@{BOOL}}
+\index{BOOL@{BOOL}!CDXUTIMEEditBox@{CDXUTIMEEditBox}}
+\subsubsection[{BOOL}]{\setlength{\rightskip}{0pt plus 5cm}static {\bf CDXUTIMEEditBox::BOOL} (WINAPI $\ast$ {\em \_\-ImmGetOpenStatus})\hspace{0.3cm}{\ttfamily  \mbox{[}static, protected\mbox{]}}}}
+\label{class_c_d_x_u_t_i_m_e_edit_box_a5041919da19236ee4c67984b6f784789}
+\hypertarget{class_c_d_x_u_t_i_m_e_edit_box_ab1828ba67744482b0aec50deb5f9ddaf}{
+\index{CDXUTIMEEditBox@{CDXUTIMEEditBox}!BOOL@{BOOL}}
+\index{BOOL@{BOOL}!CDXUTIMEEditBox@{CDXUTIMEEditBox}}
+\subsubsection[{BOOL}]{\setlength{\rightskip}{0pt plus 5cm}static {\bf CDXUTIMEEditBox::BOOL} (WINAPI $\ast$ {\em \_\-ImmReleaseContext})\hspace{0.3cm}{\ttfamily  \mbox{[}static, protected\mbox{]}}}}
+\label{class_c_d_x_u_t_i_m_e_edit_box_ab1828ba67744482b0aec50deb5f9ddaf}
+\hypertarget{class_c_d_x_u_t_i_m_e_edit_box_afcf48d94d78c8b2c71af2019c635f0fc}{
+\index{CDXUTIMEEditBox@{CDXUTIMEEditBox}!BOOL@{BOOL}}
+\index{BOOL@{BOOL}!CDXUTIMEEditBox@{CDXUTIMEEditBox}}
+\subsubsection[{BOOL}]{\setlength{\rightskip}{0pt plus 5cm}static {\bf CDXUTIMEEditBox::BOOL} (WINAPI $\ast$ {\em \_\-ImmDisableTextFrameService})\hspace{0.3cm}{\ttfamily  \mbox{[}static, protected\mbox{]}}}}
+\label{class_c_d_x_u_t_i_m_e_edit_box_afcf48d94d78c8b2c71af2019c635f0fc}
+\hypertarget{class_c_d_x_u_t_i_m_e_edit_box_a371801e557ba4ff1b753b33c1229574f}{
+\index{CDXUTIMEEditBox@{CDXUTIMEEditBox}!BOOL@{BOOL}}
+\index{BOOL@{BOOL}!CDXUTIMEEditBox@{CDXUTIMEEditBox}}
+\subsubsection[{BOOL}]{\setlength{\rightskip}{0pt plus 5cm}static {\bf CDXUTIMEEditBox::BOOL} (WINAPI $\ast$ {\em \_\-ImmUnlockIMCC})\hspace{0.3cm}{\ttfamily  \mbox{[}static, protected\mbox{]}}}}
+\label{class_c_d_x_u_t_i_m_e_edit_box_a371801e557ba4ff1b753b33c1229574f}
+\hypertarget{class_c_d_x_u_t_i_m_e_edit_box_af5189ef3dc85e23e56fa3938f7d84248}{
+\index{CDXUTIMEEditBox@{CDXUTIMEEditBox}!BOOL@{BOOL}}
+\index{BOOL@{BOOL}!CDXUTIMEEditBox@{CDXUTIMEEditBox}}
+\subsubsection[{BOOL}]{\setlength{\rightskip}{0pt plus 5cm}static {\bf CDXUTIMEEditBox::BOOL} (WINAPI $\ast$ {\em \_\-ImmUnlockIMC})\hspace{0.3cm}{\ttfamily  \mbox{[}static, protected\mbox{]}}}}
+\label{class_c_d_x_u_t_i_m_e_edit_box_af5189ef3dc85e23e56fa3938f7d84248}
+\hypertarget{class_c_d_x_u_t_i_m_e_edit_box_a77eef5eb2d0b144a985692d8a4cd5d3c}{
+\index{CDXUTIMEEditBox@{CDXUTIMEEditBox}!CheckInputLocale@{CheckInputLocale}}
+\index{CheckInputLocale@{CheckInputLocale}!CDXUTIMEEditBox@{CDXUTIMEEditBox}}
+\subsubsection[{CheckInputLocale}]{\setlength{\rightskip}{0pt plus 5cm}void CDXUTIMEEditBox::CheckInputLocale ()\hspace{0.3cm}{\ttfamily  \mbox{[}static, protected\mbox{]}}}}
+\label{class_c_d_x_u_t_i_m_e_edit_box_a77eef5eb2d0b144a985692d8a4cd5d3c}
+\hypertarget{class_c_d_x_u_t_i_m_e_edit_box_a6b51f5a9a9170a89b0430224b0d56757}{
+\index{CDXUTIMEEditBox@{CDXUTIMEEditBox}!CheckToggleState@{CheckToggleState}}
+\index{CheckToggleState@{CheckToggleState}!CDXUTIMEEditBox@{CDXUTIMEEditBox}}
+\subsubsection[{CheckToggleState}]{\setlength{\rightskip}{0pt plus 5cm}void CDXUTIMEEditBox::CheckToggleState ()\hspace{0.3cm}{\ttfamily  \mbox{[}static, protected\mbox{]}}}}
+\label{class_c_d_x_u_t_i_m_e_edit_box_a6b51f5a9a9170a89b0430224b0d56757}
+\hypertarget{class_c_d_x_u_t_i_m_e_edit_box_aa34e1f7d0fb0b2fcd5d668d6f95db8db}{
+\index{CDXUTIMEEditBox@{CDXUTIMEEditBox}!Dummy\_\-GetFileVersionInfoA@{Dummy\_\-GetFileVersionInfoA}}
+\index{Dummy\_\-GetFileVersionInfoA@{Dummy\_\-GetFileVersionInfoA}!CDXUTIMEEditBox@{CDXUTIMEEditBox}}
+\subsubsection[{Dummy\_\-GetFileVersionInfoA}]{\setlength{\rightskip}{0pt plus 5cm}static {\bf BOOL} APIENTRY CDXUTIMEEditBox::Dummy\_\-GetFileVersionInfoA ({\bf LPSTR}, \/  {\bf DWORD}, \/  {\bf DWORD}, \/  {\bf LPVOID})\hspace{0.3cm}{\ttfamily  \mbox{[}inline, static, protected\mbox{]}}}}
+\label{class_c_d_x_u_t_i_m_e_edit_box_aa34e1f7d0fb0b2fcd5d668d6f95db8db}
+\hypertarget{class_c_d_x_u_t_i_m_e_edit_box_a1d4b814a9bc32ee6b96e73a1d0cd8783}{
+\index{CDXUTIMEEditBox@{CDXUTIMEEditBox}!Dummy\_\-GetFileVersionInfoSizeA@{Dummy\_\-GetFileVersionInfoSizeA}}
+\index{Dummy\_\-GetFileVersionInfoSizeA@{Dummy\_\-GetFileVersionInfoSizeA}!CDXUTIMEEditBox@{CDXUTIMEEditBox}}
+\subsubsection[{Dummy\_\-GetFileVersionInfoSizeA}]{\setlength{\rightskip}{0pt plus 5cm}static {\bf DWORD} APIENTRY CDXUTIMEEditBox::Dummy\_\-GetFileVersionInfoSizeA ({\bf LPSTR}, \/  {\bf LPDWORD})\hspace{0.3cm}{\ttfamily  \mbox{[}inline, static, protected\mbox{]}}}}
+\label{class_c_d_x_u_t_i_m_e_edit_box_a1d4b814a9bc32ee6b96e73a1d0cd8783}
+\hypertarget{class_c_d_x_u_t_i_m_e_edit_box_a54618d363797a91b5e1f42da21f66c82}{
+\index{CDXUTIMEEditBox@{CDXUTIMEEditBox}!Dummy\_\-GetReadingString@{Dummy\_\-GetReadingString}}
+\index{Dummy\_\-GetReadingString@{Dummy\_\-GetReadingString}!CDXUTIMEEditBox@{CDXUTIMEEditBox}}
+\subsubsection[{Dummy\_\-GetReadingString}]{\setlength{\rightskip}{0pt plus 5cm}static {\bf UINT} WINAPI CDXUTIMEEditBox::Dummy\_\-GetReadingString ({\bf HIMC}, \/  {\bf UINT}, \/  {\bf LPWSTR}, \/  {\bf PINT}, \/  {\bf BOOL} $\ast$, \/  {\bf PUINT})\hspace{0.3cm}{\ttfamily  \mbox{[}inline, static, protected\mbox{]}}}}
+\label{class_c_d_x_u_t_i_m_e_edit_box_a54618d363797a91b5e1f42da21f66c82}
+\hypertarget{class_c_d_x_u_t_i_m_e_edit_box_a30b830faa43dc64e1d1131aa57c36bce}{
+\index{CDXUTIMEEditBox@{CDXUTIMEEditBox}!Dummy\_\-ImmAssociateContext@{Dummy\_\-ImmAssociateContext}}
+\index{Dummy\_\-ImmAssociateContext@{Dummy\_\-ImmAssociateContext}!CDXUTIMEEditBox@{CDXUTIMEEditBox}}
+\subsubsection[{Dummy\_\-ImmAssociateContext}]{\setlength{\rightskip}{0pt plus 5cm}static {\bf HIMC} WINAPI CDXUTIMEEditBox::Dummy\_\-ImmAssociateContext (HWND, \/  {\bf HIMC})\hspace{0.3cm}{\ttfamily  \mbox{[}inline, static, protected\mbox{]}}}}
+\label{class_c_d_x_u_t_i_m_e_edit_box_a30b830faa43dc64e1d1131aa57c36bce}
+\hypertarget{class_c_d_x_u_t_i_m_e_edit_box_af417993379722080b7adbeaaef621d87}{
+\index{CDXUTIMEEditBox@{CDXUTIMEEditBox}!Dummy\_\-ImmDisableTextFrameService@{Dummy\_\-ImmDisableTextFrameService}}
+\index{Dummy\_\-ImmDisableTextFrameService@{Dummy\_\-ImmDisableTextFrameService}!CDXUTIMEEditBox@{CDXUTIMEEditBox}}
+\subsubsection[{Dummy\_\-ImmDisableTextFrameService}]{\setlength{\rightskip}{0pt plus 5cm}static {\bf BOOL} WINAPI CDXUTIMEEditBox::Dummy\_\-ImmDisableTextFrameService ({\bf DWORD})\hspace{0.3cm}{\ttfamily  \mbox{[}inline, static, protected\mbox{]}}}}
+\label{class_c_d_x_u_t_i_m_e_edit_box_af417993379722080b7adbeaaef621d87}
+\hypertarget{class_c_d_x_u_t_i_m_e_edit_box_a76d4496d2c82e04f87b79a162c08de37}{
+\index{CDXUTIMEEditBox@{CDXUTIMEEditBox}!Dummy\_\-ImmGetCandidateListW@{Dummy\_\-ImmGetCandidateListW}}
+\index{Dummy\_\-ImmGetCandidateListW@{Dummy\_\-ImmGetCandidateListW}!CDXUTIMEEditBox@{CDXUTIMEEditBox}}
+\subsubsection[{Dummy\_\-ImmGetCandidateListW}]{\setlength{\rightskip}{0pt plus 5cm}static {\bf DWORD} WINAPI CDXUTIMEEditBox::Dummy\_\-ImmGetCandidateListW ({\bf HIMC}, \/  {\bf DWORD}, \/  {\bf LPCANDIDATELIST}, \/  {\bf DWORD})\hspace{0.3cm}{\ttfamily  \mbox{[}inline, static, protected\mbox{]}}}}
+\label{class_c_d_x_u_t_i_m_e_edit_box_a76d4496d2c82e04f87b79a162c08de37}
+\hypertarget{class_c_d_x_u_t_i_m_e_edit_box_a45677be982c66ec3db85f619ebab910b}{
+\index{CDXUTIMEEditBox@{CDXUTIMEEditBox}!Dummy\_\-ImmGetCompositionStringW@{Dummy\_\-ImmGetCompositionStringW}}
+\index{Dummy\_\-ImmGetCompositionStringW@{Dummy\_\-ImmGetCompositionStringW}!CDXUTIMEEditBox@{CDXUTIMEEditBox}}
+\subsubsection[{Dummy\_\-ImmGetCompositionStringW}]{\setlength{\rightskip}{0pt plus 5cm}static LONG WINAPI CDXUTIMEEditBox::Dummy\_\-ImmGetCompositionStringW ({\bf HIMC}, \/  {\bf DWORD}, \/  {\bf LPVOID}, \/  {\bf DWORD})\hspace{0.3cm}{\ttfamily  \mbox{[}inline, static, protected\mbox{]}}}}
+\label{class_c_d_x_u_t_i_m_e_edit_box_a45677be982c66ec3db85f619ebab910b}
+\hypertarget{class_c_d_x_u_t_i_m_e_edit_box_adc9a00e652fc7ddeb39674bb38998848}{
+\index{CDXUTIMEEditBox@{CDXUTIMEEditBox}!Dummy\_\-ImmGetContext@{Dummy\_\-ImmGetContext}}
+\index{Dummy\_\-ImmGetContext@{Dummy\_\-ImmGetContext}!CDXUTIMEEditBox@{CDXUTIMEEditBox}}
+\subsubsection[{Dummy\_\-ImmGetContext}]{\setlength{\rightskip}{0pt plus 5cm}static {\bf HIMC} WINAPI CDXUTIMEEditBox::Dummy\_\-ImmGetContext (HWND)\hspace{0.3cm}{\ttfamily  \mbox{[}inline, static, protected\mbox{]}}}}
+\label{class_c_d_x_u_t_i_m_e_edit_box_adc9a00e652fc7ddeb39674bb38998848}
+\hypertarget{class_c_d_x_u_t_i_m_e_edit_box_a1c601fc105fded94dddc03d5201886bd}{
+\index{CDXUTIMEEditBox@{CDXUTIMEEditBox}!Dummy\_\-ImmGetConversionStatus@{Dummy\_\-ImmGetConversionStatus}}
+\index{Dummy\_\-ImmGetConversionStatus@{Dummy\_\-ImmGetConversionStatus}!CDXUTIMEEditBox@{CDXUTIMEEditBox}}
+\subsubsection[{Dummy\_\-ImmGetConversionStatus}]{\setlength{\rightskip}{0pt plus 5cm}static {\bf BOOL} WINAPI CDXUTIMEEditBox::Dummy\_\-ImmGetConversionStatus ({\bf HIMC}, \/  {\bf LPDWORD}, \/  {\bf LPDWORD})\hspace{0.3cm}{\ttfamily  \mbox{[}inline, static, protected\mbox{]}}}}
+\label{class_c_d_x_u_t_i_m_e_edit_box_a1c601fc105fded94dddc03d5201886bd}
+\hypertarget{class_c_d_x_u_t_i_m_e_edit_box_a9fed648c769d710f28388f9f8113db28}{
+\index{CDXUTIMEEditBox@{CDXUTIMEEditBox}!Dummy\_\-ImmGetDefaultIMEWnd@{Dummy\_\-ImmGetDefaultIMEWnd}}
+\index{Dummy\_\-ImmGetDefaultIMEWnd@{Dummy\_\-ImmGetDefaultIMEWnd}!CDXUTIMEEditBox@{CDXUTIMEEditBox}}
+\subsubsection[{Dummy\_\-ImmGetDefaultIMEWnd}]{\setlength{\rightskip}{0pt plus 5cm}static HWND WINAPI CDXUTIMEEditBox::Dummy\_\-ImmGetDefaultIMEWnd (HWND)\hspace{0.3cm}{\ttfamily  \mbox{[}inline, static, protected\mbox{]}}}}
+\label{class_c_d_x_u_t_i_m_e_edit_box_a9fed648c769d710f28388f9f8113db28}
+\hypertarget{class_c_d_x_u_t_i_m_e_edit_box_a2741f033ba2d986072d42e06cfe6964e}{
+\index{CDXUTIMEEditBox@{CDXUTIMEEditBox}!Dummy\_\-ImmGetIMEFileNameA@{Dummy\_\-ImmGetIMEFileNameA}}
+\index{Dummy\_\-ImmGetIMEFileNameA@{Dummy\_\-ImmGetIMEFileNameA}!CDXUTIMEEditBox@{CDXUTIMEEditBox}}
+\subsubsection[{Dummy\_\-ImmGetIMEFileNameA}]{\setlength{\rightskip}{0pt plus 5cm}static {\bf UINT} WINAPI CDXUTIMEEditBox::Dummy\_\-ImmGetIMEFileNameA (HKL, \/  {\bf LPSTR}, \/  {\bf UINT})\hspace{0.3cm}{\ttfamily  \mbox{[}inline, static, protected\mbox{]}}}}
+\label{class_c_d_x_u_t_i_m_e_edit_box_a2741f033ba2d986072d42e06cfe6964e}
+\hypertarget{class_c_d_x_u_t_i_m_e_edit_box_aa765987d0faac289568999c30cfa318f}{
+\index{CDXUTIMEEditBox@{CDXUTIMEEditBox}!Dummy\_\-ImmGetOpenStatus@{Dummy\_\-ImmGetOpenStatus}}
+\index{Dummy\_\-ImmGetOpenStatus@{Dummy\_\-ImmGetOpenStatus}!CDXUTIMEEditBox@{CDXUTIMEEditBox}}
+\subsubsection[{Dummy\_\-ImmGetOpenStatus}]{\setlength{\rightskip}{0pt plus 5cm}static {\bf BOOL} WINAPI CDXUTIMEEditBox::Dummy\_\-ImmGetOpenStatus ({\bf HIMC})\hspace{0.3cm}{\ttfamily  \mbox{[}inline, static, protected\mbox{]}}}}
+\label{class_c_d_x_u_t_i_m_e_edit_box_aa765987d0faac289568999c30cfa318f}
+\hypertarget{class_c_d_x_u_t_i_m_e_edit_box_a27d9701b01e3dd2f619bfed972a20c84}{
+\index{CDXUTIMEEditBox@{CDXUTIMEEditBox}!Dummy\_\-ImmGetVirtualKey@{Dummy\_\-ImmGetVirtualKey}}
+\index{Dummy\_\-ImmGetVirtualKey@{Dummy\_\-ImmGetVirtualKey}!CDXUTIMEEditBox@{CDXUTIMEEditBox}}
+\subsubsection[{Dummy\_\-ImmGetVirtualKey}]{\setlength{\rightskip}{0pt plus 5cm}static {\bf UINT} WINAPI CDXUTIMEEditBox::Dummy\_\-ImmGetVirtualKey (HWND)\hspace{0.3cm}{\ttfamily  \mbox{[}inline, static, protected\mbox{]}}}}
+\label{class_c_d_x_u_t_i_m_e_edit_box_a27d9701b01e3dd2f619bfed972a20c84}
+\hypertarget{class_c_d_x_u_t_i_m_e_edit_box_a0429a5b7c90ab227fc79d0e82f61db9d}{
+\index{CDXUTIMEEditBox@{CDXUTIMEEditBox}!Dummy\_\-ImmIsIME@{Dummy\_\-ImmIsIME}}
+\index{Dummy\_\-ImmIsIME@{Dummy\_\-ImmIsIME}!CDXUTIMEEditBox@{CDXUTIMEEditBox}}
+\subsubsection[{Dummy\_\-ImmIsIME}]{\setlength{\rightskip}{0pt plus 5cm}static {\bf BOOL} WINAPI CDXUTIMEEditBox::Dummy\_\-ImmIsIME (HKL)\hspace{0.3cm}{\ttfamily  \mbox{[}inline, static, protected\mbox{]}}}}
+\label{class_c_d_x_u_t_i_m_e_edit_box_a0429a5b7c90ab227fc79d0e82f61db9d}
+\hypertarget{class_c_d_x_u_t_i_m_e_edit_box_a0251f6c7891e81c331f93217805ef9c0}{
+\index{CDXUTIMEEditBox@{CDXUTIMEEditBox}!Dummy\_\-ImmLockIMC@{Dummy\_\-ImmLockIMC}}
+\index{Dummy\_\-ImmLockIMC@{Dummy\_\-ImmLockIMC}!CDXUTIMEEditBox@{CDXUTIMEEditBox}}
+\subsubsection[{Dummy\_\-ImmLockIMC}]{\setlength{\rightskip}{0pt plus 5cm}static INPUTCONTEXT$\ast$ WINAPI CDXUTIMEEditBox::Dummy\_\-ImmLockIMC ({\bf HIMC})\hspace{0.3cm}{\ttfamily  \mbox{[}inline, static, protected\mbox{]}}}}
+\label{class_c_d_x_u_t_i_m_e_edit_box_a0251f6c7891e81c331f93217805ef9c0}
+\hypertarget{class_c_d_x_u_t_i_m_e_edit_box_a3c14311c66c4a77d5b621192fe54f3b0}{
+\index{CDXUTIMEEditBox@{CDXUTIMEEditBox}!Dummy\_\-ImmLockIMCC@{Dummy\_\-ImmLockIMCC}}
+\index{Dummy\_\-ImmLockIMCC@{Dummy\_\-ImmLockIMCC}!CDXUTIMEEditBox@{CDXUTIMEEditBox}}
+\subsubsection[{Dummy\_\-ImmLockIMCC}]{\setlength{\rightskip}{0pt plus 5cm}static {\bf LPVOID} WINAPI CDXUTIMEEditBox::Dummy\_\-ImmLockIMCC (HIMCC)\hspace{0.3cm}{\ttfamily  \mbox{[}inline, static, protected\mbox{]}}}}
+\label{class_c_d_x_u_t_i_m_e_edit_box_a3c14311c66c4a77d5b621192fe54f3b0}
+\hypertarget{class_c_d_x_u_t_i_m_e_edit_box_ac1aa6446ec3d96e8dd281a66d99d2aea}{
+\index{CDXUTIMEEditBox@{CDXUTIMEEditBox}!Dummy\_\-ImmNotifyIME@{Dummy\_\-ImmNotifyIME}}
+\index{Dummy\_\-ImmNotifyIME@{Dummy\_\-ImmNotifyIME}!CDXUTIMEEditBox@{CDXUTIMEEditBox}}
+\subsubsection[{Dummy\_\-ImmNotifyIME}]{\setlength{\rightskip}{0pt plus 5cm}static {\bf BOOL} WINAPI CDXUTIMEEditBox::Dummy\_\-ImmNotifyIME ({\bf HIMC}, \/  {\bf DWORD}, \/  {\bf DWORD}, \/  {\bf DWORD})\hspace{0.3cm}{\ttfamily  \mbox{[}inline, static, protected\mbox{]}}}}
+\label{class_c_d_x_u_t_i_m_e_edit_box_ac1aa6446ec3d96e8dd281a66d99d2aea}
+\hypertarget{class_c_d_x_u_t_i_m_e_edit_box_a9b878886ec372fd37be7ec1d9fcf448f}{
+\index{CDXUTIMEEditBox@{CDXUTIMEEditBox}!Dummy\_\-ImmReleaseContext@{Dummy\_\-ImmReleaseContext}}
+\index{Dummy\_\-ImmReleaseContext@{Dummy\_\-ImmReleaseContext}!CDXUTIMEEditBox@{CDXUTIMEEditBox}}
+\subsubsection[{Dummy\_\-ImmReleaseContext}]{\setlength{\rightskip}{0pt plus 5cm}static {\bf BOOL} WINAPI CDXUTIMEEditBox::Dummy\_\-ImmReleaseContext (HWND, \/  {\bf HIMC})\hspace{0.3cm}{\ttfamily  \mbox{[}inline, static, protected\mbox{]}}}}
+\label{class_c_d_x_u_t_i_m_e_edit_box_a9b878886ec372fd37be7ec1d9fcf448f}
+\hypertarget{class_c_d_x_u_t_i_m_e_edit_box_a4fbcb1ed6d0f08f1a2149e86af71c8a6}{
+\index{CDXUTIMEEditBox@{CDXUTIMEEditBox}!Dummy\_\-ImmSetConversionStatus@{Dummy\_\-ImmSetConversionStatus}}
+\index{Dummy\_\-ImmSetConversionStatus@{Dummy\_\-ImmSetConversionStatus}!CDXUTIMEEditBox@{CDXUTIMEEditBox}}
+\subsubsection[{Dummy\_\-ImmSetConversionStatus}]{\setlength{\rightskip}{0pt plus 5cm}static {\bf BOOL} WINAPI CDXUTIMEEditBox::Dummy\_\-ImmSetConversionStatus ({\bf HIMC}, \/  {\bf DWORD}, \/  {\bf DWORD})\hspace{0.3cm}{\ttfamily  \mbox{[}inline, static, protected\mbox{]}}}}
+\label{class_c_d_x_u_t_i_m_e_edit_box_a4fbcb1ed6d0f08f1a2149e86af71c8a6}
+\hypertarget{class_c_d_x_u_t_i_m_e_edit_box_acf3e0acb26812bcf8285d81e3bd268c5}{
+\index{CDXUTIMEEditBox@{CDXUTIMEEditBox}!Dummy\_\-ImmSetOpenStatus@{Dummy\_\-ImmSetOpenStatus}}
+\index{Dummy\_\-ImmSetOpenStatus@{Dummy\_\-ImmSetOpenStatus}!CDXUTIMEEditBox@{CDXUTIMEEditBox}}
+\subsubsection[{Dummy\_\-ImmSetOpenStatus}]{\setlength{\rightskip}{0pt plus 5cm}static {\bf BOOL} WINAPI CDXUTIMEEditBox::Dummy\_\-ImmSetOpenStatus ({\bf HIMC}, \/  {\bf BOOL})\hspace{0.3cm}{\ttfamily  \mbox{[}inline, static, protected\mbox{]}}}}
+\label{class_c_d_x_u_t_i_m_e_edit_box_acf3e0acb26812bcf8285d81e3bd268c5}
+\hypertarget{class_c_d_x_u_t_i_m_e_edit_box_a91ad4dfb9e1f2e4194557a36989de3d6}{
+\index{CDXUTIMEEditBox@{CDXUTIMEEditBox}!Dummy\_\-ImmSimulateHotKey@{Dummy\_\-ImmSimulateHotKey}}
+\index{Dummy\_\-ImmSimulateHotKey@{Dummy\_\-ImmSimulateHotKey}!CDXUTIMEEditBox@{CDXUTIMEEditBox}}
+\subsubsection[{Dummy\_\-ImmSimulateHotKey}]{\setlength{\rightskip}{0pt plus 5cm}static {\bf BOOL} WINAPI CDXUTIMEEditBox::Dummy\_\-ImmSimulateHotKey (HWND, \/  {\bf DWORD})\hspace{0.3cm}{\ttfamily  \mbox{[}inline, static, protected\mbox{]}}}}
+\label{class_c_d_x_u_t_i_m_e_edit_box_a91ad4dfb9e1f2e4194557a36989de3d6}
+\hypertarget{class_c_d_x_u_t_i_m_e_edit_box_a84759711c77bb12d6dbf10ce089e36c9}{
+\index{CDXUTIMEEditBox@{CDXUTIMEEditBox}!Dummy\_\-ImmUnlockIMC@{Dummy\_\-ImmUnlockIMC}}
+\index{Dummy\_\-ImmUnlockIMC@{Dummy\_\-ImmUnlockIMC}!CDXUTIMEEditBox@{CDXUTIMEEditBox}}
+\subsubsection[{Dummy\_\-ImmUnlockIMC}]{\setlength{\rightskip}{0pt plus 5cm}static {\bf BOOL} WINAPI CDXUTIMEEditBox::Dummy\_\-ImmUnlockIMC ({\bf HIMC})\hspace{0.3cm}{\ttfamily  \mbox{[}inline, static, protected\mbox{]}}}}
+\label{class_c_d_x_u_t_i_m_e_edit_box_a84759711c77bb12d6dbf10ce089e36c9}
+\hypertarget{class_c_d_x_u_t_i_m_e_edit_box_a5795f61c3458a7f260e6af8a874cc509}{
+\index{CDXUTIMEEditBox@{CDXUTIMEEditBox}!Dummy\_\-ImmUnlockIMCC@{Dummy\_\-ImmUnlockIMCC}}
+\index{Dummy\_\-ImmUnlockIMCC@{Dummy\_\-ImmUnlockIMCC}!CDXUTIMEEditBox@{CDXUTIMEEditBox}}
+\subsubsection[{Dummy\_\-ImmUnlockIMCC}]{\setlength{\rightskip}{0pt plus 5cm}static {\bf BOOL} WINAPI CDXUTIMEEditBox::Dummy\_\-ImmUnlockIMCC (HIMCC)\hspace{0.3cm}{\ttfamily  \mbox{[}inline, static, protected\mbox{]}}}}
+\label{class_c_d_x_u_t_i_m_e_edit_box_a5795f61c3458a7f260e6af8a874cc509}
+\hypertarget{class_c_d_x_u_t_i_m_e_edit_box_acf63c3fc67325d84c868546f4fa45a48}{
+\index{CDXUTIMEEditBox@{CDXUTIMEEditBox}!Dummy\_\-ShowReadingWindow@{Dummy\_\-ShowReadingWindow}}
+\index{Dummy\_\-ShowReadingWindow@{Dummy\_\-ShowReadingWindow}!CDXUTIMEEditBox@{CDXUTIMEEditBox}}
+\subsubsection[{Dummy\_\-ShowReadingWindow}]{\setlength{\rightskip}{0pt plus 5cm}static {\bf BOOL} WINAPI CDXUTIMEEditBox::Dummy\_\-ShowReadingWindow ({\bf HIMC}, \/  {\bf BOOL})\hspace{0.3cm}{\ttfamily  \mbox{[}inline, static, protected\mbox{]}}}}
+\label{class_c_d_x_u_t_i_m_e_edit_box_acf63c3fc67325d84c868546f4fa45a48}
+\hypertarget{class_c_d_x_u_t_i_m_e_edit_box_af205e8fd2967b53c64f9a1d9a9436130}{
+\index{CDXUTIMEEditBox@{CDXUTIMEEditBox}!Dummy\_\-VerQueryValueA@{Dummy\_\-VerQueryValueA}}
+\index{Dummy\_\-VerQueryValueA@{Dummy\_\-VerQueryValueA}!CDXUTIMEEditBox@{CDXUTIMEEditBox}}
+\subsubsection[{Dummy\_\-VerQueryValueA}]{\setlength{\rightskip}{0pt plus 5cm}static {\bf BOOL} APIENTRY CDXUTIMEEditBox::Dummy\_\-VerQueryValueA (const  {\em LPVOID}, \/  {\bf LPSTR}, \/  {\bf LPVOID} $\ast$, \/  {\bf PUINT})\hspace{0.3cm}{\ttfamily  \mbox{[}inline, static, protected\mbox{]}}}}
+\label{class_c_d_x_u_t_i_m_e_edit_box_af205e8fd2967b53c64f9a1d9a9436130}
+\hypertarget{class_c_d_x_u_t_i_m_e_edit_box_a69382519044b224504e511141bcaeae3}{
+\index{CDXUTIMEEditBox@{CDXUTIMEEditBox}!DWORD@{DWORD}}
+\index{DWORD@{DWORD}!CDXUTIMEEditBox@{CDXUTIMEEditBox}}
+\subsubsection[{DWORD}]{\setlength{\rightskip}{0pt plus 5cm}static {\bf CDXUTIMEEditBox::DWORD} (APIENTRY $\ast$ {\em \_\-GetFileVersionInfoSizeA})\hspace{0.3cm}{\ttfamily  \mbox{[}static, protected\mbox{]}}}}
+\label{class_c_d_x_u_t_i_m_e_edit_box_a69382519044b224504e511141bcaeae3}
+\hypertarget{class_c_d_x_u_t_i_m_e_edit_box_a6e59c0aeb1b6cd02eb08437d5996a1c0}{
+\index{CDXUTIMEEditBox@{CDXUTIMEEditBox}!DWORD@{DWORD}}
+\index{DWORD@{DWORD}!CDXUTIMEEditBox@{CDXUTIMEEditBox}}
+\subsubsection[{DWORD}]{\setlength{\rightskip}{0pt plus 5cm}static {\bf CDXUTIMEEditBox::DWORD} (WINAPI $\ast$ {\em \_\-ImmGetCandidateListW})\hspace{0.3cm}{\ttfamily  \mbox{[}static, protected\mbox{]}}}}
+\label{class_c_d_x_u_t_i_m_e_edit_box_a6e59c0aeb1b6cd02eb08437d5996a1c0}
+\hypertarget{class_c_d_x_u_t_i_m_e_edit_box_ae8f7bd48b81e44c434a14107f8d36076}{
+\index{CDXUTIMEEditBox@{CDXUTIMEEditBox}!EnableImeSystem@{EnableImeSystem}}
+\index{EnableImeSystem@{EnableImeSystem}!CDXUTIMEEditBox@{CDXUTIMEEditBox}}
+\subsubsection[{EnableImeSystem}]{\setlength{\rightskip}{0pt plus 5cm}void CDXUTIMEEditBox::EnableImeSystem (bool {\em bEnable})\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}
+\label{class_c_d_x_u_t_i_m_e_edit_box_ae8f7bd48b81e44c434a14107f8d36076}
+\hypertarget{class_c_d_x_u_t_i_m_e_edit_box_a220c48fee1e5049fc24313a10ef2201f}{
+\index{CDXUTIMEEditBox@{CDXUTIMEEditBox}!FinalizeString@{FinalizeString}}
+\index{FinalizeString@{FinalizeString}!CDXUTIMEEditBox@{CDXUTIMEEditBox}}
+\subsubsection[{FinalizeString}]{\setlength{\rightskip}{0pt plus 5cm}void CDXUTIMEEditBox::FinalizeString (bool {\em bSend})\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{class_c_d_x_u_t_i_m_e_edit_box_a220c48fee1e5049fc24313a10ef2201f}
+\hypertarget{class_c_d_x_u_t_i_m_e_edit_box_a4b734d1075be1611fbbd0455ccfedc8f}{
+\index{CDXUTIMEEditBox@{CDXUTIMEEditBox}!GetImeId@{GetImeId}}
+\index{GetImeId@{GetImeId}!CDXUTIMEEditBox@{CDXUTIMEEditBox}}
+\subsubsection[{GetImeId}]{\setlength{\rightskip}{0pt plus 5cm}{\bf DWORD} CDXUTIMEEditBox::GetImeId ({\bf UINT} {\em uIndex} = {\ttfamily 0})\hspace{0.3cm}{\ttfamily  \mbox{[}static, protected\mbox{]}}}}
+\label{class_c_d_x_u_t_i_m_e_edit_box_a4b734d1075be1611fbbd0455ccfedc8f}
+\hypertarget{class_c_d_x_u_t_i_m_e_edit_box_aba18bf16401dd53980681c8e80aed8fd}{
+\index{CDXUTIMEEditBox@{CDXUTIMEEditBox}!GetLanguage@{GetLanguage}}
+\index{GetLanguage@{GetLanguage}!CDXUTIMEEditBox@{CDXUTIMEEditBox}}
+\subsubsection[{GetLanguage}]{\setlength{\rightskip}{0pt plus 5cm}static WORD CDXUTIMEEditBox::GetLanguage ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline, static, protected\mbox{]}}}}
+\label{class_c_d_x_u_t_i_m_e_edit_box_aba18bf16401dd53980681c8e80aed8fd}
+\hypertarget{class_c_d_x_u_t_i_m_e_edit_box_a4edd66c64b9c6df7f2a2e2e58992fab0}{
+\index{CDXUTIMEEditBox@{CDXUTIMEEditBox}!GetPrimaryLanguage@{GetPrimaryLanguage}}
+\index{GetPrimaryLanguage@{GetPrimaryLanguage}!CDXUTIMEEditBox@{CDXUTIMEEditBox}}
+\subsubsection[{GetPrimaryLanguage}]{\setlength{\rightskip}{0pt plus 5cm}static WORD CDXUTIMEEditBox::GetPrimaryLanguage ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline, static, protected\mbox{]}}}}
+\label{class_c_d_x_u_t_i_m_e_edit_box_a4edd66c64b9c6df7f2a2e2e58992fab0}
+\hypertarget{class_c_d_x_u_t_i_m_e_edit_box_aef1648e42d87d0f46691c427759cf71d}{
+\index{CDXUTIMEEditBox@{CDXUTIMEEditBox}!GetPrivateReadingString@{GetPrivateReadingString}}
+\index{GetPrivateReadingString@{GetPrivateReadingString}!CDXUTIMEEditBox@{CDXUTIMEEditBox}}
+\subsubsection[{GetPrivateReadingString}]{\setlength{\rightskip}{0pt plus 5cm}void CDXUTIMEEditBox::GetPrivateReadingString ()\hspace{0.3cm}{\ttfamily  \mbox{[}static, protected\mbox{]}}}}
+\label{class_c_d_x_u_t_i_m_e_edit_box_aef1648e42d87d0f46691c427759cf71d}
+\hypertarget{class_c_d_x_u_t_i_m_e_edit_box_ac6593b484984dd398fa7311b010380ca}{
+\index{CDXUTIMEEditBox@{CDXUTIMEEditBox}!GetReadingWindowOrientation@{GetReadingWindowOrientation}}
+\index{GetReadingWindowOrientation@{GetReadingWindowOrientation}!CDXUTIMEEditBox@{CDXUTIMEEditBox}}
+\subsubsection[{GetReadingWindowOrientation}]{\setlength{\rightskip}{0pt plus 5cm}void CDXUTIMEEditBox::GetReadingWindowOrientation ({\bf DWORD} {\em dwId})\hspace{0.3cm}{\ttfamily  \mbox{[}static, protected\mbox{]}}}}
+\label{class_c_d_x_u_t_i_m_e_edit_box_ac6593b484984dd398fa7311b010380ca}
+\hypertarget{class_c_d_x_u_t_i_m_e_edit_box_ad919907a4c55dad632a9195b49c63765}{
+\index{CDXUTIMEEditBox@{CDXUTIMEEditBox}!GetSubLanguage@{GetSubLanguage}}
+\index{GetSubLanguage@{GetSubLanguage}!CDXUTIMEEditBox@{CDXUTIMEEditBox}}
+\subsubsection[{GetSubLanguage}]{\setlength{\rightskip}{0pt plus 5cm}static WORD CDXUTIMEEditBox::GetSubLanguage ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline, static, protected\mbox{]}}}}
+\label{class_c_d_x_u_t_i_m_e_edit_box_ad919907a4c55dad632a9195b49c63765}
+\hypertarget{class_c_d_x_u_t_i_m_e_edit_box_a02795ef1096e7a276afdc501c606eab9}{
+\index{CDXUTIMEEditBox@{CDXUTIMEEditBox}!HandleMouse@{HandleMouse}}
+\index{HandleMouse@{HandleMouse}!CDXUTIMEEditBox@{CDXUTIMEEditBox}}
+\subsubsection[{HandleMouse}]{\setlength{\rightskip}{0pt plus 5cm}bool CDXUTIMEEditBox::HandleMouse ({\bf UINT} {\em uMsg}, \/  POINT {\em pt}, \/  WPARAM {\em wParam}, \/  LPARAM {\em lParam})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{class_c_d_x_u_t_i_m_e_edit_box_a02795ef1096e7a276afdc501c606eab9}
+
+
+Reimplemented from \hyperlink{class_c_d_x_u_t_edit_box_afadff4a882c187926a7b8173eb7d97cc}{CDXUTEditBox}.\hypertarget{class_c_d_x_u_t_i_m_e_edit_box_a933f71681cd58fae53c1ee3cb04d5484}{
+\index{CDXUTIMEEditBox@{CDXUTIMEEditBox}!HIMC@{HIMC}}
+\index{HIMC@{HIMC}!CDXUTIMEEditBox@{CDXUTIMEEditBox}}
+\subsubsection[{HIMC}]{\setlength{\rightskip}{0pt plus 5cm}static {\bf CDXUTIMEEditBox::HIMC} (WINAPI $\ast$ {\em \_\-ImmAssociateContext})\hspace{0.3cm}{\ttfamily  \mbox{[}static, protected\mbox{]}}}}
+\label{class_c_d_x_u_t_i_m_e_edit_box_a933f71681cd58fae53c1ee3cb04d5484}
+\hypertarget{class_c_d_x_u_t_i_m_e_edit_box_a0811d012d7ddb5d3384cdea1beb5aa68}{
+\index{CDXUTIMEEditBox@{CDXUTIMEEditBox}!HIMC@{HIMC}}
+\index{HIMC@{HIMC}!CDXUTIMEEditBox@{CDXUTIMEEditBox}}
+\subsubsection[{HIMC}]{\setlength{\rightskip}{0pt plus 5cm}static {\bf CDXUTIMEEditBox::HIMC} (WINAPI $\ast$ {\em \_\-ImmGetContext})\hspace{0.3cm}{\ttfamily  \mbox{[}static, protected\mbox{]}}}}
+\label{class_c_d_x_u_t_i_m_e_edit_box_a0811d012d7ddb5d3384cdea1beb5aa68}
+\hypertarget{class_c_d_x_u_t_i_m_e_edit_box_a383dbe71ad7fe88f3a4b2e6bfd588ca4}{
+\index{CDXUTIMEEditBox@{CDXUTIMEEditBox}!HWND@{HWND}}
+\index{HWND@{HWND}!CDXUTIMEEditBox@{CDXUTIMEEditBox}}
+\subsubsection[{HWND}]{\setlength{\rightskip}{0pt plus 5cm}static CDXUTIMEEditBox::HWND (WINAPI $\ast$ {\em \_\-ImmGetDefaultIMEWnd})\hspace{0.3cm}{\ttfamily  \mbox{[}static, protected\mbox{]}}}}
+\label{class_c_d_x_u_t_i_m_e_edit_box_a383dbe71ad7fe88f3a4b2e6bfd588ca4}
+\hypertarget{class_c_d_x_u_t_i_m_e_edit_box_abf7a8ceb1f658ddbde5493c319edcac1}{
+\index{CDXUTIMEEditBox@{CDXUTIMEEditBox}!Initialize@{Initialize}}
+\index{Initialize@{Initialize}!CDXUTIMEEditBox@{CDXUTIMEEditBox}}
+\subsubsection[{Initialize}]{\setlength{\rightskip}{0pt plus 5cm}void CDXUTIMEEditBox::Initialize ()\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}
+\label{class_c_d_x_u_t_i_m_e_edit_box_abf7a8ceb1f658ddbde5493c319edcac1}
+\hypertarget{class_c_d_x_u_t_i_m_e_edit_box_a5ea3424861783fb93d639481681ee338}{
+\index{CDXUTIMEEditBox@{CDXUTIMEEditBox}!LONG@{LONG}}
+\index{LONG@{LONG}!CDXUTIMEEditBox@{CDXUTIMEEditBox}}
+\subsubsection[{LONG}]{\setlength{\rightskip}{0pt plus 5cm}static CDXUTIMEEditBox::LONG (WINAPI $\ast$ {\em \_\-ImmGetCompositionStringW})\hspace{0.3cm}{\ttfamily  \mbox{[}static, protected\mbox{]}}}}
+\label{class_c_d_x_u_t_i_m_e_edit_box_a5ea3424861783fb93d639481681ee338}
+\hypertarget{class_c_d_x_u_t_i_m_e_edit_box_a09d09ca5bffb9f421c9c97858105586b}{
+\index{CDXUTIMEEditBox@{CDXUTIMEEditBox}!LPVOID@{LPVOID}}
+\index{LPVOID@{LPVOID}!CDXUTIMEEditBox@{CDXUTIMEEditBox}}
+\subsubsection[{LPVOID}]{\setlength{\rightskip}{0pt plus 5cm}static {\bf CDXUTIMEEditBox::LPVOID} (WINAPI $\ast$ {\em \_\-ImmLockIMCC})\hspace{0.3cm}{\ttfamily  \mbox{[}static, protected\mbox{]}}}}
+\label{class_c_d_x_u_t_i_m_e_edit_box_a09d09ca5bffb9f421c9c97858105586b}
+\hypertarget{class_c_d_x_u_t_i_m_e_edit_box_ac656a213385fb3245938f0297d58d0de}{
+\index{CDXUTIMEEditBox@{CDXUTIMEEditBox}!MsgProc@{MsgProc}}
+\index{MsgProc@{MsgProc}!CDXUTIMEEditBox@{CDXUTIMEEditBox}}
+\subsubsection[{MsgProc}]{\setlength{\rightskip}{0pt plus 5cm}bool CDXUTIMEEditBox::MsgProc ({\bf UINT} {\em uMsg}, \/  WPARAM {\em wParam}, \/  LPARAM {\em lParam})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{class_c_d_x_u_t_i_m_e_edit_box_ac656a213385fb3245938f0297d58d0de}
+
+
+Reimplemented from \hyperlink{class_c_d_x_u_t_edit_box_adca915977ba1b8019594ef5d350ed03e}{CDXUTEditBox}.\hypertarget{class_c_d_x_u_t_i_m_e_edit_box_a6f3ada4a18eb810420806d5112fd7de6}{
+\index{CDXUTIMEEditBox@{CDXUTIMEEditBox}!OnFocusIn@{OnFocusIn}}
+\index{OnFocusIn@{OnFocusIn}!CDXUTIMEEditBox@{CDXUTIMEEditBox}}
+\subsubsection[{OnFocusIn}]{\setlength{\rightskip}{0pt plus 5cm}void CDXUTIMEEditBox::OnFocusIn ()\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{class_c_d_x_u_t_i_m_e_edit_box_a6f3ada4a18eb810420806d5112fd7de6}
+
+
+Reimplemented from \hyperlink{class_c_d_x_u_t_edit_box_adc767031600f1ea99ebcf533e00d7948}{CDXUTEditBox}.\hypertarget{class_c_d_x_u_t_i_m_e_edit_box_a32592319ff970787b0cfa1c59b61f4d6}{
+\index{CDXUTIMEEditBox@{CDXUTIMEEditBox}!OnFocusOut@{OnFocusOut}}
+\index{OnFocusOut@{OnFocusOut}!CDXUTIMEEditBox@{CDXUTIMEEditBox}}
+\subsubsection[{OnFocusOut}]{\setlength{\rightskip}{0pt plus 5cm}void CDXUTIMEEditBox::OnFocusOut ()\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{class_c_d_x_u_t_i_m_e_edit_box_a32592319ff970787b0cfa1c59b61f4d6}
+
+
+Reimplemented from \hyperlink{class_c_d_x_u_t_control_afd5667a4ba9349e98db8c27a1b1d280d}{CDXUTControl}.\hypertarget{class_c_d_x_u_t_i_m_e_edit_box_a3abd5952d806d278c1778c2b27327d25}{
+\index{CDXUTIMEEditBox@{CDXUTIMEEditBox}!PumpMessage@{PumpMessage}}
+\index{PumpMessage@{PumpMessage}!CDXUTIMEEditBox@{CDXUTIMEEditBox}}
+\subsubsection[{PumpMessage}]{\setlength{\rightskip}{0pt plus 5cm}void CDXUTIMEEditBox::PumpMessage ()}}
+\label{class_c_d_x_u_t_i_m_e_edit_box_a3abd5952d806d278c1778c2b27327d25}
+\hypertarget{class_c_d_x_u_t_i_m_e_edit_box_aa473937c56d6feef6777fd62b4d5a48c}{
+\index{CDXUTIMEEditBox@{CDXUTIMEEditBox}!Render@{Render}}
+\index{Render@{Render}!CDXUTIMEEditBox@{CDXUTIMEEditBox}}
+\subsubsection[{Render}]{\setlength{\rightskip}{0pt plus 5cm}void CDXUTIMEEditBox::Render (IDirect3DDevice9 $\ast$ {\em pd3dDevice}, \/  float {\em fElapsedTime})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{class_c_d_x_u_t_i_m_e_edit_box_aa473937c56d6feef6777fd62b4d5a48c}
+
+
+Reimplemented from \hyperlink{class_c_d_x_u_t_edit_box_af36e6dfc05fb96ee4f60544cc402e760}{CDXUTEditBox}.\hypertarget{class_c_d_x_u_t_i_m_e_edit_box_a86b36b4e056be117ba0a59550edae849}{
+\index{CDXUTIMEEditBox@{CDXUTIMEEditBox}!RenderCandidateReadingWindow@{RenderCandidateReadingWindow}}
+\index{RenderCandidateReadingWindow@{RenderCandidateReadingWindow}!CDXUTIMEEditBox@{CDXUTIMEEditBox}}
+\subsubsection[{RenderCandidateReadingWindow}]{\setlength{\rightskip}{0pt plus 5cm}void CDXUTIMEEditBox::RenderCandidateReadingWindow (IDirect3DDevice9 $\ast$ {\em pd3dDevice}, \/  float {\em fElapsedTime}, \/  bool {\em bReading})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{class_c_d_x_u_t_i_m_e_edit_box_a86b36b4e056be117ba0a59550edae849}
+\hypertarget{class_c_d_x_u_t_i_m_e_edit_box_ad8480eedb3123ada70d9b3a702a83c57}{
+\index{CDXUTIMEEditBox@{CDXUTIMEEditBox}!RenderComposition@{RenderComposition}}
+\index{RenderComposition@{RenderComposition}!CDXUTIMEEditBox@{CDXUTIMEEditBox}}
+\subsubsection[{RenderComposition}]{\setlength{\rightskip}{0pt plus 5cm}void CDXUTIMEEditBox::RenderComposition (IDirect3DDevice9 $\ast$ {\em pd3dDevice}, \/  float {\em fElapsedTime})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{class_c_d_x_u_t_i_m_e_edit_box_ad8480eedb3123ada70d9b3a702a83c57}
+\hypertarget{class_c_d_x_u_t_i_m_e_edit_box_a02bbb85b3dd6c19cf6bb2312c8ee4595}{
+\index{CDXUTIMEEditBox@{CDXUTIMEEditBox}!RenderIndicator@{RenderIndicator}}
+\index{RenderIndicator@{RenderIndicator}!CDXUTIMEEditBox@{CDXUTIMEEditBox}}
+\subsubsection[{RenderIndicator}]{\setlength{\rightskip}{0pt plus 5cm}void CDXUTIMEEditBox::RenderIndicator (IDirect3DDevice9 $\ast$ {\em pd3dDevice}, \/  float {\em fElapsedTime})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{class_c_d_x_u_t_i_m_e_edit_box_a02bbb85b3dd6c19cf6bb2312c8ee4595}
+\hypertarget{class_c_d_x_u_t_i_m_e_edit_box_aaf6fd90a9cd492f6194bb0a8053fbcc3}{
+\index{CDXUTIMEEditBox@{CDXUTIMEEditBox}!ResetCompositionString@{ResetCompositionString}}
+\index{ResetCompositionString@{ResetCompositionString}!CDXUTIMEEditBox@{CDXUTIMEEditBox}}
+\subsubsection[{ResetCompositionString}]{\setlength{\rightskip}{0pt plus 5cm}void CDXUTIMEEditBox::ResetCompositionString ()\hspace{0.3cm}{\ttfamily  \mbox{[}static, protected\mbox{]}}}}
+\label{class_c_d_x_u_t_i_m_e_edit_box_aaf6fd90a9cd492f6194bb0a8053fbcc3}
+\hypertarget{class_c_d_x_u_t_i_m_e_edit_box_a1f3cf8e4deb6c0881aa4036b3669825c}{
+\index{CDXUTIMEEditBox@{CDXUTIMEEditBox}!SendCompString@{SendCompString}}
+\index{SendCompString@{SendCompString}!CDXUTIMEEditBox@{CDXUTIMEEditBox}}
+\subsubsection[{SendCompString}]{\setlength{\rightskip}{0pt plus 5cm}void CDXUTIMEEditBox::SendCompString ()\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{class_c_d_x_u_t_i_m_e_edit_box_a1f3cf8e4deb6c0881aa4036b3669825c}
+\hypertarget{class_c_d_x_u_t_i_m_e_edit_box_a41a841ff166e8221dd4a82c58661790f}{
+\index{CDXUTIMEEditBox@{CDXUTIMEEditBox}!SendKey@{SendKey}}
+\index{SendKey@{SendKey}!CDXUTIMEEditBox@{CDXUTIMEEditBox}}
+\subsubsection[{SendKey}]{\setlength{\rightskip}{0pt plus 5cm}void CDXUTIMEEditBox::SendKey (BYTE {\em nVirtKey})\hspace{0.3cm}{\ttfamily  \mbox{[}static, protected\mbox{]}}}}
+\label{class_c_d_x_u_t_i_m_e_edit_box_a41a841ff166e8221dd4a82c58661790f}
+\hypertarget{class_c_d_x_u_t_i_m_e_edit_box_a0f59d99fd3cef32c0a0a1b4c3b5bcfd8}{
+\index{CDXUTIMEEditBox@{CDXUTIMEEditBox}!SetupImeApi@{SetupImeApi}}
+\index{SetupImeApi@{SetupImeApi}!CDXUTIMEEditBox@{CDXUTIMEEditBox}}
+\subsubsection[{SetupImeApi}]{\setlength{\rightskip}{0pt plus 5cm}void CDXUTIMEEditBox::SetupImeApi ()\hspace{0.3cm}{\ttfamily  \mbox{[}static, protected\mbox{]}}}}
+\label{class_c_d_x_u_t_i_m_e_edit_box_a0f59d99fd3cef32c0a0a1b4c3b5bcfd8}
+\hypertarget{class_c_d_x_u_t_i_m_e_edit_box_ae6c5d46eaaf42af035d3b4dbaa420243}{
+\index{CDXUTIMEEditBox@{CDXUTIMEEditBox}!StaticMsgProc@{StaticMsgProc}}
+\index{StaticMsgProc@{StaticMsgProc}!CDXUTIMEEditBox@{CDXUTIMEEditBox}}
+\subsubsection[{StaticMsgProc}]{\setlength{\rightskip}{0pt plus 5cm}bool CDXUTIMEEditBox::StaticMsgProc ({\bf UINT} {\em uMsg}, \/  WPARAM {\em wParam}, \/  LPARAM {\em lParam})\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}
+\label{class_c_d_x_u_t_i_m_e_edit_box_ae6c5d46eaaf42af035d3b4dbaa420243}
+\hypertarget{class_c_d_x_u_t_i_m_e_edit_box_a6bd5ac93dd74ac14a1e6422d9d549aad}{
+\index{CDXUTIMEEditBox@{CDXUTIMEEditBox}!StaticOnCreateDevice@{StaticOnCreateDevice}}
+\index{StaticOnCreateDevice@{StaticOnCreateDevice}!CDXUTIMEEditBox@{CDXUTIMEEditBox}}
+\subsubsection[{StaticOnCreateDevice}]{\setlength{\rightskip}{0pt plus 5cm}HRESULT CDXUTIMEEditBox::StaticOnCreateDevice ()\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}
+\label{class_c_d_x_u_t_i_m_e_edit_box_a6bd5ac93dd74ac14a1e6422d9d549aad}
+\hypertarget{class_c_d_x_u_t_i_m_e_edit_box_acf5f110e7519e5aa82ef1e107bfc0613}{
+\index{CDXUTIMEEditBox@{CDXUTIMEEditBox}!TruncateCompString@{TruncateCompString}}
+\index{TruncateCompString@{TruncateCompString}!CDXUTIMEEditBox@{CDXUTIMEEditBox}}
+\subsubsection[{TruncateCompString}]{\setlength{\rightskip}{0pt plus 5cm}void CDXUTIMEEditBox::TruncateCompString (bool {\em bUseBackSpace} = {\ttfamily true}, \/  {\bf int} {\em iNewStrLen} = {\ttfamily 0})\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{class_c_d_x_u_t_i_m_e_edit_box_acf5f110e7519e5aa82ef1e107bfc0613}
+\hypertarget{class_c_d_x_u_t_i_m_e_edit_box_af04efdabbdd396a3bee0f746e3248abd}{
+\index{CDXUTIMEEditBox@{CDXUTIMEEditBox}!UINT@{UINT}}
+\index{UINT@{UINT}!CDXUTIMEEditBox@{CDXUTIMEEditBox}}
+\subsubsection[{UINT}]{\setlength{\rightskip}{0pt plus 5cm}static {\bf CDXUTIMEEditBox::UINT} (WINAPI $\ast$ {\em \_\-GetReadingString})\hspace{0.3cm}{\ttfamily  \mbox{[}static, protected\mbox{]}}}}
+\label{class_c_d_x_u_t_i_m_e_edit_box_af04efdabbdd396a3bee0f746e3248abd}
+\hypertarget{class_c_d_x_u_t_i_m_e_edit_box_a2a1aec6144102d56aa1ecd8500df4cf1}{
+\index{CDXUTIMEEditBox@{CDXUTIMEEditBox}!UINT@{UINT}}
+\index{UINT@{UINT}!CDXUTIMEEditBox@{CDXUTIMEEditBox}}
+\subsubsection[{UINT}]{\setlength{\rightskip}{0pt plus 5cm}static {\bf CDXUTIMEEditBox::UINT} (WINAPI $\ast$ {\em \_\-ImmGetVirtualKey})\hspace{0.3cm}{\ttfamily  \mbox{[}static, protected\mbox{]}}}}
+\label{class_c_d_x_u_t_i_m_e_edit_box_a2a1aec6144102d56aa1ecd8500df4cf1}
+\hypertarget{class_c_d_x_u_t_i_m_e_edit_box_a9117b4b1a7dc485c06b2c74421b28374}{
+\index{CDXUTIMEEditBox@{CDXUTIMEEditBox}!UINT@{UINT}}
+\index{UINT@{UINT}!CDXUTIMEEditBox@{CDXUTIMEEditBox}}
+\subsubsection[{UINT}]{\setlength{\rightskip}{0pt plus 5cm}static {\bf CDXUTIMEEditBox::UINT} (WINAPI $\ast$ {\em \_\-ImmGetIMEFileNameA})\hspace{0.3cm}{\ttfamily  \mbox{[}static, protected\mbox{]}}}}
+\label{class_c_d_x_u_t_i_m_e_edit_box_a9117b4b1a7dc485c06b2c74421b28374}
+\hypertarget{class_c_d_x_u_t_i_m_e_edit_box_a4841b38797ea767a64898d95fee899cf}{
+\index{CDXUTIMEEditBox@{CDXUTIMEEditBox}!Uninitialize@{Uninitialize}}
+\index{Uninitialize@{Uninitialize}!CDXUTIMEEditBox@{CDXUTIMEEditBox}}
+\subsubsection[{Uninitialize}]{\setlength{\rightskip}{0pt plus 5cm}void CDXUTIMEEditBox::Uninitialize ()\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}
+\label{class_c_d_x_u_t_i_m_e_edit_box_a4841b38797ea767a64898d95fee899cf}
+\hypertarget{class_c_d_x_u_t_i_m_e_edit_box_a5b000e31365cfc36ea9c01cce29d1656}{
+\index{CDXUTIMEEditBox@{CDXUTIMEEditBox}!UpdateRects@{UpdateRects}}
+\index{UpdateRects@{UpdateRects}!CDXUTIMEEditBox@{CDXUTIMEEditBox}}
+\subsubsection[{UpdateRects}]{\setlength{\rightskip}{0pt plus 5cm}void CDXUTIMEEditBox::UpdateRects ()\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{class_c_d_x_u_t_i_m_e_edit_box_a5b000e31365cfc36ea9c01cce29d1656}
+
+
+Reimplemented from \hyperlink{class_c_d_x_u_t_edit_box_a86b6a5f6a509b4bc15f2edd8926718d5}{CDXUTEditBox}.
+
+\subsection{Member Data Documentation}
+\hypertarget{class_c_d_x_u_t_i_m_e_edit_box_ad2239c74ad7d59cbb8e6d2b5bf17bcb8}{
+\index{CDXUTIMEEditBox@{CDXUTIMEEditBox}!BOOL@{BOOL}}
+\index{BOOL@{BOOL}!CDXUTIMEEditBox@{CDXUTIMEEditBox}}
+\subsubsection[{BOOL}]{\setlength{\rightskip}{0pt plus 5cm}static {\bf CDXUTIMEEditBox::BOOL}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{class_c_d_x_u_t_i_m_e_edit_box_ad2239c74ad7d59cbb8e6d2b5bf17bcb8}
+\hypertarget{class_c_d_x_u_t_i_m_e_edit_box_a4666fce9b285d692ceb0515bf2dbde90}{
+\index{CDXUTIMEEditBox@{CDXUTIMEEditBox}!DWORD@{DWORD}}
+\index{DWORD@{DWORD}!CDXUTIMEEditBox@{CDXUTIMEEditBox}}
+\subsubsection[{DWORD}]{\setlength{\rightskip}{0pt plus 5cm}static {\bf CDXUTIMEEditBox::DWORD}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{class_c_d_x_u_t_i_m_e_edit_box_a4666fce9b285d692ceb0515bf2dbde90}
+\hypertarget{class_c_d_x_u_t_i_m_e_edit_box_aa9afdec726ecd526e2a0abc01537426c}{
+\index{CDXUTIMEEditBox@{CDXUTIMEEditBox}!HIMC@{HIMC}}
+\index{HIMC@{HIMC}!CDXUTIMEEditBox@{CDXUTIMEEditBox}}
+\subsubsection[{HIMC}]{\setlength{\rightskip}{0pt plus 5cm}static {\bf CDXUTIMEEditBox::HIMC}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{class_c_d_x_u_t_i_m_e_edit_box_aa9afdec726ecd526e2a0abc01537426c}
+\hypertarget{class_c_d_x_u_t_i_m_e_edit_box_aad569bc50d5e5e35422883375e07ff36}{
+\index{CDXUTIMEEditBox@{CDXUTIMEEditBox}!LPCANDIDATELIST@{LPCANDIDATELIST}}
+\index{LPCANDIDATELIST@{LPCANDIDATELIST}!CDXUTIMEEditBox@{CDXUTIMEEditBox}}
+\subsubsection[{LPCANDIDATELIST}]{\setlength{\rightskip}{0pt plus 5cm}{\bf CDXUTIMEEditBox::LPCANDIDATELIST}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{class_c_d_x_u_t_i_m_e_edit_box_aad569bc50d5e5e35422883375e07ff36}
+\hypertarget{class_c_d_x_u_t_i_m_e_edit_box_a13c133202b7126d255528d5573500007}{
+\index{CDXUTIMEEditBox@{CDXUTIMEEditBox}!LPDWORD@{LPDWORD}}
+\index{LPDWORD@{LPDWORD}!CDXUTIMEEditBox@{CDXUTIMEEditBox}}
+\subsubsection[{LPDWORD}]{\setlength{\rightskip}{0pt plus 5cm}static {\bf CDXUTIMEEditBox::LPDWORD}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{class_c_d_x_u_t_i_m_e_edit_box_a13c133202b7126d255528d5573500007}
+\hypertarget{class_c_d_x_u_t_i_m_e_edit_box_ab59f6a19cb5a1ca421bcb075676ec5f1}{
+\index{CDXUTIMEEditBox@{CDXUTIMEEditBox}!LPSTR@{LPSTR}}
+\index{LPSTR@{LPSTR}!CDXUTIMEEditBox@{CDXUTIMEEditBox}}
+\subsubsection[{LPSTR}]{\setlength{\rightskip}{0pt plus 5cm}static {\bf CDXUTIMEEditBox::LPSTR}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{class_c_d_x_u_t_i_m_e_edit_box_ab59f6a19cb5a1ca421bcb075676ec5f1}
+\hypertarget{class_c_d_x_u_t_i_m_e_edit_box_a1fb0e05d8b96c531c1b69d06391b21f7}{
+\index{CDXUTIMEEditBox@{CDXUTIMEEditBox}!LPVOID@{LPVOID}}
+\index{LPVOID@{LPVOID}!CDXUTIMEEditBox@{CDXUTIMEEditBox}}
+\subsubsection[{LPVOID}]{\setlength{\rightskip}{0pt plus 5cm}static {\bf CDXUTIMEEditBox::LPVOID}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{class_c_d_x_u_t_i_m_e_edit_box_a1fb0e05d8b96c531c1b69d06391b21f7}
+\hypertarget{class_c_d_x_u_t_i_m_e_edit_box_ab64b30f7dfad94f5fdffbe58821da2ff}{
+\index{CDXUTIMEEditBox@{CDXUTIMEEditBox}!LPWSTR@{LPWSTR}}
+\index{LPWSTR@{LPWSTR}!CDXUTIMEEditBox@{CDXUTIMEEditBox}}
+\subsubsection[{LPWSTR}]{\setlength{\rightskip}{0pt plus 5cm}{\bf CDXUTIMEEditBox::LPWSTR}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{class_c_d_x_u_t_i_m_e_edit_box_ab64b30f7dfad94f5fdffbe58821da2ff}
+\hypertarget{class_c_d_x_u_t_i_m_e_edit_box_a8b8a608af08e7fb7ec24200a892779d8}{
+\index{CDXUTIMEEditBox@{CDXUTIMEEditBox}!m\_\-CandidateColor@{m\_\-CandidateColor}}
+\index{m\_\-CandidateColor@{m\_\-CandidateColor}!CDXUTIMEEditBox@{CDXUTIMEEditBox}}
+\subsubsection[{m\_\-CandidateColor}]{\setlength{\rightskip}{0pt plus 5cm}D3DCOLOR {\bf CDXUTIMEEditBox::m\_\-CandidateColor}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{class_c_d_x_u_t_i_m_e_edit_box_a8b8a608af08e7fb7ec24200a892779d8}
+\hypertarget{class_c_d_x_u_t_i_m_e_edit_box_a5fc0a54d7470b0fef69ef6f3b5d3d9b1}{
+\index{CDXUTIMEEditBox@{CDXUTIMEEditBox}!m\_\-CandidateSelBkColor@{m\_\-CandidateSelBkColor}}
+\index{m\_\-CandidateSelBkColor@{m\_\-CandidateSelBkColor}!CDXUTIMEEditBox@{CDXUTIMEEditBox}}
+\subsubsection[{m\_\-CandidateSelBkColor}]{\setlength{\rightskip}{0pt plus 5cm}D3DCOLOR {\bf CDXUTIMEEditBox::m\_\-CandidateSelBkColor}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{class_c_d_x_u_t_i_m_e_edit_box_a5fc0a54d7470b0fef69ef6f3b5d3d9b1}
+\hypertarget{class_c_d_x_u_t_i_m_e_edit_box_a371964cf3f276e8a2bc844dafb8c63c2}{
+\index{CDXUTIMEEditBox@{CDXUTIMEEditBox}!m\_\-CandidateSelColor@{m\_\-CandidateSelColor}}
+\index{m\_\-CandidateSelColor@{m\_\-CandidateSelColor}!CDXUTIMEEditBox@{CDXUTIMEEditBox}}
+\subsubsection[{m\_\-CandidateSelColor}]{\setlength{\rightskip}{0pt plus 5cm}D3DCOLOR {\bf CDXUTIMEEditBox::m\_\-CandidateSelColor}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{class_c_d_x_u_t_i_m_e_edit_box_a371964cf3f276e8a2bc844dafb8c63c2}
+\hypertarget{class_c_d_x_u_t_i_m_e_edit_box_a3c5516213f115dc7d518f4de53cfbf71}{
+\index{CDXUTIMEEditBox@{CDXUTIMEEditBox}!m\_\-CandidateWinColor@{m\_\-CandidateWinColor}}
+\index{m\_\-CandidateWinColor@{m\_\-CandidateWinColor}!CDXUTIMEEditBox@{CDXUTIMEEditBox}}
+\subsubsection[{m\_\-CandidateWinColor}]{\setlength{\rightskip}{0pt plus 5cm}D3DCOLOR {\bf CDXUTIMEEditBox::m\_\-CandidateWinColor}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{class_c_d_x_u_t_i_m_e_edit_box_a3c5516213f115dc7d518f4de53cfbf71}
+\hypertarget{class_c_d_x_u_t_i_m_e_edit_box_a16acb29b8433a114b9e56319d54dd418}{
+\index{CDXUTIMEEditBox@{CDXUTIMEEditBox}!m\_\-CompCaretColor@{m\_\-CompCaretColor}}
+\index{m\_\-CompCaretColor@{m\_\-CompCaretColor}!CDXUTIMEEditBox@{CDXUTIMEEditBox}}
+\subsubsection[{m\_\-CompCaretColor}]{\setlength{\rightskip}{0pt plus 5cm}D3DCOLOR {\bf CDXUTIMEEditBox::m\_\-CompCaretColor}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{class_c_d_x_u_t_i_m_e_edit_box_a16acb29b8433a114b9e56319d54dd418}
+\hypertarget{class_c_d_x_u_t_i_m_e_edit_box_a43d97af287e09d32fe03c9ec2a28d5ea}{
+\index{CDXUTIMEEditBox@{CDXUTIMEEditBox}!m\_\-CompColor@{m\_\-CompColor}}
+\index{m\_\-CompColor@{m\_\-CompColor}!CDXUTIMEEditBox@{CDXUTIMEEditBox}}
+\subsubsection[{m\_\-CompColor}]{\setlength{\rightskip}{0pt plus 5cm}D3DCOLOR {\bf CDXUTIMEEditBox::m\_\-CompColor}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{class_c_d_x_u_t_i_m_e_edit_box_a43d97af287e09d32fe03c9ec2a28d5ea}
+\hypertarget{class_c_d_x_u_t_i_m_e_edit_box_abab28401ad563686e82cd22324bdfc71}{
+\index{CDXUTIMEEditBox@{CDXUTIMEEditBox}!m\_\-CompTargetBkColor@{m\_\-CompTargetBkColor}}
+\index{m\_\-CompTargetBkColor@{m\_\-CompTargetBkColor}!CDXUTIMEEditBox@{CDXUTIMEEditBox}}
+\subsubsection[{m\_\-CompTargetBkColor}]{\setlength{\rightskip}{0pt plus 5cm}D3DCOLOR {\bf CDXUTIMEEditBox::m\_\-CompTargetBkColor}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{class_c_d_x_u_t_i_m_e_edit_box_abab28401ad563686e82cd22324bdfc71}
+\hypertarget{class_c_d_x_u_t_i_m_e_edit_box_ac03e89b53c4bcc8574aba818a8f53ade}{
+\index{CDXUTIMEEditBox@{CDXUTIMEEditBox}!m\_\-CompTargetColor@{m\_\-CompTargetColor}}
+\index{m\_\-CompTargetColor@{m\_\-CompTargetColor}!CDXUTIMEEditBox@{CDXUTIMEEditBox}}
+\subsubsection[{m\_\-CompTargetColor}]{\setlength{\rightskip}{0pt plus 5cm}D3DCOLOR {\bf CDXUTIMEEditBox::m\_\-CompTargetColor}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{class_c_d_x_u_t_i_m_e_edit_box_ac03e89b53c4bcc8574aba818a8f53ade}
+\hypertarget{class_c_d_x_u_t_i_m_e_edit_box_a7bf58b958e0e9dc439c4e3c5f75998b0}{
+\index{CDXUTIMEEditBox@{CDXUTIMEEditBox}!m\_\-CompTargetNonBkColor@{m\_\-CompTargetNonBkColor}}
+\index{m\_\-CompTargetNonBkColor@{m\_\-CompTargetNonBkColor}!CDXUTIMEEditBox@{CDXUTIMEEditBox}}
+\subsubsection[{m\_\-CompTargetNonBkColor}]{\setlength{\rightskip}{0pt plus 5cm}D3DCOLOR {\bf CDXUTIMEEditBox::m\_\-CompTargetNonBkColor}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{class_c_d_x_u_t_i_m_e_edit_box_a7bf58b958e0e9dc439c4e3c5f75998b0}
+\hypertarget{class_c_d_x_u_t_i_m_e_edit_box_ad1285ec420c985d70b5bdb093da16594}{
+\index{CDXUTIMEEditBox@{CDXUTIMEEditBox}!m\_\-CompTargetNonColor@{m\_\-CompTargetNonColor}}
+\index{m\_\-CompTargetNonColor@{m\_\-CompTargetNonColor}!CDXUTIMEEditBox@{CDXUTIMEEditBox}}
+\subsubsection[{m\_\-CompTargetNonColor}]{\setlength{\rightskip}{0pt plus 5cm}D3DCOLOR {\bf CDXUTIMEEditBox::m\_\-CompTargetNonColor}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{class_c_d_x_u_t_i_m_e_edit_box_ad1285ec420c985d70b5bdb093da16594}
+\hypertarget{class_c_d_x_u_t_i_m_e_edit_box_a176310771bab6938087f89b678400ba2}{
+\index{CDXUTIMEEditBox@{CDXUTIMEEditBox}!m\_\-CompWinColor@{m\_\-CompWinColor}}
+\index{m\_\-CompWinColor@{m\_\-CompWinColor}!CDXUTIMEEditBox@{CDXUTIMEEditBox}}
+\subsubsection[{m\_\-CompWinColor}]{\setlength{\rightskip}{0pt plus 5cm}D3DCOLOR {\bf CDXUTIMEEditBox::m\_\-CompWinColor}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{class_c_d_x_u_t_i_m_e_edit_box_a176310771bab6938087f89b678400ba2}
+\hypertarget{class_c_d_x_u_t_i_m_e_edit_box_a19e7f372fee68a764208a5d7f32d7e37}{
+\index{CDXUTIMEEditBox@{CDXUTIMEEditBox}!m\_\-IndicatorBkColor@{m\_\-IndicatorBkColor}}
+\index{m\_\-IndicatorBkColor@{m\_\-IndicatorBkColor}!CDXUTIMEEditBox@{CDXUTIMEEditBox}}
+\subsubsection[{m\_\-IndicatorBkColor}]{\setlength{\rightskip}{0pt plus 5cm}D3DCOLOR {\bf CDXUTIMEEditBox::m\_\-IndicatorBkColor}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{class_c_d_x_u_t_i_m_e_edit_box_a19e7f372fee68a764208a5d7f32d7e37}
+\hypertarget{class_c_d_x_u_t_i_m_e_edit_box_ac905236eb64b937da8a2756bd78473ae}{
+\index{CDXUTIMEEditBox@{CDXUTIMEEditBox}!m\_\-IndicatorEngColor@{m\_\-IndicatorEngColor}}
+\index{m\_\-IndicatorEngColor@{m\_\-IndicatorEngColor}!CDXUTIMEEditBox@{CDXUTIMEEditBox}}
+\subsubsection[{m\_\-IndicatorEngColor}]{\setlength{\rightskip}{0pt plus 5cm}D3DCOLOR {\bf CDXUTIMEEditBox::m\_\-IndicatorEngColor}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{class_c_d_x_u_t_i_m_e_edit_box_ac905236eb64b937da8a2756bd78473ae}
+\hypertarget{class_c_d_x_u_t_i_m_e_edit_box_a38ca1864482d5a7f0b021f3c223a7cce}{
+\index{CDXUTIMEEditBox@{CDXUTIMEEditBox}!m\_\-IndicatorImeColor@{m\_\-IndicatorImeColor}}
+\index{m\_\-IndicatorImeColor@{m\_\-IndicatorImeColor}!CDXUTIMEEditBox@{CDXUTIMEEditBox}}
+\subsubsection[{m\_\-IndicatorImeColor}]{\setlength{\rightskip}{0pt plus 5cm}D3DCOLOR {\bf CDXUTIMEEditBox::m\_\-IndicatorImeColor}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{class_c_d_x_u_t_i_m_e_edit_box_a38ca1864482d5a7f0b021f3c223a7cce}
+\hypertarget{class_c_d_x_u_t_i_m_e_edit_box_af69a3a78e89ed011a11c9ae3d19bbb66}{
+\index{CDXUTIMEEditBox@{CDXUTIMEEditBox}!m\_\-nIndicatorWidth@{m\_\-nIndicatorWidth}}
+\index{m\_\-nIndicatorWidth@{m\_\-nIndicatorWidth}!CDXUTIMEEditBox@{CDXUTIMEEditBox}}
+\subsubsection[{m\_\-nIndicatorWidth}]{\setlength{\rightskip}{0pt plus 5cm}{\bf int} {\bf CDXUTIMEEditBox::m\_\-nIndicatorWidth}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{class_c_d_x_u_t_i_m_e_edit_box_af69a3a78e89ed011a11c9ae3d19bbb66}
+\hypertarget{class_c_d_x_u_t_i_m_e_edit_box_a0cd04d0239f03ac23bb29da73b2c1f32}{
+\index{CDXUTIMEEditBox@{CDXUTIMEEditBox}!m\_\-rcIndicator@{m\_\-rcIndicator}}
+\index{m\_\-rcIndicator@{m\_\-rcIndicator}!CDXUTIMEEditBox@{CDXUTIMEEditBox}}
+\subsubsection[{m\_\-rcIndicator}]{\setlength{\rightskip}{0pt plus 5cm}RECT {\bf CDXUTIMEEditBox::m\_\-rcIndicator}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{class_c_d_x_u_t_i_m_e_edit_box_a0cd04d0239f03ac23bb29da73b2c1f32}
+\hypertarget{class_c_d_x_u_t_i_m_e_edit_box_a5963bda0b88c359e6360b437abd86e7f}{
+\index{CDXUTIMEEditBox@{CDXUTIMEEditBox}!m\_\-ReadingColor@{m\_\-ReadingColor}}
+\index{m\_\-ReadingColor@{m\_\-ReadingColor}!CDXUTIMEEditBox@{CDXUTIMEEditBox}}
+\subsubsection[{m\_\-ReadingColor}]{\setlength{\rightskip}{0pt plus 5cm}D3DCOLOR {\bf CDXUTIMEEditBox::m\_\-ReadingColor}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{class_c_d_x_u_t_i_m_e_edit_box_a5963bda0b88c359e6360b437abd86e7f}
+\hypertarget{class_c_d_x_u_t_i_m_e_edit_box_ae63f71f182df873c2126c0c6d416ac90}{
+\index{CDXUTIMEEditBox@{CDXUTIMEEditBox}!m\_\-ReadingSelBkColor@{m\_\-ReadingSelBkColor}}
+\index{m\_\-ReadingSelBkColor@{m\_\-ReadingSelBkColor}!CDXUTIMEEditBox@{CDXUTIMEEditBox}}
+\subsubsection[{m\_\-ReadingSelBkColor}]{\setlength{\rightskip}{0pt plus 5cm}D3DCOLOR {\bf CDXUTIMEEditBox::m\_\-ReadingSelBkColor}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{class_c_d_x_u_t_i_m_e_edit_box_ae63f71f182df873c2126c0c6d416ac90}
+\hypertarget{class_c_d_x_u_t_i_m_e_edit_box_a9e4793780d2c6cf0819d3d0d277df0a0}{
+\index{CDXUTIMEEditBox@{CDXUTIMEEditBox}!m\_\-ReadingSelColor@{m\_\-ReadingSelColor}}
+\index{m\_\-ReadingSelColor@{m\_\-ReadingSelColor}!CDXUTIMEEditBox@{CDXUTIMEEditBox}}
+\subsubsection[{m\_\-ReadingSelColor}]{\setlength{\rightskip}{0pt plus 5cm}D3DCOLOR {\bf CDXUTIMEEditBox::m\_\-ReadingSelColor}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{class_c_d_x_u_t_i_m_e_edit_box_a9e4793780d2c6cf0819d3d0d277df0a0}
+\hypertarget{class_c_d_x_u_t_i_m_e_edit_box_a9971f0c9b8a12a60884ccbe75667550d}{
+\index{CDXUTIMEEditBox@{CDXUTIMEEditBox}!m\_\-ReadingWinColor@{m\_\-ReadingWinColor}}
+\index{m\_\-ReadingWinColor@{m\_\-ReadingWinColor}!CDXUTIMEEditBox@{CDXUTIMEEditBox}}
+\subsubsection[{m\_\-ReadingWinColor}]{\setlength{\rightskip}{0pt plus 5cm}D3DCOLOR {\bf CDXUTIMEEditBox::m\_\-ReadingWinColor}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{class_c_d_x_u_t_i_m_e_edit_box_a9971f0c9b8a12a60884ccbe75667550d}
+\hypertarget{class_c_d_x_u_t_i_m_e_edit_box_a96f42b574c3273edb514d6490a7fee62}{
+\index{CDXUTIMEEditBox@{CDXUTIMEEditBox}!PINT@{PINT}}
+\index{PINT@{PINT}!CDXUTIMEEditBox@{CDXUTIMEEditBox}}
+\subsubsection[{PINT}]{\setlength{\rightskip}{0pt plus 5cm}{\bf CDXUTIMEEditBox::PINT}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{class_c_d_x_u_t_i_m_e_edit_box_a96f42b574c3273edb514d6490a7fee62}
+\hypertarget{class_c_d_x_u_t_i_m_e_edit_box_a866116315de54f6b982526a070d01fdd}{
+\index{CDXUTIMEEditBox@{CDXUTIMEEditBox}!PUINT@{PUINT}}
+\index{PUINT@{PUINT}!CDXUTIMEEditBox@{CDXUTIMEEditBox}}
+\subsubsection[{PUINT}]{\setlength{\rightskip}{0pt plus 5cm}{\bf LPVOID} {\bf CDXUTIMEEditBox::PUINT}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{class_c_d_x_u_t_i_m_e_edit_box_a866116315de54f6b982526a070d01fdd}
+\hypertarget{class_c_d_x_u_t_i_m_e_edit_box_a0bcfcce05c77e66c32a46c02ae6bbed0}{
+\index{CDXUTIMEEditBox@{CDXUTIMEEditBox}!PUINT@{PUINT}}
+\index{PUINT@{PUINT}!CDXUTIMEEditBox@{CDXUTIMEEditBox}}
+\subsubsection[{PUINT}]{\setlength{\rightskip}{0pt plus 5cm}{\bf BOOL} {\bf CDXUTIMEEditBox::PUINT}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{class_c_d_x_u_t_i_m_e_edit_box_a0bcfcce05c77e66c32a46c02ae6bbed0}
+\hypertarget{class_c_d_x_u_t_i_m_e_edit_box_abcf78691a5ecce45e721f4533ebe7a26}{
+\index{CDXUTIMEEditBox@{CDXUTIMEEditBox}!s\_\-abCompStringAttr@{s\_\-abCompStringAttr}}
+\index{s\_\-abCompStringAttr@{s\_\-abCompStringAttr}!CDXUTIMEEditBox@{CDXUTIMEEditBox}}
+\subsubsection[{s\_\-abCompStringAttr}]{\setlength{\rightskip}{0pt plus 5cm}BYTE {\bf CDXUTIMEEditBox::s\_\-abCompStringAttr}\hspace{0.3cm}{\ttfamily  \mbox{[}static, protected\mbox{]}}}}
+\label{class_c_d_x_u_t_i_m_e_edit_box_abcf78691a5ecce45e721f4533ebe7a26}
+\hypertarget{class_c_d_x_u_t_i_m_e_edit_box_ac2f3b1d2aedb78d1cf1e4aa1f816c58b}{
+\index{CDXUTIMEEditBox@{CDXUTIMEEditBox}!s\_\-adwCompStringClause@{s\_\-adwCompStringClause}}
+\index{s\_\-adwCompStringClause@{s\_\-adwCompStringClause}!CDXUTIMEEditBox@{CDXUTIMEEditBox}}
+\subsubsection[{s\_\-adwCompStringClause}]{\setlength{\rightskip}{0pt plus 5cm}{\bf DWORD} {\bf CDXUTIMEEditBox::s\_\-adwCompStringClause}\hspace{0.3cm}{\ttfamily  \mbox{[}static, protected\mbox{]}}}}
+\label{class_c_d_x_u_t_i_m_e_edit_box_ac2f3b1d2aedb78d1cf1e4aa1f816c58b}
+\hypertarget{class_c_d_x_u_t_i_m_e_edit_box_a1f391bcb993b9f6c995f9a972efea9fc}{
+\index{CDXUTIMEEditBox@{CDXUTIMEEditBox}!s\_\-aszIndicator@{s\_\-aszIndicator}}
+\index{s\_\-aszIndicator@{s\_\-aszIndicator}!CDXUTIMEEditBox@{CDXUTIMEEditBox}}
+\subsubsection[{s\_\-aszIndicator}]{\setlength{\rightskip}{0pt plus 5cm}WCHAR {\bf CDXUTIMEEditBox::s\_\-aszIndicator}\hspace{0.3cm}{\ttfamily  \mbox{[}static, protected\mbox{]}}}}
+\label{class_c_d_x_u_t_i_m_e_edit_box_a1f391bcb993b9f6c995f9a972efea9fc}
+{\bfseries Initial value:}
+\begin{DoxyCode}
+ 
+            {
+                L"En",
+                L"\x7B80",
+                L"\x7E41",
+                L"\xAC00",
+                L"\x3042",
+            }
+\end{DoxyCode}
+\hypertarget{class_c_d_x_u_t_i_m_e_edit_box_afbfbbd0bfc8427fc6eb91f33a7338fcd}{
+\index{CDXUTIMEEditBox@{CDXUTIMEEditBox}!s\_\-bChineseIME@{s\_\-bChineseIME}}
+\index{s\_\-bChineseIME@{s\_\-bChineseIME}!CDXUTIMEEditBox@{CDXUTIMEEditBox}}
+\subsubsection[{s\_\-bChineseIME}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf CDXUTIMEEditBox::s\_\-bChineseIME}\hspace{0.3cm}{\ttfamily  \mbox{[}static, protected\mbox{]}}}}
+\label{class_c_d_x_u_t_i_m_e_edit_box_afbfbbd0bfc8427fc6eb91f33a7338fcd}
+\hypertarget{class_c_d_x_u_t_i_m_e_edit_box_aaf0464cb8cb7d2bea823712c322f2b78}{
+\index{CDXUTIMEEditBox@{CDXUTIMEEditBox}!s\_\-bEnableImeSystem@{s\_\-bEnableImeSystem}}
+\index{s\_\-bEnableImeSystem@{s\_\-bEnableImeSystem}!CDXUTIMEEditBox@{CDXUTIMEEditBox}}
+\subsubsection[{s\_\-bEnableImeSystem}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf CDXUTIMEEditBox::s\_\-bEnableImeSystem}\hspace{0.3cm}{\ttfamily  \mbox{[}static, protected\mbox{]}}}}
+\label{class_c_d_x_u_t_i_m_e_edit_box_aaf0464cb8cb7d2bea823712c322f2b78}
+\hypertarget{class_c_d_x_u_t_i_m_e_edit_box_aa097905fa88e08934010ce7ead10fb0b}{
+\index{CDXUTIMEEditBox@{CDXUTIMEEditBox}!s\_\-bHorizontalReading@{s\_\-bHorizontalReading}}
+\index{s\_\-bHorizontalReading@{s\_\-bHorizontalReading}!CDXUTIMEEditBox@{CDXUTIMEEditBox}}
+\subsubsection[{s\_\-bHorizontalReading}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf CDXUTIMEEditBox::s\_\-bHorizontalReading}\hspace{0.3cm}{\ttfamily  \mbox{[}static, protected\mbox{]}}}}
+\label{class_c_d_x_u_t_i_m_e_edit_box_aa097905fa88e08934010ce7ead10fb0b}
+\hypertarget{class_c_d_x_u_t_i_m_e_edit_box_aabc194ed63ce823d2e37a38b01e924cf}{
+\index{CDXUTIMEEditBox@{CDXUTIMEEditBox}!s\_\-bInsertOnType@{s\_\-bInsertOnType}}
+\index{s\_\-bInsertOnType@{s\_\-bInsertOnType}!CDXUTIMEEditBox@{CDXUTIMEEditBox}}
+\subsubsection[{s\_\-bInsertOnType}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf CDXUTIMEEditBox::s\_\-bInsertOnType}\hspace{0.3cm}{\ttfamily  \mbox{[}static, protected\mbox{]}}}}
+\label{class_c_d_x_u_t_i_m_e_edit_box_aabc194ed63ce823d2e37a38b01e924cf}
+\hypertarget{class_c_d_x_u_t_i_m_e_edit_box_a78764a7d5df3030a42d380306d85ea89}{
+\index{CDXUTIMEEditBox@{CDXUTIMEEditBox}!s\_\-bShowReadingWindow@{s\_\-bShowReadingWindow}}
+\index{s\_\-bShowReadingWindow@{s\_\-bShowReadingWindow}!CDXUTIMEEditBox@{CDXUTIMEEditBox}}
+\subsubsection[{s\_\-bShowReadingWindow}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf CDXUTIMEEditBox::s\_\-bShowReadingWindow}\hspace{0.3cm}{\ttfamily  \mbox{[}static, protected\mbox{]}}}}
+\label{class_c_d_x_u_t_i_m_e_edit_box_a78764a7d5df3030a42d380306d85ea89}
+\hypertarget{class_c_d_x_u_t_i_m_e_edit_box_add6b8ff15715843ade40e9e9325d190b}{
+\index{CDXUTIMEEditBox@{CDXUTIMEEditBox}!s\_\-bVerticalCand@{s\_\-bVerticalCand}}
+\index{s\_\-bVerticalCand@{s\_\-bVerticalCand}!CDXUTIMEEditBox@{CDXUTIMEEditBox}}
+\subsubsection[{s\_\-bVerticalCand}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf CDXUTIMEEditBox::s\_\-bVerticalCand}\hspace{0.3cm}{\ttfamily  \mbox{[}static, protected\mbox{]}}}}
+\label{class_c_d_x_u_t_i_m_e_edit_box_add6b8ff15715843ade40e9e9325d190b}
+\hypertarget{class_c_d_x_u_t_i_m_e_edit_box_aba2312ad3f47e27702ce20c5055416e6}{
+\index{CDXUTIMEEditBox@{CDXUTIMEEditBox}!s\_\-CandList@{s\_\-CandList}}
+\index{s\_\-CandList@{s\_\-CandList}!CDXUTIMEEditBox@{CDXUTIMEEditBox}}
+\subsubsection[{s\_\-CandList}]{\setlength{\rightskip}{0pt plus 5cm}{\bf CDXUTIMEEditBox::CCandList} {\bf CDXUTIMEEditBox::s\_\-CandList}\hspace{0.3cm}{\ttfamily  \mbox{[}static, protected\mbox{]}}}}
+\label{class_c_d_x_u_t_i_m_e_edit_box_aba2312ad3f47e27702ce20c5055416e6}
+\hypertarget{class_c_d_x_u_t_i_m_e_edit_box_ab6fd6572bf140a685ca9227690fc8bb1}{
+\index{CDXUTIMEEditBox@{CDXUTIMEEditBox}!s\_\-CompString@{s\_\-CompString}}
+\index{s\_\-CompString@{s\_\-CompString}!CDXUTIMEEditBox@{CDXUTIMEEditBox}}
+\subsubsection[{s\_\-CompString}]{\setlength{\rightskip}{0pt plus 5cm}{\bf CUniBuffer} {\bf CDXUTIMEEditBox::s\_\-CompString} = {\bf CUniBuffer}( 0 )\hspace{0.3cm}{\ttfamily  \mbox{[}static, protected\mbox{]}}}}
+\label{class_c_d_x_u_t_i_m_e_edit_box_ab6fd6572bf140a685ca9227690fc8bb1}
+\hypertarget{class_c_d_x_u_t_i_m_e_edit_box_abb6052b511e90fa7118d7cbb6d92989b}{
+\index{CDXUTIMEEditBox@{CDXUTIMEEditBox}!s\_\-hDllIme@{s\_\-hDllIme}}
+\index{s\_\-hDllIme@{s\_\-hDllIme}!CDXUTIMEEditBox@{CDXUTIMEEditBox}}
+\subsubsection[{s\_\-hDllIme}]{\setlength{\rightskip}{0pt plus 5cm}HINSTANCE {\bf CDXUTIMEEditBox::s\_\-hDllIme}\hspace{0.3cm}{\ttfamily  \mbox{[}static, protected\mbox{]}}}}
+\label{class_c_d_x_u_t_i_m_e_edit_box_abb6052b511e90fa7118d7cbb6d92989b}
+\hypertarget{class_c_d_x_u_t_i_m_e_edit_box_ade09c72a407c2efe010fed40eac354dd}{
+\index{CDXUTIMEEditBox@{CDXUTIMEEditBox}!s\_\-hDllImm32@{s\_\-hDllImm32}}
+\index{s\_\-hDllImm32@{s\_\-hDllImm32}!CDXUTIMEEditBox@{CDXUTIMEEditBox}}
+\subsubsection[{s\_\-hDllImm32}]{\setlength{\rightskip}{0pt plus 5cm}HINSTANCE {\bf CDXUTIMEEditBox::s\_\-hDllImm32}\hspace{0.3cm}{\ttfamily  \mbox{[}static, protected\mbox{]}}}}
+\label{class_c_d_x_u_t_i_m_e_edit_box_ade09c72a407c2efe010fed40eac354dd}
+\hypertarget{class_c_d_x_u_t_i_m_e_edit_box_a980f6732a5bd1fbf27e9d0feeaab3fca}{
+\index{CDXUTIMEEditBox@{CDXUTIMEEditBox}!s\_\-hDllVer@{s\_\-hDllVer}}
+\index{s\_\-hDllVer@{s\_\-hDllVer}!CDXUTIMEEditBox@{CDXUTIMEEditBox}}
+\subsubsection[{s\_\-hDllVer}]{\setlength{\rightskip}{0pt plus 5cm}HINSTANCE {\bf CDXUTIMEEditBox::s\_\-hDllVer}\hspace{0.3cm}{\ttfamily  \mbox{[}static, protected\mbox{]}}}}
+\label{class_c_d_x_u_t_i_m_e_edit_box_a980f6732a5bd1fbf27e9d0feeaab3fca}
+\hypertarget{class_c_d_x_u_t_i_m_e_edit_box_a8923bb4730fb126748d1d38da4de5ae2}{
+\index{CDXUTIMEEditBox@{CDXUTIMEEditBox}!s\_\-hImcDef@{s\_\-hImcDef}}
+\index{s\_\-hImcDef@{s\_\-hImcDef}!CDXUTIMEEditBox@{CDXUTIMEEditBox}}
+\subsubsection[{s\_\-hImcDef}]{\setlength{\rightskip}{0pt plus 5cm}{\bf HIMC} {\bf CDXUTIMEEditBox::s\_\-hImcDef}\hspace{0.3cm}{\ttfamily  \mbox{[}static, protected\mbox{]}}}}
+\label{class_c_d_x_u_t_i_m_e_edit_box_a8923bb4730fb126748d1d38da4de5ae2}
+\hypertarget{class_c_d_x_u_t_i_m_e_edit_box_a1cc2b2c882ca9512ba1058c6c697f0ec}{
+\index{CDXUTIMEEditBox@{CDXUTIMEEditBox}!s\_\-hklCurrent@{s\_\-hklCurrent}}
+\index{s\_\-hklCurrent@{s\_\-hklCurrent}!CDXUTIMEEditBox@{CDXUTIMEEditBox}}
+\subsubsection[{s\_\-hklCurrent}]{\setlength{\rightskip}{0pt plus 5cm}HKL {\bf CDXUTIMEEditBox::s\_\-hklCurrent}\hspace{0.3cm}{\ttfamily  \mbox{[}static, protected\mbox{]}}}}
+\label{class_c_d_x_u_t_i_m_e_edit_box_a1cc2b2c882ca9512ba1058c6c697f0ec}
+\hypertarget{class_c_d_x_u_t_i_m_e_edit_box_ac2c4d60cd29e91321145867d96d05605}{
+\index{CDXUTIMEEditBox@{CDXUTIMEEditBox}!s\_\-ImeState@{s\_\-ImeState}}
+\index{s\_\-ImeState@{s\_\-ImeState}!CDXUTIMEEditBox@{CDXUTIMEEditBox}}
+\subsubsection[{s\_\-ImeState}]{\setlength{\rightskip}{0pt plus 5cm}{\bf CDXUTIMEEditBox::IMESTATE} {\bf CDXUTIMEEditBox::s\_\-ImeState} = IMEUI\_\-STATE\_\-OFF\hspace{0.3cm}{\ttfamily  \mbox{[}static, protected\mbox{]}}}}
+\label{class_c_d_x_u_t_i_m_e_edit_box_ac2c4d60cd29e91321145867d96d05605}
+\hypertarget{class_c_d_x_u_t_i_m_e_edit_box_adbf262dfa3249b26d569dd04d4cdbb01}{
+\index{CDXUTIMEEditBox@{CDXUTIMEEditBox}!s\_\-Locale@{s\_\-Locale}}
+\index{s\_\-Locale@{s\_\-Locale}!CDXUTIMEEditBox@{CDXUTIMEEditBox}}
+\subsubsection[{s\_\-Locale}]{\setlength{\rightskip}{0pt plus 5cm}{\bf CGrowableArray}$<$ {\bf CDXUTIMEEditBox::CInputLocale} $>$ {\bf CDXUTIMEEditBox::s\_\-Locale}\hspace{0.3cm}{\ttfamily  \mbox{[}static, protected\mbox{]}}}}
+\label{class_c_d_x_u_t_i_m_e_edit_box_adbf262dfa3249b26d569dd04d4cdbb01}
+\hypertarget{class_c_d_x_u_t_i_m_e_edit_box_a468c906ac88033afd0042eef35d21dd0}{
+\index{CDXUTIMEEditBox@{CDXUTIMEEditBox}!s\_\-nCompCaret@{s\_\-nCompCaret}}
+\index{s\_\-nCompCaret@{s\_\-nCompCaret}!CDXUTIMEEditBox@{CDXUTIMEEditBox}}
+\subsubsection[{s\_\-nCompCaret}]{\setlength{\rightskip}{0pt plus 5cm}{\bf int} {\bf CDXUTIMEEditBox::s\_\-nCompCaret}\hspace{0.3cm}{\ttfamily  \mbox{[}static, protected\mbox{]}}}}
+\label{class_c_d_x_u_t_i_m_e_edit_box_a468c906ac88033afd0042eef35d21dd0}
+\hypertarget{class_c_d_x_u_t_i_m_e_edit_box_af459146e6164aa670ca187920a3e5ba0}{
+\index{CDXUTIMEEditBox@{CDXUTIMEEditBox}!s\_\-nFirstTargetConv@{s\_\-nFirstTargetConv}}
+\index{s\_\-nFirstTargetConv@{s\_\-nFirstTargetConv}!CDXUTIMEEditBox@{CDXUTIMEEditBox}}
+\subsubsection[{s\_\-nFirstTargetConv}]{\setlength{\rightskip}{0pt plus 5cm}{\bf int} {\bf CDXUTIMEEditBox::s\_\-nFirstTargetConv}\hspace{0.3cm}{\ttfamily  \mbox{[}static, protected\mbox{]}}}}
+\label{class_c_d_x_u_t_i_m_e_edit_box_af459146e6164aa670ca187920a3e5ba0}
+\hypertarget{class_c_d_x_u_t_i_m_e_edit_box_a784afa5dea8c27e3f6d7ad9972536d4a}{
+\index{CDXUTIMEEditBox@{CDXUTIMEEditBox}!s\_\-ptCompString@{s\_\-ptCompString}}
+\index{s\_\-ptCompString@{s\_\-ptCompString}!CDXUTIMEEditBox@{CDXUTIMEEditBox}}
+\subsubsection[{s\_\-ptCompString}]{\setlength{\rightskip}{0pt plus 5cm}POINT {\bf CDXUTIMEEditBox::s\_\-ptCompString}\hspace{0.3cm}{\ttfamily  \mbox{[}static, protected\mbox{]}}}}
+\label{class_c_d_x_u_t_i_m_e_edit_box_a784afa5dea8c27e3f6d7ad9972536d4a}
+\hypertarget{class_c_d_x_u_t_i_m_e_edit_box_aad444411a488a4cffc4e221338948a86}{
+\index{CDXUTIMEEditBox@{CDXUTIMEEditBox}!s\_\-wszCurrIndicator@{s\_\-wszCurrIndicator}}
+\index{s\_\-wszCurrIndicator@{s\_\-wszCurrIndicator}!CDXUTIMEEditBox@{CDXUTIMEEditBox}}
+\subsubsection[{s\_\-wszCurrIndicator}]{\setlength{\rightskip}{0pt plus 5cm}{\bf LPWSTR} {\bf CDXUTIMEEditBox::s\_\-wszCurrIndicator} = {\bf CDXUTIMEEditBox::s\_\-aszIndicator}\mbox{[}0\mbox{]}\hspace{0.3cm}{\ttfamily  \mbox{[}static, protected\mbox{]}}}}
+\label{class_c_d_x_u_t_i_m_e_edit_box_aad444411a488a4cffc4e221338948a86}
+\hypertarget{class_c_d_x_u_t_i_m_e_edit_box_a858d222d1a4282ce8154bb3867018e1f}{
+\index{CDXUTIMEEditBox@{CDXUTIMEEditBox}!s\_\-wszReadingString@{s\_\-wszReadingString}}
+\index{s\_\-wszReadingString@{s\_\-wszReadingString}!CDXUTIMEEditBox@{CDXUTIMEEditBox}}
+\subsubsection[{s\_\-wszReadingString}]{\setlength{\rightskip}{0pt plus 5cm}WCHAR {\bf CDXUTIMEEditBox::s\_\-wszReadingString}\hspace{0.3cm}{\ttfamily  \mbox{[}static, protected\mbox{]}}}}
+\label{class_c_d_x_u_t_i_m_e_edit_box_a858d222d1a4282ce8154bb3867018e1f}
+\hypertarget{class_c_d_x_u_t_i_m_e_edit_box_a7c83b549328a07897bdac88bb0ac4d68}{
+\index{CDXUTIMEEditBox@{CDXUTIMEEditBox}!UINT@{UINT}}
+\index{UINT@{UINT}!CDXUTIMEEditBox@{CDXUTIMEEditBox}}
+\subsubsection[{UINT}]{\setlength{\rightskip}{0pt plus 5cm}static {\bf CDXUTIMEEditBox::UINT}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{class_c_d_x_u_t_i_m_e_edit_box_a7c83b549328a07897bdac88bb0ac4d68}
+
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+C:/Users/doug/Documents/Visual Studio 2008/Projects/enlightened/Enlightened/DXUT/\hyperlink{_d_x_u_tgui_8h}{DXUTgui.h}\item 
+C:/Users/doug/Documents/Visual Studio 2008/Projects/enlightened/Enlightened/DXUT/\hyperlink{_d_x_u_tgui_8cpp}{DXUTgui.cpp}\end{DoxyCompactItemize}

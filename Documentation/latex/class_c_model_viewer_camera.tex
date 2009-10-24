@@ -1,0 +1,270 @@
+\hypertarget{class_c_model_viewer_camera}{
+\section{CModelViewerCamera Class Reference}
+\label{class_c_model_viewer_camera}\index{CModelViewerCamera@{CModelViewerCamera}}
+}
+
+
+{\ttfamily \#include $<$DXUTmisc.h$>$}
+
+Inherits \hyperlink{class_c_base_camera}{CBaseCamera}.Collaboration diagram for CModelViewerCamera:\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_c_model_viewer_camera_a6e6f27ab21440758f97e0069a14a41a1}{CModelViewerCamera} ()
+\item 
+virtual LRESULT \hyperlink{class_c_model_viewer_camera_ad50f3bd74420f1ee3c0b6ca9ac3ec348}{HandleMessages} (HWND hWnd, UINT uMsg, WPARAM wParam, LPARAM lParam)
+\item 
+virtual void \hyperlink{class_c_model_viewer_camera_a5309ad1ff0044124c05737da466b7315}{FrameMove} (FLOAT fElapsedTime)
+\item 
+virtual void \hyperlink{class_c_model_viewer_camera_aecba47f0c48401639138f602d3ed28bd}{SetDragRect} (RECT \&rc)
+\item 
+void \hyperlink{class_c_model_viewer_camera_a64f3b265b831578d24faadec70f9dc1b}{Reset} ()
+\item 
+void \hyperlink{class_c_model_viewer_camera_a3cfc3e0fd350457b4206054c96fc39f7}{SetViewParams} (D3DXVECTOR3 $\ast$pvEyePt, D3DXVECTOR3 $\ast$pvLookatPt)
+\item 
+void \hyperlink{class_c_model_viewer_camera_a999c8bce2cb411f5b674a81f230dff96}{SetButtonMasks} (\hyperlink{_d_x_u_tgui_8cpp_a2d77ed03302b6978834ee3b6f57837fb}{int} nRotateModelButtonMask=MOUSE\_\-LEFT\_\-BUTTON, \hyperlink{_d_x_u_tgui_8cpp_a2d77ed03302b6978834ee3b6f57837fb}{int} nZoomButtonMask=MOUSE\_\-WHEEL, \hyperlink{_d_x_u_tgui_8cpp_a2d77ed03302b6978834ee3b6f57837fb}{int} nRotateCameraButtonMask=MOUSE\_\-RIGHT\_\-BUTTON)
+\item 
+void \hyperlink{class_c_model_viewer_camera_acb49faefb46c891fcbf9f96529d96c19}{SetAttachCameraToModel} (bool bEnable=false)
+\item 
+void \hyperlink{class_c_model_viewer_camera_aa3602c760615115aa606cc3dfe9675fc}{SetWindow} (\hyperlink{_d_x_u_tgui_8cpp_a2d77ed03302b6978834ee3b6f57837fb}{int} nWidth, \hyperlink{_d_x_u_tgui_8cpp_a2d77ed03302b6978834ee3b6f57837fb}{int} nHeight, float fArcballRadius=0.9f)
+\item 
+void \hyperlink{class_c_model_viewer_camera_ae86762ee234412b6a0947b791d7be2d3}{SetRadius} (float fDefaultRadius=5.0f, float fMinRadius=1.0f, float fMaxRadius=FLT\_\-MAX)
+\item 
+void \hyperlink{class_c_model_viewer_camera_ae1511eb18ef5ec36904ba2f6819e26f2}{SetModelCenter} (D3DXVECTOR3 vModelCenter)
+\item 
+void \hyperlink{class_c_model_viewer_camera_adccbf68ed56b3d7204366dd8702912b4}{SetLimitPitch} (bool bLimitPitch)
+\item 
+void \hyperlink{class_c_model_viewer_camera_a66a842563bb9078bfa641bf6f1190818}{SetViewQuat} (D3DXQUATERNION q)
+\item 
+void \hyperlink{class_c_model_viewer_camera_a48515af5127c1647621df308171d72d4}{SetWorldQuat} (D3DXQUATERNION q)
+\item 
+const D3DXMATRIX $\ast$ \hyperlink{class_c_model_viewer_camera_adf18f000e0d304a5172424ad4151ddb6}{GetWorldMatrix} () const 
+\item 
+void \hyperlink{class_c_model_viewer_camera_ab5316accb7dfb3fd30a98f2647cedca0}{SetWorldMatrix} (D3DXMATRIX \&mWorld)
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_c_d3_d_arc_ball}{CD3DArcBall} \hyperlink{class_c_model_viewer_camera_a0afd3536bbea8ac01986f9e08af5e0bf}{m\_\-WorldArcBall}
+\item 
+\hyperlink{class_c_d3_d_arc_ball}{CD3DArcBall} \hyperlink{class_c_model_viewer_camera_a43d5ee29ecdd8f85f55cb0e1b7f5ec13}{m\_\-ViewArcBall}
+\item 
+D3DXVECTOR3 \hyperlink{class_c_model_viewer_camera_ace6a5534406f4dcb72515a15e1e1b4e3}{m\_\-vModelCenter}
+\item 
+D3DXMATRIX \hyperlink{class_c_model_viewer_camera_a753d010271571ac3d87acb1d062091b2}{m\_\-mModelLastRot}
+\item 
+D3DXMATRIX \hyperlink{class_c_model_viewer_camera_ae866118acbd31c4c57ee96a408567097}{m\_\-mModelRot}
+\item 
+D3DXMATRIX \hyperlink{class_c_model_viewer_camera_a047ed680fbcbebef4d83f56e2f414078}{m\_\-mWorld}
+\item 
+\hyperlink{_d_x_u_tgui_8cpp_a2d77ed03302b6978834ee3b6f57837fb}{int} \hyperlink{class_c_model_viewer_camera_aafcc769eecc0ceda551ee2d7a22e737c}{m\_\-nRotateModelButtonMask}
+\item 
+\hyperlink{_d_x_u_tgui_8cpp_a2d77ed03302b6978834ee3b6f57837fb}{int} \hyperlink{class_c_model_viewer_camera_ae3bcc79eeae8fa5e20a0369df120f1de}{m\_\-nZoomButtonMask}
+\item 
+\hyperlink{_d_x_u_tgui_8cpp_a2d77ed03302b6978834ee3b6f57837fb}{int} \hyperlink{class_c_model_viewer_camera_a4bc7721e96a2d3380c5612c67f02101e}{m\_\-nRotateCameraButtonMask}
+\item 
+bool \hyperlink{class_c_model_viewer_camera_ac56eaab097df2ea4538f34fe1c9d7d49}{m\_\-bAttachCameraToModel}
+\item 
+bool \hyperlink{class_c_model_viewer_camera_aa33a42faf6ef232889e94c30246043a0}{m\_\-bLimitPitch}
+\item 
+float \hyperlink{class_c_model_viewer_camera_a5a8802fe2b98550e3f3ecfee32fc1f8e}{m\_\-fRadius}
+\item 
+float \hyperlink{class_c_model_viewer_camera_a122bcab6c9a503056de43140a730e511}{m\_\-fDefaultRadius}
+\item 
+float \hyperlink{class_c_model_viewer_camera_a7e9a0f1881fc1b7b3c31db3270d54e06}{m\_\-fMinRadius}
+\item 
+float \hyperlink{class_c_model_viewer_camera_a9f414b154917b367fc6cc766fd2d7691}{m\_\-fMaxRadius}
+\item 
+bool \hyperlink{class_c_model_viewer_camera_a6b6d1199533d68ab4168d9d6a306a9bb}{m\_\-bDragSinceLastUpdate}
+\item 
+D3DXMATRIX \hyperlink{class_c_model_viewer_camera_a4beb0065dc8aca02d996b009caf82739}{m\_\-mCameraRotLast}
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_c_model_viewer_camera_a6e6f27ab21440758f97e0069a14a41a1}{
+\index{CModelViewerCamera@{CModelViewerCamera}!CModelViewerCamera@{CModelViewerCamera}}
+\index{CModelViewerCamera@{CModelViewerCamera}!CModelViewerCamera@{CModelViewerCamera}}
+\subsubsection[{CModelViewerCamera}]{\setlength{\rightskip}{0pt plus 5cm}CModelViewerCamera::CModelViewerCamera ()}}
+\label{class_c_model_viewer_camera_a6e6f27ab21440758f97e0069a14a41a1}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_c_model_viewer_camera_a5309ad1ff0044124c05737da466b7315}{
+\index{CModelViewerCamera@{CModelViewerCamera}!FrameMove@{FrameMove}}
+\index{FrameMove@{FrameMove}!CModelViewerCamera@{CModelViewerCamera}}
+\subsubsection[{FrameMove}]{\setlength{\rightskip}{0pt plus 5cm}VOID CModelViewerCamera::FrameMove (FLOAT {\em fElapsedTime})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{class_c_model_viewer_camera_a5309ad1ff0044124c05737da466b7315}
+
+
+Implements \hyperlink{class_c_base_camera_a21db15a8cdca60d1540d958a32708703}{CBaseCamera}.\hypertarget{class_c_model_viewer_camera_adf18f000e0d304a5172424ad4151ddb6}{
+\index{CModelViewerCamera@{CModelViewerCamera}!GetWorldMatrix@{GetWorldMatrix}}
+\index{GetWorldMatrix@{GetWorldMatrix}!CModelViewerCamera@{CModelViewerCamera}}
+\subsubsection[{GetWorldMatrix}]{\setlength{\rightskip}{0pt plus 5cm}const D3DXMATRIX$\ast$ CModelViewerCamera::GetWorldMatrix () const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_c_model_viewer_camera_adf18f000e0d304a5172424ad4151ddb6}
+\hypertarget{class_c_model_viewer_camera_ad50f3bd74420f1ee3c0b6ca9ac3ec348}{
+\index{CModelViewerCamera@{CModelViewerCamera}!HandleMessages@{HandleMessages}}
+\index{HandleMessages@{HandleMessages}!CModelViewerCamera@{CModelViewerCamera}}
+\subsubsection[{HandleMessages}]{\setlength{\rightskip}{0pt plus 5cm}LRESULT CModelViewerCamera::HandleMessages (HWND {\em hWnd}, \/  UINT {\em uMsg}, \/  WPARAM {\em wParam}, \/  LPARAM {\em lParam})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{class_c_model_viewer_camera_ad50f3bd74420f1ee3c0b6ca9ac3ec348}
+
+
+Reimplemented from \hyperlink{class_c_base_camera_a77cc040ed2d0b3479412b81316beb793}{CBaseCamera}.\hypertarget{class_c_model_viewer_camera_a64f3b265b831578d24faadec70f9dc1b}{
+\index{CModelViewerCamera@{CModelViewerCamera}!Reset@{Reset}}
+\index{Reset@{Reset}!CModelViewerCamera@{CModelViewerCamera}}
+\subsubsection[{Reset}]{\setlength{\rightskip}{0pt plus 5cm}VOID CModelViewerCamera::Reset ()\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{class_c_model_viewer_camera_a64f3b265b831578d24faadec70f9dc1b}
+
+
+Reimplemented from \hyperlink{class_c_base_camera_adc95e71e268d59a084f6e8d95a9aadb9}{CBaseCamera}.\hypertarget{class_c_model_viewer_camera_acb49faefb46c891fcbf9f96529d96c19}{
+\index{CModelViewerCamera@{CModelViewerCamera}!SetAttachCameraToModel@{SetAttachCameraToModel}}
+\index{SetAttachCameraToModel@{SetAttachCameraToModel}!CModelViewerCamera@{CModelViewerCamera}}
+\subsubsection[{SetAttachCameraToModel}]{\setlength{\rightskip}{0pt plus 5cm}void CModelViewerCamera::SetAttachCameraToModel (bool {\em bEnable} = {\ttfamily false})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_c_model_viewer_camera_acb49faefb46c891fcbf9f96529d96c19}
+\hypertarget{class_c_model_viewer_camera_a999c8bce2cb411f5b674a81f230dff96}{
+\index{CModelViewerCamera@{CModelViewerCamera}!SetButtonMasks@{SetButtonMasks}}
+\index{SetButtonMasks@{SetButtonMasks}!CModelViewerCamera@{CModelViewerCamera}}
+\subsubsection[{SetButtonMasks}]{\setlength{\rightskip}{0pt plus 5cm}void CModelViewerCamera::SetButtonMasks ({\bf int} {\em nRotateModelButtonMask} = {\ttfamily MOUSE\_\-LEFT\_\-BUTTON}, \/  {\bf int} {\em nZoomButtonMask} = {\ttfamily MOUSE\_\-WHEEL}, \/  {\bf int} {\em nRotateCameraButtonMask} = {\ttfamily MOUSE\_\-RIGHT\_\-BUTTON})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_c_model_viewer_camera_a999c8bce2cb411f5b674a81f230dff96}
+\hypertarget{class_c_model_viewer_camera_aecba47f0c48401639138f602d3ed28bd}{
+\index{CModelViewerCamera@{CModelViewerCamera}!SetDragRect@{SetDragRect}}
+\index{SetDragRect@{SetDragRect}!CModelViewerCamera@{CModelViewerCamera}}
+\subsubsection[{SetDragRect}]{\setlength{\rightskip}{0pt plus 5cm}void CModelViewerCamera::SetDragRect (RECT \& {\em rc})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{class_c_model_viewer_camera_aecba47f0c48401639138f602d3ed28bd}
+
+
+Reimplemented from \hyperlink{class_c_base_camera_a8c425184f1114f17bb8e1b3505c13036}{CBaseCamera}.\hypertarget{class_c_model_viewer_camera_adccbf68ed56b3d7204366dd8702912b4}{
+\index{CModelViewerCamera@{CModelViewerCamera}!SetLimitPitch@{SetLimitPitch}}
+\index{SetLimitPitch@{SetLimitPitch}!CModelViewerCamera@{CModelViewerCamera}}
+\subsubsection[{SetLimitPitch}]{\setlength{\rightskip}{0pt plus 5cm}void CModelViewerCamera::SetLimitPitch (bool {\em bLimitPitch})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_c_model_viewer_camera_adccbf68ed56b3d7204366dd8702912b4}
+\hypertarget{class_c_model_viewer_camera_ae1511eb18ef5ec36904ba2f6819e26f2}{
+\index{CModelViewerCamera@{CModelViewerCamera}!SetModelCenter@{SetModelCenter}}
+\index{SetModelCenter@{SetModelCenter}!CModelViewerCamera@{CModelViewerCamera}}
+\subsubsection[{SetModelCenter}]{\setlength{\rightskip}{0pt plus 5cm}void CModelViewerCamera::SetModelCenter (D3DXVECTOR3 {\em vModelCenter})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_c_model_viewer_camera_ae1511eb18ef5ec36904ba2f6819e26f2}
+\hypertarget{class_c_model_viewer_camera_ae86762ee234412b6a0947b791d7be2d3}{
+\index{CModelViewerCamera@{CModelViewerCamera}!SetRadius@{SetRadius}}
+\index{SetRadius@{SetRadius}!CModelViewerCamera@{CModelViewerCamera}}
+\subsubsection[{SetRadius}]{\setlength{\rightskip}{0pt plus 5cm}void CModelViewerCamera::SetRadius (float {\em fDefaultRadius} = {\ttfamily 5.0f}, \/  float {\em fMinRadius} = {\ttfamily 1.0f}, \/  float {\em fMaxRadius} = {\ttfamily FLT\_\-MAX})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_c_model_viewer_camera_ae86762ee234412b6a0947b791d7be2d3}
+\hypertarget{class_c_model_viewer_camera_a3cfc3e0fd350457b4206054c96fc39f7}{
+\index{CModelViewerCamera@{CModelViewerCamera}!SetViewParams@{SetViewParams}}
+\index{SetViewParams@{SetViewParams}!CModelViewerCamera@{CModelViewerCamera}}
+\subsubsection[{SetViewParams}]{\setlength{\rightskip}{0pt plus 5cm}void CModelViewerCamera::SetViewParams (D3DXVECTOR3 $\ast$ {\em pvEyePt}, \/  D3DXVECTOR3 $\ast$ {\em pvLookatPt})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{class_c_model_viewer_camera_a3cfc3e0fd350457b4206054c96fc39f7}
+
+
+Reimplemented from \hyperlink{class_c_base_camera_a17b45dd3b6055bc761058d57f5a10c02}{CBaseCamera}.\hypertarget{class_c_model_viewer_camera_a66a842563bb9078bfa641bf6f1190818}{
+\index{CModelViewerCamera@{CModelViewerCamera}!SetViewQuat@{SetViewQuat}}
+\index{SetViewQuat@{SetViewQuat}!CModelViewerCamera@{CModelViewerCamera}}
+\subsubsection[{SetViewQuat}]{\setlength{\rightskip}{0pt plus 5cm}void CModelViewerCamera::SetViewQuat (D3DXQUATERNION {\em q})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_c_model_viewer_camera_a66a842563bb9078bfa641bf6f1190818}
+\hypertarget{class_c_model_viewer_camera_aa3602c760615115aa606cc3dfe9675fc}{
+\index{CModelViewerCamera@{CModelViewerCamera}!SetWindow@{SetWindow}}
+\index{SetWindow@{SetWindow}!CModelViewerCamera@{CModelViewerCamera}}
+\subsubsection[{SetWindow}]{\setlength{\rightskip}{0pt plus 5cm}void CModelViewerCamera::SetWindow ({\bf int} {\em nWidth}, \/  {\bf int} {\em nHeight}, \/  float {\em fArcballRadius} = {\ttfamily 0.9f})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_c_model_viewer_camera_aa3602c760615115aa606cc3dfe9675fc}
+\hypertarget{class_c_model_viewer_camera_ab5316accb7dfb3fd30a98f2647cedca0}{
+\index{CModelViewerCamera@{CModelViewerCamera}!SetWorldMatrix@{SetWorldMatrix}}
+\index{SetWorldMatrix@{SetWorldMatrix}!CModelViewerCamera@{CModelViewerCamera}}
+\subsubsection[{SetWorldMatrix}]{\setlength{\rightskip}{0pt plus 5cm}void CModelViewerCamera::SetWorldMatrix (D3DXMATRIX \& {\em mWorld})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_c_model_viewer_camera_ab5316accb7dfb3fd30a98f2647cedca0}
+\hypertarget{class_c_model_viewer_camera_a48515af5127c1647621df308171d72d4}{
+\index{CModelViewerCamera@{CModelViewerCamera}!SetWorldQuat@{SetWorldQuat}}
+\index{SetWorldQuat@{SetWorldQuat}!CModelViewerCamera@{CModelViewerCamera}}
+\subsubsection[{SetWorldQuat}]{\setlength{\rightskip}{0pt plus 5cm}void CModelViewerCamera::SetWorldQuat (D3DXQUATERNION {\em q})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_c_model_viewer_camera_a48515af5127c1647621df308171d72d4}
+
+
+\subsection{Member Data Documentation}
+\hypertarget{class_c_model_viewer_camera_ac56eaab097df2ea4538f34fe1c9d7d49}{
+\index{CModelViewerCamera@{CModelViewerCamera}!m\_\-bAttachCameraToModel@{m\_\-bAttachCameraToModel}}
+\index{m\_\-bAttachCameraToModel@{m\_\-bAttachCameraToModel}!CModelViewerCamera@{CModelViewerCamera}}
+\subsubsection[{m\_\-bAttachCameraToModel}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf CModelViewerCamera::m\_\-bAttachCameraToModel}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{class_c_model_viewer_camera_ac56eaab097df2ea4538f34fe1c9d7d49}
+\hypertarget{class_c_model_viewer_camera_a6b6d1199533d68ab4168d9d6a306a9bb}{
+\index{CModelViewerCamera@{CModelViewerCamera}!m\_\-bDragSinceLastUpdate@{m\_\-bDragSinceLastUpdate}}
+\index{m\_\-bDragSinceLastUpdate@{m\_\-bDragSinceLastUpdate}!CModelViewerCamera@{CModelViewerCamera}}
+\subsubsection[{m\_\-bDragSinceLastUpdate}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf CModelViewerCamera::m\_\-bDragSinceLastUpdate}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{class_c_model_viewer_camera_a6b6d1199533d68ab4168d9d6a306a9bb}
+\hypertarget{class_c_model_viewer_camera_aa33a42faf6ef232889e94c30246043a0}{
+\index{CModelViewerCamera@{CModelViewerCamera}!m\_\-bLimitPitch@{m\_\-bLimitPitch}}
+\index{m\_\-bLimitPitch@{m\_\-bLimitPitch}!CModelViewerCamera@{CModelViewerCamera}}
+\subsubsection[{m\_\-bLimitPitch}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf CModelViewerCamera::m\_\-bLimitPitch}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{class_c_model_viewer_camera_aa33a42faf6ef232889e94c30246043a0}
+\hypertarget{class_c_model_viewer_camera_a122bcab6c9a503056de43140a730e511}{
+\index{CModelViewerCamera@{CModelViewerCamera}!m\_\-fDefaultRadius@{m\_\-fDefaultRadius}}
+\index{m\_\-fDefaultRadius@{m\_\-fDefaultRadius}!CModelViewerCamera@{CModelViewerCamera}}
+\subsubsection[{m\_\-fDefaultRadius}]{\setlength{\rightskip}{0pt plus 5cm}float {\bf CModelViewerCamera::m\_\-fDefaultRadius}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{class_c_model_viewer_camera_a122bcab6c9a503056de43140a730e511}
+\hypertarget{class_c_model_viewer_camera_a9f414b154917b367fc6cc766fd2d7691}{
+\index{CModelViewerCamera@{CModelViewerCamera}!m\_\-fMaxRadius@{m\_\-fMaxRadius}}
+\index{m\_\-fMaxRadius@{m\_\-fMaxRadius}!CModelViewerCamera@{CModelViewerCamera}}
+\subsubsection[{m\_\-fMaxRadius}]{\setlength{\rightskip}{0pt plus 5cm}float {\bf CModelViewerCamera::m\_\-fMaxRadius}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{class_c_model_viewer_camera_a9f414b154917b367fc6cc766fd2d7691}
+\hypertarget{class_c_model_viewer_camera_a7e9a0f1881fc1b7b3c31db3270d54e06}{
+\index{CModelViewerCamera@{CModelViewerCamera}!m\_\-fMinRadius@{m\_\-fMinRadius}}
+\index{m\_\-fMinRadius@{m\_\-fMinRadius}!CModelViewerCamera@{CModelViewerCamera}}
+\subsubsection[{m\_\-fMinRadius}]{\setlength{\rightskip}{0pt plus 5cm}float {\bf CModelViewerCamera::m\_\-fMinRadius}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{class_c_model_viewer_camera_a7e9a0f1881fc1b7b3c31db3270d54e06}
+\hypertarget{class_c_model_viewer_camera_a5a8802fe2b98550e3f3ecfee32fc1f8e}{
+\index{CModelViewerCamera@{CModelViewerCamera}!m\_\-fRadius@{m\_\-fRadius}}
+\index{m\_\-fRadius@{m\_\-fRadius}!CModelViewerCamera@{CModelViewerCamera}}
+\subsubsection[{m\_\-fRadius}]{\setlength{\rightskip}{0pt plus 5cm}float {\bf CModelViewerCamera::m\_\-fRadius}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{class_c_model_viewer_camera_a5a8802fe2b98550e3f3ecfee32fc1f8e}
+\hypertarget{class_c_model_viewer_camera_a4beb0065dc8aca02d996b009caf82739}{
+\index{CModelViewerCamera@{CModelViewerCamera}!m\_\-mCameraRotLast@{m\_\-mCameraRotLast}}
+\index{m\_\-mCameraRotLast@{m\_\-mCameraRotLast}!CModelViewerCamera@{CModelViewerCamera}}
+\subsubsection[{m\_\-mCameraRotLast}]{\setlength{\rightskip}{0pt plus 5cm}D3DXMATRIX {\bf CModelViewerCamera::m\_\-mCameraRotLast}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{class_c_model_viewer_camera_a4beb0065dc8aca02d996b009caf82739}
+\hypertarget{class_c_model_viewer_camera_a753d010271571ac3d87acb1d062091b2}{
+\index{CModelViewerCamera@{CModelViewerCamera}!m\_\-mModelLastRot@{m\_\-mModelLastRot}}
+\index{m\_\-mModelLastRot@{m\_\-mModelLastRot}!CModelViewerCamera@{CModelViewerCamera}}
+\subsubsection[{m\_\-mModelLastRot}]{\setlength{\rightskip}{0pt plus 5cm}D3DXMATRIX {\bf CModelViewerCamera::m\_\-mModelLastRot}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{class_c_model_viewer_camera_a753d010271571ac3d87acb1d062091b2}
+\hypertarget{class_c_model_viewer_camera_ae866118acbd31c4c57ee96a408567097}{
+\index{CModelViewerCamera@{CModelViewerCamera}!m\_\-mModelRot@{m\_\-mModelRot}}
+\index{m\_\-mModelRot@{m\_\-mModelRot}!CModelViewerCamera@{CModelViewerCamera}}
+\subsubsection[{m\_\-mModelRot}]{\setlength{\rightskip}{0pt plus 5cm}D3DXMATRIX {\bf CModelViewerCamera::m\_\-mModelRot}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{class_c_model_viewer_camera_ae866118acbd31c4c57ee96a408567097}
+\hypertarget{class_c_model_viewer_camera_a047ed680fbcbebef4d83f56e2f414078}{
+\index{CModelViewerCamera@{CModelViewerCamera}!m\_\-mWorld@{m\_\-mWorld}}
+\index{m\_\-mWorld@{m\_\-mWorld}!CModelViewerCamera@{CModelViewerCamera}}
+\subsubsection[{m\_\-mWorld}]{\setlength{\rightskip}{0pt plus 5cm}D3DXMATRIX {\bf CModelViewerCamera::m\_\-mWorld}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{class_c_model_viewer_camera_a047ed680fbcbebef4d83f56e2f414078}
+\hypertarget{class_c_model_viewer_camera_a4bc7721e96a2d3380c5612c67f02101e}{
+\index{CModelViewerCamera@{CModelViewerCamera}!m\_\-nRotateCameraButtonMask@{m\_\-nRotateCameraButtonMask}}
+\index{m\_\-nRotateCameraButtonMask@{m\_\-nRotateCameraButtonMask}!CModelViewerCamera@{CModelViewerCamera}}
+\subsubsection[{m\_\-nRotateCameraButtonMask}]{\setlength{\rightskip}{0pt plus 5cm}{\bf int} {\bf CModelViewerCamera::m\_\-nRotateCameraButtonMask}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{class_c_model_viewer_camera_a4bc7721e96a2d3380c5612c67f02101e}
+\hypertarget{class_c_model_viewer_camera_aafcc769eecc0ceda551ee2d7a22e737c}{
+\index{CModelViewerCamera@{CModelViewerCamera}!m\_\-nRotateModelButtonMask@{m\_\-nRotateModelButtonMask}}
+\index{m\_\-nRotateModelButtonMask@{m\_\-nRotateModelButtonMask}!CModelViewerCamera@{CModelViewerCamera}}
+\subsubsection[{m\_\-nRotateModelButtonMask}]{\setlength{\rightskip}{0pt plus 5cm}{\bf int} {\bf CModelViewerCamera::m\_\-nRotateModelButtonMask}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{class_c_model_viewer_camera_aafcc769eecc0ceda551ee2d7a22e737c}
+\hypertarget{class_c_model_viewer_camera_ae3bcc79eeae8fa5e20a0369df120f1de}{
+\index{CModelViewerCamera@{CModelViewerCamera}!m\_\-nZoomButtonMask@{m\_\-nZoomButtonMask}}
+\index{m\_\-nZoomButtonMask@{m\_\-nZoomButtonMask}!CModelViewerCamera@{CModelViewerCamera}}
+\subsubsection[{m\_\-nZoomButtonMask}]{\setlength{\rightskip}{0pt plus 5cm}{\bf int} {\bf CModelViewerCamera::m\_\-nZoomButtonMask}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{class_c_model_viewer_camera_ae3bcc79eeae8fa5e20a0369df120f1de}
+\hypertarget{class_c_model_viewer_camera_a43d5ee29ecdd8f85f55cb0e1b7f5ec13}{
+\index{CModelViewerCamera@{CModelViewerCamera}!m\_\-ViewArcBall@{m\_\-ViewArcBall}}
+\index{m\_\-ViewArcBall@{m\_\-ViewArcBall}!CModelViewerCamera@{CModelViewerCamera}}
+\subsubsection[{m\_\-ViewArcBall}]{\setlength{\rightskip}{0pt plus 5cm}{\bf CD3DArcBall} {\bf CModelViewerCamera::m\_\-ViewArcBall}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{class_c_model_viewer_camera_a43d5ee29ecdd8f85f55cb0e1b7f5ec13}
+\hypertarget{class_c_model_viewer_camera_ace6a5534406f4dcb72515a15e1e1b4e3}{
+\index{CModelViewerCamera@{CModelViewerCamera}!m\_\-vModelCenter@{m\_\-vModelCenter}}
+\index{m\_\-vModelCenter@{m\_\-vModelCenter}!CModelViewerCamera@{CModelViewerCamera}}
+\subsubsection[{m\_\-vModelCenter}]{\setlength{\rightskip}{0pt plus 5cm}D3DXVECTOR3 {\bf CModelViewerCamera::m\_\-vModelCenter}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{class_c_model_viewer_camera_ace6a5534406f4dcb72515a15e1e1b4e3}
+\hypertarget{class_c_model_viewer_camera_a0afd3536bbea8ac01986f9e08af5e0bf}{
+\index{CModelViewerCamera@{CModelViewerCamera}!m\_\-WorldArcBall@{m\_\-WorldArcBall}}
+\index{m\_\-WorldArcBall@{m\_\-WorldArcBall}!CModelViewerCamera@{CModelViewerCamera}}
+\subsubsection[{m\_\-WorldArcBall}]{\setlength{\rightskip}{0pt plus 5cm}{\bf CD3DArcBall} {\bf CModelViewerCamera::m\_\-WorldArcBall}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{class_c_model_viewer_camera_a0afd3536bbea8ac01986f9e08af5e0bf}
+
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+C:/Users/doug/Documents/Visual Studio 2008/Projects/enlightened/Enlightened/DXUT/\hyperlink{_d_x_u_tmisc_8h}{DXUTmisc.h}\item 
+C:/Users/doug/Documents/Visual Studio 2008/Projects/enlightened/Enlightened/DXUT/\hyperlink{_d_x_u_tmisc_8cpp}{DXUTmisc.cpp}\end{DoxyCompactItemize}

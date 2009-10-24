@@ -1,0 +1,487 @@
+\hypertarget{class_c_d3_d_settings_dlg}{
+\section{CD3DSettingsDlg Class Reference}
+\label{class_c_d3_d_settings_dlg}\index{CD3DSettingsDlg@{CD3DSettingsDlg}}
+}
+
+
+{\ttfamily \#include $<$DXUTSettingsDlg.h$>$}Collaboration diagram for CD3DSettingsDlg:\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_c_d3_d_settings_dlg_acbdec2882322c04fb6088e80721e6d96}{CD3DSettingsDlg} ()
+\item 
+\hyperlink{class_c_d3_d_settings_dlg_a79c0f732c733d7a06086a2b1d313b7ac}{$\sim$CD3DSettingsDlg} ()
+\item 
+void \hyperlink{class_c_d3_d_settings_dlg_ad729e65b02d7da4db7672d29d0d7c935}{Init} (\hyperlink{class_c_d_x_u_t_dialog_resource_manager}{CDXUTDialogResourceManager} $\ast$pManager)
+\item 
+void \hyperlink{class_c_d3_d_settings_dlg_a3a9d268771e11c24188ad4be4185ede3}{Init} (\hyperlink{class_c_d_x_u_t_dialog_resource_manager}{CDXUTDialogResourceManager} $\ast$pManager, LPCWSTR szControlTextureFileName)
+\item 
+void \hyperlink{class_c_d3_d_settings_dlg_acbf3721135cc7408a8aeb0cc0340d3a8}{Init} (\hyperlink{class_c_d_x_u_t_dialog_resource_manager}{CDXUTDialogResourceManager} $\ast$pManager, LPCWSTR pszControlTextureResourcename, HMODULE hModule)
+\item 
+HRESULT \hyperlink{class_c_d3_d_settings_dlg_afc71a070eaf9072f4dc3253aac1baddf}{OnCreateDevice} (IDirect3DDevice9 $\ast$pd3dDevice)
+\item 
+HRESULT \hyperlink{class_c_d3_d_settings_dlg_ae7602b7c1fc461fdc997c40de550ccbe}{Refresh} ()
+\item 
+HRESULT \hyperlink{class_c_d3_d_settings_dlg_af22c2f99599fd86040c834ca9757b3e6}{OnResetDevice} ()
+\item 
+HRESULT \hyperlink{class_c_d3_d_settings_dlg_a9cf75243457ad7f0b8c179bacc93cbdc}{OnLostDevice} ()
+\item 
+HRESULT \hyperlink{class_c_d3_d_settings_dlg_a395d09a31ad85f38fa495311629bf347}{OnRender} (float fElapsedTime)
+\item 
+HRESULT \hyperlink{class_c_d3_d_settings_dlg_a00d400903b65fa5d55b7e7efb716bb8e}{OnDestroyDevice} ()
+\item 
+\hyperlink{class_c_d_x_u_t_dialog}{CDXUTDialog} $\ast$ \hyperlink{class_c_d3_d_settings_dlg_a0c5cd502ae62c1460d989e2e51590ab4}{GetDialogControl} ()
+\item 
+bool \hyperlink{class_c_d3_d_settings_dlg_a1bf2d86e2af7d854ed904035e15677bd}{IsActive} ()
+\item 
+void \hyperlink{class_c_d3_d_settings_dlg_a78ee87995db6417e18e597610f119212}{SetActive} (bool bActive)
+\item 
+LRESULT \hyperlink{class_c_d3_d_settings_dlg_a8a3ecd505c89b0bba30aabce63534a31}{MsgProc} (HWND hWnd, UINT uMsg, WPARAM wParam, LPARAM lParam)
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{class_c_d3_d_settings_dlg_ab4f8f21e9d8db02fafb03c346cee8eea}{CreateControls} ()
+\item 
+HRESULT \hyperlink{class_c_d3_d_settings_dlg_a12d42c7cb4fc734538eeafff7d979215}{SetDeviceSettingsFromUI} ()
+\item 
+void \hyperlink{class_c_d3_d_settings_dlg_a8ba617f0440a4647d0697e0dadb373b4}{OnEvent} (UINT nEvent, \hyperlink{_d_x_u_tgui_8cpp_a2d77ed03302b6978834ee3b6f57837fb}{int} \hyperlink{_d_x_u_tgui_8h_a73dfd1d736300572e8c3d1a961a52ebf}{nControlID}, \hyperlink{class_c_d_x_u_t_control}{CDXUTControl} $\ast$\hyperlink{_d_x_u_tgui_8h_a02afd33ae98ec4c57be6013765c03be9}{pControl})
+\item 
+\hyperlink{class_c_d3_d_enum_adapter_info}{CD3DEnumAdapterInfo} $\ast$ \hyperlink{class_c_d3_d_settings_dlg_a541518849e837f4bfead54b3eecfbf6b}{GetCurrentAdapterInfo} ()
+\item 
+\hyperlink{class_c_d3_d_enum_device_info}{CD3DEnumDeviceInfo} $\ast$ \hyperlink{class_c_d3_d_settings_dlg_ade285a2131356cdbebdcccba78f8734b}{GetCurrentDeviceInfo} ()
+\item 
+\hyperlink{struct_c_d3_d_enum_device_settings_combo}{CD3DEnumDeviceSettingsCombo} $\ast$ \hyperlink{class_c_d3_d_settings_dlg_ac14dfa0e87ac321dd884928a300589e6}{GetCurrentDeviceSettingsCombo} ()
+\item 
+void \hyperlink{class_c_d3_d_settings_dlg_af6f11fa22d6c9855beec1de19555df70}{AddAdapter} (const WCHAR $\ast$strDescription, UINT iAdapter)
+\item 
+UINT \hyperlink{class_c_d3_d_settings_dlg_a7e286e6a7739042c63717a2009f72a64}{GetSelectedAdapter} ()
+\item 
+void \hyperlink{class_c_d3_d_settings_dlg_aa5015f5a50011606b49984cd24baa347}{AddDeviceType} (D3DDEVTYPE devType)
+\item 
+D3DDEVTYPE \hyperlink{class_c_d3_d_settings_dlg_a1a4e9165151846c6fb735f3cd0add737}{GetSelectedDeviceType} ()
+\item 
+void \hyperlink{class_c_d3_d_settings_dlg_a1a8187c3c56b9998c25d7fb4fc1c5ab8}{SetWindowed} (bool bWindowed)
+\item 
+bool \hyperlink{class_c_d3_d_settings_dlg_a3788a01ff4742e458ba3d117d2bfdde3}{IsWindowed} ()
+\item 
+void \hyperlink{class_c_d3_d_settings_dlg_a980ec0d429e0c796284f9b1874510a14}{AddAdapterFormat} (D3DFORMAT format)
+\item 
+D3DFORMAT \hyperlink{class_c_d3_d_settings_dlg_a0a6307d23bd4277db326e440106b02fa}{GetSelectedAdapterFormat} ()
+\item 
+void \hyperlink{class_c_d3_d_settings_dlg_ae3b20d440c76b3cb09de3f2e1f3fd4a3}{AddResolution} (DWORD dwWidth, DWORD dwHeight)
+\item 
+void \hyperlink{class_c_d3_d_settings_dlg_a64deb789f38a469aaae9b24a98c1ba89}{GetSelectedResolution} (DWORD $\ast$pdwWidth, DWORD $\ast$pdwHeight)
+\item 
+void \hyperlink{class_c_d3_d_settings_dlg_a1d0d0f62187b4f88256a866c22755647}{AddRefreshRate} (DWORD dwRate)
+\item 
+DWORD \hyperlink{class_c_d3_d_settings_dlg_ab2c395b2c12a94c6491d4639617fe1ac}{GetSelectedRefreshRate} ()
+\item 
+void \hyperlink{class_c_d3_d_settings_dlg_a8794267a14a02e711dca155c2cfc4290}{AddBackBufferFormat} (D3DFORMAT format)
+\item 
+D3DFORMAT \hyperlink{class_c_d3_d_settings_dlg_a22cb29162c256ff8017867c0f66a404f}{GetSelectedBackBufferFormat} ()
+\item 
+void \hyperlink{class_c_d3_d_settings_dlg_afd377864abb5683285ec335fe6011c7a}{AddDepthStencilBufferFormat} (D3DFORMAT format)
+\item 
+D3DFORMAT \hyperlink{class_c_d3_d_settings_dlg_a39ae16cb2d2b7f839e1adf6a982a6d19}{GetSelectedDepthStencilBufferFormat} ()
+\item 
+void \hyperlink{class_c_d3_d_settings_dlg_a13d7360f5233781dbb2dea92d30a2257}{AddMultisampleType} (D3DMULTISAMPLE\_\-TYPE type)
+\item 
+D3DMULTISAMPLE\_\-TYPE \hyperlink{class_c_d3_d_settings_dlg_a2789ede2956d2a0e5fa489f4a9ef690c}{GetSelectedMultisampleType} ()
+\item 
+void \hyperlink{class_c_d3_d_settings_dlg_aecef3b988a7dd637e0a8dece0bd23bc9}{AddMultisampleQuality} (DWORD dwQuality)
+\item 
+DWORD \hyperlink{class_c_d3_d_settings_dlg_a74ce21d607ccf9071bc6e6bf8a8bde51}{GetSelectedMultisampleQuality} ()
+\item 
+void \hyperlink{class_c_d3_d_settings_dlg_aa2351f6a7dfaf409b4a1590e4f6c01a8}{AddVertexProcessingType} (DWORD dwType)
+\item 
+DWORD \hyperlink{class_c_d3_d_settings_dlg_a1c3324649ea149106ca0af2c43f880fe}{GetSelectedVertexProcessingType} ()
+\item 
+DWORD \hyperlink{class_c_d3_d_settings_dlg_a7819f5df57f56524015c396ef625809e}{GetSelectedPresentInterval} ()
+\item 
+void \hyperlink{class_c_d3_d_settings_dlg_ab5e85523266807441c34a4439163550f}{SetDeviceClip} (bool bDeviceClip)
+\item 
+bool \hyperlink{class_c_d3_d_settings_dlg_ac5d2815eced3dcc37c0313ffd1e522ca}{IsDeviceClip} ()
+\item 
+HRESULT \hyperlink{class_c_d3_d_settings_dlg_a16315666d38d33b8d6b6b896f854eb42}{OnAdapterChanged} ()
+\item 
+HRESULT \hyperlink{class_c_d3_d_settings_dlg_a6e9145611a264f08597503e32a51aeea}{OnDeviceTypeChanged} ()
+\item 
+HRESULT \hyperlink{class_c_d3_d_settings_dlg_ae6c060173543d659cf6e4d810971c3ee}{OnWindowedFullScreenChanged} ()
+\item 
+HRESULT \hyperlink{class_c_d3_d_settings_dlg_a422dec4deed87610ff75783dceb2b4b8}{OnAdapterFormatChanged} ()
+\item 
+HRESULT \hyperlink{class_c_d3_d_settings_dlg_a37daa5c226dfa883b9bd9675f587188d}{OnResolutionChanged} ()
+\item 
+HRESULT \hyperlink{class_c_d3_d_settings_dlg_a5f321948ac07b6c0707dfa65f9cbd990}{OnRefreshRateChanged} ()
+\item 
+HRESULT \hyperlink{class_c_d3_d_settings_dlg_a2ec3c8e1d0fb192aa5448c4ac8f138b2}{OnBackBufferFormatChanged} ()
+\item 
+HRESULT \hyperlink{class_c_d3_d_settings_dlg_a7d589e810b5680c966665c94190b0170}{OnDepthStencilBufferFormatChanged} ()
+\item 
+HRESULT \hyperlink{class_c_d3_d_settings_dlg_a5979860f92903f58815328188bb2255f}{OnMultisampleTypeChanged} ()
+\item 
+HRESULT \hyperlink{class_c_d3_d_settings_dlg_ad4f5ee2ea8bc3d590fb7748987af28e6}{OnMultisampleQualityChanged} ()
+\item 
+HRESULT \hyperlink{class_c_d3_d_settings_dlg_a3462ae5f6053ed30ce6ce269ca155c82}{OnVertexProcessingChanged} ()
+\item 
+HRESULT \hyperlink{class_c_d3_d_settings_dlg_a4ebbdfd84ac6ddf9cfaa0aba72b49681}{OnPresentIntervalChanged} ()
+\item 
+HRESULT \hyperlink{class_c_d3_d_settings_dlg_a56d8e003ce194520995c88c531349f01}{OnDeviceClipChanged} ()
+\end{DoxyCompactItemize}
+\subsection*{Static Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void WINAPI \hyperlink{class_c_d3_d_settings_dlg_a55cc59820bc86efb9819739110f9190f}{StaticOnEvent} (UINT nEvent, \hyperlink{_d_x_u_tgui_8cpp_a2d77ed03302b6978834ee3b6f57837fb}{int} \hyperlink{_d_x_u_tgui_8h_a73dfd1d736300572e8c3d1a961a52ebf}{nControlID}, \hyperlink{class_c_d_x_u_t_control}{CDXUTControl} $\ast$\hyperlink{_d_x_u_tgui_8h_a02afd33ae98ec4c57be6013765c03be9}{pControl}, void $\ast$pUserData)
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+IDirect3DStateBlock9 $\ast$ \hyperlink{class_c_d3_d_settings_dlg_af8e1e88711501924bd091fe0792cb489}{m\_\-pStateBlock}
+\item 
+\hyperlink{class_c_d_x_u_t_dialog}{CDXUTDialog} \hyperlink{class_c_d3_d_settings_dlg_a6653f7f7899c31f909c2d7542babc521}{m\_\-Dialog}
+\item 
+bool \hyperlink{class_c_d3_d_settings_dlg_ad080d36c3e4fc29a7909a7962b11fa78}{m\_\-bActive}
+\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_c_d3_d_settings_dlg}{CD3DSettingsDlg} $\ast$ \hyperlink{class_c_d3_d_settings_dlg_a48e0861d43a45a17f8ab5e9d46efa7c9}{DXUTGetSettingsDialog} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_c_d3_d_settings_dlg_acbdec2882322c04fb6088e80721e6d96}{
+\index{CD3DSettingsDlg@{CD3DSettingsDlg}!CD3DSettingsDlg@{CD3DSettingsDlg}}
+\index{CD3DSettingsDlg@{CD3DSettingsDlg}!CD3DSettingsDlg@{CD3DSettingsDlg}}
+\subsubsection[{CD3DSettingsDlg}]{\setlength{\rightskip}{0pt plus 5cm}CD3DSettingsDlg::CD3DSettingsDlg ()}}
+\label{class_c_d3_d_settings_dlg_acbdec2882322c04fb6088e80721e6d96}
+\hypertarget{class_c_d3_d_settings_dlg_a79c0f732c733d7a06086a2b1d313b7ac}{
+\index{CD3DSettingsDlg@{CD3DSettingsDlg}!$\sim$CD3DSettingsDlg@{$\sim$CD3DSettingsDlg}}
+\index{$\sim$CD3DSettingsDlg@{$\sim$CD3DSettingsDlg}!CD3DSettingsDlg@{CD3DSettingsDlg}}
+\subsubsection[{$\sim$CD3DSettingsDlg}]{\setlength{\rightskip}{0pt plus 5cm}CD3DSettingsDlg::$\sim$CD3DSettingsDlg ()}}
+\label{class_c_d3_d_settings_dlg_a79c0f732c733d7a06086a2b1d313b7ac}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_c_d3_d_settings_dlg_af6f11fa22d6c9855beec1de19555df70}{
+\index{CD3DSettingsDlg@{CD3DSettingsDlg}!AddAdapter@{AddAdapter}}
+\index{AddAdapter@{AddAdapter}!CD3DSettingsDlg@{CD3DSettingsDlg}}
+\subsubsection[{AddAdapter}]{\setlength{\rightskip}{0pt plus 5cm}void CD3DSettingsDlg::AddAdapter (const WCHAR $\ast$ {\em strDescription}, \/  UINT {\em iAdapter})\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{class_c_d3_d_settings_dlg_af6f11fa22d6c9855beec1de19555df70}
+\hypertarget{class_c_d3_d_settings_dlg_a980ec0d429e0c796284f9b1874510a14}{
+\index{CD3DSettingsDlg@{CD3DSettingsDlg}!AddAdapterFormat@{AddAdapterFormat}}
+\index{AddAdapterFormat@{AddAdapterFormat}!CD3DSettingsDlg@{CD3DSettingsDlg}}
+\subsubsection[{AddAdapterFormat}]{\setlength{\rightskip}{0pt plus 5cm}void CD3DSettingsDlg::AddAdapterFormat (D3DFORMAT {\em format})\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{class_c_d3_d_settings_dlg_a980ec0d429e0c796284f9b1874510a14}
+\hypertarget{class_c_d3_d_settings_dlg_a8794267a14a02e711dca155c2cfc4290}{
+\index{CD3DSettingsDlg@{CD3DSettingsDlg}!AddBackBufferFormat@{AddBackBufferFormat}}
+\index{AddBackBufferFormat@{AddBackBufferFormat}!CD3DSettingsDlg@{CD3DSettingsDlg}}
+\subsubsection[{AddBackBufferFormat}]{\setlength{\rightskip}{0pt plus 5cm}void CD3DSettingsDlg::AddBackBufferFormat (D3DFORMAT {\em format})\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{class_c_d3_d_settings_dlg_a8794267a14a02e711dca155c2cfc4290}
+\hypertarget{class_c_d3_d_settings_dlg_afd377864abb5683285ec335fe6011c7a}{
+\index{CD3DSettingsDlg@{CD3DSettingsDlg}!AddDepthStencilBufferFormat@{AddDepthStencilBufferFormat}}
+\index{AddDepthStencilBufferFormat@{AddDepthStencilBufferFormat}!CD3DSettingsDlg@{CD3DSettingsDlg}}
+\subsubsection[{AddDepthStencilBufferFormat}]{\setlength{\rightskip}{0pt plus 5cm}void CD3DSettingsDlg::AddDepthStencilBufferFormat (D3DFORMAT {\em format})\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{class_c_d3_d_settings_dlg_afd377864abb5683285ec335fe6011c7a}
+\hypertarget{class_c_d3_d_settings_dlg_aa5015f5a50011606b49984cd24baa347}{
+\index{CD3DSettingsDlg@{CD3DSettingsDlg}!AddDeviceType@{AddDeviceType}}
+\index{AddDeviceType@{AddDeviceType}!CD3DSettingsDlg@{CD3DSettingsDlg}}
+\subsubsection[{AddDeviceType}]{\setlength{\rightskip}{0pt plus 5cm}void CD3DSettingsDlg::AddDeviceType (D3DDEVTYPE {\em devType})\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{class_c_d3_d_settings_dlg_aa5015f5a50011606b49984cd24baa347}
+\hypertarget{class_c_d3_d_settings_dlg_aecef3b988a7dd637e0a8dece0bd23bc9}{
+\index{CD3DSettingsDlg@{CD3DSettingsDlg}!AddMultisampleQuality@{AddMultisampleQuality}}
+\index{AddMultisampleQuality@{AddMultisampleQuality}!CD3DSettingsDlg@{CD3DSettingsDlg}}
+\subsubsection[{AddMultisampleQuality}]{\setlength{\rightskip}{0pt plus 5cm}void CD3DSettingsDlg::AddMultisampleQuality (DWORD {\em dwQuality})\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{class_c_d3_d_settings_dlg_aecef3b988a7dd637e0a8dece0bd23bc9}
+\hypertarget{class_c_d3_d_settings_dlg_a13d7360f5233781dbb2dea92d30a2257}{
+\index{CD3DSettingsDlg@{CD3DSettingsDlg}!AddMultisampleType@{AddMultisampleType}}
+\index{AddMultisampleType@{AddMultisampleType}!CD3DSettingsDlg@{CD3DSettingsDlg}}
+\subsubsection[{AddMultisampleType}]{\setlength{\rightskip}{0pt plus 5cm}void CD3DSettingsDlg::AddMultisampleType (D3DMULTISAMPLE\_\-TYPE {\em type})\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{class_c_d3_d_settings_dlg_a13d7360f5233781dbb2dea92d30a2257}
+\hypertarget{class_c_d3_d_settings_dlg_a1d0d0f62187b4f88256a866c22755647}{
+\index{CD3DSettingsDlg@{CD3DSettingsDlg}!AddRefreshRate@{AddRefreshRate}}
+\index{AddRefreshRate@{AddRefreshRate}!CD3DSettingsDlg@{CD3DSettingsDlg}}
+\subsubsection[{AddRefreshRate}]{\setlength{\rightskip}{0pt plus 5cm}void CD3DSettingsDlg::AddRefreshRate (DWORD {\em dwRate})\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{class_c_d3_d_settings_dlg_a1d0d0f62187b4f88256a866c22755647}
+\hypertarget{class_c_d3_d_settings_dlg_ae3b20d440c76b3cb09de3f2e1f3fd4a3}{
+\index{CD3DSettingsDlg@{CD3DSettingsDlg}!AddResolution@{AddResolution}}
+\index{AddResolution@{AddResolution}!CD3DSettingsDlg@{CD3DSettingsDlg}}
+\subsubsection[{AddResolution}]{\setlength{\rightskip}{0pt plus 5cm}void CD3DSettingsDlg::AddResolution (DWORD {\em dwWidth}, \/  DWORD {\em dwHeight})\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{class_c_d3_d_settings_dlg_ae3b20d440c76b3cb09de3f2e1f3fd4a3}
+\hypertarget{class_c_d3_d_settings_dlg_aa2351f6a7dfaf409b4a1590e4f6c01a8}{
+\index{CD3DSettingsDlg@{CD3DSettingsDlg}!AddVertexProcessingType@{AddVertexProcessingType}}
+\index{AddVertexProcessingType@{AddVertexProcessingType}!CD3DSettingsDlg@{CD3DSettingsDlg}}
+\subsubsection[{AddVertexProcessingType}]{\setlength{\rightskip}{0pt plus 5cm}void CD3DSettingsDlg::AddVertexProcessingType (DWORD {\em dwType})\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{class_c_d3_d_settings_dlg_aa2351f6a7dfaf409b4a1590e4f6c01a8}
+\hypertarget{class_c_d3_d_settings_dlg_ab4f8f21e9d8db02fafb03c346cee8eea}{
+\index{CD3DSettingsDlg@{CD3DSettingsDlg}!CreateControls@{CreateControls}}
+\index{CreateControls@{CreateControls}!CD3DSettingsDlg@{CD3DSettingsDlg}}
+\subsubsection[{CreateControls}]{\setlength{\rightskip}{0pt plus 5cm}void CD3DSettingsDlg::CreateControls ()\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{class_c_d3_d_settings_dlg_ab4f8f21e9d8db02fafb03c346cee8eea}
+\hypertarget{class_c_d3_d_settings_dlg_a541518849e837f4bfead54b3eecfbf6b}{
+\index{CD3DSettingsDlg@{CD3DSettingsDlg}!GetCurrentAdapterInfo@{GetCurrentAdapterInfo}}
+\index{GetCurrentAdapterInfo@{GetCurrentAdapterInfo}!CD3DSettingsDlg@{CD3DSettingsDlg}}
+\subsubsection[{GetCurrentAdapterInfo}]{\setlength{\rightskip}{0pt plus 5cm}{\bf CD3DEnumAdapterInfo} $\ast$ CD3DSettingsDlg::GetCurrentAdapterInfo ()\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{class_c_d3_d_settings_dlg_a541518849e837f4bfead54b3eecfbf6b}
+\hypertarget{class_c_d3_d_settings_dlg_ade285a2131356cdbebdcccba78f8734b}{
+\index{CD3DSettingsDlg@{CD3DSettingsDlg}!GetCurrentDeviceInfo@{GetCurrentDeviceInfo}}
+\index{GetCurrentDeviceInfo@{GetCurrentDeviceInfo}!CD3DSettingsDlg@{CD3DSettingsDlg}}
+\subsubsection[{GetCurrentDeviceInfo}]{\setlength{\rightskip}{0pt plus 5cm}{\bf CD3DEnumDeviceInfo} $\ast$ CD3DSettingsDlg::GetCurrentDeviceInfo ()\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{class_c_d3_d_settings_dlg_ade285a2131356cdbebdcccba78f8734b}
+\hypertarget{class_c_d3_d_settings_dlg_ac14dfa0e87ac321dd884928a300589e6}{
+\index{CD3DSettingsDlg@{CD3DSettingsDlg}!GetCurrentDeviceSettingsCombo@{GetCurrentDeviceSettingsCombo}}
+\index{GetCurrentDeviceSettingsCombo@{GetCurrentDeviceSettingsCombo}!CD3DSettingsDlg@{CD3DSettingsDlg}}
+\subsubsection[{GetCurrentDeviceSettingsCombo}]{\setlength{\rightskip}{0pt plus 5cm}{\bf CD3DEnumDeviceSettingsCombo} $\ast$ CD3DSettingsDlg::GetCurrentDeviceSettingsCombo ()\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{class_c_d3_d_settings_dlg_ac14dfa0e87ac321dd884928a300589e6}
+\hypertarget{class_c_d3_d_settings_dlg_a0c5cd502ae62c1460d989e2e51590ab4}{
+\index{CD3DSettingsDlg@{CD3DSettingsDlg}!GetDialogControl@{GetDialogControl}}
+\index{GetDialogControl@{GetDialogControl}!CD3DSettingsDlg@{CD3DSettingsDlg}}
+\subsubsection[{GetDialogControl}]{\setlength{\rightskip}{0pt plus 5cm}{\bf CDXUTDialog}$\ast$ CD3DSettingsDlg::GetDialogControl ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_c_d3_d_settings_dlg_a0c5cd502ae62c1460d989e2e51590ab4}
+\hypertarget{class_c_d3_d_settings_dlg_a7e286e6a7739042c63717a2009f72a64}{
+\index{CD3DSettingsDlg@{CD3DSettingsDlg}!GetSelectedAdapter@{GetSelectedAdapter}}
+\index{GetSelectedAdapter@{GetSelectedAdapter}!CD3DSettingsDlg@{CD3DSettingsDlg}}
+\subsubsection[{GetSelectedAdapter}]{\setlength{\rightskip}{0pt plus 5cm}UINT CD3DSettingsDlg::GetSelectedAdapter ()\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{class_c_d3_d_settings_dlg_a7e286e6a7739042c63717a2009f72a64}
+\hypertarget{class_c_d3_d_settings_dlg_a0a6307d23bd4277db326e440106b02fa}{
+\index{CD3DSettingsDlg@{CD3DSettingsDlg}!GetSelectedAdapterFormat@{GetSelectedAdapterFormat}}
+\index{GetSelectedAdapterFormat@{GetSelectedAdapterFormat}!CD3DSettingsDlg@{CD3DSettingsDlg}}
+\subsubsection[{GetSelectedAdapterFormat}]{\setlength{\rightskip}{0pt plus 5cm}D3DFORMAT CD3DSettingsDlg::GetSelectedAdapterFormat ()\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{class_c_d3_d_settings_dlg_a0a6307d23bd4277db326e440106b02fa}
+\hypertarget{class_c_d3_d_settings_dlg_a22cb29162c256ff8017867c0f66a404f}{
+\index{CD3DSettingsDlg@{CD3DSettingsDlg}!GetSelectedBackBufferFormat@{GetSelectedBackBufferFormat}}
+\index{GetSelectedBackBufferFormat@{GetSelectedBackBufferFormat}!CD3DSettingsDlg@{CD3DSettingsDlg}}
+\subsubsection[{GetSelectedBackBufferFormat}]{\setlength{\rightskip}{0pt plus 5cm}D3DFORMAT CD3DSettingsDlg::GetSelectedBackBufferFormat ()\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{class_c_d3_d_settings_dlg_a22cb29162c256ff8017867c0f66a404f}
+\hypertarget{class_c_d3_d_settings_dlg_a39ae16cb2d2b7f839e1adf6a982a6d19}{
+\index{CD3DSettingsDlg@{CD3DSettingsDlg}!GetSelectedDepthStencilBufferFormat@{GetSelectedDepthStencilBufferFormat}}
+\index{GetSelectedDepthStencilBufferFormat@{GetSelectedDepthStencilBufferFormat}!CD3DSettingsDlg@{CD3DSettingsDlg}}
+\subsubsection[{GetSelectedDepthStencilBufferFormat}]{\setlength{\rightskip}{0pt plus 5cm}D3DFORMAT CD3DSettingsDlg::GetSelectedDepthStencilBufferFormat ()\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{class_c_d3_d_settings_dlg_a39ae16cb2d2b7f839e1adf6a982a6d19}
+\hypertarget{class_c_d3_d_settings_dlg_a1a4e9165151846c6fb735f3cd0add737}{
+\index{CD3DSettingsDlg@{CD3DSettingsDlg}!GetSelectedDeviceType@{GetSelectedDeviceType}}
+\index{GetSelectedDeviceType@{GetSelectedDeviceType}!CD3DSettingsDlg@{CD3DSettingsDlg}}
+\subsubsection[{GetSelectedDeviceType}]{\setlength{\rightskip}{0pt plus 5cm}D3DDEVTYPE CD3DSettingsDlg::GetSelectedDeviceType ()\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{class_c_d3_d_settings_dlg_a1a4e9165151846c6fb735f3cd0add737}
+\hypertarget{class_c_d3_d_settings_dlg_a74ce21d607ccf9071bc6e6bf8a8bde51}{
+\index{CD3DSettingsDlg@{CD3DSettingsDlg}!GetSelectedMultisampleQuality@{GetSelectedMultisampleQuality}}
+\index{GetSelectedMultisampleQuality@{GetSelectedMultisampleQuality}!CD3DSettingsDlg@{CD3DSettingsDlg}}
+\subsubsection[{GetSelectedMultisampleQuality}]{\setlength{\rightskip}{0pt plus 5cm}DWORD CD3DSettingsDlg::GetSelectedMultisampleQuality ()\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{class_c_d3_d_settings_dlg_a74ce21d607ccf9071bc6e6bf8a8bde51}
+\hypertarget{class_c_d3_d_settings_dlg_a2789ede2956d2a0e5fa489f4a9ef690c}{
+\index{CD3DSettingsDlg@{CD3DSettingsDlg}!GetSelectedMultisampleType@{GetSelectedMultisampleType}}
+\index{GetSelectedMultisampleType@{GetSelectedMultisampleType}!CD3DSettingsDlg@{CD3DSettingsDlg}}
+\subsubsection[{GetSelectedMultisampleType}]{\setlength{\rightskip}{0pt plus 5cm}D3DMULTISAMPLE\_\-TYPE CD3DSettingsDlg::GetSelectedMultisampleType ()\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{class_c_d3_d_settings_dlg_a2789ede2956d2a0e5fa489f4a9ef690c}
+\hypertarget{class_c_d3_d_settings_dlg_a7819f5df57f56524015c396ef625809e}{
+\index{CD3DSettingsDlg@{CD3DSettingsDlg}!GetSelectedPresentInterval@{GetSelectedPresentInterval}}
+\index{GetSelectedPresentInterval@{GetSelectedPresentInterval}!CD3DSettingsDlg@{CD3DSettingsDlg}}
+\subsubsection[{GetSelectedPresentInterval}]{\setlength{\rightskip}{0pt plus 5cm}DWORD CD3DSettingsDlg::GetSelectedPresentInterval ()\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{class_c_d3_d_settings_dlg_a7819f5df57f56524015c396ef625809e}
+\hypertarget{class_c_d3_d_settings_dlg_ab2c395b2c12a94c6491d4639617fe1ac}{
+\index{CD3DSettingsDlg@{CD3DSettingsDlg}!GetSelectedRefreshRate@{GetSelectedRefreshRate}}
+\index{GetSelectedRefreshRate@{GetSelectedRefreshRate}!CD3DSettingsDlg@{CD3DSettingsDlg}}
+\subsubsection[{GetSelectedRefreshRate}]{\setlength{\rightskip}{0pt plus 5cm}DWORD CD3DSettingsDlg::GetSelectedRefreshRate ()\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{class_c_d3_d_settings_dlg_ab2c395b2c12a94c6491d4639617fe1ac}
+\hypertarget{class_c_d3_d_settings_dlg_a64deb789f38a469aaae9b24a98c1ba89}{
+\index{CD3DSettingsDlg@{CD3DSettingsDlg}!GetSelectedResolution@{GetSelectedResolution}}
+\index{GetSelectedResolution@{GetSelectedResolution}!CD3DSettingsDlg@{CD3DSettingsDlg}}
+\subsubsection[{GetSelectedResolution}]{\setlength{\rightskip}{0pt plus 5cm}void CD3DSettingsDlg::GetSelectedResolution (DWORD $\ast$ {\em pdwWidth}, \/  DWORD $\ast$ {\em pdwHeight})\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{class_c_d3_d_settings_dlg_a64deb789f38a469aaae9b24a98c1ba89}
+\hypertarget{class_c_d3_d_settings_dlg_a1c3324649ea149106ca0af2c43f880fe}{
+\index{CD3DSettingsDlg@{CD3DSettingsDlg}!GetSelectedVertexProcessingType@{GetSelectedVertexProcessingType}}
+\index{GetSelectedVertexProcessingType@{GetSelectedVertexProcessingType}!CD3DSettingsDlg@{CD3DSettingsDlg}}
+\subsubsection[{GetSelectedVertexProcessingType}]{\setlength{\rightskip}{0pt plus 5cm}DWORD CD3DSettingsDlg::GetSelectedVertexProcessingType ()\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{class_c_d3_d_settings_dlg_a1c3324649ea149106ca0af2c43f880fe}
+\hypertarget{class_c_d3_d_settings_dlg_acbf3721135cc7408a8aeb0cc0340d3a8}{
+\index{CD3DSettingsDlg@{CD3DSettingsDlg}!Init@{Init}}
+\index{Init@{Init}!CD3DSettingsDlg@{CD3DSettingsDlg}}
+\subsubsection[{Init}]{\setlength{\rightskip}{0pt plus 5cm}void CD3DSettingsDlg::Init ({\bf CDXUTDialogResourceManager} $\ast$ {\em pManager}, \/  LPCWSTR {\em pszControlTextureResourcename}, \/  HMODULE {\em hModule})}}
+\label{class_c_d3_d_settings_dlg_acbf3721135cc7408a8aeb0cc0340d3a8}
+\hypertarget{class_c_d3_d_settings_dlg_a3a9d268771e11c24188ad4be4185ede3}{
+\index{CD3DSettingsDlg@{CD3DSettingsDlg}!Init@{Init}}
+\index{Init@{Init}!CD3DSettingsDlg@{CD3DSettingsDlg}}
+\subsubsection[{Init}]{\setlength{\rightskip}{0pt plus 5cm}void CD3DSettingsDlg::Init ({\bf CDXUTDialogResourceManager} $\ast$ {\em pManager}, \/  LPCWSTR {\em szControlTextureFileName})}}
+\label{class_c_d3_d_settings_dlg_a3a9d268771e11c24188ad4be4185ede3}
+\hypertarget{class_c_d3_d_settings_dlg_ad729e65b02d7da4db7672d29d0d7c935}{
+\index{CD3DSettingsDlg@{CD3DSettingsDlg}!Init@{Init}}
+\index{Init@{Init}!CD3DSettingsDlg@{CD3DSettingsDlg}}
+\subsubsection[{Init}]{\setlength{\rightskip}{0pt plus 5cm}void CD3DSettingsDlg::Init ({\bf CDXUTDialogResourceManager} $\ast$ {\em pManager})}}
+\label{class_c_d3_d_settings_dlg_ad729e65b02d7da4db7672d29d0d7c935}
+\hypertarget{class_c_d3_d_settings_dlg_a1bf2d86e2af7d854ed904035e15677bd}{
+\index{CD3DSettingsDlg@{CD3DSettingsDlg}!IsActive@{IsActive}}
+\index{IsActive@{IsActive}!CD3DSettingsDlg@{CD3DSettingsDlg}}
+\subsubsection[{IsActive}]{\setlength{\rightskip}{0pt plus 5cm}bool CD3DSettingsDlg::IsActive ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_c_d3_d_settings_dlg_a1bf2d86e2af7d854ed904035e15677bd}
+\hypertarget{class_c_d3_d_settings_dlg_ac5d2815eced3dcc37c0313ffd1e522ca}{
+\index{CD3DSettingsDlg@{CD3DSettingsDlg}!IsDeviceClip@{IsDeviceClip}}
+\index{IsDeviceClip@{IsDeviceClip}!CD3DSettingsDlg@{CD3DSettingsDlg}}
+\subsubsection[{IsDeviceClip}]{\setlength{\rightskip}{0pt plus 5cm}bool CD3DSettingsDlg::IsDeviceClip ()\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{class_c_d3_d_settings_dlg_ac5d2815eced3dcc37c0313ffd1e522ca}
+\hypertarget{class_c_d3_d_settings_dlg_a3788a01ff4742e458ba3d117d2bfdde3}{
+\index{CD3DSettingsDlg@{CD3DSettingsDlg}!IsWindowed@{IsWindowed}}
+\index{IsWindowed@{IsWindowed}!CD3DSettingsDlg@{CD3DSettingsDlg}}
+\subsubsection[{IsWindowed}]{\setlength{\rightskip}{0pt plus 5cm}bool CD3DSettingsDlg::IsWindowed ()\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{class_c_d3_d_settings_dlg_a3788a01ff4742e458ba3d117d2bfdde3}
+\hypertarget{class_c_d3_d_settings_dlg_a8a3ecd505c89b0bba30aabce63534a31}{
+\index{CD3DSettingsDlg@{CD3DSettingsDlg}!MsgProc@{MsgProc}}
+\index{MsgProc@{MsgProc}!CD3DSettingsDlg@{CD3DSettingsDlg}}
+\subsubsection[{MsgProc}]{\setlength{\rightskip}{0pt plus 5cm}LRESULT CD3DSettingsDlg::MsgProc (HWND {\em hWnd}, \/  UINT {\em uMsg}, \/  WPARAM {\em wParam}, \/  LPARAM {\em lParam})}}
+\label{class_c_d3_d_settings_dlg_a8a3ecd505c89b0bba30aabce63534a31}
+\hypertarget{class_c_d3_d_settings_dlg_a16315666d38d33b8d6b6b896f854eb42}{
+\index{CD3DSettingsDlg@{CD3DSettingsDlg}!OnAdapterChanged@{OnAdapterChanged}}
+\index{OnAdapterChanged@{OnAdapterChanged}!CD3DSettingsDlg@{CD3DSettingsDlg}}
+\subsubsection[{OnAdapterChanged}]{\setlength{\rightskip}{0pt plus 5cm}HRESULT CD3DSettingsDlg::OnAdapterChanged ()\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{class_c_d3_d_settings_dlg_a16315666d38d33b8d6b6b896f854eb42}
+\hypertarget{class_c_d3_d_settings_dlg_a422dec4deed87610ff75783dceb2b4b8}{
+\index{CD3DSettingsDlg@{CD3DSettingsDlg}!OnAdapterFormatChanged@{OnAdapterFormatChanged}}
+\index{OnAdapterFormatChanged@{OnAdapterFormatChanged}!CD3DSettingsDlg@{CD3DSettingsDlg}}
+\subsubsection[{OnAdapterFormatChanged}]{\setlength{\rightskip}{0pt plus 5cm}HRESULT CD3DSettingsDlg::OnAdapterFormatChanged ()\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{class_c_d3_d_settings_dlg_a422dec4deed87610ff75783dceb2b4b8}
+\hypertarget{class_c_d3_d_settings_dlg_a2ec3c8e1d0fb192aa5448c4ac8f138b2}{
+\index{CD3DSettingsDlg@{CD3DSettingsDlg}!OnBackBufferFormatChanged@{OnBackBufferFormatChanged}}
+\index{OnBackBufferFormatChanged@{OnBackBufferFormatChanged}!CD3DSettingsDlg@{CD3DSettingsDlg}}
+\subsubsection[{OnBackBufferFormatChanged}]{\setlength{\rightskip}{0pt plus 5cm}HRESULT CD3DSettingsDlg::OnBackBufferFormatChanged ()\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{class_c_d3_d_settings_dlg_a2ec3c8e1d0fb192aa5448c4ac8f138b2}
+\hypertarget{class_c_d3_d_settings_dlg_afc71a070eaf9072f4dc3253aac1baddf}{
+\index{CD3DSettingsDlg@{CD3DSettingsDlg}!OnCreateDevice@{OnCreateDevice}}
+\index{OnCreateDevice@{OnCreateDevice}!CD3DSettingsDlg@{CD3DSettingsDlg}}
+\subsubsection[{OnCreateDevice}]{\setlength{\rightskip}{0pt plus 5cm}HRESULT CD3DSettingsDlg::OnCreateDevice (IDirect3DDevice9 $\ast$ {\em pd3dDevice})}}
+\label{class_c_d3_d_settings_dlg_afc71a070eaf9072f4dc3253aac1baddf}
+\hypertarget{class_c_d3_d_settings_dlg_a7d589e810b5680c966665c94190b0170}{
+\index{CD3DSettingsDlg@{CD3DSettingsDlg}!OnDepthStencilBufferFormatChanged@{OnDepthStencilBufferFormatChanged}}
+\index{OnDepthStencilBufferFormatChanged@{OnDepthStencilBufferFormatChanged}!CD3DSettingsDlg@{CD3DSettingsDlg}}
+\subsubsection[{OnDepthStencilBufferFormatChanged}]{\setlength{\rightskip}{0pt plus 5cm}HRESULT CD3DSettingsDlg::OnDepthStencilBufferFormatChanged ()\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{class_c_d3_d_settings_dlg_a7d589e810b5680c966665c94190b0170}
+\hypertarget{class_c_d3_d_settings_dlg_a00d400903b65fa5d55b7e7efb716bb8e}{
+\index{CD3DSettingsDlg@{CD3DSettingsDlg}!OnDestroyDevice@{OnDestroyDevice}}
+\index{OnDestroyDevice@{OnDestroyDevice}!CD3DSettingsDlg@{CD3DSettingsDlg}}
+\subsubsection[{OnDestroyDevice}]{\setlength{\rightskip}{0pt plus 5cm}HRESULT CD3DSettingsDlg::OnDestroyDevice ()}}
+\label{class_c_d3_d_settings_dlg_a00d400903b65fa5d55b7e7efb716bb8e}
+\hypertarget{class_c_d3_d_settings_dlg_a56d8e003ce194520995c88c531349f01}{
+\index{CD3DSettingsDlg@{CD3DSettingsDlg}!OnDeviceClipChanged@{OnDeviceClipChanged}}
+\index{OnDeviceClipChanged@{OnDeviceClipChanged}!CD3DSettingsDlg@{CD3DSettingsDlg}}
+\subsubsection[{OnDeviceClipChanged}]{\setlength{\rightskip}{0pt plus 5cm}HRESULT CD3DSettingsDlg::OnDeviceClipChanged ()\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{class_c_d3_d_settings_dlg_a56d8e003ce194520995c88c531349f01}
+\hypertarget{class_c_d3_d_settings_dlg_a6e9145611a264f08597503e32a51aeea}{
+\index{CD3DSettingsDlg@{CD3DSettingsDlg}!OnDeviceTypeChanged@{OnDeviceTypeChanged}}
+\index{OnDeviceTypeChanged@{OnDeviceTypeChanged}!CD3DSettingsDlg@{CD3DSettingsDlg}}
+\subsubsection[{OnDeviceTypeChanged}]{\setlength{\rightskip}{0pt plus 5cm}HRESULT CD3DSettingsDlg::OnDeviceTypeChanged ()\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{class_c_d3_d_settings_dlg_a6e9145611a264f08597503e32a51aeea}
+\hypertarget{class_c_d3_d_settings_dlg_a8ba617f0440a4647d0697e0dadb373b4}{
+\index{CD3DSettingsDlg@{CD3DSettingsDlg}!OnEvent@{OnEvent}}
+\index{OnEvent@{OnEvent}!CD3DSettingsDlg@{CD3DSettingsDlg}}
+\subsubsection[{OnEvent}]{\setlength{\rightskip}{0pt plus 5cm}void CD3DSettingsDlg::OnEvent (UINT {\em nEvent}, \/  {\bf int} {\em nControlID}, \/  {\bf CDXUTControl} $\ast$ {\em pControl})\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{class_c_d3_d_settings_dlg_a8ba617f0440a4647d0697e0dadb373b4}
+\hypertarget{class_c_d3_d_settings_dlg_a9cf75243457ad7f0b8c179bacc93cbdc}{
+\index{CD3DSettingsDlg@{CD3DSettingsDlg}!OnLostDevice@{OnLostDevice}}
+\index{OnLostDevice@{OnLostDevice}!CD3DSettingsDlg@{CD3DSettingsDlg}}
+\subsubsection[{OnLostDevice}]{\setlength{\rightskip}{0pt plus 5cm}HRESULT CD3DSettingsDlg::OnLostDevice ()}}
+\label{class_c_d3_d_settings_dlg_a9cf75243457ad7f0b8c179bacc93cbdc}
+\hypertarget{class_c_d3_d_settings_dlg_ad4f5ee2ea8bc3d590fb7748987af28e6}{
+\index{CD3DSettingsDlg@{CD3DSettingsDlg}!OnMultisampleQualityChanged@{OnMultisampleQualityChanged}}
+\index{OnMultisampleQualityChanged@{OnMultisampleQualityChanged}!CD3DSettingsDlg@{CD3DSettingsDlg}}
+\subsubsection[{OnMultisampleQualityChanged}]{\setlength{\rightskip}{0pt plus 5cm}HRESULT CD3DSettingsDlg::OnMultisampleQualityChanged ()\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{class_c_d3_d_settings_dlg_ad4f5ee2ea8bc3d590fb7748987af28e6}
+\hypertarget{class_c_d3_d_settings_dlg_a5979860f92903f58815328188bb2255f}{
+\index{CD3DSettingsDlg@{CD3DSettingsDlg}!OnMultisampleTypeChanged@{OnMultisampleTypeChanged}}
+\index{OnMultisampleTypeChanged@{OnMultisampleTypeChanged}!CD3DSettingsDlg@{CD3DSettingsDlg}}
+\subsubsection[{OnMultisampleTypeChanged}]{\setlength{\rightskip}{0pt plus 5cm}HRESULT CD3DSettingsDlg::OnMultisampleTypeChanged ()\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{class_c_d3_d_settings_dlg_a5979860f92903f58815328188bb2255f}
+\hypertarget{class_c_d3_d_settings_dlg_a4ebbdfd84ac6ddf9cfaa0aba72b49681}{
+\index{CD3DSettingsDlg@{CD3DSettingsDlg}!OnPresentIntervalChanged@{OnPresentIntervalChanged}}
+\index{OnPresentIntervalChanged@{OnPresentIntervalChanged}!CD3DSettingsDlg@{CD3DSettingsDlg}}
+\subsubsection[{OnPresentIntervalChanged}]{\setlength{\rightskip}{0pt plus 5cm}HRESULT CD3DSettingsDlg::OnPresentIntervalChanged ()\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{class_c_d3_d_settings_dlg_a4ebbdfd84ac6ddf9cfaa0aba72b49681}
+\hypertarget{class_c_d3_d_settings_dlg_a5f321948ac07b6c0707dfa65f9cbd990}{
+\index{CD3DSettingsDlg@{CD3DSettingsDlg}!OnRefreshRateChanged@{OnRefreshRateChanged}}
+\index{OnRefreshRateChanged@{OnRefreshRateChanged}!CD3DSettingsDlg@{CD3DSettingsDlg}}
+\subsubsection[{OnRefreshRateChanged}]{\setlength{\rightskip}{0pt plus 5cm}HRESULT CD3DSettingsDlg::OnRefreshRateChanged ()\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{class_c_d3_d_settings_dlg_a5f321948ac07b6c0707dfa65f9cbd990}
+\hypertarget{class_c_d3_d_settings_dlg_a395d09a31ad85f38fa495311629bf347}{
+\index{CD3DSettingsDlg@{CD3DSettingsDlg}!OnRender@{OnRender}}
+\index{OnRender@{OnRender}!CD3DSettingsDlg@{CD3DSettingsDlg}}
+\subsubsection[{OnRender}]{\setlength{\rightskip}{0pt plus 5cm}HRESULT CD3DSettingsDlg::OnRender (float {\em fElapsedTime})}}
+\label{class_c_d3_d_settings_dlg_a395d09a31ad85f38fa495311629bf347}
+\hypertarget{class_c_d3_d_settings_dlg_af22c2f99599fd86040c834ca9757b3e6}{
+\index{CD3DSettingsDlg@{CD3DSettingsDlg}!OnResetDevice@{OnResetDevice}}
+\index{OnResetDevice@{OnResetDevice}!CD3DSettingsDlg@{CD3DSettingsDlg}}
+\subsubsection[{OnResetDevice}]{\setlength{\rightskip}{0pt plus 5cm}HRESULT CD3DSettingsDlg::OnResetDevice ()}}
+\label{class_c_d3_d_settings_dlg_af22c2f99599fd86040c834ca9757b3e6}
+\hypertarget{class_c_d3_d_settings_dlg_a37daa5c226dfa883b9bd9675f587188d}{
+\index{CD3DSettingsDlg@{CD3DSettingsDlg}!OnResolutionChanged@{OnResolutionChanged}}
+\index{OnResolutionChanged@{OnResolutionChanged}!CD3DSettingsDlg@{CD3DSettingsDlg}}
+\subsubsection[{OnResolutionChanged}]{\setlength{\rightskip}{0pt plus 5cm}HRESULT CD3DSettingsDlg::OnResolutionChanged ()\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{class_c_d3_d_settings_dlg_a37daa5c226dfa883b9bd9675f587188d}
+\hypertarget{class_c_d3_d_settings_dlg_a3462ae5f6053ed30ce6ce269ca155c82}{
+\index{CD3DSettingsDlg@{CD3DSettingsDlg}!OnVertexProcessingChanged@{OnVertexProcessingChanged}}
+\index{OnVertexProcessingChanged@{OnVertexProcessingChanged}!CD3DSettingsDlg@{CD3DSettingsDlg}}
+\subsubsection[{OnVertexProcessingChanged}]{\setlength{\rightskip}{0pt plus 5cm}HRESULT CD3DSettingsDlg::OnVertexProcessingChanged ()\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{class_c_d3_d_settings_dlg_a3462ae5f6053ed30ce6ce269ca155c82}
+\hypertarget{class_c_d3_d_settings_dlg_ae6c060173543d659cf6e4d810971c3ee}{
+\index{CD3DSettingsDlg@{CD3DSettingsDlg}!OnWindowedFullScreenChanged@{OnWindowedFullScreenChanged}}
+\index{OnWindowedFullScreenChanged@{OnWindowedFullScreenChanged}!CD3DSettingsDlg@{CD3DSettingsDlg}}
+\subsubsection[{OnWindowedFullScreenChanged}]{\setlength{\rightskip}{0pt plus 5cm}HRESULT CD3DSettingsDlg::OnWindowedFullScreenChanged ()\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{class_c_d3_d_settings_dlg_ae6c060173543d659cf6e4d810971c3ee}
+\hypertarget{class_c_d3_d_settings_dlg_ae7602b7c1fc461fdc997c40de550ccbe}{
+\index{CD3DSettingsDlg@{CD3DSettingsDlg}!Refresh@{Refresh}}
+\index{Refresh@{Refresh}!CD3DSettingsDlg@{CD3DSettingsDlg}}
+\subsubsection[{Refresh}]{\setlength{\rightskip}{0pt plus 5cm}HRESULT CD3DSettingsDlg::Refresh ()}}
+\label{class_c_d3_d_settings_dlg_ae7602b7c1fc461fdc997c40de550ccbe}
+\hypertarget{class_c_d3_d_settings_dlg_a78ee87995db6417e18e597610f119212}{
+\index{CD3DSettingsDlg@{CD3DSettingsDlg}!SetActive@{SetActive}}
+\index{SetActive@{SetActive}!CD3DSettingsDlg@{CD3DSettingsDlg}}
+\subsubsection[{SetActive}]{\setlength{\rightskip}{0pt plus 5cm}void CD3DSettingsDlg::SetActive (bool {\em bActive})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_c_d3_d_settings_dlg_a78ee87995db6417e18e597610f119212}
+\hypertarget{class_c_d3_d_settings_dlg_ab5e85523266807441c34a4439163550f}{
+\index{CD3DSettingsDlg@{CD3DSettingsDlg}!SetDeviceClip@{SetDeviceClip}}
+\index{SetDeviceClip@{SetDeviceClip}!CD3DSettingsDlg@{CD3DSettingsDlg}}
+\subsubsection[{SetDeviceClip}]{\setlength{\rightskip}{0pt plus 5cm}void CD3DSettingsDlg::SetDeviceClip (bool {\em bDeviceClip})\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{class_c_d3_d_settings_dlg_ab5e85523266807441c34a4439163550f}
+\hypertarget{class_c_d3_d_settings_dlg_a12d42c7cb4fc734538eeafff7d979215}{
+\index{CD3DSettingsDlg@{CD3DSettingsDlg}!SetDeviceSettingsFromUI@{SetDeviceSettingsFromUI}}
+\index{SetDeviceSettingsFromUI@{SetDeviceSettingsFromUI}!CD3DSettingsDlg@{CD3DSettingsDlg}}
+\subsubsection[{SetDeviceSettingsFromUI}]{\setlength{\rightskip}{0pt plus 5cm}HRESULT CD3DSettingsDlg::SetDeviceSettingsFromUI ()\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{class_c_d3_d_settings_dlg_a12d42c7cb4fc734538eeafff7d979215}
+\hypertarget{class_c_d3_d_settings_dlg_a1a8187c3c56b9998c25d7fb4fc1c5ab8}{
+\index{CD3DSettingsDlg@{CD3DSettingsDlg}!SetWindowed@{SetWindowed}}
+\index{SetWindowed@{SetWindowed}!CD3DSettingsDlg@{CD3DSettingsDlg}}
+\subsubsection[{SetWindowed}]{\setlength{\rightskip}{0pt plus 5cm}void CD3DSettingsDlg::SetWindowed (bool {\em bWindowed})\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{class_c_d3_d_settings_dlg_a1a8187c3c56b9998c25d7fb4fc1c5ab8}
+\hypertarget{class_c_d3_d_settings_dlg_a55cc59820bc86efb9819739110f9190f}{
+\index{CD3DSettingsDlg@{CD3DSettingsDlg}!StaticOnEvent@{StaticOnEvent}}
+\index{StaticOnEvent@{StaticOnEvent}!CD3DSettingsDlg@{CD3DSettingsDlg}}
+\subsubsection[{StaticOnEvent}]{\setlength{\rightskip}{0pt plus 5cm}void WINAPI CD3DSettingsDlg::StaticOnEvent (UINT {\em nEvent}, \/  {\bf int} {\em nControlID}, \/  {\bf CDXUTControl} $\ast$ {\em pControl}, \/  void $\ast$ {\em pUserData})\hspace{0.3cm}{\ttfamily  \mbox{[}static, protected\mbox{]}}}}
+\label{class_c_d3_d_settings_dlg_a55cc59820bc86efb9819739110f9190f}
+
+
+\subsection{Friends And Related Function Documentation}
+\hypertarget{class_c_d3_d_settings_dlg_a48e0861d43a45a17f8ab5e9d46efa7c9}{
+\index{CD3DSettingsDlg@{CD3DSettingsDlg}!DXUTGetSettingsDialog@{DXUTGetSettingsDialog}}
+\index{DXUTGetSettingsDialog@{DXUTGetSettingsDialog}!CD3DSettingsDlg@{CD3DSettingsDlg}}
+\subsubsection[{DXUTGetSettingsDialog}]{\setlength{\rightskip}{0pt plus 5cm}{\bf CD3DSettingsDlg}$\ast$ DXUTGetSettingsDialog ()\hspace{0.3cm}{\ttfamily  \mbox{[}friend\mbox{]}}}}
+\label{class_c_d3_d_settings_dlg_a48e0861d43a45a17f8ab5e9d46efa7c9}
+
+
+\subsection{Member Data Documentation}
+\hypertarget{class_c_d3_d_settings_dlg_ad080d36c3e4fc29a7909a7962b11fa78}{
+\index{CD3DSettingsDlg@{CD3DSettingsDlg}!m\_\-bActive@{m\_\-bActive}}
+\index{m\_\-bActive@{m\_\-bActive}!CD3DSettingsDlg@{CD3DSettingsDlg}}
+\subsubsection[{m\_\-bActive}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf CD3DSettingsDlg::m\_\-bActive}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{class_c_d3_d_settings_dlg_ad080d36c3e4fc29a7909a7962b11fa78}
+\hypertarget{class_c_d3_d_settings_dlg_a6653f7f7899c31f909c2d7542babc521}{
+\index{CD3DSettingsDlg@{CD3DSettingsDlg}!m\_\-Dialog@{m\_\-Dialog}}
+\index{m\_\-Dialog@{m\_\-Dialog}!CD3DSettingsDlg@{CD3DSettingsDlg}}
+\subsubsection[{m\_\-Dialog}]{\setlength{\rightskip}{0pt plus 5cm}{\bf CDXUTDialog} {\bf CD3DSettingsDlg::m\_\-Dialog}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{class_c_d3_d_settings_dlg_a6653f7f7899c31f909c2d7542babc521}
+\hypertarget{class_c_d3_d_settings_dlg_af8e1e88711501924bd091fe0792cb489}{
+\index{CD3DSettingsDlg@{CD3DSettingsDlg}!m\_\-pStateBlock@{m\_\-pStateBlock}}
+\index{m\_\-pStateBlock@{m\_\-pStateBlock}!CD3DSettingsDlg@{CD3DSettingsDlg}}
+\subsubsection[{m\_\-pStateBlock}]{\setlength{\rightskip}{0pt plus 5cm}IDirect3DStateBlock9$\ast$ {\bf CD3DSettingsDlg::m\_\-pStateBlock}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{class_c_d3_d_settings_dlg_af8e1e88711501924bd091fe0792cb489}
+
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+C:/Users/doug/Documents/Visual Studio 2008/Projects/enlightened/Enlightened/DXUT/\hyperlink{_d_x_u_t_settings_dlg_8h}{DXUTSettingsDlg.h}\item 
+C:/Users/doug/Documents/Visual Studio 2008/Projects/enlightened/Enlightened/DXUT/\hyperlink{_d_x_u_t_settings_dlg_8cpp}{DXUTSettingsDlg.cpp}\end{DoxyCompactItemize}

@@ -1,174 +1,412 @@
+\hypertarget{class_feisty_1_1_camera}{
 \section{Feisty::Camera Class Reference}
 \label{class_feisty_1_1_camera}\index{Feisty::Camera@{Feisty::Camera}}
+}
 
 
 {\ttfamily \#include $<$Camera.h$>$}\subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-{\bf Camera} (LPDIRECT3DDEVICE9 a\_\-device)
+\hyperlink{class_feisty_1_1_camera_a7480bd2212144072df9186aba48a93e4}{Camera} (LPDIRECT3DDEVICE9 a\_\-device)
 \item 
-void {\bf Refresh} ()
+void \hyperlink{class_feisty_1_1_camera_a8729327b8c34fe72d8c6e4964c0d4a6b}{Refresh} ()
 \item 
-void {\bf Update} (float a\_\-timeDelta)
+void \hyperlink{class_feisty_1_1_camera_ae633d0619f978c5104f2c8d5dbf10aa5}{Update} (float a\_\-timeDelta)
 \item 
-void {\bf StartSeeking} (D3DXVECTOR3 a\_\-vector)
+void \hyperlink{class_feisty_1_1_camera_a9144982d770e3134fb1b52c82da4669d}{StartSeeking} (D3DXVECTOR3 a\_\-vector)
 \item 
-void {\bf StopSeeking} ()
+void \hyperlink{class_feisty_1_1_camera_ab579f233a45c7a2b629d240c36cdbb61}{StopSeeking} ()
 \item 
-void {\bf Handle} (float a\_\-xDelta, float a\_\-yDelta)
+void \hyperlink{class_feisty_1_1_camera_aea1e6fbd53ad47e302f3fa38535cb3cd}{Turn} (float a\_\-xDelta, float a\_\-yDelta)
 \item 
-virtual {\bf $\sim$Camera} (void)
+void \hyperlink{class_feisty_1_1_camera_a4a05e648973a0cb47c02b09449b4ae13}{Handle} (float a\_\-xDelta, float a\_\-yDelta)
 \item 
-void {\bf AdoptShader} (SGLib::Node $\ast$g\_\-node)
+virtual \hyperlink{class_feisty_1_1_camera_a8dd5a9f236d04875100a7404ada01edc}{$\sim$Camera} (void)
 \item 
-void {\bf SetFieldOfView} (float a\_\-fieldOfView)
+void \hyperlink{class_feisty_1_1_camera_a8eb2963d22386fad3a2beba4e3d1871e}{AdoptShader} (SGLib::Node $\ast$g\_\-node)
 \item 
-void {\bf SetAspectRatio} (float a\_\-aspectRatio)
+void \hyperlink{class_feisty_1_1_camera_aac9f58b9b0f63ce1f354cfef473d08e9}{SetFieldOfView} (float a\_\-fieldOfView)
 \item 
-void {\bf SetNear} (float a\_\-near)
+void \hyperlink{class_feisty_1_1_camera_a38dcec7dc8214ebb274c71e2dcc2eeb3}{SetAspectRatio} (float a\_\-aspectRatio)
 \item 
-void {\bf SetFar} (float a\_\-far)
+void \hyperlink{class_feisty_1_1_camera_a58228535280e133cc8a40dc20eed6454}{SetNear} (float a\_\-near)
 \item 
-D3DXVECTOR3 {\bf GetPosition} ()
+void \hyperlink{class_feisty_1_1_camera_ad70999c56c819dcef588e7e93280ebce}{SetFar} (float a\_\-far)
+\item 
+D3DXVECTOR3 \hyperlink{class_feisty_1_1_camera_aa4384bf9913be09d286fbdf7c318f4f5}{GetPosition} ()
+\item 
+void \hyperlink{class_feisty_1_1_camera_a0e3faebd081573eecbe40c4551926919}{SetTargetNode} (SGLib::Transform $\ast$a\_\-targetNode)
+\item 
+void \hyperlink{class_feisty_1_1_camera_a8392192850c1bece0cc923001f4479b9}{SetWalking} (bool a\_\-walking)
+\item 
+void \hyperlink{class_feisty_1_1_camera_a7aca26cc73f4399edd7ede2ae1914cf8}{SetAnimationNode} (SGLib::Articulated $\ast$a\_\-animationNode)
+\item 
+\hyperlink{class_feisty_1_1_camera_a7480bd2212144072df9186aba48a93e4}{Camera} (LPDIRECT3DDEVICE9 a\_\-device)
+\item 
+void \hyperlink{class_feisty_1_1_camera_a8729327b8c34fe72d8c6e4964c0d4a6b}{Refresh} ()
+\item 
+void \hyperlink{class_feisty_1_1_camera_ae633d0619f978c5104f2c8d5dbf10aa5}{Update} (float a\_\-timeDelta)
+\item 
+void \hyperlink{class_feisty_1_1_camera_a9144982d770e3134fb1b52c82da4669d}{StartSeeking} (D3DXVECTOR3 a\_\-vector)
+\item 
+void \hyperlink{class_feisty_1_1_camera_ab579f233a45c7a2b629d240c36cdbb61}{StopSeeking} ()
+\item 
+void \hyperlink{class_feisty_1_1_camera_aea1e6fbd53ad47e302f3fa38535cb3cd}{Turn} (float a\_\-xDelta, float a\_\-yDelta)
+\item 
+void \hyperlink{class_feisty_1_1_camera_a4a05e648973a0cb47c02b09449b4ae13}{Handle} (float a\_\-xDelta, float a\_\-yDelta)
+\item 
+virtual \hyperlink{class_feisty_1_1_camera_a8dd5a9f236d04875100a7404ada01edc}{$\sim$Camera} (void)
+\item 
+void \hyperlink{class_feisty_1_1_camera_a8eb2963d22386fad3a2beba4e3d1871e}{AdoptShader} (SGLib::Node $\ast$g\_\-node)
+\item 
+void \hyperlink{class_feisty_1_1_camera_aac9f58b9b0f63ce1f354cfef473d08e9}{SetFieldOfView} (float a\_\-fieldOfView)
+\item 
+void \hyperlink{class_feisty_1_1_camera_a38dcec7dc8214ebb274c71e2dcc2eeb3}{SetAspectRatio} (float a\_\-aspectRatio)
+\item 
+void \hyperlink{class_feisty_1_1_camera_a58228535280e133cc8a40dc20eed6454}{SetNear} (float a\_\-near)
+\item 
+void \hyperlink{class_feisty_1_1_camera_ad70999c56c819dcef588e7e93280ebce}{SetFar} (float a\_\-far)
+\item 
+D3DXVECTOR3 \hyperlink{class_feisty_1_1_camera_aa4384bf9913be09d286fbdf7c318f4f5}{GetPosition} ()
+\item 
+void \hyperlink{class_feisty_1_1_camera_a0e3faebd081573eecbe40c4551926919}{SetTargetNode} (SGLib::Transform $\ast$a\_\-targetNode)
+\item 
+void \hyperlink{class_feisty_1_1_camera_a8392192850c1bece0cc923001f4479b9}{SetWalking} (bool a\_\-walking)
+\item 
+void \hyperlink{class_feisty_1_1_camera_a7aca26cc73f4399edd7ede2ae1914cf8}{SetAnimationNode} (SGLib::Articulated $\ast$a\_\-animationNode)
 \end{DoxyCompactItemize}
 \subsection*{Protected Attributes}
 \begin{DoxyCompactItemize}
 \item 
-SGLib::Projection $\ast$ {\bf m\_\-projectionNode}
+SGLib::Projection $\ast$ \hyperlink{class_feisty_1_1_camera_a3197aef7f3d3387c491dff1fbcbed1a5}{m\_\-projectionNode}
 \item 
-float {\bf m\_\-fieldOfView}
+SGLib::Transform $\ast$ \hyperlink{class_feisty_1_1_camera_ae903d3ca5f7b7a39409b5f93260540b0}{m\_\-targetNode}
 \item 
-float {\bf m\_\-near}
+float \hyperlink{class_feisty_1_1_camera_a31f25794fd365e6f470bfdef89db7fec}{m\_\-fieldOfView}
 \item 
-float {\bf m\_\-far}
+float \hyperlink{class_feisty_1_1_camera_a88a4135705f989e598056d765b7a3494}{m\_\-near}
 \item 
-float {\bf m\_\-aspectRatio}
+float \hyperlink{class_feisty_1_1_camera_a244474dcfdd0115417b8218cbad547d1}{m\_\-far}
 \item 
-D3DXVECTOR3 {\bf m\_\-rotation}
+float \hyperlink{class_feisty_1_1_camera_a9a5b3abea53ca97854696258029ee6cd}{m\_\-aspectRatio}
 \item 
-D3DXVECTOR3 {\bf m\_\-position}
+D3DXVECTOR3 \hyperlink{class_feisty_1_1_camera_af3087fb07e6ef81121025dd39b3768c0}{m\_\-rotation}
 \item 
-D3DXVECTOR3 {\bf m\_\-seekTarget}
+D3DXVECTOR3 \hyperlink{class_feisty_1_1_camera_ac9f127b7de1e9a2a90d7e44cf76a10fc}{m\_\-position}
 \item 
-D3DXVECTOR3 {\bf m\_\-seekOrigin}
+D3DXVECTOR3 \hyperlink{class_feisty_1_1_camera_a4d08c6d9f7ae87b91922fada6c71a970}{m\_\-seekTarget}
 \item 
-D3DXVECTOR3 {\bf m\_\-targetPosition}
+D3DXVECTOR3 \hyperlink{class_feisty_1_1_camera_a32129e76cfe6d76caa62dac33e629c08}{m\_\-seekOrigin}
 \item 
-D3DXVECTOR3 {\bf m\_\-up}
+D3DXVECTOR3 \hyperlink{class_feisty_1_1_camera_a46e0e07b73df0dac52e8dea78f8a931b}{m\_\-targetPosition}
 \item 
-D3DXVECTOR3 {\bf m\_\-offset}
+D3DXVECTOR3 \hyperlink{class_feisty_1_1_camera_aa5b229f3392f3ad3f9863fdb4965288a}{m\_\-up}
 \item 
-LPDIRECT3DDEVICE9 {\bf m\_\-device}
+D3DXVECTOR3 \hyperlink{class_feisty_1_1_camera_af6bf5ba87e84d43ec23d0cb9e4d0647b}{m\_\-offset}
 \item 
-float {\bf m\_\-seekTime}
+LPDIRECT3DDEVICE9 \hyperlink{class_feisty_1_1_camera_a97f0d0c8495ae47a9cb68eb0250e6fec}{m\_\-device}
 \item 
-float {\bf m\_\-elapsedSeekTime}
+float \hyperlink{class_feisty_1_1_camera_a09faed9efdd9403c38b87314d6098720}{m\_\-seekTime}
 \item 
-float {\bf m\_\-elapsedTime}
+float \hyperlink{class_feisty_1_1_camera_a6dfc75d25cfe092df8980d0182b05be0}{m\_\-elapsedSeekTime}
 \item 
-bool {\bf m\_\-seeking}
+float \hyperlink{class_feisty_1_1_camera_a970eb963a54195b32a27a2e1cd9edd9b}{m\_\-elapsedTime}
+\item 
+bool \hyperlink{class_feisty_1_1_camera_a22a25da8dd1087d33d5835c8bcc13434}{m\_\-seeking}
+\item 
+bool \hyperlink{class_feisty_1_1_camera_aae8a222463783a5f5114ffbc6a22dc91}{m\_\-walking}
+\item 
+bool \hyperlink{class_feisty_1_1_camera_ab5e5bb6729ea8baa0a59c4465325b534}{m\_\-initialized}
+\item 
+SGLib::Articulated $\ast$ \hyperlink{class_feisty_1_1_camera_a3c97db1bade9711107fc3719fab4b9a7}{m\_\-animationNode}
 \end{DoxyCompactItemize}
 
 
 \subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_feisty_1_1_camera_a7480bd2212144072df9186aba48a93e4}{
 \index{Feisty::Camera@{Feisty::Camera}!Camera@{Camera}}
 \index{Camera@{Camera}!Feisty::Camera@{Feisty::Camera}}
-\subsubsection[{Camera}]{\setlength{\rightskip}{0pt plus 5cm}Feisty::Camera::Camera (LPDIRECT3DDEVICE9 {\em a\_\-device})\hspace{0.3cm}{\ttfamily  [inline]}}\label{class_feisty_1_1_camera_a7480bd2212144072df9186aba48a93e4}
+\subsubsection[{Camera}]{\setlength{\rightskip}{0pt plus 5cm}Feisty::Camera::Camera (LPDIRECT3DDEVICE9 {\em a\_\-device})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_feisty_1_1_camera_a7480bd2212144072df9186aba48a93e4}
+\hypertarget{class_feisty_1_1_camera_a8dd5a9f236d04875100a7404ada01edc}{
 \index{Feisty::Camera@{Feisty::Camera}!$\sim$Camera@{$\sim$Camera}}
 \index{$\sim$Camera@{$\sim$Camera}!Feisty::Camera@{Feisty::Camera}}
-\subsubsection[{$\sim$Camera}]{\setlength{\rightskip}{0pt plus 5cm}virtual Feisty::Camera::$\sim$Camera (void)\hspace{0.3cm}{\ttfamily  [inline, virtual]}}\label{class_feisty_1_1_camera_a8dd5a9f236d04875100a7404ada01edc}
+\subsubsection[{$\sim$Camera}]{\setlength{\rightskip}{0pt plus 5cm}virtual Feisty::Camera::$\sim$Camera (void)\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}
+\label{class_feisty_1_1_camera_a8dd5a9f236d04875100a7404ada01edc}
+\hypertarget{class_feisty_1_1_camera_a7480bd2212144072df9186aba48a93e4}{
+\index{Feisty::Camera@{Feisty::Camera}!Camera@{Camera}}
+\index{Camera@{Camera}!Feisty::Camera@{Feisty::Camera}}
+\subsubsection[{Camera}]{\setlength{\rightskip}{0pt plus 5cm}Feisty::Camera::Camera (LPDIRECT3DDEVICE9 {\em a\_\-device})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_feisty_1_1_camera_a7480bd2212144072df9186aba48a93e4}
+\hypertarget{class_feisty_1_1_camera_a8dd5a9f236d04875100a7404ada01edc}{
+\index{Feisty::Camera@{Feisty::Camera}!$\sim$Camera@{$\sim$Camera}}
+\index{$\sim$Camera@{$\sim$Camera}!Feisty::Camera@{Feisty::Camera}}
+\subsubsection[{$\sim$Camera}]{\setlength{\rightskip}{0pt plus 5cm}virtual Feisty::Camera::$\sim$Camera (void)\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}
+\label{class_feisty_1_1_camera_a8dd5a9f236d04875100a7404ada01edc}
 
 
 \subsection{Member Function Documentation}
+\hypertarget{class_feisty_1_1_camera_a8eb2963d22386fad3a2beba4e3d1871e}{
 \index{Feisty::Camera@{Feisty::Camera}!AdoptShader@{AdoptShader}}
 \index{AdoptShader@{AdoptShader}!Feisty::Camera@{Feisty::Camera}}
-\subsubsection[{AdoptShader}]{\setlength{\rightskip}{0pt plus 5cm}void Feisty::Camera::AdoptShader (SGLib::Node $\ast$ {\em g\_\-node})\hspace{0.3cm}{\ttfamily  [inline]}}\label{class_feisty_1_1_camera_a8eb2963d22386fad3a2beba4e3d1871e}
+\subsubsection[{AdoptShader}]{\setlength{\rightskip}{0pt plus 5cm}void Feisty::Camera::AdoptShader (SGLib::Node $\ast$ {\em g\_\-node})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_feisty_1_1_camera_a8eb2963d22386fad3a2beba4e3d1871e}
+\hypertarget{class_feisty_1_1_camera_a8eb2963d22386fad3a2beba4e3d1871e}{
+\index{Feisty::Camera@{Feisty::Camera}!AdoptShader@{AdoptShader}}
+\index{AdoptShader@{AdoptShader}!Feisty::Camera@{Feisty::Camera}}
+\subsubsection[{AdoptShader}]{\setlength{\rightskip}{0pt plus 5cm}void Feisty::Camera::AdoptShader (SGLib::Node $\ast$ {\em g\_\-node})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_feisty_1_1_camera_a8eb2963d22386fad3a2beba4e3d1871e}
+\hypertarget{class_feisty_1_1_camera_aa4384bf9913be09d286fbdf7c318f4f5}{
 \index{Feisty::Camera@{Feisty::Camera}!GetPosition@{GetPosition}}
 \index{GetPosition@{GetPosition}!Feisty::Camera@{Feisty::Camera}}
-\subsubsection[{GetPosition}]{\setlength{\rightskip}{0pt plus 5cm}D3DXVECTOR3 Feisty::Camera::GetPosition ()\hspace{0.3cm}{\ttfamily  [inline]}}\label{class_feisty_1_1_camera_aa4384bf9913be09d286fbdf7c318f4f5}
+\subsubsection[{GetPosition}]{\setlength{\rightskip}{0pt plus 5cm}D3DXVECTOR3 Feisty::Camera::GetPosition ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_feisty_1_1_camera_aa4384bf9913be09d286fbdf7c318f4f5}
+\hypertarget{class_feisty_1_1_camera_aa4384bf9913be09d286fbdf7c318f4f5}{
+\index{Feisty::Camera@{Feisty::Camera}!GetPosition@{GetPosition}}
+\index{GetPosition@{GetPosition}!Feisty::Camera@{Feisty::Camera}}
+\subsubsection[{GetPosition}]{\setlength{\rightskip}{0pt plus 5cm}D3DXVECTOR3 Feisty::Camera::GetPosition ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_feisty_1_1_camera_aa4384bf9913be09d286fbdf7c318f4f5}
+\hypertarget{class_feisty_1_1_camera_a4a05e648973a0cb47c02b09449b4ae13}{
 \index{Feisty::Camera@{Feisty::Camera}!Handle@{Handle}}
 \index{Handle@{Handle}!Feisty::Camera@{Feisty::Camera}}
-\subsubsection[{Handle}]{\setlength{\rightskip}{0pt plus 5cm}void Feisty::Camera::Handle (float {\em a\_\-xDelta}, \/  float {\em a\_\-yDelta})\hspace{0.3cm}{\ttfamily  [inline]}}\label{class_feisty_1_1_camera_a4a05e648973a0cb47c02b09449b4ae13}
+\subsubsection[{Handle}]{\setlength{\rightskip}{0pt plus 5cm}void Feisty::Camera::Handle (float {\em a\_\-xDelta}, \/  float {\em a\_\-yDelta})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_feisty_1_1_camera_a4a05e648973a0cb47c02b09449b4ae13}
+\hypertarget{class_feisty_1_1_camera_a4a05e648973a0cb47c02b09449b4ae13}{
+\index{Feisty::Camera@{Feisty::Camera}!Handle@{Handle}}
+\index{Handle@{Handle}!Feisty::Camera@{Feisty::Camera}}
+\subsubsection[{Handle}]{\setlength{\rightskip}{0pt plus 5cm}void Feisty::Camera::Handle (float {\em a\_\-xDelta}, \/  float {\em a\_\-yDelta})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_feisty_1_1_camera_a4a05e648973a0cb47c02b09449b4ae13}
+\hypertarget{class_feisty_1_1_camera_a8729327b8c34fe72d8c6e4964c0d4a6b}{
 \index{Feisty::Camera@{Feisty::Camera}!Refresh@{Refresh}}
 \index{Refresh@{Refresh}!Feisty::Camera@{Feisty::Camera}}
-\subsubsection[{Refresh}]{\setlength{\rightskip}{0pt plus 5cm}void Feisty::Camera::Refresh ()\hspace{0.3cm}{\ttfamily  [inline]}}\label{class_feisty_1_1_camera_a8729327b8c34fe72d8c6e4964c0d4a6b}
+\subsubsection[{Refresh}]{\setlength{\rightskip}{0pt plus 5cm}void Feisty::Camera::Refresh ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_feisty_1_1_camera_a8729327b8c34fe72d8c6e4964c0d4a6b}
+\hypertarget{class_feisty_1_1_camera_a8729327b8c34fe72d8c6e4964c0d4a6b}{
+\index{Feisty::Camera@{Feisty::Camera}!Refresh@{Refresh}}
+\index{Refresh@{Refresh}!Feisty::Camera@{Feisty::Camera}}
+\subsubsection[{Refresh}]{\setlength{\rightskip}{0pt plus 5cm}void Feisty::Camera::Refresh ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_feisty_1_1_camera_a8729327b8c34fe72d8c6e4964c0d4a6b}
+\hypertarget{class_feisty_1_1_camera_a7aca26cc73f4399edd7ede2ae1914cf8}{
+\index{Feisty::Camera@{Feisty::Camera}!SetAnimationNode@{SetAnimationNode}}
+\index{SetAnimationNode@{SetAnimationNode}!Feisty::Camera@{Feisty::Camera}}
+\subsubsection[{SetAnimationNode}]{\setlength{\rightskip}{0pt plus 5cm}void Feisty::Camera::SetAnimationNode (SGLib::Articulated $\ast$ {\em a\_\-animationNode})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_feisty_1_1_camera_a7aca26cc73f4399edd7ede2ae1914cf8}
+\hypertarget{class_feisty_1_1_camera_a7aca26cc73f4399edd7ede2ae1914cf8}{
+\index{Feisty::Camera@{Feisty::Camera}!SetAnimationNode@{SetAnimationNode}}
+\index{SetAnimationNode@{SetAnimationNode}!Feisty::Camera@{Feisty::Camera}}
+\subsubsection[{SetAnimationNode}]{\setlength{\rightskip}{0pt plus 5cm}void Feisty::Camera::SetAnimationNode (SGLib::Articulated $\ast$ {\em a\_\-animationNode})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_feisty_1_1_camera_a7aca26cc73f4399edd7ede2ae1914cf8}
+\hypertarget{class_feisty_1_1_camera_a38dcec7dc8214ebb274c71e2dcc2eeb3}{
 \index{Feisty::Camera@{Feisty::Camera}!SetAspectRatio@{SetAspectRatio}}
 \index{SetAspectRatio@{SetAspectRatio}!Feisty::Camera@{Feisty::Camera}}
-\subsubsection[{SetAspectRatio}]{\setlength{\rightskip}{0pt plus 5cm}void Feisty::Camera::SetAspectRatio (float {\em a\_\-aspectRatio})\hspace{0.3cm}{\ttfamily  [inline]}}\label{class_feisty_1_1_camera_a38dcec7dc8214ebb274c71e2dcc2eeb3}
+\subsubsection[{SetAspectRatio}]{\setlength{\rightskip}{0pt plus 5cm}void Feisty::Camera::SetAspectRatio (float {\em a\_\-aspectRatio})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_feisty_1_1_camera_a38dcec7dc8214ebb274c71e2dcc2eeb3}
+\hypertarget{class_feisty_1_1_camera_a38dcec7dc8214ebb274c71e2dcc2eeb3}{
+\index{Feisty::Camera@{Feisty::Camera}!SetAspectRatio@{SetAspectRatio}}
+\index{SetAspectRatio@{SetAspectRatio}!Feisty::Camera@{Feisty::Camera}}
+\subsubsection[{SetAspectRatio}]{\setlength{\rightskip}{0pt plus 5cm}void Feisty::Camera::SetAspectRatio (float {\em a\_\-aspectRatio})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_feisty_1_1_camera_a38dcec7dc8214ebb274c71e2dcc2eeb3}
+\hypertarget{class_feisty_1_1_camera_ad70999c56c819dcef588e7e93280ebce}{
 \index{Feisty::Camera@{Feisty::Camera}!SetFar@{SetFar}}
 \index{SetFar@{SetFar}!Feisty::Camera@{Feisty::Camera}}
-\subsubsection[{SetFar}]{\setlength{\rightskip}{0pt plus 5cm}void Feisty::Camera::SetFar (float {\em a\_\-far})\hspace{0.3cm}{\ttfamily  [inline]}}\label{class_feisty_1_1_camera_ad70999c56c819dcef588e7e93280ebce}
+\subsubsection[{SetFar}]{\setlength{\rightskip}{0pt plus 5cm}void Feisty::Camera::SetFar (float {\em a\_\-far})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_feisty_1_1_camera_ad70999c56c819dcef588e7e93280ebce}
+\hypertarget{class_feisty_1_1_camera_ad70999c56c819dcef588e7e93280ebce}{
+\index{Feisty::Camera@{Feisty::Camera}!SetFar@{SetFar}}
+\index{SetFar@{SetFar}!Feisty::Camera@{Feisty::Camera}}
+\subsubsection[{SetFar}]{\setlength{\rightskip}{0pt plus 5cm}void Feisty::Camera::SetFar (float {\em a\_\-far})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_feisty_1_1_camera_ad70999c56c819dcef588e7e93280ebce}
+\hypertarget{class_feisty_1_1_camera_aac9f58b9b0f63ce1f354cfef473d08e9}{
 \index{Feisty::Camera@{Feisty::Camera}!SetFieldOfView@{SetFieldOfView}}
 \index{SetFieldOfView@{SetFieldOfView}!Feisty::Camera@{Feisty::Camera}}
-\subsubsection[{SetFieldOfView}]{\setlength{\rightskip}{0pt plus 5cm}void Feisty::Camera::SetFieldOfView (float {\em a\_\-fieldOfView})\hspace{0.3cm}{\ttfamily  [inline]}}\label{class_feisty_1_1_camera_aac9f58b9b0f63ce1f354cfef473d08e9}
+\subsubsection[{SetFieldOfView}]{\setlength{\rightskip}{0pt plus 5cm}void Feisty::Camera::SetFieldOfView (float {\em a\_\-fieldOfView})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_feisty_1_1_camera_aac9f58b9b0f63ce1f354cfef473d08e9}
+\hypertarget{class_feisty_1_1_camera_aac9f58b9b0f63ce1f354cfef473d08e9}{
+\index{Feisty::Camera@{Feisty::Camera}!SetFieldOfView@{SetFieldOfView}}
+\index{SetFieldOfView@{SetFieldOfView}!Feisty::Camera@{Feisty::Camera}}
+\subsubsection[{SetFieldOfView}]{\setlength{\rightskip}{0pt plus 5cm}void Feisty::Camera::SetFieldOfView (float {\em a\_\-fieldOfView})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_feisty_1_1_camera_aac9f58b9b0f63ce1f354cfef473d08e9}
+\hypertarget{class_feisty_1_1_camera_a58228535280e133cc8a40dc20eed6454}{
 \index{Feisty::Camera@{Feisty::Camera}!SetNear@{SetNear}}
 \index{SetNear@{SetNear}!Feisty::Camera@{Feisty::Camera}}
-\subsubsection[{SetNear}]{\setlength{\rightskip}{0pt plus 5cm}void Feisty::Camera::SetNear (float {\em a\_\-near})\hspace{0.3cm}{\ttfamily  [inline]}}\label{class_feisty_1_1_camera_a58228535280e133cc8a40dc20eed6454}
+\subsubsection[{SetNear}]{\setlength{\rightskip}{0pt plus 5cm}void Feisty::Camera::SetNear (float {\em a\_\-near})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_feisty_1_1_camera_a58228535280e133cc8a40dc20eed6454}
+\hypertarget{class_feisty_1_1_camera_a58228535280e133cc8a40dc20eed6454}{
+\index{Feisty::Camera@{Feisty::Camera}!SetNear@{SetNear}}
+\index{SetNear@{SetNear}!Feisty::Camera@{Feisty::Camera}}
+\subsubsection[{SetNear}]{\setlength{\rightskip}{0pt plus 5cm}void Feisty::Camera::SetNear (float {\em a\_\-near})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_feisty_1_1_camera_a58228535280e133cc8a40dc20eed6454}
+\hypertarget{class_feisty_1_1_camera_a0e3faebd081573eecbe40c4551926919}{
+\index{Feisty::Camera@{Feisty::Camera}!SetTargetNode@{SetTargetNode}}
+\index{SetTargetNode@{SetTargetNode}!Feisty::Camera@{Feisty::Camera}}
+\subsubsection[{SetTargetNode}]{\setlength{\rightskip}{0pt plus 5cm}void Feisty::Camera::SetTargetNode (SGLib::Transform $\ast$ {\em a\_\-targetNode})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_feisty_1_1_camera_a0e3faebd081573eecbe40c4551926919}
+\hypertarget{class_feisty_1_1_camera_a0e3faebd081573eecbe40c4551926919}{
+\index{Feisty::Camera@{Feisty::Camera}!SetTargetNode@{SetTargetNode}}
+\index{SetTargetNode@{SetTargetNode}!Feisty::Camera@{Feisty::Camera}}
+\subsubsection[{SetTargetNode}]{\setlength{\rightskip}{0pt plus 5cm}void Feisty::Camera::SetTargetNode (SGLib::Transform $\ast$ {\em a\_\-targetNode})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_feisty_1_1_camera_a0e3faebd081573eecbe40c4551926919}
+\hypertarget{class_feisty_1_1_camera_a8392192850c1bece0cc923001f4479b9}{
+\index{Feisty::Camera@{Feisty::Camera}!SetWalking@{SetWalking}}
+\index{SetWalking@{SetWalking}!Feisty::Camera@{Feisty::Camera}}
+\subsubsection[{SetWalking}]{\setlength{\rightskip}{0pt plus 5cm}void Feisty::Camera::SetWalking (bool {\em a\_\-walking})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_feisty_1_1_camera_a8392192850c1bece0cc923001f4479b9}
+\hypertarget{class_feisty_1_1_camera_a8392192850c1bece0cc923001f4479b9}{
+\index{Feisty::Camera@{Feisty::Camera}!SetWalking@{SetWalking}}
+\index{SetWalking@{SetWalking}!Feisty::Camera@{Feisty::Camera}}
+\subsubsection[{SetWalking}]{\setlength{\rightskip}{0pt plus 5cm}void Feisty::Camera::SetWalking (bool {\em a\_\-walking})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_feisty_1_1_camera_a8392192850c1bece0cc923001f4479b9}
+\hypertarget{class_feisty_1_1_camera_a9144982d770e3134fb1b52c82da4669d}{
 \index{Feisty::Camera@{Feisty::Camera}!StartSeeking@{StartSeeking}}
 \index{StartSeeking@{StartSeeking}!Feisty::Camera@{Feisty::Camera}}
-\subsubsection[{StartSeeking}]{\setlength{\rightskip}{0pt plus 5cm}void Feisty::Camera::StartSeeking (D3DXVECTOR3 {\em a\_\-vector})\hspace{0.3cm}{\ttfamily  [inline]}}\label{class_feisty_1_1_camera_a9144982d770e3134fb1b52c82da4669d}
+\subsubsection[{StartSeeking}]{\setlength{\rightskip}{0pt plus 5cm}void Feisty::Camera::StartSeeking (D3DXVECTOR3 {\em a\_\-vector})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_feisty_1_1_camera_a9144982d770e3134fb1b52c82da4669d}
+\hypertarget{class_feisty_1_1_camera_a9144982d770e3134fb1b52c82da4669d}{
+\index{Feisty::Camera@{Feisty::Camera}!StartSeeking@{StartSeeking}}
+\index{StartSeeking@{StartSeeking}!Feisty::Camera@{Feisty::Camera}}
+\subsubsection[{StartSeeking}]{\setlength{\rightskip}{0pt plus 5cm}void Feisty::Camera::StartSeeking (D3DXVECTOR3 {\em a\_\-vector})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_feisty_1_1_camera_a9144982d770e3134fb1b52c82da4669d}
+\hypertarget{class_feisty_1_1_camera_ab579f233a45c7a2b629d240c36cdbb61}{
 \index{Feisty::Camera@{Feisty::Camera}!StopSeeking@{StopSeeking}}
 \index{StopSeeking@{StopSeeking}!Feisty::Camera@{Feisty::Camera}}
-\subsubsection[{StopSeeking}]{\setlength{\rightskip}{0pt plus 5cm}void Feisty::Camera::StopSeeking ()\hspace{0.3cm}{\ttfamily  [inline]}}\label{class_feisty_1_1_camera_ab579f233a45c7a2b629d240c36cdbb61}
+\subsubsection[{StopSeeking}]{\setlength{\rightskip}{0pt plus 5cm}void Feisty::Camera::StopSeeking ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_feisty_1_1_camera_ab579f233a45c7a2b629d240c36cdbb61}
+\hypertarget{class_feisty_1_1_camera_ab579f233a45c7a2b629d240c36cdbb61}{
+\index{Feisty::Camera@{Feisty::Camera}!StopSeeking@{StopSeeking}}
+\index{StopSeeking@{StopSeeking}!Feisty::Camera@{Feisty::Camera}}
+\subsubsection[{StopSeeking}]{\setlength{\rightskip}{0pt plus 5cm}void Feisty::Camera::StopSeeking ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_feisty_1_1_camera_ab579f233a45c7a2b629d240c36cdbb61}
+\hypertarget{class_feisty_1_1_camera_aea1e6fbd53ad47e302f3fa38535cb3cd}{
+\index{Feisty::Camera@{Feisty::Camera}!Turn@{Turn}}
+\index{Turn@{Turn}!Feisty::Camera@{Feisty::Camera}}
+\subsubsection[{Turn}]{\setlength{\rightskip}{0pt plus 5cm}void Feisty::Camera::Turn (float {\em a\_\-xDelta}, \/  float {\em a\_\-yDelta})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_feisty_1_1_camera_aea1e6fbd53ad47e302f3fa38535cb3cd}
+\hypertarget{class_feisty_1_1_camera_aea1e6fbd53ad47e302f3fa38535cb3cd}{
+\index{Feisty::Camera@{Feisty::Camera}!Turn@{Turn}}
+\index{Turn@{Turn}!Feisty::Camera@{Feisty::Camera}}
+\subsubsection[{Turn}]{\setlength{\rightskip}{0pt plus 5cm}void Feisty::Camera::Turn (float {\em a\_\-xDelta}, \/  float {\em a\_\-yDelta})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_feisty_1_1_camera_aea1e6fbd53ad47e302f3fa38535cb3cd}
+\hypertarget{class_feisty_1_1_camera_ae633d0619f978c5104f2c8d5dbf10aa5}{
 \index{Feisty::Camera@{Feisty::Camera}!Update@{Update}}
 \index{Update@{Update}!Feisty::Camera@{Feisty::Camera}}
-\subsubsection[{Update}]{\setlength{\rightskip}{0pt plus 5cm}void Feisty::Camera::Update (float {\em a\_\-timeDelta})\hspace{0.3cm}{\ttfamily  [inline]}}\label{class_feisty_1_1_camera_ae633d0619f978c5104f2c8d5dbf10aa5}
+\subsubsection[{Update}]{\setlength{\rightskip}{0pt plus 5cm}void Feisty::Camera::Update (float {\em a\_\-timeDelta})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_feisty_1_1_camera_ae633d0619f978c5104f2c8d5dbf10aa5}
+\hypertarget{class_feisty_1_1_camera_ae633d0619f978c5104f2c8d5dbf10aa5}{
+\index{Feisty::Camera@{Feisty::Camera}!Update@{Update}}
+\index{Update@{Update}!Feisty::Camera@{Feisty::Camera}}
+\subsubsection[{Update}]{\setlength{\rightskip}{0pt plus 5cm}void Feisty::Camera::Update (float {\em a\_\-timeDelta})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_feisty_1_1_camera_ae633d0619f978c5104f2c8d5dbf10aa5}
 
 
 \subsection{Member Data Documentation}
+\hypertarget{class_feisty_1_1_camera_a3c97db1bade9711107fc3719fab4b9a7}{
+\index{Feisty::Camera@{Feisty::Camera}!m\_\-animationNode@{m\_\-animationNode}}
+\index{m\_\-animationNode@{m\_\-animationNode}!Feisty::Camera@{Feisty::Camera}}
+\subsubsection[{m\_\-animationNode}]{\setlength{\rightskip}{0pt plus 5cm}SGLib::Articulated $\ast$ {\bf Camera::m\_\-animationNode}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{class_feisty_1_1_camera_a3c97db1bade9711107fc3719fab4b9a7}
+\hypertarget{class_feisty_1_1_camera_a9a5b3abea53ca97854696258029ee6cd}{
 \index{Feisty::Camera@{Feisty::Camera}!m\_\-aspectRatio@{m\_\-aspectRatio}}
 \index{m\_\-aspectRatio@{m\_\-aspectRatio}!Feisty::Camera@{Feisty::Camera}}
-\subsubsection[{m\_\-aspectRatio}]{\setlength{\rightskip}{0pt plus 5cm}float {\bf Feisty::Camera::m\_\-aspectRatio}\hspace{0.3cm}{\ttfamily  [protected]}}\label{class_feisty_1_1_camera_a6524bed1ea186cbac76334241b5da41b}
+\subsubsection[{m\_\-aspectRatio}]{\setlength{\rightskip}{0pt plus 5cm}float {\bf Camera::m\_\-aspectRatio}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{class_feisty_1_1_camera_a9a5b3abea53ca97854696258029ee6cd}
+\hypertarget{class_feisty_1_1_camera_a97f0d0c8495ae47a9cb68eb0250e6fec}{
 \index{Feisty::Camera@{Feisty::Camera}!m\_\-device@{m\_\-device}}
 \index{m\_\-device@{m\_\-device}!Feisty::Camera@{Feisty::Camera}}
-\subsubsection[{m\_\-device}]{\setlength{\rightskip}{0pt plus 5cm}LPDIRECT3DDEVICE9 {\bf Feisty::Camera::m\_\-device}\hspace{0.3cm}{\ttfamily  [protected]}}\label{class_feisty_1_1_camera_ab38f49c63ee0f2b7a8425dde36442dd4}
+\subsubsection[{m\_\-device}]{\setlength{\rightskip}{0pt plus 5cm}LPDIRECT3DDEVICE9 {\bf Camera::m\_\-device}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{class_feisty_1_1_camera_a97f0d0c8495ae47a9cb68eb0250e6fec}
+\hypertarget{class_feisty_1_1_camera_a6dfc75d25cfe092df8980d0182b05be0}{
 \index{Feisty::Camera@{Feisty::Camera}!m\_\-elapsedSeekTime@{m\_\-elapsedSeekTime}}
 \index{m\_\-elapsedSeekTime@{m\_\-elapsedSeekTime}!Feisty::Camera@{Feisty::Camera}}
-\subsubsection[{m\_\-elapsedSeekTime}]{\setlength{\rightskip}{0pt plus 5cm}float {\bf Feisty::Camera::m\_\-elapsedSeekTime}\hspace{0.3cm}{\ttfamily  [protected]}}\label{class_feisty_1_1_camera_afa9612257537aa5efc66e54589002f43}
+\subsubsection[{m\_\-elapsedSeekTime}]{\setlength{\rightskip}{0pt plus 5cm}float {\bf Camera::m\_\-elapsedSeekTime}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{class_feisty_1_1_camera_a6dfc75d25cfe092df8980d0182b05be0}
+\hypertarget{class_feisty_1_1_camera_a970eb963a54195b32a27a2e1cd9edd9b}{
 \index{Feisty::Camera@{Feisty::Camera}!m\_\-elapsedTime@{m\_\-elapsedTime}}
 \index{m\_\-elapsedTime@{m\_\-elapsedTime}!Feisty::Camera@{Feisty::Camera}}
-\subsubsection[{m\_\-elapsedTime}]{\setlength{\rightskip}{0pt plus 5cm}float {\bf Feisty::Camera::m\_\-elapsedTime}\hspace{0.3cm}{\ttfamily  [protected]}}\label{class_feisty_1_1_camera_a61b9253b2617c609cb0dce229c0361e4}
+\subsubsection[{m\_\-elapsedTime}]{\setlength{\rightskip}{0pt plus 5cm}float {\bf Camera::m\_\-elapsedTime}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{class_feisty_1_1_camera_a970eb963a54195b32a27a2e1cd9edd9b}
+\hypertarget{class_feisty_1_1_camera_a244474dcfdd0115417b8218cbad547d1}{
 \index{Feisty::Camera@{Feisty::Camera}!m\_\-far@{m\_\-far}}
 \index{m\_\-far@{m\_\-far}!Feisty::Camera@{Feisty::Camera}}
-\subsubsection[{m\_\-far}]{\setlength{\rightskip}{0pt plus 5cm}float {\bf Feisty::Camera::m\_\-far}\hspace{0.3cm}{\ttfamily  [protected]}}\label{class_feisty_1_1_camera_afac35b25deaa832d77170c2b972051f5}
+\subsubsection[{m\_\-far}]{\setlength{\rightskip}{0pt plus 5cm}float {\bf Camera::m\_\-far}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{class_feisty_1_1_camera_a244474dcfdd0115417b8218cbad547d1}
+\hypertarget{class_feisty_1_1_camera_a31f25794fd365e6f470bfdef89db7fec}{
 \index{Feisty::Camera@{Feisty::Camera}!m\_\-fieldOfView@{m\_\-fieldOfView}}
 \index{m\_\-fieldOfView@{m\_\-fieldOfView}!Feisty::Camera@{Feisty::Camera}}
-\subsubsection[{m\_\-fieldOfView}]{\setlength{\rightskip}{0pt plus 5cm}float {\bf Feisty::Camera::m\_\-fieldOfView}\hspace{0.3cm}{\ttfamily  [protected]}}\label{class_feisty_1_1_camera_a9c8a337db5fbdf9a90ba9b57ac9fd736}
+\subsubsection[{m\_\-fieldOfView}]{\setlength{\rightskip}{0pt plus 5cm}float {\bf Camera::m\_\-fieldOfView}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{class_feisty_1_1_camera_a31f25794fd365e6f470bfdef89db7fec}
+\hypertarget{class_feisty_1_1_camera_ab5e5bb6729ea8baa0a59c4465325b534}{
+\index{Feisty::Camera@{Feisty::Camera}!m\_\-initialized@{m\_\-initialized}}
+\index{m\_\-initialized@{m\_\-initialized}!Feisty::Camera@{Feisty::Camera}}
+\subsubsection[{m\_\-initialized}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf Camera::m\_\-initialized}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{class_feisty_1_1_camera_ab5e5bb6729ea8baa0a59c4465325b534}
+\hypertarget{class_feisty_1_1_camera_a88a4135705f989e598056d765b7a3494}{
 \index{Feisty::Camera@{Feisty::Camera}!m\_\-near@{m\_\-near}}
 \index{m\_\-near@{m\_\-near}!Feisty::Camera@{Feisty::Camera}}
-\subsubsection[{m\_\-near}]{\setlength{\rightskip}{0pt plus 5cm}float {\bf Feisty::Camera::m\_\-near}\hspace{0.3cm}{\ttfamily  [protected]}}\label{class_feisty_1_1_camera_a8ad6273b78998a2326d205628d6db0b0}
+\subsubsection[{m\_\-near}]{\setlength{\rightskip}{0pt plus 5cm}float {\bf Camera::m\_\-near}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{class_feisty_1_1_camera_a88a4135705f989e598056d765b7a3494}
+\hypertarget{class_feisty_1_1_camera_af6bf5ba87e84d43ec23d0cb9e4d0647b}{
 \index{Feisty::Camera@{Feisty::Camera}!m\_\-offset@{m\_\-offset}}
 \index{m\_\-offset@{m\_\-offset}!Feisty::Camera@{Feisty::Camera}}
-\subsubsection[{m\_\-offset}]{\setlength{\rightskip}{0pt plus 5cm}D3DXVECTOR3 {\bf Feisty::Camera::m\_\-offset}\hspace{0.3cm}{\ttfamily  [protected]}}\label{class_feisty_1_1_camera_aca0a3f244c4b34d49ca4df84ef234371}
+\subsubsection[{m\_\-offset}]{\setlength{\rightskip}{0pt plus 5cm}D3DXVECTOR3 {\bf Camera::m\_\-offset}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{class_feisty_1_1_camera_af6bf5ba87e84d43ec23d0cb9e4d0647b}
+\hypertarget{class_feisty_1_1_camera_ac9f127b7de1e9a2a90d7e44cf76a10fc}{
 \index{Feisty::Camera@{Feisty::Camera}!m\_\-position@{m\_\-position}}
 \index{m\_\-position@{m\_\-position}!Feisty::Camera@{Feisty::Camera}}
-\subsubsection[{m\_\-position}]{\setlength{\rightskip}{0pt plus 5cm}D3DXVECTOR3 {\bf Feisty::Camera::m\_\-position}\hspace{0.3cm}{\ttfamily  [protected]}}\label{class_feisty_1_1_camera_a8de3931d3bc34f91c6a2e8103d34d690}
+\subsubsection[{m\_\-position}]{\setlength{\rightskip}{0pt plus 5cm}D3DXVECTOR3 {\bf Camera::m\_\-position}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{class_feisty_1_1_camera_ac9f127b7de1e9a2a90d7e44cf76a10fc}
+\hypertarget{class_feisty_1_1_camera_a3197aef7f3d3387c491dff1fbcbed1a5}{
 \index{Feisty::Camera@{Feisty::Camera}!m\_\-projectionNode@{m\_\-projectionNode}}
 \index{m\_\-projectionNode@{m\_\-projectionNode}!Feisty::Camera@{Feisty::Camera}}
-\subsubsection[{m\_\-projectionNode}]{\setlength{\rightskip}{0pt plus 5cm}SGLib::Projection$\ast$ {\bf Feisty::Camera::m\_\-projectionNode}\hspace{0.3cm}{\ttfamily  [protected]}}\label{class_feisty_1_1_camera_ab2f2da825a307e32560dd409a7ddfd0e}
+\subsubsection[{m\_\-projectionNode}]{\setlength{\rightskip}{0pt plus 5cm}SGLib::Projection $\ast$ {\bf Camera::m\_\-projectionNode}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{class_feisty_1_1_camera_a3197aef7f3d3387c491dff1fbcbed1a5}
+\hypertarget{class_feisty_1_1_camera_af3087fb07e6ef81121025dd39b3768c0}{
 \index{Feisty::Camera@{Feisty::Camera}!m\_\-rotation@{m\_\-rotation}}
 \index{m\_\-rotation@{m\_\-rotation}!Feisty::Camera@{Feisty::Camera}}
-\subsubsection[{m\_\-rotation}]{\setlength{\rightskip}{0pt plus 5cm}D3DXVECTOR3 {\bf Feisty::Camera::m\_\-rotation}\hspace{0.3cm}{\ttfamily  [protected]}}\label{class_feisty_1_1_camera_afab8e82465ea8564d28196168c08b2e6}
+\subsubsection[{m\_\-rotation}]{\setlength{\rightskip}{0pt plus 5cm}D3DXVECTOR3 {\bf Camera::m\_\-rotation}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{class_feisty_1_1_camera_af3087fb07e6ef81121025dd39b3768c0}
+\hypertarget{class_feisty_1_1_camera_a22a25da8dd1087d33d5835c8bcc13434}{
 \index{Feisty::Camera@{Feisty::Camera}!m\_\-seeking@{m\_\-seeking}}
 \index{m\_\-seeking@{m\_\-seeking}!Feisty::Camera@{Feisty::Camera}}
-\subsubsection[{m\_\-seeking}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf Feisty::Camera::m\_\-seeking}\hspace{0.3cm}{\ttfamily  [protected]}}\label{class_feisty_1_1_camera_a2278d28a9d4dc27f432de246a5307b38}
+\subsubsection[{m\_\-seeking}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf Camera::m\_\-seeking}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{class_feisty_1_1_camera_a22a25da8dd1087d33d5835c8bcc13434}
+\hypertarget{class_feisty_1_1_camera_a32129e76cfe6d76caa62dac33e629c08}{
 \index{Feisty::Camera@{Feisty::Camera}!m\_\-seekOrigin@{m\_\-seekOrigin}}
 \index{m\_\-seekOrigin@{m\_\-seekOrigin}!Feisty::Camera@{Feisty::Camera}}
-\subsubsection[{m\_\-seekOrigin}]{\setlength{\rightskip}{0pt plus 5cm}D3DXVECTOR3 {\bf Feisty::Camera::m\_\-seekOrigin}\hspace{0.3cm}{\ttfamily  [protected]}}\label{class_feisty_1_1_camera_a13bbdb774e766deea2df0e1fcd81078f}
+\subsubsection[{m\_\-seekOrigin}]{\setlength{\rightskip}{0pt plus 5cm}D3DXVECTOR3 {\bf Camera::m\_\-seekOrigin}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{class_feisty_1_1_camera_a32129e76cfe6d76caa62dac33e629c08}
+\hypertarget{class_feisty_1_1_camera_a4d08c6d9f7ae87b91922fada6c71a970}{
 \index{Feisty::Camera@{Feisty::Camera}!m\_\-seekTarget@{m\_\-seekTarget}}
 \index{m\_\-seekTarget@{m\_\-seekTarget}!Feisty::Camera@{Feisty::Camera}}
-\subsubsection[{m\_\-seekTarget}]{\setlength{\rightskip}{0pt plus 5cm}D3DXVECTOR3 {\bf Feisty::Camera::m\_\-seekTarget}\hspace{0.3cm}{\ttfamily  [protected]}}\label{class_feisty_1_1_camera_aa701cdea4ac80e13e09a7a669071fc2b}
+\subsubsection[{m\_\-seekTarget}]{\setlength{\rightskip}{0pt plus 5cm}D3DXVECTOR3 {\bf Camera::m\_\-seekTarget}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{class_feisty_1_1_camera_a4d08c6d9f7ae87b91922fada6c71a970}
+\hypertarget{class_feisty_1_1_camera_a09faed9efdd9403c38b87314d6098720}{
 \index{Feisty::Camera@{Feisty::Camera}!m\_\-seekTime@{m\_\-seekTime}}
 \index{m\_\-seekTime@{m\_\-seekTime}!Feisty::Camera@{Feisty::Camera}}
-\subsubsection[{m\_\-seekTime}]{\setlength{\rightskip}{0pt plus 5cm}float {\bf Feisty::Camera::m\_\-seekTime}\hspace{0.3cm}{\ttfamily  [protected]}}\label{class_feisty_1_1_camera_a0661ea7d265ad628f56e99bc02b3c13e}
+\subsubsection[{m\_\-seekTime}]{\setlength{\rightskip}{0pt plus 5cm}float {\bf Camera::m\_\-seekTime}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{class_feisty_1_1_camera_a09faed9efdd9403c38b87314d6098720}
+\hypertarget{class_feisty_1_1_camera_ae903d3ca5f7b7a39409b5f93260540b0}{
+\index{Feisty::Camera@{Feisty::Camera}!m\_\-targetNode@{m\_\-targetNode}}
+\index{m\_\-targetNode@{m\_\-targetNode}!Feisty::Camera@{Feisty::Camera}}
+\subsubsection[{m\_\-targetNode}]{\setlength{\rightskip}{0pt plus 5cm}SGLib::Transform $\ast$ {\bf Camera::m\_\-targetNode}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{class_feisty_1_1_camera_ae903d3ca5f7b7a39409b5f93260540b0}
+\hypertarget{class_feisty_1_1_camera_a46e0e07b73df0dac52e8dea78f8a931b}{
 \index{Feisty::Camera@{Feisty::Camera}!m\_\-targetPosition@{m\_\-targetPosition}}
 \index{m\_\-targetPosition@{m\_\-targetPosition}!Feisty::Camera@{Feisty::Camera}}
-\subsubsection[{m\_\-targetPosition}]{\setlength{\rightskip}{0pt plus 5cm}D3DXVECTOR3 {\bf Feisty::Camera::m\_\-targetPosition}\hspace{0.3cm}{\ttfamily  [protected]}}\label{class_feisty_1_1_camera_a5f3611e714414283ea520b9d9850a0d0}
+\subsubsection[{m\_\-targetPosition}]{\setlength{\rightskip}{0pt plus 5cm}D3DXVECTOR3 {\bf Camera::m\_\-targetPosition}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{class_feisty_1_1_camera_a46e0e07b73df0dac52e8dea78f8a931b}
+\hypertarget{class_feisty_1_1_camera_aa5b229f3392f3ad3f9863fdb4965288a}{
 \index{Feisty::Camera@{Feisty::Camera}!m\_\-up@{m\_\-up}}
 \index{m\_\-up@{m\_\-up}!Feisty::Camera@{Feisty::Camera}}
-\subsubsection[{m\_\-up}]{\setlength{\rightskip}{0pt plus 5cm}D3DXVECTOR3 {\bf Feisty::Camera::m\_\-up}\hspace{0.3cm}{\ttfamily  [protected]}}\label{class_feisty_1_1_camera_ab3ea9c1d9553c640f59804107de305b2}
+\subsubsection[{m\_\-up}]{\setlength{\rightskip}{0pt plus 5cm}D3DXVECTOR3 {\bf Camera::m\_\-up}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{class_feisty_1_1_camera_aa5b229f3392f3ad3f9863fdb4965288a}
+\hypertarget{class_feisty_1_1_camera_aae8a222463783a5f5114ffbc6a22dc91}{
+\index{Feisty::Camera@{Feisty::Camera}!m\_\-walking@{m\_\-walking}}
+\index{m\_\-walking@{m\_\-walking}!Feisty::Camera@{Feisty::Camera}}
+\subsubsection[{m\_\-walking}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf Camera::m\_\-walking}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{class_feisty_1_1_camera_aae8a222463783a5f5114ffbc6a22dc91}
 
 
-The documentation for this class was generated from the following file:\begin{DoxyCompactItemize}
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
 \item 
-C:/Users/doug/Documents/Visual Studio 2008/Projects/enlightened/Enlightened/{\bf Camera.h}\end{DoxyCompactItemize}
+C:/Users/doug/Documents/Visual Studio 2008/Projects/enlightened/Enlightened/\hyperlink{_camera_8h}{Camera.h}\item 
+C:/Users/doug/Documents/Visual Studio 2008/Projects/enlightened/Enlightened/Debug/\hyperlink{_debug_2_camera_8h}{Camera.h}\end{DoxyCompactItemize}

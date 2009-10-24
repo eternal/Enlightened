@@ -1,0 +1,191 @@
+\hypertarget{class_c_d_x_u_t_slider}{
+\section{CDXUTSlider Class Reference}
+\label{class_c_d_x_u_t_slider}\index{CDXUTSlider@{CDXUTSlider}}
+}
+
+
+{\ttfamily \#include $<$DXUTgui.h$>$}
+
+Inherits \hyperlink{class_c_d_x_u_t_control}{CDXUTControl}.Collaboration diagram for CDXUTSlider:\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_c_d_x_u_t_slider_ae7a6fff7f9d0e05058b980e952e4bd7b}{CDXUTSlider} (\hyperlink{class_c_d_x_u_t_dialog}{CDXUTDialog} $\ast$pDialog=NULL)
+\item 
+virtual BOOL \hyperlink{class_c_d_x_u_t_slider_a8c3b16c9ae0c7aa68797f58aced30d16}{ContainsPoint} (POINT pt)
+\item 
+virtual bool \hyperlink{class_c_d_x_u_t_slider_afbda40a898fbc1424759bc530899475d}{CanHaveFocus} ()
+\item 
+virtual bool \hyperlink{class_c_d_x_u_t_slider_a964f84282a049232a0620eaa58242fd2}{HandleKeyboard} (UINT uMsg, WPARAM wParam, LPARAM lParam)
+\item 
+virtual bool \hyperlink{class_c_d_x_u_t_slider_a20c8e1a621cc1a18f0535f5fd4bbd273}{HandleMouse} (UINT uMsg, POINT pt, WPARAM wParam, LPARAM lParam)
+\item 
+virtual void \hyperlink{class_c_d_x_u_t_slider_a091410aa578fc041b84e4173a969df58}{UpdateRects} ()
+\item 
+virtual void \hyperlink{class_c_d_x_u_t_slider_aaddc1a6d901a7601792f2f40cbcce501}{Render} (IDirect3DDevice9 $\ast$pd3dDevice, float fElapsedTime)
+\item 
+void \hyperlink{class_c_d_x_u_t_slider_a0f3442fdf18473cd6c7dd6f8d065ee9e}{SetValue} (\hyperlink{_d_x_u_tgui_8cpp_a2d77ed03302b6978834ee3b6f57837fb}{int} nValue)
+\item 
+\hyperlink{_d_x_u_tgui_8cpp_a2d77ed03302b6978834ee3b6f57837fb}{int} \hyperlink{class_c_d_x_u_t_slider_a74bf427b42c992666beddd456fe812e6}{GetValue} () const 
+\item 
+void \hyperlink{class_c_d_x_u_t_slider_a84b28fcfeb72033f7ad4df3b505e62e5}{GetRange} (\hyperlink{_d_x_u_tgui_8cpp_a2d77ed03302b6978834ee3b6f57837fb}{int} \&nMin, \hyperlink{_d_x_u_tgui_8cpp_a2d77ed03302b6978834ee3b6f57837fb}{int} \&nMax) const 
+\item 
+void \hyperlink{class_c_d_x_u_t_slider_a9401e45afcdd5c8f74e6120402ec068d}{SetRange} (\hyperlink{_d_x_u_tgui_8cpp_a2d77ed03302b6978834ee3b6f57837fb}{int} nMin, \hyperlink{_d_x_u_tgui_8cpp_a2d77ed03302b6978834ee3b6f57837fb}{int} nMax)
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{class_c_d_x_u_t_slider_ab345296137df0bba5b421c5f0e58ca8e}{SetValueInternal} (\hyperlink{_d_x_u_tgui_8cpp_a2d77ed03302b6978834ee3b6f57837fb}{int} nValue, bool bFromInput)
+\item 
+\hyperlink{_d_x_u_tgui_8cpp_a2d77ed03302b6978834ee3b6f57837fb}{int} \hyperlink{class_c_d_x_u_t_slider_a9f7de7328ec31bd8a34bc1873f5acdb3}{ValueFromPos} (\hyperlink{_d_x_u_tgui_8cpp_a2d77ed03302b6978834ee3b6f57837fb}{int} x)
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{_d_x_u_tgui_8cpp_a2d77ed03302b6978834ee3b6f57837fb}{int} \hyperlink{class_c_d_x_u_t_slider_a2a6bf8157dfbd5edd87dcb192843fba6}{m\_\-nValue}
+\item 
+\hyperlink{_d_x_u_tgui_8cpp_a2d77ed03302b6978834ee3b6f57837fb}{int} \hyperlink{class_c_d_x_u_t_slider_a87ffaf1be6e79d1a653b9a975d46e789}{m\_\-nMin}
+\item 
+\hyperlink{_d_x_u_tgui_8cpp_a2d77ed03302b6978834ee3b6f57837fb}{int} \hyperlink{class_c_d_x_u_t_slider_a9d298ae750ce680598ec967af330e20e}{m\_\-nMax}
+\item 
+\hyperlink{_d_x_u_tgui_8cpp_a2d77ed03302b6978834ee3b6f57837fb}{int} \hyperlink{class_c_d_x_u_t_slider_a302ac014d55da16123986f808cc1ce9b}{m\_\-nDragX}
+\item 
+\hyperlink{_d_x_u_tgui_8cpp_a2d77ed03302b6978834ee3b6f57837fb}{int} \hyperlink{class_c_d_x_u_t_slider_ae051d327e77fc42a5be5d21576d81993}{m\_\-nDragOffset}
+\item 
+\hyperlink{_d_x_u_tgui_8cpp_a2d77ed03302b6978834ee3b6f57837fb}{int} \hyperlink{class_c_d_x_u_t_slider_aa6b6822fb10e3294c1880113e486416b}{m\_\-nButtonX}
+\item 
+bool \hyperlink{class_c_d_x_u_t_slider_a6060a106657615230e6b2cc51f7279ec}{m\_\-bPressed}
+\item 
+RECT \hyperlink{class_c_d_x_u_t_slider_a0b2ef9570791f34e0c0ba99eeda6adba}{m\_\-rcButton}
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_c_d_x_u_t_slider_ae7a6fff7f9d0e05058b980e952e4bd7b}{
+\index{CDXUTSlider@{CDXUTSlider}!CDXUTSlider@{CDXUTSlider}}
+\index{CDXUTSlider@{CDXUTSlider}!CDXUTSlider@{CDXUTSlider}}
+\subsubsection[{CDXUTSlider}]{\setlength{\rightskip}{0pt plus 5cm}CDXUTSlider::CDXUTSlider ({\bf CDXUTDialog} $\ast$ {\em pDialog} = {\ttfamily NULL})}}
+\label{class_c_d_x_u_t_slider_ae7a6fff7f9d0e05058b980e952e4bd7b}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_c_d_x_u_t_slider_afbda40a898fbc1424759bc530899475d}{
+\index{CDXUTSlider@{CDXUTSlider}!CanHaveFocus@{CanHaveFocus}}
+\index{CanHaveFocus@{CanHaveFocus}!CDXUTSlider@{CDXUTSlider}}
+\subsubsection[{CanHaveFocus}]{\setlength{\rightskip}{0pt plus 5cm}virtual bool CDXUTSlider::CanHaveFocus ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}
+\label{class_c_d_x_u_t_slider_afbda40a898fbc1424759bc530899475d}
+
+
+Reimplemented from \hyperlink{class_c_d_x_u_t_control_a5b2c6c474236a79b257c86caded9c0b7}{CDXUTControl}.\hypertarget{class_c_d_x_u_t_slider_a8c3b16c9ae0c7aa68797f58aced30d16}{
+\index{CDXUTSlider@{CDXUTSlider}!ContainsPoint@{ContainsPoint}}
+\index{ContainsPoint@{ContainsPoint}!CDXUTSlider@{CDXUTSlider}}
+\subsubsection[{ContainsPoint}]{\setlength{\rightskip}{0pt plus 5cm}BOOL CDXUTSlider::ContainsPoint (POINT {\em pt})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{class_c_d_x_u_t_slider_a8c3b16c9ae0c7aa68797f58aced30d16}
+
+
+Reimplemented from \hyperlink{class_c_d_x_u_t_control_a9b4410bbd1cac9a0ffce760aaa9a2d48}{CDXUTControl}.\hypertarget{class_c_d_x_u_t_slider_a84b28fcfeb72033f7ad4df3b505e62e5}{
+\index{CDXUTSlider@{CDXUTSlider}!GetRange@{GetRange}}
+\index{GetRange@{GetRange}!CDXUTSlider@{CDXUTSlider}}
+\subsubsection[{GetRange}]{\setlength{\rightskip}{0pt plus 5cm}void CDXUTSlider::GetRange ({\bf int} \& {\em nMin}, \/  {\bf int} \& {\em nMax}) const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_c_d_x_u_t_slider_a84b28fcfeb72033f7ad4df3b505e62e5}
+\hypertarget{class_c_d_x_u_t_slider_a74bf427b42c992666beddd456fe812e6}{
+\index{CDXUTSlider@{CDXUTSlider}!GetValue@{GetValue}}
+\index{GetValue@{GetValue}!CDXUTSlider@{CDXUTSlider}}
+\subsubsection[{GetValue}]{\setlength{\rightskip}{0pt plus 5cm}{\bf int} CDXUTSlider::GetValue () const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_c_d_x_u_t_slider_a74bf427b42c992666beddd456fe812e6}
+\hypertarget{class_c_d_x_u_t_slider_a964f84282a049232a0620eaa58242fd2}{
+\index{CDXUTSlider@{CDXUTSlider}!HandleKeyboard@{HandleKeyboard}}
+\index{HandleKeyboard@{HandleKeyboard}!CDXUTSlider@{CDXUTSlider}}
+\subsubsection[{HandleKeyboard}]{\setlength{\rightskip}{0pt plus 5cm}bool CDXUTSlider::HandleKeyboard (UINT {\em uMsg}, \/  WPARAM {\em wParam}, \/  LPARAM {\em lParam})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{class_c_d_x_u_t_slider_a964f84282a049232a0620eaa58242fd2}
+
+
+Reimplemented from \hyperlink{class_c_d_x_u_t_control_a94044e608adeac7c329d83cf63587dcf}{CDXUTControl}.\hypertarget{class_c_d_x_u_t_slider_a20c8e1a621cc1a18f0535f5fd4bbd273}{
+\index{CDXUTSlider@{CDXUTSlider}!HandleMouse@{HandleMouse}}
+\index{HandleMouse@{HandleMouse}!CDXUTSlider@{CDXUTSlider}}
+\subsubsection[{HandleMouse}]{\setlength{\rightskip}{0pt plus 5cm}bool CDXUTSlider::HandleMouse (UINT {\em uMsg}, \/  POINT {\em pt}, \/  WPARAM {\em wParam}, \/  LPARAM {\em lParam})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{class_c_d_x_u_t_slider_a20c8e1a621cc1a18f0535f5fd4bbd273}
+
+
+Reimplemented from \hyperlink{class_c_d_x_u_t_control_a263979b3221cb7a44b4caea72366c335}{CDXUTControl}.\hypertarget{class_c_d_x_u_t_slider_aaddc1a6d901a7601792f2f40cbcce501}{
+\index{CDXUTSlider@{CDXUTSlider}!Render@{Render}}
+\index{Render@{Render}!CDXUTSlider@{CDXUTSlider}}
+\subsubsection[{Render}]{\setlength{\rightskip}{0pt plus 5cm}void CDXUTSlider::Render (IDirect3DDevice9 $\ast$ {\em pd3dDevice}, \/  float {\em fElapsedTime})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{class_c_d_x_u_t_slider_aaddc1a6d901a7601792f2f40cbcce501}
+
+
+Reimplemented from \hyperlink{class_c_d_x_u_t_control_afd92fa04241f66fdbf207bc5870c9388}{CDXUTControl}.\hypertarget{class_c_d_x_u_t_slider_a9401e45afcdd5c8f74e6120402ec068d}{
+\index{CDXUTSlider@{CDXUTSlider}!SetRange@{SetRange}}
+\index{SetRange@{SetRange}!CDXUTSlider@{CDXUTSlider}}
+\subsubsection[{SetRange}]{\setlength{\rightskip}{0pt plus 5cm}void CDXUTSlider::SetRange ({\bf int} {\em nMin}, \/  {\bf int} {\em nMax})}}
+\label{class_c_d_x_u_t_slider_a9401e45afcdd5c8f74e6120402ec068d}
+\hypertarget{class_c_d_x_u_t_slider_a0f3442fdf18473cd6c7dd6f8d065ee9e}{
+\index{CDXUTSlider@{CDXUTSlider}!SetValue@{SetValue}}
+\index{SetValue@{SetValue}!CDXUTSlider@{CDXUTSlider}}
+\subsubsection[{SetValue}]{\setlength{\rightskip}{0pt plus 5cm}void CDXUTSlider::SetValue ({\bf int} {\em nValue})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_c_d_x_u_t_slider_a0f3442fdf18473cd6c7dd6f8d065ee9e}
+\hypertarget{class_c_d_x_u_t_slider_ab345296137df0bba5b421c5f0e58ca8e}{
+\index{CDXUTSlider@{CDXUTSlider}!SetValueInternal@{SetValueInternal}}
+\index{SetValueInternal@{SetValueInternal}!CDXUTSlider@{CDXUTSlider}}
+\subsubsection[{SetValueInternal}]{\setlength{\rightskip}{0pt plus 5cm}void CDXUTSlider::SetValueInternal ({\bf int} {\em nValue}, \/  bool {\em bFromInput})\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{class_c_d_x_u_t_slider_ab345296137df0bba5b421c5f0e58ca8e}
+\hypertarget{class_c_d_x_u_t_slider_a091410aa578fc041b84e4173a969df58}{
+\index{CDXUTSlider@{CDXUTSlider}!UpdateRects@{UpdateRects}}
+\index{UpdateRects@{UpdateRects}!CDXUTSlider@{CDXUTSlider}}
+\subsubsection[{UpdateRects}]{\setlength{\rightskip}{0pt plus 5cm}void CDXUTSlider::UpdateRects ()\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{class_c_d_x_u_t_slider_a091410aa578fc041b84e4173a969df58}
+
+
+Reimplemented from \hyperlink{class_c_d_x_u_t_control_a5fb3a79178c678abaa0da57566a09002}{CDXUTControl}.\hypertarget{class_c_d_x_u_t_slider_a9f7de7328ec31bd8a34bc1873f5acdb3}{
+\index{CDXUTSlider@{CDXUTSlider}!ValueFromPos@{ValueFromPos}}
+\index{ValueFromPos@{ValueFromPos}!CDXUTSlider@{CDXUTSlider}}
+\subsubsection[{ValueFromPos}]{\setlength{\rightskip}{0pt plus 5cm}{\bf int} CDXUTSlider::ValueFromPos ({\bf int} {\em x})\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{class_c_d_x_u_t_slider_a9f7de7328ec31bd8a34bc1873f5acdb3}
+
+
+\subsection{Member Data Documentation}
+\hypertarget{class_c_d_x_u_t_slider_a6060a106657615230e6b2cc51f7279ec}{
+\index{CDXUTSlider@{CDXUTSlider}!m\_\-bPressed@{m\_\-bPressed}}
+\index{m\_\-bPressed@{m\_\-bPressed}!CDXUTSlider@{CDXUTSlider}}
+\subsubsection[{m\_\-bPressed}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf CDXUTSlider::m\_\-bPressed}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{class_c_d_x_u_t_slider_a6060a106657615230e6b2cc51f7279ec}
+\hypertarget{class_c_d_x_u_t_slider_aa6b6822fb10e3294c1880113e486416b}{
+\index{CDXUTSlider@{CDXUTSlider}!m\_\-nButtonX@{m\_\-nButtonX}}
+\index{m\_\-nButtonX@{m\_\-nButtonX}!CDXUTSlider@{CDXUTSlider}}
+\subsubsection[{m\_\-nButtonX}]{\setlength{\rightskip}{0pt plus 5cm}{\bf int} {\bf CDXUTSlider::m\_\-nButtonX}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{class_c_d_x_u_t_slider_aa6b6822fb10e3294c1880113e486416b}
+\hypertarget{class_c_d_x_u_t_slider_ae051d327e77fc42a5be5d21576d81993}{
+\index{CDXUTSlider@{CDXUTSlider}!m\_\-nDragOffset@{m\_\-nDragOffset}}
+\index{m\_\-nDragOffset@{m\_\-nDragOffset}!CDXUTSlider@{CDXUTSlider}}
+\subsubsection[{m\_\-nDragOffset}]{\setlength{\rightskip}{0pt plus 5cm}{\bf int} {\bf CDXUTSlider::m\_\-nDragOffset}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{class_c_d_x_u_t_slider_ae051d327e77fc42a5be5d21576d81993}
+\hypertarget{class_c_d_x_u_t_slider_a302ac014d55da16123986f808cc1ce9b}{
+\index{CDXUTSlider@{CDXUTSlider}!m\_\-nDragX@{m\_\-nDragX}}
+\index{m\_\-nDragX@{m\_\-nDragX}!CDXUTSlider@{CDXUTSlider}}
+\subsubsection[{m\_\-nDragX}]{\setlength{\rightskip}{0pt plus 5cm}{\bf int} {\bf CDXUTSlider::m\_\-nDragX}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{class_c_d_x_u_t_slider_a302ac014d55da16123986f808cc1ce9b}
+\hypertarget{class_c_d_x_u_t_slider_a9d298ae750ce680598ec967af330e20e}{
+\index{CDXUTSlider@{CDXUTSlider}!m\_\-nMax@{m\_\-nMax}}
+\index{m\_\-nMax@{m\_\-nMax}!CDXUTSlider@{CDXUTSlider}}
+\subsubsection[{m\_\-nMax}]{\setlength{\rightskip}{0pt plus 5cm}{\bf int} {\bf CDXUTSlider::m\_\-nMax}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{class_c_d_x_u_t_slider_a9d298ae750ce680598ec967af330e20e}
+\hypertarget{class_c_d_x_u_t_slider_a87ffaf1be6e79d1a653b9a975d46e789}{
+\index{CDXUTSlider@{CDXUTSlider}!m\_\-nMin@{m\_\-nMin}}
+\index{m\_\-nMin@{m\_\-nMin}!CDXUTSlider@{CDXUTSlider}}
+\subsubsection[{m\_\-nMin}]{\setlength{\rightskip}{0pt plus 5cm}{\bf int} {\bf CDXUTSlider::m\_\-nMin}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{class_c_d_x_u_t_slider_a87ffaf1be6e79d1a653b9a975d46e789}
+\hypertarget{class_c_d_x_u_t_slider_a2a6bf8157dfbd5edd87dcb192843fba6}{
+\index{CDXUTSlider@{CDXUTSlider}!m\_\-nValue@{m\_\-nValue}}
+\index{m\_\-nValue@{m\_\-nValue}!CDXUTSlider@{CDXUTSlider}}
+\subsubsection[{m\_\-nValue}]{\setlength{\rightskip}{0pt plus 5cm}{\bf int} {\bf CDXUTSlider::m\_\-nValue}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{class_c_d_x_u_t_slider_a2a6bf8157dfbd5edd87dcb192843fba6}
+\hypertarget{class_c_d_x_u_t_slider_a0b2ef9570791f34e0c0ba99eeda6adba}{
+\index{CDXUTSlider@{CDXUTSlider}!m\_\-rcButton@{m\_\-rcButton}}
+\index{m\_\-rcButton@{m\_\-rcButton}!CDXUTSlider@{CDXUTSlider}}
+\subsubsection[{m\_\-rcButton}]{\setlength{\rightskip}{0pt plus 5cm}RECT {\bf CDXUTSlider::m\_\-rcButton}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{class_c_d_x_u_t_slider_a0b2ef9570791f34e0c0ba99eeda6adba}
+
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+C:/Users/doug/Documents/Visual Studio 2008/Projects/enlightened/Enlightened/DXUT/\hyperlink{_d_x_u_tgui_8h}{DXUTgui.h}\item 
+C:/Users/doug/Documents/Visual Studio 2008/Projects/enlightened/Enlightened/DXUT/\hyperlink{_d_x_u_tgui_8cpp}{DXUTgui.cpp}\end{DoxyCompactItemize}
